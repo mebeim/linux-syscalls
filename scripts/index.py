@@ -5,7 +5,7 @@
 #
 # We expect a directory structure as follows:
 #
-#   <db-root>/<arch>/<abi>/<kernel-version-tag>/...
+#   <root>/<arch>/<bits>/<abi>/<kernel-version-tag>/...
 #
 # Inside each directory we have:
 #
@@ -17,9 +17,8 @@
 #
 #   {
 #       "<arch>": {
-#           "<abi>": {
-#               "bits": 32/64,
-#               "tags": {
+#           "<bits>": {
+#               "<abi>": {
 #                   "<kernel-version-tag>": {
 #                       "config": true/false,
 #                       "stderr": true/false
@@ -28,7 +27,6 @@
 #           }
 #       }
 #   }
-#
 #
 
 import os
@@ -52,62 +50,57 @@ def main(args) -> int:
 		return 1
 
 	for archdir in rootdir.iterdir():
+		# Skip the special case of already having the index in the DB
+		if archdir.name == 'index.json':
+			continue
+
 		arch = archdir.name
 		index[arch] = arch_index = {}
 
-		for abidir in archdir.iterdir():
-			abi = abidir.name
-			abi_bits = None
-			arch_index[abi] = {}
-			arch_index[abi]['tags'] = abi_index = {}
+		for bitsdir in archdir.iterdir():
+			bits = bitsdir.name
+			arch_index[bits] = bits_index = {}
 
-			for tagdir in abidir.iterdir():
-				tag = tagdir.name
-				abi_index[tag] = {'config': True, 'stderr': True}
-				files = os.listdir(tagdir)
+			for abidir in bitsdir.iterdir():
+				abi = abidir.name
+				bits_index[abi] = abi_index = {}
 
-				if 'config.txt' not in files:
-					eprint(f'No config for {arch}/{abi}/{tag}')
-					abi_index[tag]['config'] = False
+				for tagdir in abidir.iterdir():
+					tag = tagdir.name
+					abi_index[tag] = {'config': True, 'stderr': True}
+					files = os.listdir(tagdir)
 
-				if 'stderr.txt' not in files:
-					eprint(f'No config for {arch}/{abi}/{tag}')
-					abi_index[tag]['stderr'] = False
+					if 'config.txt' not in files:
+						eprint(f'Warning: no config for {arch}/{bits}/{abi}/{tag}')
+						abi_index[tag]['config'] = False
 
-				if 'table.json' not in files:
-					eprint(f'No table for {arch}/{abi}/{tag}')
-					eprint("Something's not right... aborting!")
-					return 1
+					if 'stderr.txt' not in files:
+						eprint(f'Warning: no stderr log for {arch}/{bits}/{abi}/{tag}')
+						abi_index[tag]['stderr'] = False
 
-				tablefile = tagdir / 'table.json'
-
-				# Sanity check: make sure abi and arch match the ones in
-				# table.json. This is not ideal, as we are opening and reading
-				# every single file... but it's ok for now. One day we might
-				# have to come up with a better "database" than a bunch of JSON
-				# files anyway.
-				with tablefile.open() as f:
-					data = load(f)['kernel']['architecture']
-					actual_arch = data['name']
-					actual_abi = data['abi']
-
-					# Yes, I could have designed this better.
-					if abi_bits is None:
-						abi_bits = data['bits']
-					elif data['bits'] != abi_bits:
-						# Let's do another sanity check while we are a it...
-						eprint(f'Multiple bitnesses for {arch}/{abi}')
+					if 'table.json' not in files:
+						eprint(f'No table for {arch}/{bits}/{abi}/{tag}')
 						eprint("Something's not right... aborting!")
 						return 1
 
-					if arch != actual_arch or abi != actual_abi:
-						eprint(f'Mismatched arch/abi in {tablefile}')
-						eprint(f'Expected {arch}/{abi}, but have {actual_arch}/{actual_abi} inside the file.')
-						eprint("Something's not right... aborting!")
-						return 1
+					tablefile = tagdir / 'table.json'
 
-			assert abi_bits in (32, 64)
-			arch_index[abi]['bits'] = abi_bits
+					# Sanity check: make sure arch, bits and abi match the ones
+					# in "table.json". This is not ideal, as we are opening and
+					# reading every single file... but it's ok for now. One day
+					# we might have to come up with a better "database" than a
+					# bunch of JSON files though.
+					with tablefile.open() as f:
+						data = load(f)['kernel']['architecture']
+						want = (arch, int(bits), abi)
+						have = (data['name'], data['bits'], data['abi'])
+
+						for what, w, h in zip(('arch', 'bits', 'abi'), want, have):
+							if w != h:
+								eprint(f'Mismatched {what} for {tablefile}')
+								eprint(f'Expected {w}, but have {h} inside the file.')
+								eprint("Something's not right... aborting!")
+								return 1
 
 	dump(index, sys.stdout, separators=(',', ':'))
 
