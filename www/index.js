@@ -254,7 +254,7 @@ async function update() {
 	systrackInfoEl.textContent = `Systrack v${syscallTbable.systrack_version}`
 
 	if (config) {
-		configInfoEl.title = configInfoEl.href = `db/${arch}/${bits}/${abi}/${tag}/stderr.txt`
+		configInfoEl.title = configInfoEl.href = `db/${arch}/${bits}/${abi}/${tag}/config.txt`
 		configInfoEl.textContent = '[build config]'
 	} else {
 		configInfoEl.textContent = configInfoEl.title = configInfoEl.href = ''
