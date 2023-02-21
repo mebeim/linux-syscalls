@@ -18,9 +18,12 @@
 #   {
 #       "<arch>": {
 #           "<abi>": {
-#               "<kernel-version-tag>": {
-#                   "config": true/false,
-#                   "stderr": true/false
+#               "bits": 32/64,
+#               "tags": {
+#                   "<kernel-version-tag>": {
+#                       "config": true/false,
+#                       "stderr": true/false
+#                   }
 #               }
 #           }
 #       }
@@ -54,7 +57,9 @@ def main(args) -> int:
 
 		for abidir in archdir.iterdir():
 			abi = abidir.name
-			arch_index[abi] = abi_index = {}
+			abi_bits = None
+			arch_index[abi] = {}
+			arch_index[abi]['tags'] = abi_index = {}
 
 			for tagdir in abidir.iterdir():
 				tag = tagdir.name
@@ -86,11 +91,23 @@ def main(args) -> int:
 					actual_arch = data['name']
 					actual_abi = data['abi']
 
+					# Yes, I could have designed this better.
+					if abi_bits is None:
+						abi_bits = data['bits']
+					elif data['bits'] != abi_bits:
+						# Let's do another sanity check while we are a it...
+						eprint(f'Multiple bitnesses for {arch}/{abi}')
+						eprint("Something's not right... aborting!")
+						return 1
+
 					if arch != actual_arch or abi != actual_abi:
-						eprint(f'Mismatched arch/abi in {tablefile}!')
+						eprint(f'Mismatched arch/abi in {tablefile}')
 						eprint(f'Expected {arch}/{abi}, but have {actual_arch}/{actual_abi} inside the file.')
 						eprint("Something's not right... aborting!")
 						return 1
+
+			assert abi_bits in (32, 64)
+			arch_index[abi]['bits'] = abi_bits
 
 	dump(index, sys.stdout, separators=(',', ':'))
 
