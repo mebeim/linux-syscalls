@@ -1,1 +1,25 @@
-<h1>Work in progress... come back later!</h1>
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Linux syscall table</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./index.css">
+	</head>
+	<body>
+		<h1>Linux kernel syscall table</h1>
+		<h2 id="loading">Loading database...</h2>
+		<section id="container" class="invisible">
+			<h2>Architecture: <select id="arch-abi-select"></select> Kernel version: <select id="tag-select"></select></h2>
+			<h3>
+				<span>Kernel analyzed with <a id="systrack-info" target="_blank" href="https://github.com/mebeim/systrack"></a></span>
+				<span><a id="config-info" target="_blank"></a></span>
+				<span><a id="stderr-info" target="_blank"></a></span>
+			</h3>
+			<table></table>
+		</section>
+		<p>Copyright &copy; 2023 Marco Bonelli &mdash; Licensed under the GNU General Public License v3.0</p>
+		<script src="./index.js"></script>
+	</body>
+</html>
