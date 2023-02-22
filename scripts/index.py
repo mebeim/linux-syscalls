@@ -91,9 +91,9 @@ def main(args) -> int:
 					# we might have to come up with a better "database" than a
 					# bunch of JSON files though.
 					with tablefile.open() as f:
-						data = load(f)['kernel']['architecture']
+						data = load(f)['kernel']
 						want = (arch, int(bits), abi)
-						have = (data['name'], data['bits'], data['abi'])
+						have = (data['architecture']['name'], data['architecture']['bits'], data['abi']['name'])
 
 						for what, w, h in zip(('arch', 'bits', 'abi'), want, have):
 							if w != h:

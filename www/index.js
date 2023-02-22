@@ -87,7 +87,7 @@ function highlightRow(e) {
 
 function sortTable(e) {
 	if (updateInProgress)
-	return
+		return
 
 	const header = e.target
 	const idx    = Array.from(header.parentNode.children).indexOf(e.target)
@@ -200,8 +200,8 @@ function fillRow(row, tag, sc, maxArgs) {
 }
 
 function fillTable(syscallTable, tag) {
-	const numReg = syscallTable.kernel.architecture.calling_convention.syscall_nr
-	const argRegs = syscallTable.kernel.architecture.calling_convention.parameters
+	const numReg = syscallTable.kernel.abi.calling_convention.syscall_nr
+	const argRegs = syscallTable.kernel.abi.calling_convention.parameters
 	const maxArgs = Math.max(...syscallTable.syscalls.map(sc => sc.signature.length))
 
 	const header = document.createElement('tr')
