@@ -159,6 +159,9 @@ function fillRow(row, tag, sc, maxArgs) {
 		if (!sc.good_location) {
 			loc.title = 'This syscall definition is not standard, the identified location may be inaccurate'
 			loc.classList.add('bad')
+		} else if (sc.grepped_location) {
+			loc.title = 'This syscall definition was found through grepping, the identified location may be inaccurate'
+			loc.classList.add('bad')
 		}
 	} else if (sc.file) {
 		link.href = `https://elixir.bootlin.com/linux/${tag}/source/${sc.file}`
