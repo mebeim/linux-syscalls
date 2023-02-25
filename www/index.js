@@ -53,7 +53,7 @@ function fillArchOptions(archs) {
 	clearOptions(archSelectEl)
 	archs.forEach(([arch, bits, abi]) => {
 		const opt = document.createElement('option')
-		opt.label = `${arch} ${bits}-bit, ${abi} ABI`
+		opt.label = opt.textContent = `${arch} ${bits}-bit, ${abi} ABI`
 		opt.dataset.arch = arch
 		opt.dataset.bits = bits
 		opt.dataset.abi = abi
@@ -67,7 +67,7 @@ function fillTagOptions(tags) {
 	clearOptions(tagSelectEl)
 	tags.forEach(tag => {
 		const opt = document.createElement('option')
-		opt.label = tag
+		opt.label = opt.textContent = tag
 		opt.dataset.tag = tag
 
 		// Keep same kernel version tag selected if possible
@@ -258,14 +258,14 @@ async function update() {
 
 	if (config) {
 		configInfoEl.title = configInfoEl.href = `db/${arch}/${bits}/${abi}/${tag}/config.txt`
-		configInfoEl.textContent = '[build config]'
+		configInfoEl.textContent = '[build\u00a0config]'
 	} else {
 		configInfoEl.textContent = configInfoEl.title = configInfoEl.href = ''
 	}
 
 	if (stderr) {
 		stderrInfoEl.title = stderrInfoEl.href = `db/${arch}/${bits}/${abi}/${tag}/stderr.txt`
-		stderrInfoEl.textContent = '[analysis log]'
+		stderrInfoEl.textContent = '[analysis\u00a0log]'
 	} else {
 		stderrInfoEl.textContent = stderrInfoEl.title = stderrInfoEl.href = ''
 	}
