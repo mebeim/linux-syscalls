@@ -49,11 +49,41 @@ function clearOptions(selectEl) {
 	selectEl.innerHTML = ''
 }
 
+function humanArchName(name, bits) {
+	if (name.startsWith('arm')) {
+		// We have arm64 and arm, but arm64 is only 64-bit and arm is only
+		// 32-bit, therefore we can just avoid the redundant "64" in "arm64".
+		name = 'ARM'
+	} else if (name === 'mips') {
+		name = 'MIPS'
+	}
+
+	return `${name} ${bits}-bit`
+}
+
+function humanAbiName(abi) {
+	// x86
+	if (abi === 'x64')
+		return 'x84-64'
+	if (abi === 'ia32')
+		return 'IA-32'
+	// arm64
+	if (abi.startsWith('aarch'))
+		return 'AArch' + abi.slice(5)
+	// arm
+	if (abi === 'eabi' || abi === 'eabi')
+		return abi.toUpperCase()
+	// mips
+	if (abi === 'o32' || abi === 'o64' || abi === 'n64')
+		return abi[0].toUpperCase() + abi.slice(1)
+	return abi
+}
+
 function fillArchOptions(archs) {
 	clearOptions(archSelectEl)
 	archs.forEach(([arch, bits, abi]) => {
 		const opt = document.createElement('option')
-		opt.label = opt.textContent = `${arch} ${bits}-bit, ${abi} ABI`
+		opt.label = opt.textContent = `${humanArchName(arch, bits)}, ${humanAbiName(abi)} ABI`
 		opt.dataset.arch = arch
 		opt.dataset.bits = bits
 		opt.dataset.abi = abi
@@ -218,7 +248,7 @@ function fillTable(syscallTable, tag) {
 
 	header.children[0].textContent = `Number${numReg ? '\u00a0(' + numReg + ')' : ''}`
 
-	// So we wanna handle the case of 0 args because signatures could not be
+	// Do we wanna handle the case of 0 args because signatures could not be
 	// extracted? I don't think so to be honest.
 	for (let i = 0; i < maxArgs; i++) {
 		const th = document.createElement('th')
