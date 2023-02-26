@@ -7,6 +7,7 @@ const stderrInfoEl   = document.getElementById('stderr-info')
 
 let db = null
 let updateInProgress = false
+let firstUpdate = true
 
 function compareTags(a, b) {
 	const va = a.slice(1).split('.').map(n => n.padStart(3, '0'))
@@ -29,8 +30,76 @@ function getSelection() {
 	return [archOpt.dataset.arch, archOpt.dataset.bits, archOpt.dataset.abi, tagOpt.dataset.tag]
 }
 
+function setSelection(arch, bits, abi, tag) {
+	let archOpt = null
+	let tagOpt = null
+
+	// Ensure this combination exists
+	if (!db[arch]?.[bits]?.[abi]?.[tag])
+		return false
+
+	// Select the right <option> element to match arch/bits/abi
+	for (let i = 0; i < archSelectEl.options.length; i++) {
+		const opt = archSelectEl.options[i]
+		if (opt.dataset.arch === arch && opt.dataset.bits === bits && opt.dataset.abi === abi) {
+			archOpt = opt
+			break
+		}
+	}
+
+	// Select the right <option> element to match tag
+	for (let i = 0; i < tagSelectEl.options.length; i++) {
+		const opt = tagSelectEl.options[i]
+		if (opt.dataset.tag === tag) {
+			tagOpt = opt
+			break
+		}
+	}
+
+	// Sanity check, ensure the <option> elements are actually found
+	if (!archOpt || !tagOpt) {
+		console.error('setSelection(): could not find correct <option> elements for', arch, bits, abi, tag)
+		return false
+	}
+
+	archSelectEl.selectedOptions[0].selected = false
+	tagSelectEl.selectedOptions[0].selected = false
+	archOpt.selected = true
+	tagOpt.selected = true
+	return true
+}
+
 function getTagSelection() {
 	return tagSelectEl.selectedOptions[0]?.dataset.tag
+}
+
+function queryStringToSelection(qs) {
+	let selection = null
+
+	if (qs.startsWith('?'))
+		qs = qs.slice(1)
+
+	for (const [k, v] of qs.split('&').map(kv => kv.split('='))) {
+		if (k === 'table') {
+			selection = decodeURIComponent(v).split('/')
+			break
+		}
+	}
+
+	if (!selection || selection.length != 4)
+		return null
+
+	return selection
+}
+
+function selectionToQueryString(selection) {
+	if (!(selection instanceof Array) || selection.length != 4) {
+		console.error('Bad selection to turn into query string:', selection)
+		return ''
+	}
+
+	const [arch, bits, abi, tag] = selection
+	return `table=${arch}/${bits}/${abi}/${tag}`
 }
 
 function beforeUpdate() {
@@ -270,15 +339,9 @@ function fillTable(syscallTable, tag) {
 	document.getElementById('loading').classList.add('invisible')
 }
 
-function selectArchAndUpdate(arch, bits, abi) {
-	const tags = Object.keys(db[arch][bits][abi])
-	tags.sort(compareTags)
-	fillTagOptions(tags)
-	return update()
-}
-
-async function update() {
-	const [arch, bits, abi, tag] = getSelection()
+async function update(pushHistoryState) {
+	const selection = getSelection()
+	const [arch, bits, abi, tag] = selection
 	const syscallTbable = await fetchSyscallTable(arch, bits, abi, tag)
 	const {config, stderr} = db[arch][bits][abi][tag]
 
@@ -299,6 +362,43 @@ async function update() {
 	} else {
 		stderrInfoEl.textContent = stderrInfoEl.title = stderrInfoEl.href = ''
 	}
+
+	if (pushHistoryState) {
+		if (firstUpdate) {
+			history.replaceState(selection, '', '/?' + selectionToQueryString(selection))
+			firstUpdate = false
+		} else {
+			history.pushState(selection, '', '/?' + selectionToQueryString(selection))
+		}
+	}
+}
+
+function selectArch(arch, bits, abi) {
+	const tags = Object.keys(db[arch][bits][abi])
+	tags.sort(compareTags)
+	fillTagOptions(tags)
+}
+
+function archSelectChangeHandler(e) {
+	beforeUpdate()
+	const opt = e.target.selectedOptions[0]
+	selectArch(opt.dataset.arch, opt.dataset.bits, opt.dataset.abi)
+	update(true).then(afterUpdate)
+}
+
+function tagSelectChangeHandler() {
+	beforeUpdate()
+	update(true).then(afterUpdate)
+}
+
+function historyPopStateHandler(e) {
+	if (!(e.state instanceof Array) || e.state.length != 4)
+		return
+
+	if (setSelection(...e.state)) {
+		beforeUpdate()
+		update(false).then(afterUpdate)
+	}
 }
 
 async function setup() {
@@ -315,18 +415,20 @@ async function setup() {
 
 	// TODO: sort these according to some arbitrary "nice" order?
 	fillArchOptions(archs)
-	selectArchAndUpdate(...archs[0])
+	selectArch(...archs[0])
 
-	archSelectEl.addEventListener('change', e => {
-		beforeUpdate()
-		const opt = e.target.selectedOptions[0]
-		selectArchAndUpdate(opt.dataset.arch, opt.dataset.bits, opt.dataset.abi).then(afterUpdate)
-	})
+	// Restore table from query string if possible
+	if (location.search) {
+		const selection = queryStringToSelection(location.search)
+		if (selection)
+			setSelection(...selection)
+	}
 
-	tagSelectEl.addEventListener('change', () => {
-		beforeUpdate()
-		update().then(afterUpdate)
-	})
+	update(true)
+
+	archSelectEl.addEventListener('change', archSelectChangeHandler)
+	tagSelectEl.addEventListener('change', tagSelectChangeHandler)
+	window.addEventListener('popstate', historyPopStateHandler)
 }
 
 setup()
