@@ -1,0 +1,7046 @@
+{
+	"kernel": {
+		"abi": {
+			"calling_convention": {
+				"parameters": [
+					"x0",
+					"x1",
+					"x2",
+					"x3",
+					"x4",
+					"x5"
+				],
+				"syscall_nr": "w8"
+			},
+			"name": "aarch32"
+		},
+		"architecture": {
+			"bits": 64,
+			"name": "arm64"
+		},
+		"syscall_table_symbol": "compat_sys_call_table",
+		"version": "v5.13",
+		"version_source": "vmlinux"
+	},
+	"syscalls": [
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 0,
+			"kconfig": null,
+			"line": 2932,
+			"name": "restart_syscall",
+			"number": 0,
+			"origname": "restart_syscall",
+			"signature": [],
+			"symbol": "__arm64_sys_restart_syscall"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/exit.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 1,
+			"kconfig": null,
+			"line": 889,
+			"name": "exit",
+			"number": 1,
+			"origname": "exit",
+			"signature": [
+				"int error_code"
+			],
+			"symbol": "__arm64_sys_exit"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/fork.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 2,
+			"kconfig": null,
+			"line": 2558,
+			"name": "fork",
+			"number": 2,
+			"origname": "fork",
+			"signature": [],
+			"symbol": "__arm64_sys_fork"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/read_write.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 3,
+			"kconfig": null,
+			"line": 642,
+			"name": "read",
+			"number": 3,
+			"origname": "read",
+			"signature": [
+				"unsigned int fd",
+				"char *buf",
+				"size_t count"
+			],
+			"symbol": "__arm64_sys_read"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/read_write.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 4,
+			"kconfig": null,
+			"line": 667,
+			"name": "write",
+			"number": 4,
+			"origname": "write",
+			"signature": [
+				"unsigned int fd",
+				"const char *buf",
+				"size_t count"
+			],
+			"symbol": "__arm64_sys_write"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 5,
+			"kconfig": null,
+			"line": 1250,
+			"name": "open",
+			"number": 5,
+			"origname": "open",
+			"signature": [
+				"const char *filename",
+				"int flags",
+				"umode_t mode"
+			],
+			"symbol": "__arm64_compat_sys_open"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 6,
+			"kconfig": null,
+			"line": 1312,
+			"name": "close",
+			"number": 6,
+			"origname": "close",
+			"signature": [
+				"unsigned int fd"
+			],
+			"symbol": "__arm64_sys_close"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 8,
+			"kconfig": null,
+			"line": 1271,
+			"name": "creat",
+			"number": 8,
+			"origname": "creat",
+			"signature": [
+				"const char *pathname",
+				"umode_t mode"
+			],
+			"symbol": "__arm64_sys_creat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namei.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 9,
+			"kconfig": null,
+			"line": 4398,
+			"name": "link",
+			"number": 9,
+			"origname": "link",
+			"signature": [
+				"const char *oldname",
+				"const char *newname"
+			],
+			"symbol": "__arm64_sys_link"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namei.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 10,
+			"kconfig": null,
+			"line": 4137,
+			"name": "unlink",
+			"number": 10,
+			"origname": "unlink",
+			"signature": [
+				"const char *pathname"
+			],
+			"symbol": "__arm64_sys_unlink"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/exec.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 11,
+			"kconfig": null,
+			"line": 2080,
+			"name": "execve",
+			"number": 11,
+			"origname": "execve",
+			"signature": [
+				"const char *filename",
+				"const compat_uptr_t *argv",
+				"const compat_uptr_t *envp"
+			],
+			"symbol": "__arm64_compat_sys_execve"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 12,
+			"kconfig": null,
+			"line": 487,
+			"name": "chdir",
+			"number": 12,
+			"origname": "chdir",
+			"signature": [
+				"const char *filename"
+			],
+			"symbol": "__arm64_sys_chdir"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namei.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 14,
+			"kconfig": null,
+			"line": 3773,
+			"name": "mknod",
+			"number": 14,
+			"origname": "mknod",
+			"signature": [
+				"const char *filename",
+				"umode_t mode",
+				"unsigned dev"
+			],
+			"symbol": "__arm64_sys_mknod"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 15,
+			"kconfig": null,
+			"line": 640,
+			"name": "chmod",
+			"number": 15,
+			"origname": "chmod",
+			"signature": [
+				"const char *filename",
+				"umode_t mode"
+			],
+			"symbol": "__arm64_sys_chmod"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/uid16.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 16,
+			"kconfig": "UID16",
+			"line": 28,
+			"name": "lchown16",
+			"number": 16,
+			"origname": "lchown16",
+			"signature": [
+				"const char *filename",
+				"old_uid_t user",
+				"old_gid_t group"
+			],
+			"symbol": "__arm64_sys_lchown16"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/read_write.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 19,
+			"kconfig": null,
+			"line": 328,
+			"name": "lseek",
+			"number": 19,
+			"origname": "lseek",
+			"signature": [
+				"unsigned int fd",
+				"compat_off_t offset",
+				"unsigned int whence"
+			],
+			"symbol": "__arm64_compat_sys_lseek"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 20,
+			"kconfig": null,
+			"line": 911,
+			"name": "getpid",
+			"number": 20,
+			"origname": "getpid",
+			"signature": [],
+			"symbol": "__arm64_sys_getpid"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namespace.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 21,
+			"kconfig": null,
+			"line": 3433,
+			"name": "mount",
+			"number": 21,
+			"origname": "mount",
+			"signature": [
+				"char *dev_name",
+				"char *dir_name",
+				"char *type",
+				"unsigned long flags",
+				"void *data"
+			],
+			"symbol": "__arm64_sys_mount"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/uid16.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 23,
+			"kconfig": "UID16",
+			"line": 53,
+			"name": "setuid16",
+			"number": 23,
+			"origname": "setuid16",
+			"signature": [
+				"old_uid_t uid"
+			],
+			"symbol": "__arm64_sys_setuid16"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/uid16.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 24,
+			"kconfig": "UID16",
+			"line": 203,
+			"name": "getuid16",
+			"number": 24,
+			"origname": "getuid16",
+			"signature": [],
+			"symbol": "__arm64_sys_getuid16"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/ptrace.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 26,
+			"kconfig": null,
+			"line": 1424,
+			"name": "ptrace",
+			"number": 26,
+			"origname": "ptrace",
+			"signature": [
+				"compat_long_t request",
+				"compat_long_t pid",
+				"compat_long_t addr",
+				"compat_long_t data"
+			],
+			"symbol": "__arm64_compat_sys_ptrace"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 29,
+			"kconfig": null,
+			"line": 4503,
+			"name": "pause",
+			"number": 29,
+			"origname": "pause",
+			"signature": [],
+			"symbol": "__arm64_sys_pause"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 33,
+			"kconfig": null,
+			"line": 482,
+			"name": "access",
+			"number": 33,
+			"origname": "access",
+			"signature": [
+				"const char *filename",
+				"int mode"
+			],
+			"symbol": "__arm64_sys_access"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sched/core.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 34,
+			"kconfig": null,
+			"line": 5783,
+			"name": "nice",
+			"number": 34,
+			"origname": "nice",
+			"signature": [
+				"int increment"
+			],
+			"symbol": "__arm64_sys_nice"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/sync.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 36,
+			"kconfig": null,
+			"line": 123,
+			"name": "sync",
+			"number": 36,
+			"origname": "sync",
+			"signature": [],
+			"symbol": "__arm64_sys_sync"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 37,
+			"kconfig": null,
+			"line": 3699,
+			"name": "kill",
+			"number": 37,
+			"origname": "kill",
+			"signature": [
+				"pid_t pid",
+				"int sig"
+			],
+			"symbol": "__arm64_sys_kill"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namei.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 38,
+			"kconfig": null,
+			"line": 4743,
+			"name": "rename",
+			"number": 38,
+			"origname": "rename",
+			"signature": [
+				"const char *oldname",
+				"const char *newname"
+			],
+			"symbol": "__arm64_sys_rename"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namei.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 39,
+			"kconfig": null,
+			"line": 3854,
+			"name": "mkdir",
+			"number": 39,
+			"origname": "mkdir",
+			"signature": [
+				"const char *pathname",
+				"umode_t mode"
+			],
+			"symbol": "__arm64_sys_mkdir"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namei.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 40,
+			"kconfig": null,
+			"line": 3974,
+			"name": "rmdir",
+			"number": 40,
+			"origname": "rmdir",
+			"signature": [
+				"const char *pathname"
+			],
+			"symbol": "__arm64_sys_rmdir"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/file.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 41,
+			"kconfig": null,
+			"line": 1191,
+			"name": "dup",
+			"number": 41,
+			"origname": "dup",
+			"signature": [
+				"unsigned int fildes"
+			],
+			"symbol": "__arm64_sys_dup"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/pipe.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 42,
+			"kconfig": null,
+			"line": 1013,
+			"name": "pipe",
+			"number": 42,
+			"origname": "pipe",
+			"signature": [
+				"int *fildes"
+			],
+			"symbol": "__arm64_sys_pipe"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 43,
+			"kconfig": null,
+			"line": 995,
+			"name": "times",
+			"number": 43,
+			"origname": "times",
+			"signature": [
+				"struct compat_tms *tbuf"
+			],
+			"symbol": "__arm64_compat_sys_times"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mmap.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 45,
+			"kconfig": null,
+			"line": 196,
+			"name": "brk",
+			"number": 45,
+			"origname": "brk",
+			"signature": [
+				"unsigned long brk"
+			],
+			"symbol": "__arm64_sys_brk"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/uid16.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 46,
+			"kconfig": "UID16",
+			"line": 43,
+			"name": "setgid16",
+			"number": 46,
+			"origname": "setgid16",
+			"signature": [
+				"old_gid_t gid"
+			],
+			"symbol": "__arm64_sys_setgid16"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/uid16.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 47,
+			"kconfig": "UID16",
+			"line": 213,
+			"name": "getgid16",
+			"number": 47,
+			"origname": "getgid16",
+			"signature": [],
+			"symbol": "__arm64_sys_getgid16"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/uid16.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 49,
+			"kconfig": "UID16",
+			"line": 208,
+			"name": "geteuid16",
+			"number": 49,
+			"origname": "geteuid16",
+			"signature": [],
+			"symbol": "__arm64_sys_geteuid16"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/uid16.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 50,
+			"kconfig": "UID16",
+			"line": 218,
+			"name": "getegid16",
+			"number": 50,
+			"origname": "getegid16",
+			"signature": [],
+			"symbol": "__arm64_sys_getegid16"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/acct.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 51,
+			"kconfig": "BSD_PROCESS_ACCT",
+			"line": 273,
+			"name": "acct",
+			"number": 51,
+			"origname": "acct",
+			"signature": [
+				"const char *name"
+			],
+			"symbol": "__arm64_sys_acct"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namespace.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 52,
+			"kconfig": null,
+			"line": 1782,
+			"name": "umount",
+			"number": 52,
+			"origname": "umount",
+			"signature": [
+				"char *name",
+				"int flags"
+			],
+			"symbol": "__arm64_sys_umount"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/ioctl.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 54,
+			"kconfig": null,
+			"line": 1109,
+			"name": "ioctl",
+			"number": 54,
+			"origname": "ioctl",
+			"signature": [
+				"unsigned int fd",
+				"unsigned int cmd",
+				"compat_ulong_t arg"
+			],
+			"symbol": "__arm64_compat_sys_ioctl"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/fcntl.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 55,
+			"kconfig": null,
+			"line": 689,
+			"name": "fcntl",
+			"number": 55,
+			"origname": "fcntl",
+			"signature": [
+				"unsigned int fd",
+				"unsigned int cmd",
+				"compat_ulong_t arg"
+			],
+			"symbol": "__arm64_compat_sys_fcntl"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 57,
+			"kconfig": null,
+			"line": 1026,
+			"name": "setpgid",
+			"number": 57,
+			"origname": "setpgid",
+			"signature": [
+				"pid_t pid",
+				"pid_t pgid"
+			],
+			"symbol": "__arm64_sys_setpgid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 60,
+			"kconfig": null,
+			"line": 1828,
+			"name": "umask",
+			"number": 60,
+			"origname": "umask",
+			"signature": [
+				"int mask"
+			],
+			"symbol": "__arm64_sys_umask"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 61,
+			"kconfig": null,
+			"line": 535,
+			"name": "chroot",
+			"number": 61,
+			"origname": "chroot",
+			"signature": [
+				"const char *filename"
+			],
+			"symbol": "__arm64_sys_chroot"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/statfs.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 62,
+			"kconfig": null,
+			"line": 391,
+			"name": "ustat",
+			"number": 62,
+			"origname": "ustat",
+			"signature": [
+				"unsigned dev",
+				"struct compat_ustat *u"
+			],
+			"symbol": "__arm64_compat_sys_ustat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/file.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 63,
+			"kconfig": null,
+			"line": 1176,
+			"name": "dup2",
+			"number": 63,
+			"origname": "dup2",
+			"signature": [
+				"unsigned int oldfd",
+				"unsigned int newfd"
+			],
+			"symbol": "__arm64_sys_dup2"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 64,
+			"kconfig": null,
+			"line": 928,
+			"name": "getppid",
+			"number": 64,
+			"origname": "getppid",
+			"signature": [],
+			"symbol": "__arm64_sys_getppid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 65,
+			"kconfig": null,
+			"line": 1132,
+			"name": "getpgrp",
+			"number": 65,
+			"origname": "getpgrp",
+			"signature": [],
+			"symbol": "__arm64_sys_getpgrp"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 66,
+			"kconfig": null,
+			"line": 1211,
+			"name": "setsid",
+			"number": 66,
+			"origname": "setsid",
+			"signature": [],
+			"symbol": "__arm64_sys_setsid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 67,
+			"kconfig": null,
+			"line": 4418,
+			"name": "sigaction",
+			"number": 67,
+			"origname": "sigaction",
+			"signature": [
+				"int sig",
+				"const struct compat_old_sigaction *act",
+				"struct compat_old_sigaction *oact"
+			],
+			"symbol": "__arm64_compat_sys_sigaction"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/uid16.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 70,
+			"kconfig": "UID16",
+			"line": 48,
+			"name": "setreuid16",
+			"number": 70,
+			"origname": "setreuid16",
+			"signature": [
+				"old_uid_t ruid",
+				"old_uid_t euid"
+			],
+			"symbol": "__arm64_sys_setreuid16"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/uid16.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 71,
+			"kconfig": "UID16",
+			"line": 38,
+			"name": "setregid16",
+			"number": 71,
+			"origname": "setregid16",
+			"signature": [
+				"old_gid_t rgid",
+				"old_gid_t egid"
+			],
+			"symbol": "__arm64_sys_setregid16"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 72,
+			"kconfig": null,
+			"line": 4570,
+			"name": "sigsuspend",
+			"number": 72,
+			"origname": "sigsuspend",
+			"signature": [
+				"int unused1",
+				"int unused2",
+				"old_sigset_t mask"
+			],
+			"symbol": "__arm64_sys_sigsuspend"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 73,
+			"kconfig": null,
+			"line": 4239,
+			"name": "sigpending",
+			"number": 73,
+			"origname": "sigpending",
+			"signature": [
+				"compat_old_sigset_t *set32"
+			],
+			"symbol": "__arm64_compat_sys_sigpending"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 74,
+			"kconfig": null,
+			"line": 1327,
+			"name": "sethostname",
+			"number": 74,
+			"origname": "sethostname",
+			"signature": [
+				"char *name",
+				"int len"
+			],
+			"symbol": "__arm64_sys_sethostname"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 75,
+			"kconfig": null,
+			"line": 1419,
+			"name": "setrlimit",
+			"number": 75,
+			"origname": "setrlimit",
+			"signature": [
+				"unsigned int resource",
+				"struct compat_rlimit *rlim"
+			],
+			"symbol": "__arm64_compat_sys_setrlimit"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 77,
+			"kconfig": null,
+			"line": 1815,
+			"name": "getrusage",
+			"number": 77,
+			"origname": "getrusage",
+			"signature": [
+				"int who",
+				"struct compat_rusage *ru"
+			],
+			"symbol": "__arm64_compat_sys_getrusage"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/time.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 78,
+			"kconfig": null,
+			"line": 224,
+			"name": "gettimeofday",
+			"number": 78,
+			"origname": "gettimeofday",
+			"signature": [
+				"struct old_timeval32 *tv",
+				"struct timezone *tz"
+			],
+			"symbol": "__arm64_compat_sys_gettimeofday"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/time.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 79,
+			"kconfig": null,
+			"line": 243,
+			"name": "settimeofday",
+			"number": 79,
+			"origname": "settimeofday",
+			"signature": [
+				"struct old_timeval32 *tv",
+				"struct timezone *tz"
+			],
+			"symbol": "__arm64_compat_sys_settimeofday"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/uid16.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 80,
+			"kconfig": "UID16",
+			"line": 154,
+			"name": "getgroups16",
+			"number": 80,
+			"origname": "getgroups16",
+			"signature": [
+				"int gidsetsize",
+				"old_gid_t *grouplist"
+			],
+			"symbol": "__arm64_sys_getgroups16"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/uid16.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 81,
+			"kconfig": "UID16",
+			"line": 177,
+			"name": "setgroups16",
+			"number": 81,
+			"origname": "setgroups16",
+			"signature": [
+				"int gidsetsize",
+				"old_gid_t *grouplist"
+			],
+			"symbol": "__arm64_sys_setgroups16"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namei.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 83,
+			"kconfig": null,
+			"line": 4221,
+			"name": "symlink",
+			"number": 83,
+			"origname": "symlink",
+			"signature": [
+				"const char *oldname",
+				"const char *newname"
+			],
+			"symbol": "__arm64_sys_symlink"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/stat.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 85,
+			"kconfig": null,
+			"line": 455,
+			"name": "readlink",
+			"number": 85,
+			"origname": "readlink",
+			"signature": [
+				"const char *path",
+				"char *buf",
+				"int bufsiz"
+			],
+			"symbol": "__arm64_sys_readlink"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/exec.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 86,
+			"kconfig": "USELIB",
+			"line": 125,
+			"name": "uselib",
+			"number": 86,
+			"origname": "uselib",
+			"signature": [
+				"const char *library"
+			],
+			"symbol": "__arm64_sys_uselib"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/swapfile.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 87,
+			"kconfig": "SWAP",
+			"line": 3132,
+			"name": "swapon",
+			"number": 87,
+			"origname": "swapon",
+			"signature": [
+				"const char *specialfile",
+				"int swap_flags"
+			],
+			"symbol": "__arm64_sys_swapon"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/reboot.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 88,
+			"kconfig": null,
+			"line": 310,
+			"name": "reboot",
+			"number": 88,
+			"origname": "reboot",
+			"signature": [
+				"int magic1",
+				"int magic2",
+				"unsigned int cmd",
+				"void *arg"
+			],
+			"symbol": "__arm64_sys_reboot"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mmap.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 91,
+			"kconfig": null,
+			"line": 2957,
+			"name": "munmap",
+			"number": 91,
+			"origname": "munmap",
+			"signature": [
+				"unsigned long addr",
+				"size_t len"
+			],
+			"symbol": "__arm64_sys_munmap"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 92,
+			"kconfig": null,
+			"line": 151,
+			"name": "truncate",
+			"number": 92,
+			"origname": "truncate",
+			"signature": [
+				"const char *path",
+				"compat_off_t length"
+			],
+			"symbol": "__arm64_compat_sys_truncate"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 93,
+			"kconfig": null,
+			"line": 211,
+			"name": "ftruncate",
+			"number": 93,
+			"origname": "ftruncate",
+			"signature": [
+				"unsigned int fd",
+				"compat_ulong_t length"
+			],
+			"symbol": "__arm64_compat_sys_ftruncate"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 94,
+			"kconfig": null,
+			"line": 604,
+			"name": "fchmod",
+			"number": 94,
+			"origname": "fchmod",
+			"signature": [
+				"unsigned int fd",
+				"umode_t mode"
+			],
+			"symbol": "__arm64_sys_fchmod"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/uid16.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 95,
+			"kconfig": "UID16",
+			"line": 33,
+			"name": "fchown16",
+			"number": 95,
+			"origname": "fchown16",
+			"signature": [
+				"unsigned int fd",
+				"old_uid_t user",
+				"old_gid_t group"
+			],
+			"symbol": "__arm64_sys_fchown16"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 96,
+			"kconfig": null,
+			"line": 273,
+			"name": "getpriority",
+			"number": 96,
+			"origname": "getpriority",
+			"signature": [
+				"int which",
+				"int who"
+			],
+			"symbol": "__arm64_sys_getpriority"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 97,
+			"kconfig": null,
+			"line": 203,
+			"name": "setpriority",
+			"number": 97,
+			"origname": "setpriority",
+			"signature": [
+				"int which",
+				"int who",
+				"int niceval"
+			],
+			"symbol": "__arm64_sys_setpriority"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/statfs.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 99,
+			"kconfig": null,
+			"line": 305,
+			"name": "statfs",
+			"number": 99,
+			"origname": "statfs",
+			"signature": [
+				"const char *pathname",
+				"struct compat_statfs *buf"
+			],
+			"symbol": "__arm64_compat_sys_statfs"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/statfs.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 100,
+			"kconfig": null,
+			"line": 314,
+			"name": "fstatfs",
+			"number": 100,
+			"origname": "fstatfs",
+			"signature": [
+				"unsigned int fd",
+				"struct compat_statfs *buf"
+			],
+			"symbol": "__arm64_compat_sys_fstatfs"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/printk/printk.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 103,
+			"kconfig": null,
+			"line": 1754,
+			"name": "syslog",
+			"number": 103,
+			"origname": "syslog",
+			"signature": [
+				"int type",
+				"char *buf",
+				"int len"
+			],
+			"symbol": "__arm64_sys_syslog"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/itimer.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 104,
+			"kconfig": null,
+			"line": 378,
+			"name": "setitimer",
+			"number": 104,
+			"origname": "setitimer",
+			"signature": [
+				"int which",
+				"struct old_itimerval32 *value",
+				"struct old_itimerval32 *ovalue"
+			],
+			"symbol": "__arm64_compat_sys_setitimer"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/itimer.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 105,
+			"kconfig": null,
+			"line": 141,
+			"name": "getitimer",
+			"number": 105,
+			"origname": "getitimer",
+			"signature": [
+				"int which",
+				"struct old_itimerval32 *value"
+			],
+			"symbol": "__arm64_compat_sys_getitimer"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/stat.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 106,
+			"kconfig": null,
+			"line": 658,
+			"name": "newstat",
+			"number": 106,
+			"origname": "newstat",
+			"signature": [
+				"const char *filename",
+				"struct compat_stat *statbuf"
+			],
+			"symbol": "__arm64_compat_sys_newstat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/stat.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 107,
+			"kconfig": null,
+			"line": 670,
+			"name": "newlstat",
+			"number": 107,
+			"origname": "newlstat",
+			"signature": [
+				"const char *filename",
+				"struct compat_stat *statbuf"
+			],
+			"symbol": "__arm64_compat_sys_newlstat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/stat.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 108,
+			"kconfig": null,
+			"line": 697,
+			"name": "newfstat",
+			"number": 108,
+			"origname": "newfstat",
+			"signature": [
+				"unsigned int fd",
+				"struct compat_stat *statbuf"
+			],
+			"symbol": "__arm64_compat_sys_newfstat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 111,
+			"kconfig": null,
+			"line": 1347,
+			"name": "vhangup",
+			"number": 111,
+			"origname": "vhangup",
+			"signature": [],
+			"symbol": "__arm64_sys_vhangup"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/exit.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 114,
+			"kconfig": null,
+			"line": 1728,
+			"name": "wait4",
+			"number": 114,
+			"origname": "wait4",
+			"signature": [
+				"compat_pid_t pid",
+				"compat_uint_t *stat_addr",
+				"int options",
+				"struct compat_rusage *ru"
+			],
+			"symbol": "__arm64_compat_sys_wait4"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/swapfile.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 115,
+			"kconfig": "SWAP",
+			"line": 2532,
+			"name": "swapoff",
+			"number": 115,
+			"origname": "swapoff",
+			"signature": [
+				"const char *specialfile"
+			],
+			"symbol": "__arm64_sys_swapoff"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 116,
+			"kconfig": null,
+			"line": 2670,
+			"name": "sysinfo",
+			"number": 116,
+			"origname": "sysinfo",
+			"signature": [
+				"struct compat_sysinfo *info"
+			],
+			"symbol": "__arm64_compat_sys_sysinfo"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/sync.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 118,
+			"kconfig": null,
+			"line": 230,
+			"name": "fsync",
+			"number": 118,
+			"origname": "fsync",
+			"signature": [
+				"unsigned int fd"
+			],
+			"symbol": "__arm64_sys_fsync"
+		},
+		{
+			"esoteric": false,
+			"file": "arch/arm64/kernel/signal32.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 119,
+			"kconfig": null,
+			"line": 232,
+			"name": "sigreturn",
+			"number": 119,
+			"origname": "sigreturn",
+			"signature": [],
+			"symbol": "__arm64_compat_sys_sigreturn"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/fork.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 120,
+			"kconfig": null,
+			"line": 2587,
+			"name": "clone",
+			"number": 120,
+			"origname": "clone",
+			"signature": [
+				"unsigned long clone_flags",
+				"unsigned long newsp",
+				"int *parent_tidptr",
+				"unsigned long tls",
+				"int *child_tidptr"
+			],
+			"symbol": "__arm64_sys_clone"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 121,
+			"kconfig": null,
+			"line": 1380,
+			"name": "setdomainname",
+			"number": 121,
+			"origname": "setdomainname",
+			"signature": [
+				"char *name",
+				"int len"
+			],
+			"symbol": "__arm64_sys_setdomainname"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 122,
+			"kconfig": null,
+			"line": 1259,
+			"name": "newuname",
+			"number": 122,
+			"origname": "newuname",
+			"signature": [
+				"struct new_utsname *name"
+			],
+			"symbol": "__arm64_sys_newuname"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/time.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 124,
+			"kconfig": null,
+			"line": 349,
+			"name": "adjtimex",
+			"number": 124,
+			"origname": "adjtimex_time32",
+			"signature": [
+				"struct old_timex32 *utp"
+			],
+			"symbol": "__arm64_sys_adjtimex_time32"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mprotect.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 125,
+			"kconfig": "MMU",
+			"line": 649,
+			"name": "mprotect",
+			"number": 125,
+			"origname": "mprotect",
+			"signature": [
+				"unsigned long start",
+				"size_t len",
+				"unsigned long prot"
+			],
+			"symbol": "__arm64_sys_mprotect"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/compat.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 126,
+			"kconfig": null,
+			"line": 40,
+			"name": "sigprocmask",
+			"number": 126,
+			"origname": "sigprocmask",
+			"signature": [
+				"int how",
+				"compat_old_sigset_t *nset",
+				"compat_old_sigset_t *oset"
+			],
+			"symbol": "__arm64_compat_sys_sigprocmask"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/module.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 128,
+			"kconfig": "MODULES",
+			"line": 4116,
+			"name": "init_module",
+			"number": 128,
+			"origname": "init_module",
+			"signature": [
+				"void *umod",
+				"unsigned long len",
+				"const char *uargs"
+			],
+			"symbol": "__arm64_sys_init_module"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/module.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 129,
+			"kconfig": "MODULES",
+			"line": 911,
+			"name": "delete_module",
+			"number": 129,
+			"origname": "delete_module",
+			"signature": [
+				"const char *name_user",
+				"unsigned int flags"
+			],
+			"symbol": "__arm64_sys_delete_module"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/quota/quota.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 131,
+			"kconfig": "QUOTACTL",
+			"line": 915,
+			"name": "quotactl",
+			"number": 131,
+			"origname": "quotactl",
+			"signature": [
+				"unsigned int cmd",
+				"const char *special",
+				"qid_t id",
+				"void *addr"
+			],
+			"symbol": "__arm64_sys_quotactl"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 132,
+			"kconfig": null,
+			"line": 1125,
+			"name": "getpgid",
+			"number": 132,
+			"origname": "getpgid",
+			"signature": [
+				"pid_t pid"
+			],
+			"symbol": "__arm64_sys_getpgid"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 133,
+			"kconfig": null,
+			"line": 513,
+			"name": "fchdir",
+			"number": 133,
+			"origname": "fchdir",
+			"signature": [
+				"unsigned int fd"
+			],
+			"symbol": "__arm64_sys_fchdir"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/buffer.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 134,
+			"kconfig": null,
+			"line": 3302,
+			"name": "bdflush",
+			"number": 134,
+			"origname": "bdflush",
+			"signature": [
+				"int func",
+				"long data"
+			],
+			"symbol": "__arm64_sys_bdflush"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/filesystems.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 135,
+			"kconfig": "SYSFS_SYSCALL",
+			"line": 191,
+			"name": "sysfs",
+			"number": 135,
+			"origname": "sysfs",
+			"signature": [
+				"int option",
+				"unsigned long arg1",
+				"unsigned long arg2"
+			],
+			"symbol": "__arm64_sys_sysfs"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/exec_domain.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 136,
+			"kconfig": null,
+			"line": 38,
+			"name": "personality",
+			"number": 136,
+			"origname": "personality",
+			"signature": [
+				"unsigned int personality"
+			],
+			"symbol": "__arm64_sys_personality"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/uid16.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 138,
+			"kconfig": "UID16",
+			"line": 104,
+			"name": "setfsuid16",
+			"number": 138,
+			"origname": "setfsuid16",
+			"signature": [
+				"old_uid_t uid"
+			],
+			"symbol": "__arm64_sys_setfsuid16"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/uid16.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 139,
+			"kconfig": "UID16",
+			"line": 109,
+			"name": "setfsgid16",
+			"number": 139,
+			"origname": "setfsgid16",
+			"signature": [
+				"old_gid_t gid"
+			],
+			"symbol": "__arm64_sys_setfsgid16"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/read_write.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 140,
+			"kconfig": null,
+			"line": 336,
+			"name": "llseek",
+			"number": 140,
+			"origname": "llseek",
+			"signature": [
+				"unsigned int fd",
+				"unsigned long offset_high",
+				"unsigned long offset_low",
+				"loff_t *result",
+				"unsigned int whence"
+			],
+			"symbol": "__arm64_sys_llseek"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/readdir.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 141,
+			"kconfig": null,
+			"line": 522,
+			"name": "getdents",
+			"number": 141,
+			"origname": "getdents",
+			"signature": [
+				"unsigned int fd",
+				"struct compat_linux_dirent *dirent",
+				"unsigned int count"
+			],
+			"symbol": "__arm64_compat_sys_getdents"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/select.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 142,
+			"kconfig": null,
+			"line": 1284,
+			"name": "select",
+			"number": 142,
+			"origname": "select",
+			"signature": [
+				"int n",
+				"compat_ulong_t *inp",
+				"compat_ulong_t *outp",
+				"compat_ulong_t *exp",
+				"struct old_timeval32 *tvp"
+			],
+			"symbol": "__arm64_compat_sys_select"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/locks.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 143,
+			"kconfig": null,
+			"line": 2222,
+			"name": "flock",
+			"number": 143,
+			"origname": "flock",
+			"signature": [
+				"unsigned int fd",
+				"unsigned int cmd"
+			],
+			"symbol": "__arm64_sys_flock"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/msync.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 144,
+			"kconfig": "MMU",
+			"line": 32,
+			"name": "msync",
+			"number": 144,
+			"origname": "msync",
+			"signature": [
+				"unsigned long start",
+				"size_t len",
+				"int flags"
+			],
+			"symbol": "__arm64_sys_msync"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/read_write.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 145,
+			"kconfig": null,
+			"line": 1046,
+			"name": "readv",
+			"number": 145,
+			"origname": "readv",
+			"signature": [
+				"unsigned long fd",
+				"const struct iovec *vec",
+				"unsigned long vlen"
+			],
+			"symbol": "__arm64_sys_readv"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/read_write.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 146,
+			"kconfig": null,
+			"line": 1052,
+			"name": "writev",
+			"number": 146,
+			"origname": "writev",
+			"signature": [
+				"unsigned long fd",
+				"const struct iovec *vec",
+				"unsigned long vlen"
+			],
+			"symbol": "__arm64_sys_writev"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 147,
+			"kconfig": null,
+			"line": 1139,
+			"name": "getsid",
+			"number": 147,
+			"origname": "getsid",
+			"signature": [
+				"pid_t pid"
+			],
+			"symbol": "__arm64_sys_getsid"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/sync.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 148,
+			"kconfig": null,
+			"line": 235,
+			"name": "fdatasync",
+			"number": 148,
+			"origname": "fdatasync",
+			"signature": [
+				"unsigned int fd"
+			],
+			"symbol": "__arm64_sys_fdatasync"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mlock.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 150,
+			"kconfig": "MMU",
+			"line": 693,
+			"name": "mlock",
+			"number": 150,
+			"origname": "mlock",
+			"signature": [
+				"unsigned long start",
+				"size_t len"
+			],
+			"symbol": "__arm64_sys_mlock"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mlock.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 151,
+			"kconfig": "MMU",
+			"line": 711,
+			"name": "munlock",
+			"number": 151,
+			"origname": "munlock",
+			"signature": [
+				"unsigned long start",
+				"size_t len"
+			],
+			"symbol": "__arm64_sys_munlock"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mlock.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 152,
+			"kconfig": "MMU",
+			"line": 774,
+			"name": "mlockall",
+			"number": 152,
+			"origname": "mlockall",
+			"signature": [
+				"int flags"
+			],
+			"symbol": "__arm64_sys_mlockall"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mlock.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 153,
+			"kconfig": "MMU",
+			"line": 803,
+			"name": "munlockall",
+			"number": 153,
+			"origname": "munlockall",
+			"signature": [],
+			"symbol": "__arm64_sys_munlockall"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sched/core.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 154,
+			"kconfig": null,
+			"line": 6552,
+			"name": "sched_setparam",
+			"number": 154,
+			"origname": "sched_setparam",
+			"signature": [
+				"pid_t pid",
+				"struct sched_param *param"
+			],
+			"symbol": "__arm64_sys_sched_setparam"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sched/core.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 155,
+			"kconfig": null,
+			"line": 6633,
+			"name": "sched_getparam",
+			"number": 155,
+			"origname": "sched_getparam",
+			"signature": [
+				"pid_t pid",
+				"struct sched_param *param"
+			],
+			"symbol": "__arm64_sys_sched_getparam"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sched/core.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 156,
+			"kconfig": null,
+			"line": 6537,
+			"name": "sched_setscheduler",
+			"number": 156,
+			"origname": "sched_setscheduler",
+			"signature": [
+				"pid_t pid",
+				"int policy",
+				"struct sched_param *param"
+			],
+			"symbol": "__arm64_sys_sched_setscheduler"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sched/core.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 157,
+			"kconfig": null,
+			"line": 6604,
+			"name": "sched_getscheduler",
+			"number": 157,
+			"origname": "sched_getscheduler",
+			"signature": [
+				"pid_t pid"
+			],
+			"symbol": "__arm64_sys_sched_getscheduler"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sched/core.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 158,
+			"kconfig": null,
+			"line": 6977,
+			"name": "sched_yield",
+			"number": 158,
+			"origname": "sched_yield",
+			"signature": [],
+			"symbol": "__arm64_sys_sched_yield"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sched/core.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 159,
+			"kconfig": null,
+			"line": 7227,
+			"name": "sched_get_priority_max",
+			"number": 159,
+			"origname": "sched_get_priority_max",
+			"signature": [
+				"int policy"
+			],
+			"symbol": "__arm64_sys_sched_get_priority_max"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sched/core.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 160,
+			"kconfig": null,
+			"line": 7254,
+			"name": "sched_get_priority_min",
+			"number": 160,
+			"origname": "sched_get_priority_min",
+			"signature": [
+				"int policy"
+			],
+			"symbol": "__arm64_sys_sched_get_priority_min"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sched/core.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 161,
+			"kconfig": null,
+			"line": 7332,
+			"name": "sched_rr_get_interval",
+			"number": 161,
+			"origname": "sched_rr_get_interval_time32",
+			"signature": [
+				"pid_t pid",
+				"struct old_timespec32 *interval"
+			],
+			"symbol": "__arm64_sys_sched_rr_get_interval_time32"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/hrtimer.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 162,
+			"kconfig": null,
+			"line": 1991,
+			"name": "nanosleep",
+			"number": 162,
+			"origname": "nanosleep_time32",
+			"signature": [
+				"struct old_timespec32 *rqtp",
+				"struct old_timespec32 *rmtp"
+			],
+			"symbol": "__arm64_sys_nanosleep_time32"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mremap.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 163,
+			"kconfig": null,
+			"line": 816,
+			"name": "mremap",
+			"number": 163,
+			"origname": "mremap",
+			"signature": [
+				"unsigned long addr",
+				"unsigned long old_len",
+				"unsigned long new_len",
+				"unsigned long flags",
+				"unsigned long new_addr"
+			],
+			"symbol": "__arm64_sys_mremap"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/uid16.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 164,
+			"kconfig": "UID16",
+			"line": 58,
+			"name": "setresuid16",
+			"number": 164,
+			"origname": "setresuid16",
+			"signature": [
+				"old_uid_t ruid",
+				"old_uid_t euid",
+				"old_uid_t suid"
+			],
+			"symbol": "__arm64_sys_setresuid16"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/uid16.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 165,
+			"kconfig": "UID16",
+			"line": 64,
+			"name": "getresuid16",
+			"number": 165,
+			"origname": "getresuid16",
+			"signature": [
+				"old_uid_t *ruidp",
+				"old_uid_t *euidp",
+				"old_uid_t *suidp"
+			],
+			"symbol": "__arm64_sys_getresuid16"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/select.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 168,
+			"kconfig": null,
+			"line": 1064,
+			"name": "poll",
+			"number": 168,
+			"origname": "poll",
+			"signature": [
+				"struct pollfd *ufds",
+				"unsigned int nfds",
+				"int timeout_msecs"
+			],
+			"symbol": "__arm64_sys_poll"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/uid16.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 170,
+			"kconfig": "UID16",
+			"line": 81,
+			"name": "setresgid16",
+			"number": 170,
+			"origname": "setresgid16",
+			"signature": [
+				"old_gid_t rgid",
+				"old_gid_t egid",
+				"old_gid_t sgid"
+			],
+			"symbol": "__arm64_sys_setresgid16"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/uid16.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 171,
+			"kconfig": "UID16",
+			"line": 87,
+			"name": "getresgid16",
+			"number": 171,
+			"origname": "getresgid16",
+			"signature": [
+				"old_gid_t *rgidp",
+				"old_gid_t *egidp",
+				"old_gid_t *sgidp"
+			],
+			"symbol": "__arm64_sys_getresgid16"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 172,
+			"kconfig": null,
+			"line": 2289,
+			"name": "prctl",
+			"number": 172,
+			"origname": "prctl",
+			"signature": [
+				"int option",
+				"unsigned long arg2",
+				"unsigned long arg3",
+				"unsigned long arg4",
+				"unsigned long arg5"
+			],
+			"symbol": "__arm64_sys_prctl"
+		},
+		{
+			"esoteric": false,
+			"file": "arch/arm64/kernel/signal32.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 173,
+			"kconfig": null,
+			"line": 263,
+			"name": "rt_sigreturn",
+			"number": 173,
+			"origname": "rt_sigreturn",
+			"signature": [],
+			"symbol": "__arm64_compat_sys_rt_sigreturn"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 174,
+			"kconfig": null,
+			"line": 4335,
+			"name": "rt_sigaction",
+			"number": 174,
+			"origname": "rt_sigaction",
+			"signature": [
+				"int sig",
+				"const struct compat_sigaction *act",
+				"struct compat_sigaction *oact",
+				"compat_size_t sigsetsize"
+			],
+			"symbol": "__arm64_compat_sys_rt_sigaction"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 175,
+			"kconfig": null,
+			"line": 3106,
+			"name": "rt_sigprocmask",
+			"number": 175,
+			"origname": "rt_sigprocmask",
+			"signature": [
+				"int how",
+				"compat_sigset_t *nset",
+				"compat_sigset_t *oset",
+				"compat_size_t sigsetsize"
+			],
+			"symbol": "__arm64_compat_sys_rt_sigprocmask"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 176,
+			"kconfig": null,
+			"line": 3163,
+			"name": "rt_sigpending",
+			"number": 176,
+			"origname": "rt_sigpending",
+			"signature": [
+				"compat_sigset_t *uset",
+				"compat_size_t sigsetsize"
+			],
+			"symbol": "__arm64_compat_sys_rt_sigpending"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 177,
+			"kconfig": null,
+			"line": 3652,
+			"name": "rt_sigtimedwait",
+			"number": 177,
+			"origname": "rt_sigtimedwait_time32",
+			"signature": [
+				"compat_sigset_t *uthese",
+				"struct compat_siginfo *uinfo",
+				"struct old_timespec32 *uts",
+				"compat_size_t sigsetsize"
+			],
+			"symbol": "__arm64_compat_sys_rt_sigtimedwait_time32"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 178,
+			"kconfig": null,
+			"line": 3935,
+			"name": "rt_sigqueueinfo",
+			"number": 178,
+			"origname": "rt_sigqueueinfo",
+			"signature": [
+				"compat_pid_t pid",
+				"int sig",
+				"struct compat_siginfo *uinfo"
+			],
+			"symbol": "__arm64_compat_sys_rt_sigqueueinfo"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 179,
+			"kconfig": null,
+			"line": 4547,
+			"name": "rt_sigsuspend",
+			"number": 179,
+			"origname": "rt_sigsuspend",
+			"signature": [
+				"compat_sigset_t *unewset",
+				"compat_size_t sigsetsize"
+			],
+			"symbol": "__arm64_compat_sys_rt_sigsuspend"
+		},
+		{
+			"esoteric": false,
+			"file": "arch/arm64/kernel/sys32.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 180,
+			"kconfig": null,
+			"line": 75,
+			"name": "pread64",
+			"number": 180,
+			"origname": "aarch32_pread64",
+			"signature": [
+				"unsigned int fd",
+				"char *buf",
+				"size_t count",
+				"u32 __pad",
+				"u32 pos_lo",
+				"u32 pos_hi"
+			],
+			"symbol": "__arm64_compat_sys_aarch32_pread64"
+		},
+		{
+			"esoteric": false,
+			"file": "arch/arm64/kernel/sys32.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 181,
+			"kconfig": null,
+			"line": 81,
+			"name": "pwrite64",
+			"number": 181,
+			"origname": "aarch32_pwrite64",
+			"signature": [
+				"unsigned int fd",
+				"const char *buf",
+				"size_t count",
+				"u32 __pad",
+				"u32 pos_lo",
+				"u32 pos_hi"
+			],
+			"symbol": "__arm64_compat_sys_aarch32_pwrite64"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/uid16.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 182,
+			"kconfig": "UID16",
+			"line": 23,
+			"name": "chown16",
+			"number": 182,
+			"origname": "chown16",
+			"signature": [
+				"const char *filename",
+				"old_uid_t user",
+				"old_gid_t group"
+			],
+			"symbol": "__arm64_sys_chown16"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/d_path.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 183,
+			"kconfig": null,
+			"line": 429,
+			"name": "getcwd",
+			"number": 183,
+			"origname": "getcwd",
+			"signature": [
+				"char *buf",
+				"unsigned long size"
+			],
+			"symbol": "__arm64_sys_getcwd"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/capability.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 184,
+			"kconfig": "MULTIUSER",
+			"line": 148,
+			"name": "capget",
+			"number": 184,
+			"origname": "capget",
+			"signature": [
+				"cap_user_header_t header",
+				"cap_user_data_t dataptr"
+			],
+			"symbol": "__arm64_sys_capget"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/capability.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 185,
+			"kconfig": "MULTIUSER",
+			"line": 222,
+			"name": "capset",
+			"number": 185,
+			"origname": "capset",
+			"signature": [
+				"cap_user_header_t header",
+				"const cap_user_data_t data"
+			],
+			"symbol": "__arm64_sys_capset"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 186,
+			"kconfig": null,
+			"line": 4187,
+			"name": "sigaltstack",
+			"number": 186,
+			"origname": "sigaltstack",
+			"signature": [
+				"const compat_stack_t *uss_ptr",
+				"compat_stack_t *uoss_ptr"
+			],
+			"symbol": "__arm64_compat_sys_sigaltstack"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/read_write.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 187,
+			"kconfig": null,
+			"line": 1329,
+			"name": "sendfile",
+			"number": 187,
+			"origname": "sendfile",
+			"signature": [
+				"int out_fd",
+				"int in_fd",
+				"compat_off_t *offset",
+				"compat_size_t count"
+			],
+			"symbol": "__arm64_compat_sys_sendfile"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/fork.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 190,
+			"kconfig": null,
+			"line": 2574,
+			"name": "vfork",
+			"number": 190,
+			"origname": "vfork",
+			"signature": [],
+			"symbol": "__arm64_sys_vfork"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 191,
+			"kconfig": null,
+			"line": 1439,
+			"name": "getrlimit",
+			"number": 191,
+			"origname": "getrlimit",
+			"signature": [
+				"unsigned int resource",
+				"struct compat_rlimit *rlim"
+			],
+			"symbol": "__arm64_compat_sys_getrlimit"
+		},
+		{
+			"esoteric": false,
+			"file": "arch/arm64/kernel/sys32.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 192,
+			"kconfig": null,
+			"line": 55,
+			"name": "mmap2",
+			"number": 192,
+			"origname": "aarch32_mmap2",
+			"signature": [
+				"unsigned long addr",
+				"unsigned long len",
+				"unsigned long prot",
+				"unsigned long flags",
+				"unsigned long fd",
+				"unsigned long off_4k"
+			],
+			"symbol": "__arm64_compat_sys_aarch32_mmap2"
+		},
+		{
+			"esoteric": false,
+			"file": "arch/arm64/kernel/sys32.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 193,
+			"kconfig": null,
+			"line": 88,
+			"name": "truncate64",
+			"number": 193,
+			"origname": "aarch32_truncate64",
+			"signature": [
+				"const char *pathname",
+				"u32 __pad",
+				"u32 length_lo",
+				"u32 length_hi"
+			],
+			"symbol": "__arm64_compat_sys_aarch32_truncate64"
+		},
+		{
+			"esoteric": false,
+			"file": "arch/arm64/kernel/sys32.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 194,
+			"kconfig": null,
+			"line": 94,
+			"name": "ftruncate64",
+			"number": 194,
+			"origname": "aarch32_ftruncate64",
+			"signature": [
+				"unsigned int fd",
+				"u32 __pad",
+				"u32 length_lo",
+				"u32 length_hi"
+			],
+			"symbol": "__arm64_compat_sys_aarch32_ftruncate64"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/stat.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 195,
+			"kconfig": null,
+			"line": 504,
+			"name": "stat64",
+			"number": 195,
+			"origname": "stat64",
+			"signature": [
+				"const char *filename",
+				"struct stat64 *statbuf"
+			],
+			"symbol": "__arm64_sys_stat64"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/stat.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 196,
+			"kconfig": null,
+			"line": 516,
+			"name": "lstat64",
+			"number": 196,
+			"origname": "lstat64",
+			"signature": [
+				"const char *filename",
+				"struct stat64 *statbuf"
+			],
+			"symbol": "__arm64_sys_lstat64"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/stat.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 197,
+			"kconfig": null,
+			"line": 528,
+			"name": "fstat64",
+			"number": 197,
+			"origname": "fstat64",
+			"signature": [
+				"unsigned long fd",
+				"struct stat64 *statbuf"
+			],
+			"symbol": "__arm64_sys_fstat64"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 198,
+			"kconfig": null,
+			"line": 736,
+			"name": "lchown",
+			"number": 198,
+			"origname": "lchown",
+			"signature": [
+				"const char *filename",
+				"uid_t user",
+				"gid_t group"
+			],
+			"symbol": "__arm64_sys_lchown"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 199,
+			"kconfig": null,
+			"line": 939,
+			"name": "getuid",
+			"number": 199,
+			"origname": "getuid",
+			"signature": [],
+			"symbol": "__arm64_sys_getuid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 200,
+			"kconfig": null,
+			"line": 951,
+			"name": "getgid",
+			"number": 200,
+			"origname": "getgid",
+			"signature": [],
+			"symbol": "__arm64_sys_getgid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 201,
+			"kconfig": null,
+			"line": 945,
+			"name": "geteuid",
+			"number": 201,
+			"origname": "geteuid",
+			"signature": [],
+			"symbol": "__arm64_sys_geteuid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 202,
+			"kconfig": null,
+			"line": 957,
+			"name": "getegid",
+			"number": 202,
+			"origname": "getegid",
+			"signature": [],
+			"symbol": "__arm64_sys_getegid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 203,
+			"kconfig": "MULTIUSER",
+			"line": 568,
+			"name": "setreuid",
+			"number": 203,
+			"origname": "setreuid",
+			"signature": [
+				"uid_t ruid",
+				"uid_t euid"
+			],
+			"symbol": "__arm64_sys_setreuid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 204,
+			"kconfig": "MULTIUSER",
+			"line": 413,
+			"name": "setregid",
+			"number": 204,
+			"origname": "setregid",
+			"signature": [
+				"gid_t rgid",
+				"gid_t egid"
+			],
+			"symbol": "__arm64_sys_setregid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/groups.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 205,
+			"kconfig": "MULTIUSER",
+			"line": 148,
+			"name": "getgroups",
+			"number": 205,
+			"origname": "getgroups",
+			"signature": [
+				"int gidsetsize",
+				"gid_t *grouplist"
+			],
+			"symbol": "__arm64_sys_getgroups"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/groups.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 206,
+			"kconfig": "MULTIUSER",
+			"line": 185,
+			"name": "setgroups",
+			"number": 206,
+			"origname": "setgroups",
+			"signature": [
+				"int gidsetsize",
+				"gid_t *grouplist"
+			],
+			"symbol": "__arm64_sys_setgroups"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 207,
+			"kconfig": null,
+			"line": 767,
+			"name": "fchown",
+			"number": 207,
+			"origname": "fchown",
+			"signature": [
+				"unsigned int fd",
+				"uid_t user",
+				"gid_t group"
+			],
+			"symbol": "__arm64_sys_fchown"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 208,
+			"kconfig": "MULTIUSER",
+			"line": 701,
+			"name": "setresuid",
+			"number": 208,
+			"origname": "setresuid",
+			"signature": [
+				"uid_t ruid",
+				"uid_t euid",
+				"uid_t suid"
+			],
+			"symbol": "__arm64_sys_setresuid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 209,
+			"kconfig": "MULTIUSER",
+			"line": 706,
+			"name": "getresuid",
+			"number": 209,
+			"origname": "getresuid",
+			"signature": [
+				"uid_t *ruidp",
+				"uid_t *euidp",
+				"uid_t *suidp"
+			],
+			"symbol": "__arm64_sys_getresuid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 210,
+			"kconfig": "MULTIUSER",
+			"line": 784,
+			"name": "setresgid",
+			"number": 210,
+			"origname": "setresgid",
+			"signature": [
+				"gid_t rgid",
+				"gid_t egid",
+				"gid_t sgid"
+			],
+			"symbol": "__arm64_sys_setresgid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 211,
+			"kconfig": "MULTIUSER",
+			"line": 789,
+			"name": "getresgid",
+			"number": 211,
+			"origname": "getresgid",
+			"signature": [
+				"gid_t *rgidp",
+				"gid_t *egidp",
+				"gid_t *sgidp"
+			],
+			"symbol": "__arm64_sys_getresgid"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 212,
+			"kconfig": null,
+			"line": 731,
+			"name": "chown",
+			"number": 212,
+			"origname": "chown",
+			"signature": [
+				"const char *filename",
+				"uid_t user",
+				"gid_t group"
+			],
+			"symbol": "__arm64_sys_chown"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 213,
+			"kconfig": "MULTIUSER",
+			"line": 626,
+			"name": "setuid",
+			"number": 213,
+			"origname": "setuid",
+			"signature": [
+				"uid_t uid"
+			],
+			"symbol": "__arm64_sys_setuid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 214,
+			"kconfig": "MULTIUSER",
+			"line": 459,
+			"name": "setgid",
+			"number": 214,
+			"origname": "setgid",
+			"signature": [
+				"gid_t gid"
+			],
+			"symbol": "__arm64_sys_setgid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 215,
+			"kconfig": "MULTIUSER",
+			"line": 852,
+			"name": "setfsuid",
+			"number": 215,
+			"origname": "setfsuid",
+			"signature": [
+				"uid_t uid"
+			],
+			"symbol": "__arm64_sys_setfsuid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 216,
+			"kconfig": "MULTIUSER",
+			"line": 896,
+			"name": "setfsgid",
+			"number": 216,
+			"origname": "setfsgid",
+			"signature": [
+				"gid_t gid"
+			],
+			"symbol": "__arm64_sys_setfsgid"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/readdir.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 217,
+			"kconfig": null,
+			"line": 354,
+			"name": "getdents64",
+			"number": 217,
+			"origname": "getdents64",
+			"signature": [
+				"unsigned int fd",
+				"struct linux_dirent64 *dirent",
+				"unsigned int count"
+			],
+			"symbol": "__arm64_sys_getdents64"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namespace.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 218,
+			"kconfig": null,
+			"line": 3728,
+			"name": "pivot_root",
+			"number": 218,
+			"origname": "pivot_root",
+			"signature": [
+				"const char *new_root",
+				"const char *put_old"
+			],
+			"symbol": "__arm64_sys_pivot_root"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mincore.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 219,
+			"kconfig": "MMU",
+			"line": 230,
+			"name": "mincore",
+			"number": 219,
+			"origname": "mincore",
+			"signature": [
+				"unsigned long start",
+				"size_t len",
+				"unsigned char *vec"
+			],
+			"symbol": "__arm64_sys_mincore"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/madvise.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 220,
+			"kconfig": "ADVISE_SYSCALLS",
+			"line": 1157,
+			"name": "madvise",
+			"number": 220,
+			"origname": "madvise",
+			"signature": [
+				"unsigned long start",
+				"size_t len_in",
+				"int behavior"
+			],
+			"symbol": "__arm64_sys_madvise"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/fcntl.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 221,
+			"kconfig": null,
+			"line": 683,
+			"name": "fcntl64",
+			"number": 221,
+			"origname": "fcntl64",
+			"signature": [
+				"unsigned int fd",
+				"unsigned int cmd",
+				"compat_ulong_t arg"
+			],
+			"symbol": "__arm64_compat_sys_fcntl64"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 224,
+			"kconfig": null,
+			"line": 917,
+			"name": "gettid",
+			"number": 224,
+			"origname": "gettid",
+			"signature": [],
+			"symbol": "__arm64_sys_gettid"
+		},
+		{
+			"esoteric": false,
+			"file": "arch/arm64/kernel/sys32.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 225,
+			"kconfig": null,
+			"line": 100,
+			"name": "readahead",
+			"number": 225,
+			"origname": "aarch32_readahead",
+			"signature": [
+				"int fd",
+				"u32 __pad",
+				"u32 offset_lo",
+				"u32 offset_hi",
+				"size_t count"
+			],
+			"symbol": "__arm64_compat_sys_aarch32_readahead"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/xattr.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 226,
+			"kconfig": null,
+			"line": 607,
+			"name": "setxattr",
+			"number": 226,
+			"origname": "setxattr",
+			"signature": [
+				"const char *pathname",
+				"const char *name",
+				"const void *value",
+				"size_t size",
+				"int flags"
+			],
+			"symbol": "__arm64_sys_setxattr"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/xattr.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 227,
+			"kconfig": null,
+			"line": 614,
+			"name": "lsetxattr",
+			"number": 227,
+			"origname": "lsetxattr",
+			"signature": [
+				"const char *pathname",
+				"const char *name",
+				"const void *value",
+				"size_t size",
+				"int flags"
+			],
+			"symbol": "__arm64_sys_lsetxattr"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/xattr.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 228,
+			"kconfig": null,
+			"line": 621,
+			"name": "fsetxattr",
+			"number": 228,
+			"origname": "fsetxattr",
+			"signature": [
+				"int fd",
+				"const char *name",
+				"const void *value",
+				"size_t size",
+				"int flags"
+			],
+			"symbol": "__arm64_sys_fsetxattr"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/xattr.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 229,
+			"kconfig": null,
+			"line": 703,
+			"name": "getxattr",
+			"number": 229,
+			"origname": "getxattr",
+			"signature": [
+				"const char *pathname",
+				"const char *name",
+				"void *value",
+				"size_t size"
+			],
+			"symbol": "__arm64_sys_getxattr"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/xattr.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 230,
+			"kconfig": null,
+			"line": 709,
+			"name": "lgetxattr",
+			"number": 230,
+			"origname": "lgetxattr",
+			"signature": [
+				"const char *pathname",
+				"const char *name",
+				"void *value",
+				"size_t size"
+			],
+			"symbol": "__arm64_sys_lgetxattr"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/xattr.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 231,
+			"kconfig": null,
+			"line": 715,
+			"name": "fgetxattr",
+			"number": 231,
+			"origname": "fgetxattr",
+			"signature": [
+				"int fd",
+				"const char *name",
+				"void *value",
+				"size_t size"
+			],
+			"symbol": "__arm64_sys_fgetxattr"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/xattr.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 232,
+			"kconfig": null,
+			"line": 780,
+			"name": "listxattr",
+			"number": 232,
+			"origname": "listxattr",
+			"signature": [
+				"const char *pathname",
+				"char *list",
+				"size_t size"
+			],
+			"symbol": "__arm64_sys_listxattr"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/xattr.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 233,
+			"kconfig": null,
+			"line": 786,
+			"name": "llistxattr",
+			"number": 233,
+			"origname": "llistxattr",
+			"signature": [
+				"const char *pathname",
+				"char *list",
+				"size_t size"
+			],
+			"symbol": "__arm64_sys_llistxattr"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/xattr.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 234,
+			"kconfig": null,
+			"line": 792,
+			"name": "flistxattr",
+			"number": 234,
+			"origname": "flistxattr",
+			"signature": [
+				"int fd",
+				"char *list",
+				"size_t size"
+			],
+			"symbol": "__arm64_sys_flistxattr"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/xattr.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 235,
+			"kconfig": null,
+			"line": 846,
+			"name": "removexattr",
+			"number": 235,
+			"origname": "removexattr",
+			"signature": [
+				"const char *pathname",
+				"const char *name"
+			],
+			"symbol": "__arm64_sys_removexattr"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/xattr.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 236,
+			"kconfig": null,
+			"line": 852,
+			"name": "lremovexattr",
+			"number": 236,
+			"origname": "lremovexattr",
+			"signature": [
+				"const char *pathname",
+				"const char *name"
+			],
+			"symbol": "__arm64_sys_lremovexattr"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/xattr.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 237,
+			"kconfig": null,
+			"line": 858,
+			"name": "fremovexattr",
+			"number": 237,
+			"origname": "fremovexattr",
+			"signature": [
+				"int fd",
+				"const char *name"
+			],
+			"symbol": "__arm64_sys_fremovexattr"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 238,
+			"kconfig": null,
+			"line": 3896,
+			"name": "tkill",
+			"number": 238,
+			"origname": "tkill",
+			"signature": [
+				"pid_t pid",
+				"int sig"
+			],
+			"symbol": "__arm64_sys_tkill"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/read_write.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 239,
+			"kconfig": null,
+			"line": 1311,
+			"name": "sendfile64",
+			"number": 239,
+			"origname": "sendfile64",
+			"signature": [
+				"int out_fd",
+				"int in_fd",
+				"loff_t *offset",
+				"size_t count"
+			],
+			"symbol": "__arm64_sys_sendfile64"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/futex.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 240,
+			"kconfig": "FUTEX",
+			"line": 3966,
+			"name": "futex",
+			"number": 240,
+			"origname": "futex_time32",
+			"signature": [
+				"u32 *uaddr",
+				"int op",
+				"u32 val",
+				"const struct old_timespec32 *utime",
+				"u32 *uaddr2",
+				"u32 val3"
+			],
+			"symbol": "__arm64_sys_futex_time32"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/compat.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 241,
+			"kconfig": null,
+			"line": 124,
+			"name": "sched_setaffinity",
+			"number": 241,
+			"origname": "sched_setaffinity",
+			"signature": [
+				"compat_pid_t pid",
+				"unsigned int len",
+				"compat_ulong_t *user_mask_ptr"
+			],
+			"symbol": "__arm64_compat_sys_sched_setaffinity"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/compat.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 242,
+			"kconfig": null,
+			"line": 144,
+			"name": "sched_getaffinity",
+			"number": 242,
+			"origname": "sched_getaffinity",
+			"signature": [
+				"compat_pid_t pid",
+				"unsigned int len",
+				"compat_ulong_t *user_mask_ptr"
+			],
+			"symbol": "__arm64_compat_sys_sched_getaffinity"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/aio.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 243,
+			"kconfig": "AIO",
+			"line": 1342,
+			"name": "io_setup",
+			"number": 243,
+			"origname": "io_setup",
+			"signature": [
+				"unsigned nr_events",
+				"u32 *ctx32p"
+			],
+			"symbol": "__arm64_compat_sys_io_setup"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/aio.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 244,
+			"kconfig": "AIO",
+			"line": 1380,
+			"name": "io_destroy",
+			"number": 244,
+			"origname": "io_destroy",
+			"signature": [
+				"aio_context_t ctx"
+			],
+			"symbol": "__arm64_sys_io_destroy"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/aio.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 245,
+			"kconfig": "AIO",
+			"line": 2177,
+			"name": "io_getevents",
+			"number": 245,
+			"origname": "io_getevents_time32",
+			"signature": [
+				"__u32 ctx_id",
+				"__s32 min_nr",
+				"__s32 nr",
+				"struct io_event *events",
+				"struct old_timespec32 *timeout"
+			],
+			"symbol": "__arm64_sys_io_getevents_time32"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/aio.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 246,
+			"kconfig": "AIO",
+			"line": 1951,
+			"name": "io_submit",
+			"number": 246,
+			"origname": "io_submit",
+			"signature": [
+				"compat_aio_context_t ctx_id",
+				"int nr",
+				"compat_uptr_t *iocbpp"
+			],
+			"symbol": "__arm64_compat_sys_io_submit"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/aio.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 247,
+			"kconfig": "AIO",
+			"line": 2003,
+			"name": "io_cancel",
+			"number": 247,
+			"origname": "io_cancel",
+			"signature": [
+				"aio_context_t ctx_id",
+				"struct iocb *iocb",
+				"struct io_event *result"
+			],
+			"symbol": "__arm64_sys_io_cancel"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/exit.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 248,
+			"kconfig": null,
+			"line": 931,
+			"name": "exit_group",
+			"number": 248,
+			"origname": "exit_group",
+			"signature": [
+				"int error_code"
+			],
+			"symbol": "__arm64_sys_exit_group"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/eventpoll.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 250,
+			"kconfig": "EPOLL",
+			"line": 2005,
+			"name": "epoll_create",
+			"number": 250,
+			"origname": "epoll_create",
+			"signature": [
+				"int size"
+			],
+			"symbol": "__arm64_sys_epoll_create"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/eventpoll.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 251,
+			"kconfig": "EPOLL",
+			"line": 2175,
+			"name": "epoll_ctl",
+			"number": 251,
+			"origname": "epoll_ctl",
+			"signature": [
+				"int epfd",
+				"int op",
+				"int fd",
+				"struct epoll_event *event"
+			],
+			"symbol": "__arm64_sys_epoll_ctl"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/eventpoll.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 252,
+			"kconfig": "EPOLL",
+			"line": 2233,
+			"name": "epoll_wait",
+			"number": 252,
+			"origname": "epoll_wait",
+			"signature": [
+				"int epfd",
+				"struct epoll_event *events",
+				"int maxevents",
+				"int timeout"
+			],
+			"symbol": "__arm64_sys_epoll_wait"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mmap.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 253,
+			"kconfig": "MMU",
+			"line": 2968,
+			"name": "remap_file_pages",
+			"number": 253,
+			"origname": "remap_file_pages",
+			"signature": [
+				"unsigned long start",
+				"unsigned long size",
+				"unsigned long prot",
+				"unsigned long pgoff",
+				"unsigned long flags"
+			],
+			"symbol": "__arm64_sys_remap_file_pages"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/fork.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 256,
+			"kconfig": null,
+			"line": 1642,
+			"name": "set_tid_address",
+			"number": 256,
+			"origname": "set_tid_address",
+			"signature": [
+				"int *tidptr"
+			],
+			"symbol": "__arm64_sys_set_tid_address"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/posix-timers.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 257,
+			"kconfig": "POSIX_TIMERS",
+			"line": 592,
+			"name": "timer_create",
+			"number": 257,
+			"origname": "timer_create",
+			"signature": [
+				"clockid_t which_clock",
+				"struct compat_sigevent *timer_event_spec",
+				"timer_t *created_timer_id"
+			],
+			"symbol": "__arm64_compat_sys_timer_create"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/posix-timers.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 258,
+			"kconfig": "POSIX_TIMERS",
+			"line": 961,
+			"name": "timer_settime",
+			"number": 258,
+			"origname": "timer_settime32",
+			"signature": [
+				"timer_t timer_id",
+				"int flags",
+				"struct old_itimerspec32 *new",
+				"struct old_itimerspec32 *old"
+			],
+			"symbol": "__arm64_sys_timer_settime32"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/posix-timers.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 259,
+			"kconfig": "POSIX_TIMERS",
+			"line": 753,
+			"name": "timer_gettime",
+			"number": 259,
+			"origname": "timer_gettime32",
+			"signature": [
+				"timer_t timer_id",
+				"struct old_itimerspec32 *setting"
+			],
+			"symbol": "__arm64_sys_timer_gettime32"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/posix-timers.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 260,
+			"kconfig": "POSIX_TIMERS",
+			"line": 777,
+			"name": "timer_getoverrun",
+			"number": 260,
+			"origname": "timer_getoverrun",
+			"signature": [
+				"timer_t timer_id"
+			],
+			"symbol": "__arm64_sys_timer_getoverrun"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/posix-timers.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 261,
+			"kconfig": "POSIX_TIMERS",
+			"line": 1004,
+			"name": "timer_delete",
+			"number": 261,
+			"origname": "timer_delete",
+			"signature": [
+				"timer_t timer_id"
+			],
+			"symbol": "__arm64_sys_timer_delete"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/posix-timers.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 262,
+			"kconfig": null,
+			"line": 1149,
+			"name": "clock_settime",
+			"number": 262,
+			"origname": "clock_settime32",
+			"signature": [
+				"clockid_t which_clock",
+				"struct old_timespec32 *tp"
+			],
+			"symbol": "__arm64_sys_clock_settime32"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/posix-timers.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 263,
+			"kconfig": null,
+			"line": 1164,
+			"name": "clock_gettime",
+			"number": 263,
+			"origname": "clock_gettime32",
+			"signature": [
+				"clockid_t which_clock",
+				"struct old_timespec32 *tp"
+			],
+			"symbol": "__arm64_sys_clock_gettime32"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/posix-timers.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 264,
+			"kconfig": null,
+			"line": 1200,
+			"name": "clock_getres",
+			"number": 264,
+			"origname": "clock_getres_time32",
+			"signature": [
+				"clockid_t which_clock",
+				"struct old_timespec32 *tp"
+			],
+			"symbol": "__arm64_sys_clock_getres_time32"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/posix-timers.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 265,
+			"kconfig": null,
+			"line": 1272,
+			"name": "clock_nanosleep",
+			"number": 265,
+			"origname": "clock_nanosleep_time32",
+			"signature": [
+				"clockid_t which_clock",
+				"int flags",
+				"struct old_timespec32 *rqtp",
+				"struct old_timespec32 *rmtp"
+			],
+			"symbol": "__arm64_sys_clock_nanosleep_time32"
+		},
+		{
+			"esoteric": false,
+			"file": "arch/arm64/kernel/sys32.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 266,
+			"kconfig": null,
+			"line": 23,
+			"name": "statfs64",
+			"number": 266,
+			"origname": "aarch32_statfs64",
+			"signature": [
+				"const char *pathname",
+				"compat_size_t sz",
+				"struct compat_statfs64 *buf"
+			],
+			"symbol": "__arm64_compat_sys_aarch32_statfs64"
+		},
+		{
+			"esoteric": false,
+			"file": "arch/arm64/kernel/sys32.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 267,
+			"kconfig": null,
+			"line": 41,
+			"name": "fstatfs64",
+			"number": 267,
+			"origname": "aarch32_fstatfs64",
+			"signature": [
+				"unsigned int fd",
+				"compat_size_t sz",
+				"struct compat_statfs64 *buf"
+			],
+			"symbol": "__arm64_compat_sys_aarch32_fstatfs64"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 268,
+			"kconfig": null,
+			"line": 3880,
+			"name": "tgkill",
+			"number": 268,
+			"origname": "tgkill",
+			"signature": [
+				"pid_t tgid",
+				"pid_t pid",
+				"int sig"
+			],
+			"symbol": "__arm64_sys_tgkill"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/utimes.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 269,
+			"kconfig": null,
+			"line": 294,
+			"name": "utimes",
+			"number": 269,
+			"origname": "utimes_time32",
+			"signature": [
+				"const char *filename",
+				"struct old_timeval32 *t"
+			],
+			"symbol": "__arm64_sys_utimes_time32"
+		},
+		{
+			"esoteric": false,
+			"file": "arch/arm64/kernel/sys32.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 270,
+			"kconfig": "ADVISE_SYSCALLS",
+			"line": 106,
+			"name": "fadvise64_64",
+			"number": 270,
+			"origname": "aarch32_fadvise64_64",
+			"signature": [
+				"int fd",
+				"int advice",
+				"u32 offset_lo",
+				"u32 offset_hi",
+				"u32 len_lo",
+				"u32 len_hi"
+			],
+			"symbol": "__arm64_compat_sys_aarch32_fadvise64_64"
+		},
+		{
+			"esoteric": false,
+			"file": "drivers/pci/syscall.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 272,
+			"kconfig": "PCI_SYSCALL",
+			"line": 15,
+			"name": "pciconfig_read",
+			"number": 272,
+			"origname": "pciconfig_read",
+			"signature": [
+				"unsigned long bus",
+				"unsigned long dfn",
+				"unsigned long off",
+				"unsigned long len",
+				"void *buf"
+			],
+			"symbol": "__arm64_sys_pciconfig_read"
+		},
+		{
+			"esoteric": false,
+			"file": "drivers/pci/syscall.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 273,
+			"kconfig": "PCI_SYSCALL",
+			"line": 85,
+			"name": "pciconfig_write",
+			"number": 273,
+			"origname": "pciconfig_write",
+			"signature": [
+				"unsigned long bus",
+				"unsigned long dfn",
+				"unsigned long off",
+				"unsigned long len",
+				"void *buf"
+			],
+			"symbol": "__arm64_sys_pciconfig_write"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/mqueue.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 274,
+			"kconfig": "POSIX_MQUEUE",
+			"line": 1549,
+			"name": "mq_open",
+			"number": 274,
+			"origname": "mq_open",
+			"signature": [
+				"const char *u_name",
+				"int oflag",
+				"compat_mode_t mode",
+				"struct compat_mq_attr *u_attr"
+			],
+			"symbol": "__arm64_compat_sys_mq_open"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/mqueue.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 275,
+			"kconfig": "POSIX_MQUEUE",
+			"line": 938,
+			"name": "mq_unlink",
+			"number": 275,
+			"origname": "mq_unlink",
+			"signature": [
+				"const char *u_name"
+			],
+			"symbol": "__arm64_sys_mq_unlink"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/mqueue.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 276,
+			"kconfig": "POSIX_MQUEUE",
+			"line": 1613,
+			"name": "mq_timedsend",
+			"number": 276,
+			"origname": "mq_timedsend_time32",
+			"signature": [
+				"mqd_t mqdes",
+				"const char *u_msg_ptr",
+				"unsigned int msg_len",
+				"unsigned int msg_prio",
+				"const struct old_timespec32 *u_abs_timeout"
+			],
+			"symbol": "__arm64_sys_mq_timedsend_time32"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/mqueue.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 277,
+			"kconfig": "POSIX_MQUEUE",
+			"line": 1628,
+			"name": "mq_timedreceive",
+			"number": 277,
+			"origname": "mq_timedreceive_time32",
+			"signature": [
+				"mqd_t mqdes",
+				"char *u_msg_ptr",
+				"unsigned int msg_len",
+				"unsigned int *u_msg_prio",
+				"const struct old_timespec32 *u_abs_timeout"
+			],
+			"symbol": "__arm64_sys_mq_timedreceive_time32"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/mqueue.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 278,
+			"kconfig": "POSIX_MQUEUE",
+			"line": 1562,
+			"name": "mq_notify",
+			"number": 278,
+			"origname": "mq_notify",
+			"signature": [
+				"mqd_t mqdes",
+				"const struct compat_sigevent *u_notification"
+			],
+			"symbol": "__arm64_compat_sys_mq_notify"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/mqueue.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 279,
+			"kconfig": "POSIX_MQUEUE",
+			"line": 1576,
+			"name": "mq_getsetattr",
+			"number": 279,
+			"origname": "mq_getsetattr",
+			"signature": [
+				"mqd_t mqdes",
+				"const struct compat_mq_attr *u_mqstat",
+				"struct compat_mq_attr *u_omqstat"
+			],
+			"symbol": "__arm64_compat_sys_mq_getsetattr"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/exit.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 280,
+			"kconfig": null,
+			"line": 1743,
+			"name": "waitid",
+			"number": 280,
+			"origname": "waitid",
+			"signature": [
+				"int which",
+				"compat_pid_t pid",
+				"struct compat_siginfo *infop",
+				"int options",
+				"struct compat_rusage *uru"
+			],
+			"symbol": "__arm64_compat_sys_waitid"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 281,
+			"kconfig": "NET",
+			"line": 1495,
+			"name": "socket",
+			"number": 281,
+			"origname": "socket",
+			"signature": [
+				"int family",
+				"int type",
+				"int protocol"
+			],
+			"symbol": "__arm64_sys_socket"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 282,
+			"kconfig": "NET",
+			"line": 1633,
+			"name": "bind",
+			"number": 282,
+			"origname": "bind",
+			"signature": [
+				"int fd",
+				"struct sockaddr *umyaddr",
+				"int addrlen"
+			],
+			"symbol": "__arm64_sys_bind"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 283,
+			"kconfig": "NET",
+			"line": 1848,
+			"name": "connect",
+			"number": 283,
+			"origname": "connect",
+			"signature": [
+				"int fd",
+				"struct sockaddr *uservaddr",
+				"int addrlen"
+			],
+			"symbol": "__arm64_sys_connect"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 284,
+			"kconfig": "NET",
+			"line": 1665,
+			"name": "listen",
+			"number": 284,
+			"origname": "listen",
+			"signature": [
+				"int fd",
+				"int backlog"
+			],
+			"symbol": "__arm64_sys_listen"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 285,
+			"kconfig": "NET",
+			"line": 1789,
+			"name": "accept",
+			"number": 285,
+			"origname": "accept",
+			"signature": [
+				"int fd",
+				"struct sockaddr *upeer_sockaddr",
+				"int *upeer_addrlen"
+			],
+			"symbol": "__arm64_sys_accept"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 286,
+			"kconfig": "NET",
+			"line": 1886,
+			"name": "getsockname",
+			"number": 286,
+			"origname": "getsockname",
+			"signature": [
+				"int fd",
+				"struct sockaddr *usockaddr",
+				"int *usockaddr_len"
+			],
+			"symbol": "__arm64_sys_getsockname"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 287,
+			"kconfig": "NET",
+			"line": 1922,
+			"name": "getpeername",
+			"number": 287,
+			"origname": "getpeername",
+			"signature": [
+				"int fd",
+				"struct sockaddr *usockaddr",
+				"int *usockaddr_len"
+			],
+			"symbol": "__arm64_sys_getpeername"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 288,
+			"kconfig": "NET",
+			"line": 1596,
+			"name": "socketpair",
+			"number": 288,
+			"origname": "socketpair",
+			"signature": [
+				"int family",
+				"int type",
+				"int protocol",
+				"int *usockvec"
+			],
+			"symbol": "__arm64_sys_socketpair"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 289,
+			"kconfig": "NET",
+			"line": 1983,
+			"name": "send",
+			"number": 289,
+			"origname": "send",
+			"signature": [
+				"int fd",
+				"void *buff",
+				"size_t len",
+				"unsigned int flags"
+			],
+			"symbol": "__arm64_sys_send"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 290,
+			"kconfig": "NET",
+			"line": 1972,
+			"name": "sendto",
+			"number": 290,
+			"origname": "sendto",
+			"signature": [
+				"int fd",
+				"void *buff",
+				"size_t len",
+				"unsigned int flags",
+				"struct sockaddr *addr",
+				"int addr_len"
+			],
+			"symbol": "__arm64_sys_sendto"
+		},
+		{
+			"esoteric": false,
+			"file": "net/compat.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 291,
+			"kconfig": "NET",
+			"line": 394,
+			"name": "recv",
+			"number": 291,
+			"origname": "recv",
+			"signature": [
+				"int fd",
+				"void *buf",
+				"compat_size_t len",
+				"unsigned int flags"
+			],
+			"symbol": "__arm64_compat_sys_recv"
+		},
+		{
+			"esoteric": false,
+			"file": "net/compat.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 292,
+			"kconfig": "NET",
+			"line": 399,
+			"name": "recvfrom",
+			"number": 292,
+			"origname": "recvfrom",
+			"signature": [
+				"int fd",
+				"void *buf",
+				"compat_size_t len",
+				"unsigned int flags",
+				"struct sockaddr *addr",
+				"int *addrlen"
+			],
+			"symbol": "__arm64_compat_sys_recvfrom"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 293,
+			"kconfig": "NET",
+			"line": 2194,
+			"name": "shutdown",
+			"number": 293,
+			"origname": "shutdown",
+			"signature": [
+				"int fd",
+				"int how"
+			],
+			"symbol": "__arm64_sys_shutdown"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 294,
+			"kconfig": "NET",
+			"line": 2112,
+			"name": "setsockopt",
+			"number": 294,
+			"origname": "setsockopt",
+			"signature": [
+				"int fd",
+				"int level",
+				"int optname",
+				"char *optval",
+				"int optlen"
+			],
+			"symbol": "__arm64_sys_setsockopt"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 295,
+			"kconfig": "NET",
+			"line": 2160,
+			"name": "getsockopt",
+			"number": 295,
+			"origname": "getsockopt",
+			"signature": [
+				"int fd",
+				"int level",
+				"int optname",
+				"char *optval",
+				"int *optlen"
+			],
+			"symbol": "__arm64_sys_getsockopt"
+		},
+		{
+			"esoteric": false,
+			"file": "net/compat.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 296,
+			"kconfig": "NET",
+			"line": 351,
+			"name": "sendmsg",
+			"number": 296,
+			"origname": "sendmsg",
+			"signature": [
+				"int fd",
+				"struct compat_msghdr *msg",
+				"unsigned int flags"
+			],
+			"symbol": "__arm64_compat_sys_sendmsg"
+		},
+		{
+			"esoteric": false,
+			"file": "net/compat.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 297,
+			"kconfig": "NET",
+			"line": 379,
+			"name": "recvmsg",
+			"number": 297,
+			"origname": "recvmsg",
+			"signature": [
+				"int fd",
+				"struct compat_msghdr *msg",
+				"unsigned int flags"
+			],
+			"symbol": "__arm64_compat_sys_recvmsg"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/sem.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 298,
+			"kconfig": "SYSVIPC",
+			"line": 2276,
+			"name": "semop",
+			"number": 298,
+			"origname": "semop",
+			"signature": [
+				"int semid",
+				"struct sembuf *tsops",
+				"unsigned nsops"
+			],
+			"symbol": "__arm64_sys_semop"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/sem.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 299,
+			"kconfig": "SYSVIPC",
+			"line": 621,
+			"name": "semget",
+			"number": 299,
+			"origname": "semget",
+			"signature": [
+				"key_t key",
+				"int nsems",
+				"int semflg"
+			],
+			"symbol": "__arm64_sys_semget"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/sem.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 300,
+			"kconfig": "SYSVIPC",
+			"line": 1831,
+			"name": "semctl",
+			"number": 300,
+			"origname": "old_semctl",
+			"signature": [
+				"int semid",
+				"int semnum",
+				"int cmd",
+				"int arg"
+			],
+			"symbol": "__arm64_compat_sys_old_semctl"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/msg.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 301,
+			"kconfig": "SYSVIPC",
+			"line": 989,
+			"name": "msgsnd",
+			"number": 301,
+			"origname": "msgsnd",
+			"signature": [
+				"int msqid",
+				"compat_uptr_t msgp",
+				"compat_ssize_t msgsz",
+				"int msgflg"
+			],
+			"symbol": "__arm64_compat_sys_msgsnd"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/msg.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 302,
+			"kconfig": "SYSVIPC",
+			"line": 1292,
+			"name": "msgrcv",
+			"number": 302,
+			"origname": "msgrcv",
+			"signature": [
+				"int msqid",
+				"compat_uptr_t msgp",
+				"compat_ssize_t msgsz",
+				"compat_long_t msgtyp",
+				"int msgflg"
+			],
+			"symbol": "__arm64_compat_sys_msgrcv"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/msg.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 303,
+			"kconfig": "SYSVIPC",
+			"line": 314,
+			"name": "msgget",
+			"number": 303,
+			"origname": "msgget",
+			"signature": [
+				"key_t key",
+				"int msgflg"
+			],
+			"symbol": "__arm64_sys_msgget"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/msg.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 304,
+			"kconfig": "SYSVIPC",
+			"line": 781,
+			"name": "msgctl",
+			"number": 304,
+			"origname": "old_msgctl",
+			"signature": [
+				"int msqid",
+				"int cmd",
+				"void *uptr"
+			],
+			"symbol": "__arm64_compat_sys_old_msgctl"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/shm.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 305,
+			"kconfig": "SYSVIPC",
+			"line": 1607,
+			"name": "shmat",
+			"number": 305,
+			"origname": "shmat",
+			"signature": [
+				"int shmid",
+				"compat_uptr_t shmaddr",
+				"int shmflg"
+			],
+			"symbol": "__arm64_compat_sys_shmat"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/shm.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 306,
+			"kconfig": "SYSVIPC",
+			"line": 1731,
+			"name": "shmdt",
+			"number": 306,
+			"origname": "shmdt",
+			"signature": [
+				"char *shmaddr"
+			],
+			"symbol": "__arm64_sys_shmdt"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/shm.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 307,
+			"kconfig": "SYSVIPC",
+			"line": 744,
+			"name": "shmget",
+			"number": 307,
+			"origname": "shmget",
+			"signature": [
+				"key_t key",
+				"size_t size",
+				"int shmflg"
+			],
+			"symbol": "__arm64_sys_shmget"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/shm.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 308,
+			"kconfig": "SYSVIPC",
+			"line": 1402,
+			"name": "shmctl",
+			"number": 308,
+			"origname": "old_shmctl",
+			"signature": [
+				"int shmid",
+				"int cmd",
+				"void *uptr"
+			],
+			"symbol": "__arm64_compat_sys_old_shmctl"
+		},
+		{
+			"esoteric": false,
+			"file": "security/keys/keyctl.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 309,
+			"kconfig": "KEYS",
+			"line": 74,
+			"name": "add_key",
+			"number": 309,
+			"origname": "add_key",
+			"signature": [
+				"const char *_type",
+				"const char *_description",
+				"const void *_payload",
+				"size_t plen",
+				"key_serial_t ringid"
+			],
+			"symbol": "__arm64_sys_add_key"
+		},
+		{
+			"esoteric": false,
+			"file": "security/keys/keyctl.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 310,
+			"kconfig": "KEYS",
+			"line": 167,
+			"name": "request_key",
+			"number": 310,
+			"origname": "request_key",
+			"signature": [
+				"const char *_type",
+				"const char *_description",
+				"const char *_callout_info",
+				"key_serial_t destringid"
+			],
+			"symbol": "__arm64_sys_request_key"
+		},
+		{
+			"esoteric": false,
+			"file": "security/keys/compat.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 311,
+			"kconfig": "KEYS",
+			"line": 17,
+			"name": "keyctl",
+			"number": 311,
+			"origname": "keyctl",
+			"signature": [
+				"u32 option",
+				"u32 arg2",
+				"u32 arg3",
+				"u32 arg4",
+				"u32 arg5"
+			],
+			"symbol": "__arm64_compat_sys_keyctl"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/sem.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 312,
+			"kconfig": "SYSVIPC",
+			"line": 2268,
+			"name": "semtimedop",
+			"number": 312,
+			"origname": "semtimedop_time32",
+			"signature": [
+				"int semid",
+				"struct sembuf *tsems",
+				"unsigned int nsops",
+				"const struct old_timespec32 *timeout"
+			],
+			"symbol": "__arm64_sys_semtimedop_time32"
+		},
+		{
+			"esoteric": false,
+			"file": "block/ioprio.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 314,
+			"kconfig": "BLOCK",
+			"line": 94,
+			"name": "ioprio_set",
+			"number": 314,
+			"origname": "ioprio_set",
+			"signature": [
+				"int which",
+				"int who",
+				"int ioprio"
+			],
+			"symbol": "__arm64_sys_ioprio_set"
+		},
+		{
+			"esoteric": false,
+			"file": "block/ioprio.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 315,
+			"kconfig": "BLOCK",
+			"line": 193,
+			"name": "ioprio_get",
+			"number": 315,
+			"origname": "ioprio_get",
+			"signature": [
+				"int which",
+				"int who"
+			],
+			"symbol": "__arm64_sys_ioprio_get"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/notify/inotify/inotify_user.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 316,
+			"kconfig": "INOTIFY_USER",
+			"line": 699,
+			"name": "inotify_init",
+			"number": 316,
+			"origname": "inotify_init",
+			"signature": [],
+			"symbol": "__arm64_sys_inotify_init"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/notify/inotify/inotify_user.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 317,
+			"kconfig": "INOTIFY_USER",
+			"line": 704,
+			"name": "inotify_add_watch",
+			"number": 317,
+			"origname": "inotify_add_watch",
+			"signature": [
+				"int fd",
+				"const char *pathname",
+				"u32 mask"
+			],
+			"symbol": "__arm64_sys_inotify_add_watch"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/notify/inotify/inotify_user.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 318,
+			"kconfig": "INOTIFY_USER",
+			"line": 768,
+			"name": "inotify_rm_watch",
+			"number": 318,
+			"origname": "inotify_rm_watch",
+			"signature": [
+				"int fd",
+				"__s32 wd"
+			],
+			"symbol": "__arm64_sys_inotify_rm_watch"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mempolicy.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 319,
+			"kconfig": "NUMA",
+			"line": 1704,
+			"name": "mbind",
+			"number": 319,
+			"origname": "mbind",
+			"signature": [
+				"compat_ulong_t start",
+				"compat_ulong_t len",
+				"compat_ulong_t mode",
+				"compat_ulong_t *nmask",
+				"compat_ulong_t maxnode",
+				"compat_ulong_t flags"
+			],
+			"symbol": "__arm64_compat_sys_mbind"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mempolicy.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 320,
+			"kconfig": "NUMA",
+			"line": 1653,
+			"name": "get_mempolicy",
+			"number": 320,
+			"origname": "get_mempolicy",
+			"signature": [
+				"int *policy",
+				"compat_ulong_t *nmask",
+				"compat_ulong_t maxnode",
+				"compat_ulong_t addr",
+				"compat_ulong_t flags"
+			],
+			"symbol": "__arm64_compat_sys_get_mempolicy"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mempolicy.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 321,
+			"kconfig": "NUMA",
+			"line": 1683,
+			"name": "set_mempolicy",
+			"number": 321,
+			"origname": "set_mempolicy",
+			"signature": [
+				"int mode",
+				"compat_ulong_t *nmask",
+				"compat_ulong_t maxnode"
+			],
+			"symbol": "__arm64_compat_sys_set_mempolicy"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 322,
+			"kconfig": null,
+			"line": 1259,
+			"name": "openat",
+			"number": 322,
+			"origname": "openat",
+			"signature": [
+				"int dfd",
+				"const char *filename",
+				"int flags",
+				"umode_t mode"
+			],
+			"symbol": "__arm64_compat_sys_openat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namei.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 323,
+			"kconfig": null,
+			"line": 3849,
+			"name": "mkdirat",
+			"number": 323,
+			"origname": "mkdirat",
+			"signature": [
+				"int dfd",
+				"const char *pathname",
+				"umode_t mode"
+			],
+			"symbol": "__arm64_sys_mkdirat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namei.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 324,
+			"kconfig": null,
+			"line": 3767,
+			"name": "mknodat",
+			"number": 324,
+			"origname": "mknodat",
+			"signature": [
+				"int dfd",
+				"const char *filename",
+				"umode_t mode",
+				"unsigned int dev"
+			],
+			"symbol": "__arm64_sys_mknodat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 325,
+			"kconfig": null,
+			"line": 725,
+			"name": "fchownat",
+			"number": 325,
+			"origname": "fchownat",
+			"signature": [
+				"int dfd",
+				"const char *filename",
+				"uid_t user",
+				"gid_t group",
+				"int flag"
+			],
+			"symbol": "__arm64_sys_fchownat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/utimes.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 326,
+			"kconfig": null,
+			"line": 287,
+			"name": "futimesat",
+			"number": 326,
+			"origname": "futimesat_time32",
+			"signature": [
+				"unsigned int dfd",
+				"const char *filename",
+				"struct old_timeval32 *t"
+			],
+			"symbol": "__arm64_sys_futimesat_time32"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/stat.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 327,
+			"kconfig": null,
+			"line": 539,
+			"name": "fstatat64",
+			"number": 327,
+			"origname": "fstatat64",
+			"signature": [
+				"int dfd",
+				"const char *filename",
+				"struct stat64 *statbuf",
+				"int flag"
+			],
+			"symbol": "__arm64_sys_fstatat64"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namei.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 328,
+			"kconfig": null,
+			"line": 4127,
+			"name": "unlinkat",
+			"number": 328,
+			"origname": "unlinkat",
+			"signature": [
+				"int dfd",
+				"const char *pathname",
+				"int flag"
+			],
+			"symbol": "__arm64_sys_unlinkat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namei.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 329,
+			"kconfig": null,
+			"line": 4736,
+			"name": "renameat",
+			"number": 329,
+			"origname": "renameat",
+			"signature": [
+				"int olddfd",
+				"const char *oldname",
+				"int newdfd",
+				"const char *newname"
+			],
+			"symbol": "__arm64_sys_renameat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namei.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 330,
+			"kconfig": null,
+			"line": 4392,
+			"name": "linkat",
+			"number": 330,
+			"origname": "linkat",
+			"signature": [
+				"int olddfd",
+				"const char *oldname",
+				"int newdfd",
+				"const char *newname",
+				"int flags"
+			],
+			"symbol": "__arm64_sys_linkat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namei.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 331,
+			"kconfig": null,
+			"line": 4215,
+			"name": "symlinkat",
+			"number": 331,
+			"origname": "symlinkat",
+			"signature": [
+				"const char *oldname",
+				"int newdfd",
+				"const char *newname"
+			],
+			"symbol": "__arm64_sys_symlinkat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/stat.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 332,
+			"kconfig": null,
+			"line": 449,
+			"name": "readlinkat",
+			"number": 332,
+			"origname": "readlinkat",
+			"signature": [
+				"int dfd",
+				"const char *pathname",
+				"char *buf",
+				"int bufsiz"
+			],
+			"symbol": "__arm64_sys_readlinkat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 333,
+			"kconfig": null,
+			"line": 634,
+			"name": "fchmodat",
+			"number": 333,
+			"origname": "fchmodat",
+			"signature": [
+				"int dfd",
+				"const char *filename",
+				"umode_t mode"
+			],
+			"symbol": "__arm64_sys_fchmodat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 334,
+			"kconfig": null,
+			"line": 471,
+			"name": "faccessat",
+			"number": 334,
+			"origname": "faccessat",
+			"signature": [
+				"int dfd",
+				"const char *filename",
+				"int mode"
+			],
+			"symbol": "__arm64_sys_faccessat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/select.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 335,
+			"kconfig": null,
+			"line": 1379,
+			"name": "pselect6",
+			"number": 335,
+			"origname": "pselect6_time32",
+			"signature": [
+				"int n",
+				"compat_ulong_t *inp",
+				"compat_ulong_t *outp",
+				"compat_ulong_t *exp",
+				"struct old_timespec32 *tsp",
+				"void *sig"
+			],
+			"symbol": "__arm64_compat_sys_pselect6_time32"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/select.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 336,
+			"kconfig": null,
+			"line": 1395,
+			"name": "ppoll",
+			"number": 336,
+			"origname": "ppoll_time32",
+			"signature": [
+				"struct pollfd *ufds",
+				"unsigned int nfds",
+				"struct old_timespec32 *tsp",
+				"const compat_sigset_t *sigmask",
+				"compat_size_t sigsetsize"
+			],
+			"symbol": "__arm64_compat_sys_ppoll_time32"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/fork.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 337,
+			"kconfig": null,
+			"line": 3061,
+			"name": "unshare",
+			"number": 337,
+			"origname": "unshare",
+			"signature": [
+				"unsigned long unshare_flags"
+			],
+			"symbol": "__arm64_sys_unshare"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/futex.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 338,
+			"kconfig": "FUTEX",
+			"line": 3910,
+			"name": "set_robust_list",
+			"number": 338,
+			"origname": "set_robust_list",
+			"signature": [
+				"struct compat_robust_list_head *head",
+				"compat_size_t len"
+			],
+			"symbol": "__arm64_compat_sys_set_robust_list"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/futex.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 339,
+			"kconfig": "FUTEX",
+			"line": 3925,
+			"name": "get_robust_list",
+			"number": 339,
+			"origname": "get_robust_list",
+			"signature": [
+				"int pid",
+				"compat_uptr_t *head_ptr",
+				"compat_size_t *len_ptr"
+			],
+			"symbol": "__arm64_compat_sys_get_robust_list"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/splice.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 340,
+			"kconfig": null,
+			"line": 1332,
+			"name": "splice",
+			"number": 340,
+			"origname": "splice",
+			"signature": [
+				"int fd_in",
+				"loff_t *off_in",
+				"int fd_out",
+				"loff_t *off_out",
+				"size_t len",
+				"unsigned int flags"
+			],
+			"symbol": "__arm64_sys_splice"
+		},
+		{
+			"esoteric": false,
+			"file": "arch/arm64/kernel/sys32.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 341,
+			"kconfig": null,
+			"line": 112,
+			"name": "sync_file_range2",
+			"number": 341,
+			"origname": "aarch32_sync_file_range2",
+			"signature": [
+				"int fd",
+				"unsigned int flags",
+				"u32 offset_lo",
+				"u32 offset_hi",
+				"u32 nbytes_lo",
+				"u32 nbytes_hi"
+			],
+			"symbol": "__arm64_compat_sys_aarch32_sync_file_range2"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/splice.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 342,
+			"kconfig": null,
+			"line": 1698,
+			"name": "tee",
+			"number": 342,
+			"origname": "tee",
+			"signature": [
+				"int fdin",
+				"int fdout",
+				"size_t len",
+				"unsigned int flags"
+			],
+			"symbol": "__arm64_sys_tee"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/splice.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 343,
+			"kconfig": null,
+			"line": 1296,
+			"name": "vmsplice",
+			"number": 343,
+			"origname": "vmsplice",
+			"signature": [
+				"int fd",
+				"const struct iovec *uiov",
+				"unsigned long nr_segs",
+				"unsigned int flags"
+			],
+			"symbol": "__arm64_sys_vmsplice"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/migrate.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 344,
+			"kconfig": "MIGRATION",
+			"line": 1983,
+			"name": "move_pages",
+			"number": 344,
+			"origname": "move_pages",
+			"signature": [
+				"pid_t pid",
+				"compat_ulong_t nr_pages",
+				"compat_uptr_t *pages32",
+				"const int *nodes",
+				"int *status",
+				"int flags"
+			],
+			"symbol": "__arm64_compat_sys_move_pages"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 345,
+			"kconfig": null,
+			"line": 2560,
+			"name": "getcpu",
+			"number": 345,
+			"origname": "getcpu",
+			"signature": [
+				"unsigned *cpup",
+				"unsigned *nodep",
+				"struct getcpu_cache *unused"
+			],
+			"symbol": "__arm64_sys_getcpu"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/eventpoll.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 346,
+			"kconfig": "EPOLL",
+			"line": 2319,
+			"name": "epoll_pwait",
+			"number": 346,
+			"origname": "epoll_pwait",
+			"signature": [
+				"int epfd",
+				"struct epoll_event *events",
+				"int maxevents",
+				"int timeout",
+				"const compat_sigset_t *sigmask",
+				"compat_size_t sigsetsize"
+			],
+			"symbol": "__arm64_compat_sys_epoll_pwait"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/kexec.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 347,
+			"kconfig": "KEXEC",
+			"line": 269,
+			"name": "kexec_load",
+			"number": 347,
+			"origname": "kexec_load",
+			"signature": [
+				"compat_ulong_t entry",
+				"compat_ulong_t nr_segments",
+				"struct compat_kexec_segment *segments",
+				"compat_ulong_t flags"
+			],
+			"symbol": "__arm64_compat_sys_kexec_load"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/utimes.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 348,
+			"kconfig": null,
+			"line": 251,
+			"name": "utimensat",
+			"number": 348,
+			"origname": "utimensat_time32",
+			"signature": [
+				"unsigned int dfd",
+				"const char *filename",
+				"struct old_timespec32 *t",
+				"int flags"
+			],
+			"symbol": "__arm64_sys_utimensat_time32"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/signalfd.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 349,
+			"kconfig": "SIGNALFD",
+			"line": 357,
+			"name": "signalfd",
+			"number": 349,
+			"origname": "signalfd",
+			"signature": [
+				"int ufd",
+				"const compat_sigset_t *user_mask",
+				"compat_size_t sigsetsize"
+			],
+			"symbol": "__arm64_compat_sys_signalfd"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/timerfd.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 350,
+			"kconfig": null,
+			"line": 390,
+			"name": "timerfd_create",
+			"number": 350,
+			"origname": "timerfd_create",
+			"signature": [
+				"int clockid",
+				"int flags"
+			],
+			"symbol": "__arm64_sys_timerfd_create"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/eventfd.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 351,
+			"kconfig": null,
+			"line": 456,
+			"name": "eventfd",
+			"number": 351,
+			"origname": "eventfd",
+			"signature": [
+				"unsigned int count"
+			],
+			"symbol": "__arm64_sys_eventfd"
+		},
+		{
+			"esoteric": false,
+			"file": "arch/arm64/kernel/sys32.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 352,
+			"kconfig": null,
+			"line": 119,
+			"name": "fallocate",
+			"number": 352,
+			"origname": "aarch32_fallocate",
+			"signature": [
+				"int fd",
+				"int mode",
+				"u32 offset_lo",
+				"u32 offset_hi",
+				"u32 len_lo",
+				"u32 len_hi"
+			],
+			"symbol": "__arm64_compat_sys_aarch32_fallocate"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/timerfd.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 353,
+			"kconfig": null,
+			"line": 570,
+			"name": "timerfd_settime",
+			"number": 353,
+			"origname": "timerfd_settime32",
+			"signature": [
+				"int ufd",
+				"int flags",
+				"const struct old_itimerspec32 *utmr",
+				"struct old_itimerspec32 *otmr"
+			],
+			"symbol": "__arm64_sys_timerfd_settime32"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/timerfd.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 354,
+			"kconfig": null,
+			"line": 587,
+			"name": "timerfd_gettime",
+			"number": 354,
+			"origname": "timerfd_gettime32",
+			"signature": [
+				"int ufd",
+				"struct old_itimerspec32 *otmr"
+			],
+			"symbol": "__arm64_sys_timerfd_gettime32"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/signalfd.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 355,
+			"kconfig": "SIGNALFD",
+			"line": 349,
+			"name": "signalfd4",
+			"number": 355,
+			"origname": "signalfd4",
+			"signature": [
+				"int ufd",
+				"const compat_sigset_t *user_mask",
+				"compat_size_t sigsetsize",
+				"int flags"
+			],
+			"symbol": "__arm64_compat_sys_signalfd4"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/eventfd.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 356,
+			"kconfig": null,
+			"line": 451,
+			"name": "eventfd2",
+			"number": 356,
+			"origname": "eventfd2",
+			"signature": [
+				"unsigned int count",
+				"int flags"
+			],
+			"symbol": "__arm64_sys_eventfd2"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/eventpoll.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 357,
+			"kconfig": "EPOLL",
+			"line": 2000,
+			"name": "epoll_create1",
+			"number": 357,
+			"origname": "epoll_create1",
+			"signature": [
+				"int flags"
+			],
+			"symbol": "__arm64_sys_epoll_create1"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/file.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 358,
+			"kconfig": null,
+			"line": 1171,
+			"name": "dup3",
+			"number": 358,
+			"origname": "dup3",
+			"signature": [
+				"unsigned int oldfd",
+				"unsigned int newfd",
+				"int flags"
+			],
+			"symbol": "__arm64_sys_dup3"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/pipe.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 359,
+			"kconfig": null,
+			"line": 1008,
+			"name": "pipe2",
+			"number": 359,
+			"origname": "pipe2",
+			"signature": [
+				"int *fildes",
+				"int flags"
+			],
+			"symbol": "__arm64_sys_pipe2"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/notify/inotify/inotify_user.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 360,
+			"kconfig": "INOTIFY_USER",
+			"line": 694,
+			"name": "inotify_init1",
+			"number": 360,
+			"origname": "inotify_init1",
+			"signature": [
+				"int flags"
+			],
+			"symbol": "__arm64_sys_inotify_init1"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/read_write.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 361,
+			"kconfig": null,
+			"line": 1113,
+			"name": "preadv",
+			"number": 361,
+			"origname": "preadv",
+			"signature": [
+				"compat_ulong_t fd",
+				"const struct iovec *vec",
+				"compat_ulong_t vlen",
+				"u32 pos_low",
+				"u32 pos_high"
+			],
+			"symbol": "__arm64_compat_sys_preadv"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/read_write.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 362,
+			"kconfig": null,
+			"line": 1154,
+			"name": "pwritev",
+			"number": 362,
+			"origname": "pwritev",
+			"signature": [
+				"compat_ulong_t fd",
+				"const struct iovec *vec",
+				"compat_ulong_t vlen",
+				"u32 pos_low",
+				"u32 pos_high"
+			],
+			"symbol": "__arm64_compat_sys_pwritev"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 363,
+			"kconfig": null,
+			"line": 3975,
+			"name": "rt_tgsigqueueinfo",
+			"number": 363,
+			"origname": "rt_tgsigqueueinfo",
+			"signature": [
+				"compat_pid_t tgid",
+				"compat_pid_t pid",
+				"int sig",
+				"struct compat_siginfo *uinfo"
+			],
+			"symbol": "__arm64_compat_sys_rt_tgsigqueueinfo"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/events/core.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 364,
+			"kconfig": "PERF_EVENTS",
+			"line": 11923,
+			"name": "perf_event_open",
+			"number": 364,
+			"origname": "perf_event_open",
+			"signature": [
+				"struct perf_event_attr *attr_uptr",
+				"pid_t pid",
+				"int cpu",
+				"int group_fd",
+				"unsigned long flags"
+			],
+			"symbol": "__arm64_sys_perf_event_open"
+		},
+		{
+			"esoteric": false,
+			"file": "net/compat.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 365,
+			"kconfig": "NET",
+			"line": 415,
+			"name": "recvmmsg",
+			"number": 365,
+			"origname": "recvmmsg_time32",
+			"signature": [
+				"int fd",
+				"struct compat_mmsghdr *mmsg",
+				"unsigned int vlen",
+				"unsigned int flags",
+				"struct old_timespec32 *timeout"
+			],
+			"symbol": "__arm64_compat_sys_recvmmsg_time32"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 366,
+			"kconfig": "NET",
+			"line": 1783,
+			"name": "accept4",
+			"number": 366,
+			"origname": "accept4",
+			"signature": [
+				"int fd",
+				"struct sockaddr *upeer_sockaddr",
+				"int *upeer_addrlen",
+				"int flags"
+			],
+			"symbol": "__arm64_sys_accept4"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/notify/fanotify/fanotify_user.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 367,
+			"kconfig": "FANOTIFY",
+			"line": 1044,
+			"name": "fanotify_init",
+			"number": 367,
+			"origname": "fanotify_init",
+			"signature": [
+				"unsigned int flags",
+				"unsigned int event_f_flags"
+			],
+			"symbol": "__arm64_sys_fanotify_init"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/notify/fanotify/fanotify_user.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 368,
+			"kconfig": "FANOTIFY",
+			"line": 1448,
+			"name": "fanotify_mark",
+			"number": 368,
+			"origname": "fanotify_mark",
+			"signature": [
+				"int fanotify_fd",
+				"unsigned int flags",
+				"u32 mask_lo",
+				"u32 mask_hi",
+				"int dfd",
+				"const char  *pathname"
+			],
+			"symbol": "__arm64_compat_sys_fanotify_mark"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 369,
+			"kconfig": null,
+			"line": 1628,
+			"name": "prlimit64",
+			"number": 369,
+			"origname": "prlimit64",
+			"signature": [
+				"pid_t pid",
+				"unsigned int resource",
+				"const struct rlimit64 *new_rlim",
+				"struct rlimit64 *old_rlim"
+			],
+			"symbol": "__arm64_sys_prlimit64"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/fhandle.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 370,
+			"kconfig": "FHANDLE",
+			"line": 93,
+			"name": "name_to_handle_at",
+			"number": 370,
+			"origname": "name_to_handle_at",
+			"signature": [
+				"int dfd",
+				"const char *name",
+				"struct file_handle *handle",
+				"int *mnt_id",
+				"int flag"
+			],
+			"symbol": "__arm64_sys_name_to_handle_at"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/fhandle.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 371,
+			"kconfig": "FHANDLE",
+			"line": 274,
+			"name": "open_by_handle_at",
+			"number": 371,
+			"origname": "open_by_handle_at",
+			"signature": [
+				"int mountdirfd",
+				"struct file_handle *handle",
+				"int flags"
+			],
+			"symbol": "__arm64_compat_sys_open_by_handle_at"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/posix-timers.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 372,
+			"kconfig": null,
+			"line": 1182,
+			"name": "clock_adjtime",
+			"number": 372,
+			"origname": "clock_adjtime32",
+			"signature": [
+				"clockid_t which_clock",
+				"struct old_timex32 *utp"
+			],
+			"symbol": "__arm64_sys_clock_adjtime32"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/sync.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 373,
+			"kconfig": null,
+			"line": 161,
+			"name": "syncfs",
+			"number": 373,
+			"origname": "syncfs",
+			"signature": [
+				"int fd"
+			],
+			"symbol": "__arm64_sys_syncfs"
+		},
+		{
+			"esoteric": false,
+			"file": "net/compat.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 374,
+			"kconfig": "NET",
+			"line": 365,
+			"name": "sendmmsg",
+			"number": 374,
+			"origname": "sendmmsg",
+			"signature": [
+				"int fd",
+				"struct compat_mmsghdr *mmsg",
+				"unsigned int vlen",
+				"unsigned int flags"
+			],
+			"symbol": "__arm64_compat_sys_sendmmsg"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/nsproxy.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 375,
+			"kconfig": null,
+			"line": 527,
+			"name": "setns",
+			"number": 375,
+			"origname": "setns",
+			"signature": [
+				"int fd",
+				"int flags"
+			],
+			"symbol": "__arm64_sys_setns"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/process_vm_access.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 376,
+			"kconfig": "CROSS_MEMORY_ATTACH",
+			"line": 291,
+			"name": "process_vm_readv",
+			"number": 376,
+			"origname": "process_vm_readv",
+			"signature": [
+				"pid_t pid",
+				"const struct iovec *lvec",
+				"unsigned long liovcnt",
+				"const struct iovec *rvec",
+				"unsigned long riovcnt",
+				"unsigned long flags"
+			],
+			"symbol": "__arm64_sys_process_vm_readv"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/process_vm_access.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 377,
+			"kconfig": "CROSS_MEMORY_ATTACH",
+			"line": 298,
+			"name": "process_vm_writev",
+			"number": 377,
+			"origname": "process_vm_writev",
+			"signature": [
+				"pid_t pid",
+				"const struct iovec *lvec",
+				"unsigned long liovcnt",
+				"const struct iovec *rvec",
+				"unsigned long riovcnt",
+				"unsigned long flags"
+			],
+			"symbol": "__arm64_sys_process_vm_writev"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/kcmp.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 378,
+			"kconfig": "KCMP",
+			"line": 135,
+			"name": "kcmp",
+			"number": 378,
+			"origname": "kcmp",
+			"signature": [
+				"pid_t pid1",
+				"pid_t pid2",
+				"int type",
+				"unsigned long idx1",
+				"unsigned long idx2"
+			],
+			"symbol": "__arm64_sys_kcmp"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/module.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 379,
+			"kconfig": "MODULES",
+			"line": 4136,
+			"name": "finit_module",
+			"number": 379,
+			"origname": "finit_module",
+			"signature": [
+				"int fd",
+				"const char *uargs",
+				"int flags"
+			],
+			"symbol": "__arm64_sys_finit_module"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sched/core.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 380,
+			"kconfig": null,
+			"line": 6563,
+			"name": "sched_setattr",
+			"number": 380,
+			"origname": "sched_setattr",
+			"signature": [
+				"pid_t pid",
+				"struct sched_attr *uattr",
+				"unsigned int flags"
+			],
+			"symbol": "__arm64_sys_sched_setattr"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sched/core.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 381,
+			"kconfig": null,
+			"line": 6714,
+			"name": "sched_getattr",
+			"number": 381,
+			"origname": "sched_getattr",
+			"signature": [
+				"pid_t pid",
+				"struct sched_attr *uattr",
+				"unsigned int usize",
+				"unsigned int flags"
+			],
+			"symbol": "__arm64_sys_sched_getattr"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namei.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 382,
+			"kconfig": null,
+			"line": 4729,
+			"name": "renameat2",
+			"number": 382,
+			"origname": "renameat2",
+			"signature": [
+				"int olddfd",
+				"const char *oldname",
+				"int newdfd",
+				"const char *newname",
+				"unsigned int flags"
+			],
+			"symbol": "__arm64_sys_renameat2"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/seccomp.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 383,
+			"kconfig": "SECCOMP",
+			"line": 1949,
+			"name": "seccomp",
+			"number": 383,
+			"origname": "seccomp",
+			"signature": [
+				"unsigned int op",
+				"unsigned int flags",
+				"void *uargs"
+			],
+			"symbol": "__arm64_sys_seccomp"
+		},
+		{
+			"esoteric": false,
+			"file": "drivers/char/random.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 384,
+			"kconfig": null,
+			"line": 1983,
+			"name": "getrandom",
+			"number": 384,
+			"origname": "getrandom",
+			"signature": [
+				"char *buf",
+				"size_t count",
+				"unsigned int flags"
+			],
+			"symbol": "__arm64_sys_getrandom"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/memfd.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 385,
+			"kconfig": "MEMFD_CREATE",
+			"line": 250,
+			"name": "memfd_create",
+			"number": 385,
+			"origname": "memfd_create",
+			"signature": [
+				"const char *uname",
+				"unsigned int flags"
+			],
+			"symbol": "__arm64_sys_memfd_create"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/bpf/syscall.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 386,
+			"kconfig": "BPF_SYSCALL",
+			"line": 4369,
+			"name": "bpf",
+			"number": 386,
+			"origname": "bpf",
+			"signature": [
+				"int cmd",
+				"union bpf_attr *uattr",
+				"unsigned int size"
+			],
+			"symbol": "__arm64_sys_bpf"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/exec.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 387,
+			"kconfig": null,
+			"line": 2087,
+			"name": "execveat",
+			"number": 387,
+			"origname": "execveat",
+			"signature": [
+				"int fd",
+				"const char *filename",
+				"const compat_uptr_t *argv",
+				"const compat_uptr_t *envp",
+				"int flags"
+			],
+			"symbol": "__arm64_compat_sys_execveat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/userfaultfd.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 388,
+			"kconfig": "USERFAULTFD",
+			"line": 2052,
+			"name": "userfaultfd",
+			"number": 388,
+			"origname": "userfaultfd",
+			"signature": [
+				"int flags"
+			],
+			"symbol": "__arm64_sys_userfaultfd"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sched/membarrier.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 389,
+			"kconfig": "MEMBARRIER",
+			"line": 579,
+			"name": "membarrier",
+			"number": 389,
+			"origname": "membarrier",
+			"signature": [
+				"int cmd",
+				"unsigned int flags",
+				"int cpu_id"
+			],
+			"symbol": "__arm64_sys_membarrier"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mlock.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 390,
+			"kconfig": "MMU",
+			"line": 698,
+			"name": "mlock2",
+			"number": 390,
+			"origname": "mlock2",
+			"signature": [
+				"unsigned long start",
+				"size_t len",
+				"int flags"
+			],
+			"symbol": "__arm64_sys_mlock2"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/read_write.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 391,
+			"kconfig": null,
+			"line": 1543,
+			"name": "copy_file_range",
+			"number": 391,
+			"origname": "copy_file_range",
+			"signature": [
+				"int fd_in",
+				"loff_t *off_in",
+				"int fd_out",
+				"loff_t *off_out",
+				"size_t len",
+				"unsigned int flags"
+			],
+			"symbol": "__arm64_sys_copy_file_range"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/read_write.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 392,
+			"kconfig": null,
+			"line": 1133,
+			"name": "preadv2",
+			"number": 392,
+			"origname": "preadv2",
+			"signature": [
+				"compat_ulong_t fd",
+				"const struct iovec *vec",
+				"compat_ulong_t vlen",
+				"u32 pos_low",
+				"u32 pos_high",
+				"rwf_t flags"
+			],
+			"symbol": "__arm64_compat_sys_preadv2"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/read_write.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 393,
+			"kconfig": null,
+			"line": 1174,
+			"name": "pwritev2",
+			"number": 393,
+			"origname": "pwritev2",
+			"signature": [
+				"compat_ulong_t fd",
+				"const struct iovec *vec",
+				"compat_ulong_t vlen",
+				"u32 pos_low",
+				"u32 pos_high",
+				"rwf_t flags"
+			],
+			"symbol": "__arm64_compat_sys_pwritev2"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mprotect.c",
+			"good_location": true,
+			"grepped_location": true,
+			"index": 394,
+			"kconfig": "X86_INTEL_MEMORY_PROTECTION_KEYS",
+			"line": 657,
+			"name": "pkey_mprotect",
+			"number": 394,
+			"origname": "pkey_mprotect",
+			"signature": [
+				"unsigned long start",
+				"size_t len",
+				"unsigned long prot",
+				"int pkey"
+			],
+			"symbol": "__arm64_sys_pkey_mprotect"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mprotect.c",
+			"good_location": true,
+			"grepped_location": true,
+			"index": 395,
+			"kconfig": "X86_INTEL_MEMORY_PROTECTION_KEYS",
+			"line": 663,
+			"name": "pkey_alloc",
+			"number": 395,
+			"origname": "pkey_alloc",
+			"signature": [
+				"unsigned long flags",
+				"unsigned long init_val"
+			],
+			"symbol": "__arm64_sys_pkey_alloc"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mprotect.c",
+			"good_location": true,
+			"grepped_location": true,
+			"index": 396,
+			"kconfig": "X86_INTEL_MEMORY_PROTECTION_KEYS",
+			"line": 693,
+			"name": "pkey_free",
+			"number": 396,
+			"origname": "pkey_free",
+			"signature": [
+				"int pkey"
+			],
+			"symbol": "__arm64_sys_pkey_free"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/stat.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 397,
+			"kconfig": null,
+			"line": 616,
+			"name": "statx",
+			"number": 397,
+			"origname": "statx",
+			"signature": [
+				"int dfd",
+				"const char *filename",
+				"unsigned flags",
+				"unsigned int mask",
+				"struct statx *buffer"
+			],
+			"symbol": "__arm64_sys_statx"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/rseq.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 398,
+			"kconfig": "RSEQ",
+			"line": 320,
+			"name": "rseq",
+			"number": 398,
+			"origname": "rseq",
+			"signature": [
+				"struct rseq *rseq",
+				"u32 rseq_len",
+				"int flags",
+				"u32 sig"
+			],
+			"symbol": "__arm64_sys_rseq"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/aio.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 399,
+			"kconfig": "AIO",
+			"line": 2206,
+			"name": "io_pgetevents",
+			"number": 399,
+			"origname": "io_pgetevents",
+			"signature": [
+				"compat_aio_context_t ctx_id",
+				"compat_long_t min_nr",
+				"compat_long_t nr",
+				"struct io_event *events",
+				"struct old_timespec32 *timeout",
+				"const struct __compat_aio_sigset *usig"
+			],
+			"symbol": "__arm64_compat_sys_io_pgetevents"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mempolicy.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 400,
+			"kconfig": "MIGRATION",
+			"line": 1726,
+			"name": "migrate_pages",
+			"number": 400,
+			"origname": "migrate_pages",
+			"signature": [
+				"compat_pid_t pid",
+				"compat_ulong_t maxnode",
+				"const compat_ulong_t *old_nodes",
+				"const compat_ulong_t *new_nodes"
+			],
+			"symbol": "__arm64_compat_sys_migrate_pages"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/kexec_file.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 401,
+			"kconfig": "KEXEC_FILE",
+			"line": 354,
+			"name": "kexec_file_load",
+			"number": 401,
+			"origname": "kexec_file_load",
+			"signature": [
+				"int kernel_fd",
+				"int initrd_fd",
+				"unsigned long cmdline_len",
+				"const char *cmdline_ptr",
+				"unsigned long flags"
+			],
+			"symbol": "__arm64_sys_kexec_file_load"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/posix-timers.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 403,
+			"kconfig": null,
+			"line": 1082,
+			"name": "clock_gettime",
+			"number": 403,
+			"origname": "clock_gettime",
+			"signature": [
+				"const clockid_t which_clock",
+				"struct __kernel_timespec *tp"
+			],
+			"symbol": "__arm64_sys_clock_gettime"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/posix-timers.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 404,
+			"kconfig": null,
+			"line": 1067,
+			"name": "clock_settime",
+			"number": 404,
+			"origname": "clock_settime",
+			"signature": [
+				"const clockid_t which_clock",
+				"const struct __kernel_timespec *tp"
+			],
+			"symbol": "__arm64_sys_clock_settime"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/posix-timers.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 405,
+			"kconfig": null,
+			"line": 1112,
+			"name": "clock_adjtime",
+			"number": 405,
+			"origname": "clock_adjtime",
+			"signature": [
+				"const clockid_t which_clock",
+				"struct __kernel_timex *utx"
+			],
+			"symbol": "__arm64_sys_clock_adjtime"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/posix-timers.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 406,
+			"kconfig": null,
+			"line": 1129,
+			"name": "clock_getres",
+			"number": 406,
+			"origname": "clock_getres",
+			"signature": [
+				"const clockid_t which_clock",
+				"struct __kernel_timespec *tp"
+			],
+			"symbol": "__arm64_sys_clock_getres"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/posix-timers.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 407,
+			"kconfig": null,
+			"line": 1245,
+			"name": "clock_nanosleep",
+			"number": 407,
+			"origname": "clock_nanosleep",
+			"signature": [
+				"const clockid_t which_clock",
+				"int flags",
+				"const struct __kernel_timespec *rqtp",
+				"struct __kernel_timespec *rmtp"
+			],
+			"symbol": "__arm64_sys_clock_nanosleep"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/posix-timers.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 408,
+			"kconfig": "POSIX_TIMERS",
+			"line": 738,
+			"name": "timer_gettime",
+			"number": 408,
+			"origname": "timer_gettime",
+			"signature": [
+				"timer_t timer_id",
+				"struct __kernel_itimerspec *setting"
+			],
+			"symbol": "__arm64_sys_timer_gettime"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/posix-timers.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 409,
+			"kconfig": "POSIX_TIMERS",
+			"line": 938,
+			"name": "timer_settime",
+			"number": 409,
+			"origname": "timer_settime",
+			"signature": [
+				"timer_t timer_id",
+				"int flags",
+				"const struct __kernel_itimerspec *new_setting",
+				"struct __kernel_itimerspec *old_setting"
+			],
+			"symbol": "__arm64_sys_timer_settime"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/timerfd.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 410,
+			"kconfig": null,
+			"line": 560,
+			"name": "timerfd_gettime",
+			"number": 410,
+			"origname": "timerfd_gettime",
+			"signature": [
+				"int ufd",
+				"struct __kernel_itimerspec *otmr"
+			],
+			"symbol": "__arm64_sys_timerfd_gettime"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/timerfd.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 411,
+			"kconfig": null,
+			"line": 542,
+			"name": "timerfd_settime",
+			"number": 411,
+			"origname": "timerfd_settime",
+			"signature": [
+				"int ufd",
+				"int flags",
+				"const struct __kernel_itimerspec *utmr",
+				"struct __kernel_itimerspec *otmr"
+			],
+			"symbol": "__arm64_sys_timerfd_settime"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/utimes.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 412,
+			"kconfig": null,
+			"line": 147,
+			"name": "utimensat",
+			"number": 412,
+			"origname": "utimensat",
+			"signature": [
+				"int dfd",
+				"const char *filename",
+				"struct __kernel_timespec *utimes",
+				"int flags"
+			],
+			"symbol": "__arm64_sys_utimensat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/select.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 413,
+			"kconfig": null,
+			"line": 1364,
+			"name": "pselect6",
+			"number": 413,
+			"origname": "pselect6_time64",
+			"signature": [
+				"int n",
+				"compat_ulong_t *inp",
+				"compat_ulong_t *outp",
+				"compat_ulong_t *exp",
+				"struct __kernel_timespec *tsp",
+				"void *sig"
+			],
+			"symbol": "__arm64_compat_sys_pselect6_time64"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/select.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 414,
+			"kconfig": null,
+			"line": 1421,
+			"name": "ppoll",
+			"number": 414,
+			"origname": "ppoll_time64",
+			"signature": [
+				"struct pollfd *ufds",
+				"unsigned int nfds",
+				"struct __kernel_timespec *tsp",
+				"const compat_sigset_t *sigmask",
+				"compat_size_t sigsetsize"
+			],
+			"symbol": "__arm64_compat_sys_ppoll_time64"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/aio.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 416,
+			"kconfig": "AIO",
+			"line": 2104,
+			"name": "io_pgetevents",
+			"number": 416,
+			"origname": "io_pgetevents",
+			"signature": [
+				"aio_context_t ctx_id",
+				"long min_nr",
+				"long nr",
+				"struct io_event *events",
+				"struct __kernel_timespec *timeout",
+				"const struct __aio_sigset *usig"
+			],
+			"symbol": "__arm64_sys_io_pgetevents"
+		},
+		{
+			"esoteric": false,
+			"file": "net/compat.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 417,
+			"kconfig": "NET",
+			"line": 406,
+			"name": "recvmmsg",
+			"number": 417,
+			"origname": "recvmmsg_time64",
+			"signature": [
+				"int fd",
+				"struct compat_mmsghdr *mmsg",
+				"unsigned int vlen",
+				"unsigned int flags",
+				"struct __kernel_timespec *timeout"
+			],
+			"symbol": "__arm64_compat_sys_recvmmsg_time64"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/mqueue.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 418,
+			"kconfig": "POSIX_MQUEUE",
+			"line": 1271,
+			"name": "mq_timedsend",
+			"number": 418,
+			"origname": "mq_timedsend",
+			"signature": [
+				"mqd_t mqdes",
+				"const char *u_msg_ptr",
+				"size_t msg_len",
+				"unsigned int msg_prio",
+				"const struct __kernel_timespec *u_abs_timeout"
+			],
+			"symbol": "__arm64_sys_mq_timedsend"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/mqueue.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 419,
+			"kconfig": "POSIX_MQUEUE",
+			"line": 1285,
+			"name": "mq_timedreceive",
+			"number": 419,
+			"origname": "mq_timedreceive",
+			"signature": [
+				"mqd_t mqdes",
+				"char *u_msg_ptr",
+				"size_t msg_len",
+				"unsigned int *u_msg_prio",
+				"const struct __kernel_timespec *u_abs_timeout"
+			],
+			"symbol": "__arm64_sys_mq_timedreceive"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/sem.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 420,
+			"kconfig": "SYSVIPC",
+			"line": 2248,
+			"name": "semtimedop",
+			"number": 420,
+			"origname": "semtimedop",
+			"signature": [
+				"int semid",
+				"struct sembuf *tsops",
+				"unsigned int nsops",
+				"const struct __kernel_timespec *timeout"
+			],
+			"symbol": "__arm64_sys_semtimedop"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 421,
+			"kconfig": null,
+			"line": 3621,
+			"name": "rt_sigtimedwait",
+			"number": 421,
+			"origname": "rt_sigtimedwait_time64",
+			"signature": [
+				"compat_sigset_t *uthese",
+				"struct compat_siginfo *uinfo",
+				"struct __kernel_timespec *uts",
+				"compat_size_t sigsetsize"
+			],
+			"symbol": "__arm64_compat_sys_rt_sigtimedwait_time64"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/futex.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 422,
+			"kconfig": "FUTEX",
+			"line": 3785,
+			"name": "futex",
+			"number": 422,
+			"origname": "futex",
+			"signature": [
+				"u32 *uaddr",
+				"int op",
+				"u32 val",
+				"const struct __kernel_timespec *utime",
+				"u32 *uaddr2",
+				"u32 val3"
+			],
+			"symbol": "__arm64_sys_futex"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sched/core.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 423,
+			"kconfig": null,
+			"line": 7319,
+			"name": "sched_rr_get_interval",
+			"number": 423,
+			"origname": "sched_rr_get_interval",
+			"signature": [
+				"pid_t pid",
+				"struct __kernel_timespec *interval"
+			],
+			"symbol": "__arm64_sys_sched_rr_get_interval"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 424,
+			"kconfig": null,
+			"line": 3774,
+			"name": "pidfd_send_signal",
+			"number": 424,
+			"origname": "pidfd_send_signal",
+			"signature": [
+				"int pidfd",
+				"int sig",
+				"siginfo_t *info",
+				"unsigned int flags"
+			],
+			"symbol": "__arm64_sys_pidfd_send_signal"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/io_uring.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 425,
+			"kconfig": "IO_URING",
+			"line": 9737,
+			"name": "io_uring_setup",
+			"number": 425,
+			"origname": "io_uring_setup",
+			"signature": [
+				"u32 entries",
+				"struct io_uring_params *params"
+			],
+			"symbol": "__arm64_sys_io_uring_setup"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/io_uring.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 426,
+			"kconfig": "IO_URING",
+			"line": 9278,
+			"name": "io_uring_enter",
+			"number": 426,
+			"origname": "io_uring_enter",
+			"signature": [
+				"unsigned int fd",
+				"u32 to_submit",
+				"u32 min_complete",
+				"u32 flags",
+				"const void *argp",
+				"size_t argsz"
+			],
+			"symbol": "__arm64_sys_io_uring_enter"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/io_uring.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 427,
+			"kconfig": "IO_URING",
+			"line": 10126,
+			"name": "io_uring_register",
+			"number": 427,
+			"origname": "io_uring_register",
+			"signature": [
+				"unsigned int fd",
+				"unsigned int opcode",
+				"void *arg",
+				"unsigned int nr_args"
+			],
+			"symbol": "__arm64_sys_io_uring_register"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namespace.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 428,
+			"kconfig": null,
+			"line": 2443,
+			"name": "open_tree",
+			"number": 428,
+			"origname": "open_tree",
+			"signature": [
+				"int dfd",
+				"const char *filename",
+				"unsigned flags"
+			],
+			"symbol": "__arm64_sys_open_tree"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namespace.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 429,
+			"kconfig": null,
+			"line": 3628,
+			"name": "move_mount",
+			"number": 429,
+			"origname": "move_mount",
+			"signature": [
+				"int from_dfd",
+				"const char *from_pathname",
+				"int to_dfd",
+				"const char *to_pathname",
+				"unsigned int flags"
+			],
+			"symbol": "__arm64_sys_move_mount"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/fsopen.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 430,
+			"kconfig": null,
+			"line": 115,
+			"name": "fsopen",
+			"number": 430,
+			"origname": "fsopen",
+			"signature": [
+				"const char *_fs_name",
+				"unsigned int flags"
+			],
+			"symbol": "__arm64_sys_fsopen"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/fsopen.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 431,
+			"kconfig": null,
+			"line": 314,
+			"name": "fsconfig",
+			"number": 431,
+			"origname": "fsconfig",
+			"signature": [
+				"int fd",
+				"unsigned int cmd",
+				"const char *_key",
+				"const void *_value",
+				"int aux"
+			],
+			"symbol": "__arm64_sys_fsconfig"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namespace.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 432,
+			"kconfig": null,
+			"line": 3498,
+			"name": "fsmount",
+			"number": 432,
+			"origname": "fsmount",
+			"signature": [
+				"int fs_fd",
+				"unsigned int flags",
+				"unsigned int attr_flags"
+			],
+			"symbol": "__arm64_sys_fsmount"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/fsopen.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 433,
+			"kconfig": null,
+			"line": 158,
+			"name": "fspick",
+			"number": 433,
+			"origname": "fspick",
+			"signature": [
+				"int dfd",
+				"const char *path",
+				"unsigned int flags"
+			],
+			"symbol": "__arm64_sys_fspick"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/pid.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 434,
+			"kconfig": null,
+			"line": 584,
+			"name": "pidfd_open",
+			"number": 434,
+			"origname": "pidfd_open",
+			"signature": [
+				"pid_t pid",
+				"unsigned int flags"
+			],
+			"symbol": "__arm64_sys_pidfd_open"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/fork.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 435,
+			"kconfig": null,
+			"line": 2761,
+			"name": "clone3",
+			"number": 435,
+			"origname": "clone3",
+			"signature": [
+				"struct clone_args *uargs",
+				"size_t size"
+			],
+			"symbol": "__arm64_sys_clone3"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 436,
+			"kconfig": null,
+			"line": 1337,
+			"name": "close_range",
+			"number": 436,
+			"origname": "close_range",
+			"signature": [
+				"unsigned int fd",
+				"unsigned int max_fd",
+				"unsigned int flags"
+			],
+			"symbol": "__arm64_sys_close_range"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 437,
+			"kconfig": null,
+			"line": 1222,
+			"name": "openat2",
+			"number": 437,
+			"origname": "openat2",
+			"signature": [
+				"int dfd",
+				"const char *filename",
+				"struct open_how *how",
+				"size_t usize"
+			],
+			"symbol": "__arm64_sys_openat2"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/pid.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 438,
+			"kconfig": null,
+			"line": 682,
+			"name": "pidfd_getfd",
+			"number": 438,
+			"origname": "pidfd_getfd",
+			"signature": [
+				"int pidfd",
+				"int fd",
+				"unsigned int flags"
+			],
+			"symbol": "__arm64_sys_pidfd_getfd"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 439,
+			"kconfig": null,
+			"line": 476,
+			"name": "faccessat2",
+			"number": 439,
+			"origname": "faccessat2",
+			"signature": [
+				"int dfd",
+				"const char *filename",
+				"int mode",
+				"int flags"
+			],
+			"symbol": "__arm64_sys_faccessat2"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/madvise.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 440,
+			"kconfig": "ADVISE_SYSCALLS",
+			"line": 1162,
+			"name": "process_madvise",
+			"number": 440,
+			"origname": "process_madvise",
+			"signature": [
+				"int pidfd",
+				"const struct iovec *vec",
+				"size_t vlen",
+				"int behavior",
+				"unsigned int flags"
+			],
+			"symbol": "__arm64_sys_process_madvise"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/eventpoll.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 441,
+			"kconfig": "EPOLL",
+			"line": 2332,
+			"name": "epoll_pwait2",
+			"number": 441,
+			"origname": "epoll_pwait2",
+			"signature": [
+				"int epfd",
+				"struct epoll_event *events",
+				"int maxevents",
+				"const struct __kernel_timespec *timeout",
+				"const compat_sigset_t *sigmask",
+				"compat_size_t sigsetsize"
+			],
+			"symbol": "__arm64_compat_sys_epoll_pwait2"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namespace.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 442,
+			"kconfig": null,
+			"line": 4138,
+			"name": "mount_setattr",
+			"number": 442,
+			"origname": "mount_setattr",
+			"signature": [
+				"int dfd",
+				"const char *path",
+				"unsigned int flags",
+				"struct mount_attr *uattr",
+				"size_t usize"
+			],
+			"symbol": "__arm64_sys_mount_setattr"
+		},
+		{
+			"esoteric": false,
+			"file": "security/landlock/syscalls.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 444,
+			"kconfig": "SECURITY_LANDLOCK",
+			"line": 156,
+			"name": "landlock_create_ruleset",
+			"number": 444,
+			"origname": "landlock_create_ruleset",
+			"signature": [
+				"const struct landlock_ruleset_attr *const attr",
+				"const size_t size",
+				"const __u32 flags"
+			],
+			"symbol": "__arm64_sys_landlock_create_ruleset"
+		},
+		{
+			"esoteric": false,
+			"file": "security/landlock/syscalls.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 445,
+			"kconfig": "SECURITY_LANDLOCK",
+			"line": 304,
+			"name": "landlock_add_rule",
+			"number": 445,
+			"origname": "landlock_add_rule",
+			"signature": [
+				"const int ruleset_fd",
+				"const enum landlock_rule_type rule_type",
+				"const void *const rule_attr",
+				"const __u32 flags"
+			],
+			"symbol": "__arm64_sys_landlock_add_rule"
+		},
+		{
+			"esoteric": false,
+			"file": "security/landlock/syscalls.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 446,
+			"kconfig": "SECURITY_LANDLOCK",
+			"line": 392,
+			"name": "landlock_restrict_self",
+			"number": 446,
+			"origname": "landlock_restrict_self",
+			"signature": [
+				"const int ruleset_fd",
+				"const __u32 flags"
+			],
+			"symbol": "__arm64_sys_landlock_restrict_self"
+		}
+	],
+	"systrack_version": "0.1-rc3"
+}
