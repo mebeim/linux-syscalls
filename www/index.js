@@ -140,7 +140,7 @@ function humanAbiName(abi) {
 	if (abi.startsWith('aarch'))
 		return 'AArch' + abi.slice(5)
 	// arm
-	if (abi === 'eabi' || abi === 'eabi')
+	if (abi === 'oabi' || abi === 'eabi')
 		return abi.toUpperCase()
 	// mips
 	if (abi === 'o32' || abi === 'o64' || abi === 'n64')
