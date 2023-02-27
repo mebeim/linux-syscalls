@@ -1,9 +1,9 @@
 const tableEl        = document.getElementsByTagName('table')[0]
 const tagSelectEl    = document.getElementById('tag-select')
 const archSelectEl   = document.getElementById('arch-abi-select')
-const systrackInfoEl = document.getElementById('systrack-info')
-const configInfoEl   = document.getElementById('config-info')
-const stderrInfoEl   = document.getElementById('stderr-info')
+const systrackVersEl = document.getElementById('systrack-version')
+const configLinkEl   = document.getElementById('config-link')
+const stderrLinkEl   = document.getElementById('stderr-link')
 
 let db = null
 let updateInProgress = false
@@ -347,20 +347,20 @@ async function update(pushHistoryState) {
 
 	fillTable(syscallTbable, tag)
 
-	systrackInfoEl.textContent = `Systrack v${syscallTbable.systrack_version}`
+	systrackVersEl.textContent = syscallTbable.systrack_version
 
 	if (config) {
-		configInfoEl.title = configInfoEl.href = `db/${arch}/${bits}/${abi}/${tag}/config.txt`
-		configInfoEl.textContent = '[build\u00a0config]'
+		configLinkEl.title = configLinkEl.href = `db/${arch}/${bits}/${abi}/${tag}/config.txt`
+		configLinkEl.textContent = '[build\u00a0config]'
 	} else {
-		configInfoEl.textContent = configInfoEl.title = configInfoEl.href = ''
+		configLinkEl.textContent = configLinkEl.title = configLinkEl.href = ''
 	}
 
 	if (stderr) {
-		stderrInfoEl.title = stderrInfoEl.href = `db/${arch}/${bits}/${abi}/${tag}/stderr.txt`
-		stderrInfoEl.textContent = '[analysis\u00a0log]'
+		stderrLinkEl.title = stderrLinkEl.href = `db/${arch}/${bits}/${abi}/${tag}/stderr.txt`
+		stderrLinkEl.textContent = '[analysis\u00a0log]'
 	} else {
-		stderrInfoEl.textContent = stderrInfoEl.title = stderrInfoEl.href = ''
+		stderrLinkEl.textContent = stderrLinkEl.title = stderrLinkEl.href = ''
 	}
 
 	if (pushHistoryState) {
