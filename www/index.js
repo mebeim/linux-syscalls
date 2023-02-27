@@ -273,30 +273,38 @@ function fillRow(row, tag, sc, maxArgs) {
 		loc.classList.add('unknown')
 	}
 
-	for (const arg of sc.signature) {
-		const td = document.createElement('td')
-		const i = arg.lastIndexOf(' ')
+	if (sc.signature) {
+		for (const arg of sc.signature) {
+			const td = document.createElement('td')
+			const i = arg.lastIndexOf(' ')
 
-		if (i === -1) {
-			td.textContent = arg
-		} else {
-			const type = document.createElement('span')
-			const name = document.createElement('span')
-			type.classList.add('argtype')
-			name.classList.add('argname')
-			type.textContent = arg.slice(0, i)
-			name.textContent = arg.slice(i)
-			td.appendChild(type)
-			td.appendChild(name)
+			if (i === -1) {
+				td.textContent = arg
+			} else {
+				const type = document.createElement('span')
+				const name = document.createElement('span')
+				type.classList.add('argtype')
+				name.classList.add('argname')
+				type.textContent = arg.slice(0, i)
+				name.textContent = arg.slice(i)
+				td.appendChild(type)
+				td.appendChild(name)
+			}
+
+			row.appendChild(td)
 		}
 
-		row.appendChild(td)
-	}
 
-
-	if (sc.signature.length < maxArgs) {
+		if (sc.signature.length < maxArgs) {
+			const td = document.createElement('td')
+			td.colSpan = maxArgs - sc.signature.length
+			row.appendChild(td)
+		}
+	} else {
 		const td = document.createElement('td')
-		td.colSpan = maxArgs - sc.signature.length
+		td.colSpan = maxArgs
+		td.textContent = 'unknown signature'
+		td.classList.add('unknown')
 		row.appendChild(td)
 	}
 }
@@ -304,7 +312,7 @@ function fillRow(row, tag, sc, maxArgs) {
 function fillTable(syscallTable, tag) {
 	const numReg = syscallTable.kernel.abi.calling_convention.syscall_nr
 	const argRegs = syscallTable.kernel.abi.calling_convention.parameters
-	const maxArgs = Math.max(...syscallTable.syscalls.map(sc => sc.signature.length))
+	const maxArgs = Math.max(...syscallTable.syscalls.map(sc => sc.signature?.length || 0))
 
 	const header = document.createElement('tr')
 	header.innerHTML = `\
