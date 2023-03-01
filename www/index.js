@@ -1,4 +1,5 @@
 const tableEl        = document.getElementsByTagName('table')[0]
+const themeToggleEl  = document.getElementById('theme-toggle')
 const tagSelectEl    = document.getElementById('tag-select')
 const archSelectEl   = document.getElementById('arch-abi-select')
 const systrackVersEl = document.getElementById('systrack-version')
@@ -273,10 +274,10 @@ function fillRow(row, tag, sc, maxArgs) {
 		loc.classList.add('unknown')
 	}
 
-	if (sc.signature) {
+	if (sc.signature !== null) {
 		for (const arg of sc.signature) {
 			const td = document.createElement('td')
-			const i = arg.lastIndexOf(' ')
+			const i = arg.trimEnd().lastIndexOf(' ')
 
 			if (i === -1) {
 				td.textContent = arg
@@ -293,20 +294,19 @@ function fillRow(row, tag, sc, maxArgs) {
 
 			row.appendChild(td)
 		}
-
-
-		if (sc.signature.length < maxArgs) {
-			const td = document.createElement('td')
-			td.colSpan = maxArgs - sc.signature.length
-			row.appendChild(td)
-		}
 	} else {
+		// Syscall signature is unknown
 		const td = document.createElement('td')
-		td.colSpan = maxArgs
 		td.textContent = 'unknown signature'
 		td.classList.add('unknown')
 		row.appendChild(td)
 	}
+
+	const argsLeft = sc.signature?.length ? maxArgs - sc.signature?.length : maxArgs;
+
+	// Append multiple <td> elements to be able to style column borders
+	for (let i = 0; i < argsLeft; i++)
+		row.appendChild(document.createElement('td'))
 }
 
 function fillTable(syscallTable, tag) {
@@ -409,6 +409,20 @@ function historyPopStateHandler(e) {
 	}
 }
 
+function restoreTheme() {
+	let theme = localStorage.getItem('theme')
+	if (!theme)
+		theme = window.matchMedia?.('(prefers-color-scheme: dark)')?.matches ? 'dark' : 'light';
+
+	document.body.dataset.theme = theme
+}
+
+function toggleTheme() {
+	const theme = document.body.dataset.theme === 'dark' ? 'light' : 'dark'
+	document.body.dataset.theme = theme
+	localStorage.setItem('theme', theme)
+}
+
 async function setup() {
 	const archs = []
 	db = await fetchJSON('db/index.json')
@@ -433,9 +447,11 @@ async function setup() {
 	}
 
 	update(true)
+	restoreTheme()
 
 	archSelectEl.addEventListener('change', archSelectChangeHandler)
 	tagSelectEl.addEventListener('change', tagSelectChangeHandler)
+	themeToggleEl.addEventListener('click', toggleTheme)
 	window.addEventListener('popstate', historyPopStateHandler)
 }
 
