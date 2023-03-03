@@ -229,6 +229,7 @@ function fillRow(row, tag, sc, maxArgs) {
 	const loc  = document.createElement('td')
 	const kcfg = document.createElement('td')
 	const link = document.createElement('a')
+	let argsLeft = sc.signature?.length ? maxArgs - sc.signature?.length : maxArgs;
 
 	row.addEventListener('click', highlightRow)
 	row.appendChild(ndec)
@@ -300,9 +301,8 @@ function fillRow(row, tag, sc, maxArgs) {
 		td.textContent = 'unknown signature'
 		td.classList.add('unknown')
 		row.appendChild(td)
+		argsLeft--
 	}
-
-	const argsLeft = sc.signature?.length ? maxArgs - sc.signature?.length : maxArgs;
 
 	// Append multiple <td> elements to be able to style column borders
 	for (let i = 0; i < argsLeft; i++)
