@@ -144,7 +144,7 @@ function humanAbiName(abi) {
 	if (abi === 'oabi' || abi === 'eabi')
 		return abi.toUpperCase()
 	// mips
-	if (abi === 'o32' || abi === 'o64' || abi === 'n64')
+	if (abi === 'o32' || abi === 'o64' || abi === 'n64' || abi == 'n32')
 		return abi[0].toUpperCase() + abi.slice(1)
 	return abi
 }
