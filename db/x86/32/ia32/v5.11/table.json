@@ -59,7 +59,7 @@
 			"good_location": true,
 			"grepped_location": false,
 			"index": 2,
-			"kconfig": null,
+			"kconfig": "MMU",
 			"line": 2518,
 			"name": "fork",
 			"number": 2,
@@ -1735,9 +1735,9 @@
 			"esoteric": false,
 			"file": "arch/x86/kernel/vm86_32.c",
 			"good_location": true,
-			"grepped_location": true,
+			"grepped_location": false,
 			"index": 113,
-			"kconfig": null,
+			"kconfig": "X86_LEGACY_VM86",
 			"line": 209,
 			"name": "vm86old",
 			"number": 113,
@@ -2574,9 +2574,9 @@
 			"esoteric": false,
 			"file": "arch/x86/kernel/vm86_32.c",
 			"good_location": true,
-			"grepped_location": true,
+			"grepped_location": false,
 			"index": 166,
-			"kconfig": "VM86",
+			"kconfig": "X86_LEGACY_VM86",
 			"line": 215,
 			"name": "vm86",
 			"number": 166,
@@ -6295,58 +6295,6 @@
 		},
 		{
 			"esoteric": false,
-			"file": "mm/mprotect.c",
-			"good_location": true,
-			"grepped_location": true,
-			"index": 380,
-			"kconfig": "X86_INTEL_MEMORY_PROTECTION_KEYS",
-			"line": 656,
-			"name": "pkey_mprotect",
-			"number": 380,
-			"origname": "pkey_mprotect",
-			"signature": [
-				"unsigned long start",
-				"size_t len",
-				"unsigned long prot",
-				"int pkey"
-			],
-			"symbol": "__ia32_sys_pkey_mprotect"
-		},
-		{
-			"esoteric": false,
-			"file": "mm/mprotect.c",
-			"good_location": true,
-			"grepped_location": true,
-			"index": 381,
-			"kconfig": "X86_INTEL_MEMORY_PROTECTION_KEYS",
-			"line": 662,
-			"name": "pkey_alloc",
-			"number": 381,
-			"origname": "pkey_alloc",
-			"signature": [
-				"unsigned long flags",
-				"unsigned long init_val"
-			],
-			"symbol": "__ia32_sys_pkey_alloc"
-		},
-		{
-			"esoteric": false,
-			"file": "mm/mprotect.c",
-			"good_location": true,
-			"grepped_location": true,
-			"index": 382,
-			"kconfig": "X86_INTEL_MEMORY_PROTECTION_KEYS",
-			"line": 692,
-			"name": "pkey_free",
-			"number": 382,
-			"origname": "pkey_free",
-			"signature": [
-				"int pkey"
-			],
-			"symbol": "__ia32_sys_pkey_free"
-		},
-		{
-			"esoteric": false,
 			"file": "fs/stat.c",
 			"good_location": true,
 			"grepped_location": false,
@@ -7316,5 +7264,5 @@
 			"symbol": "__ia32_sys_epoll_pwait2"
 		}
 	],
-	"systrack_version": "0.1-rc3"
+	"systrack_version": "0.2"
 }

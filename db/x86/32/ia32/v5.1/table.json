@@ -59,7 +59,7 @@
 			"good_location": true,
 			"grepped_location": false,
 			"index": 2,
-			"kconfig": null,
+			"kconfig": "MMU",
 			"line": 2290,
 			"name": "fork",
 			"number": 2,
@@ -1733,6 +1733,22 @@
 		},
 		{
 			"esoteric": false,
+			"file": "arch/x86/kernel/vm86_32.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 113,
+			"kconfig": "X86_LEGACY_VM86",
+			"line": 210,
+			"name": "vm86old",
+			"number": 113,
+			"origname": "vm86old",
+			"signature": [
+				"struct vm86_struct *user_vm86"
+			],
+			"symbol": "sys_vm86old"
+		},
+		{
+			"esoteric": false,
 			"file": "kernel/exit.c",
 			"good_location": true,
 			"grepped_location": false,
@@ -2569,6 +2585,23 @@
 				"old_uid_t *suidp"
 			],
 			"symbol": "__se_sys_getresuid16"
+		},
+		{
+			"esoteric": false,
+			"file": "arch/x86/kernel/vm86_32.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 166,
+			"kconfig": "X86_LEGACY_VM86",
+			"line": 216,
+			"name": "vm86",
+			"number": 166,
+			"origname": "vm86",
+			"signature": [
+				"unsigned long cmd",
+				"unsigned long arg"
+			],
+			"symbol": "__se_sys_vm86"
 		},
 		{
 			"esoteric": false,
@@ -6973,5 +7006,5 @@
 			"symbol": "__se_sys_io_uring_register"
 		}
 	],
-	"systrack_version": "0.1-rc3"
+	"systrack_version": "0.2"
 }
