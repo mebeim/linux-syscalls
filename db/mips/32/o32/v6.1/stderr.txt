@@ -1,0 +1,966 @@
+[D] Running command: ['readelf', '-Ws', PosixPath('/mnt/hdd-stuff/kernels/systrack-0.2/vmlinux-mips-v6.1')]
+[D] Running command: ['readelf', '-WS', PosixPath('/mnt/hdd-stuff/kernels/systrack-0.2/vmlinux-mips-v6.1')]
+Detected kernel version: 6.1.0 (from vmlinux)
+Checking out to v6.1
+[D] Running command: ('git', 'checkout', 'v6.1')
+[D] Arch: ArchMips(name='mips', abi='o32', compat=False, ...)
+[D] Syscall table: Symbol("sys_call_table" at 0x801186d4, type=OBJECT, size=0x0)
+[D] Found ni_syscall: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[W] Syscall table (sys_call_table) has bad size (0), doing my best to figure out when to stop
+[I] Syscall table seems to be 1804 bytes, 451 entries
+[D] Discarding alias for sys_ni_syscall: sys_setfsgid16
+[D] Discarding alias for sys_ni_syscall: compat_sys_mq_open
+[D] Discarding alias for sys_ni_syscall: compat_sys_msgsnd
+[D] Discarding alias for sys_ni_syscall: sys_memfd_secret
+[D] Preferring sys_msgrcv over __se_sys_msgrcv
+[D] Discarding alias for sys_ni_syscall: sys_getresgid16
+[D] Discarding alias for sys_ni_syscall: compat_sys_shmat
+[D] Discarding alias for sys_ni_syscall: sys_getgroups16
+[D] Discarding alias for sys_ni_syscall: sys_s390_pci_mmio_write
+[D] Preferring sys_epoll_pwait over __se_sys_epoll_pwait
+[D] Discarding alias for sys_ni_syscall: compat_sys_recvmmsg_time32
+[D] Preferring sys_statfs64 over __se_sys_statfs64
+[D] Discarding alias for sys_ni_syscall: sys_getuid16
+[D] Discarding alias for sys_ni_syscall: compat_sys_fadvise64_64
+[D] Discarding alias for sys_ni_syscall: compat_sys_recvmsg
+[D] Discarding alias for sys_ni_syscall: sys_mbind
+[D] Preferring sys_newfstat over __se_sys_newfstat
+[D] Discarding alias for sys_ni_syscall: sys_setgid16
+[D] Discarding alias for sys_ni_syscall: compat_sys_mq_notify
+[D] Discarding alias for sys_ni_syscall: sys_migrate_pages
+[D] Preferring sys_move_mount over __se_sys_move_mount
+[D] Preferring sys_execveat over __se_sys_execveat
+[D] Discarding alias for sys_ni_syscall: sys_setreuid16
+[D] Preferring sys_old_readdir over __se_sys_old_readdir
+[D] Preferring sys_llseek over __se_sys_llseek
+[D] Preferring sys_sendto over __se_sys_sendto
+[D] Discarding alias for sys_ni_syscall: compat_sys_epoll_pwait
+[D] Discarding alias for sys_ni_syscall: compat_sys_old_msgctl
+[D] Discarding alias for sys_ni_syscall: compat_sys_s390_ipc
+[D] Discarding alias for sys_ni_syscall: compat_sys_set_robust_list
+[D] Discarding alias for sys_ni_syscall: compat_sys_setsockopt
+[D] Preferring sys_futex over __se_sys_futex
+[D] Discarding alias for sys_ni_syscall: sys_setfsuid16
+[D] Discarding alias for sys_ni_syscall: sys_fadvise64
+[D] Preferring sys_mkdir over __se_sys_mkdir
+[D] Preferring sys_name_to_handle_at over __se_sys_name_to_handle_at
+[D] Discarding alias for sys_ni_syscall: sys_pciconfig_iobase
+[D] Discarding alias for sys_ni_syscall: sys_pciconfig_read
+[D] Discarding alias for sys_ni_syscall: compat_sys_ipc
+[D] Preferring sys_rmdir over __se_sys_rmdir
+[D] Discarding alias for sys_ni_syscall: compat_sys_pselect6_time32
+[D] Preferring sys_set_robust_list over __se_sys_set_robust_list
+[D] Preferring sys_mprotect over __se_sys_mprotect
+[D] Discarding alias for sys_ni_syscall: sys_pkey_mprotect
+[D] Discarding alias for sys_ni_syscall: compat_sys_old_shmctl
+[D] Preferring sys_send over __se_sys_send
+[D] Preferring sys_fallocate over __se_sys_fallocate
+[D] Discarding alias for sys_ni_syscall: compat_sys_rt_sigtimedwait_time32
+[D] Preferring sys_sendfile64 over __se_sys_sendfile64
+[D] Discarding alias for sys_ni_syscall: compat_sys_epoll_pwait2
+[D] Discarding alias for sys_ni_syscall: compat_sys_semctl
+[D] Preferring sys_getdents64 over __se_sys_getdents64
+[D] Preferring sys_mincore over __se_sys_mincore
+[D] Preferring sys_epoll_pwait2 over __se_sys_epoll_pwait2
+[D] Discarding alias for sys_ni_syscall: sys_setgroups16
+[D] Preferring sys_futex_waitv over __se_sys_futex_waitv
+[D] Preferring sys_truncate64 over __se_sys_truncate64
+[D] Discarding alias for sys_ni_syscall: compat_sys_sendmmsg
+[D] Preferring sys_rt_tgsigqueueinfo over __se_sys_rt_tgsigqueueinfo
+[D] Discarding alias for sys_ni_syscall: compat_sys_get_robust_list
+[D] Discarding alias for sys_ni_syscall: sys_kexec_file_load
+[D] Discarding alias for sys_ni_syscall: sys_spu_run
+[D] Preferring sys_setdomainname over __se_sys_setdomainname
+[D] Discarding alias for sys_ni_syscall: compat_sys_signalfd
+[D] Preferring sys_semctl over __se_sys_semctl
+[D] Preferring sys_bind over __se_sys_bind
+[D] Preferring sys_poll over __se_sys_poll
+[D] Preferring sys_exit_group over __se_sys_exit_group
+[D] Preferring sys_add_key over __se_sys_add_key
+[D] Discarding alias for sys_ni_syscall: sys_fchown16
+[D] Preferring sys_io_uring_setup over __se_sys_io_uring_setup
+[D] Preferring sys_setgid over __se_sys_setgid
+[D] Preferring sys_sendmsg over __se_sys_sendmsg
+[D] Discarding alias for sys_ni_syscall: sys_vm86old
+[D] Preferring sys_mq_open over __se_sys_mq_open
+[D] Preferring sys_adjtimex_time32 over __se_sys_adjtimex_time32
+[D] Preferring sys_mq_timedreceive over __se_sys_mq_timedreceive
+[D] Preferring sys_setfsuid over __se_sys_setfsuid
+[D] Preferring sys_utimensat_time32 over __se_sys_utimensat_time32
+[D] Preferring sys_sched_setscheduler over __se_sys_sched_setscheduler
+[D] Preferring sys_keyctl over __se_sys_keyctl
+[D] Preferring sys_shmdt over __se_sys_shmdt
+[D] Preferring sys_lsetxattr over __se_sys_lsetxattr
+[D] Discarding alias for sys_ni_syscall: sys_set_mempolicy
+[D] Preferring sys_sendfile over __se_sys_sendfile
+[D] Preferring sys_munlock over __se_sys_munlock
+[D] Discarding alias for sys_ni_syscall: sys_io_getevents
+[D] Preferring sys_bpf over __se_sys_bpf
+[D] Preferring sys_rt_sigaction over __se_sys_rt_sigaction
+[D] Preferring sys_ptrace over __se_sys_ptrace
+[D] Preferring sys_setsockopt over __se_sys_setsockopt
+[D] Preferring sys_quotactl over __se_sys_quotactl
+[D] Discarding alias for sys_ni_syscall: sys_getegid16
+[D] Discarding alias for sys_ni_syscall: compat_sys_io_pgetevents_time32
+[D] Preferring sys_setxattr over __se_sys_setxattr
+[D] Preferring sys_msgsnd over __se_sys_msgsnd
+[D] Preferring sys_pselect6_time32 over __se_sys_pselect6_time32
+[D] Preferring sys_prctl over __se_sys_prctl
+[D] Preferring sys_time32 over __se_sys_time32
+[D] Preferring sys_syncfs over __se_sys_syncfs
+[D] Preferring sys_dup over __se_sys_dup
+[D] Preferring sys_fchmod over __se_sys_fchmod
+[D] Preferring sys_sched_rr_get_interval over __se_sys_sched_rr_get_interval
+[D] Preferring sys_readv over __se_sys_readv
+[D] Preferring sys_sigaltstack over __se_sys_sigaltstack
+[D] Discarding alias for sys_ni_syscall: compat_sys_msgctl
+[D] Preferring sys_shmget over __se_sys_shmget
+[D] Preferring sys_listen over __se_sys_listen
+[D] Preferring sys_timer_delete over __se_sys_timer_delete
+[D] Preferring sys_getsid over __se_sys_getsid
+[D] Preferring sys_socketcall over __se_sys_socketcall
+[D] Preferring sys_userfaultfd over __se_sys_userfaultfd
+[D] Discarding alias for sys_ni_syscall: compat_sys_socketcall
+[D] Preferring sys_setgroups over __se_sys_setgroups
+[D] Preferring sys_rt_sigpending over __se_sys_rt_sigpending
+[D] Preferring sys_pwritev over __se_sys_pwritev
+[D] Discarding alias for sys_ni_syscall: sys_chown16
+[D] Preferring sys_fchmodat over __se_sys_fchmodat
+[D] Preferring sys_clock_getres_time32 over __se_sys_clock_getres_time32
+[D] Preferring sys_select over __se_sys_select
+[D] Preferring sys_timerfd_settime over __se_sys_timerfd_settime
+[D] Preferring sys_rt_sigsuspend over __se_sys_rt_sigsuspend
+[D] Preferring sys_pidfd_getfd over __se_sys_pidfd_getfd
+[D] Preferring sys_sched_getparam over __se_sys_sched_getparam
+[D] Preferring sys_pread64 over __se_sys_pread64
+[D] Preferring sys_getcpu over __se_sys_getcpu
+[D] Discarding alias for sys_ni_syscall: compat_sys_shmctl
+[D] Preferring sys_gettimeofday over __se_sys_gettimeofday
+[D] Discarding alias for sys_ni_syscall: sys_setresgid16
+[D] Preferring sys_epoll_create over __se_sys_epoll_create
+[D] Preferring sys_io_uring_enter over __se_sys_io_uring_enter
+[D] Preferring sys_utimensat over __se_sys_utimensat
+[D] Preferring sys_connect over __se_sys_connect
+[D] Discarding alias for sys_ni_syscall: sys_lchown16
+[D] Preferring sys_renameat over __se_sys_renameat
+[D] Preferring sys_io_pgetevents_time32 over __se_sys_io_pgetevents_time32
+[D] Discarding alias for sys_ni_syscall: sys_geteuid16
+[D] Preferring sys_lremovexattr over __se_sys_lremovexattr
+[D] Preferring sys_readahead over __se_sys_readahead
+[D] Preferring sys_timerfd_gettime over __se_sys_timerfd_gettime
+[D] Preferring sys_syslog over __se_sys_syslog
+[D] Discarding alias for sys_ni_syscall: compat_sys_process_vm_readv
+[D] Preferring sys_setresgid over __se_sys_setresgid
+[D] Preferring sys_sched_setparam over __se_sys_sched_setparam
+[D] Preferring sys_ustat over __se_sys_ustat
+[D] Preferring sys_sync_file_range over __se_sys_sync_file_range
+[D] Discarding alias for sys_ni_syscall: compat_sys_recv
+[D] Preferring sys_utime32 over __se_sys_utime32
+[D] Preferring sys_fchdir over __se_sys_fchdir
+[D] Preferring sys_setresuid over __se_sys_setresuid
+[D] Preferring sys_landlock_create_ruleset over __se_sys_landlock_create_ruleset
+[D] Preferring sys_landlock_restrict_self over __se_sys_landlock_restrict_self
+[D] Preferring sys_io_cancel over __se_sys_io_cancel
+[D] Preferring sys_sigaction over __se_sys_sigaction
+[D] Preferring sys_setitimer over __se_sys_setitimer
+[D] Preferring sys_fsopen over __se_sys_fsopen
+[D] Discarding alias for sys_ni_syscall: sys_getresuid16
+[D] Preferring sys_clock_getres over __se_sys_clock_getres
+[D] Discarding alias for sys_ni_syscall: compat_sys_old_semctl
+[D] Preferring sys_socket over __se_sys_socket
+[D] Preferring sys_ioprio_set over __se_sys_ioprio_set
+[D] Preferring sys_brk over __se_sys_brk
+[D] Preferring sys_rseq over __se_sys_rseq
+[D] Discarding alias for sys_ni_syscall: sys_setuid16
+[D] Preferring sys_olduname over __se_sys_olduname
+[D] Preferring sys_epoll_wait over __se_sys_epoll_wait
+[D] Preferring sys_getrlimit over __se_sys_getrlimit
+[D] Preferring sys_write over __se_sys_write
+[D] Preferring sys_setpgid over __se_sys_setpgid
+[D] Preferring sys_nanosleep_time32 over __se_sys_nanosleep_time32
+[D] Preferring sys_getdents over __se_sys_getdents
+[D] Preferring sys_exit over __se_sys_exit
+[D] Preferring sys_removexattr over __se_sys_removexattr
+[D] Preferring sys_msync over __se_sys_msync
+[D] Preferring sys_link over __se_sys_link
+[D] Preferring sys_sched_setattr over __se_sys_sched_setattr
+[D] Preferring sys_setreuid over __se_sys_setreuid
+[D] Preferring sys_mips_mmap over __se_sys_mips_mmap
+[D] Preferring sys_rt_sigqueueinfo over __se_sys_rt_sigqueueinfo
+[D] Preferring sys_timer_gettime over __se_sys_timer_gettime
+[D] Preferring sys_timer_settime32 over __se_sys_timer_settime32
+[D] Preferring sys_fspick over __se_sys_fspick
+[D] Discarding alias for sys_ni_syscall: sys_get_mempolicy
+[D] Preferring sys_fadvise64_64 over __se_sys_fadvise64_64
+[D] Preferring sys_unlinkat over __se_sys_unlinkat
+[D] Preferring sys_get_robust_list over __se_sys_get_robust_list
+[D] Preferring sys_ftruncate over __se_sys_ftruncate
+[D] Preferring sys_process_vm_writev over __se_sys_process_vm_writev
+[D] Preferring sys_stime32 over __se_sys_stime32
+[D] Preferring sys_unshare over __se_sys_unshare
+[D] Discarding alias for sys_ni_syscall: sys_move_pages
+[D] Preferring sys_sigprocmask over __se_sys_sigprocmask
+[D] Preferring sys_getgroups over __se_sys_getgroups
+[D] Discarding alias for sys_ni_syscall: sys_s390_pci_mmio_read
+[D] Preferring sys_mknod over __se_sys_mknod
+[D] Discarding alias for sys_ni_syscall: compat_sys_keyctl
+[D] Preferring sys_preadv over __se_sys_preadv
+[D] Preferring sys_sched_getattr over __se_sys_sched_getattr
+[D] Preferring sys_faccessat2 over __se_sys_faccessat2
+[D] Preferring sys_ppoll over __se_sys_ppoll
+[D] Preferring sys_fremovexattr over __se_sys_fremovexattr
+[D] Preferring sys_io_uring_register over __se_sys_io_uring_register
+[D] Preferring sys_seccomp over __se_sys_seccomp
+[D] Preferring sys_mknodat over __se_sys_mknodat
+[D] Preferring sys_timerfd_create over __se_sys_timerfd_create
+[D] Preferring sys_dup2 over __se_sys_dup2
+[D] Preferring sys_read over __se_sys_read
+[D] Preferring sys_readlinkat over __se_sys_readlinkat
+[D] Preferring sys_getpriority over __se_sys_getpriority
+[D] Preferring sys_munmap over __se_sys_munmap
+[D] Preferring sys_set_thread_area over __se_sys_set_thread_area
+[D] Discarding alias for sys_ni_syscall: compat_sys_io_submit
+[D] Preferring sys_listxattr over __se_sys_listxattr
+[D] Preferring sys_setfsgid over __se_sys_setfsgid
+[D] Preferring sys_alarm over __se_sys_alarm
+[D] Discarding alias for sys_ni_syscall: sys_s390_ipc
+[D] Preferring sys_msgget over __se_sys_msgget
+[D] Preferring sys_kcmp over __se_sys_kcmp
+[D] Discarding alias for sys_ni_syscall: sys_rtas
+[D] Preferring sys_close over __se_sys_close
+[D] Preferring sys_llistxattr over __se_sys_llistxattr
+[D] Preferring sys_acct over __se_sys_acct
+[D] Preferring sys_creat over __se_sys_creat
+[D] Discarding alias for sys_ni_syscall: sys_pkey_alloc
+[D] Discarding alias for sys_ni_syscall: sys_setregid16
+[D] Preferring sys_io_submit over __se_sys_io_submit
+[D] Preferring sys_timer_getoverrun over __se_sys_timer_getoverrun
+[D] Discarding alias for sys_ni_syscall: sys_setresuid16
+[D] Preferring sys_kill over __se_sys_kill
+[D] Preferring sys_chdir over __se_sys_chdir
+[D] Preferring sys_execve over __se_sys_execve
+[D] Preferring sys_clock_gettime32 over __se_sys_clock_gettime32
+[D] Preferring sys_finit_module over __se_sys_finit_module
+[D] Preferring sys_clock_nanosleep over __se_sys_clock_nanosleep
+[D] Preferring sys_ioctl over __se_sys_ioctl
+[D] Preferring sys_io_destroy over __se_sys_io_destroy
+[D] Preferring sys_fcntl over __se_sys_fcntl
+[D] Preferring sys_signalfd over __se_sys_signalfd
+[D] Preferring sys_process_vm_readv over __se_sys_process_vm_readv
+[D] Preferring sys_ssetmask over __se_sys_ssetmask
+[D] Preferring sys_remap_file_pages over __se_sys_remap_file_pages
+[D] Preferring sys_timer_gettime32 over __se_sys_timer_gettime32
+[D] Preferring sys_clock_settime32 over __se_sys_clock_settime32
+[D] Preferring sys_rt_sigtimedwait over __se_sys_rt_sigtimedwait
+[D] Preferring sys_semtimedop over __se_sys_semtimedop
+[D] Preferring sys_getsockopt over __se_sys_getsockopt
+[D] Preferring sys_rt_sigprocmask over __se_sys_rt_sigprocmask
+[D] Preferring sys_sigpending over __se_sys_sigpending
+[D] Preferring sys_clock_nanosleep_time32 over __se_sys_clock_nanosleep_time32
+[D] Preferring sys_lchown over __se_sys_lchown
+[D] Discarding alias for sys_ni_syscall: sys_modify_ldt
+[D] Preferring sys_unlink over __se_sys_unlink
+[D] Discarding alias for sys_ni_syscall: sys_getgid16
+[D] Preferring sys_ppoll_time32 over __se_sys_ppoll_time32
+[D] Preferring sys_process_madvise over __se_sys_process_madvise
+[D] Preferring sys_writev over __se_sys_writev
+[D] Preferring sys_symlinkat over __se_sys_symlinkat
+[D] Preferring sys_getitimer over __se_sys_getitimer
+[D] Preferring sys_flistxattr over __se_sys_flistxattr
+[D] Preferring sys_init_module over __se_sys_init_module
+[D] Preferring sys_inotify_rm_watch over __se_sys_inotify_rm_watch
+[D] Preferring sys_madvise over __se_sys_madvise
+[D] Preferring sys_sched_getscheduler over __se_sys_sched_getscheduler
+[D] Preferring sys_accept over __se_sys_accept
+[D] Preferring sys_sysfs over __se_sys_sysfs
+[D] Discarding alias for sys_ni_syscall: compat_sys_mq_getsetattr
+[D] Preferring sys_utimes_time32 over __se_sys_utimes_time32
+[D] Preferring sys_pselect6 over __se_sys_pselect6
+[D] Discarding alias for sys_ni_syscall: compat_sys_recvmmsg_time64
+[D] Preferring sys_uname over __se_sys_uname
+[D] Preferring sys_umask over __se_sys_umask
+[D] Preferring sys_sendmmsg over __se_sys_sendmmsg
+[D] Discarding alias for sys_ni_syscall: compat_sys_kexec_load
+[D] Preferring sys_getxattr over __se_sys_getxattr
+[D] Preferring sys_recvmsg over __se_sys_recvmsg
+[D] Preferring sys_vmsplice over __se_sys_vmsplice
+[D] Preferring sys_newstat over __se_sys_newstat
+[D] Preferring sys_fsmount over __se_sys_fsmount
+[D] Discarding alias for sys_ni_syscall: compat_sys_ppoll_time32
+[D] Preferring sys_pidfd_open over __se_sys_pidfd_open
+[D] Discarding alias for sys_ni_syscall: compat_sys_signalfd4
+[D] Preferring sys_getresuid over __se_sys_getresuid
+[D] Preferring sys_tgkill over __se_sys_tgkill
+[D] Discarding alias for sys_ni_syscall: compat_sys_process_vm_writev
+[D] Preferring sys_mq_unlink over __se_sys_mq_unlink
+[D] Preferring sys_sched_rr_get_interval_time32 over __se_sys_sched_rr_get_interval_time32
+[D] Preferring sys_memfd_create over __se_sys_memfd_create
+[D] Preferring sys_flock over __se_sys_flock
+[D] Discarding alias for sys_ni_syscall: compat_sys_io_pgetevents
+[D] Discarding alias for sys_ni_syscall: compat_sys_recvfrom
+[D] Preferring sys_fstatfs over __se_sys_fstatfs
+[D] Preferring sys_fstatfs64 over __se_sys_fstatfs64
+[D] Preferring sys_getcwd over __se_sys_getcwd
+[D] Preferring sys_clock_adjtime32 over __se_sys_clock_adjtime32
+[D] Preferring sys_fchown over __se_sys_fchown
+[D] Preferring sys_lgetxattr over __se_sys_lgetxattr
+[D] Preferring sys_capset over __se_sys_capset
+[D] Preferring sys_setpriority over __se_sys_setpriority
+[D] Discarding alias for sys_ni_syscall: compat_sys_open_by_handle_at
+[D] Discarding alias for sys_ni_syscall: sys_vm86
+[D] Preferring sys_prlimit64 over __se_sys_prlimit64
+[D] Preferring sys_getrandom over __se_sys_getrandom
+[D] Preferring sys_oldumount over __se_sys_oldumount
+[D] Preferring sys_fstatat64 over __se_sys_fstatat64
+[D] Preferring sys_landlock_add_rule over __se_sys_landlock_add_rule
+[D] Preferring sys_times over __se_sys_times
+[D] Preferring sys_mremap over __se_sys_mremap
+[D] Preferring sys_newuname over __se_sys_newuname
+[D] Preferring sys_shmctl over __se_sys_shmctl
+[D] Discarding alias for sys_ni_syscall: compat_sys_msgrcv
+[D] Preferring sys_getresgid over __se_sys_getresgid
+[D] Preferring sys_mount_setattr over __se_sys_mount_setattr
+[D] Preferring sys_lseek over __se_sys_lseek
+[D] Preferring sys_getpgid over __se_sys_getpgid
+[D] Preferring sys_setuid over __se_sys_setuid
+[D] Preferring sys_reboot over __se_sys_reboot
+[D] Discarding alias for sys_ni_syscall: compat_sys_fanotify_mark
+[D] Preferring sys_pipe2 over __se_sys_pipe2
+[D] Preferring sys_delete_module over __se_sys_delete_module
+[D] Preferring sys_personality over __se_sys_personality
+[D] Preferring sys_pivot_root over __se_sys_pivot_root
+[D] Discarding alias for sys_ni_syscall: sys_lookup_dcookie
+[D] Preferring sys_fanotify_mark over __se_sys_fanotify_mark
+[D] Preferring sys_open_by_handle_at over __se_sys_open_by_handle_at
+[D] Preferring sys_waitid over __se_sys_waitid
+[D] Preferring sys_shutdown over __se_sys_shutdown
+[D] Preferring sys_mlockall over __se_sys_mlockall
+[D] Preferring sys_request_key over __se_sys_request_key
+[D] Preferring sys_futex_time32 over __se_sys_futex_time32
+[D] Discarding alias for sys_ni_syscall: compat_sys_getsockopt
+[D] Preferring sys_mq_timedsend_time32 over __se_sys_mq_timedsend_time32
+[D] Preferring sys_getpeername over __se_sys_getpeername
+[D] Preferring sys_uselib over __se_sys_uselib
+[D] Preferring sys_mkdirat over __se_sys_mkdirat
+[D] Preferring sys_timer_create over __se_sys_timer_create
+[D] Preferring sys_recvmmsg over __se_sys_recvmmsg
+[D] Discarding alias for sys_ni_syscall: compat_sys_io_setup
+[D] Preferring sys_io_getevents_time32 over __se_sys_io_getevents_time32
+[D] Preferring sys_mips_mmap2 over __se_sys_mips_mmap2
+[D] Preferring sys_io_pgetevents over __se_sys_io_pgetevents
+[D] Preferring sys_perf_event_open over __se_sys_perf_event_open
+[D] Preferring sys_capget over __se_sys_capget
+[D] Preferring sys_pwrite64 over __se_sys_pwrite64
+[D] Preferring sys_fanotify_init over __se_sys_fanotify_init
+[D] Preferring sys_rt_sigtimedwait_time32 over __se_sys_rt_sigtimedwait_time32
+[D] Preferring sys_timerfd_settime32 over __se_sys_timerfd_settime32
+[D] Preferring sys_setrlimit over __se_sys_setrlimit
+[D] Preferring sys_recvfrom over __se_sys_recvfrom
+[D] Preferring sys_rename over __se_sys_rename
+[D] Preferring sys_close_range over __se_sys_close_range
+[D] Preferring sys_mq_timedsend over __se_sys_mq_timedsend
+[D] Preferring sys_clock_settime over __se_sys_clock_settime
+[D] Preferring sys_stat64 over __se_sys_stat64
+[D] Preferring sys_swapoff over __se_sys_swapoff
+[D] Preferring sys_cachectl over __se_sys_cachectl
+[D] Preferring sys_recv over __se_sys_recv
+[D] Preferring sys_membarrier over __se_sys_membarrier
+[D] Preferring sys_inotify_init1 over __se_sys_inotify_init1
+[D] Preferring sys_openat2 over __se_sys_openat2
+[D] Preferring sys_dup3 over __se_sys_dup3
+[D] Preferring sys_kexec_load over __se_sys_kexec_load
+[D] Preferring sys_mq_timedreceive_time32 over __se_sys_mq_timedreceive_time32
+[D] Discarding alias for sys_ni_syscall: sys_pciconfig_write
+[D] Preferring sys_socketpair over __se_sys_socketpair
+[D] Preferring sys_chroot over __se_sys_chroot
+[D] Preferring sys_epoll_ctl over __se_sys_epoll_ctl
+[D] Preferring sys_swapon over __se_sys_swapon
+[D] Discarding alias for sys_ni_syscall: sys_set_mempolicy_home_node
+[D] Preferring sys_preadv2 over __se_sys_preadv2
+[D] Preferring sys_sigsuspend over __se_sys_sigsuspend
+[D] Preferring sys_msgctl over __se_sys_msgctl
+[D] Preferring sys_timerfd_gettime32 over __se_sys_timerfd_gettime32
+[D] Preferring sys_eventfd over __se_sys_eventfd
+[D] Discarding alias for sys_ni_syscall: sys_subpage_prot
+[D] Discarding alias for sys_ni_syscall: compat_sys_sendmsg
+[D] Preferring sys_shmat over __se_sys_shmat
+[D] Preferring sys_copy_file_range over __se_sys_copy_file_range
+[D] Preferring sys_faccessat over __se_sys_faccessat
+[D] Preferring sys_splice over __se_sys_splice
+[D] Discarding alias for sys_ni_syscall: compat_sys_lookup_dcookie
+[D] Preferring sys_fgetxattr over __se_sys_fgetxattr
+[D] Preferring sys_epoll_create1 over __se_sys_epoll_create1
+[D] Preferring sys_readlink over __se_sys_readlink
+[D] Preferring sys_signalfd4 over __se_sys_signalfd4
+[D] Preferring sys_mlock over __se_sys_mlock
+[D] Preferring sys_semget over __se_sys_semget
+[D] Preferring sys_timer_settime over __se_sys_timer_settime
+[D] Preferring sys_fcntl64 over __se_sys_fcntl64
+[D] Preferring sys_setns over __se_sys_setns
+[D] Preferring sys_statfs over __se_sys_statfs
+[D] Preferring sys_fstat64 over __se_sys_fstat64
+[D] Preferring sys_eventfd2 over __se_sys_eventfd2
+[D] Preferring sys_tee over __se_sys_tee
+[D] Preferring sys_quotactl_fd over __se_sys_quotactl_fd
+[D] Preferring sys_ipc over __se_sys_ipc
+[D] Preferring sys_recvmmsg_time32 over __se_sys_recvmmsg_time32
+[D] Preferring sys_umount over __se_sys_umount
+[D] Preferring sys_mount over __se_sys_mount
+[D] Preferring sys_renameat2 over __se_sys_renameat2
+[D] Preferring sys_sysinfo over __se_sys_sysinfo
+[D] Preferring sys_futimesat_time32 over __se_sys_futimesat_time32
+[D] Discarding alias for sys_ni_syscall: sys_pkey_free
+[D] Preferring sys_setregid over __se_sys_setregid
+[D] Preferring sys_mlock2 over __se_sys_mlock2
+[D] Preferring sys_pidfd_send_signal over __se_sys_pidfd_send_signal
+[D] Preferring sys_set_tid_address over __se_sys_set_tid_address
+[D] Preferring sys_fsetxattr over __se_sys_fsetxattr
+[D] Preferring sys_chmod over __se_sys_chmod
+[D] Preferring sys_io_setup over __se_sys_io_setup
+[D] Preferring sys_cacheflush over __se_sys_cacheflush
+[D] Preferring sys_chown over __se_sys_chown
+[D] Preferring sys_statx over __se_sys_statx
+[D] Preferring sys_inotify_add_watch over __se_sys_inotify_add_watch
+[D] Preferring sys_openat over __se_sys_openat
+[D] Preferring sys_getsockname over __se_sys_getsockname
+[D] Preferring sys_waitpid over __se_sys_waitpid
+[D] Preferring sys_wait4 over __se_sys_wait4
+[D] Preferring sys_linkat over __se_sys_linkat
+[D] Preferring sys_open over __se_sys_open
+[D] Discarding alias for sys_ni_syscall: sys_spu_create
+[D] Preferring sys_mq_getsetattr over __se_sys_mq_getsetattr
+[D] Preferring sys_mq_notify over __se_sys_mq_notify
+[D] Preferring sys_symlink over __se_sys_symlink
+[D] Preferring sys_lstat64 over __se_sys_lstat64
+[D] Preferring sys_open_tree over __se_sys_open_tree
+[D] Preferring sys_pwritev2 over __se_sys_pwritev2
+[D] Preferring sys_process_mrelease over __se_sys_process_mrelease
+[D] Preferring sys_ioprio_get over __se_sys_ioprio_get
+[D] Preferring sys_getrusage over __se_sys_getrusage
+[D] Preferring sys_fchownat over __se_sys_fchownat
+[D] Preferring sys_accept4 over __se_sys_accept4
+[D] Preferring sys_sethostname over __se_sys_sethostname
+[D] Preferring sys_fsync over __se_sys_fsync
+[D] Preferring sys_fsconfig over __se_sys_fsconfig
+[D] Preferring sys_ftruncate64 over __se_sys_ftruncate64
+[D] Preferring sys_access over __se_sys_access
+[D] Preferring sys_clock_gettime over __se_sys_clock_gettime
+[D] Preferring sys_newlstat over __se_sys_newlstat
+[D] Preferring sys_nice over __se_sys_nice
+[D] Preferring sys_settimeofday over __se_sys_settimeofday
+[D] Preferring sys_tkill over __se_sys_tkill
+[D] Preferring sys_sched_get_priority_min over __se_sys_sched_get_priority_min
+[D] Preferring sys_truncate over __se_sys_truncate
+[D] Preferring sys_sched_get_priority_max over __se_sys_sched_get_priority_max
+[D] Preferring sys_clock_adjtime over __se_sys_clock_adjtime
+[D] Preferring sys_fdatasync over __se_sys_fdatasync
+[D] sys_call_table[0]: Symbol("sys_syscall" at 0x80118670, type=FUNC, size=0x64)
+[D] sys_call_table[1]: Symbol("sys_exit" at 0x8013b1ec, type=FUNC, size=0x14)
+[D] sys_call_table[2]: Symbol("__sys_fork" at 0x80109730, type=FUNC, size=0x28)
+[D] sys_call_table[3]: Symbol("sys_read" at 0x80380600, type=FUNC, size=0x8)
+[D] sys_call_table[4]: Symbol("sys_write" at 0x80380750, type=FUNC, size=0x8)
+[D] sys_call_table[5]: Symbol("sys_open" at 0x8037d438, type=FUNC, size=0xb8)
+[D] sys_call_table[6]: Symbol("sys_close" at 0x8037d7d0, type=FUNC, size=0x50)
+[D] sys_call_table[7]: Symbol("sys_waitpid" at 0x8013b788, type=FUNC, size=0x8)
+[D] sys_call_table[8]: Symbol("sys_creat" at 0x8037d6b0, type=FUNC, size=0x80)
+[D] sys_call_table[9]: Symbol("sys_link" at 0x8039737c, type=FUNC, size=0x58)
+[D] sys_call_table[10]: Symbol("sys_unlink" at 0x80396938, type=FUNC, size=0x28)
+[D] sys_call_table[11]: Symbol("sys_execve" at 0x8038bf40, type=FUNC, size=0x48)
+[D] sys_call_table[12]: Symbol("sys_chdir" at 0x8037bcc0, type=FUNC, size=0xe8)
+[D] sys_call_table[13]: Symbol("sys_time32" at 0x801d5d00, type=FUNC, size=0x5c)
+[D] sys_call_table[14]: Symbol("sys_mknod" at 0x80395a00, type=FUNC, size=0x48)
+[D] sys_call_table[15]: Symbol("sys_chmod" at 0x8037c2a8, type=FUNC, size=0x14)
+[D] sys_call_table[16]: Symbol("sys_lchown" at 0x8037c728, type=FUNC, size=0x34)
+[D] sys_call_table[17]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[18]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[19]: Symbol("sys_lseek" at 0x8037e100, type=FUNC, size=0x110)
+[D] sys_call_table[20]: Symbol("sys_getpid" at 0x8014f998, type=FUNC, size=0x10)
+[D] sys_call_table[21]: Symbol("sys_mount" at 0x803b2a00, type=FUNC, size=0x274)
+[D] sys_call_table[22]: Symbol("sys_oldumount" at 0x803afe78, type=FUNC, size=0x70)
+[D] sys_call_table[23]: Symbol("sys_setuid" at 0x8014ecd8, type=FUNC, size=0x8)
+[D] sys_call_table[24]: Symbol("sys_getuid" at 0x8014f9e4, type=FUNC, size=0x14)
+[D] sys_call_table[25]: Symbol("sys_stime32" at 0x801d5d5c, type=FUNC, size=0xac)
+[D] sys_call_table[26]: Symbol("sys_ptrace" at 0x801436c8, type=FUNC, size=0x534)
+[D] sys_call_table[27]: Symbol("sys_alarm" at 0x801f10f0, type=FUNC, size=0xe8)
+[D] sys_call_table[28]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[29]: Symbol("sys_pause" at 0x8014cad8, type=FUNC, size=0x6c)
+[D] sys_call_table[30]: Symbol("sys_utime32" at 0x803cb938, type=FUNC, size=0xdc)
+[D] sys_call_table[31]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[32]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[33]: Symbol("sys_access" at 0x8037bca8, type=FUNC, size=0x18)
+[D] sys_call_table[34]: Symbol("sys_nice" at 0x80174180, type=FUNC, size=0xbc)
+[D] sys_call_table[35]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[36]: Symbol("sys_sync" at 0x803ca8e4, type=FUNC, size=0x20)
+[D] sys_call_table[37]: Symbol("sys_kill" at 0x8014b930, type=FUNC, size=0x250)
+[D] sys_call_table[38]: Symbol("sys_rename" at 0x8039875c, type=FUNC, size=0x58)
+[D] sys_call_table[39]: Symbol("sys_mkdir" at 0x80395db8, type=FUNC, size=0x38)
+[D] sys_call_table[40]: Symbol("sys_rmdir" at 0x80396200, type=FUNC, size=0x28)
+[D] sys_call_table[41]: Symbol("sys_dup" at 0x803ab3a4, type=FUNC, size=0x158)
+[D] sys_call_table[42]: Symbol("sysm_pipe" at 0x801097d0, type=FUNC, size=0x7c)
+[D] sys_call_table[43]: Symbol("sys_times" at 0x8014fa34, type=FUNC, size=0x140)
+[D] sys_call_table[44]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[45]: Symbol("sys_brk" at 0x8033b518, type=FUNC, size=0x404)
+[D] sys_call_table[46]: Symbol("sys_setgid" at 0x8014e7fc, type=FUNC, size=0x8)
+[D] sys_call_table[47]: Symbol("sys_getgid" at 0x8014fa0c, type=FUNC, size=0x14)
+[D] sys_call_table[48]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[49]: Symbol("sys_geteuid" at 0x8014f9f8, type=FUNC, size=0x14)
+[D] sys_call_table[50]: Symbol("sys_getegid" at 0x8014fa20, type=FUNC, size=0x14)
+[D] sys_call_table[51]: Symbol("sys_acct" at 0x801fdfac, type=FUNC, size=0x328)
+[D] sys_call_table[52]: Symbol("sys_umount" at 0x803afde4, type=FUNC, size=0x94)
+[D] sys_call_table[53]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[54]: Symbol("sys_ioctl" at 0x8039aebc, type=FUNC, size=0xb78)
+[D] sys_call_table[55]: Symbol("sys_fcntl" at 0x80399890, type=FUNC, size=0x110)
+[D] sys_call_table[56]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[57]: Symbol("sys_setpgid" at 0x8014fb74, type=FUNC, size=0x190)
+[D] sys_call_table[58]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[59]: Symbol("sys_olduname" at 0x8014ff3c, type=FUNC, size=0x1b0)
+[D] sys_call_table[60]: Symbol("sys_umask" at 0x80150ea0, type=FUNC, size=0x38)
+[D] sys_call_table[61]: Symbol("sys_chroot" at 0x8037be74, type=FUNC, size=0x124)
+[D] sys_call_table[62]: Symbol("sys_ustat" at 0x803cd9b0, type=FUNC, size=0x8)
+[D] sys_call_table[63]: Symbol("sys_dup2" at 0x803ab338, type=FUNC, size=0x6c)
+[D] sys_call_table[64]: Symbol("sys_getppid" at 0x8014f9b8, type=FUNC, size=0x2c)
+[D] sys_call_table[65]: Symbol("sys_getpgrp" at 0x8014fd84, type=FUNC, size=0x24)
+[D] sys_call_table[66]: Symbol("sys_setsid" at 0x8014ff24, type=FUNC, size=0x8)
+[D] sys_call_table[67]: Symbol("sys_sigaction" at 0x80109074, type=FUNC, size=0x188)
+[D] sys_call_table[68]: Symbol("sys_sgetmask" at 0x8014ca40, type=FUNC, size=0xc)
+[D] sys_call_table[69]: Symbol("sys_ssetmask" at 0x8014ca4c, type=FUNC, size=0x8c)
+[D] sys_call_table[70]: Symbol("sys_setreuid" at 0x8014eb48, type=FUNC, size=0x8)
+[D] sys_call_table[71]: Symbol("sys_setregid" at 0x8014e6a4, type=FUNC, size=0x8)
+[D] sys_call_table[72]: Symbol("sys_sigsuspend" at 0x8010906c, type=FUNC, size=0x8)
+[D] sys_call_table[73]: Symbol("sys_sigpending" at 0x8014c70c, type=FUNC, size=0x94)
+[D] sys_call_table[74]: Symbol("sys_sethostname" at 0x801500ec, type=FUNC, size=0x148)
+[D] sys_call_table[75]: Symbol("sys_setrlimit" at 0x801508f8, type=FUNC, size=0xac)
+[D] sys_call_table[76]: Symbol("sys_getrlimit" at 0x801504a0, type=FUNC, size=0xe0)
+[D] sys_call_table[77]: Symbol("sys_getrusage" at 0x80150de0, type=FUNC, size=0xc0)
+[D] sys_call_table[78]: Symbol("sys_gettimeofday" at 0x801d5e08, type=FUNC, size=0x108)
+[D] sys_call_table[79]: Symbol("sys_settimeofday" at 0x801d602c, type=FUNC, size=0x144)
+[D] sys_call_table[80]: Symbol("sys_getgroups" at 0x80167894, type=FUNC, size=0x104)
+[D] sys_call_table[81]: Symbol("sys_setgroups" at 0x801679e0, type=FUNC, size=0x1e8)
+[D] sys_call_table[82]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[83]: Symbol("sys_symlink" at 0x80396c20, type=FUNC, size=0x4c)
+[D] sys_call_table[84]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[85]: Symbol("sys_readlink" at 0x80388384, type=FUNC, size=0x18)
+[D] sys_call_table[86]: Symbol("sys_uselib" at 0x80389f18, type=FUNC, size=0x254)
+[D] sys_call_table[87]: Symbol("sys_swapon" at 0x8035ff88, type=FUNC, size=0x11ec)
+[D] sys_call_table[88]: Symbol("sys_reboot" at 0x80164780, type=FUNC, size=0x8)
+[D] sys_call_table[89]: Symbol("sys_old_readdir" at 0x8039c0f8, type=FUNC, size=0xf0)
+[D] sys_call_table[90]: Symbol("sys_mips_mmap" at 0x8010984c, type=FUNC, size=0x24)
+[D] sys_call_table[91]: Symbol("sys_munmap" at 0x8033a8ac, type=FUNC, size=0x8)
+[D] sys_call_table[92]: Symbol("sys_truncate" at 0x8037b378, type=FUNC, size=0xc)
+[D] sys_call_table[93]: Symbol("sys_ftruncate" at 0x8037b638, type=FUNC, size=0x28)
+[D] sys_call_table[94]: Symbol("sys_fchmod" at 0x8037c214, type=FUNC, size=0x8c)
+[D] sys_call_table[95]: Symbol("sys_fchown" at 0x8037c888, type=FUNC, size=0x8)
+[D] sys_call_table[96]: Symbol("sys_getpriority" at 0x8014e1b0, type=FUNC, size=0x2cc)
+[D] sys_call_table[97]: Symbol("sys_setpriority" at 0x8014ded4, type=FUNC, size=0x2dc)
+[D] sys_call_table[98]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[99]: Symbol("sys_statfs" at 0x803cd748, type=FUNC, size=0x8c)
+[D] sys_call_table[100]: Symbol("sys_fstatfs" at 0x803cd87c, type=FUNC, size=0x8c)
+[D] sys_call_table[101]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[102]: Symbol("sys_socketcall" at 0x80955ed8, type=FUNC, size=0x2c8)
+[D] sys_call_table[103]: Symbol("sys_syslog" at 0x8019ead4, type=FUNC, size=0x8)
+[D] sys_call_table[104]: Symbol("sys_setitimer" at 0x801f11d8, type=FUNC, size=0x1e0)
+[D] sys_call_table[105]: Symbol("sys_getitimer" at 0x801f0eb0, type=FUNC, size=0x1a4)
+[D] sys_call_table[106]: Symbol("sys_newstat" at 0x80388364, type=FUNC, size=0x8)
+[D] sys_call_table[107]: Symbol("sys_newlstat" at 0x8038836c, type=FUNC, size=0x8)
+[D] sys_call_table[108]: Symbol("sys_newfstat" at 0x80388374, type=FUNC, size=0x8)
+[D] sys_call_table[109]: Symbol("sys_uname" at 0x8014ff34, type=FUNC, size=0x8)
+[D] sys_call_table[110]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[111]: Symbol("sys_vhangup" at 0x8037d828, type=FUNC, size=0x30)
+[D] sys_call_table[112]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[113]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[114]: Symbol("sys_wait4" at 0x8013b6a0, type=FUNC, size=0xe8)
+[D] sys_call_table[115]: Symbol("sys_swapoff" at 0x8035ed00, type=FUNC, size=0x1278)
+[D] sys_call_table[116]: Symbol("sys_sysinfo" at 0x801515d4, type=FUNC, size=0x19c)
+[D] sys_call_table[117]: Symbol("sys_ipc" at 0x805f5fec, type=FUNC, size=0x8)
+[D] sys_call_table[118]: Symbol("sys_fsync" at 0x803cac40, type=FUNC, size=0x8)
+[D] sys_call_table[119]: Symbol("sys_sigreturn" at 0x801091fc, type=FUNC, size=0xf8)
+[D] sys_call_table[120]: Symbol("__sys_clone" at 0x80109758, type=FUNC, size=0x28)
+[D] sys_call_table[121]: Symbol("sys_setdomainname" at 0x80150358, type=FUNC, size=0x148)
+[D] sys_call_table[122]: Symbol("sys_newuname" at 0x8014ff2c, type=FUNC, size=0x8)
+[D] sys_call_table[123]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[124]: Symbol("sys_adjtimex_time32" at 0x801d6570, type=FUNC, size=0x8)
+[D] sys_call_table[125]: Symbol("sys_mprotect" at 0x8033e8d0, type=FUNC, size=0x8)
+[D] sys_call_table[126]: Symbol("sys_sigprocmask" at 0x8014c7a0, type=FUNC, size=0x160)
+[D] sys_call_table[127]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[128]: Symbol("sys_init_module" at 0x801d184c, type=FUNC, size=0x1d0)
+[D] sys_call_table[129]: Symbol("sys_delete_module" at 0x801d1c60, type=FUNC, size=0x28c)
+[D] sys_call_table[130]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[131]: Symbol("sys_quotactl" at 0x80420088, type=FUNC, size=0x3fc)
+[D] sys_call_table[132]: Symbol("sys_getpgid" at 0x8014fd04, type=FUNC, size=0x80)
+[D] sys_call_table[133]: Symbol("sys_fchdir" at 0x8037bda8, type=FUNC, size=0xcc)
+[D] sys_call_table[134]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[135]: Symbol("sys_sysfs" at 0x803ab990, type=FUNC, size=0x270)
+[D] sys_call_table[136]: Symbol("sys_personality" at 0x80133cc4, type=FUNC, size=0x1c)
+[D] sys_call_table[137]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[138]: Symbol("sys_setfsuid" at 0x8014f860, type=FUNC, size=0x8)
+[D] sys_call_table[139]: Symbol("sys_setfsgid" at 0x8014f990, type=FUNC, size=0x8)
+[D] sys_call_table[140]: Symbol("sys_llseek" at 0x8037e210, type=FUNC, size=0x18c)
+[D] sys_call_table[141]: Symbol("sys_getdents" at 0x8039c1e8, type=FUNC, size=0x15c)
+[D] sys_call_table[142]: Symbol("sys_select" at 0x8039dff8, type=FUNC, size=0x16c)
+[D] sys_call_table[143]: Symbol("sys_flock" at 0x8040318c, type=FUNC, size=0x8)
+[D] sys_call_table[144]: Symbol("sys_msync" at 0x8033fc50, type=FUNC, size=0x388)
+[D] sys_call_table[145]: Symbol("sys_readv" at 0x80380dc0, type=FUNC, size=0x8)
+[D] sys_call_table[146]: Symbol("sys_writev" at 0x80380dc8, type=FUNC, size=0x8)
+[D] sys_call_table[147]: Symbol("sys_cacheflush" at 0x8011fb60, type=FUNC, size=0x5c)
+[D] sys_call_table[148]: Symbol("sys_cachectl" at 0x801099ec, type=FUNC, size=0x8)
+[D] sys_call_table[149]: Symbol("__sys_sysmips" at 0x801097a8, type=FUNC, size=0x28)
+[D] sys_call_table[150]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[151]: Symbol("sys_getsid" at 0x8014fda8, type=FUNC, size=0x80)
+[D] sys_call_table[152]: Symbol("sys_fdatasync" at 0x803cac48, type=FUNC, size=0x8)
+[D] sys_call_table[153]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[154]: Symbol("sys_mlock" at 0x80336370, type=FUNC, size=0x8)
+[D] sys_call_table[155]: Symbol("sys_munlock" at 0x803363a4, type=FUNC, size=0xec)
+[D] sys_call_table[156]: Symbol("sys_mlockall" at 0x80336490, type=FUNC, size=0x1d8)
+[D] sys_call_table[157]: Symbol("sys_munlockall" at 0x80336668, type=FUNC, size=0xb8)
+[D] sys_call_table[158]: Symbol("sys_sched_setparam" at 0x80174888, type=FUNC, size=0xc)
+[D] sys_call_table[159]: Symbol("sys_sched_getparam" at 0x80174cac, type=FUNC, size=0xe8)
+[D] sys_call_table[160]: Symbol("sys_sched_setscheduler" at 0x80174870, type=FUNC, size=0x18)
+[D] sys_call_table[161]: Symbol("sys_sched_getscheduler" at 0x80174c24, type=FUNC, size=0x88)
+[D] sys_call_table[162]: Symbol("sys_sched_yield" at 0x801755e4, type=FUNC, size=0x20)
+[D] sys_call_table[163]: Symbol("sys_sched_get_priority_max" at 0x8017579c, type=FUNC, size=0x50)
+[D] sys_call_table[164]: Symbol("sys_sched_get_priority_min" at 0x801757ec, type=FUNC, size=0x50)
+[D] sys_call_table[165]: Symbol("sys_sched_rr_get_interval_time32" at 0x801758b8, type=FUNC, size=0x7c)
+[D] sys_call_table[166]: Symbol("sys_nanosleep_time32" at 0x801de06c, type=FUNC, size=0x12c)
+[D] sys_call_table[167]: Symbol("sys_mremap" at 0x8033f4dc, type=FUNC, size=0x76c)
+[D] sys_call_table[168]: Symbol("sys_accept" at 0x80954474, type=FUNC, size=0x8)
+[D] sys_call_table[169]: Symbol("sys_bind" at 0x809540f8, type=FUNC, size=0x8)
+[D] sys_call_table[170]: Symbol("sys_connect" at 0x809545d8, type=FUNC, size=0x8)
+[D] sys_call_table[171]: Symbol("sys_getpeername" at 0x809547c4, type=FUNC, size=0x8)
+[D] sys_call_table[172]: Symbol("sys_getsockname" at 0x809546c8, type=FUNC, size=0x8)
+[D] sys_call_table[173]: Symbol("sys_getsockopt" at 0x80954d80, type=FUNC, size=0x8)
+[D] sys_call_table[174]: Symbol("sys_listen" at 0x809541b8, type=FUNC, size=0x8)
+[D] sys_call_table[175]: Symbol("sys_recv" at 0x80954b18, type=FUNC, size=0x24)
+[D] sys_call_table[176]: Symbol("sys_recvfrom" at 0x80954b10, type=FUNC, size=0x8)
+[D] sys_call_table[177]: Symbol("sys_recvmsg" at 0x80955aa4, type=FUNC, size=0xd0)
+[D] sys_call_table[178]: Symbol("sys_send" at 0x8095495c, type=FUNC, size=0x24)
+[D] sys_call_table[179]: Symbol("sys_sendmsg" at 0x80955698, type=FUNC, size=0xd4)
+[D] sys_call_table[180]: Symbol("sys_sendto" at 0x80954954, type=FUNC, size=0x8)
+[D] sys_call_table[181]: Symbol("sys_setsockopt" at 0x80954c68, type=FUNC, size=0x8)
+[D] sys_call_table[182]: Symbol("sys_shutdown" at 0x80954e40, type=FUNC, size=0x8)
+[D] sys_call_table[183]: Symbol("sys_socket" at 0x80953d88, type=FUNC, size=0x8)
+[D] sys_call_table[184]: Symbol("sys_socketpair" at 0x80954008, type=FUNC, size=0x8)
+[D] sys_call_table[185]: Symbol("sys_setresuid" at 0x8014f15c, type=FUNC, size=0x8)
+[D] sys_call_table[186]: Symbol("sys_getresuid" at 0x8014f164, type=FUNC, size=0xf8)
+[D] sys_call_table[187]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[188]: Symbol("sys_poll" at 0x8039e264, type=FUNC, size=0x128)
+[D] sys_call_table[189]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[190]: Symbol("sys_setresgid" at 0x8014f638, type=FUNC, size=0x8)
+[D] sys_call_table[191]: Symbol("sys_getresgid" at 0x8014f640, type=FUNC, size=0xf8)
+[D] sys_call_table[192]: Symbol("sys_prctl" at 0x80150ee8, type=FUNC, size=0x658)
+[D] sys_call_table[193]: Symbol("sys_rt_sigreturn" at 0x801092f4, type=FUNC, size=0x100)
+[D] sys_call_table[194]: Symbol("sys_rt_sigaction" at 0x8014c900, type=FUNC, size=0x140)
+[D] sys_call_table[195]: Symbol("sys_rt_sigprocmask" at 0x801486f0, type=FUNC, size=0x14c)
+[D] sys_call_table[196]: Symbol("sys_rt_sigpending" at 0x8014883c, type=FUNC, size=0xa8)
+[D] sys_call_table[197]: Symbol("sys_rt_sigtimedwait_time32" at 0x8014b7f4, type=FUNC, size=0x13c)
+[D] sys_call_table[198]: Symbol("sys_rt_sigqueueinfo" at 0x8014be38, type=FUNC, size=0x13c)
+[D] sys_call_table[199]: Symbol("sys_rt_sigsuspend" at 0x8014cb44, type=FUNC, size=0x150)
+[D] sys_call_table[200]: Symbol("sys_pread64" at 0x80380828, type=FUNC, size=0xec)
+[D] sys_call_table[201]: Symbol("sys_pwrite64" at 0x803809e4, type=FUNC, size=0xec)
+[D] sys_call_table[202]: Symbol("sys_chown" at 0x8037c6f8, type=FUNC, size=0x30)
+[D] sys_call_table[203]: Symbol("sys_getcwd" at 0x803cc678, type=FUNC, size=0x1d0)
+[D] sys_call_table[204]: Symbol("sys_capget" at 0x80141e98, type=FUNC, size=0x1dc)
+[D] sys_call_table[205]: Symbol("sys_capset" at 0x80142074, type=FUNC, size=0x238)
+[D] sys_call_table[206]: Symbol("sys_sigaltstack" at 0x8014c4d8, type=FUNC, size=0x13c)
+[D] sys_call_table[207]: Symbol("sys_sendfile" at 0x803812cc, type=FUNC, size=0xdc)
+[D] sys_call_table[208]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[209]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[210]: Symbol("sys_mips_mmap2" at 0x80109870, type=FUNC, size=0x8)
+[D] sys_call_table[211]: Symbol("sys_truncate64" at 0x8037b660, type=FUNC, size=0x8)
+[D] sys_call_table[212]: Symbol("sys_ftruncate64" at 0x8037b668, type=FUNC, size=0x20)
+[D] sys_call_table[213]: Symbol("sys_stat64" at 0x8038839c, type=FUNC, size=0x8)
+[D] sys_call_table[214]: Symbol("sys_lstat64" at 0x803883a4, type=FUNC, size=0x8)
+[D] sys_call_table[215]: Symbol("sys_fstat64" at 0x803883ac, type=FUNC, size=0x8)
+[D] sys_call_table[216]: Symbol("sys_pivot_root" at 0x803b3464, type=FUNC, size=0x4f4)
+[D] sys_call_table[217]: Symbol("sys_mincore" at 0x80333e6c, type=FUNC, size=0x308)
+[D] sys_call_table[218]: Symbol("sys_madvise" at 0x80358724, type=FUNC, size=0x1c)
+[D] sys_call_table[219]: Symbol("sys_getdents64" at 0x8039c344, type=FUNC, size=0x160)
+[D] sys_call_table[220]: Symbol("sys_fcntl64" at 0x803999a0, type=FUNC, size=0x258)
+[D] sys_call_table[221]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[222]: Symbol("sys_gettid" at 0x8014f9a8, type=FUNC, size=0x10)
+[D] sys_call_table[223]: Symbol("sys_readahead" at 0x802f315c, type=FUNC, size=0x8)
+[D] sys_call_table[224]: Symbol("sys_setxattr" at 0x803b878c, type=FUNC, size=0x28)
+[D] sys_call_table[225]: Symbol("sys_lsetxattr" at 0x803b87b4, type=FUNC, size=0x24)
+[D] sys_call_table[226]: Symbol("sys_fsetxattr" at 0x803b87d8, type=FUNC, size=0xf4)
+[D] sys_call_table[227]: Symbol("sys_getxattr" at 0x803b8c60, type=FUNC, size=0x24)
+[D] sys_call_table[228]: Symbol("sys_lgetxattr" at 0x803b8c84, type=FUNC, size=0x20)
+[D] sys_call_table[229]: Symbol("sys_fgetxattr" at 0x803b8ca4, type=FUNC, size=0xc0)
+[D] sys_call_table[230]: Symbol("sys_listxattr" at 0x803b8d64, type=FUNC, size=0x8)
+[D] sys_call_table[231]: Symbol("sys_llistxattr" at 0x803b8d6c, type=FUNC, size=0x8)
+[D] sys_call_table[232]: Symbol("sys_flistxattr" at 0x803b8d74, type=FUNC, size=0xa0)
+[D] sys_call_table[233]: Symbol("sys_removexattr" at 0x803b8e14, type=FUNC, size=0x8)
+[D] sys_call_table[234]: Symbol("sys_lremovexattr" at 0x803b8e1c, type=FUNC, size=0x8)
+[D] sys_call_table[235]: Symbol("sys_fremovexattr" at 0x803b8e24, type=FUNC, size=0xc4)
+[D] sys_call_table[236]: Symbol("sys_tkill" at 0x8014be18, type=FUNC, size=0x20)
+[D] sys_call_table[237]: Symbol("sys_sendfile64" at 0x803813a8, type=FUNC, size=0x11c)
+[D] sys_call_table[238]: Symbol("sys_futex_time32" at 0x801f78ec, type=FUNC, size=0x1c4)
+[D] sys_call_table[239]: Symbol("mipsmt_sys_sched_setaffinity" at 0x80114e40, type=FUNC, size=0x328)
+[D] sys_call_table[240]: Symbol("mipsmt_sys_sched_getaffinity" at 0x80115168, type=FUNC, size=0x130)
+[D] sys_call_table[241]: Symbol("sys_io_setup" at 0x803f39b8, type=FUNC, size=0x948)
+[D] sys_call_table[242]: Symbol("sys_io_destroy" at 0x803f4300, type=FUNC, size=0x150)
+[D] sys_call_table[243]: Symbol("sys_io_getevents_time32" at 0x803f5554, type=FUNC, size=0xec)
+[D] sys_call_table[244]: Symbol("sys_io_submit" at 0x803f4450, type=FUNC, size=0xb80)
+[D] sys_call_table[245]: Symbol("sys_io_cancel" at 0x803f4fd0, type=FUNC, size=0x1bc)
+[D] sys_call_table[246]: Symbol("sys_exit_group" at 0x8013b2a4, type=FUNC, size=0x14)
+[D] sys_call_table[247]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[248]: Symbol("sys_epoll_create" at 0x803e8f44, type=FUNC, size=0x18)
+[D] sys_call_table[249]: Symbol("sys_epoll_ctl" at 0x803e9e94, type=FUNC, size=0xcc)
+[D] sys_call_table[250]: Symbol("sys_epoll_wait" at 0x803e9f60, type=FUNC, size=0x160)
+[D] sys_call_table[251]: Symbol("sys_remap_file_pages" at 0x8033cc6c, type=FUNC, size=0x31c)
+[D] sys_call_table[252]: Symbol("sys_set_tid_address" at 0x80132d4c, type=FUNC, size=0x18)
+[D] sys_call_table[253]: Symbol("sys_restart_syscall" at 0x801483b4, type=FUNC, size=0x10)
+[D] sys_call_table[254]: Symbol("sys_fadvise64_64" at 0x802ecf44, type=FUNC, size=0xf4)
+[D] sys_call_table[255]: Symbol("sys_statfs64" at 0x803cd7d4, type=FUNC, size=0xa8)
+[D] sys_call_table[256]: Symbol("sys_fstatfs64" at 0x803cd908, type=FUNC, size=0xa8)
+[D] sys_call_table[257]: Symbol("sys_timer_create" at 0x801ec41c, type=FUNC, size=0xf4)
+[D] sys_call_table[258]: Symbol("sys_timer_settime32" at 0x801ec7f8, type=FUNC, size=0x114)
+[D] sys_call_table[259]: Symbol("sys_timer_gettime32" at 0x801ec5a4, type=FUNC, size=0x94)
+[D] sys_call_table[260]: Symbol("sys_timer_getoverrun" at 0x801ec638, type=FUNC, size=0xac)
+[D] sys_call_table[261]: Symbol("sys_timer_delete" at 0x801ec90c, type=FUNC, size=0x134)
+[D] sys_call_table[262]: Symbol("sys_clock_settime32" at 0x801ecf80, type=FUNC, size=0xfc)
+[D] sys_call_table[263]: Symbol("sys_clock_gettime32" at 0x801ed07c, type=FUNC, size=0xf0)
+[D] sys_call_table[264]: Symbol("sys_clock_getres_time32" at 0x801ed174, type=FUNC, size=0xf8)
+[D] sys_call_table[265]: Symbol("sys_clock_nanosleep_time32" at 0x801ed3cc, type=FUNC, size=0x168)
+[D] sys_call_table[266]: Symbol("sys_tgkill" at 0x8014bdf8, type=FUNC, size=0x20)
+[D] sys_call_table[267]: Symbol("sys_utimes_time32" at 0x803cbb14, type=FUNC, size=0x14)
+[D] sys_call_table[268]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[269]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[270]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[271]: Symbol("sys_mq_open" at 0x805f8330, type=FUNC, size=0x2fc)
+[D] sys_call_table[272]: Symbol("sys_mq_unlink" at 0x805f862c, type=FUNC, size=0x130)
+[D] sys_call_table[273]: Symbol("sys_mq_timedsend_time32" at 0x805f90f8, type=FUNC, size=0xe4)
+[D] sys_call_table[274]: Symbol("sys_mq_timedreceive_time32" at 0x805f91dc, type=FUNC, size=0xe4)
+[D] sys_call_table[275]: Symbol("sys_mq_notify" at 0x805f8924, type=FUNC, size=0x528)
+[D] sys_call_table[276]: Symbol("sys_mq_getsetattr" at 0x805f8e4c, type=FUNC, size=0x2ac)
+[D] sys_call_table[277]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[278]: Symbol("sys_waitid" at 0x8013b2cc, type=FUNC, size=0x188)
+[D] sys_call_table[279]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[280]: Symbol("sys_add_key" at 0x805fe81c, type=FUNC, size=0x218)
+[D] sys_call_table[281]: Symbol("sys_request_key" at 0x805fea34, type=FUNC, size=0x1cc)
+[D] sys_call_table[282]: Symbol("sys_keyctl" at 0x8060097c, type=FUNC, size=0x29c)
+[D] sys_call_table[283]: Symbol("sys_set_thread_area" at 0x80109878, type=FUNC, size=0x2c)
+[D] sys_call_table[284]: Symbol("sys_inotify_init" at 0x803e28b0, type=FUNC, size=0x8)
+[D] sys_call_table[285]: Symbol("sys_inotify_add_watch" at 0x803e28b8, type=FUNC, size=0x4a4)
+[D] sys_call_table[286]: Symbol("sys_inotify_rm_watch" at 0x803e2d5c, type=FUNC, size=0x108)
+[D] sys_call_table[287]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[288]: Symbol("sys_openat" at 0x8037d4f0, type=FUNC, size=0xa8)
+[D] sys_call_table[289]: Symbol("sys_mkdirat" at 0x80395d6c, type=FUNC, size=0x4c)
+[D] sys_call_table[290]: Symbol("sys_mknodat" at 0x803959a4, type=FUNC, size=0x5c)
+[D] sys_call_table[291]: Symbol("sys_fchownat" at 0x8037c6f0, type=FUNC, size=0x8)
+[D] sys_call_table[292]: Symbol("sys_futimesat_time32" at 0x803cbb0c, type=FUNC, size=0x8)
+[D] sys_call_table[293]: Symbol("sys_fstatat64" at 0x803883b4, type=FUNC, size=0x8)
+[D] sys_call_table[294]: Symbol("sys_unlinkat" at 0x803968bc, type=FUNC, size=0x7c)
+[D] sys_call_table[295]: Symbol("sys_renameat" at 0x803986e4, type=FUNC, size=0x78)
+[D] sys_call_table[296]: Symbol("sys_linkat" at 0x803972fc, type=FUNC, size=0x80)
+[D] sys_call_table[297]: Symbol("sys_symlinkat" at 0x80396bc0, type=FUNC, size=0x60)
+[D] sys_call_table[298]: Symbol("sys_readlinkat" at 0x8038837c, type=FUNC, size=0x8)
+[D] sys_call_table[299]: Symbol("sys_fchmodat" at 0x8037c2a0, type=FUNC, size=0x8)
+[D] sys_call_table[300]: Symbol("sys_faccessat" at 0x8037bc98, type=FUNC, size=0x8)
+[D] sys_call_table[301]: Symbol("sys_pselect6_time32" at 0x8039e1e4, type=FUNC, size=0x80)
+[D] sys_call_table[302]: Symbol("sys_ppoll_time32" at 0x8039e4a0, type=FUNC, size=0x114)
+[D] sys_call_table[303]: Symbol("sys_unshare" at 0x80133ae4, type=FUNC, size=0x8)
+[D] sys_call_table[304]: Symbol("sys_splice" at 0x803c9f1c, type=FUNC, size=0x2e0)
+[D] sys_call_table[305]: Symbol("sys_sync_file_range" at 0x803caef4, type=FUNC, size=0xb8)
+[D] sys_call_table[306]: Symbol("sys_tee" at 0x803ca51c, type=FUNC, size=0x120)
+[D] sys_call_table[307]: Symbol("sys_vmsplice" at 0x803c9f14, type=FUNC, size=0x8)
+[D] sys_call_table[308]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[309]: Symbol("sys_set_robust_list" at 0x801f7100, type=FUNC, size=0x24)
+[D] sys_call_table[310]: Symbol("sys_get_robust_list" at 0x801f7124, type=FUNC, size=0xdc)
+[D] sys_call_table[311]: Symbol("sys_kexec_load" at 0x802003b0, type=FUNC, size=0x3e4)
+[D] sys_call_table[312]: Symbol("sys_getcpu" at 0x80151540, type=FUNC, size=0x94)
+[D] sys_call_table[313]: Symbol("sys_epoll_pwait" at 0x803ea0c0, type=FUNC, size=0x17c)
+[D] sys_call_table[314]: Symbol("sys_ioprio_set" at 0x80649ee8, type=FUNC, size=0x2dc)
+[D] sys_call_table[315]: Symbol("sys_ioprio_get" at 0x8064a250, type=FUNC, size=0x368)
+[D] sys_call_table[316]: Symbol("sys_utimensat_time32" at 0x803cba14, type=FUNC, size=0xf8)
+[D] sys_call_table[317]: Symbol("sys_signalfd" at 0x803eb0ec, type=FUNC, size=0xbc)
+[D] sys_call_table[318]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[319]: Symbol("sys_eventfd" at 0x803ed814, type=FUNC, size=0x8)
+[D] sys_call_table[320]: Symbol("sys_fallocate" at 0x8037bbd4, type=FUNC, size=0xc4)
+[D] sys_call_table[321]: Symbol("sys_timerfd_create" at 0x803ec424, type=FUNC, size=0x1b4)
+[D] sys_call_table[322]: Symbol("sys_timerfd_gettime32" at 0x803ec854, type=FUNC, size=0x94)
+[D] sys_call_table[323]: Symbol("sys_timerfd_settime32" at 0x803ec760, type=FUNC, size=0xf4)
+[D] sys_call_table[324]: Symbol("sys_signalfd4" at 0x803eb034, type=FUNC, size=0xb8)
+[D] sys_call_table[325]: Symbol("sys_eventfd2" at 0x803ed80c, type=FUNC, size=0x8)
+[D] sys_call_table[326]: Symbol("sys_epoll_create1" at 0x803e8f3c, type=FUNC, size=0x8)
+[D] sys_call_table[327]: Symbol("sys_dup3" at 0x803ab330, type=FUNC, size=0x8)
+[D] sys_call_table[328]: Symbol("sys_pipe2" at 0x8038e218, type=FUNC, size=0x8)
+[D] sys_call_table[329]: Symbol("sys_inotify_init1" at 0x803e28a8, type=FUNC, size=0x8)
+[D] sys_call_table[330]: Symbol("sys_preadv" at 0x80380dd0, type=FUNC, size=0x144)
+[D] sys_call_table[331]: Symbol("sys_pwritev" at 0x803810b4, type=FUNC, size=0xe0)
+[D] sys_call_table[332]: Symbol("sys_rt_tgsigqueueinfo" at 0x8014bf74, type=FUNC, size=0x14c)
+[D] sys_call_table[333]: Symbol("sys_perf_event_open" at 0x802d628c, type=FUNC, size=0x8)
+[D] sys_call_table[334]: Symbol("sys_accept4" at 0x8095446c, type=FUNC, size=0x8)
+[D] sys_call_table[335]: Symbol("sys_recvmmsg_time32" at 0x80955de8, type=FUNC, size=0xf0)
+[D] sys_call_table[336]: Symbol("sys_fanotify_init" at 0x803e6860, type=FUNC, size=0x324)
+[D] sys_call_table[337]: Symbol("sys_fanotify_mark" at 0x803e6b84, type=FUNC, size=0x8c4)
+[D] sys_call_table[338]: Symbol("sys_prlimit64" at 0x80150580, type=FUNC, size=0x378)
+[D] sys_call_table[339]: Symbol("sys_name_to_handle_at" at 0x8040d4d8, type=FUNC, size=0x28c)
+[D] sys_call_table[340]: Symbol("sys_open_by_handle_at" at 0x8040d764, type=FUNC, size=0x3a0)
+[D] sys_call_table[341]: Symbol("sys_clock_adjtime32" at 0x801ed16c, type=FUNC, size=0x8)
+[D] sys_call_table[342]: Symbol("sys_syncfs" at 0x803ca96c, type=FUNC, size=0xac)
+[D] sys_call_table[343]: Symbol("sys_sendmmsg" at 0x80955960, type=FUNC, size=0x24)
+[D] sys_call_table[344]: Symbol("sys_setns" at 0x80160ec8, type=FUNC, size=0x5e8)
+[D] sys_call_table[345]: Symbol("sys_process_vm_readv" at 0x8034bd2c, type=FUNC, size=0x2c)
+[D] sys_call_table[346]: Symbol("sys_process_vm_writev" at 0x8034bd58, type=FUNC, size=0x30)
+[D] sys_call_table[347]: Symbol("sys_kcmp" at 0x801d4100, type=FUNC, size=0x4f4)
+[D] sys_call_table[348]: Symbol("sys_finit_module" at 0x801d1a1c, type=FUNC, size=0x110)
+[D] sys_call_table[349]: Symbol("sys_sched_setattr" at 0x80174894, type=FUNC, size=0x390)
+[D] sys_call_table[350]: Symbol("sys_sched_getattr" at 0x80174d94, type=FUNC, size=0x1c4)
+[D] sys_call_table[351]: Symbol("sys_renameat2" at 0x80398664, type=FUNC, size=0x80)
+[D] sys_call_table[352]: Symbol("sys_seccomp" at 0x80220514, type=FUNC, size=0x8)
+[D] sys_call_table[353]: Symbol("sys_getrandom" at 0x8077f58c, type=FUNC, size=0x100)
+[D] sys_call_table[354]: Symbol("sys_memfd_create" at 0x8037a558, type=FUNC, size=0x260)
+[D] sys_call_table[355]: Symbol("sys_bpf" at 0x80270bcc, type=FUNC, size=0x14)
+[D] sys_call_table[356]: Symbol("sys_execveat" at 0x8038bf88, type=FUNC, size=0x68)
+[D] sys_call_table[357]: Symbol("sys_userfaultfd" at 0x803f0e98, type=FUNC, size=0x58)
+[D] sys_call_table[358]: Symbol("sys_membarrier" at 0x80196160, type=FUNC, size=0x348)
+[D] sys_call_table[359]: Symbol("sys_mlock2" at 0x80336378, type=FUNC, size=0x2c)
+[D] sys_call_table[360]: Symbol("sys_copy_file_range" at 0x80381f5c, type=FUNC, size=0x2e8)
+[D] sys_call_table[361]: Symbol("sys_preadv2" at 0x80380f14, type=FUNC, size=0x1a0)
+[D] sys_call_table[362]: Symbol("sys_pwritev2" at 0x80381194, type=FUNC, size=0x138)
+[D] sys_call_table[363]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[364]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[365]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[366]: Symbol("sys_statx" at 0x80388488, type=FUNC, size=0xa0)
+[D] sys_call_table[367]: Symbol("sys_rseq" at 0x802dfb98, type=FUNC, size=0x160)
+[D] sys_call_table[368]: Symbol("sys_io_pgetevents_time32" at 0x803f5370, type=FUNC, size=0x1e4)
+[D] sys_call_table[369]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[370]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[371]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[372]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[373]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[374]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[375]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[376]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[377]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[378]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[379]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[380]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[381]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[382]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[383]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[384]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[385]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[386]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[387]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[388]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[389]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[390]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[391]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[392]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[393]: Symbol("sys_semget" at 0x805f1a64, type=FUNC, size=0x90)
+[D] sys_call_table[394]: Symbol("sys_semctl" at 0x805f1af4, type=FUNC, size=0x24)
+[D] sys_call_table[395]: Symbol("sys_shmget" at 0x805f530c, type=FUNC, size=0x78)
+[D] sys_call_table[396]: Symbol("sys_shmctl" at 0x805f5384, type=FUNC, size=0x8)
+[D] sys_call_table[397]: Symbol("sys_shmat" at 0x805f5958, type=FUNC, size=0x60)
+[D] sys_call_table[398]: Symbol("sys_shmdt" at 0x805f5c84, type=FUNC, size=0x8)
+[D] sys_call_table[399]: Symbol("sys_msgget" at 0x805ee938, type=FUNC, size=0x70)
+[D] sys_call_table[400]: Symbol("sys_msgsnd" at 0x805eeacc, type=FUNC, size=0x58)
+[D] sys_call_table[401]: Symbol("sys_msgrcv" at 0x805eeb2c, type=FUNC, size=0x8)
+[D] sys_call_table[402]: Symbol("sys_msgctl" at 0x805ee9a8, type=FUNC, size=0x8)
+[D] sys_call_table[403]: Symbol("sys_clock_gettime" at 0x801ecd00, type=FUNC, size=0xf0)
+[D] sys_call_table[404]: Symbol("sys_clock_settime" at 0x801ecc04, type=FUNC, size=0xfc)
+[D] sys_call_table[405]: Symbol("sys_clock_adjtime" at 0x801ece80, type=FUNC, size=0x8)
+[D] sys_call_table[406]: Symbol("sys_clock_getres" at 0x801ece88, type=FUNC, size=0xf8)
+[D] sys_call_table[407]: Symbol("sys_clock_nanosleep" at 0x801ed26c, type=FUNC, size=0x160)
+[D] sys_call_table[408]: Symbol("sys_timer_gettime" at 0x801ec510, type=FUNC, size=0x94)
+[D] sys_call_table[409]: Symbol("sys_timer_settime" at 0x801ec6e4, type=FUNC, size=0x114)
+[D] sys_call_table[410]: Symbol("sys_timerfd_gettime" at 0x803ec6cc, type=FUNC, size=0x94)
+[D] sys_call_table[411]: Symbol("sys_timerfd_settime" at 0x803ec5d8, type=FUNC, size=0xf4)
+[D] sys_call_table[412]: Symbol("sys_utimensat" at 0x803cb748, type=FUNC, size=0xf8)
+[D] sys_call_table[413]: Symbol("sys_pselect6" at 0x8039e164, type=FUNC, size=0x80)
+[D] sys_call_table[414]: Symbol("sys_ppoll" at 0x8039e38c, type=FUNC, size=0x114)
+[D] sys_call_table[415]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[416]: Symbol("sys_io_pgetevents" at 0x803f518c, type=FUNC, size=0x1e4)
+[D] sys_call_table[417]: Symbol("sys_recvmmsg" at 0x80955cf8, type=FUNC, size=0xf0)
+[D] sys_call_table[418]: Symbol("sys_mq_timedsend" at 0x805f875c, type=FUNC, size=0xe4)
+[D] sys_call_table[419]: Symbol("sys_mq_timedreceive" at 0x805f8840, type=FUNC, size=0xe4)
+[D] sys_call_table[420]: Symbol("sys_semtimedop" at 0x805f2e98, type=FUNC, size=0xcc)
+[D] sys_call_table[421]: Symbol("sys_rt_sigtimedwait" at 0x8014b6b8, type=FUNC, size=0x13c)
+[D] sys_call_table[422]: Symbol("sys_futex" at 0x801f73b4, type=FUNC, size=0x1c4)
+[D] sys_call_table[423]: Symbol("sys_sched_rr_get_interval" at 0x8017583c, type=FUNC, size=0x7c)
+[D] sys_call_table[424]: Symbol("sys_pidfd_send_signal" at 0x8014bb80, type=FUNC, size=0x278)
+[D] sys_call_table[425]: Symbol("sys_io_uring_setup" at 0x8066698c, type=FUNC, size=0x8)
+[D] sys_call_table[426]: Symbol("sys_io_uring_enter" at 0x80665e30, type=FUNC, size=0xb44)
+[D] sys_call_table[427]: Symbol("sys_io_uring_register" at 0x80666994, type=FUNC, size=0xbe0)
+[D] sys_call_table[428]: Symbol("sys_open_tree" at 0x803b12d4, type=FUNC, size=0x3d8)
+[D] sys_call_table[429]: Symbol("sys_move_mount" at 0x803b2fd4, type=FUNC, size=0x3a0)
+[D] sys_call_table[430]: Symbol("sys_fsopen" at 0x803d043c, type=FUNC, size=0x170)
+[D] sys_call_table[431]: Symbol("sys_fsconfig" at 0x803d0750, type=FUNC, size=0x5c4)
+[D] sys_call_table[432]: Symbol("sys_fsmount" at 0x803b2c74, type=FUNC, size=0x360)
+[D] sys_call_table[433]: Symbol("sys_fspick" at 0x803d05ac, type=FUNC, size=0x1a4)
+[D] sys_call_table[434]: Symbol("sys_pidfd_open" at 0x8015bec0, type=FUNC, size=0x100)
+[D] sys_call_table[435]: Symbol("__sys_clone3" at 0x80109780, type=FUNC, size=0x28)
+[D] sys_call_table[436]: Symbol("sys_close_range" at 0x8037d820, type=FUNC, size=0x8)
+[D] sys_call_table[437]: Symbol("sys_openat2" at 0x8037d598, type=FUNC, size=0x118)
+[D] sys_call_table[438]: Symbol("sys_pidfd_getfd" at 0x8015bfc0, type=FUNC, size=0x1bc)
+[D] sys_call_table[439]: Symbol("sys_faccessat2" at 0x8037bca0, type=FUNC, size=0x8)
+[D] sys_call_table[440]: Symbol("sys_process_madvise" at 0x80358740, type=FUNC, size=0x25c)
+[D] sys_call_table[441]: Symbol("sys_epoll_pwait2" at 0x803ea23c, type=FUNC, size=0xe8)
+[D] sys_call_table[442]: Symbol("sys_mount_setattr" at 0x803b3958, type=FUNC, size=0x948)
+[D] sys_call_table[443]: Symbol("sys_quotactl_fd" at 0x80420484, type=FUNC, size=0x254)
+[D] sys_call_table[444]: Symbol("sys_landlock_create_ruleset" at 0x8060dbe0, type=FUNC, size=0x19c)
+[D] sys_call_table[445]: Symbol("sys_landlock_add_rule" at 0x8060dd7c, type=FUNC, size=0x22c)
+[D] sys_call_table[446]: Symbol("sys_landlock_restrict_self" at 0x8060dfa8, type=FUNC, size=0x13c)
+[D] sys_call_table[447]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[D] sys_call_table[448]: Symbol("sys_process_mrelease" at 0x802ec8e4, type=FUNC, size=0x250)
+[D] sys_call_table[449]: Symbol("sys_futex_waitv" at 0x801f7578, type=FUNC, size=0x374)
+[D] sys_call_table[450]: Symbol("sys_ni_syscall" at 0x80160740, type=FUNC, size=0x8)
+[I] Common syscall symbol prefixes: sys_
+[I] 69 syscall table entries point to sys_ni_syscall
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/hdd-stuff/kernels/systrack-0.2/vmlinux-mips-v6.1'), '0x80118670', '0x8013b1ec', '0x80109730', '0x80380600', '0x80380750', '0x8037d438', '0x8037d7d0', '0x8013b788', '0x8037d6b0', '0x8039737c', '0x80396938', '0x8038bf40', '0x8037bcc0', '0x801d5d00', '0x80395a00', '0x8037c2a8', '0x8037c728', '0x8037e100', '0x8014f998', '0x803b2a00', '0x803afe78', '0x8014ecd8', '0x8014f9e4', '0x801d5d5c', '0x801436c8', '0x801f10f0', '0x8014cad8', '0x803cb938', '0x8037bca8', '0x80174180', '0x803ca8e4', '0x8014b930', '0x8039875c', '0x80395db8', '0x80396200', '0x803ab3a4', '0x801097d0', '0x8014fa34', '0x8033b518', '0x8014e7fc', '0x8014fa0c', '0x8014f9f8', '0x8014fa20', '0x801fdfac', '0x803afde4', '0x8039aebc', '0x80399890', '0x8014fb74', '0x8014ff3c', '0x80150ea0', '0x8037be74', '0x803cd9b0', '0x803ab338', '0x8014f9b8', '0x8014fd84', '0x8014ff24', '0x80109074', '0x8014ca40', '0x8014ca4c', '0x8014eb48', '0x8014e6a4', '0x8010906c', '0x8014c70c', '0x801500ec', '0x801508f8', '0x801504a0', '0x80150de0', '0x801d5e08', '0x801d602c', '0x80167894', '0x801679e0', '0x80396c20', '0x80388384', '0x80389f18', '0x8035ff88', '0x80164780', '0x8039c0f8', '0x8010984c', '0x8033a8ac', '0x8037b378', '0x8037b638', '0x8037c214', '0x8037c888', '0x8014e1b0', '0x8014ded4', '0x803cd748', '0x803cd87c', '0x80955ed8', '0x8019ead4', '0x801f11d8', '0x801f0eb0', '0x80388364', '0x8038836c', '0x80388374', '0x8014ff34', '0x8037d828', '0x8013b6a0', '0x8035ed00', '0x801515d4', '0x805f5fec', '0x803cac40', '0x801091fc', '0x80109758', '0x80150358', '0x8014ff2c', '0x801d6570', '0x8033e8d0', '0x8014c7a0', '0x801d184c', '0x801d1c60', '0x80420088', '0x8014fd04', '0x8037bda8', '0x803ab990', '0x80133cc4', '0x8014f860', '0x8014f990', '0x8037e210', '0x8039c1e8', '0x8039dff8', '0x8040318c', '0x8033fc50', '0x80380dc0', '0x80380dc8', '0x8011fb60', '0x801099ec', '0x801097a8', '0x8014fda8', '0x803cac48', '0x80336370', '0x803363a4', '0x80336490', '0x80336668', '0x80174888', '0x80174cac', '0x80174870', '0x80174c24', '0x801755e4', '0x8017579c', '0x801757ec', '0x801758b8', '0x801de06c', '0x8033f4dc', '0x80954474', '0x809540f8', '0x809545d8', '0x809547c4', '0x809546c8', '0x80954d80', '0x809541b8', '0x80954b18', '0x80954b10', '0x80955aa4', '0x8095495c', '0x80955698', '0x80954954', '0x80954c68', '0x80954e40', '0x80953d88', '0x80954008', '0x8014f15c', '0x8014f164', '0x8039e264', '0x8014f638', '0x8014f640', '0x80150ee8', '0x801092f4', '0x8014c900', '0x801486f0', '0x8014883c', '0x8014b7f4', '0x8014be38', '0x8014cb44', '0x80380828', '0x803809e4', '0x8037c6f8', '0x803cc678', '0x80141e98', '0x80142074', '0x8014c4d8', '0x803812cc', '0x80109870', '0x8037b660', '0x8037b668', '0x8038839c', '0x803883a4', '0x803883ac', '0x803b3464', '0x80333e6c', '0x80358724', '0x8039c344', '0x803999a0', '0x8014f9a8', '0x802f315c', '0x803b878c', '0x803b87b4', '0x803b87d8', '0x803b8c60', '0x803b8c84', '0x803b8ca4', '0x803b8d64', '0x803b8d6c', '0x803b8d74', '0x803b8e14', '0x803b8e1c', '0x803b8e24', '0x8014be18', '0x803813a8', '0x801f78ec', '0x80114e40', '0x80115168', '0x803f39b8', '0x803f4300', '0x803f5554', '0x803f4450', '0x803f4fd0', '0x8013b2a4', '0x803e8f44', '0x803e9e94', '0x803e9f60', '0x8033cc6c', '0x80132d4c', '0x801483b4', '0x802ecf44', '0x803cd7d4', '0x803cd908', '0x801ec41c', '0x801ec7f8', '0x801ec5a4', '0x801ec638', '0x801ec90c', '0x801ecf80', '0x801ed07c', '0x801ed174', '0x801ed3cc', '0x8014bdf8', '0x803cbb14', '0x805f8330', '0x805f862c', '0x805f90f8', '0x805f91dc', '0x805f8924', '0x805f8e4c', '0x8013b2cc', '0x805fe81c', '0x805fea34', '0x8060097c', '0x80109878', '0x803e28b0', '0x803e28b8', '0x803e2d5c', '0x8037d4f0', '0x80395d6c', '0x803959a4', '0x8037c6f0', '0x803cbb0c', '0x803883b4', '0x803968bc', '0x803986e4', '0x803972fc', '0x80396bc0', '0x8038837c', '0x8037c2a0', '0x8037bc98', '0x8039e1e4', '0x8039e4a0', '0x80133ae4', '0x803c9f1c', '0x803caef4', '0x803ca51c', '0x803c9f14', '0x801f7100', '0x801f7124', '0x802003b0', '0x80151540', '0x803ea0c0', '0x80649ee8', '0x8064a250', '0x803cba14', '0x803eb0ec', '0x803ed814', '0x8037bbd4', '0x803ec424', '0x803ec854', '0x803ec760', '0x803eb034', '0x803ed80c', '0x803e8f3c', '0x803ab330', '0x8038e218', '0x803e28a8', '0x80380dd0', '0x803810b4', '0x8014bf74', '0x802d628c', '0x8095446c', '0x80955de8', '0x803e6860', '0x803e6b84', '0x80150580', '0x8040d4d8', '0x8040d764', '0x801ed16c', '0x803ca96c', '0x80955960', '0x80160ec8', '0x8034bd2c', '0x8034bd58', '0x801d4100', '0x801d1a1c', '0x80174894', '0x80174d94', '0x80398664', '0x80220514', '0x8077f58c', '0x8037a558', '0x80270bcc', '0x8038bf88', '0x803f0e98', '0x80196160', '0x80336378', '0x80381f5c', '0x80380f14', '0x80381194', '0x80388488', '0x802dfb98', '0x803f5370', '0x805f1a64', '0x805f1af4', '0x805f530c', '0x805f5384', '0x805f5958', '0x805f5c84', '0x805ee938', '0x805eeacc', '0x805eeb2c', '0x805ee9a8', '0x801ecd00', '0x801ecc04', '0x801ece80', '0x801ece88', '0x801ed26c', '0x801ec510', '0x801ec6e4', '0x803ec6cc', '0x803ec5d8', '0x803cb748', '0x8039e164', '0x8039e38c', '0x803f518c', '0x80955cf8', '0x805f875c', '0x805f8840', '0x805f2e98', '0x8014b6b8', '0x801f73b4', '0x8017583c', '0x8014bb80', '0x8066698c', '0x80665e30', '0x80666994', '0x803b12d4', '0x803b2fd4', '0x803d043c', '0x803d0750', '0x803b2c74', '0x803d05ac', '0x8015bec0', '0x80109780', '0x8037d820', '0x8037d598', '0x8015bfc0', '0x8037bca0', '0x80358740', '0x803ea23c', '0x803b3958', '0x80420484', '0x8060dbe0', '0x8060dd7c', '0x8060dfa8', '0x802ec8e4', '0x801f7578']
+[D] Location needs adjustment (bad): syscall (sys_syscall) -> arch/mips/kernel/scall32-o32.S:181
+[D] Location needs adjustment (invalid): fork (__sys_fork) -> ??:?
+[D] Location needs adjustment (bad): getpid (sys_getpid) -> include/linux/sched.h:1628
+[D] Location needs adjustment (bad): alarm (sys_alarm) -> kernel/time/itimer.c:277
+[D] Location needs adjustment (invalid): clone (__sys_clone) -> ??:?
+[D] Location needs adjustment (invalid): sysmips (__sys_sysmips) -> ??:?
+[D] Location needs adjustment (bad): gettid (sys_gettid) -> include/linux/sched.h:1576
+[D] Location needs adjustment (bad): io_cancel (sys_io_cancel) -> include/asm-generic/access_ok.h:31
+[D] Location needs adjustment (bad): msgsnd (sys_msgsnd) -> include/asm-generic/access_ok.h:31
+[D] Location needs adjustment (bad): msgrcv (sys_msgrcv) -> ipc/msg.c:1264
+[D] Location needs adjustment (invalid): clone3 (__sys_clone3) -> ??:?
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/hdd-stuff/kernels/systrack-0.2/vmlinux-mips-v6.1'), '0x801186d3', '0x80109757', '0x8014f9a7', '0x801f11d7', '0x8010977f', '0x801097cf', '0x8014f9b7', '0x803f518b', '0x805eeb23', '0x805eeb33', '0x801097a7']
+[D] Location needs full-range adjustment (bad): syscall (sys_syscall+0x63) -> arch/mips/kernel/scall32-o32.S:202
+[D] Location needs full-range adjustment (invalid): fork (__sys_fork+0x27) -> ??:?
+[D] Location needs full-range adjustment (bad): getpid (sys_getpid+0xf) -> include/linux/sched.h:1628
+[D] Location needs full-range adjustment (invalid): clone (__sys_clone+0x27) -> ??:?
+[D] Location needs full-range adjustment (invalid): sysmips (__sys_sysmips+0x27) -> ??:?
+[D] Location needs full-range adjustment (bad): gettid (sys_gettid+0xf) -> include/linux/sched.h:1576
+[D] Location needs full-range adjustment (bad): io_cancel (sys_io_cancel+0x1bb) -> include/linux/percpu-refcount.h:326
+[D] Location needs full-range adjustment (bad): msgrcv (sys_msgrcv+0x7) -> ipc/msg.c:1264
+[D] Location needs full-range adjustment (invalid): clone3 (__sys_clone3+0x27) -> ??:?
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/hdd-stuff/kernels/systrack-0.2/vmlinux-mips-v6.1'), '0x80118671', '0x80118672', '0x80118673', '0x80118674', '0x80118675', '0x80118676', '0x80118677', '0x80118678', '0x80118679', '0x8011867a', '0x8011867b', '0x8011867c', '0x8011867d', '0x8011867e', '0x8011867f', '0x80118680', '0x80118681', '0x80118682', '0x80118683', '0x80118684', '0x80118685', '0x80118686', '0x80118687', '0x80118688', '0x80118689', '0x8011868a', '0x8011868b', '0x8011868c', '0x8011868d', '0x8011868e', '0x8011868f', '0x80118690', '0x80118691', '0x80118692', '0x80118693', '0x80118694', '0x80118695', '0x80118696', '0x80118697', '0x80118698', '0x80118699', '0x8011869a', '0x8011869b', '0x8011869c', '0x8011869d', '0x8011869e', '0x8011869f', '0x801186a0', '0x801186a1', '0x801186a2', '0x801186a3', '0x801186a4', '0x801186a5', '0x801186a6', '0x801186a7', '0x801186a8', '0x801186a9', '0x801186aa', '0x801186ab', '0x801186ac', '0x801186ad', '0x801186ae', '0x801186af', '0x801186b0', '0x801186b1', '0x801186b2', '0x801186b3', '0x801186b4', '0x801186b5', '0x801186b6', '0x801186b7', '0x801186b8', '0x801186b9', '0x801186ba', '0x801186bb', '0x801186bc', '0x801186bd', '0x801186be', '0x801186bf', '0x801186c0', '0x801186c1', '0x801186c2', '0x801186c3', '0x801186c4', '0x801186c5', '0x801186c6', '0x801186c7', '0x801186c8', '0x801186c9', '0x801186ca', '0x801186cb', '0x801186cc', '0x801186cd', '0x801186ce', '0x801186cf', '0x801186d0', '0x801186d1']
+[D] Location needs grepping (bad): syscall (sys_syscall) -> arch/mips/kernel/scall32-o32.S:202
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/hdd-stuff/kernels/systrack-0.2/vmlinux-mips-v6.1'), '0x80109731', '0x80109732', '0x80109733', '0x80109734', '0x80109735', '0x80109736', '0x80109737', '0x80109738', '0x80109739', '0x8010973a', '0x8010973b', '0x8010973c', '0x8010973d', '0x8010973e', '0x8010973f', '0x80109740', '0x80109741', '0x80109742', '0x80109743', '0x80109744', '0x80109745', '0x80109746', '0x80109747', '0x80109748', '0x80109749', '0x8010974a', '0x8010974b', '0x8010974c', '0x8010974d', '0x8010974e', '0x8010974f', '0x80109750', '0x80109751', '0x80109752', '0x80109753', '0x80109754', '0x80109755']
+[D] Location needs grepping (invalid): fork (__sys_fork) -> ??:?
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/hdd-stuff/kernels/systrack-0.2/vmlinux-mips-v6.1'), '0x8014f999', '0x8014f99a', '0x8014f99b', '0x8014f99c', '0x8014f99d', '0x8014f99e', '0x8014f99f', '0x8014f9a0', '0x8014f9a1', '0x8014f9a2', '0x8014f9a3', '0x8014f9a4', '0x8014f9a5']
+[D] Location needs grepping (bad): getpid (sys_getpid) -> include/linux/sched.h:1628
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/hdd-stuff/kernels/systrack-0.2/vmlinux-mips-v6.1'), '0x80109759', '0x8010975a', '0x8010975b', '0x8010975c', '0x8010975d', '0x8010975e', '0x8010975f', '0x80109760', '0x80109761', '0x80109762', '0x80109763', '0x80109764', '0x80109765', '0x80109766', '0x80109767', '0x80109768', '0x80109769', '0x8010976a', '0x8010976b', '0x8010976c', '0x8010976d', '0x8010976e', '0x8010976f', '0x80109770', '0x80109771', '0x80109772', '0x80109773', '0x80109774', '0x80109775', '0x80109776', '0x80109777', '0x80109778', '0x80109779', '0x8010977a', '0x8010977b', '0x8010977c', '0x8010977d']
+[D] Location needs grepping (invalid): clone (__sys_clone) -> ??:?
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/hdd-stuff/kernels/systrack-0.2/vmlinux-mips-v6.1'), '0x801097a9', '0x801097aa', '0x801097ab', '0x801097ac', '0x801097ad', '0x801097ae', '0x801097af', '0x801097b0', '0x801097b1', '0x801097b2', '0x801097b3', '0x801097b4', '0x801097b5', '0x801097b6', '0x801097b7', '0x801097b8', '0x801097b9', '0x801097ba', '0x801097bb', '0x801097bc', '0x801097bd', '0x801097be', '0x801097bf', '0x801097c0', '0x801097c1', '0x801097c2', '0x801097c3', '0x801097c4', '0x801097c5', '0x801097c6', '0x801097c7', '0x801097c8', '0x801097c9', '0x801097ca', '0x801097cb', '0x801097cc', '0x801097cd']
+[D] Location needs grepping (invalid): sysmips (__sys_sysmips) -> ??:?
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/hdd-stuff/kernels/systrack-0.2/vmlinux-mips-v6.1'), '0x8014f9a9', '0x8014f9aa', '0x8014f9ab', '0x8014f9ac', '0x8014f9ad', '0x8014f9ae', '0x8014f9af', '0x8014f9b0', '0x8014f9b1', '0x8014f9b2', '0x8014f9b3', '0x8014f9b4', '0x8014f9b5']
+[D] Location needs grepping (bad): gettid (sys_gettid) -> include/linux/sched.h:1576
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/hdd-stuff/kernels/systrack-0.2/vmlinux-mips-v6.1'), '0x803f4fd1', '0x803f4fd2', '0x803f4fd3', '0x803f4fd4', '0x803f4fd5', '0x803f4fd6', '0x803f4fd7', '0x803f4fd8', '0x803f4fd9', '0x803f4fda', '0x803f4fdb', '0x803f4fdc', '0x803f4fdd', '0x803f4fde', '0x803f4fdf', '0x803f4fe0', '0x803f4fe1', '0x803f4fe2', '0x803f4fe3', '0x803f4fe4', '0x803f4fe5', '0x803f4fe6', '0x803f4fe7', '0x803f4fe8', '0x803f4fe9', '0x803f4fea', '0x803f4feb', '0x803f4fec', '0x803f4fed', '0x803f4fee', '0x803f4fef', '0x803f4ff0', '0x803f4ff1', '0x803f4ff2', '0x803f4ff3', '0x803f4ff4', '0x803f4ff5', '0x803f4ff6', '0x803f4ff7', '0x803f4ff8', '0x803f4ff9', '0x803f4ffa', '0x803f4ffb', '0x803f4ffc', '0x803f4ffd', '0x803f4ffe', '0x803f4fff', '0x803f5000', '0x803f5001', '0x803f5002', '0x803f5003', '0x803f5004', '0x803f5005', '0x803f5006', '0x803f5007', '0x803f5008', '0x803f5009', '0x803f500a', '0x803f500b', '0x803f500c', '0x803f500d', '0x803f500e', '0x803f500f', '0x803f5010', '0x803f5011', '0x803f5012', '0x803f5013', '0x803f5014', '0x803f5015', '0x803f5016', '0x803f5017', '0x803f5018', '0x803f5019', '0x803f501a', '0x803f501b', '0x803f501c', '0x803f501d', '0x803f501e', '0x803f501f', '0x803f5020', '0x803f5021', '0x803f5022', '0x803f5023', '0x803f5024', '0x803f5025', '0x803f5026', '0x803f5027', '0x803f5028', '0x803f5029', '0x803f502a', '0x803f502b', '0x803f502c', '0x803f502d', '0x803f502e', '0x803f502f', '0x803f5030', '0x803f5031', '0x803f5032', '0x803f5033', '0x803f5034', '0x803f5035', '0x803f5036', '0x803f5037', '0x803f5038', '0x803f5039', '0x803f503a', '0x803f503b', '0x803f503c', '0x803f503d', '0x803f503e', '0x803f503f', '0x803f5040', '0x803f5041', '0x803f5042', '0x803f5043', '0x803f5044', '0x803f5045', '0x803f5046', '0x803f5047', '0x803f5048', '0x803f5049', '0x803f504a', '0x803f504b', '0x803f504c', '0x803f504d', '0x803f504e', '0x803f504f', '0x803f5050', '0x803f5051', '0x803f5052', '0x803f5053', '0x803f5054', '0x803f5055', '0x803f5056', '0x803f5057', '0x803f5058', '0x803f5059', '0x803f505a', '0x803f505b', '0x803f505c', '0x803f505d', '0x803f505e', '0x803f505f', '0x803f5060', '0x803f5061', '0x803f5062', '0x803f5063', '0x803f5064', '0x803f5065', '0x803f5066', '0x803f5067', '0x803f5068', '0x803f5069', '0x803f506a', '0x803f506b', '0x803f506c', '0x803f506d', '0x803f506e', '0x803f506f', '0x803f5070', '0x803f5071', '0x803f5072', '0x803f5073', '0x803f5074', '0x803f5075', '0x803f5076', '0x803f5077', '0x803f5078', '0x803f5079', '0x803f507a', '0x803f507b', '0x803f507c', '0x803f507d', '0x803f507e', '0x803f507f', '0x803f5080', '0x803f5081', '0x803f5082', '0x803f5083', '0x803f5084', '0x803f5085', '0x803f5086', '0x803f5087', '0x803f5088', '0x803f5089', '0x803f508a', '0x803f508b', '0x803f508c', '0x803f508d', '0x803f508e', '0x803f508f', '0x803f5090', '0x803f5091', '0x803f5092', '0x803f5093', '0x803f5094', '0x803f5095', '0x803f5096', '0x803f5097', '0x803f5098', '0x803f5099', '0x803f509a', '0x803f509b', '0x803f509c', '0x803f509d', '0x803f509e', '0x803f509f', '0x803f50a0', '0x803f50a1', '0x803f50a2', '0x803f50a3', '0x803f50a4', '0x803f50a5', '0x803f50a6', '0x803f50a7', '0x803f50a8', '0x803f50a9', '0x803f50aa', '0x803f50ab', '0x803f50ac', '0x803f50ad', '0x803f50ae', '0x803f50af', '0x803f50b0', '0x803f50b1', '0x803f50b2', '0x803f50b3', '0x803f50b4', '0x803f50b5', '0x803f50b6', '0x803f50b7', '0x803f50b8', '0x803f50b9', '0x803f50ba', '0x803f50bb', '0x803f50bc', '0x803f50bd', '0x803f50be', '0x803f50bf', '0x803f50c0', '0x803f50c1', '0x803f50c2', '0x803f50c3', '0x803f50c4', '0x803f50c5', '0x803f50c6', '0x803f50c7', '0x803f50c8', '0x803f50c9', '0x803f50ca', '0x803f50cb', '0x803f50cc', '0x803f50cd', '0x803f50ce', '0x803f50cf', '0x803f50d0', '0x803f50d1', '0x803f50d2', '0x803f50d3', '0x803f50d4', '0x803f50d5', '0x803f50d6', '0x803f50d7', '0x803f50d8', '0x803f50d9', '0x803f50da', '0x803f50db', '0x803f50dc', '0x803f50dd', '0x803f50de', '0x803f50df', '0x803f50e0', '0x803f50e1', '0x803f50e2', '0x803f50e3', '0x803f50e4', '0x803f50e5', '0x803f50e6', '0x803f50e7', '0x803f50e8', '0x803f50e9', '0x803f50ea', '0x803f50eb', '0x803f50ec', '0x803f50ed', '0x803f50ee', '0x803f50ef', '0x803f50f0', '0x803f50f1', '0x803f50f2', '0x803f50f3', '0x803f50f4', '0x803f50f5', '0x803f50f6', '0x803f50f7', '0x803f50f8', '0x803f50f9', '0x803f50fa', '0x803f50fb', '0x803f50fc', '0x803f50fd', '0x803f50fe', '0x803f50ff', '0x803f5100', '0x803f5101', '0x803f5102', '0x803f5103', '0x803f5104', '0x803f5105', '0x803f5106', '0x803f5107', '0x803f5108', '0x803f5109', '0x803f510a', '0x803f510b', '0x803f510c', '0x803f510d', '0x803f510e', '0x803f510f', '0x803f5110', '0x803f5111', '0x803f5112', '0x803f5113', '0x803f5114', '0x803f5115', '0x803f5116', '0x803f5117', '0x803f5118', '0x803f5119', '0x803f511a', '0x803f511b', '0x803f511c', '0x803f511d', '0x803f511e', '0x803f511f', '0x803f5120', '0x803f5121', '0x803f5122', '0x803f5123', '0x803f5124', '0x803f5125', '0x803f5126', '0x803f5127', '0x803f5128', '0x803f5129', '0x803f512a', '0x803f512b', '0x803f512c', '0x803f512d', '0x803f512e', '0x803f512f', '0x803f5130', '0x803f5131', '0x803f5132', '0x803f5133', '0x803f5134', '0x803f5135', '0x803f5136', '0x803f5137', '0x803f5138', '0x803f5139', '0x803f513a', '0x803f513b', '0x803f513c', '0x803f513d', '0x803f513e', '0x803f513f', '0x803f5140', '0x803f5141', '0x803f5142', '0x803f5143', '0x803f5144', '0x803f5145', '0x803f5146', '0x803f5147', '0x803f5148', '0x803f5149', '0x803f514a', '0x803f514b', '0x803f514c', '0x803f514d', '0x803f514e', '0x803f514f', '0x803f5150', '0x803f5151', '0x803f5152', '0x803f5153', '0x803f5154', '0x803f5155', '0x803f5156', '0x803f5157', '0x803f5158', '0x803f5159', '0x803f515a', '0x803f515b', '0x803f515c', '0x803f515d', '0x803f515e', '0x803f515f', '0x803f5160', '0x803f5161', '0x803f5162', '0x803f5163', '0x803f5164', '0x803f5165', '0x803f5166', '0x803f5167', '0x803f5168', '0x803f5169', '0x803f516a', '0x803f516b', '0x803f516c', '0x803f516d', '0x803f516e', '0x803f516f', '0x803f5170', '0x803f5171', '0x803f5172', '0x803f5173', '0x803f5174', '0x803f5175', '0x803f5176', '0x803f5177', '0x803f5178', '0x803f5179', '0x803f517a', '0x803f517b', '0x803f517c', '0x803f517d', '0x803f517e', '0x803f517f', '0x803f5180', '0x803f5181', '0x803f5182', '0x803f5183', '0x803f5184', '0x803f5185', '0x803f5186', '0x803f5187', '0x803f5188', '0x803f5189']
+[D] Location found through full-range adjustment: io_cancel (sys_io_cancel+0x4) -> fs/aio.c:2142
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/hdd-stuff/kernels/systrack-0.2/vmlinux-mips-v6.1'), '0x805eeb2d', '0x805eeb2e', '0x805eeb2f', '0x805eeb30', '0x805eeb31']
+[D] Location needs grepping (bad): msgrcv (sys_msgrcv) -> ipc/msg.c:1264
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/hdd-stuff/kernels/systrack-0.2/vmlinux-mips-v6.1'), '0x80109781', '0x80109782', '0x80109783', '0x80109784', '0x80109785', '0x80109786', '0x80109787', '0x80109788', '0x80109789', '0x8010978a', '0x8010978b', '0x8010978c', '0x8010978d', '0x8010978e', '0x8010978f', '0x80109790', '0x80109791', '0x80109792', '0x80109793', '0x80109794', '0x80109795', '0x80109796', '0x80109797', '0x80109798', '0x80109799', '0x8010979a', '0x8010979b', '0x8010979c', '0x8010979d', '0x8010979e', '0x8010979f', '0x801097a0', '0x801097a1', '0x801097a2', '0x801097a3', '0x801097a4', '0x801097a5']
+[D] Location needs grepping (invalid): clone3 (__sys_clone3) -> ??:?
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/mips', '--glob', '*.c', b'\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[W] Location found through grepping: sysmips -> arch/mips/kernel/syscall.c:207
+[W] Location found through grepping: msgrcv -> ipc/msg.c:1270
+[W] Location found through grepping: getpid -> kernel/sys.c:940
+[W] Location found through grepping: gettid -> kernel/sys.c:946
+[W] Location found through grepping: fork -> kernel/fork.c:2751
+[W] Location found through grepping: clone -> kernel/fork.c:2780
+[W] Location found through grepping: clone3 -> kernel/fork.c:2954
+[I] Location could not be found through grepping: syscall (orig name syscall)
+[I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
+[D] Signature NOT found in ftrace metadata: syscall
+[W] Potentially bad location for syscall (sys_syscall): arch/mips/kernel/scall32-o32.S:202 (implemented in asm?)
+[E] Unable to extract signature for syscall (sys_syscall)
+Found 382 implemented syscalls
+Found 7 definition locations through grepping
+Could not extract signature for 1 syscall
+
