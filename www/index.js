@@ -5,6 +5,7 @@ const archSelectEl   = document.getElementById('arch-abi-select')
 const systrackVersEl = document.getElementById('systrack-version')
 const configLinkEl   = document.getElementById('config-link')
 const stderrLinkEl   = document.getElementById('stderr-link')
+const jsonLinkEl     = document.getElementById('json-link')
 
 let db = null
 let updateInProgress = false
@@ -356,19 +357,21 @@ async function update(pushHistoryState) {
 	fillTable(syscallTbable, tag)
 
 	systrackVersEl.textContent = syscallTbable.systrack_version
+	jsonLinkEl.href = `db/${arch}/${bits}/${abi}/${tag}/table.json`
+	jsonLinkEl.download = `syscalls_${arch}_${bits}_${abi}_${tag}.json`
 
 	if (config) {
-		configLinkEl.title = configLinkEl.href = `db/${arch}/${bits}/${abi}/${tag}/config.txt`
-		configLinkEl.textContent = '[build\u00a0config]'
+		configLinkEl.href = `db/${arch}/${bits}/${abi}/${tag}/config.txt`
+		configLinkEl.parentElement.classList.remove('invisible')
 	} else {
-		configLinkEl.textContent = configLinkEl.title = configLinkEl.href = ''
+		configLinkEl.parentElement.classList.add('invisible')
 	}
 
 	if (stderr) {
-		stderrLinkEl.title = stderrLinkEl.href = `db/${arch}/${bits}/${abi}/${tag}/stderr.txt`
-		stderrLinkEl.textContent = '[analysis\u00a0log]'
+		stderrLinkEl.href = `db/${arch}/${bits}/${abi}/${tag}/stderr.txt`
+		stderrLinkEl.parentElement.classList.remove('invisible')
 	} else {
-		stderrLinkEl.textContent = stderrLinkEl.title = stderrLinkEl.href = ''
+		configLinkEl.parentElement.classList.add('invisible')
 	}
 
 	if (pushHistoryState) {
