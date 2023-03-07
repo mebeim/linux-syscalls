@@ -938,16 +938,16 @@ Checking out to v5.8
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/hdd-stuff/kernels/systrack-0.2/vmlinux-arm-oabi-v5.8'), '0xc06e3ed1']
 [D] Location needs grepping (bad): msgrcv (sys_msgrcv) -> ipc/msg.c:1256
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/arm', '--glob', '*.c', b'\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[W] Location found through grepping: msgrcv -> ipc/msg.c:1290
 [W] Location found through grepping: statfs64 -> fs/statfs.c:357
 [W] Location found through grepping: fstatfs64 -> fs/statfs.c:376
-[W] Location found through grepping: msgrcv -> ipc/msg.c:1290
-[W] Location found through grepping: pread64 -> fs/read_write.c:666
-[W] Location found through grepping: pwrite64 -> fs/read_write.c:692
-[W] Location found through grepping: truncate64 -> fs/open.c:217
-[W] Location found through grepping: ftruncate64 -> fs/open.c:222
 [W] Location found through grepping: getpid -> kernel/sys.c:905
 [W] Location found through grepping: gettid -> kernel/sys.c:911
 [W] Location found through grepping: readahead -> mm/readahead.c:661
+[W] Location found through grepping: truncate64 -> fs/open.c:217
+[W] Location found through grepping: ftruncate64 -> fs/open.c:222
+[W] Location found through grepping: pread64 -> fs/read_write.c:666
+[W] Location found through grepping: pwrite64 -> fs/read_write.c:692
 [I] Location could not be found through grepping: syscall (orig name syscall)
 [I] Location could not be found through grepping: sigreturn (orig name sigreturn)
 [I] Location could not be found through grepping: rt_sigreturn (orig name rt_sigreturn)

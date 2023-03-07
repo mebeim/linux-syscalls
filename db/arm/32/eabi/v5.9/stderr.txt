@@ -928,11 +928,11 @@ Checking out to v5.9
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/hdd-stuff/kernels/systrack-0.2/vmlinux-arm-eabi-v5.9'), '0xc06ef525']
 [D] Location needs grepping (bad): msgrcv (sys_msgrcv) -> ipc/msg.c:1256
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/arm', '--glob', '*.c', b'\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
-[W] Location found through grepping: statfs64 -> fs/statfs.c:199
-[W] Location found through grepping: fstatfs64 -> fs/statfs.c:220
 [W] Location found through grepping: getpid -> kernel/sys.c:905
 [W] Location found through grepping: gettid -> kernel/sys.c:911
 [W] Location found through grepping: msgrcv -> ipc/msg.c:1262
+[W] Location found through grepping: statfs64 -> fs/statfs.c:199
+[W] Location found through grepping: fstatfs64 -> fs/statfs.c:220
 [I] Location could not be found through grepping: sigreturn (orig name sigreturn)
 [I] Location could not be found through grepping: rt_sigreturn (orig name rt_sigreturn)
 [I] Location could not be found through grepping: mmap2 (orig name mmap2)

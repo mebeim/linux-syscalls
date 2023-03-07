@@ -936,11 +936,11 @@ Checking out to v5.9
 [D] Location needs grepping (invalid): clone3 (__sys_clone3) -> ??:?
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/mips', '--glob', '*.c', b'\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: sysmips -> arch/mips/kernel/syscall.c:207
+[W] Location found through grepping: getpid -> kernel/sys.c:905
+[W] Location found through grepping: gettid -> kernel/sys.c:911
 [W] Location found through grepping: fork -> kernel/fork.c:2485
 [W] Location found through grepping: clone -> kernel/fork.c:2514
 [W] Location found through grepping: clone3 -> kernel/fork.c:2688
-[W] Location found through grepping: getpid -> kernel/sys.c:905
-[W] Location found through grepping: gettid -> kernel/sys.c:911
 [W] Location found through grepping: msgrcv -> ipc/msg.c:1262
 [I] Location could not be found through grepping: syscall (orig name syscall)
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y

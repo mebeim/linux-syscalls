@@ -20,6 +20,7 @@ Checking out to v5.9
 [D] Preferring __ia32_sys_getpid over __do_sys_getpid
 [D] Preferring __ia32_sys_getgid over __do_sys_getgid
 [D] Preferring __ia32_sys_restart_syscall over __do_sys_restart_syscall
+[D] Preferring __ia32_sys_ni_syscall over __do_sys_ni_syscall
 [D] Preferring __ia32_sys_munlockall over __do_sys_munlockall
 [D] Preferring __ia32_sys_getpgrp over __do_sys_getpgrp
 [D] Preferring __ia32_sys_geteuid16 over __do_sys_geteuid16
@@ -517,11 +518,11 @@ Checking out to v5.9
 [D] Location needs grepping (bad): pkey_free (__ia32_sys_pkey_free) -> kernel/sys_ni.c:350
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', b'\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: ia32_truncate64 -> arch/x86/kernel/sys_ia32.c:54
-[W] Location found through grepping: getpid -> kernel/sys.c:905
-[W] Location found through grepping: gettid -> kernel/sys.c:911
 [W] Location found through grepping: pkey_mprotect -> mm/mprotect.c:643
 [W] Location found through grepping: pkey_alloc -> mm/mprotect.c:649
 [W] Location found through grepping: pkey_free -> mm/mprotect.c:679
+[W] Location found through grepping: getpid -> kernel/sys.c:905
+[W] Location found through grepping: gettid -> kernel/sys.c:911
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
 [I] Syscall pkey_mprotect (__ia32_sys_pkey_mprotect) is not really implemented (dummy implementation). Machine code: b8daffffffc3.
 [I] Syscall pkey_alloc (__ia32_sys_pkey_alloc) is not really implemented (dummy implementation). Machine code: b8daffffffc3.

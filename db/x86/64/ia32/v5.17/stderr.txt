@@ -10,6 +10,7 @@ Checking out to v5.17
 [D] Found ni_syscall: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001a10, type=FUNC, size=0x8)
 [D] Found ni_syscall: Symbol("__x64_sys_ni_syscall" at 0xffffffff81001a10, type=FUNC, size=0x8)
 [I] Syscall table (ia32_sys_call_table) is 3608 bytes, 451 entries
+[D] Preferring __x64_sys_ni_syscall over __do_sys_ni_syscall
 [D] Preferring __x64_sys_getpid over __do_sys_getpid
 [D] Preferring __ia32_sys_gettid over __do_sys_gettid
 [D] Preferring __ia32_sys_getegid over __do_sys_getegid
@@ -29,6 +30,7 @@ Checking out to v5.17
 [D] Preferring __ia32_sys_getgid over __do_sys_getgid
 [D] Preferring __ia32_sys_restart_syscall over __do_sys_restart_syscall
 [D] Preferring __x64_sys_setsid over __do_sys_setsid
+[D] Preferring __ia32_sys_ni_syscall over __x64_sys_ni_syscall
 [D] Preferring __ia32_sys_restart_syscall over __x64_sys_restart_syscall
 [D] Preferring __ia32_compat_sys_sigreturn over __do_compat_sys_sigreturn
 [D] Preferring __ia32_compat_sys_rt_sigreturn over __x64_compat_sys_rt_sigreturn
@@ -55,6 +57,7 @@ Checking out to v5.17
 [D] Preferring __ia32_sys_geteuid over __x64_sys_geteuid
 [D] Preferring __ia32_sys_getgid16 over __x64_sys_getgid16
 [D] Preferring __ia32_compat_sys_sigreturn over __x64_compat_sys_sigreturn
+[D] Preferring __ia32_sys_ni_syscall over __x64_sys_ni_syscall
 [D] Preferring __ia32_sys_inotify_init over __x64_sys_inotify_init
 [D] Preferring __ia32_sys_pause over __x64_sys_pause
 [D] Preferring __ia32_sys_vfork over __x64_sys_vfork

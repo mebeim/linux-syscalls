@@ -10,6 +10,7 @@ Checking out to v5.9
 [D] Found ni_syscall: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
 [D] Found ni_syscall: Symbol("__x64_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
 [I] Syscall table (ia32_sys_call_table) is 3520 bytes, 440 entries
+[D] Preferring __x64_sys_ni_syscall over __do_sys_ni_syscall
 [D] Preferring __x64_sys_getpid over __do_sys_getpid
 [D] Preferring __ia32_sys_gettid over __do_sys_gettid
 [D] Preferring __ia32_sys_getegid over __do_sys_getegid
@@ -28,6 +29,7 @@ Checking out to v5.9
 [D] Preferring __ia32_sys_getgid over __do_sys_getgid
 [D] Preferring __ia32_sys_restart_syscall over __do_sys_restart_syscall
 [D] Preferring __x64_sys_setsid over __do_sys_setsid
+[D] Preferring __ia32_sys_ni_syscall over __x64_sys_ni_syscall
 [D] Preferring __ia32_sys_restart_syscall over __x64_sys_restart_syscall
 [D] Preferring __ia32_compat_sys_sigreturn over __do_compat_sys_sigreturn
 [D] Preferring __ia32_compat_sys_rt_sigreturn over __do_compat_sys_rt_sigreturn
@@ -55,6 +57,7 @@ Checking out to v5.9
 [D] Preferring __ia32_sys_sgetmask over __x64_sys_sgetmask
 [D] Preferring __ia32_sys_geteuid over __x64_sys_geteuid
 [D] Preferring __ia32_sys_getgid16 over __x64_sys_getgid16
+[D] Preferring __ia32_sys_ni_syscall over __x64_sys_ni_syscall
 [D] Preferring __ia32_sys_inotify_init over __x64_sys_inotify_init
 [D] Preferring __ia32_sys_pause over __x64_sys_pause
 [D] Preferring __ia32_sys_vfork over __x64_sys_vfork
@@ -78,7 +81,7 @@ Checking out to v5.9
 [D] ia32_sys_call_table[14]: Symbol("__ia32_sys_mknod" at 0xffffffff8122df70, type=FUNC, size=0x63)
 [D] ia32_sys_call_table[15]: Symbol("__ia32_sys_chmod" at 0xffffffff812179d0, type=FUNC, size=0x14)
 [D] ia32_sys_call_table[16]: Symbol("__ia32_sys_lchown16" at 0xffffffff810f8110, type=FUNC, size=0x39)
-[D] ia32_sys_call_table[17]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[17]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
 [D] ia32_sys_call_table[18]: Symbol("__ia32_sys_stat" at 0xffffffff812226c0, type=FUNC, size=0xb)
 [D] ia32_sys_call_table[19]: Symbol("__ia32_compat_sys_lseek" at 0xffffffff81219a30, type=FUNC, size=0x11)
 [D] ia32_sys_call_table[20]: Symbol("__ia32_sys_getpid" at 0xffffffff8107c050, type=FUNC, size=0x18)
@@ -92,11 +95,11 @@ Checking out to v5.9
 [D] ia32_sys_call_table[28]: Symbol("__ia32_sys_fstat" at 0xffffffff81222a80, type=FUNC, size=0xc)
 [D] ia32_sys_call_table[29]: Symbol("__ia32_sys_pause" at 0xffffffff81074e20, type=FUNC, size=0x2e)
 [D] ia32_sys_call_table[30]: Symbol("__ia32_sys_utime32" at 0xffffffff81254b90, type=FUNC, size=0x8f)
-[D] ia32_sys_call_table[31]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
-[D] ia32_sys_call_table[32]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[31]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[32]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
 [D] ia32_sys_call_table[33]: Symbol("__ia32_sys_access" at 0xffffffff81216230, type=FUNC, size=0x13)
 [D] ia32_sys_call_table[34]: Symbol("__ia32_sys_nice" at 0xffffffff81095cc0, type=FUNC, size=0xc9)
-[D] ia32_sys_call_table[35]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[35]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
 [D] ia32_sys_call_table[36]: Symbol("__ia32_sys_sync" at 0xffffffff81254280, type=FUNC, size=0x8)
 [D] ia32_sys_call_table[37]: Symbol("__ia32_sys_kill" at 0xffffffff81079f70, type=FUNC, size=0x97)
 [D] ia32_sys_call_table[38]: Symbol("__ia32_sys_rename" at 0xffffffff8122e6f0, type=FUNC, size=0x1b)
@@ -105,7 +108,7 @@ Checking out to v5.9
 [D] ia32_sys_call_table[41]: Symbol("__ia32_sys_dup" at 0xffffffff8123e3b0, type=FUNC, size=0x80)
 [D] ia32_sys_call_table[42]: Symbol("__ia32_sys_pipe" at 0xffffffff812275e0, type=FUNC, size=0xd)
 [D] ia32_sys_call_table[43]: Symbol("__ia32_compat_sys_times" at 0xffffffff8107c570, type=FUNC, size=0x13a)
-[D] ia32_sys_call_table[44]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[44]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
 [D] ia32_sys_call_table[45]: Symbol("__ia32_sys_brk" at 0xffffffff811dfc90, type=FUNC, size=0x8)
 [D] ia32_sys_call_table[46]: Symbol("__ia32_sys_setgid16" at 0xffffffff810f81d0, type=FUNC, size=0x17)
 [D] ia32_sys_call_table[47]: Symbol("__ia32_sys_getgid16" at 0xffffffff810f86b0, type=FUNC, size=0x37)
@@ -114,12 +117,12 @@ Checking out to v5.9
 [D] ia32_sys_call_table[50]: Symbol("__ia32_sys_getegid16" at 0xffffffff810f86f0, type=FUNC, size=0x37)
 [D] ia32_sys_call_table[51]: Symbol("__ia32_sys_acct" at 0xffffffff810ff890, type=FUNC, size=0x80)
 [D] ia32_sys_call_table[52]: Symbol("__ia32_sys_umount" at 0xffffffff81241fc0, type=FUNC, size=0x62)
-[D] ia32_sys_call_table[53]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[53]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
 [D] ia32_sys_call_table[54]: Symbol("__ia32_compat_sys_ioctl" at 0xffffffff81231dd0, type=FUNC, size=0x11)
 [D] ia32_sys_call_table[55]: Symbol("__ia32_compat_sys_fcntl64" at 0xffffffff81230810, type=FUNC, size=0x11)
-[D] ia32_sys_call_table[56]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[56]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
 [D] ia32_sys_call_table[57]: Symbol("__ia32_sys_setpgid" at 0xffffffff8107c880, type=FUNC, size=0xd)
-[D] ia32_sys_call_table[58]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[58]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
 [D] ia32_sys_call_table[59]: Symbol("__ia32_sys_olduname" at 0xffffffff8107d3d0, type=FUNC, size=0x147)
 [D] ia32_sys_call_table[60]: Symbol("__ia32_sys_umask" at 0xffffffff8107bfd0, type=FUNC, size=0x1f)
 [D] ia32_sys_call_table[61]: Symbol("__ia32_sys_chroot" at 0xffffffff812163c0, type=FUNC, size=0xf5)
@@ -159,7 +162,7 @@ Checking out to v5.9
 [D] ia32_sys_call_table[95]: Symbol("__ia32_sys_fchown16" at 0xffffffff810f8150, type=FUNC, size=0x2e)
 [D] ia32_sys_call_table[96]: Symbol("__ia32_sys_getpriority" at 0xffffffff8107e7a0, type=FUNC, size=0xd)
 [D] ia32_sys_call_table[97]: Symbol("__ia32_sys_setpriority" at 0xffffffff8107d2a0, type=FUNC, size=0x11)
-[D] ia32_sys_call_table[98]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[98]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
 [D] ia32_sys_call_table[99]: Symbol("__ia32_compat_sys_statfs" at 0xffffffff812569c0, type=FUNC, size=0x8)
 [D] ia32_sys_call_table[100]: Symbol("__ia32_compat_sys_fstatfs" at 0xffffffff81256b90, type=FUNC, size=0x9)
 [D] ia32_sys_call_table[101]: Symbol("__ia32_sys_ioperm" at 0xffffffff81020e80, type=FUNC, size=0xf)
@@ -173,8 +176,8 @@ Checking out to v5.9
 [D] ia32_sys_call_table[109]: Symbol("__ia32_sys_uname" at 0xffffffff8107e430, type=FUNC, size=0x8)
 [D] ia32_sys_call_table[110]: Symbol("__ia32_sys_iopl" at 0xffffffff81020b00, type=FUNC, size=0x6b)
 [D] ia32_sys_call_table[111]: Symbol("__ia32_sys_vhangup" at 0xffffffff812165c0, type=FUNC, size=0x1e)
-[D] ia32_sys_call_table[112]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
-[D] ia32_sys_call_table[113]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[112]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[113]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
 [D] ia32_sys_call_table[114]: Symbol("__ia32_compat_sys_wait4" at 0xffffffff8106c980, type=FUNC, size=0x13)
 [D] ia32_sys_call_table[115]: Symbol("__ia32_sys_swapoff" at 0xffffffff811fbd80, type=FUNC, size=0x8)
 [D] ia32_sys_call_table[116]: Symbol("__ia32_compat_sys_sysinfo" at 0xffffffff8107dbe0, type=FUNC, size=0x8)
@@ -188,17 +191,17 @@ Checking out to v5.9
 [D] ia32_sys_call_table[124]: Symbol("__ia32_sys_adjtimex_time32" at 0xffffffff810dd560, type=FUNC, size=0x8)
 [D] ia32_sys_call_table[125]: Symbol("__ia32_sys_mprotect" at 0xffffffff811e30b0, type=FUNC, size=0x16)
 [D] ia32_sys_call_table[126]: Symbol("__ia32_compat_sys_sigprocmask" at 0xffffffff81103bd0, type=FUNC, size=0xb8)
-[D] ia32_sys_call_table[127]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[127]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
 [D] ia32_sys_call_table[128]: Symbol("__ia32_sys_init_module" at 0xffffffff810fde10, type=FUNC, size=0xe)
 [D] ia32_sys_call_table[129]: Symbol("__ia32_sys_delete_module" at 0xffffffff810fb400, type=FUNC, size=0xc)
-[D] ia32_sys_call_table[130]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[130]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
 [D] ia32_sys_call_table[131]: Symbol("__ia32_compat_sys_quotactl32" at 0xffffffff812a4410, type=FUNC, size=0x13)
 [D] ia32_sys_call_table[132]: Symbol("__ia32_sys_getpgid" at 0xffffffff8107ee50, type=FUNC, size=0x62)
 [D] ia32_sys_call_table[133]: Symbol("__ia32_sys_fchdir" at 0xffffffff81216320, type=FUNC, size=0x91)
 [D] ia32_sys_call_table[134]: Symbol("__ia32_sys_bdflush" at 0xffffffff81259840, type=FUNC, size=0x3b)
 [D] ia32_sys_call_table[135]: Symbol("__ia32_sys_sysfs" at 0xffffffff8123ef50, type=FUNC, size=0x71)
 [D] ia32_sys_call_table[136]: Symbol("__ia32_sys_personality" at 0xffffffff81066f80, type=FUNC, size=0x1f)
-[D] ia32_sys_call_table[137]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[137]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
 [D] ia32_sys_call_table[138]: Symbol("__ia32_sys_setfsuid16" at 0xffffffff810f84e0, type=FUNC, size=0x17)
 [D] ia32_sys_call_table[139]: Symbol("__ia32_sys_setfsgid16" at 0xffffffff810f8520, type=FUNC, size=0x17)
 [D] ia32_sys_call_table[140]: Symbol("__ia32_sys_llseek" at 0xffffffff81219a70, type=FUNC, size=0x129)
@@ -210,7 +213,7 @@ Checking out to v5.9
 [D] ia32_sys_call_table[146]: Symbol("__ia32_compat_sys_writev" at 0xffffffff8121b730, type=FUNC, size=0x12)
 [D] ia32_sys_call_table[147]: Symbol("__ia32_sys_getsid" at 0xffffffff8107c900, type=FUNC, size=0x69)
 [D] ia32_sys_call_table[148]: Symbol("__ia32_sys_fdatasync" at 0xffffffff812540e0, type=FUNC, size=0x71)
-[D] ia32_sys_call_table[149]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[149]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
 [D] ia32_sys_call_table[150]: Symbol("__ia32_sys_mlock" at 0xffffffff811dbf70, type=FUNC, size=0x13)
 [D] ia32_sys_call_table[151]: Symbol("__ia32_sys_munlock" at 0xffffffff811dc010, type=FUNC, size=0x7f)
 [D] ia32_sys_call_table[152]: Symbol("__ia32_sys_mlockall" at 0xffffffff811dc3e0, type=FUNC, size=0x9)
@@ -227,10 +230,10 @@ Checking out to v5.9
 [D] ia32_sys_call_table[163]: Symbol("__ia32_sys_mremap" at 0xffffffff811e4a00, type=FUNC, size=0x19)
 [D] ia32_sys_call_table[164]: Symbol("__ia32_sys_setresuid16" at 0xffffffff810f8260, type=FUNC, size=0x34)
 [D] ia32_sys_call_table[165]: Symbol("__ia32_sys_getresuid16" at 0xffffffff810f82a0, type=FUNC, size=0x98)
-[D] ia32_sys_call_table[166]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
-[D] ia32_sys_call_table[167]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[166]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[167]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
 [D] ia32_sys_call_table[168]: Symbol("__ia32_sys_poll" at 0xffffffff81235540, type=FUNC, size=0x129)
-[D] ia32_sys_call_table[169]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[169]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
 [D] ia32_sys_call_table[170]: Symbol("__ia32_sys_setresgid16" at 0xffffffff810f8480, type=FUNC, size=0x34)
 [D] ia32_sys_call_table[171]: Symbol("__ia32_sys_getresgid16" at 0xffffffff810f8340, type=FUNC, size=0x98)
 [D] ia32_sys_call_table[172]: Symbol("__ia32_sys_prctl" at 0xffffffff81081010, type=FUNC, size=0x19)
@@ -249,8 +252,8 @@ Checking out to v5.9
 [D] ia32_sys_call_table[185]: Symbol("__ia32_sys_capset" at 0xffffffff81071d30, type=FUNC, size=0xb)
 [D] ia32_sys_call_table[186]: Symbol("__ia32_compat_sys_sigaltstack" at 0xffffffff81075170, type=FUNC, size=0xe)
 [D] ia32_sys_call_table[187]: Symbol("__ia32_compat_sys_sendfile" at 0xffffffff8121bfe0, type=FUNC, size=0xa9)
-[D] ia32_sys_call_table[188]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
-[D] ia32_sys_call_table[189]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[188]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[189]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
 [D] ia32_sys_call_table[190]: Symbol("__ia32_sys_vfork" at 0xffffffff81066670, type=FUNC, size=0x53)
 [D] ia32_sys_call_table[191]: Symbol("__ia32_compat_sys_getrlimit" at 0xffffffff8107fef0, type=FUNC, size=0x9d)
 [D] ia32_sys_call_table[192]: Symbol("__ia32_sys_mmap_pgoff" at 0xffffffff811de5b0, type=FUNC, size=0x1d)
@@ -283,8 +286,8 @@ Checking out to v5.9
 [D] ia32_sys_call_table[219]: Symbol("__ia32_sys_madvise" at 0xffffffff811f6330, type=FUNC, size=0x46)
 [D] ia32_sys_call_table[220]: Symbol("__ia32_sys_getdents64" at 0xffffffff81232080, type=FUNC, size=0x107)
 [D] ia32_sys_call_table[221]: Symbol("__ia32_compat_sys_fcntl64" at 0xffffffff81230810, type=FUNC, size=0x11)
-[D] ia32_sys_call_table[222]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
-[D] ia32_sys_call_table[223]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[222]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[223]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
 [D] ia32_sys_call_table[224]: Symbol("__ia32_sys_gettid" at 0xffffffff8107c030, type=FUNC, size=0x15)
 [D] ia32_sys_call_table[225]: Symbol("__ia32_sys_ia32_readahead" at 0xffffffff81023630, type=FUNC, size=0x1a)
 [D] ia32_sys_call_table[226]: Symbol("__ia32_sys_setxattr" at 0xffffffff81248760, type=FUNC, size=0x22)
@@ -312,7 +315,7 @@ Checking out to v5.9
 [D] ia32_sys_call_table[248]: Symbol("__ia32_compat_sys_io_submit" at 0xffffffff81275e20, type=FUNC, size=0x11e)
 [D] ia32_sys_call_table[249]: Symbol("__ia32_sys_io_cancel" at 0xffffffff812746c0, type=FUNC, size=0x138)
 [D] ia32_sys_call_table[250]: Symbol("__ia32_sys_ia32_fadvise64" at 0xffffffff810235e0, type=FUNC, size=0x21)
-[D] ia32_sys_call_table[251]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[251]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
 [D] ia32_sys_call_table[252]: Symbol("__ia32_sys_exit_group" at 0xffffffff8106c640, type=FUNC, size=0xf)
 [D] ia32_sys_call_table[253]: Symbol("__ia32_compat_sys_lookup_dcookie" at 0xffffffff812beb40, type=FUNC, size=0x1c)
 [D] ia32_sys_call_table[254]: Symbol("__ia32_sys_epoll_create" at 0xffffffff8126c4f0, type=FUNC, size=0xb8)
@@ -334,7 +337,7 @@ Checking out to v5.9
 [D] ia32_sys_call_table[270]: Symbol("__ia32_sys_tgkill" at 0xffffffff81079650, type=FUNC, size=0x24)
 [D] ia32_sys_call_table[271]: Symbol("__ia32_sys_utimes_time32" at 0xffffffff81254e00, type=FUNC, size=0x10)
 [D] ia32_sys_call_table[272]: Symbol("__ia32_sys_ia32_fadvise64_64" at 0xffffffff81023580, type=FUNC, size=0x2c)
-[D] ia32_sys_call_table[273]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[273]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
 [D] ia32_sys_call_table[274]: Symbol("__ia32_sys_mbind" at 0xffffffff812081d0, type=FUNC, size=0x1d)
 [D] ia32_sys_call_table[275]: Symbol("__ia32_compat_sys_get_mempolicy" at 0xffffffff812069f0, type=FUNC, size=0x10b)
 [D] ia32_sys_call_table[276]: Symbol("__ia32_sys_set_mempolicy" at 0xffffffff81206280, type=FUNC, size=0xf)
@@ -346,7 +349,7 @@ Checking out to v5.9
 [D] ia32_sys_call_table[282]: Symbol("__ia32_compat_sys_mq_getsetattr" at 0xffffffff813b29f0, type=FUNC, size=0xf)
 [D] ia32_sys_call_table[283]: Symbol("__ia32_compat_sys_kexec_load" at 0xffffffff81101fd0, type=FUNC, size=0x1a4)
 [D] ia32_sys_call_table[284]: Symbol("__ia32_compat_sys_waitid" at 0xffffffff8106c530, type=FUNC, size=0x1b)
-[D] ia32_sys_call_table[285]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[285]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
 [D] ia32_sys_call_table[286]: Symbol("__ia32_sys_add_key" at 0xffffffff813b8f10, type=FUNC, size=0x19)
 [D] ia32_sys_call_table[287]: Symbol("__ia32_sys_request_key" at 0xffffffff813b8cc0, type=FUNC, size=0x12)
 [D] ia32_sys_call_table[288]: Symbol("__ia32_compat_sys_keyctl" at 0xffffffff813bcf70, type=FUNC, size=0x1c)
@@ -448,12 +451,12 @@ Checking out to v5.9
 [D] ia32_sys_call_table[384]: Symbol("__ia32_compat_sys_arch_prctl" at 0xffffffff8101c3e0, type=FUNC, size=0x18)
 [D] ia32_sys_call_table[385]: Symbol("__ia32_compat_sys_io_pgetevents" at 0xffffffff81273de0, type=FUNC, size=0x137)
 [D] ia32_sys_call_table[386]: Symbol("__ia32_sys_rseq" at 0xffffffff811a05c0, type=FUNC, size=0x135)
-[D] ia32_sys_call_table[387]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
-[D] ia32_sys_call_table[388]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
-[D] ia32_sys_call_table[389]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
-[D] ia32_sys_call_table[390]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
-[D] ia32_sys_call_table[391]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
-[D] ia32_sys_call_table[392]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[387]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[388]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[389]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[390]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[391]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[392]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
 [D] ia32_sys_call_table[393]: Symbol("__ia32_sys_semget" at 0xffffffff813aabb0, type=FUNC, size=0x83)
 [D] ia32_sys_call_table[394]: Symbol("__ia32_compat_sys_semctl" at 0xffffffff813acd60, type=FUNC, size=0x1b)
 [D] ia32_sys_call_table[395]: Symbol("__ia32_sys_shmget" at 0xffffffff813af8f0, type=FUNC, size=0x72)
@@ -476,7 +479,7 @@ Checking out to v5.9
 [D] ia32_sys_call_table[412]: Symbol("__ia32_sys_utimensat" at 0xffffffff81254920, type=FUNC, size=0xa6)
 [D] ia32_sys_call_table[413]: Symbol("__ia32_compat_sys_pselect6_time64" at 0xffffffff81234520, type=FUNC, size=0x80)
 [D] ia32_sys_call_table[414]: Symbol("__ia32_compat_sys_ppoll_time64" at 0xffffffff81234fa0, type=FUNC, size=0x133)
-[D] ia32_sys_call_table[415]: Symbol("__do_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
+[D] ia32_sys_call_table[415]: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001d20, type=FUNC, size=0x8)
 [D] ia32_sys_call_table[416]: Symbol("__ia32_sys_io_pgetevents" at 0xffffffff81273c00, type=FUNC, size=0x13f)
 [D] ia32_sys_call_table[417]: Symbol("__ia32_compat_sys_recvmmsg_time64" at 0xffffffff818c8b80, type=FUNC, size=0x26)
 [D] ia32_sys_call_table[418]: Symbol("__ia32_sys_mq_timedsend" at 0xffffffff813b37f0, type=FUNC, size=0x99)
@@ -502,7 +505,7 @@ Checking out to v5.9
 [D] ia32_sys_call_table[438]: Symbol("__ia32_sys_pidfd_getfd" at 0xffffffff81088510, type=FUNC, size=0x70)
 [D] ia32_sys_call_table[439]: Symbol("__ia32_sys_faccessat2" at 0xffffffff812161f0, type=FUNC, size=0x14)
 [I] Common syscall symbol prefixes: __ia32_compat_sys_, __ia32_compat_, __ia32_sys_, __ia32_, __
-[I] 32 syscall table entries point to __do_sys_ni_syscall
+[I] 32 syscall table entries point to __ia32_sys_ni_syscall
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/hdd-stuff/kernels/systrack-0.2/vmlinux-x86-64-v5.9'), '0xffffffff810743d0', '0xffffffff8106b440', '0xffffffff81066620', '0xffffffff8121d270', '0xffffffff8121d370', '0xffffffff81218750', '0xffffffff81216530', '0xffffffff8106c8c0', '0xffffffff812184b0', '0xffffffff8122ee50', '0xffffffff8122f8c0', '0xffffffff81224da0', '0xffffffff81216250', '0xffffffff810dc310', '0xffffffff8122df70', '0xffffffff812179d0', '0xffffffff810f8110', '0xffffffff812226c0', '0xffffffff81219a30', '0xffffffff8107c050', '0xffffffff8128bfd0', '0xffffffff81242090', '0xffffffff810f8240', '0xffffffff810f8630', '0xffffffff810dc430', '0xffffffff81073160', '0xffffffff810ee690', '0xffffffff81222a80', '0xffffffff81074e20', '0xffffffff81254b90', '0xffffffff81216230', '0xffffffff81095cc0', '0xffffffff81254280', '0xffffffff81079f70', '0xffffffff8122e6f0', '0xffffffff8122dc00', '0xffffffff8122f4e0', '0xffffffff8123e3b0', '0xffffffff812275e0', '0xffffffff8107c570', '0xffffffff811dfc90', '0xffffffff810f81d0', '0xffffffff810f86b0', '0xffffffff8107b970', '0xffffffff810f8670', '0xffffffff810f86f0', '0xffffffff810ff890', '0xffffffff81241fc0', '0xffffffff81231dd0', '0xffffffff81230810', '0xffffffff8107c880', '0xffffffff8107d3d0', '0xffffffff8107bfd0', '0xffffffff812163c0', '0xffffffff812565d0', '0xffffffff8123dc00', '0xffffffff8107c070', '0xffffffff8107e820', '0xffffffff8107fbd0', '0xffffffff8107b940', '0xffffffff81074490', '0xffffffff81076620', '0xffffffff810f81f0', '0xffffffff810f8180', '0xffffffff81076840', '0xffffffff81074960', '0xffffffff8107ca30', '0xffffffff8107fe50', '0xffffffff8107c290', '0xffffffff81080a60', '0xffffffff810dc5c0', '0xffffffff810dcfd0', '0xffffffff810f83e0', '0xffffffff810f8540', '0xffffffff812342b0', '0xffffffff8122e140', '0xffffffff81222750', '0xffffffff81222160', '0xffffffff812242f0', '0xffffffff811fce80', '0xffffffff8108ff90', '0xffffffff81232690', '0xffffffff810236b0', '0xffffffff811dfd70', '0xffffffff812174f0', '0xffffffff81217710', '0xffffffff812179f0', '0xffffffff810f8150', '0xffffffff8107e7a0', '0xffffffff8107d2a0', '0xffffffff812569c0', '0xffffffff81256b90', '0xffffffff81020e80', '0xffffffff818c8ee0', '0xffffffff810bea80', '0xffffffff810ee860', '0xffffffff810ee180', '0xffffffff812223b0', '0xffffffff812224d0', '0xffffffff812229e0', '0xffffffff8107e430', '0xffffffff81020b00', '0xffffffff812165c0', '0xffffffff8106c980', '0xffffffff811fbd80', '0xffffffff8107dbe0', '0xffffffff813b1270', '0xffffffff81254000', '0xffffffff8105fef0', '0xffffffff810237c0', '0xffffffff8107cc50', '0xffffffff8107e300', '0xffffffff81022530', '0xffffffff810dd560', '0xffffffff811e30b0', '0xffffffff81103bd0', '0xffffffff810fde10', '0xffffffff810fb400', '0xffffffff812a4410', '0xffffffff8107ee50', '0xffffffff81216320', '0xffffffff81259840', '0xffffffff8123ef50', '0xffffffff81066f80', '0xffffffff810f84e0', '0xffffffff810f8520', '0xffffffff81219a70', '0xffffffff812327f0', '0xffffffff81234270', '0xffffffff8128b390', '0xffffffff811e4c60', '0xffffffff8121ab00', '0xffffffff8121b730', '0xffffffff8107c900', '0xffffffff812540e0', '0xffffffff811dbf70', '0xffffffff811dc010', '0xffffffff811dc3e0', '0xffffffff811dc3f0', '0xffffffff81096ba0', '0xffffffff81093ba0', '0xffffffff81096b60', '0xffffffff81093b40', '0xffffffff81095610', '0xffffffff81091f80', '0xffffffff81091fc0', '0xffffffff810958a0', '0xffffffff810e1a90', '0xffffffff811e4a00', '0xffffffff810f8260', '0xffffffff810f82a0', '0xffffffff81235540', '0xffffffff810f8480', '0xffffffff810f8340', '0xffffffff81081010', '0xffffffff8105ffc0', '0xffffffff8107b660', '0xffffffff81076ae0', '0xffffffff81075520', '0xffffffff81075f30', '0xffffffff81079bd0', '0xffffffff810767a0', '0xffffffff81023540', '0xffffffff81023560', '0xffffffff810f80d0', '0xffffffff81255800', '0xffffffff81071b30', '0xffffffff81071d30', '0xffffffff81075170', '0xffffffff8121bfe0', '0xffffffff81066670', '0xffffffff8107fef0', '0xffffffff811de5b0', '0xffffffff810234e0', '0xffffffff81023520', '0xffffffff81023970', '0xffffffff81023a00', '0xffffffff81023b30', '0xffffffff81217df0', '0xffffffff8107bf30', '0xffffffff8107bf70', '0xffffffff8107bf50', '0xffffffff8107bf90', '0xffffffff8107f5a0', '0xffffffff8107f360', '0xffffffff81091a00', '0xffffffff81091bc0', '0xffffffff81217f50', '0xffffffff8107f7e0', '0xffffffff8107c1b0', '0xffffffff8107f940', '0xffffffff8107c220', '0xffffffff81217db0', '0xffffffff8107f690', '0xffffffff8107f440', '0xffffffff8107fa10', '0xffffffff8107fad0', '0xffffffff812451e0', '0xffffffff811db1a0', '0xffffffff811f6330', '0xffffffff81232080', '0xffffffff81230810', '0xffffffff8107c030', '0xffffffff81023630', '0xffffffff81248760', '0xffffffff812487c0', '0xffffffff812487e0', '0xffffffff81247eb0', '0xffffffff81247ef0', '0xffffffff81247f10', '0xffffffff81247410', '0xffffffff81247450', '0xffffffff81247890', '0xffffffff812477b0', '0xffffffff812477f0', '0xffffffff812479b0', '0xffffffff810796a0', '0xffffffff8121bf20', '0xffffffff810f70f0', '0xffffffff81103ff0', '0xffffffff81104150', '0xffffffff8102e330', '0xffffffff8102e0b0', '0xffffffff812750a0', '0xffffffff812739e0', '0xffffffff81273d40', '0xffffffff81275e20', '0xffffffff812746c0', '0xffffffff810235e0', '0xffffffff8106c640', '0xffffffff812beb40', '0xffffffff8126c4f0', '0xffffffff8126d350', '0xffffffff8126bbd0', '0xffffffff811e0d30', '0xffffffff810633d0', '0xffffffff810eaa50', '0xffffffff810e9c40', '0xffffffff810e9b00', '0xffffffff810e9930', '0xffffffff810e9d30', '0xffffffff810eb1c0', '0xffffffff810eaf00', '0xffffffff810eb480', '0xffffffff810eb9a0', '0xffffffff81256c10', '0xffffffff81256cb0', '0xffffffff81079650', '0xffffffff81254e00', '0xffffffff81023580', '0xffffffff812081d0', '0xffffffff812069f0', '0xffffffff81206280', '0xffffffff813b21f0', '0xffffffff813b2b00', '0xffffffff813b3890', '0xffffffff813b4720', '0xffffffff813b3f90', '0xffffffff813b29f0', '0xffffffff81101fd0', '0xffffffff8106c530', '0xffffffff813b8f10', '0xffffffff813b8cc0', '0xffffffff813bcf70', '0xffffffff81418ea0', '0xffffffff81418b80', '0xffffffff812683d0', '0xffffffff81267ea0', '0xffffffff81268320', '0xffffffff81205dd0', '0xffffffff812187e0', '0xffffffff8122dbd0', '0xffffffff8122de20', '0xffffffff81217d70', '0xffffffff81254dd0', '0xffffffff81023a90', '0xffffffff8122f870', '0xffffffff8122e6b0', '0xffffffff8122ee10', '0xffffffff8122e110', '0xffffffff81222120', '0xffffffff81217990', '0xffffffff812161b0', '0xffffffff812345a0', '0xffffffff81234e60', '0xffffffff81066db0', '0xffffffff810f3360', '0xffffffff810f34c0', '0xffffffff81253630', '0xffffffff81023650', '0xffffffff81253b00', '0xffffffff81252370', '0xffffffff812143d0', '0xffffffff8107cfc0', '0xffffffff8126bbf0', '0xffffffff81254c20', '0xffffffff8126dec0', '0xffffffff8126e7b0', '0xffffffff8126f550', '0xffffffff81023680', '0xffffffff8126e580', '0xffffffff8126f010', '0xffffffff8126da90', '0xffffffff8126f530', '0xffffffff8126bf10', '0xffffffff8123dbe0', '0xffffffff812275c0', '0xffffffff81267b10', '0xffffffff8121abd0', '0xffffffff8121b800', '0xffffffff810797d0', '0xffffffff81195ac0', '0xffffffff818c8be0', '0xffffffff8126a220', '0xffffffff81269ea0', '0xffffffff81080250', '0xffffffff81296f30', '0xffffffff81296d80', '0xffffffff810ebba0', '0xffffffff81253e80', '0xffffffff818c8a70', '0xffffffff8108e4f0', '0xffffffff811ee330', '0xffffffff811ee360', '0xffffffff810daf70', '0xffffffff810fdf20', '0xffffffff81096800', '0xffffffff81094640', '0xffffffff8122e670', '0xffffffff81127d70', '0xffffffff81539420', '0xffffffff81215940', '0xffffffff81162040', '0xffffffff81224df0', '0xffffffff8186d170', '0xffffffff8186d410', '0xffffffff8186d540', '0xffffffff8186da30', '0xffffffff8186d610', '0xffffffff8186d890', '0xffffffff8186e280', '0xffffffff8186e160', '0xffffffff8186db30', '0xffffffff8186dc30', '0xffffffff8186ddd0', '0xffffffff818c8a30', '0xffffffff818c8b20', '0xffffffff818c8ab0', '0xffffffff8186e330', '0xffffffff8126fd40', '0xffffffff810b0080', '0xffffffff811dbf90', '0xffffffff8121c960', '0xffffffff8121ac10', '0xffffffff8121b840', '0xffffffff811e30f0', '0xffffffff811e1bf0', '0xffffffff811e1d10', '0xffffffff81222b30', '0xffffffff8101c3e0', '0xffffffff81273de0', '0xffffffff811a05c0', '0xffffffff813aabb0', '0xffffffff813acd60', '0xffffffff813af8f0', '0xffffffff813afcf0', '0xffffffff813b0e30', '0xffffffff813b1080', '0xffffffff813a9550', '0xffffffff813aa1d0', '0xffffffff813a9c90', '0xffffffff813a9360', '0xffffffff810eae50', '0xffffffff810eb110', '0xffffffff810eb630', '0xffffffff810eb3d0', '0xffffffff810eb880', '0xffffffff810e9aa0', '0xffffffff810e9fd0', '0xffffffff8126efb0', '0xffffffff8126e4f0', '0xffffffff81254920', '0xffffffff81234520', '0xffffffff81234fa0', '0xffffffff81273c00', '0xffffffff818c8b80', '0xffffffff813b37f0', '0xffffffff813b4680', '0xffffffff813ae210', '0xffffffff81075e80', '0xffffffff810f6f90', '0xffffffff81095840', '0xffffffff8107b300', '0xffffffff81281c40', '0xffffffff81284d00', '0xffffffff8127d120', '0xffffffff812427d0', '0xffffffff81243770', '0xffffffff81259250', '0xffffffff81259060', '0xffffffff81242e20', '0xffffffff81259240', '0xffffffff810882b0', '0xffffffff810668a0', '0xffffffff812165a0', '0xffffffff812182d0', '0xffffffff81088510', '0xffffffff812161f0']
 [D] Location needs adjustment (bad): restart_syscall (__ia32_sys_restart_syscall) -> arch/x86/include/asm/current.h:13
 [D] Location needs adjustment (bad): getpid (__ia32_sys_getpid) -> include/linux/sched.h:1415
