@@ -1,3 +1,5 @@
+'use strict'
+
 const tableEl        = document.getElementsByTagName('table')[0]
 const themeToggleEl  = document.getElementById('theme-toggle')
 const tagSelectEl    = document.getElementById('tag-select')
@@ -403,8 +405,10 @@ function tagSelectChangeHandler() {
 }
 
 function historyPopStateHandler(e) {
-	if (!(e.state instanceof Array) || e.state.length != 4)
+	if (!(e.state instanceof Array) || e.state.length != 4) {
+		console.error('Bad history event state:', e.state)
 		return
+	}
 
 	if (setSelection(...e.state)) {
 		beforeUpdate()
