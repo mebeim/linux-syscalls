@@ -137,7 +137,7 @@ function humanArchName(name, bits) {
 function humanAbiName(abi) {
 	// x86
 	if (abi === 'x64')
-		return 'x84-64'
+		return 'x86-64'
 	if (abi === 'ia32')
 		return 'IA-32'
 	// arm64
@@ -148,7 +148,7 @@ function humanAbiName(abi) {
 		return abi.toUpperCase()
 	// mips
 	if (abi === 'o32' || abi === 'o64' || abi === 'n64' || abi == 'n32')
-		return abi[0].toUpperCase() + abi.slice(1)
+		return abi.toUpperCase()
 	return abi
 }
 
