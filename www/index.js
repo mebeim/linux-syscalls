@@ -231,7 +231,6 @@ function fillRow(row, tag, sc, maxArgs) {
 	const sym  = document.createElement('td')
 	const loc  = document.createElement('td')
 	const kcfg = document.createElement('td')
-	const link = document.createElement('a')
 	let argsLeft = sc.signature?.length ? maxArgs - sc.signature?.length : maxArgs;
 
 	row.addEventListener('click', highlightRow)
@@ -247,19 +246,28 @@ function fillRow(row, tag, sc, maxArgs) {
 	name.textContent = sc.name
 	sym.textContent  = sc.symbol
 	kcfg.textContent = sc.kconfig ?? ''
-	link.target = '_blank'
-	link.title = 'View in Bootlin Elixir cross referencer'
 
 	if (sc.esoteric) {
 		name.title = 'This syscall is esoteric: it only exists on this architecture and has a special definition'
 		name.classList.add('esoteric')
 	}
 
-	if (sc.file && sc.line !== null) {
-		link.href = `https://elixir.bootlin.com/linux/${tag}/source/${sc.file}#L${sc.line}`
-		link.textContent = `${sc.file}:${sc.line}`
-		loc.appendChild(link)
+	if (sc.file) {
+		if (sc.file.startsWith('/')) {
+			// Absolute path (possibly broken or poiting to a file generated at
+			// build-time), can't link to it.
+			loc.textContent = `${sc.file}:${sc.line}`
+		} else {
+			const link = document.createElement('a')
+			link.target = '_blank'
+			link.title = 'View in Bootlin Elixir cross referencer'
+			link.href = `https://elixir.bootlin.com/linux/${tag}/source/${sc.file}#L${sc.line}`
+			link.textContent = `${sc.file}:${sc.line}`
+			loc.appendChild(link)
+		}
+	}
 
+	if (sc.file && sc.line !== null) {
 		if (!sc.good_location) {
 			loc.title = 'This syscall definition is not standard, the identified location may be inaccurate'
 			loc.classList.add('bad')
@@ -268,9 +276,6 @@ function fillRow(row, tag, sc, maxArgs) {
 			loc.classList.add('bad')
 		}
 	} else if (sc.file) {
-		link.href = `https://elixir.bootlin.com/linux/${tag}/source/${sc.file}`
-		link.textContent = `${sc.file}:??`
-		loc.appendChild(link)
 		loc.title = 'The syscall definition could not be located within this file, the identified location may be inaccurate'
 		loc.classList.add('bad')
 	} else {
