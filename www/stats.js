@@ -25,10 +25,22 @@ function historyChangeHandler(e) {
 	plausible('pageview', {u: window.location.origin + '/table/' + e.state.join('/')})
 }
 
+function historyReplaceStateHandler(e) {
+	if (window.homepageVisit) {
+		// If the user landed on the homepage, ignore first pushState event to
+		// update to the default syscall table and count it as a homepage visit.
+		window.homepageVisit = false
+		plausible('pageview', {u: window.location.origin})
+		return
+	}
+
+	historyChangeHandler(e)
+}
+
 wrapHistory()
 window.addEventListener('popstate', historyChangeHandler)
 window.addEventListener('pushstate', historyChangeHandler)
-window.addEventListener('replacestate', historyChangeHandler)
+window.addEventListener('replacestate', historyReplaceStateHandler)
 
 if (!window.plausible)
 	window.plausible = function() { (window.plausible.q = window.plausible.q || []).push(arguments) }

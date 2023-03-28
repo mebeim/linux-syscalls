@@ -461,16 +461,17 @@ async function setup() {
 
 	// TODO: sort these according to some arbitrary "nice" order?
 	fillArchOptions(archs)
+	selectArch(...archs[0])
 
 	// Restore table from query string if possible
 	if (location.search) {
 		const selection = queryStringToSelection(location.search)
 		if (selection)
 			setSelection(...selection)
-	} else {
-		// Otherwise just pick the first arch/bits/abi combo in the list
-		selectArch(...archs[0])
 	}
+
+	// Distinguish visits to / from visits to a specific table
+	window.homepageVisit = !location.search
 
 	update(true)
 	restoreTheme()
