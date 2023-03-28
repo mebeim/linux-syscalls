@@ -39,8 +39,13 @@ function setSelection(arch, bits, abi, tag) {
 	let tagOpt = null
 
 	// Ensure this combination exists
-	if (!db[arch]?.[bits]?.[abi]?.[tag])
+	if (!db[arch]?.[bits]?.[abi]?.[tag]) {
+		console.log('setSelection(): bad selection:', arch, bits, abi, tag)
 		return false
+	}
+
+	// Populate tags for this arch/bits/abi combo
+	selectArch(arch, bits, abi)
 
 	// Select the right <option> element to match arch/bits/abi
 	for (let i = 0; i < archSelectEl.options.length; i++) {
@@ -392,9 +397,16 @@ async function update(pushHistoryState) {
 }
 
 function selectArch(arch, bits, abi) {
-	const tags = Object.keys(db[arch][bits][abi])
+	const abiIndex = db[arch]?.[bits]?.[abi]
+	if (!abiIndex) {
+		console.error('selectArch(): bad arch/bits/abi combo:', arch, bits, abi)
+		return false
+	}
+
+	const tags = Object.keys(abiIndex)
 	tags.sort(compareTags)
 	fillTagOptions(tags)
+	return true
 }
 
 function archSelectChangeHandler(e) {
@@ -449,13 +461,15 @@ async function setup() {
 
 	// TODO: sort these according to some arbitrary "nice" order?
 	fillArchOptions(archs)
-	selectArch(...archs[0])
 
 	// Restore table from query string if possible
 	if (location.search) {
 		const selection = queryStringToSelection(location.search)
 		if (selection)
 			setSelection(...selection)
+	} else {
+		// Otherwise just pick the first arch/bits/abi combo in the list
+		selectArch(...archs[0])
 	}
 
 	update(true)
