@@ -35,17 +35,18 @@ function getSelection() {
 }
 
 function setSelection(arch, bits, abi, tag) {
+	const abidb = db[arch]?.[bits]?.[abi]
 	let archOpt = null
 	let tagOpt = null
 
-	// Ensure this combination exists
-	if (!db[arch]?.[bits]?.[abi]?.[tag]) {
-		console.log('setSelection(): bad selection:', arch, bits, abi, tag)
+	// Ensure this arch/bits/abi combo exists
+	if (!abidb) {
+		console.log('setSelection(): bad selection:', arch, bits, abi)
 		return false
 	}
 
 	// Populate tags for this arch/bits/abi combo
-	selectArch(arch, bits, abi)
+	fillTagOptionsForArch(arch, bits, abi)
 
 	// Select the right <option> element to match arch/bits/abi
 	for (let i = 0; i < archSelectEl.options.length; i++) {
@@ -54,6 +55,24 @@ function setSelection(arch, bits, abi, tag) {
 			archOpt = opt
 			break
 		}
+	}
+
+	// Sanity check
+	if (!archOpt) {
+		console.error('setSelection(): could not find correct <option> element for', arch, bits, abi)
+		return false
+	}
+
+	archSelectEl.selectedOptions[0].selected = false
+	archOpt.selected = true
+
+	if (tag === undefined)
+		return true
+
+	// Ensure this tag exists for the chosen arch/bits/abi combo
+	if (!abidb[tag]) {
+		console.log(`setSelection(): bad tag for ${arch}/${bits}/${abi}:`, tag)
+		return false
 	}
 
 	// Select the right <option> element to match tag
@@ -65,15 +84,13 @@ function setSelection(arch, bits, abi, tag) {
 		}
 	}
 
-	// Sanity check, ensure the <option> elements are actually found
+	// Sanity check
 	if (!archOpt || !tagOpt) {
 		console.error('setSelection(): could not find correct <option> elements for', arch, bits, abi, tag)
 		return false
 	}
 
-	archSelectEl.selectedOptions[0].selected = false
 	tagSelectEl.selectedOptions[0].selected = false
-	archOpt.selected = true
 	tagOpt.selected = true
 	return true
 }
@@ -157,6 +174,14 @@ function humanAbiName(abi) {
 	return abi
 }
 
+function favoriteArch(archs) {
+	for (const [arch, bits, abi] of archs) {
+		if (arch === 'x86' && bits === '64' && abi === 'x64')
+			return [arch, bits, abi]
+	}
+	return archs[0]
+}
+
 function fillArchOptions(archs) {
 	clearOptions(archSelectEl)
 	archs.forEach(([arch, bits, abi]) => {
@@ -184,6 +209,19 @@ function fillTagOptions(tags) {
 
 		tagSelectEl.add(opt)
 	})
+}
+
+function fillTagOptionsForArch(arch, bits, abi) {
+	const abidb = db[arch]?.[bits]?.[abi]
+	if (!abidb) {
+		console.error('fillTagOptionsForArch(): bad arch/bits/abi combo:', arch, bits, abi)
+		return false
+	}
+
+	const tags = Object.keys(abidb)
+	tags.sort(compareTags)
+	fillTagOptions(tags)
+	return true
 }
 
 function highlightRow(e) {
@@ -396,23 +434,10 @@ async function update(pushHistoryState) {
 	}
 }
 
-function selectArch(arch, bits, abi) {
-	const abiIndex = db[arch]?.[bits]?.[abi]
-	if (!abiIndex) {
-		console.error('selectArch(): bad arch/bits/abi combo:', arch, bits, abi)
-		return false
-	}
-
-	const tags = Object.keys(abiIndex)
-	tags.sort(compareTags)
-	fillTagOptions(tags)
-	return true
-}
-
 function archSelectChangeHandler(e) {
 	beforeUpdate()
 	const opt = e.target.selectedOptions[0]
-	selectArch(opt.dataset.arch, opt.dataset.bits, opt.dataset.abi)
+	fillTagOptionsForArch(opt.dataset.arch, opt.dataset.bits, opt.dataset.abi)
 	update(true).then(afterUpdate)
 }
 
@@ -459,9 +484,10 @@ async function setup() {
 		}
 	}
 
-	// TODO: sort these according to some arbitrary "nice" order?
+	const favorite = favoriteArch(archs)
 	fillArchOptions(archs)
-	selectArch(...archs[0])
+	fillTagOptionsForArch(...favorite)
+	setSelection(...favorite)
 
 	// Restore table from query string if possible
 	if (location.search) {
