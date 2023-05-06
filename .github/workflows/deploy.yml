@@ -1,5 +1,5 @@
-# Build web database under www/db/ and then deploy the contents of www/ to
-# Github Pages as a static website
+# Build static website (DB and whatever else) under www/ and deploy its contents
+# to Github Pages
 
 name: Deploy to GitHub Pages
 
@@ -29,8 +29,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Install build dependencies
+        run: python3 -m pip install --upgrade fonttools[woff]
       - name: Build web DB
         run: ./scripts/build_web_db.py
+      - name: Build web fonts
+        run: ./scripts/build_web_fonts.sh
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload Pages artifact

@@ -3,7 +3,6 @@
 # This scipt will build a DB that is ready for deployment under www/. It will:
 #
 # - Recursively copy the db/ directory into www/
-# - Minify all table.json files in the db to save space
 # - Build a JSON index of available archs/ABIs/kernel versions
 #
 # We expect a DB directory structure as follows:
@@ -98,22 +97,19 @@ def main() -> int:
 					tablefile = tagdir / 'table.json'
 
 					with tablefile.open() as f:
-						# Sanity check: make sure arch, bits and abi match the
-						# ones in "table.json".
 						data = load(f)
-						kern = data['kernel']
-						want = (arch, int(bits), abi)
-						have = (kern['architecture']['name'], kern['architecture']['bits'], kern['abi']['name'])
 
-						for what, w, h in zip(('arch', 'bits', 'abi'), want, have):
-							if w != h:
-								eprint(f'Mismatched {what} for {tablefile}')
-								eprint(f'Expected {w}, but have {h} inside the file.')
-								abort()
+					# Sanity check: make sure arch, bits and abi match the ones
+					# in "table.json".
+					kern = data['kernel']
+					want = (arch, int(bits), abi)
+					have = (kern['architecture']['name'], kern['architecture']['bits'], kern['abi']['name'])
 
-					# Overwrite original with minified version
-					with tablefile.open('w') as f:
-						dump(data, f, sort_keys=True, separators=(',', ':'))
+					for what, w, h in zip(('arch', 'bits', 'abi'), want, have):
+						if w != h:
+							eprint(f'Mismatched {what} for {tablefile}')
+							eprint(f'Expected {w}, but have {h} inside the file.')
+							abort()
 
 	with (rootdir / 'index.json').open('w') as f:
 		dump(index, f, sort_keys=True, separators=(',', ':'))
