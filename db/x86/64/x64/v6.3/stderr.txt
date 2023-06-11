@@ -3,12 +3,11 @@
 Detected kernel version: 6.3.0 (from vmlinux)
 [D] Arch: ArchX86(name='x86', abi='x64', compat=False, ...)
 [D] Syscall table: Symbol("sys_call_table" at 0xffffffff82000180, type=OBJECT, size=0xe18)
+[I] Syscall table (sys_call_table) is 3608 bytes, 451 entries
 [D] Found ni_syscall: Symbol("__do_sys_ni_syscall" at 0xffffffff810026b0, type=FUNC, size=0xc)
 [D] Found ni_syscall: Symbol("sys_ni_syscall" at 0xffffffff8109f3a0, type=FUNC, size=0xc)
 [D] Found ni_syscall: Symbol("__ia32_sys_ni_syscall" at 0xffffffff810026b0, type=FUNC, size=0xc)
 [D] Found ni_syscall: Symbol("__x64_sys_ni_syscall" at 0xffffffff810026b0, type=FUNC, size=0xc)
-[I] Syscall table (sys_call_table) is 3608 bytes, 451 entries
-[D] Preferring __x64_sys_ni_syscall over __do_sys_ni_syscall
 [D] Preferring __x64_sys_getpid over __do_sys_getpid
 [D] Preferring __do_sys_gettid over __ia32_sys_gettid
 [D] Preferring __do_sys_getegid over __ia32_sys_getegid
@@ -26,7 +25,7 @@ Detected kernel version: 6.3.0 (from vmlinux)
 [D] Preferring __do_sys_getgid over __ia32_sys_getgid
 [D] Preferring __do_sys_restart_syscall over __ia32_sys_restart_syscall
 [D] Preferring __x64_sys_setsid over __do_sys_setsid
-[D] Preferring __x64_sys_ni_syscall over __ia32_sys_ni_syscall
+[D] Preferring __do_sys_ni_syscall over __ia32_sys_ni_syscall
 [D] Preferring __x64_sys_restart_syscall over __do_sys_restart_syscall
 [D] Preferring __x64_sys_sync over __do_sys_sync
 [D] Preferring __x64_sys_getpgrp over __do_sys_getpgrp
@@ -43,6 +42,7 @@ Detected kernel version: 6.3.0 (from vmlinux)
 [D] Preferring __x64_sys_geteuid over __do_sys_geteuid
 [D] Preferring __x64_sys_geteuid over __ia32_sys_geteuid
 [D] Preferring __x64_sys_rt_sigreturn over __do_sys_rt_sigreturn
+[D] Preferring __x64_sys_ni_syscall over __do_sys_ni_syscall
 [D] Preferring __x64_sys_inotify_init over __ia32_sys_inotify_init
 [D] Preferring __x64_sys_pause over __ia32_sys_pause
 [D] Preferring __x64_sys_vfork over __ia32_sys_vfork

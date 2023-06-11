@@ -1,6 +1,7 @@
 {
 	"kernel": {
 		"abi": {
+			"bits": 32,
 			"calling_convention": {
 				"parameters": [
 					"a0",
@@ -14,6 +15,7 @@
 				],
 				"syscall_nr": "v0"
 			},
+			"compat": true,
 			"name": "o32"
 		},
 		"architecture": {
@@ -57,16 +59,16 @@
 		},
 		{
 			"esoteric": false,
-			"file": "??",
-			"good_location": false,
-			"grepped_location": false,
+			"file": "kernel/fork.c",
+			"good_location": true,
+			"grepped_location": true,
 			"index": 2,
-			"kconfig": null,
-			"line": "?",
-			"name": "sys_fork",
+			"kconfig": "MMU",
+			"line": 2556,
+			"name": "fork",
 			"number": 4002,
-			"origname": "sys_fork",
-			"signature": null,
+			"origname": "fork",
+			"signature": [],
 			"symbol": "__sys_fork"
 		},
 		{
@@ -1720,16 +1722,22 @@
 		},
 		{
 			"esoteric": false,
-			"file": "??",
-			"good_location": false,
-			"grepped_location": false,
+			"file": "kernel/fork.c",
+			"good_location": true,
+			"grepped_location": true,
 			"index": 120,
 			"kconfig": null,
-			"line": "?",
-			"name": "sys_clone",
+			"line": 2585,
+			"name": "clone",
 			"number": 4120,
-			"origname": "sys_clone",
-			"signature": null,
+			"origname": "clone",
+			"signature": [
+				"unsigned long clone_flags",
+				"unsigned long newsp",
+				"int *parent_tidptr",
+				"unsigned long tls",
+				"int *child_tidptr"
+			],
 			"symbol": "__sys_clone"
 		},
 		{
@@ -2153,16 +2161,20 @@
 		},
 		{
 			"esoteric": false,
-			"file": "??",
-			"good_location": false,
-			"grepped_location": false,
+			"file": "arch/mips/kernel/syscall.c",
+			"good_location": true,
+			"grepped_location": true,
 			"index": 149,
 			"kconfig": null,
-			"line": "?",
-			"name": "sys_sysmips",
+			"line": 207,
+			"name": "sysmips",
 			"number": 4149,
-			"origname": "sys_sysmips",
-			"signature": null,
+			"origname": "sysmips",
+			"signature": [
+				"long cmd",
+				"long arg1",
+				"long arg2"
+			],
 			"symbol": "__sys_sysmips"
 		},
 		{
@@ -6672,16 +6684,19 @@
 		},
 		{
 			"esoteric": false,
-			"file": "??",
-			"good_location": false,
-			"grepped_location": false,
+			"file": "kernel/fork.c",
+			"good_location": true,
+			"grepped_location": true,
 			"index": 435,
 			"kconfig": null,
-			"line": "?",
-			"name": "sys_clone3",
+			"line": 2759,
+			"name": "clone3",
 			"number": 4435,
-			"origname": "sys_clone3",
-			"signature": null,
+			"origname": "clone3",
+			"signature": [
+				"struct clone_args *uargs",
+				"size_t size"
+			],
 			"symbol": "__sys_clone3"
 		},
 		{
@@ -6820,5 +6835,5 @@
 			"symbol": "sys_mount_setattr"
 		}
 	],
-	"systrack_version": "0.2.1"
+	"systrack_version": "0.3-rc1"
 }

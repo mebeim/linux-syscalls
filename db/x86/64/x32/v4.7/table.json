@@ -1,6 +1,7 @@
 {
 	"kernel": {
 		"abi": {
+			"bits": 64,
 			"calling_convention": {
 				"parameters": [
 					"rdi",
@@ -12,6 +13,7 @@
 				],
 				"syscall_nr": "rax"
 			},
+			"compat": true,
 			"name": "x32"
 		},
 		"architecture": {
@@ -292,12 +294,12 @@
 		},
 		{
 			"esoteric": false,
-			"file": "/dev/shm/kbuild/arch/x86/include/generated/asm/syscalls_64.h",
+			"file": "arch/x86/include/generated/asm/syscalls_64.h",
 			"good_location": false,
 			"grepped_location": false,
 			"index": 15,
 			"kconfig": null,
-			"line": "16",
+			"line": 16,
 			"name": "rt_sigreturn",
 			"number": 1073741839,
 			"origname": "rt_sigreturn",
@@ -5718,16 +5720,20 @@
 		},
 		{
 			"esoteric": false,
-			"file": "/dev/shm/kbuild/arch/x86/include/generated/asm/syscalls_64.h",
-			"good_location": false,
-			"grepped_location": false,
+			"file": "fs/exec.c",
+			"good_location": true,
+			"grepped_location": true,
 			"index": 520,
 			"kconfig": null,
-			"line": "340",
-			"name": "ptregs_compat_sys_execve",
+			"line": 1823,
+			"name": "execve",
 			"number": 1073742344,
-			"origname": "ptregs_compat_sys_execve",
-			"signature": null,
+			"origname": "execve",
+			"signature": [
+				"const char *filename",
+				"const char *const *argv",
+				"const char *const *envp"
+			],
 			"symbol": "ptregs_compat_sys_execve"
 		},
 		{
@@ -6188,18 +6194,24 @@
 		},
 		{
 			"esoteric": false,
-			"file": "/dev/shm/kbuild/arch/x86/include/generated/asm/syscalls_64.h",
-			"good_location": false,
-			"grepped_location": false,
+			"file": "fs/exec.c",
+			"good_location": true,
+			"grepped_location": true,
 			"index": 545,
 			"kconfig": null,
-			"line": "421",
-			"name": "ptregs_compat_sys_execveat",
+			"line": 1831,
+			"name": "execveat",
 			"number": 1073742369,
-			"origname": "ptregs_compat_sys_execveat",
-			"signature": null,
+			"origname": "execveat",
+			"signature": [
+				"int fd",
+				"const char *filename",
+				"const char *const *argv",
+				"const char *const *envp",
+				"int flags"
+			],
 			"symbol": "ptregs_compat_sys_execveat"
 		}
 	],
-	"systrack_version": "0.2.1"
+	"systrack_version": "0.3-rc1"
 }

@@ -1,6 +1,7 @@
 {
 	"kernel": {
 		"abi": {
+			"bits": 32,
 			"calling_convention": {
 				"parameters": [
 					"ebx",
@@ -10,8 +11,9 @@
 					"edi",
 					"ebp"
 				],
-				"syscall_nr": "rax"
+				"syscall_nr": "eax"
 			},
+			"compat": true,
 			"name": "ia32"
 		},
 		"architecture": {
@@ -7150,5 +7152,5 @@
 			"symbol": "__ia32_sys_fspick"
 		}
 	],
-	"systrack_version": "0.2.1"
+	"systrack_version": "0.3-rc1"
 }

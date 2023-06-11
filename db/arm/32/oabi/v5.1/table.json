@@ -1,6 +1,7 @@
 {
 	"kernel": {
 		"abi": {
+			"bits": 32,
 			"calling_convention": {
 				"parameters": [
 					"r0",
@@ -11,8 +12,9 @@
 					"r5",
 					"r6"
 				],
-				"syscall_nr": null
+				"syscall_nr": "swi <NR>"
 			},
+			"compat": true,
 			"name": "oabi"
 		},
 		"architecture": {
@@ -6837,5 +6839,5 @@
 			"symbol": "arm_syscall"
 		}
 	],
-	"systrack_version": "0.2.1"
+	"systrack_version": "0.3-rc1"
 }
