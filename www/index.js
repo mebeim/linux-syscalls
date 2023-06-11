@@ -291,7 +291,7 @@ function fillRow(row, tag, sc, maxArgs) {
 	kcfg.textContent = sc.kconfig ?? ''
 
 	if (sc.esoteric) {
-		name.title = 'This syscall is esoteric: it only exists on this architecture and has a special definition'
+		name.title = 'This syscall has an esoteric implementation and only exists for this architecture'
 		name.classList.add('esoteric')
 	}
 
@@ -376,8 +376,8 @@ function fillTable(syscallTable, tag) {
 
 	header.children[0].textContent = `Number${numReg ? '\u00a0(' + numReg + ')' : ''}`
 
-	// Do we wanna handle the case of 0 args because signatures could not be
-	// extracted? I don't think so to be honest.
+	// Do we wanna handle the case of 0 args because no signatures with >= 1 arg
+	// could be extracted? I don't think so to be honest.
 	for (let i = 0; i < maxArgs; i++) {
 		const th = document.createElement('th')
 		th.textContent = `Arg\u00a0${i + 1}\u00a0(${argRegs[i]})`
