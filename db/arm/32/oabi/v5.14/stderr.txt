@@ -953,9 +953,9 @@ Detected kernel version: 5.14.0 (from vmlinux)
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm-oabi-v5.14'), '0xc0728235']
 [D] Location needs grepping (bad): msgrcv (sys_msgrcv) -> ipc/msg.c:1258
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/arm', '--glob', '*.c', b'\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
-[W] Location found through grepping: msgrcv -> ipc/msg.c:1292
 [W] Location found through grepping: statfs64 -> fs/statfs.c:362
 [W] Location found through grepping: fstatfs64 -> fs/statfs.c:381
+[W] Location found through grepping: msgrcv -> ipc/msg.c:1292
 [W] Location found through grepping: pread64 -> fs/read_write.c:693
 [W] Location found through grepping: pwrite64 -> fs/read_write.c:719
 [W] Location found through grepping: truncate64 -> fs/open.c:219

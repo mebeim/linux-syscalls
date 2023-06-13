@@ -8,7 +8,6 @@ Detected kernel version: 6.0.0 (from vmlinux)
 [D] Found ni_syscall: Symbol("sys_ni_syscall" at 0xffffffff810921c0, type=FUNC, size=0x8)
 [D] Found ni_syscall: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001a20, type=FUNC, size=0x8)
 [D] Found ni_syscall: Symbol("__x64_sys_ni_syscall" at 0xffffffff81001a20, type=FUNC, size=0x8)
-[D] Preferring __x64_sys_ni_syscall over __do_sys_ni_syscall
 [D] Preferring __x64_sys_getpid over __do_sys_getpid
 [D] Preferring __ia32_sys_gettid over __do_sys_gettid
 [D] Preferring __ia32_sys_getegid over __do_sys_getegid
@@ -28,7 +27,7 @@ Detected kernel version: 6.0.0 (from vmlinux)
 [D] Preferring __ia32_sys_getgid over __do_sys_getgid
 [D] Preferring __ia32_sys_restart_syscall over __do_sys_restart_syscall
 [D] Preferring __x64_sys_setsid over __do_sys_setsid
-[D] Preferring __ia32_sys_ni_syscall over __x64_sys_ni_syscall
+[D] Preferring __ia32_sys_ni_syscall over __do_sys_ni_syscall
 [D] Preferring __ia32_sys_restart_syscall over __x64_sys_restart_syscall
 [D] Preferring __ia32_compat_sys_sigreturn over __do_compat_sys_sigreturn
 [D] Preferring __ia32_compat_sys_rt_sigreturn over __x64_compat_sys_rt_sigreturn
@@ -548,6 +547,6 @@ Detected kernel version: 6.0.0 (from vmlinux)
 [I] Location could not be found through grepping: lookup_dcookie (orig name lookup_dcookie)
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
 [D] Signature NOT found in ftrace metadata: lookup_dcookie
-[W] Assuming lookup_dcookie is not implemented as it points to kernel/sys_ni.c:39 after adjustments
+[I] Syscall lookup_dcookie (__ia32_compat_sys_lookup_dcookie) is not really implemented (dummy implementation), code: 48c7c0daffffffc3.
 Found 417 implemented syscalls
 
