@@ -413,7 +413,6 @@ async function update(pushHistoryState) {
 
 	systrackVersEl.textContent = syscallTbable.systrack_version
 	jsonLinkEl.href = `db/${arch}/${bits}/${abi}/${tag}/table.json`
-	jsonLinkEl.download = `syscalls_${arch}_${bits}_${abi}_${tag}.json`
 
 	if (config) {
 		configLinkEl.href = `db/${arch}/${bits}/${abi}/${tag}/config.txt`
