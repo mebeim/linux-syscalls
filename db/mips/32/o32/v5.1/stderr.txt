@@ -898,7 +898,7 @@ Detected kernel version: 5.1.0 (from vmlinux)
 [D] Location needs grepping (bad): gettid (sys_gettid) -> include/linux/sched.h:1248
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-mips-v5.1'), '0x804faaa9', '0x804faaaa', '0x804faaab', '0x804faaac', '0x804faaad']
 [D] Location needs grepping (bad): msgrcv (sys_msgrcv) -> ipc/msg.c:1224
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/mips', '--glob', '*.c', b'\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/mips', '--glob', '*.c', '\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: sysmips -> arch/mips/kernel/syscall.c:204
 [W] Location found through grepping: getpid -> kernel/sys.c:891
 [W] Location found through grepping: gettid -> kernel/sys.c:897

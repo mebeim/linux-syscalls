@@ -543,7 +543,7 @@ Detected kernel version: 5.18.0 (from vmlinux)
 [D] Location found through full-range adjustment: sendmsg (__ia32_compat_sys_sendmsg+0x3) -> net/compat.c:351
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v5.18'), '0xffffffff819a1c41', '0xffffffff819a1c42', '0xffffffff819a1c43', '0xffffffff819a1c44', '0xffffffff819a1c45', '0xffffffff819a1c46', '0xffffffff819a1c47', '0xffffffff819a1c48', '0xffffffff819a1c49', '0xffffffff819a1c4a', '0xffffffff819a1c4b', '0xffffffff819a1c4c', '0xffffffff819a1c4d', '0xffffffff819a1c4e', '0xffffffff819a1c4f', '0xffffffff819a1c50', '0xffffffff819a1c51', '0xffffffff819a1c52', '0xffffffff819a1c53', '0xffffffff819a1c54']
 [D] Location found through full-range adjustment: recvmsg (__ia32_compat_sys_recvmsg+0x3) -> net/compat.c:379
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', b'\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [I] Location could not be found through grepping: lookup_dcookie (orig name lookup_dcookie)
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
 [D] Signature NOT found in ftrace metadata: lookup_dcookie

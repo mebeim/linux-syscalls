@@ -905,13 +905,13 @@ Detected kernel version: 5.1.0 (from vmlinux)
 [D] Location needs grepping (bad): fstatfs64 (sys_fstatfs64_wrapper) -> arch/arm/kernel/entry-common.S:406
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm-eabi-v5.1'), '0xc0677871']
 [D] Location needs grepping (bad): msgrcv (sys_msgrcv) -> ipc/msg.c:1224
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/arm', '--glob', '*.c', b'\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
-[W] Location found through grepping: msgrcv -> ipc/msg.c:1230
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/arm', '--glob', '*.c', '\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: getpid -> kernel/sys.c:891
 [W] Location found through grepping: gettid -> kernel/sys.c:897
 [W] Location found through grepping: getpgrp -> kernel/sys.c:1112
 [W] Location found through grepping: statfs64 -> fs/statfs.c:199
 [W] Location found through grepping: fstatfs64 -> fs/statfs.c:220
+[W] Location found through grepping: msgrcv -> ipc/msg.c:1230
 [I] Location could not be found through grepping: sigreturn (orig name sigreturn)
 [I] Location could not be found through grepping: rt_sigreturn (orig name rt_sigreturn)
 [I] Location could not be found through grepping: mmap2 (orig name mmap2)

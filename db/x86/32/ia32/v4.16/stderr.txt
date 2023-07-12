@@ -820,7 +820,7 @@ Detected kernel version: 4.16.0 (from vmlinux)
 [D] Location needs grepping (bad): getpgrp (sys_getpgrp) -> kernel/sys.c:1030
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-i386-v4.16'), '0xc1067c11', '0xc1067c12', '0xc1067c13', '0xc1067c14', '0xc1067c15', '0xc1067c16', '0xc1067c17', '0xc1067c18', '0xc1067c19', '0xc1067c1a', '0xc1067c1b', '0xc1067c1c']
 [D] Location needs grepping (bad): gettid (sys_gettid) -> include/linux/sched.h:1168
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', b'\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: getpid -> kernel/sys.c:844
 [W] Location found through grepping: gettid -> kernel/sys.c:850
 [W] Location found through grepping: getppid -> kernel/sys.c:861

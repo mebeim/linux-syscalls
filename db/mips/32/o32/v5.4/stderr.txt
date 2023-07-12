@@ -914,14 +914,14 @@ Detected kernel version: 5.4.0 (from vmlinux)
 [D] Location needs grepping (bad): msgrcv (sys_msgrcv) -> ipc/msg.c:1224
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-mips-v5.4'), '0x8010d011', '0x8010d012', '0x8010d013', '0x8010d014', '0x8010d015', '0x8010d016', '0x8010d017', '0x8010d018', '0x8010d019', '0x8010d01a', '0x8010d01b', '0x8010d01c', '0x8010d01d', '0x8010d01e', '0x8010d01f', '0x8010d020', '0x8010d021', '0x8010d022', '0x8010d023', '0x8010d024', '0x8010d025', '0x8010d026', '0x8010d027', '0x8010d028', '0x8010d029', '0x8010d02a', '0x8010d02b', '0x8010d02c', '0x8010d02d', '0x8010d02e', '0x8010d02f', '0x8010d030', '0x8010d031', '0x8010d032', '0x8010d033', '0x8010d034', '0x8010d035']
 [D] Location needs grepping (invalid): clone3 (__sys_clone3) -> None:None
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/mips', '--glob', '*.c', b'\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/mips', '--glob', '*.c', '\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: sysmips -> arch/mips/kernel/syscall.c:206
 [W] Location found through grepping: getpid -> kernel/sys.c:891
 [W] Location found through grepping: gettid -> kernel/sys.c:897
-[W] Location found through grepping: msgrcv -> ipc/msg.c:1230
 [W] Location found through grepping: fork -> kernel/fork.c:2457
 [W] Location found through grepping: clone -> kernel/fork.c:2486
 [W] Location found through grepping: clone3 -> kernel/fork.c:2629
+[W] Location found through grepping: msgrcv -> ipc/msg.c:1230
 [I] Location could not be found through grepping: syscall (orig name syscall)
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
 [D] Signature NOT found in ftrace metadata: syscall

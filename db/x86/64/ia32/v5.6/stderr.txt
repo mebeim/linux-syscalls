@@ -12,7 +12,6 @@ Detected kernel version: 5.6.0 (from vmlinux)
 [D] Preferring __ia32_sys_getuid over __x64_sys_getuid
 [D] Preferring __ia32_sys_fork over __x64_sys_fork
 [D] Preferring __ia32_sys_getpid over __x64_sys_getpid
-[D] Preferring __ia32_sys_ni_syscall over __x64_sys_ni_syscall
 [D] Preferring __ia32_sys_restart_syscall over __x64_sys_restart_syscall
 [D] Preferring __ia32_sys_sync over __x64_sys_sync
 [D] Preferring __ia32_sys_getpgrp over __x64_sys_getpgrp
@@ -500,7 +499,7 @@ Detected kernel version: 5.6.0 (from vmlinux)
 [D] Location found through full-range adjustment: sendmsg (__ia32_compat_sys_sendmsg+0x3) -> net/compat.c:646
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v5.6'), '0xffffffff81878261', '0xffffffff81878262', '0xffffffff81878263', '0xffffffff81878264', '0xffffffff81878265', '0xffffffff81878266', '0xffffffff81878267', '0xffffffff81878268', '0xffffffff81878269', '0xffffffff8187826a', '0xffffffff8187826b', '0xffffffff8187826c', '0xffffffff8187826d', '0xffffffff8187826e', '0xffffffff8187826f', '0xffffffff81878270', '0xffffffff81878271', '0xffffffff81878272', '0xffffffff81878273', '0xffffffff81878274']
 [D] Location found through full-range adjustment: recvmsg (__ia32_compat_sys_recvmsg+0x3) -> net/compat.c:674
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', b'\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
 Found 407 implemented syscalls
 

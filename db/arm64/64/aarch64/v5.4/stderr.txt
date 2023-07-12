@@ -459,7 +459,7 @@ Detected kernel version: 5.4.0 (from vmlinux)
 [D] Location needs grepping (bad): pkey_alloc (__arm64_sys_pkey_alloc) -> kernel/sys_ni.c:349
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.4'), '0xffff800010115581', '0xffff800010115582', '0xffff800010115583', '0xffff800010115584', '0xffff800010115585']
 [D] Location needs grepping (bad): pkey_free (__arm64_sys_pkey_free) -> kernel/sys_ni.c:350
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/arm64', '--glob', '*.c', b'\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/arm64', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: pkey_mprotect -> mm/mprotect.c:583
 [W] Location found through grepping: pkey_alloc -> mm/mprotect.c:589
 [W] Location found through grepping: pkey_free -> mm/mprotect.c:619

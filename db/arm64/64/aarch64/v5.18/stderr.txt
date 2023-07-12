@@ -477,7 +477,7 @@ Detected kernel version: 5.18.0 (from vmlinux)
 [D] Location needs grepping (bad): pkey_alloc (__arm64_sys_pkey_alloc) -> kernel/sys_ni.c:356
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.18'), '0xffff8000080bfae5', '0xffff8000080bfae6', '0xffff8000080bfae7', '0xffff8000080bfae8', '0xffff8000080bfae9', '0xffff8000080bfaea', '0xffff8000080bfaeb', '0xffff8000080bfaec', '0xffff8000080bfaed', '0xffff8000080bfaee', '0xffff8000080bfaef', '0xffff8000080bfaf0', '0xffff8000080bfaf1', '0xffff8000080bfaf2', '0xffff8000080bfaf3', '0xffff8000080bfaf4', '0xffff8000080bfaf5']
 [D] Location needs grepping (bad): pkey_free (__arm64_sys_pkey_free) -> kernel/sys_ni.c:357
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/arm64', '--glob', '*.c', b'\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/arm64', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: pkey_mprotect -> mm/mprotect.c:681
 [W] Location found through grepping: pkey_alloc -> mm/mprotect.c:687
 [W] Location found through grepping: pkey_free -> mm/mprotect.c:717

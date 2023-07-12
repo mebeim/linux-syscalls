@@ -946,7 +946,7 @@ Detected kernel version: 4.9.0 (from vmlinux)
 [D] Location needs grepping (invalid): execve (ptregs_compat_sys_execve) -> /mnt/m2data/linux/arch/x86/include/generated/asm/syscalls_64.h:343
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.9'), '0xffffffff8181d451', '0xffffffff8181d452', '0xffffffff8181d453', '0xffffffff8181d454', '0xffffffff8181d455', '0xffffffff8181d456', '0xffffffff8181d457', '0xffffffff8181d458', '0xffffffff8181d459']
 [D] Location needs grepping (invalid): execveat (ptregs_compat_sys_execveat) -> /mnt/m2data/linux/arch/x86/include/generated/asm/syscalls_64.h:418
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', b'\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: iopl -> arch/x86/kernel/ioport.c:96
 [W] Location found through grepping: execve -> fs/exec.c:1886
 [W] Location found through grepping: execveat -> fs/exec.c:1893

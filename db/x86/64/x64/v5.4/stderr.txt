@@ -514,7 +514,7 @@ Detected kernel version: 5.4.0 (from vmlinux)
 [D] Location needs adjustment (bad): preadv2 (__x64_sys_preadv2) -> fs/read_write.c:1070
 [D] Location needs adjustment (bad): pwritev2 (__x64_sys_pwritev2) -> fs/read_write.c:1070
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v5.4'), '0xffffffff8107aa87', '0xffffffff8107a9ee', '0xffffffff8107a96f', '0xffffffff8107a9af', '0xffffffff8107a98f', '0xffffffff8107a9cf', '0xffffffff8107aaae', '0xffffffff8107d16e', '0xffffffff8107aa64', '0xffffffff81072f15', '0xffffffff811fbcdc', '0xffffffff811f98cc']
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', b'\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
 Found 332 implemented syscalls
 

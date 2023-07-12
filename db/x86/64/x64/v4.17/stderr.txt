@@ -657,7 +657,7 @@ Detected kernel version: 4.17.0 (from vmlinux)
 [D] Location needs grepping (bad): msgrcv (__x64_sys_msgrcv) -> ipc/msg.c:1181
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.17'), '0xffffffff811c84c1', '0xffffffff811c84c2', '0xffffffff811c84c3', '0xffffffff811c84c4', '0xffffffff811c84c5', '0xffffffff811c84c6', '0xffffffff811c84c7', '0xffffffff811c84c8', '0xffffffff811c84c9', '0xffffffff811c84ca', '0xffffffff811c84cb', '0xffffffff811c84cc', '0xffffffff811c84cd', '0xffffffff811c84ce', '0xffffffff811c84cf', '0xffffffff811c84d0', '0xffffffff811c84d1', '0xffffffff811c84d2', '0xffffffff811c84d3', '0xffffffff811c84d4']
 [D] Location needs grepping (bad): creat (__x64_sys_creat) -> include/linux/syscalls.h:1256
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', b'\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: msgrcv -> ipc/msg.c:1187
 [W] Location found through grepping: creat -> fs/open.c:1157
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y

@@ -475,7 +475,7 @@ Detected kernel version: 5.3.0 (from vmlinux)
 [D] Location needs adjustment (bad): umask (__arm64_sys_umask) -> arch/arm64/include/asm/current.h:15
 [D] Location needs adjustment (bad): getcpu (__arm64_sys_getcpu) -> arch/arm64/include/asm/percpu.h:22
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.3'), '0xffff00001010350f', '0xffff000010103b73']
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/arm64', '--glob', '*.c', b'\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/arm64', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
 Found 287 implemented syscalls
 

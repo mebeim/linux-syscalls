@@ -933,13 +933,13 @@ Detected kernel version: 5.10.0 (from vmlinux)
 [D] Location needs grepping (bad): msgrcv (sys_msgrcv) -> ipc/msg.c:1256
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-mips-v5.10'), '0x801096c1', '0x801096c2', '0x801096c3', '0x801096c4', '0x801096c5', '0x801096c6', '0x801096c7', '0x801096c8', '0x801096c9', '0x801096ca', '0x801096cb', '0x801096cc', '0x801096cd', '0x801096ce', '0x801096cf', '0x801096d0', '0x801096d1', '0x801096d2', '0x801096d3', '0x801096d4', '0x801096d5', '0x801096d6', '0x801096d7', '0x801096d8', '0x801096d9', '0x801096da', '0x801096db', '0x801096dc', '0x801096dd', '0x801096de', '0x801096df', '0x801096e0', '0x801096e1', '0x801096e2', '0x801096e3', '0x801096e4', '0x801096e5']
 [D] Location needs grepping (invalid): clone3 (__sys_clone3) -> None:None
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/mips', '--glob', '*.c', b'\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/mips', '--glob', '*.c', '\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: sysmips -> arch/mips/kernel/syscall.c:207
+[W] Location found through grepping: getpid -> kernel/sys.c:905
+[W] Location found through grepping: gettid -> kernel/sys.c:911
 [W] Location found through grepping: fork -> kernel/fork.c:2512
 [W] Location found through grepping: clone -> kernel/fork.c:2541
 [W] Location found through grepping: clone3 -> kernel/fork.c:2715
-[W] Location found through grepping: getpid -> kernel/sys.c:905
-[W] Location found through grepping: gettid -> kernel/sys.c:911
 [W] Location found through grepping: msgrcv -> ipc/msg.c:1262
 [I] Location could not be found through grepping: syscall (orig name syscall)
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y

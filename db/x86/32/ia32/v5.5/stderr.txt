@@ -918,7 +918,7 @@ Detected kernel version: 5.5.0 (from vmlinux)
 [D] Location needs grepping (bad): gettid (sys_gettid) -> include/linux/sched.h:1329
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-i386-v5.5'), '0xc134de21', '0xc134de22', '0xc134de23', '0xc134de24', '0xc134de25', '0xc134de26', '0xc134de27', '0xc134de28', '0xc134de29', '0xc134de2a', '0xc134de2b', '0xc134de2c', '0xc134de2d', '0xc134de2e', '0xc134de2f', '0xc134de30', '0xc134de31', '0xc134de32', '0xc134de33', '0xc134de34', '0xc134de35', '0xc134de36', '0xc134de37', '0xc134de38', '0xc134de39', '0xc134de3a', '0xc134de3b', '0xc134de3c', '0xc134de3d', '0xc134de3e']
 [D] Location found through full-range adjustment: msgrcv (sys_msgrcv+0x4) -> ipc/msg.c:1230
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', b'\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: getpid -> kernel/sys.c:891
 [W] Location found through grepping: gettid -> kernel/sys.c:897
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y

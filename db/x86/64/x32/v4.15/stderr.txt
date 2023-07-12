@@ -952,15 +952,15 @@ Detected kernel version: 4.15.0 (from vmlinux)
 [D] Location needs grepping (invalid): execve (ptregs_compat_sys_execve) -> /mnt/m2data/linux/arch/x86/include/generated/asm/syscalls_64.h:344
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.15'), '0xffffffff81a00271', '0xffffffff81a00272', '0xffffffff81a00273', '0xffffffff81a00274', '0xffffffff81a00275', '0xffffffff81a00276', '0xffffffff81a00277', '0xffffffff81a00278', '0xffffffff81a00279']
 [D] Location needs grepping (invalid): execveat (ptregs_compat_sys_execveat) -> /mnt/m2data/linux/arch/x86/include/generated/asm/syscalls_64.h:419
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', b'\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: iopl -> arch/x86/kernel/ioport.c:109
 [W] Location found through grepping: execve -> fs/exec.c:1945
 [W] Location found through grepping: execveat -> fs/exec.c:1952
+[W] Location found through grepping: execve -> fs/exec.c:1923
+[W] Location found through grepping: execveat -> fs/exec.c:1931
 [W] Location found through grepping: fork -> kernel/fork.c:2111
 [W] Location found through grepping: vfork -> kernel/fork.c:2123
 [W] Location found through grepping: clone -> kernel/fork.c:2132
-[W] Location found through grepping: execve -> fs/exec.c:1923
-[W] Location found through grepping: execveat -> fs/exec.c:1931
 [I] Location could not be found through grepping: rt_sigreturn (orig name rt_sigreturn)
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
 [D] Signature NOT found in ftrace metadata: rt_sigreturn

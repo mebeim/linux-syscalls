@@ -804,7 +804,7 @@ Detected kernel version: 5.0.0 (from vmlinux)
 [D] Location needs grepping (invalid): sysmips (__sys_sysmips) -> None:None
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-mips-v5.0'), '0x8014b44d', '0x8014b44e', '0x8014b44f', '0x8014b450', '0x8014b451', '0x8014b452', '0x8014b453', '0x8014b454', '0x8014b455', '0x8014b456', '0x8014b457', '0x8014b458', '0x8014b459']
 [D] Location needs grepping (bad): gettid (sys_gettid) -> include/linux/sched.h:1250
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/mips', '--glob', '*.c', b'\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/mips', '--glob', '*.c', '\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: sysmips -> arch/mips/kernel/syscall.c:204
 [W] Location found through grepping: getpid -> kernel/sys.c:891
 [W] Location found through grepping: gettid -> kernel/sys.c:897

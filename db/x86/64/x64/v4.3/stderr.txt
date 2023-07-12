@@ -959,7 +959,7 @@ Detected kernel version: 4.3.0 (from vmlinux)
 [D] Location needs grepping (bad): arch_prctl (sys_arch_prctl) -> arch/x86/kernel/process_64.c:597
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.3'), '0xffffffff817a7549', '0xffffffff817a754a', '0xffffffff817a754b', '0xffffffff817a754c']
 [D] Location needs grepping (bad): execveat (stub_execveat) -> arch/x86/entry/entry_64.S:390
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', b'\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: fork -> kernel/fork.c:1792
 [W] Location found through grepping: vfork -> kernel/fork.c:1804
 [W] Location found through grepping: clone -> kernel/fork.c:1813

@@ -8,7 +8,7 @@ Detected kernel version: 5.11.0 (from vmlinux)
 [D] Found ni_syscall: Symbol("sys_ni_syscall" at 0xffffffff81087980, type=FUNC, size=0x8)
 [D] Found ni_syscall: Symbol("__ia32_sys_ni_syscall" at 0xffffffff810019e0, type=FUNC, size=0x8)
 [D] Found ni_syscall: Symbol("__x64_sys_ni_syscall" at 0xffffffff810019e0, type=FUNC, size=0x8)
-[D] Preferring __x64_sys_ni_syscall over __do_sys_ni_syscall
+[D] Preferring __do_sys_ni_syscall over __ia32_sys_ni_syscall
 [D] Preferring __x64_sys_getpid over __do_sys_getpid
 [D] Preferring __do_sys_gettid over __ia32_sys_gettid
 [D] Preferring __do_sys_getegid over __ia32_sys_getegid
@@ -26,7 +26,7 @@ Detected kernel version: 5.11.0 (from vmlinux)
 [D] Preferring __do_sys_getgid over __ia32_sys_getgid
 [D] Preferring __do_sys_restart_syscall over __ia32_sys_restart_syscall
 [D] Preferring __x64_sys_setsid over __do_sys_setsid
-[D] Preferring __x64_sys_ni_syscall over __ia32_sys_ni_syscall
+[D] Preferring __do_sys_ni_syscall over __ia32_sys_ni_syscall
 [D] Preferring __x64_sys_restart_syscall over __do_sys_restart_syscall
 [D] Preferring __x64_sys_sync over __do_sys_sync
 [D] Preferring __x64_sys_getpgrp over __do_sys_getpgrp
@@ -43,6 +43,7 @@ Detected kernel version: 5.11.0 (from vmlinux)
 [D] Preferring __x64_sys_geteuid over __do_sys_geteuid
 [D] Preferring __x64_sys_geteuid over __ia32_sys_geteuid
 [D] Preferring __x64_sys_rt_sigreturn over __do_sys_rt_sigreturn
+[D] Preferring __x64_sys_ni_syscall over __do_sys_ni_syscall
 [D] Preferring __x64_sys_inotify_init over __ia32_sys_inotify_init
 [D] Preferring __x64_sys_pause over __ia32_sys_pause
 [D] Preferring __x64_sys_vfork over __ia32_sys_vfork
@@ -505,7 +506,7 @@ Detected kernel version: 5.11.0 (from vmlinux)
 [D] Location needs adjustment (bad): preadv2 (__x64_sys_preadv2) -> fs/read_write.c:994
 [D] Location needs adjustment (bad): pwritev2 (__x64_sys_pwritev2) -> fs/read_write.c:994
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v5.11'), '0xffffffff810710fa', '0xffffffff81078307', '0xffffffff8107826e', '0xffffffff810781ef', '0xffffffff8107822f', '0xffffffff8107820f', '0xffffffff8107824f', '0xffffffff810782e4', '0xffffffff81070675', '0xffffffff8121eaec', '0xffffffff8121f50c']
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', b'\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
 Found 337 implemented syscalls
 

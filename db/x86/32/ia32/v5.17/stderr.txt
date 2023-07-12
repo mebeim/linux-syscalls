@@ -7,6 +7,7 @@ Detected kernel version: 5.17.0 (from vmlinux)
 [D] Found ni_syscall: Symbol("__do_sys_ni_syscall" at 0xc1001500, type=FUNC, size=0x6)
 [D] Found ni_syscall: Symbol("sys_ni_syscall" at 0xc1083960, type=FUNC, size=0x6)
 [D] Found ni_syscall: Symbol("__ia32_sys_ni_syscall" at 0xc1001500, type=FUNC, size=0x6)
+[D] Preferring __ia32_sys_ni_syscall over __do_sys_ni_syscall
 [D] Preferring __ia32_sys_gettid over __do_sys_gettid
 [D] Preferring __ia32_sys_getegid over __do_sys_getegid
 [D] Preferring __ia32_sys_sched_yield over __do_sys_sched_yield
@@ -18,7 +19,6 @@ Detected kernel version: 5.17.0 (from vmlinux)
 [D] Preferring __ia32_sys_getpid over __do_sys_getpid
 [D] Preferring __ia32_sys_getgid over __do_sys_getgid
 [D] Preferring __ia32_sys_restart_syscall over __do_sys_restart_syscall
-[D] Preferring __ia32_sys_ni_syscall over __do_sys_ni_syscall
 [D] Preferring __ia32_sys_munlockall over __do_sys_munlockall
 [D] Preferring __ia32_sys_getpgrp over __do_sys_getpgrp
 [D] Preferring __ia32_sys_geteuid16 over __do_sys_geteuid16
@@ -519,7 +519,7 @@ Detected kernel version: 5.17.0 (from vmlinux)
 [D] Location needs grepping (bad): gettid (__ia32_sys_gettid) -> include/linux/sched.h:1540
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-i386-v5.17'), '0xc1083a21', '0xc1083a22', '0xc1083a23']
 [D] Location needs grepping (bad): lookup_dcookie (__ia32_sys_lookup_dcookie) -> kernel/sys_ni.c:60
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', b'\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: ia32_truncate64 -> arch/x86/kernel/sys_ia32.c:54
 [W] Location found through grepping: getpid -> kernel/sys.c:933
 [W] Location found through grepping: gettid -> kernel/sys.c:939

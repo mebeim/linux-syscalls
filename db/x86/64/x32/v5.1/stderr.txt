@@ -635,7 +635,7 @@ Detected kernel version: 5.1.0 (from vmlinux)
 [D] Location found through full-range adjustment: sendmsg (__x32_compat_sys_sendmsg+0x9) -> net/compat.c:701
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v5.1'), '0xffffffff817fc131', '0xffffffff817fc132', '0xffffffff817fc133', '0xffffffff817fc134', '0xffffffff817fc135', '0xffffffff817fc136', '0xffffffff817fc137', '0xffffffff817fc138', '0xffffffff817fc139', '0xffffffff817fc13a', '0xffffffff817fc13b', '0xffffffff817fc13c', '0xffffffff817fc13d', '0xffffffff817fc13e', '0xffffffff817fc13f', '0xffffffff817fc140', '0xffffffff817fc141', '0xffffffff817fc142', '0xffffffff817fc143', '0xffffffff817fc144', '0xffffffff817fc145']
 [D] Location found through full-range adjustment: recvmsg (__x32_compat_sys_recvmsg+0x9) -> net/compat.c:729
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', b'\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
 Found 360 implemented syscalls
 

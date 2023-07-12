@@ -936,7 +936,7 @@ Detected kernel version: 5.11.0 (from vmlinux)
 [D] Location needs grepping (bad): msgrcv (sys_msgrcv) -> ipc/msg.c:1256
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-mips-v5.11'), '0x801096d1', '0x801096d2', '0x801096d3', '0x801096d4', '0x801096d5', '0x801096d6', '0x801096d7', '0x801096d8', '0x801096d9', '0x801096da', '0x801096db', '0x801096dc', '0x801096dd', '0x801096de', '0x801096df', '0x801096e0', '0x801096e1', '0x801096e2', '0x801096e3', '0x801096e4', '0x801096e5', '0x801096e6', '0x801096e7', '0x801096e8', '0x801096e9', '0x801096ea', '0x801096eb', '0x801096ec', '0x801096ed', '0x801096ee', '0x801096ef', '0x801096f0', '0x801096f1', '0x801096f2', '0x801096f3', '0x801096f4', '0x801096f5']
 [D] Location needs grepping (invalid): clone3 (__sys_clone3) -> None:None
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/mips', '--glob', '*.c', b'\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/mips', '--glob', '*.c', '\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: sysmips -> arch/mips/kernel/syscall.c:207
 [W] Location found through grepping: getpid -> kernel/sys.c:906
 [W] Location found through grepping: gettid -> kernel/sys.c:912

@@ -826,7 +826,7 @@ Detected kernel version: 4.19.0 (from vmlinux)
 [D] Location needs grepping (bad): getpgrp (sys_getpgrp) -> kernel/sys.c:1074
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-i386-v4.19'), '0xc106c191', '0xc106c192', '0xc106c193', '0xc106c194', '0xc106c195', '0xc106c196', '0xc106c197', '0xc106c198', '0xc106c199', '0xc106c19a', '0xc106c19b', '0xc106c19c']
 [D] Location needs grepping (bad): gettid (sys_gettid) -> include/linux/sched.h:1240
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', b'\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: getpid -> kernel/sys.c:888
 [W] Location found through grepping: gettid -> kernel/sys.c:894
 [W] Location found through grepping: getppid -> kernel/sys.c:905

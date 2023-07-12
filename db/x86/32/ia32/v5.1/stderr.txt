@@ -904,7 +904,7 @@ Detected kernel version: 5.1.0 (from vmlinux)
 [D] Location needs grepping (bad): gettid (sys_gettid) -> include/linux/sched.h:1248
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-i386-v5.1'), '0xc1320c61', '0xc1320c62', '0xc1320c63', '0xc1320c64', '0xc1320c65', '0xc1320c66', '0xc1320c67', '0xc1320c68', '0xc1320c69', '0xc1320c6a', '0xc1320c6b', '0xc1320c6c', '0xc1320c6d', '0xc1320c6e', '0xc1320c6f', '0xc1320c70', '0xc1320c71', '0xc1320c72', '0xc1320c73', '0xc1320c74', '0xc1320c75', '0xc1320c76', '0xc1320c77', '0xc1320c78', '0xc1320c79', '0xc1320c7a', '0xc1320c7b', '0xc1320c7c', '0xc1320c7d', '0xc1320c7e']
 [D] Location found through full-range adjustment: msgrcv (sys_msgrcv+0x4) -> ipc/msg.c:1230
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', b'\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: getpid -> kernel/sys.c:891
 [W] Location found through grepping: gettid -> kernel/sys.c:897
 [W] Location found through grepping: getppid -> kernel/sys.c:908

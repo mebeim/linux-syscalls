@@ -740,7 +740,7 @@ Detected kernel version: 4.3.0 (from vmlinux)
 [D] Location needs grepping (bad): sys32_fadvise64_64 (sys32_fadvise64_64) -> arch/x86/ia32/sys_ia32.c:195
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.3'), '0xffffffff817a7559', '0xffffffff817a755a', '0xffffffff817a755b', '0xffffffff817a755c']
 [D] Location needs grepping (bad): execveat (stub32_execveat) -> arch/x86/entry/entry_64.S:405
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', b'\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: execve -> fs/exec.c:1732
 [W] Location found through grepping: execveat -> fs/exec.c:1739
 [W] Location found through grepping: fork -> kernel/fork.c:1792

@@ -945,14 +945,14 @@ Detected kernel version: 6.3.0 (from vmlinux)
 [D] Location needs grepping (bad): msgrcv (sys_msgrcv) -> ipc/msg.c:1264
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-mips-v6.3'), '0x80109741', '0x80109742', '0x80109743', '0x80109744', '0x80109745', '0x80109746', '0x80109747', '0x80109748', '0x80109749', '0x8010974a', '0x8010974b', '0x8010974c', '0x8010974d', '0x8010974e', '0x8010974f', '0x80109750', '0x80109751', '0x80109752', '0x80109753', '0x80109754', '0x80109755', '0x80109756', '0x80109757', '0x80109758', '0x80109759', '0x8010975a', '0x8010975b', '0x8010975c', '0x8010975d', '0x8010975e', '0x8010975f', '0x80109760', '0x80109761', '0x80109762', '0x80109763', '0x80109764', '0x80109765']
 [D] Location needs grepping (invalid): clone3 (__sys_clone3) -> None:None
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/mips', '--glob', '*.c', b'\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/mips', '--glob', '*.c', '\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: sysmips -> arch/mips/kernel/syscall.c:207
 [W] Location found through grepping: msgrcv -> ipc/msg.c:1270
-[W] Location found through grepping: getpid -> kernel/sys.c:951
-[W] Location found through grepping: gettid -> kernel/sys.c:957
 [W] Location found through grepping: fork -> kernel/fork.c:2763
 [W] Location found through grepping: clone -> kernel/fork.c:2792
 [W] Location found through grepping: clone3 -> kernel/fork.c:2966
+[W] Location found through grepping: getpid -> kernel/sys.c:951
+[W] Location found through grepping: gettid -> kernel/sys.c:957
 [I] Location could not be found through grepping: syscall (orig name syscall)
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
 [D] Signature NOT found in ftrace metadata: syscall

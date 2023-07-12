@@ -631,7 +631,7 @@ Detected kernel version: 4.17.0 (from vmlinux)
 [D] Location needs grepping (bad): sendmsg (__x32_compat_sys_sendmsg) -> net/compat.c:752
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.17'), '0xffffffff81776bf1', '0xffffffff81776bf2', '0xffffffff81776bf3', '0xffffffff81776bf4', '0xffffffff81776bf5', '0xffffffff81776bf6', '0xffffffff81776bf7', '0xffffffff81776bf8', '0xffffffff81776bf9', '0xffffffff81776bfa', '0xffffffff81776bfb', '0xffffffff81776bfc', '0xffffffff81776bfd', '0xffffffff81776bfe', '0xffffffff81776bff', '0xffffffff81776c00', '0xffffffff81776c01', '0xffffffff81776c02', '0xffffffff81776c03', '0xffffffff81776c04', '0xffffffff81776c05']
 [D] Location needs grepping (bad): recvmsg (__x32_compat_sys_recvmsg) -> net/compat.c:780
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', b'\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: sendmsg -> net/compat.c:760
 [W] Location found through grepping: recvmsg -> net/compat.c:788
 [W] Location found through grepping: msgrcv -> ipc/msg.c:1215

@@ -604,7 +604,7 @@ Detected kernel version: 6.4.0 (from vmlinux)
 [D] Location needs full-range adjustment (bad): lookup_dcookie (__x64_sys_lookup_dcookie+0xb) -> kernel/sys_ni.c:39
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v6.4'), '0xffffffff8109fd21', '0xffffffff8109fd22', '0xffffffff8109fd23', '0xffffffff8109fd24', '0xffffffff8109fd25', '0xffffffff8109fd26', '0xffffffff8109fd27', '0xffffffff8109fd28', '0xffffffff8109fd29']
 [D] Location needs grepping (bad): lookup_dcookie (__x64_sys_lookup_dcookie) -> kernel/sys_ni.c:39
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', b'\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [I] Location could not be found through grepping: lookup_dcookie (orig name lookup_dcookie)
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
 [D] Signature NOT found in ftrace metadata: lookup_dcookie

@@ -2640,7 +2640,7 @@
 		{
 			"esoteric": false,
 			"file": "arch/powerpc/kernel/sys_ppc32.c",
-			"good_location": false,
+			"good_location": true,
 			"grepped_location": false,
 			"index": 179,
 			"kconfig": null,
@@ -2650,16 +2650,18 @@
 			"origname": "ppc_pread64",
 			"signature": [
 				"unsigned int fd",
-				"char *buf",
-				"size_t count",
-				"loff_t pos"
+				"char *ubuf",
+				"compat_size_t count",
+				"u32 reg6",
+				"u32 pos1",
+				"u32 pos2"
 			],
 			"symbol": ".compat_sys_ppc_pread64"
 		},
 		{
 			"esoteric": false,
 			"file": "arch/powerpc/kernel/sys_ppc32.c",
-			"good_location": false,
+			"good_location": true,
 			"grepped_location": false,
 			"index": 180,
 			"kconfig": null,
@@ -2669,9 +2671,11 @@
 			"origname": "ppc_pwrite64",
 			"signature": [
 				"unsigned int fd",
-				"const char *buf",
-				"size_t count",
-				"loff_t pos"
+				"const char *ubuf",
+				"compat_size_t count",
+				"u32 reg6",
+				"u32 pos1",
+				"u32 pos2"
 			],
 			"symbol": ".compat_sys_ppc_pwrite64"
 		},
@@ -2814,7 +2818,7 @@
 		{
 			"esoteric": false,
 			"file": "arch/powerpc/kernel/sys_ppc32.c",
-			"good_location": false,
+			"good_location": true,
 			"grepped_location": false,
 			"index": 191,
 			"kconfig": null,
@@ -2824,8 +2828,10 @@
 			"origname": "ppc_readahead",
 			"signature": [
 				"int fd",
-				"loff_t offset",
-				"size_t count"
+				"u32 r4",
+				"u32 offset1",
+				"u32 offset2",
+				"u32 count"
 			],
 			"symbol": ".compat_sys_ppc_readahead"
 		},
@@ -2853,7 +2859,7 @@
 		{
 			"esoteric": false,
 			"file": "arch/powerpc/kernel/sys_ppc32.c",
-			"good_location": false,
+			"good_location": true,
 			"grepped_location": false,
 			"index": 193,
 			"kconfig": null,
@@ -2861,13 +2867,18 @@
 			"name": "truncate64",
 			"number": 193,
 			"origname": "ppc_truncate64",
-			"signature": null,
+			"signature": [
+				"const char *path",
+				"u32 reg4",
+				"unsigned long len1",
+				"unsigned long len2"
+			],
 			"symbol": ".__se_compat_sys_ppc_truncate64"
 		},
 		{
 			"esoteric": false,
 			"file": "arch/powerpc/kernel/sys_ppc32.c",
-			"good_location": false,
+			"good_location": true,
 			"grepped_location": false,
 			"index": 194,
 			"kconfig": null,
@@ -2875,7 +2886,12 @@
 			"name": "ftruncate64",
 			"number": 194,
 			"origname": "ppc_ftruncate64",
-			"signature": null,
+			"signature": [
+				"unsigned int fd",
+				"u32 reg4",
+				"unsigned long len1",
+				"unsigned long len2"
+			],
 			"symbol": ".compat_sys_ppc_ftruncate64"
 		},
 		{
@@ -3513,7 +3529,7 @@
 		{
 			"esoteric": false,
 			"file": "arch/powerpc/kernel/sys_ppc32.c",
-			"good_location": false,
+			"good_location": true,
 			"grepped_location": false,
 			"index": 233,
 			"kconfig": "ADVISE_SYSCALLS",
@@ -3523,7 +3539,9 @@
 			"origname": "ppc32_fadvise64",
 			"signature": [
 				"int fd",
-				"loff_t offset",
+				"u32 unused",
+				"u32 offset1",
+				"u32 offset2",
 				"size_t len",
 				"int advice"
 			],
@@ -4835,7 +4853,7 @@
 		{
 			"esoteric": false,
 			"file": "arch/powerpc/kernel/sys_ppc32.c",
-			"good_location": false,
+			"good_location": true,
 			"grepped_location": false,
 			"index": 308,
 			"kconfig": null,
@@ -4846,8 +4864,10 @@
 			"signature": [
 				"int fd",
 				"unsigned int flags",
-				"loff_t offset",
-				"loff_t nbytes"
+				"unsigned int offset1",
+				"unsigned int offset2",
+				"unsigned int nbytes1",
+				"unsigned int nbytes2"
 			],
 			"symbol": ".compat_sys_ppc_sync_file_range2"
 		},
@@ -7160,5 +7180,5 @@
 			"symbol": "exc_real_0xc00_system_call"
 		}
 	],
-	"systrack_version": "0.3-rc2"
+	"systrack_version": "0.3"
 }

@@ -970,13 +970,13 @@ Detected kernel version: 4.8.0 (from vmlinux)
 [D] Location needs grepping (invalid): iopl (ptregs_sys_iopl) -> /mnt/m2data/linux/arch/x86/include/generated/asm/syscalls_64.h:172
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.8'), '0xffffffff81812cf1', '0xffffffff81812cf2', '0xffffffff81812cf3', '0xffffffff81812cf4', '0xffffffff81812cf5', '0xffffffff81812cf6', '0xffffffff81812cf7', '0xffffffff81812cf8', '0xffffffff81812cf9']
 [D] Location needs grepping (invalid): execveat (ptregs_sys_execveat) -> /mnt/m2data/linux/arch/x86/include/generated/asm/syscalls_64.h:308
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', b'\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: iopl -> arch/x86/kernel/ioport.c:96
-[W] Location found through grepping: execve -> fs/exec.c:1859
-[W] Location found through grepping: execveat -> fs/exec.c:1867
 [W] Location found through grepping: fork -> kernel/fork.c:1847
 [W] Location found through grepping: vfork -> kernel/fork.c:1859
 [W] Location found through grepping: clone -> kernel/fork.c:1868
+[W] Location found through grepping: execve -> fs/exec.c:1859
+[W] Location found through grepping: execveat -> fs/exec.c:1867
 [I] Location could not be found through grepping: rt_sigreturn (orig name rt_sigreturn)
 [I] Location could not be found through grepping: arch_prctl (orig name arch_prctl)
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y

@@ -8,6 +8,7 @@ Detected kernel version: 5.13.0 (from vmlinux)
 [D] Found ni_syscall: Symbol("sys_ni_syscall" at 0xffffffff81089710, type=FUNC, size=0x8)
 [D] Found ni_syscall: Symbol("__ia32_sys_ni_syscall" at 0xffffffff810019e0, type=FUNC, size=0x8)
 [D] Found ni_syscall: Symbol("__x64_sys_ni_syscall" at 0xffffffff810019e0, type=FUNC, size=0x8)
+[D] Preferring __do_sys_ni_syscall over __ia32_sys_ni_syscall
 [D] Preferring __x64_sys_getpid over __do_sys_getpid
 [D] Preferring __do_sys_gettid over __ia32_sys_gettid
 [D] Preferring __do_compat_sys_x32_rt_sigreturn over __ia32_compat_sys_x32_rt_sigreturn
@@ -622,7 +623,7 @@ Detected kernel version: 5.13.0 (from vmlinux)
 [D] Location found through full-range adjustment: sendmsg (__x32_compat_sys_sendmsg+0x9) -> net/compat.c:351
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v5.13'), '0xffffffff818e7d21', '0xffffffff818e7d22', '0xffffffff818e7d23', '0xffffffff818e7d24', '0xffffffff818e7d25', '0xffffffff818e7d26', '0xffffffff818e7d27', '0xffffffff818e7d28', '0xffffffff818e7d29', '0xffffffff818e7d2a', '0xffffffff818e7d2b', '0xffffffff818e7d2c', '0xffffffff818e7d2d', '0xffffffff818e7d2e', '0xffffffff818e7d2f', '0xffffffff818e7d30', '0xffffffff818e7d31', '0xffffffff818e7d32', '0xffffffff818e7d33', '0xffffffff818e7d34', '0xffffffff818e7d35']
 [D] Location found through full-range adjustment: recvmsg (__x32_compat_sys_recvmsg+0x9) -> net/compat.c:379
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', b'\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [I] Location could not be found through grepping: lookup_dcookie (orig name lookup_dcookie)
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
 [D] Signature NOT found in ftrace metadata: lookup_dcookie

@@ -8,7 +8,7 @@ Detected kernel version: 5.7.0 (from vmlinux)
 [D] Found ni_syscall: Symbol("sys_ni_syscall" at 0xffffffff8108c1b0, type=FUNC, size=0x8)
 [D] Found ni_syscall: Symbol("__ia32_sys_ni_syscall" at 0xffffffff81001da0, type=FUNC, size=0x8)
 [D] Found ni_syscall: Symbol("__x64_sys_ni_syscall" at 0xffffffff81001da0, type=FUNC, size=0x8)
-[D] Preferring __x64_sys_ni_syscall over __do_sys_ni_syscall
+[D] Preferring __do_sys_ni_syscall over __ia32_sys_ni_syscall
 [D] Preferring __x64_sys_getpid over __do_sys_getpid
 [D] Preferring __do_sys_gettid over __ia32_sys_gettid
 [D] Preferring __do_compat_sys_x32_rt_sigreturn over __ia32_compat_sys_x32_rt_sigreturn
@@ -28,7 +28,7 @@ Detected kernel version: 5.7.0 (from vmlinux)
 [D] Preferring __do_sys_getgid over __ia32_sys_getgid
 [D] Preferring __do_sys_restart_syscall over __ia32_sys_restart_syscall
 [D] Preferring __x64_sys_setsid over __do_sys_setsid
-[D] Preferring __x64_sys_ni_syscall over __ia32_sys_ni_syscall
+[D] Preferring __do_sys_ni_syscall over __ia32_sys_ni_syscall
 [D] Preferring __x64_sys_restart_syscall over __do_sys_restart_syscall
 [D] Preferring __x64_sys_sync over __do_sys_sync
 [D] Preferring __x64_sys_getpgrp over __do_sys_getpgrp
@@ -43,6 +43,7 @@ Detected kernel version: 5.7.0 (from vmlinux)
 [D] Preferring __x64_sys_sched_yield over __do_sys_sched_yield
 [D] Preferring __x64_sys_geteuid over __do_sys_geteuid
 [D] Preferring __x64_sys_geteuid over __ia32_sys_geteuid
+[D] Preferring __x64_sys_ni_syscall over __do_sys_ni_syscall
 [D] Preferring __x64_sys_inotify_init over __ia32_sys_inotify_init
 [D] Preferring __x64_sys_pause over __ia32_sys_pause
 [D] Preferring __x64_sys_vfork over __ia32_sys_vfork
@@ -619,7 +620,7 @@ Detected kernel version: 5.7.0 (from vmlinux)
 [D] Location found through full-range adjustment: sendmsg (__x32_compat_sys_sendmsg+0x9) -> net/compat.c:662
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v5.7'), '0xffffffff818a5121', '0xffffffff818a5122', '0xffffffff818a5123', '0xffffffff818a5124', '0xffffffff818a5125', '0xffffffff818a5126', '0xffffffff818a5127', '0xffffffff818a5128', '0xffffffff818a5129', '0xffffffff818a512a', '0xffffffff818a512b', '0xffffffff818a512c', '0xffffffff818a512d', '0xffffffff818a512e', '0xffffffff818a512f', '0xffffffff818a5130', '0xffffffff818a5131', '0xffffffff818a5132', '0xffffffff818a5133', '0xffffffff818a5134', '0xffffffff818a5135']
 [D] Location found through full-range adjustment: recvmsg (__x32_compat_sys_recvmsg+0x9) -> net/compat.c:690
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', b'\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
 Found 333 implemented syscalls
 

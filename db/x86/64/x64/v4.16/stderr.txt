@@ -958,7 +958,7 @@ Detected kernel version: 4.16.0 (from vmlinux)
 [D] Location needs adjustment (bad): set_tid_address (sys_set_tid_address) -> arch/x86/include/asm/current.h:13
 [D] Location needs adjustment (bad): restart_syscall (sys_restart_syscall) -> arch/x86/include/asm/current.h:13
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.16'), '0xffffffff811b91af', '0xffffffff81196379', '0xffffffff8106eed7', '0xffffffff811cde45', '0xffffffff8107085c', '0xffffffff8106ef3f', '0xffffffff8106ef7f', '0xffffffff8106ef5f', '0xffffffff8106ef9f', '0xffffffff8106ef1e', '0xffffffff8106f36e', '0xffffffff8107dab1', '0xffffffff8105acfb', '0xffffffff8106e479', '0xffffffff811e11d0', '0xffffffff8106eef4', '0xffffffff8105a1fe', '0xffffffff8106b798']
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', b'\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
 Found 318 implemented syscalls
 

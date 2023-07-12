@@ -950,12 +950,12 @@ Detected kernel version: 4.1.0 (from vmlinux)
 [D] Location needs grepping (bad): arch_prctl (sys_arch_prctl) -> arch/x86/kernel/process_64.c:621
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.1'), '0xffffffff817c66f9', '0xffffffff817c66fa', '0xffffffff817c66fb', '0xffffffff817c66fc']
 [D] Location needs grepping (bad): execveat (stub_execveat) -> arch/x86/kernel/entry_64.S:531
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', b'\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
-[W] Location found through grepping: execve -> fs/exec.c:1704
-[W] Location found through grepping: execveat -> fs/exec.c:1712
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: fork -> kernel/fork.c:1757
 [W] Location found through grepping: vfork -> kernel/fork.c:1769
 [W] Location found through grepping: clone -> kernel/fork.c:1778
+[W] Location found through grepping: execve -> fs/exec.c:1704
+[W] Location found through grepping: execveat -> fs/exec.c:1712
 [I] Location could not be found through grepping: rt_sigreturn (orig name rt_sigreturn)
 [I] Location could not be found through grepping: arch_prctl (orig name arch_prctl)
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y

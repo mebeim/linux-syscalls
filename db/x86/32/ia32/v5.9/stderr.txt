@@ -505,7 +505,7 @@ Detected kernel version: 5.9.0 (from vmlinux)
 [D] Location needs grepping (bad): ia32_truncate64 (__ia32_sys_ia32_truncate64) -> include/linux/syscalls.h:1310
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-i386-v5.9'), '0xc1072281', '0xc1072282', '0xc1072283', '0xc1072284', '0xc1072285', '0xc1072286', '0xc1072287', '0xc1072288', '0xc1072289', '0xc107228a', '0xc107228b', '0xc107228c']
 [D] Location needs grepping (bad): gettid (__ia32_sys_gettid) -> include/linux/sched.h:1363
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', b'\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: ia32_truncate64 -> arch/x86/kernel/sys_ia32.c:54
 [W] Location found through grepping: getpid -> kernel/sys.c:905
 [W] Location found through grepping: gettid -> kernel/sys.c:911

@@ -936,14 +936,14 @@ Detected kernel version: 5.15.0 (from vmlinux)
 [D] Location needs grepping (bad): msgrcv (sys_msgrcv) -> ipc/msg.c:1258
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-mips-v5.15'), '0x80109831', '0x80109832', '0x80109833', '0x80109834', '0x80109835', '0x80109836', '0x80109837', '0x80109838', '0x80109839', '0x8010983a', '0x8010983b', '0x8010983c', '0x8010983d', '0x8010983e', '0x8010983f', '0x80109840', '0x80109841', '0x80109842', '0x80109843', '0x80109844', '0x80109845', '0x80109846', '0x80109847', '0x80109848', '0x80109849', '0x8010984a', '0x8010984b', '0x8010984c', '0x8010984d', '0x8010984e', '0x8010984f', '0x80109850', '0x80109851', '0x80109852', '0x80109853', '0x80109854', '0x80109855']
 [D] Location needs grepping (invalid): clone3 (__sys_clone3) -> None:None
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/mips', '--glob', '*.c', b'\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/mips', '--glob', '*.c', '\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: sysmips -> arch/mips/kernel/syscall.c:207
-[W] Location found through grepping: msgrcv -> ipc/msg.c:1264
 [W] Location found through grepping: getpid -> kernel/sys.c:924
 [W] Location found through grepping: gettid -> kernel/sys.c:930
 [W] Location found through grepping: fork -> kernel/fork.c:2640
 [W] Location found through grepping: clone -> kernel/fork.c:2669
 [W] Location found through grepping: clone3 -> kernel/fork.c:2843
+[W] Location found through grepping: msgrcv -> ipc/msg.c:1264
 [I] Location could not be found through grepping: syscall (orig name syscall)
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
 [D] Signature NOT found in ftrace metadata: syscall

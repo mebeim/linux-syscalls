@@ -8,6 +8,7 @@ Detected kernel version: 5.15.0 (from vmlinux)
 [D] Found ni_syscall: Symbol("sys_ni_syscall" at 0xffffffff8108a810, type=FUNC, size=0x8)
 [D] Found ni_syscall: Symbol("__ia32_sys_ni_syscall" at 0xffffffff810019d0, type=FUNC, size=0x8)
 [D] Found ni_syscall: Symbol("__x64_sys_ni_syscall" at 0xffffffff810019d0, type=FUNC, size=0x8)
+[D] Preferring __x64_sys_ni_syscall over __do_sys_ni_syscall
 [D] Preferring __x64_sys_getpid over __do_sys_getpid
 [D] Preferring __do_sys_gettid over __ia32_sys_gettid
 [D] Preferring __do_compat_sys_x32_rt_sigreturn over __ia32_compat_sys_x32_rt_sigreturn
@@ -26,7 +27,7 @@ Detected kernel version: 5.15.0 (from vmlinux)
 [D] Preferring __do_sys_getgid over __ia32_sys_getgid
 [D] Preferring __do_sys_restart_syscall over __ia32_sys_restart_syscall
 [D] Preferring __x64_sys_setsid over __do_sys_setsid
-[D] Preferring __do_sys_ni_syscall over __ia32_sys_ni_syscall
+[D] Preferring __x64_sys_ni_syscall over __ia32_sys_ni_syscall
 [D] Preferring __x64_sys_restart_syscall over __do_sys_restart_syscall
 [D] Preferring __x64_sys_sync over __do_sys_sync
 [D] Preferring __x64_sys_getpgrp over __do_sys_getpgrp
@@ -41,7 +42,6 @@ Detected kernel version: 5.15.0 (from vmlinux)
 [D] Preferring __x64_sys_sched_yield over __do_sys_sched_yield
 [D] Preferring __x64_sys_geteuid over __do_sys_geteuid
 [D] Preferring __x64_sys_geteuid over __ia32_sys_geteuid
-[D] Preferring __x64_sys_ni_syscall over __do_sys_ni_syscall
 [D] Preferring __x64_sys_inotify_init over __ia32_sys_inotify_init
 [D] Preferring __x64_sys_pause over __ia32_sys_pause
 [D] Preferring __x64_sys_vfork over __ia32_sys_vfork
@@ -622,7 +622,7 @@ Detected kernel version: 5.15.0 (from vmlinux)
 [D] Location found through full-range adjustment: sendmsg (__x64_compat_sys_sendmsg+0x9) -> net/compat.c:351
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v5.15'), '0xffffffff81907641', '0xffffffff81907642', '0xffffffff81907643', '0xffffffff81907644', '0xffffffff81907645', '0xffffffff81907646', '0xffffffff81907647', '0xffffffff81907648', '0xffffffff81907649', '0xffffffff8190764a', '0xffffffff8190764b', '0xffffffff8190764c', '0xffffffff8190764d', '0xffffffff8190764e', '0xffffffff8190764f', '0xffffffff81907650', '0xffffffff81907651', '0xffffffff81907652', '0xffffffff81907653', '0xffffffff81907654', '0xffffffff81907655']
 [D] Location found through full-range adjustment: recvmsg (__x64_compat_sys_recvmsg+0x9) -> net/compat.c:379
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', b'\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [I] Location could not be found through grepping: lookup_dcookie (orig name lookup_dcookie)
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
 [D] Signature NOT found in ftrace metadata: lookup_dcookie
