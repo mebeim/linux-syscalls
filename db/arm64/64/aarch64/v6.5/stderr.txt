@@ -467,24 +467,24 @@ Detected kernel version: 6.5.0 (from vmlinux)
 [D] Location needs adjustment (bad): pkey_mprotect (__arm64_sys_pkey_mprotect) -> kernel/sys_ni.c:249
 [D] Location needs adjustment (bad): pkey_alloc (__arm64_sys_pkey_alloc) -> kernel/sys_ni.c:250
 [D] Location needs adjustment (bad): pkey_free (__arm64_sys_pkey_free) -> kernel/sys_ni.c:251
-[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v6.5'), '0xffff8000800c363b', '0xffff8000800aa683', '0xffff8000800b42cf', '0xffff8000800c3b63', '0xffff8000800c3b6b', '0xffff8000800c3b73']
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v6.5'), '0xffff8000800c363b', '0xffff8000800c3b6b', '0xffff8000800c3b73', '0xffff8000800c3b63', '0xffff8000800aa683', '0xffff8000800b42cf']
 [D] Location needs full-range adjustment (bad): lookup_dcookie (__arm64_sys_lookup_dcookie+0x7) -> kernel/sys_ni.c:54
-[D] Location needs full-range adjustment (bad): pkey_mprotect (__arm64_sys_pkey_mprotect+0x7) -> kernel/sys_ni.c:249
 [D] Location needs full-range adjustment (bad): pkey_alloc (__arm64_sys_pkey_alloc+0x7) -> kernel/sys_ni.c:250
 [D] Location needs full-range adjustment (bad): pkey_free (__arm64_sys_pkey_free+0x7) -> kernel/sys_ni.c:251
+[D] Location needs full-range adjustment (bad): pkey_mprotect (__arm64_sys_pkey_mprotect+0x7) -> kernel/sys_ni.c:249
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v6.5'), '0xffff8000800c3635', '0xffff8000800c3636', '0xffff8000800c3637', '0xffff8000800c3638', '0xffff8000800c3639']
 [D] Location needs grepping (bad): lookup_dcookie (__arm64_sys_lookup_dcookie) -> kernel/sys_ni.c:54
-[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v6.5'), '0xffff8000800c3b5d', '0xffff8000800c3b5e', '0xffff8000800c3b5f', '0xffff8000800c3b60', '0xffff8000800c3b61']
-[D] Location needs grepping (bad): pkey_mprotect (__arm64_sys_pkey_mprotect) -> kernel/sys_ni.c:249
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v6.5'), '0xffff8000800c3b65', '0xffff8000800c3b66', '0xffff8000800c3b67', '0xffff8000800c3b68', '0xffff8000800c3b69']
 [D] Location needs grepping (bad): pkey_alloc (__arm64_sys_pkey_alloc) -> kernel/sys_ni.c:250
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v6.5'), '0xffff8000800c3b6d', '0xffff8000800c3b6e', '0xffff8000800c3b6f', '0xffff8000800c3b70', '0xffff8000800c3b71']
 [D] Location needs grepping (bad): pkey_free (__arm64_sys_pkey_free) -> kernel/sys_ni.c:251
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/arm64', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
-[W] Location found through grepping: pkey_mprotect -> mm/mprotect.c:844
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v6.5'), '0xffff8000800c3b5d', '0xffff8000800c3b5e', '0xffff8000800c3b5f', '0xffff8000800c3b60', '0xffff8000800c3b61']
+[D] Location needs grepping (bad): pkey_mprotect (__arm64_sys_pkey_mprotect) -> kernel/sys_ni.c:249
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/arm64', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
+[I] Location could not be found through grepping: lookup_dcookie (orig name lookup_dcookie)
 [W] Location found through grepping: pkey_alloc -> mm/mprotect.c:850
 [W] Location found through grepping: pkey_free -> mm/mprotect.c:880
-[I] Location could not be found through grepping: lookup_dcookie (orig name lookup_dcookie)
+[W] Location found through grepping: pkey_mprotect -> mm/mprotect.c:844
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
 [D] Signature NOT found in ftrace metadata: lookup_dcookie
 [W] Assuming lookup_dcookie is not implemented as it points to kernel/sys_ni.c:54 after adjustments

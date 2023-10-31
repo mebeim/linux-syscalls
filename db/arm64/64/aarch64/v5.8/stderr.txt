@@ -452,20 +452,20 @@ Detected kernel version: 5.8.0 (from vmlinux)
 [D] Location needs adjustment (bad): pkey_mprotect (__arm64_sys_pkey_mprotect) -> kernel/sys_ni.c:348
 [D] Location needs adjustment (bad): pkey_alloc (__arm64_sys_pkey_alloc) -> kernel/sys_ni.c:349
 [D] Location needs adjustment (bad): pkey_free (__arm64_sys_pkey_free) -> kernel/sys_ni.c:350
-[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.8'), '0xffff8000100a5a63', '0xffff8000100a5a77', '0xffff8000100a5a93']
-[D] Location needs full-range adjustment (bad): pkey_mprotect (__arm64_sys_pkey_mprotect+0x13) -> kernel/sys_ni.c:348
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.8'), '0xffff8000100a5a77', '0xffff8000100a5a93', '0xffff8000100a5a63']
 [D] Location needs full-range adjustment (bad): pkey_alloc (__arm64_sys_pkey_alloc+0x13) -> kernel/sys_ni.c:349
 [D] Location needs full-range adjustment (bad): pkey_free (__arm64_sys_pkey_free+0x13) -> kernel/sys_ni.c:350
-[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.8'), '0xffff8000100a5a51', '0xffff8000100a5a52', '0xffff8000100a5a53', '0xffff8000100a5a54', '0xffff8000100a5a55', '0xffff8000100a5a56', '0xffff8000100a5a57', '0xffff8000100a5a58', '0xffff8000100a5a59', '0xffff8000100a5a5a', '0xffff8000100a5a5b', '0xffff8000100a5a5c', '0xffff8000100a5a5d', '0xffff8000100a5a5e', '0xffff8000100a5a5f', '0xffff8000100a5a60', '0xffff8000100a5a61']
-[D] Location needs grepping (bad): pkey_mprotect (__arm64_sys_pkey_mprotect) -> kernel/sys_ni.c:348
+[D] Location needs full-range adjustment (bad): pkey_mprotect (__arm64_sys_pkey_mprotect+0x13) -> kernel/sys_ni.c:348
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.8'), '0xffff8000100a5a65', '0xffff8000100a5a66', '0xffff8000100a5a67', '0xffff8000100a5a68', '0xffff8000100a5a69', '0xffff8000100a5a6a', '0xffff8000100a5a6b', '0xffff8000100a5a6c', '0xffff8000100a5a6d', '0xffff8000100a5a6e', '0xffff8000100a5a6f', '0xffff8000100a5a70', '0xffff8000100a5a71', '0xffff8000100a5a72', '0xffff8000100a5a73', '0xffff8000100a5a74', '0xffff8000100a5a75']
 [D] Location needs grepping (bad): pkey_alloc (__arm64_sys_pkey_alloc) -> kernel/sys_ni.c:349
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.8'), '0xffff8000100a5a81', '0xffff8000100a5a82', '0xffff8000100a5a83', '0xffff8000100a5a84', '0xffff8000100a5a85', '0xffff8000100a5a86', '0xffff8000100a5a87', '0xffff8000100a5a88', '0xffff8000100a5a89', '0xffff8000100a5a8a', '0xffff8000100a5a8b', '0xffff8000100a5a8c', '0xffff8000100a5a8d', '0xffff8000100a5a8e', '0xffff8000100a5a8f', '0xffff8000100a5a90', '0xffff8000100a5a91']
 [D] Location needs grepping (bad): pkey_free (__arm64_sys_pkey_free) -> kernel/sys_ni.c:350
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/arm64', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
-[W] Location found through grepping: pkey_mprotect -> mm/mprotect.c:643
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.8'), '0xffff8000100a5a51', '0xffff8000100a5a52', '0xffff8000100a5a53', '0xffff8000100a5a54', '0xffff8000100a5a55', '0xffff8000100a5a56', '0xffff8000100a5a57', '0xffff8000100a5a58', '0xffff8000100a5a59', '0xffff8000100a5a5a', '0xffff8000100a5a5b', '0xffff8000100a5a5c', '0xffff8000100a5a5d', '0xffff8000100a5a5e', '0xffff8000100a5a5f', '0xffff8000100a5a60', '0xffff8000100a5a61']
+[D] Location needs grepping (bad): pkey_mprotect (__arm64_sys_pkey_mprotect) -> kernel/sys_ni.c:348
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/arm64', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: pkey_alloc -> mm/mprotect.c:649
 [W] Location found through grepping: pkey_free -> mm/mprotect.c:679
+[W] Location found through grepping: pkey_mprotect -> mm/mprotect.c:643
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
 Found 293 implemented syscalls
 Found 3 definition locations through grepping

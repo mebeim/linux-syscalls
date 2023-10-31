@@ -6,31 +6,31 @@ Detected kernel version: 5.3.0 (from vmlinux)
 [I] Syscall table (sys_call_table) is 3488 bytes, 436 entries
 [D] Found ni_syscall: Symbol("sys_ni_syscall" at 0xffff000010110080, type=FUNC, size=0x8)
 [D] Found ni_syscall: Symbol("__arm64_sys_ni_syscall" at 0xffff00001008de30, type=FUNC, size=0x14)
-[D] Discarding alias for sys_ni_syscall: __arm64_sys_spu_run
-[D] Discarding alias for sys_ni_syscall: __arm64_sys_pkey_mprotect
-[D] Discarding alias for sys_ni_syscall: __arm64_sys_old_msgctl
-[D] Discarding alias for sys_ni_syscall: __arm64_sys_io_pgetevents_time32
-[D] Discarding alias for sys_ni_syscall: __arm64_compat_sys_quotactl32
-[D] Discarding alias for sys_ni_syscall: __arm64_sys_modify_ldt
-[D] Discarding alias for sys_ni_syscall: __arm64_sys_pciconfig_iobase
-[D] Discarding alias for sys_ni_syscall: __arm64_sys_rtas
-[D] Discarding alias for sys_ni_syscall: __arm64_sys_vm86
-[D] Discarding alias for sys_ni_syscall: __arm64_sys_ipc
-[D] Discarding alias for sys_ni_syscall: __arm64_sys_pkey_alloc
-[D] Discarding alias for sys_ni_syscall: __arm64_sys_fadvise64
-[D] Discarding alias for sys_ni_syscall: __arm64_sys_vm86old
-[D] Discarding alias for sys_ni_syscall: __arm64_compat_sys_ipc
-[D] Discarding alias for sys_ni_syscall: __arm64_sys_pkey_free
-[D] Discarding alias for sys_ni_syscall: __arm64_compat_sys_s390_ipc
-[D] Discarding alias for sys_ni_syscall: __arm64_sys_old_shmctl
-[D] Discarding alias for sys_ni_syscall: __arm64_sys_s390_pci_mmio_read
-[D] Discarding alias for sys_ni_syscall: __arm64_sys_socketcall
-[D] Discarding alias for sys_ni_syscall: __arm64_compat_sys_io_pgetevents_time32
-[D] Discarding alias for sys_ni_syscall: __arm64_sys_old_semctl
-[D] Discarding alias for sys_ni_syscall: __arm64_sys_s390_ipc
-[D] Discarding alias for sys_ni_syscall: __arm64_sys_spu_create
-[D] Discarding alias for sys_ni_syscall: __arm64_sys_s390_pci_mmio_write
-[D] Discarding alias for sys_ni_syscall: __arm64_sys_subpage_prot
+[D] Discarding __arm64_compat_sys_io_pgetevents_time32 as alias for sys_ni_syscall
+[D] Discarding __arm64_compat_sys_ipc as alias for sys_ni_syscall
+[D] Discarding __arm64_compat_sys_quotactl32 as alias for sys_ni_syscall
+[D] Discarding __arm64_compat_sys_s390_ipc as alias for sys_ni_syscall
+[D] Discarding __arm64_sys_fadvise64 as alias for sys_ni_syscall
+[D] Discarding __arm64_sys_io_pgetevents_time32 as alias for sys_ni_syscall
+[D] Discarding __arm64_sys_ipc as alias for sys_ni_syscall
+[D] Discarding __arm64_sys_modify_ldt as alias for sys_ni_syscall
+[D] Discarding __arm64_sys_old_msgctl as alias for sys_ni_syscall
+[D] Discarding __arm64_sys_old_semctl as alias for sys_ni_syscall
+[D] Discarding __arm64_sys_old_shmctl as alias for sys_ni_syscall
+[D] Discarding __arm64_sys_pciconfig_iobase as alias for sys_ni_syscall
+[D] Discarding __arm64_sys_pkey_alloc as alias for sys_ni_syscall
+[D] Discarding __arm64_sys_pkey_free as alias for sys_ni_syscall
+[D] Discarding __arm64_sys_pkey_mprotect as alias for sys_ni_syscall
+[D] Discarding __arm64_sys_rtas as alias for sys_ni_syscall
+[D] Discarding __arm64_sys_s390_ipc as alias for sys_ni_syscall
+[D] Discarding __arm64_sys_s390_pci_mmio_read as alias for sys_ni_syscall
+[D] Discarding __arm64_sys_s390_pci_mmio_write as alias for sys_ni_syscall
+[D] Discarding __arm64_sys_socketcall as alias for sys_ni_syscall
+[D] Discarding __arm64_sys_spu_create as alias for sys_ni_syscall
+[D] Discarding __arm64_sys_spu_run as alias for sys_ni_syscall
+[D] Discarding __arm64_sys_subpage_prot as alias for sys_ni_syscall
+[D] Discarding __arm64_sys_vm86 as alias for sys_ni_syscall
+[D] Discarding __arm64_sys_vm86old as alias for sys_ni_syscall
 [W] Interesting! Vaddr 0xffff000010110080 (Symbol("sys_ni_syscall" at 0xffff000010110080, type=FUNC, size=0x8)) found 3 times in sys_call_table
 [D] sys_call_table[0]: Symbol("__arm64_sys_io_setup" at 0xffff00001032af70, type=FUNC, size=0x1bc)
 [D] sys_call_table[1]: Symbol("__arm64_sys_io_destroy" at 0xffff00001032b2f0, type=FUNC, size=0x170)
@@ -474,8 +474,8 @@ Detected kernel version: 5.3.0 (from vmlinux)
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.3'), '0xffff00001032af70', '0xffff00001032b2f0', '0xffff00001032b460', '0xffff00001032b8f0', '0xffff00001032bb14', '0xffff0000102f9bb0', '0xffff0000102f9be0', '0xffff0000102f9c10', '0xffff0000102f9ce4', '0xffff0000102f9d10', '0xffff0000102f9d34', '0xffff0000102f9e00', '0xffff0000102f9e24', '0xffff0000102f9e50', '0xffff0000102f9f04', '0xffff0000102f9f24', '0xffff0000102f9f44', '0xffff000010309280', '0xffff00001036cc00', '0xffff000010325700', '0xffff000010322554', '0xffff0000103225a0', '0xffff000010323020', '0xffff0000102ef6e0', '0xffff0000102ef580', '0xffff0000102e0280', '0xffff00001031ead0', '0xffff00001031eb10', '0xffff00001031ee64', '0xffff0000102e1880', '0xffff0000104d5df0', '0xffff0000104d60a0', '0xffff000010336400', '0xffff0000102de1b0', '0xffff0000102de340', '0xffff0000102de840', '0xffff0000102dea10', '0xffff0000102dedc4', '0xffff0000102dee50', '0xffff0000102f3620', '0xffff0000102f5c10', '0xffff0000102f6120', '0xffff00001030a640', '0xffff00001030a680', '0xffff0000102c6c50', '0xffff0000102c6e30', '0xffff0000102c6f10', '0xffff0000102c71d4', '0xffff0000102c72f0', '0xffff0000102c7310', '0xffff0000102c74b4', '0xffff0000102c7574', '0xffff0000102c7660', '0xffff0000102c77c0', '0xffff0000102c7910', '0xffff0000102c7da0', '0xffff0000102c7e60', '0xffff0000102c7eb0', '0xffff0000102d6114', '0xffff00001034cba0', '0xffff0000102e2680', '0xffff0000102c9610', '0xffff0000102caf80', '0xffff0000102cb0a0', '0xffff0000102cb910', '0xffff0000102cb934', '0xffff0000102cb174', '0xffff0000102cb2f4', '0xffff0000102cb960', '0xffff0000102cbba0', '0xffff0000102cc060', '0xffff0000102e4450', '0xffff0000102e47b0', '0xffff000010323a20', '0xffff000010306d00', '0xffff000010306d40', '0xffff000010307500', '0xffff0000102d1ac0', '0xffff0000102d1a80', '0xffff0000102d1aa0', '0xffff000010307c60', '0xffff000010307d60', '0xffff000010307dd0', '0xffff000010308004', '0xffff000010324930', '0xffff000010324ab0', '0xffff000010324b94', '0xffff000010308670', '0xffff00001018c814', '0xffff0000100f5040', '0xffff0000100f5214', '0xffff00001008ddd0', '0xffff0000100ee150', '0xffff0000100ee200', '0xffff0000100ee240', '0xffff0000100e7120', '0xffff0000100e7d94', '0xffff000010182af0', '0xffff000010181a30', '0xffff000010181a70', '0xffff00001016dad0', '0xffff000010179830', '0xffff000010179cf0', '0xffff00001018e960', '0xffff00001018abb0', '0xffff000010188470', '0xffff000010175ef4', '0xffff000010176054', '0xffff000010176150', '0xffff0000101761d0', '0xffff000010176370', '0xffff000010176524', '0xffff000010176600', '0xffff000010176780', '0xffff000010176b10', '0xffff000010149940', '0xffff0000100f69a4', '0xffff00001011c4f0', '0xffff00001011c4c0', '0xffff00001011c890', '0xffff00001011c910', '0xffff00001011cde4', '0xffff00001011cf70', '0xffff00001011d060', '0xffff00001011d0e0', '0xffff00001011d124', '0xffff00001011d164', '0xffff0000100fa3c4', '0xffff0000100fd774', '0xffff0000100fdba0', '0xffff0000100fdb64', '0xffff0000100fe040', '0xffff0000100fefa0', '0xffff0000100fe774', '0xffff0000100fa740', '0xffff0000100fa990', '0xffff0000100fd3f4', '0xffff0000100fdbd0', '0xffff00001008c824', '0xffff0000101005e0', '0xffff000010100860', '0xffff000010112830', '0xffff000010100c70', '0xffff000010100d60', '0xffff000010101020', '0xffff000010101140', '0xffff0000101015b0', '0xffff0000101015d4', '0xffff000010101a30', '0xffff000010101a54', '0xffff000010101c84', '0xffff000010101d80', '0xffff000010101ef0', '0xffff000010102100', '0xffff000010102284', '0xffff000010102330', '0xffff000010102494', '0xffff000010114884', '0xffff000010114a10', '0xffff0000101024b0', '0xffff0000101024d0', '0xffff000010102740', '0xffff000010102a90', '0xffff000010102f64', '0xffff0000101034a4', '0xffff0000101034e0', '0xffff000010103530', '0xffff000010103a80', '0xffff000010167d00', '0xffff000010167f34', '0xffff0000101682f4', '0xffff000010101da0', '0xffff000010101df0', '0xffff000010101e30', '0xffff000010101e60', '0xffff000010101e90', '0xffff000010101ec0', '0xffff000010101dc4', '0xffff000010103b74', '0xffff000010489fc0', '0xffff00001048a090', '0xffff00001048a204', '0xffff00001048a2c0', '0xffff00001048a374', '0xffff00001048a424', '0xffff000010480f80', '0xffff000010480ff0', '0xffff0000104811f0', '0xffff000010481100', '0xffff000010484bb0', '0xffff000010484c40', '0xffff000010484d94', '0xffff000010484f70', '0xffff000010486ef0', '0xffff000010486f70', '0xffff000010487740', '0xffff000010487970', '0xffff000010a79400', '0xffff000010a79710', '0xffff000010a79800', '0xffff000010a798d0', '0xffff000010a79b00', '0xffff000010a79bf4', '0xffff000010a79ce0', '0xffff000010a79dd0', '0xffff000010a79f10', '0xffff000010a7a0a0', '0xffff000010a7a100', '0xffff000010a7a1e0', '0xffff000010a7a344', '0xffff000010a7a484', '0xffff000010a7a830', '0xffff0000102324e4', '0xffff00001026b410', '0xffff00001026a6c0', '0xffff00001026e9d0', '0xffff00001048eb10', '0xffff00001048ed54', '0xffff000010490ae4', '0xffff0000100e7824', '0xffff0000102d4660', '0xffff00001008dd90', '0xffff00001022ce50', '0xffff000010289b60', '0xffff000010289520', '0xffff00001026dcc4', '0xffff00001026efc0', '0xffff000010267800', '0xffff000010267870', '0xffff0000102678f0', '0xffff000010267a60', '0xffff000010266240', '0xffff000010283b50', '0xffff00001026c1a0', '0xffff000010296820', '0xffff000010295500', '0xffff000010295440', '0xffff0000102954d4', '0xffff0000102a96c0', '0xffff0000100fdcb0', '0xffff00001021ae24', '0xffff000010a79ad4', '0xffff000010a7a9b0', '0xffff0000100ee520', '0xffff000010102cf0', '0xffff000010320a14', '0xffff000010320c60', '0xffff000010342180', '0xffff000010342400', '0xffff000010176760', '0xffff000010307ce0', '0xffff000010110530', '0xffff000010a7a6f0', '0xffff000010278770', '0xffff0000102787a0', '0xffff000010165944', '0xffff00001018abd0', '0xffff00001011c520', '0xffff00001011ca30', '0xffff0000102dee20', '0xffff0000101b4600', '0xffff000010739af4', '0xffff0000102c5a20', '0xffff0000101eade0', '0xffff0000102d46b0', '0xffff000010327cc0', '0xffff0000101394e4', '0xffff000010267820', '0xffff0000102cc3e0', '0xffff0000102cba70', '0xffff0000102cbcb0', '0xffff0000102d1ba0', '0xffff00001032bbc4', '0xffff000010223134', '0xffff00001018f1b0', '0xffff0000100fd980', '0xffff0000103303e4', '0xffff000010330024', '0xffff000010330404', '0xffff0000102f47f0', '0xffff0000102f5f60', '0xffff00001030c9b0', '0xffff00001030cc90', '0xffff0000102f5c40', '0xffff00001030cb00', '0xffff00001010c9e0', '0xffff0000100e78b4']
 [D] Location needs adjustment (bad): umask (__arm64_sys_umask) -> arch/arm64/include/asm/current.h:15
 [D] Location needs adjustment (bad): getcpu (__arm64_sys_getcpu) -> arch/arm64/include/asm/percpu.h:22
-[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.3'), '0xffff00001010350f', '0xffff000010103b73']
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/arm64', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.3'), '0xffff000010103b73', '0xffff00001010350f']
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/arm64', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
 Found 287 implemented syscalls
 

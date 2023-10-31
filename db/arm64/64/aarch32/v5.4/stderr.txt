@@ -450,24 +450,24 @@ Detected kernel version: 5.4.0 (from vmlinux)
 [D] Location needs adjustment (bad): pkey_mprotect (__arm64_sys_pkey_mprotect) -> kernel/sys_ni.c:348
 [D] Location needs adjustment (bad): pkey_alloc (__arm64_sys_pkey_alloc) -> kernel/sys_ni.c:349
 [D] Location needs adjustment (bad): pkey_free (__arm64_sys_pkey_free) -> kernel/sys_ni.c:350
-[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.4'), '0xffff8000101078c3', '0xffff8000101155b7', '0xffff800010115567', '0xffff800010115577', '0xffff800010115587']
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.4'), '0xffff8000101155b7', '0xffff800010115577', '0xffff800010115587', '0xffff800010115567', '0xffff8000101078c3']
 [D] Location needs full-range adjustment (bad): pciconfig_iobase (__arm64_sys_pciconfig_iobase+0x7) -> kernel/sys_ni.c:360
-[D] Location needs full-range adjustment (bad): pkey_mprotect (__arm64_sys_pkey_mprotect+0x7) -> kernel/sys_ni.c:348
 [D] Location needs full-range adjustment (bad): pkey_alloc (__arm64_sys_pkey_alloc+0x7) -> kernel/sys_ni.c:349
 [D] Location needs full-range adjustment (bad): pkey_free (__arm64_sys_pkey_free+0x7) -> kernel/sys_ni.c:350
+[D] Location needs full-range adjustment (bad): pkey_mprotect (__arm64_sys_pkey_mprotect+0x7) -> kernel/sys_ni.c:348
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.4'), '0xffff8000101155b1', '0xffff8000101155b2', '0xffff8000101155b3', '0xffff8000101155b4', '0xffff8000101155b5']
 [D] Location needs grepping (bad): pciconfig_iobase (__arm64_sys_pciconfig_iobase) -> kernel/sys_ni.c:360
-[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.4'), '0xffff800010115561', '0xffff800010115562', '0xffff800010115563', '0xffff800010115564', '0xffff800010115565']
-[D] Location needs grepping (bad): pkey_mprotect (__arm64_sys_pkey_mprotect) -> kernel/sys_ni.c:348
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.4'), '0xffff800010115571', '0xffff800010115572', '0xffff800010115573', '0xffff800010115574', '0xffff800010115575']
 [D] Location needs grepping (bad): pkey_alloc (__arm64_sys_pkey_alloc) -> kernel/sys_ni.c:349
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.4'), '0xffff800010115581', '0xffff800010115582', '0xffff800010115583', '0xffff800010115584', '0xffff800010115585']
 [D] Location needs grepping (bad): pkey_free (__arm64_sys_pkey_free) -> kernel/sys_ni.c:350
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/arm64', '--glob', '*.c', '\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
-[W] Location found through grepping: pkey_mprotect -> mm/mprotect.c:583
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.4'), '0xffff800010115561', '0xffff800010115562', '0xffff800010115563', '0xffff800010115564', '0xffff800010115565']
+[D] Location needs grepping (bad): pkey_mprotect (__arm64_sys_pkey_mprotect) -> kernel/sys_ni.c:348
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/arm64', '--glob', '*.c', '\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[I] Location could not be found through grepping: pciconfig_iobase (orig name pciconfig_iobase)
 [W] Location found through grepping: pkey_alloc -> mm/mprotect.c:589
 [W] Location found through grepping: pkey_free -> mm/mprotect.c:619
-[I] Location could not be found through grepping: pciconfig_iobase (orig name pciconfig_iobase)
+[W] Location found through grepping: pkey_mprotect -> mm/mprotect.c:583
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
 [D] Signature NOT found in ftrace metadata: pciconfig_iobase
 [W] Assuming pciconfig_iobase is not implemented as it points to kernel/sys_ni.c:360 after adjustments

@@ -464,24 +464,24 @@ Detected kernel version: 5.19.0 (from vmlinux)
 [D] Location needs adjustment (bad): pkey_mprotect (__arm64_sys_pkey_mprotect) -> kernel/sys_ni.c:355
 [D] Location needs adjustment (bad): pkey_alloc (__arm64_sys_pkey_alloc) -> kernel/sys_ni.c:356
 [D] Location needs adjustment (bad): pkey_free (__arm64_sys_pkey_free) -> kernel/sys_ni.c:357
-[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.19'), '0xffff8000080c2953', '0xffff8000080c3897', '0xffff8000080c38b3', '0xffff8000080c38c7']
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.19'), '0xffff8000080c2953', '0xffff8000080c38b3', '0xffff8000080c38c7', '0xffff8000080c3897']
 [D] Location needs full-range adjustment (bad): lookup_dcookie (__arm64_sys_lookup_dcookie+0x13) -> kernel/sys_ni.c:60
-[D] Location needs full-range adjustment (bad): pkey_mprotect (__arm64_sys_pkey_mprotect+0x13) -> kernel/sys_ni.c:355
 [D] Location needs full-range adjustment (bad): pkey_alloc (__arm64_sys_pkey_alloc+0x13) -> kernel/sys_ni.c:356
 [D] Location needs full-range adjustment (bad): pkey_free (__arm64_sys_pkey_free+0x13) -> kernel/sys_ni.c:357
+[D] Location needs full-range adjustment (bad): pkey_mprotect (__arm64_sys_pkey_mprotect+0x13) -> kernel/sys_ni.c:355
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.19'), '0xffff8000080c2941', '0xffff8000080c2942', '0xffff8000080c2943', '0xffff8000080c2944', '0xffff8000080c2945', '0xffff8000080c2946', '0xffff8000080c2947', '0xffff8000080c2948', '0xffff8000080c2949', '0xffff8000080c294a', '0xffff8000080c294b', '0xffff8000080c294c', '0xffff8000080c294d', '0xffff8000080c294e', '0xffff8000080c294f', '0xffff8000080c2950', '0xffff8000080c2951']
 [D] Location needs grepping (bad): lookup_dcookie (__arm64_sys_lookup_dcookie) -> kernel/sys_ni.c:60
-[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.19'), '0xffff8000080c3885', '0xffff8000080c3886', '0xffff8000080c3887', '0xffff8000080c3888', '0xffff8000080c3889', '0xffff8000080c388a', '0xffff8000080c388b', '0xffff8000080c388c', '0xffff8000080c388d', '0xffff8000080c388e', '0xffff8000080c388f', '0xffff8000080c3890', '0xffff8000080c3891', '0xffff8000080c3892', '0xffff8000080c3893', '0xffff8000080c3894', '0xffff8000080c3895']
-[D] Location needs grepping (bad): pkey_mprotect (__arm64_sys_pkey_mprotect) -> kernel/sys_ni.c:355
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.19'), '0xffff8000080c38a1', '0xffff8000080c38a2', '0xffff8000080c38a3', '0xffff8000080c38a4', '0xffff8000080c38a5', '0xffff8000080c38a6', '0xffff8000080c38a7', '0xffff8000080c38a8', '0xffff8000080c38a9', '0xffff8000080c38aa', '0xffff8000080c38ab', '0xffff8000080c38ac', '0xffff8000080c38ad', '0xffff8000080c38ae', '0xffff8000080c38af', '0xffff8000080c38b0', '0xffff8000080c38b1']
 [D] Location needs grepping (bad): pkey_alloc (__arm64_sys_pkey_alloc) -> kernel/sys_ni.c:356
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.19'), '0xffff8000080c38b5', '0xffff8000080c38b6', '0xffff8000080c38b7', '0xffff8000080c38b8', '0xffff8000080c38b9', '0xffff8000080c38ba', '0xffff8000080c38bb', '0xffff8000080c38bc', '0xffff8000080c38bd', '0xffff8000080c38be', '0xffff8000080c38bf', '0xffff8000080c38c0', '0xffff8000080c38c1', '0xffff8000080c38c2', '0xffff8000080c38c3', '0xffff8000080c38c4', '0xffff8000080c38c5']
 [D] Location needs grepping (bad): pkey_free (__arm64_sys_pkey_free) -> kernel/sys_ni.c:357
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/arm64', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
-[W] Location found through grepping: pkey_mprotect -> mm/mprotect.c:765
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.19'), '0xffff8000080c3885', '0xffff8000080c3886', '0xffff8000080c3887', '0xffff8000080c3888', '0xffff8000080c3889', '0xffff8000080c388a', '0xffff8000080c388b', '0xffff8000080c388c', '0xffff8000080c388d', '0xffff8000080c388e', '0xffff8000080c388f', '0xffff8000080c3890', '0xffff8000080c3891', '0xffff8000080c3892', '0xffff8000080c3893', '0xffff8000080c3894', '0xffff8000080c3895']
+[D] Location needs grepping (bad): pkey_mprotect (__arm64_sys_pkey_mprotect) -> kernel/sys_ni.c:355
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/arm64', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
+[I] Location could not be found through grepping: lookup_dcookie (orig name lookup_dcookie)
 [W] Location found through grepping: pkey_alloc -> mm/mprotect.c:771
 [W] Location found through grepping: pkey_free -> mm/mprotect.c:801
-[I] Location could not be found through grepping: lookup_dcookie (orig name lookup_dcookie)
+[W] Location found through grepping: pkey_mprotect -> mm/mprotect.c:765
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
 [D] Signature NOT found in ftrace metadata: lookup_dcookie
 [W] Assuming lookup_dcookie is not implemented as it points to kernel/sys_ni.c:60 after adjustments
