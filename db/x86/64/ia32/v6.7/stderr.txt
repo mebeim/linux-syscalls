@@ -8,6 +8,7 @@ Detected kernel version: 6.7.0 (from vmlinux)
 [D] Found ni_syscall: Symbol("sys_ni_syscall" at 0xffffffff810a1120, type=FUNC, size=0xc)
 [D] Found ni_syscall: Symbol("__ia32_sys_ni_syscall" at 0xffffffff810021e0, type=FUNC, size=0xc)
 [D] Found ni_syscall: Symbol("__x64_sys_ni_syscall" at 0xffffffff810021e0, type=FUNC, size=0xc)
+[D] Preferring __x64_sys_ni_syscall over __do_sys_ni_syscall
 [D] Preferring __ia32_compat_sys_rt_sigreturn over __do_compat_sys_rt_sigreturn
 [D] Preferring __ia32_compat_sys_sigreturn over __do_compat_sys_sigreturn
 [D] Preferring __ia32_sys_fork over __do_sys_fork
@@ -25,7 +26,7 @@ Detected kernel version: 6.7.0 (from vmlinux)
 [D] Preferring __ia32_sys_getuid16 over __do_sys_getuid16
 [D] Preferring __ia32_sys_inotify_init over __do_sys_inotify_init
 [D] Preferring __ia32_sys_munlockall over __do_sys_munlockall
-[D] Preferring __ia32_sys_ni_syscall over __do_sys_ni_syscall
+[D] Preferring __ia32_sys_ni_syscall over __x64_sys_ni_syscall
 [D] Preferring __ia32_sys_pause over __do_sys_pause
 [D] Preferring __ia32_sys_restart_syscall over __do_sys_restart_syscall
 [D] Preferring __ia32_sys_sched_yield over __do_sys_sched_yield
