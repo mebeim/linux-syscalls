@@ -22,7 +22,7 @@ cat >"$tmp_list_file" <<EOF
 26a0  # warning sign
 2b06  # arrow up
 2b07  # arrow down
-1f9ea # test tube
+1f984 # unicorn
 EOF
 
 wget -q 'https://github.com/googlefonts/noto-emoji/raw/main/fonts/NotoColorEmoji.ttf' -O "$tmp_font_file"

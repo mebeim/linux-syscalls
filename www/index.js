@@ -296,7 +296,7 @@ function fillRow(row, tag, sc, maxArgs) {
 	kcfg.textContent = sc.kconfig ?? ''
 
 	if (sc.esoteric) {
-		name.title = 'This syscall has an esoteric implementation and only exists for this architecture'
+		name.title = 'This syscall has an esoteric implementation'
 		name.classList.add('esoteric')
 	}
 
