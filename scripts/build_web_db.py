@@ -57,15 +57,13 @@ def main() -> int:
 	index = {}
 	origdir = Path('db')
 	rootdir = Path('www/db')
+	warnings = []
 
-	# NOTE: dir_exist_ok= is Python 3.8+
+	# NOTE: dir_exist_ok= for copytree() is Python 3.8+
+	rmtree(rootdir)
 	copytree(origdir, rootdir, dirs_exist_ok=True)
 
 	for archdir in rootdir.iterdir():
-		# Skip the special case of already having the index in the DB
-		if archdir.name == 'index.json':
-			continue
-
 		arch = archdir.name
 		index[arch] = arch_index = {}
 
@@ -83,11 +81,11 @@ def main() -> int:
 					files = os.listdir(tagdir)
 
 					if 'config.txt' not in files:
-						eprint(f'Warning: no config for {arch}/{bits}/{abi}/{tag}')
+						warnings.append(f'no config for {arch}/{bits}/{abi}/{tag}')
 						abi_index[tag]['config'] = False
 
 					if 'stderr.txt' not in files:
-						eprint(f'Warning: no stderr log for {arch}/{bits}/{abi}/{tag}')
+						warnings.append(f'no stderr log for {arch}/{bits}/{abi}/{tag}')
 						abi_index[tag]['stderr'] = False
 
 					if 'table.json' not in files:
@@ -114,7 +112,9 @@ def main() -> int:
 	with (rootdir / 'index.json').open('w') as f:
 		dump(index, f, sort_keys=True, separators=(',', ':'))
 
-	# Pretty-print short summary
+	# Pretty-print short summary and previously accumulated warnings (if any)
+
+	total = 0
 	for arch, arch_index in index.items():
 		for bits, bits_index in arch_index.items():
 			for abi, abi_index in bits_index.items():
@@ -129,7 +129,16 @@ def main() -> int:
 
 					print(tag, end=' ')
 
+				total += len(abi_index)
 				print()
+
+	print('\nTotal:', total, 'tables')
+
+	if warnings:
+		eprint()
+
+		for w in warnings:
+			eprint('WARNING:', w)
 
 	return 0
 
