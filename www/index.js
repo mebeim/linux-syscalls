@@ -455,7 +455,7 @@ function toggleCompactSignature() {
 async function update(pushHistoryState) {
 	const selection = getSelection()
 	const [arch, bits, abi, tag] = selection
-	const {haveConfig, haveStderr} = db[arch][bits][abi][tag]
+	const {config, stderr} = db[arch][bits][abi][tag]
 
 	currentSyscallTable = await fetchSyscallTable(arch, bits, abi, tag)
 	fillTable(currentSyscallTable, tag)
@@ -463,14 +463,14 @@ async function update(pushHistoryState) {
 	systrackVersEl.textContent = currentSyscallTable.systrack_version
 	jsonLinkEl.href = `db/${arch}/${bits}/${abi}/${tag}/table.json`
 
-	if (haveConfig) {
+	if (config) {
 		configLinkEl.href = `db/${arch}/${bits}/${abi}/${tag}/config.txt`
 		configLinkEl.parentElement.classList.remove('invisible')
 	} else {
 		configLinkEl.parentElement.classList.add('invisible')
 	}
 
-	if (haveStderr) {
+	if (stderr) {
 		stderrLinkEl.href = `db/${arch}/${bits}/${abi}/${tag}/stderr.txt`
 		stderrLinkEl.parentElement.classList.remove('invisible')
 	} else {
