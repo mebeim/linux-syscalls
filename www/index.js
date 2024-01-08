@@ -31,6 +31,10 @@ async function fetchSyscallTable(arch, bits, abi, tag) {
 	return await fetchJSON(`db/${arch}/${bits}/${abi}/${tag}/table.json`)
 }
 
+function getArchSelectionText() {
+	return archSelectEl.selectedOptions[0].textContent
+}
+
 function getSelection() {
 	const archOpt = archSelectEl.selectedOptions[0]
 	const tagOpt  = tagSelectEl.selectedOptions[0]
@@ -456,6 +460,7 @@ async function update(pushHistoryState) {
 	const selection = getSelection()
 	const [arch, bits, abi, tag] = selection
 	const {config, stderr} = db[arch][bits][abi][tag]
+	const newTitle = `Linux syscall table: ${tag}, ${getArchSelectionText()}`
 
 	currentSyscallTable = await fetchSyscallTable(arch, bits, abi, tag)
 	fillTable(currentSyscallTable, tag)
@@ -479,12 +484,14 @@ async function update(pushHistoryState) {
 
 	if (pushHistoryState) {
 		if (firstUpdate) {
-			history.replaceState(selection, '', '/?' + selectionToQueryString(selection))
+			history.replaceState(selection, newTitle, '/?' + selectionToQueryString(selection))
 			firstUpdate = false
 		} else {
-			history.pushState(selection, '', '/?' + selectionToQueryString(selection))
+			history.pushState(selection, newTitle, '/?' + selectionToQueryString(selection))
 		}
 	}
+
+	document.title = newTitle
 }
 
 function archSelectChangeHandler(e) {
