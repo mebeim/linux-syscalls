@@ -16,9 +16,7 @@
 	--table-head-bg-hover: #93d4ff;
 	--table-row-bg-hover: #6fe7b0;
 	--table-odd-row-bg: #f0f0f0;
-	--table-outer-border: 1px solid #d0d0d0;
-	--table-cell-border-vertical: 1px solid #d0d0d0;
-	--table-cell-border-horizontal: none;
+	--table-cell-border: 1px solid #d0d0d0;
 	--link-fg: #00319f;
 	--link-fg-visited: #7f009f;
 	--argtype-fg: #006e8f;
@@ -35,9 +33,7 @@ body[data-theme="dark"] {
 	--table-head-bg-hover: #0066a8;
 	--table-odd-row-bg: #0e0e0e;
 	--table-row-bg-hover: #002909;
-	--table-outer-border: 1px solid #303030;
-	--table-cell-border-vertical: 1px solid #303030;
-	--table-cell-border-horizontal: none;
+	--table-cell-border: 1px solid #303030;
 	--link-fg: #39a7c6;
 	--link-fg-visited: #d69ce7;
 	--argtype-fg: #15c1c1;
@@ -77,14 +73,12 @@ table {
 	padding: 5px;
 	color: var(--table-fg);
 	border-collapse: collapse;
-	border: var(--table-outer-border);
+	border-bottom: var(--table-cell-border);
 }
 
 table th, table td {
-	border-left: var(--table-cell-border-vertical);
-	border-right: var(--table-cell-border-vertical);
-	border-top: var(--table-cell-border-horizontal);
-	border-bottom: var(--table-cell-border-horizontal);
+	border-left: var(--table-cell-border);
+	border-right: var(--table-cell-border);
 }
 
 table th {
@@ -94,6 +88,13 @@ table th {
 	padding: 5px;
 	color: var(--table-head-fg);
 	background-color: var(--table-head-bg);
+	border-top: var(--table-cell-border);
+	border-bottom: var(--table-cell-border);
+}
+
+table th.pad {
+	background-color: transparent;
+	border: none;
 }
 
 table th.sortable {
@@ -155,6 +156,11 @@ table span.argtype {
 
 .invisible {
 	display: none;
+}
+
+.fakelink {
+	text-decoration: underline;
+	cursor: pointer;
 }
 
 @media (any-hover: hover) {

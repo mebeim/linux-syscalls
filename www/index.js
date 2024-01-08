@@ -1,17 +1,20 @@
 'use strict'
 
-const tableEl        = document.getElementsByTagName('table')[0]
-const themeToggleEl  = document.getElementById('theme-toggle')
-const tagSelectEl    = document.getElementById('tag-select')
-const archSelectEl   = document.getElementById('arch-abi-select')
-const systrackVersEl = document.getElementById('systrack-version')
-const configLinkEl   = document.getElementById('config-link')
-const stderrLinkEl   = document.getElementById('stderr-link')
-const jsonLinkEl     = document.getElementById('json-link')
+const tableEl            = document.getElementsByTagName('table')[0]
+const themeToggleEl      = document.getElementById('theme-toggle')
+const compactSigToggleEl = document.getElementById('compact-sig-toggle')
+const tagSelectEl        = document.getElementById('tag-select')
+const archSelectEl       = document.getElementById('arch-abi-select')
+const systrackVersEl     = document.getElementById('systrack-version')
+const configLinkEl       = document.getElementById('config-link')
+const stderrLinkEl       = document.getElementById('stderr-link')
+const jsonLinkEl         = document.getElementById('json-link')
 
 let db = null
+let currentSyscallTable = null
 let updateInProgress = false
 let firstUpdate = true
+let compactSignature = false
 
 function compareTags(a, b) {
 	const va = a.slice(1).split('.').map(n => n.padStart(3, '0'))
@@ -242,7 +245,7 @@ function sortTable(e) {
 
 	const header = e.target
 	const idx    = Array.from(header.parentNode.children).indexOf(e.target)
-	const rows   = Array.from(tableEl.querySelectorAll('tr')).slice(1)
+	const rows   = Array.from(tableEl.querySelectorAll('tr')).slice(2)
 	const desc   = header.classList.contains('ascending')
 	const body   = rows[0].parentElement
 	let getValue
@@ -279,7 +282,7 @@ function fillRow(row, tag, sc, maxArgs) {
 	const sym  = document.createElement('td')
 	const loc  = document.createElement('td')
 	const kcfg = document.createElement('td')
-	let argsLeft = sc.signature?.length ? maxArgs - sc.signature?.length : maxArgs;
+	let argsLeft = compactSignature ? 0 : sc.signature?.length ? maxArgs - sc.signature?.length : maxArgs;
 
 	row.addEventListener('click', highlightRow)
 	row.appendChild(ndec)
@@ -331,33 +334,59 @@ function fillRow(row, tag, sc, maxArgs) {
 		loc.classList.add('unknown')
 	}
 
-	if (sc.signature !== null) {
+	if (sc.signature === null) {
+		// Syscall signature is unknown
+		const sig = document.createElement('td')
+		sig.textContent = 'unknown signature'
+		sig.classList.add('unknown')
+		row.appendChild(sig)
+		argsLeft--
+	} else if (compactSignature) {
+		// Compact signature: single column containing comma-separated args
+		const sig = document.createElement('td')
+		row.appendChild(sig)
+
+		for (let i = 0; i < sc.signature.length; i++) {
+			const arg = sc.signature[i]
+			const spaceIdx = arg.trimEnd().lastIndexOf(' ')
+
+			if (spaceIdx === -1) {
+				sig.append(document.createTextNode(arg))
+			} else {
+				const type = document.createElement('span')
+				const name = document.createElement('span')
+				type.classList.add('argtype')
+				name.classList.add('argname')
+				type.textContent = arg.slice(0, spaceIdx)
+				name.textContent = arg.slice(spaceIdx)
+				sig.appendChild(type)
+				sig.appendChild(name)
+			}
+
+			if (i < sc.signature.length - 1)
+				sig.append(document.createTextNode(', '))
+		}
+	} else {
+		// Expanded signature: one column per argument
 		for (const arg of sc.signature) {
 			const td = document.createElement('td')
-			const i = arg.trimEnd().lastIndexOf(' ')
+			const spaceIdx = arg.trimEnd().lastIndexOf(' ')
 
-			if (i === -1) {
+			if (spaceIdx === -1) {
 				td.textContent = arg
 			} else {
 				const type = document.createElement('span')
 				const name = document.createElement('span')
 				type.classList.add('argtype')
 				name.classList.add('argname')
-				type.textContent = arg.slice(0, i)
-				name.textContent = arg.slice(i)
+				type.textContent = arg.slice(0, spaceIdx)
+				name.textContent = arg.slice(spaceIdx)
 				td.appendChild(type)
 				td.appendChild(name)
 			}
 
 			row.appendChild(td)
 		}
-	} else {
-		// Syscall signature is unknown
-		const td = document.createElement('td')
-		td.textContent = 'unknown signature'
-		td.classList.add('unknown')
-		row.appendChild(td)
-		argsLeft--
 	}
 
 	// Append multiple <td> elements to be able to style column borders
@@ -369,31 +398,40 @@ function fillTable(syscallTable, tag) {
 	const numReg = syscallTable.kernel.abi.calling_convention.syscall_nr
 	const argRegs = syscallTable.kernel.abi.calling_convention.parameters
 	const maxArgs = Math.max(...syscallTable.syscalls.map(sc => sc.signature?.length || 0))
+	const [header1, header2] = tableEl.querySelectorAll('tr')
 
-	const header = document.createElement('tr')
-	header.innerHTML = `\
-		<th class="sortable ascending" colspan="2"></th>
-		<th class="sortable">Name</th>
-		<th class="sortable">Symbol</th>
-		<th class="sortable">Definition location</th>
-		<th class="sortable">Kconfig</th>
-	`
+	compactSigToggleEl.textContent = compactSignature ? 'expand' : 'collapse'
+	header1.children[1].colSpan = maxArgs
+	header2.children[0].textContent = `Number${numReg ? '\u00a0(' + numReg + ')' : ''}`
 
-	header.children[0].textContent = `Number${numReg ? '\u00a0(' + numReg + ')' : ''}`
+	// Remove arg columns
+	while (header2.children.length > 5)
+		header2.removeChild(header2.lastChild)
 
-	// Do we wanna handle the case of 0 args because no signatures with >= 1 arg
-	// could be extracted? I don't think so to be honest.
-	for (let i = 0; i < maxArgs; i++) {
+	if (compactSignature) {
+		// Compact signature: single column containing comma-separated args
 		const th = document.createElement('th')
-		th.textContent = `Arg\u00a0${i + 1}\u00a0(${argRegs[i]})`
-		header.appendChild(th)
+		th.textContent = `Arguments (${argRegs.join(', ')})`
+		header2.appendChild(th)
+	} else {
+		// Expanded signature: one column per argument
+		// Do we wanna handle the case of 0 args because no signatures with
+		// at least 1 arg could be extracted? I don't think so to be honest,
+		// that should never happen (why publish such a table to begin with?).
+		for (let i = 0; i < maxArgs; i++) {
+			const th = document.createElement('th')
+			th.textContent = `Arg\u00a0${i + 1}\u00a0(${argRegs[i]})`
+			header2.appendChild(th)
+		}
 	}
 
+	// Quick and dirty way to clean the table and keep the headers
 	tableEl.innerHTML = ''
-	tableEl.appendChild(header)
+	tableEl.appendChild(header1)
+	tableEl.appendChild(header2)
 
 	for (const sc of syscallTable.syscalls) {
-		const row  = document.createElement('tr')
+		const row = document.createElement('tr')
 		fillRow(row, tag, sc, maxArgs)
 		tableEl.appendChild(row)
 	}
@@ -403,25 +441,36 @@ function fillTable(syscallTable, tag) {
 	document.getElementById('loading').classList.add('invisible')
 }
 
+function toggleCompactSignature() {
+	if (updateInProgress)
+		return
+
+	// Could be optimized... but I could also not care less for now
+	const tag = getSelection().pop()
+	compactSignature = !compactSignature
+	localStorage.setItem('compactSignature', compactSignature)
+	fillTable(currentSyscallTable, tag)
+}
+
 async function update(pushHistoryState) {
 	const selection = getSelection()
 	const [arch, bits, abi, tag] = selection
-	const syscallTbable = await fetchSyscallTable(arch, bits, abi, tag)
-	const {config, stderr} = db[arch][bits][abi][tag]
+	const {haveConfig, haveStderr} = db[arch][bits][abi][tag]
 
-	fillTable(syscallTbable, tag)
+	currentSyscallTable = await fetchSyscallTable(arch, bits, abi, tag)
+	fillTable(currentSyscallTable, tag)
 
-	systrackVersEl.textContent = syscallTbable.systrack_version
+	systrackVersEl.textContent = currentSyscallTable.systrack_version
 	jsonLinkEl.href = `db/${arch}/${bits}/${abi}/${tag}/table.json`
 
-	if (config) {
+	if (haveConfig) {
 		configLinkEl.href = `db/${arch}/${bits}/${abi}/${tag}/config.txt`
 		configLinkEl.parentElement.classList.remove('invisible')
 	} else {
 		configLinkEl.parentElement.classList.add('invisible')
 	}
 
-	if (stderr) {
+	if (haveStderr) {
 		stderrLinkEl.href = `db/${arch}/${bits}/${abi}/${tag}/stderr.txt`
 		stderrLinkEl.parentElement.classList.remove('invisible')
 	} else {
@@ -462,12 +511,13 @@ function historyPopStateHandler(e) {
 	}
 }
 
-function restoreTheme() {
+function restoreSettings() {
 	let theme = localStorage.getItem('theme')
+	document.body.dataset.theme = theme
+	compactSignature = localStorage.getItem('compactSignature') === 'true'
+
 	if (!theme)
 		theme = window.matchMedia?.('(prefers-color-scheme: dark)')?.matches ? 'dark' : 'light';
-
-	document.body.dataset.theme = theme
 }
 
 function toggleTheme() {
@@ -500,15 +550,16 @@ async function setup() {
 			setSelection(...selection)
 	}
 
-	// Distinguish visits to / from visits to a specific table
+	// Distinguish visits to "/" (homepage) from visits to a specific table
 	window.homepageVisit = !location.search
 
 	update(true)
-	restoreTheme()
+	restoreSettings()
 
 	archSelectEl.addEventListener('change', archSelectChangeHandler)
 	tagSelectEl.addEventListener('change', tagSelectChangeHandler)
 	themeToggleEl.addEventListener('click', toggleTheme)
+	compactSigToggleEl.addEventListener('click', toggleCompactSignature)
 	window.addEventListener('popstate', historyPopStateHandler)
 }
 
