@@ -67,8 +67,10 @@ def main() -> int:
 	rootdir = Path('www/db')
 	warnings = []
 
-	# NOTE: dir_exist_ok= for copytree() is Python 3.8+
-	rmtree(rootdir)
+	if rootdir.exists():
+		rmtree(rootdir)
+
+	# NOTE: dir_exist_ok= is Python 3.8+
 	copytree(origdir, rootdir, dirs_exist_ok=True)
 
 	for archdir in rootdir.iterdir():
