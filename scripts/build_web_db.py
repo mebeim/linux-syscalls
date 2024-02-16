@@ -46,8 +46,16 @@ def abort():
 	rmtree('www/db', ignore_errors=True)
 	sys.exit(1)
 
+def tag_to_tuple(tag):
+	if tag == 'latest':
+		return (float('inf'),)
+
+	# v5.11 -> (5, 11)
+	assert tag[0] == 'v'
+	return tuple(map(int, tag[1:].split('.')))
+
 def sorted_tags(tags):
-	return sorted(tags, key=lambda t: tuple(map(int, t[1:].split('.'))))
+	return sorted(tags, key=tag_to_tuple)
 
 def main() -> int:
 	if not Path('scripts/build_web_db.py').is_file():
@@ -109,6 +117,11 @@ def main() -> int:
 							eprint(f'Expected {w}, but have {h} inside the file.')
 							abort()
 
+				# Add special "latest" tag as a copy of the highest tag
+				latest = max(abi_index, key=tag_to_tuple)
+				abi_index['latest'] = abi_index[latest].copy()
+				copytree(abidir / latest, abidir / 'latest')
+
 	with (rootdir / 'index.json').open('w') as f:
 		dump(index, f, sort_keys=True, separators=(',', ':'))
 
@@ -122,6 +135,11 @@ def main() -> int:
 
 				prev = 'vX'
 				for tag in sorted_tags(abi_index):
+					# Skip special "latest" tag
+					if tag == 'latest':
+						total -= 1
+						continue
+
 					major = tag[:tag.find('.')]
 					if major != prev:
 						prev = major

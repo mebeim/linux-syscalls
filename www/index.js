@@ -17,6 +17,8 @@ let firstUpdate = true
 let compactSignature = false
 
 function compareTags(a, b) {
+	if (a === 'latest') return -1
+	if (b === 'latest') return 1
 	const va = a.slice(1).split('.').map(n => n.padStart(3, '0'))
 	const vb = b.slice(1).split('.').map(n => n.padStart(3, '0'))
 	return (va < vb) - (va > vb)
@@ -212,8 +214,7 @@ function fillTagOptions(tags) {
 	clearOptions(tagSelectEl)
 	tags.forEach(tag => {
 		const opt = document.createElement('option')
-		opt.label = opt.textContent = tag
-		opt.dataset.tag = tag
+		opt.label = opt.textContent = opt.dataset.tag = tag
 
 		// Keep same kernel version tag selected if possible
 		if (tag == oldTag)
@@ -221,6 +222,16 @@ function fillTagOptions(tags) {
 
 		tagSelectEl.add(opt)
 	})
+
+	// Add version for special "latest" tag
+	const latest = tagSelectEl.options[0]
+
+	// Backwards compatibility if we ever choose to remove it or for some reason
+	// the DB does not contain it
+	if (latest.dataset.tag !== 'latest')
+		console.warn('Tag "latest" missing?')
+	else
+		latest.label = latest.textContent = `latest (${tags[1]})`
 }
 
 function fillTagOptionsForArch(arch, bits, abi) {
