@@ -22,6 +22,6 @@ kernel syscall implementation tracker.
 
 ---
 
-*Copyright &copy; 2023 Marco Bonelli. Licensed under the GNU General Public License v3.0.*
+*Copyright &copy; 2023-2024 Marco Bonelli. Licensed under the GNU General Public License v3.0.*
 
 [systrack]: https://github.com/mebeim/systrack
