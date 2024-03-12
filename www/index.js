@@ -529,19 +529,24 @@ function historyPopStateHandler(e) {
 	}
 }
 
+function setTheme(theme) {
+	document.body.dataset.theme = theme
+}
+
+function toggleTheme() {
+	setTheme(document.body.dataset.theme === 'dark' ? 'light' : 'dark')
+	// Only save to local storage if manually toggled by the user
+	localStorage.setItem('theme', theme)
+}
+
 function restoreSettings() {
 	let theme = localStorage.getItem('theme')
-	document.body.dataset.theme = theme
 	compactSignature = localStorage.getItem('compactSignature') === 'true'
 
 	if (!theme)
 		theme = window.matchMedia?.('(prefers-color-scheme: dark)')?.matches ? 'dark' : 'light';
-}
 
-function toggleTheme() {
-	const theme = document.body.dataset.theme === 'dark' ? 'light' : 'dark'
-	document.body.dataset.theme = theme
-	localStorage.setItem('theme', theme)
+	setTheme(theme)
 }
 
 async function setup() {
