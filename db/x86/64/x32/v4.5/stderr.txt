@@ -1,3 +1,4 @@
+[D] Command line arguments: ['-vvvv', '--format', 'json', '--arch', 'x86-64-x32', '--kdir', '/mnt/m2data/linux-worktrees/v4.5', '--remap', '/mnt/m2data/linux', '/mnt/m2data/kernels/vmlinux-x86-64-v4.5']
 [D] Running command: ['readelf', '-Ws', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.5')]
 [D] Running command: ['readelf', '-WS', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.5')]
 Detected kernel version: 4.5.0 (from vmlinux)
@@ -351,7 +352,7 @@ Detected kernel version: 4.5.0 (from vmlinux)
 [D] sys_call_table[12]: Symbol("sys_brk" at 0xffffffff81158120, type=FUNC, size=0x17e)
 [D] sys_call_table[13]: Symbol("sys_rt_sigaction" at 0xffffffff810671b0, type=FUNC, size=0x86)
 [D] sys_call_table[14]: Symbol("sys_rt_sigprocmask" at 0xffffffff81066440, type=FUNC, size=0xa2)
-[D] sys_call_table[15]: Symbol("stub_rt_sigreturn" at 0xffffffff817de3a0, type=NOTYPE, size=0x4e)
+[D] sys_call_table[15]: Symbol("stub_rt_sigreturn" at 0xffffffff817d34a0, type=NOTYPE, size=0x4e)
 [D] sys_call_table[16]: Symbol("sys_ioctl" at 0xffffffff81191f50, type=FUNC, size=0x88)
 [D] sys_call_table[17]: Symbol("sys_pread64" at 0xffffffff8117fda0, type=FUNC, size=0x90)
 [D] sys_call_table[18]: Symbol("sys_pwrite64" at 0xffffffff8117fe30, type=FUNC, size=0x90)
@@ -365,9 +366,9 @@ Detected kernel version: 4.5.0 (from vmlinux)
 [D] sys_call_table[26]: Symbol("sys_msync" at 0xffffffff8115aaf0, type=FUNC, size=0x1f6)
 [D] sys_call_table[27]: Symbol("sys_mincore" at 0xffffffff81153910, type=FUNC, size=0x217)
 [D] sys_call_table[28]: Symbol("sys_madvise" at 0xffffffff811622a0, type=FUNC, size=0xb)
-[D] sys_call_table[29]: Symbol("sys_shmget" at 0xffffffff812cafd0, type=FUNC, size=0x44)
-[D] sys_call_table[30]: Symbol("sys_shmat" at 0xffffffff812cb730, type=FUNC, size=0x22)
-[D] sys_call_table[31]: Symbol("sys_shmctl" at 0xffffffff812cb020, type=FUNC, size=0x292)
+[D] sys_call_table[29]: Symbol("sys_shmget" at 0xffffffff812c00c0, type=FUNC, size=0x44)
+[D] sys_call_table[30]: Symbol("sys_shmat" at 0xffffffff812c0820, type=FUNC, size=0x22)
+[D] sys_call_table[31]: Symbol("sys_shmctl" at 0xffffffff812c0110, type=FUNC, size=0x292)
 [D] sys_call_table[32]: Symbol("sys_dup" at 0xffffffff8119c530, type=FUNC, size=0x77)
 [D] sys_call_table[33]: Symbol("sys_dup2" at 0xffffffff8119c420, type=FUNC, size=0x104)
 [D] sys_call_table[34]: Symbol("sys_pause" at 0xffffffff81067590, type=FUNC, size=0x3f)
@@ -377,37 +378,37 @@ Detected kernel version: 4.5.0 (from vmlinux)
 [D] sys_call_table[38]: Symbol("sys_setitimer" at 0xffffffff810ad5d0, type=FUNC, size=0xbc)
 [D] sys_call_table[39]: Symbol("sys_getpid" at 0xffffffff81069c00, type=FUNC, size=0x24)
 [D] sys_call_table[40]: Symbol("sys_sendfile64" at 0xffffffff81180810, type=FUNC, size=0xa0)
-[D] sys_call_table[41]: Symbol("sys_socket" at 0xffffffff8168b0d0, type=FUNC, size=0xbd)
-[D] sys_call_table[42]: Symbol("sys_connect" at 0xffffffff8168b260, type=FUNC, size=0xb)
-[D] sys_call_table[43]: Symbol("sys_accept" at 0xffffffff8168b250, type=FUNC, size=0xd)
-[D] sys_call_table[44]: Symbol("sys_sendto" at 0xffffffff8168b290, type=FUNC, size=0xb)
-[D] sys_call_table[45]: Symbol("sys_recvfrom" at 0xffffffff8168b2c0, type=FUNC, size=0xb)
-[D] sys_call_table[46]: Symbol("sys_sendmsg" at 0xffffffff8168b550, type=FUNC, size=0x17)
-[D] sys_call_table[47]: Symbol("sys_recvmsg" at 0xffffffff8168b7a0, type=FUNC, size=0x17)
-[D] sys_call_table[48]: Symbol("sys_shutdown" at 0xffffffff8168b460, type=FUNC, size=0x6f)
-[D] sys_call_table[49]: Symbol("sys_bind" at 0xffffffff8168b1a0, type=FUNC, size=0xb)
-[D] sys_call_table[50]: Symbol("sys_listen" at 0xffffffff8168b1b0, type=FUNC, size=0x8b)
-[D] sys_call_table[51]: Symbol("sys_getsockname" at 0xffffffff8168b270, type=FUNC, size=0xb)
-[D] sys_call_table[52]: Symbol("sys_getpeername" at 0xffffffff8168b280, type=FUNC, size=0xb)
-[D] sys_call_table[53]: Symbol("sys_socketpair" at 0xffffffff8168b190, type=FUNC, size=0xb)
-[D] sys_call_table[54]: Symbol("sys_setsockopt" at 0xffffffff8168b2f0, type=FUNC, size=0xbb)
-[D] sys_call_table[55]: Symbol("sys_getsockopt" at 0xffffffff8168b3b0, type=FUNC, size=0xaa)
-[D] sys_call_table[56]: Symbol("stub_clone" at 0xffffffff817de2d0, type=NOTYPE, size=0x23)
-[D] sys_call_table[57]: Symbol("stub_fork" at 0xffffffff817de300, type=NOTYPE, size=0x23)
-[D] sys_call_table[58]: Symbol("stub_vfork" at 0xffffffff817de330, type=NOTYPE, size=0x23)
-[D] sys_call_table[59]: Symbol("stub_execve" at 0xffffffff817de360, type=NOTYPE, size=0x28)
+[D] sys_call_table[41]: Symbol("sys_socket" at 0xffffffff816801c0, type=FUNC, size=0xbd)
+[D] sys_call_table[42]: Symbol("sys_connect" at 0xffffffff81680350, type=FUNC, size=0xb)
+[D] sys_call_table[43]: Symbol("sys_accept" at 0xffffffff81680340, type=FUNC, size=0xd)
+[D] sys_call_table[44]: Symbol("sys_sendto" at 0xffffffff81680380, type=FUNC, size=0xb)
+[D] sys_call_table[45]: Symbol("sys_recvfrom" at 0xffffffff816803b0, type=FUNC, size=0xb)
+[D] sys_call_table[46]: Symbol("sys_sendmsg" at 0xffffffff81680640, type=FUNC, size=0x17)
+[D] sys_call_table[47]: Symbol("sys_recvmsg" at 0xffffffff81680890, type=FUNC, size=0x17)
+[D] sys_call_table[48]: Symbol("sys_shutdown" at 0xffffffff81680550, type=FUNC, size=0x6f)
+[D] sys_call_table[49]: Symbol("sys_bind" at 0xffffffff81680290, type=FUNC, size=0xb)
+[D] sys_call_table[50]: Symbol("sys_listen" at 0xffffffff816802a0, type=FUNC, size=0x8b)
+[D] sys_call_table[51]: Symbol("sys_getsockname" at 0xffffffff81680360, type=FUNC, size=0xb)
+[D] sys_call_table[52]: Symbol("sys_getpeername" at 0xffffffff81680370, type=FUNC, size=0xb)
+[D] sys_call_table[53]: Symbol("sys_socketpair" at 0xffffffff81680280, type=FUNC, size=0xb)
+[D] sys_call_table[54]: Symbol("sys_setsockopt" at 0xffffffff816803e0, type=FUNC, size=0xbb)
+[D] sys_call_table[55]: Symbol("sys_getsockopt" at 0xffffffff816804a0, type=FUNC, size=0xaa)
+[D] sys_call_table[56]: Symbol("stub_clone" at 0xffffffff817d33d0, type=NOTYPE, size=0x23)
+[D] sys_call_table[57]: Symbol("stub_fork" at 0xffffffff817d3400, type=NOTYPE, size=0x23)
+[D] sys_call_table[58]: Symbol("stub_vfork" at 0xffffffff817d3430, type=NOTYPE, size=0x23)
+[D] sys_call_table[59]: Symbol("stub_execve" at 0xffffffff817d3460, type=NOTYPE, size=0x28)
 [D] sys_call_table[60]: Symbol("sys_exit" at 0xffffffff8105a450, type=FUNC, size=0x12)
 [D] sys_call_table[61]: Symbol("sys_wait4" at 0xffffffff8105a6a0, type=FUNC, size=0xbb)
 [D] sys_call_table[62]: Symbol("sys_kill" at 0xffffffff81066c60, type=FUNC, size=0xb)
 [D] sys_call_table[63]: Symbol("sys_newuname" at 0xffffffff8106a180, type=FUNC, size=0xb8)
-[D] sys_call_table[64]: Symbol("sys_semget" at 0xffffffff812c95e0, type=FUNC, size=0x54)
-[D] sys_call_table[65]: Symbol("sys_semop" at 0xffffffff812c9a30, type=FUNC, size=0xd)
-[D] sys_call_table[66]: Symbol("sys_semctl" at 0xffffffff812c9640, type=FUNC, size=0x3da)
-[D] sys_call_table[67]: Symbol("sys_shmdt" at 0xffffffff812cb760, type=FUNC, size=0x155)
-[D] sys_call_table[68]: Symbol("sys_msgget" at 0xffffffff812c62f0, type=FUNC, size=0x3d)
-[D] sys_call_table[69]: Symbol("sys_msgsnd" at 0xffffffff812c6720, type=FUNC, size=0x32)
-[D] sys_call_table[70]: Symbol("sys_msgrcv" at 0xffffffff812c6cd0, type=FUNC, size=0x12)
-[D] sys_call_table[71]: Symbol("sys_msgctl" at 0xffffffff812c6330, type=FUNC, size=0x6f)
+[D] sys_call_table[64]: Symbol("sys_semget" at 0xffffffff812be6d0, type=FUNC, size=0x54)
+[D] sys_call_table[65]: Symbol("sys_semop" at 0xffffffff812beb20, type=FUNC, size=0xd)
+[D] sys_call_table[66]: Symbol("sys_semctl" at 0xffffffff812be730, type=FUNC, size=0x3da)
+[D] sys_call_table[67]: Symbol("sys_shmdt" at 0xffffffff812c0850, type=FUNC, size=0x155)
+[D] sys_call_table[68]: Symbol("sys_msgget" at 0xffffffff812bb3e0, type=FUNC, size=0x3d)
+[D] sys_call_table[69]: Symbol("sys_msgsnd" at 0xffffffff812bb810, type=FUNC, size=0x32)
+[D] sys_call_table[70]: Symbol("sys_msgrcv" at 0xffffffff812bbdc0, type=FUNC, size=0x12)
+[D] sys_call_table[71]: Symbol("sys_msgctl" at 0xffffffff812bb420, type=FUNC, size=0x6f)
 [D] sys_call_table[72]: Symbol("sys_fcntl" at 0xffffffff81190ab0, type=FUNC, size=0x4ac)
 [D] sys_call_table[73]: Symbol("sys_flock" at 0xffffffff811cceb0, type=FUNC, size=0x1c1)
 [D] sys_call_table[74]: Symbol("sys_fsync" at 0xffffffff811afe90, type=FUNC, size=0x59)
@@ -556,7 +557,7 @@ Detected kernel version: 4.5.0 (from vmlinux)
 [D] sys_call_table[217]: Symbol("sys_getdents64" at 0xffffffff81192530, type=FUNC, size=0xfc)
 [D] sys_call_table[218]: Symbol("sys_set_tid_address" at 0xffffffff81056a80, type=FUNC, size=0x24)
 [D] sys_call_table[219]: Symbol("sys_restart_syscall" at 0xffffffff81066370, type=FUNC, size=0x1c)
-[D] sys_call_table[220]: Symbol("sys_semtimedop" at 0xffffffff812c9a20, type=FUNC, size=0xb)
+[D] sys_call_table[220]: Symbol("sys_semtimedop" at 0xffffffff812beb10, type=FUNC, size=0xb)
 [D] sys_call_table[221]: Symbol("sys_fadvise64" at 0xffffffff811615f0, type=FUNC, size=0xb)
 [D] sys_call_table[222]: Symbol("sys_timer_create" at 0xffffffff810adf50, type=FUNC, size=0x43b)
 [D] sys_call_table[223]: Symbol("sys_timer_settime" at 0xffffffff810ae4e0, type=FUNC, size=0x19c)
@@ -576,19 +577,19 @@ Detected kernel version: 4.5.0 (from vmlinux)
 [D] sys_call_table[237]: Symbol("sys_mbind" at 0xffffffff8116f900, type=FUNC, size=0x96)
 [D] sys_call_table[238]: Symbol("sys_set_mempolicy" at 0xffffffff8116e490, type=FUNC, size=0x6b)
 [D] sys_call_table[239]: Symbol("sys_get_mempolicy" at 0xffffffff8116e6e0, type=FUNC, size=0x85)
-[D] sys_call_table[240]: Symbol("sys_mq_open" at 0xffffffff812ccd50, type=FUNC, size=0x336)
-[D] sys_call_table[241]: Symbol("sys_mq_unlink" at 0xffffffff812cd090, type=FUNC, size=0x186)
-[D] sys_call_table[242]: Symbol("sys_mq_timedsend" at 0xffffffff812cd220, type=FUNC, size=0x3f1)
-[D] sys_call_table[243]: Symbol("sys_mq_timedreceive" at 0xffffffff812cd620, type=FUNC, size=0x51b)
-[D] sys_call_table[244]: Symbol("sys_mq_notify" at 0xffffffff812cdb40, type=FUNC, size=0x42c)
-[D] sys_call_table[245]: Symbol("sys_mq_getsetattr" at 0xffffffff812cdf70, type=FUNC, size=0xb)
+[D] sys_call_table[240]: Symbol("sys_mq_open" at 0xffffffff812c1e40, type=FUNC, size=0x336)
+[D] sys_call_table[241]: Symbol("sys_mq_unlink" at 0xffffffff812c2180, type=FUNC, size=0x186)
+[D] sys_call_table[242]: Symbol("sys_mq_timedsend" at 0xffffffff812c2310, type=FUNC, size=0x3f1)
+[D] sys_call_table[243]: Symbol("sys_mq_timedreceive" at 0xffffffff812c2710, type=FUNC, size=0x51b)
+[D] sys_call_table[244]: Symbol("sys_mq_notify" at 0xffffffff812c2c30, type=FUNC, size=0x42c)
+[D] sys_call_table[245]: Symbol("sys_mq_getsetattr" at 0xffffffff812c3060, type=FUNC, size=0xb)
 [D] sys_call_table[246]: Symbol("sys_kexec_load" at 0xffffffff810c7c90, type=FUNC, size=0xb)
 [D] sys_call_table[247]: Symbol("sys_waitid" at 0xffffffff8105a550, type=FUNC, size=0x142)
-[D] sys_call_table[248]: Symbol("sys_add_key" at 0xffffffff812d1930, type=FUNC, size=0x1f2)
-[D] sys_call_table[249]: Symbol("sys_request_key" at 0xffffffff812d1b30, type=FUNC, size=0x1a6)
-[D] sys_call_table[250]: Symbol("sys_keyctl" at 0xffffffff812d2e50, type=FUNC, size=0x1ad)
-[D] sys_call_table[251]: Symbol("sys_ioprio_set" at 0xffffffff8132ade0, type=FUNC, size=0x27e)
-[D] sys_call_table[252]: Symbol("sys_ioprio_get" at 0xffffffff8132b0b0, type=FUNC, size=0x3dd)
+[D] sys_call_table[248]: Symbol("sys_add_key" at 0xffffffff812c6a20, type=FUNC, size=0x1f2)
+[D] sys_call_table[249]: Symbol("sys_request_key" at 0xffffffff812c6c20, type=FUNC, size=0x1a6)
+[D] sys_call_table[250]: Symbol("sys_keyctl" at 0xffffffff812c7f40, type=FUNC, size=0x1ad)
+[D] sys_call_table[251]: Symbol("sys_ioprio_set" at 0xffffffff8131fed0, type=FUNC, size=0x27e)
+[D] sys_call_table[252]: Symbol("sys_ioprio_get" at 0xffffffff813201a0, type=FUNC, size=0x3dd)
 [D] sys_call_table[253]: Symbol("sys_inotify_init" at 0xffffffff811bef30, type=FUNC, size=0x4d)
 [D] sys_call_table[254]: Symbol("sys_inotify_add_watch" at 0xffffffff811bef80, type=FUNC, size=0x300)
 [D] sys_call_table[255]: Symbol("sys_inotify_rm_watch" at 0xffffffff811bf280, type=FUNC, size=0xb2)
@@ -624,7 +625,7 @@ Detected kernel version: 4.5.0 (from vmlinux)
 [D] sys_call_table[285]: Symbol("sys_fallocate" at 0xffffffff8117d0a0, type=FUNC, size=0x6e)
 [D] sys_call_table[286]: Symbol("sys_timerfd_settime" at 0xffffffff811c47c0, type=FUNC, size=0xb1)
 [D] sys_call_table[287]: Symbol("sys_timerfd_gettime" at 0xffffffff811c4880, type=FUNC, size=0x44)
-[D] sys_call_table[288]: Symbol("sys_accept4" at 0xffffffff8168b240, type=FUNC, size=0xb)
+[D] sys_call_table[288]: Symbol("sys_accept4" at 0xffffffff81680330, type=FUNC, size=0xb)
 [D] sys_call_table[289]: Symbol("sys_signalfd4" at 0xffffffff811c3690, type=FUNC, size=0xb)
 [D] sys_call_table[290]: Symbol("sys_eventfd2" at 0xffffffff811c5230, type=FUNC, size=0x7f)
 [D] sys_call_table[291]: Symbol("sys_epoll_create1" at 0xffffffff811c1760, type=FUNC, size=0xc1)
@@ -635,7 +636,7 @@ Detected kernel version: 4.5.0 (from vmlinux)
 [D] sys_call_table[296]: Symbol("sys_pwritev" at 0xffffffff811802e0, type=FUNC, size=0x10e)
 [D] sys_call_table[297]: Symbol("sys_rt_tgsigqueueinfo" at 0xffffffff81066cd0, type=FUNC, size=0xb)
 [D] sys_call_table[298]: Symbol("sys_perf_event_open" at 0xffffffff8111c570, type=FUNC, size=0xb)
-[D] sys_call_table[299]: Symbol("sys_recvmmsg" at 0xffffffff8168bb40, type=FUNC, size=0xc7)
+[D] sys_call_table[299]: Symbol("sys_recvmmsg" at 0xffffffff81680c30, type=FUNC, size=0xc7)
 [D] sys_call_table[300]: Symbol("sys_fanotify_init" at 0xffffffff811c0250, type=FUNC, size=0x211)
 [D] sys_call_table[301]: Symbol("sys_fanotify_mark" at 0xffffffff811c0470, type=FUNC, size=0xb)
 [D] sys_call_table[302]: Symbol("sys_prlimit64" at 0xffffffff8106acb0, type=FUNC, size=0x1b3)
@@ -643,7 +644,7 @@ Detected kernel version: 4.5.0 (from vmlinux)
 [D] sys_call_table[304]: Symbol("sys_open_by_handle_at" at 0xffffffff811dbe90, type=FUNC, size=0xe)
 [D] sys_call_table[305]: Symbol("sys_clock_adjtime" at 0xffffffff810aea60, type=FUNC, size=0xb)
 [D] sys_call_table[306]: Symbol("sys_syncfs" at 0xffffffff811afe20, type=FUNC, size=0x6c)
-[D] sys_call_table[307]: Symbol("sys_sendmmsg" at 0xffffffff8168b700, type=FUNC, size=0x19)
+[D] sys_call_table[307]: Symbol("sys_sendmmsg" at 0xffffffff816807f0, type=FUNC, size=0x19)
 [D] sys_call_table[308]: Symbol("sys_setns" at 0xffffffff810754d0, type=FUNC, size=0xb8)
 [D] sys_call_table[309]: Symbol("sys_getcpu" at 0xffffffff8106b360, type=FUNC, size=0x5b)
 [D] sys_call_table[310]: Symbol("sys_process_vm_readv" at 0xffffffff81161280, type=FUNC, size=0x16)
@@ -654,11 +655,11 @@ Detected kernel version: 4.5.0 (from vmlinux)
 [D] sys_call_table[315]: Symbol("sys_sched_getattr" at 0xffffffff8107fdc0, type=FUNC, size=0x180)
 [D] sys_call_table[316]: Symbol("sys_renameat2" at 0xffffffff811907a0, type=FUNC, size=0xb)
 [D] sys_call_table[317]: Symbol("sys_seccomp" at 0xffffffff810e5710, type=FUNC, size=0x34)
-[D] sys_call_table[318]: Symbol("sys_getrandom" at 0xffffffff813fad90, type=FUNC, size=0x109)
+[D] sys_call_table[318]: Symbol("sys_getrandom" at 0xffffffff813efe80, type=FUNC, size=0x109)
 [D] sys_call_table[319]: Symbol("sys_memfd_create" at 0xffffffff81140e20, type=FUNC, size=0x14f)
 [D] sys_call_table[320]: Symbol("sys_kexec_file_load" at 0xffffffff810c88c0, type=FUNC, size=0x600)
 [D] sys_call_table[321]: Symbol("sys_bpf" at 0xffffffff8110bf80, type=FUNC, size=0x71f)
-[D] sys_call_table[322]: Symbol("stub_execveat" at 0xffffffff817de388, type=NOTYPE, size=0x7)
+[D] sys_call_table[322]: Symbol("stub_execveat" at 0xffffffff817d3488, type=NOTYPE, size=0x7)
 [D] sys_call_table[323]: Symbol("sys_userfaultfd" at 0xffffffff811c68b0, type=FUNC, size=0x11b)
 [D] sys_call_table[324]: Symbol("sys_membarrier" at 0xffffffff8111f350, type=FUNC, size=0x43)
 [D] sys_call_table[325]: Symbol("sys_mlock2" at 0xffffffff811548e0, type=FUNC, size=0x2b)
@@ -849,21 +850,21 @@ Detected kernel version: 4.5.0 (from vmlinux)
 [D] sys_call_table[510]: Symbol("sys_ni_syscall" at 0xffffffff81075100, type=FUNC, size=0x8)
 [D] sys_call_table[511]: Symbol("sys_ni_syscall" at 0xffffffff81075100, type=FUNC, size=0x8)
 [D] sys_call_table[512]: Symbol("compat_sys_rt_sigaction" at 0xffffffff81067240, type=FUNC, size=0x133)
-[D] sys_call_table[513]: Symbol("stub_x32_rt_sigreturn" at 0xffffffff817de3f0, type=NOTYPE, size=0x25)
+[D] sys_call_table[513]: Symbol("stub_x32_rt_sigreturn" at 0xffffffff817d34f0, type=NOTYPE, size=0x25)
 [D] sys_call_table[514]: Symbol("compat_sys_ioctl" at 0xffffffff811cfad0, type=FUNC, size=0x1394)
 [D] sys_call_table[515]: Symbol("compat_sys_readv" at 0xffffffff811803f0, type=FUNC, size=0x9d)
 [D] sys_call_table[516]: Symbol("compat_sys_writev" at 0xffffffff811805c0, type=FUNC, size=0x9d)
-[D] sys_call_table[517]: Symbol("compat_sys_recvfrom" at 0xffffffff816c5a40, type=FUNC, size=0x13)
-[D] sys_call_table[518]: Symbol("compat_sys_sendmsg" at 0xffffffff816c59c0, type=FUNC, size=0x11)
-[D] sys_call_table[519]: Symbol("compat_sys_recvmsg" at 0xffffffff816c5a00, type=FUNC, size=0x11)
-[D] sys_call_table[520]: Symbol("stub_x32_execve" at 0xffffffff817de390, type=NOTYPE, size=0x7)
+[D] sys_call_table[517]: Symbol("compat_sys_recvfrom" at 0xffffffff816bab30, type=FUNC, size=0x13)
+[D] sys_call_table[518]: Symbol("compat_sys_sendmsg" at 0xffffffff816baab0, type=FUNC, size=0x11)
+[D] sys_call_table[519]: Symbol("compat_sys_recvmsg" at 0xffffffff816baaf0, type=FUNC, size=0x11)
+[D] sys_call_table[520]: Symbol("stub_x32_execve" at 0xffffffff817d3490, type=NOTYPE, size=0x7)
 [D] sys_call_table[521]: Symbol("compat_sys_ptrace" at 0xffffffff81061ba0, type=FUNC, size=0x113)
 [D] sys_call_table[522]: Symbol("compat_sys_rt_sigpending" at 0xffffffff81066640, type=FUNC, size=0x9b)
 [D] sys_call_table[523]: Symbol("compat_sys_rt_sigtimedwait" at 0xffffffff810cae20, type=FUNC, size=0xb)
 [D] sys_call_table[524]: Symbol("compat_sys_rt_sigqueueinfo" at 0xffffffff81066cc0, type=FUNC, size=0xb)
 [D] sys_call_table[525]: Symbol("compat_sys_sigaltstack" at 0xffffffff81066f80, type=FUNC, size=0xb)
 [D] sys_call_table[526]: Symbol("compat_sys_timer_create" at 0xffffffff810cab60, type=FUNC, size=0x6e)
-[D] sys_call_table[527]: Symbol("compat_sys_mq_notify" at 0xffffffff812ce210, type=FUNC, size=0x7e)
+[D] sys_call_table[527]: Symbol("compat_sys_mq_notify" at 0xffffffff812c3300, type=FUNC, size=0x7e)
 [D] sys_call_table[528]: Symbol("compat_sys_kexec_load" at 0xffffffff810c7ca0, type=FUNC, size=0xe9)
 [D] sys_call_table[529]: Symbol("compat_sys_waitid" at 0xffffffff810ca5c0, type=FUNC, size=0xb)
 [D] sys_call_table[530]: Symbol("compat_sys_set_robust_list" at 0xffffffff810be8d0, type=FUNC, size=0x32)
@@ -873,23 +874,56 @@ Detected kernel version: 4.5.0 (from vmlinux)
 [D] sys_call_table[534]: Symbol("compat_sys_preadv64" at 0xffffffff81180490, type=FUNC, size=0x90)
 [D] sys_call_table[535]: Symbol("compat_sys_pwritev64" at 0xffffffff81180660, type=FUNC, size=0x90)
 [D] sys_call_table[536]: Symbol("compat_sys_rt_tgsigqueueinfo" at 0xffffffff81066ce0, type=FUNC, size=0xb)
-[D] sys_call_table[537]: Symbol("compat_sys_recvmmsg" at 0xffffffff816c5a60, type=FUNC, size=0xb8)
-[D] sys_call_table[538]: Symbol("compat_sys_sendmmsg" at 0xffffffff816c59e0, type=FUNC, size=0x13)
+[D] sys_call_table[537]: Symbol("compat_sys_recvmmsg" at 0xffffffff816bab50, type=FUNC, size=0xb8)
+[D] sys_call_table[538]: Symbol("compat_sys_sendmmsg" at 0xffffffff816baad0, type=FUNC, size=0x13)
 [D] sys_call_table[539]: Symbol("compat_sys_process_vm_readv" at 0xffffffff811612c0, type=FUNC, size=0x1e)
 [D] sys_call_table[540]: Symbol("compat_sys_process_vm_writev" at 0xffffffff811612e0, type=FUNC, size=0x1e)
-[D] sys_call_table[541]: Symbol("compat_sys_setsockopt" at 0xffffffff816c5840, type=FUNC, size=0xa3)
-[D] sys_call_table[542]: Symbol("compat_sys_getsockopt" at 0xffffffff816c58f0, type=FUNC, size=0xd0)
+[D] sys_call_table[541]: Symbol("compat_sys_setsockopt" at 0xffffffff816ba930, type=FUNC, size=0xa3)
+[D] sys_call_table[542]: Symbol("compat_sys_getsockopt" at 0xffffffff816ba9e0, type=FUNC, size=0xd0)
 [D] sys_call_table[543]: Symbol("compat_sys_io_setup" at 0xffffffff811ceac0, type=FUNC, size=0x7c)
 [D] sys_call_table[544]: Symbol("compat_sys_io_submit" at 0xffffffff811ced00, type=FUNC, size=0xa7)
-[D] sys_call_table[545]: Symbol("stub_x32_execveat" at 0xffffffff817de398, type=NOTYPE, size=0x7)
+[D] sys_call_table[545]: Symbol("stub_x32_execveat" at 0xffffffff817d3498, type=NOTYPE, size=0x7)
 [I] Common syscall symbol prefixes: compat_sys_, compat_, sys_
+[D] Skipping sys_rt_sigaction
+[D] Skipping stub_rt_sigreturn
+[D] Skipping sys_ioctl
+[D] Skipping sys_readv
+[D] Skipping sys_writev
+[D] Skipping sys_recvfrom
+[D] Skipping sys_sendmsg
+[D] Skipping sys_recvmsg
+[D] Skipping sys_setsockopt
+[D] Skipping sys_getsockopt
+[D] Skipping stub_execve
+[D] Skipping sys_ptrace
+[D] Skipping sys_rt_sigpending
+[D] Skipping sys_rt_sigtimedwait
+[D] Skipping sys_rt_sigqueueinfo
+[D] Skipping sys_sigaltstack
+[D] Skipping sys_sysctl
+[D] Skipping sys_io_setup
+[D] Skipping sys_io_submit
+[D] Skipping sys_timer_create
+[D] Skipping sys_mq_notify
+[D] Skipping sys_kexec_load
+[D] Skipping sys_waitid
+[D] Skipping sys_set_robust_list
+[D] Skipping sys_get_robust_list
+[D] Skipping sys_vmsplice
+[D] Skipping sys_move_pages
+[D] Skipping sys_preadv
+[D] Skipping sys_pwritev
+[D] Skipping sys_rt_tgsigqueueinfo
+[D] Skipping sys_recvmmsg
+[D] Skipping sys_sendmmsg
+[D] Skipping sys_process_vm_readv
+[D] Skipping sys_process_vm_writev
+[D] Skipping stub_execveat
 [I] 200 syscall table entries point to sys_ni_syscall
-[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.5'), '0xffffffff8117fc60', '0xffffffff8117fd00', '0xffffffff8117dd00', '0xffffffff8117c3a0', '0xffffffff81184230', '0xffffffff81184260', '0xffffffff81184240', '0xffffffff81194070', '0xffffffff8117eaa0', '0xffffffff81008fd0', '0xffffffff81159ae0', '0xffffffff81157350', '0xffffffff81158120', '0xffffffff810671b0', '0xffffffff81066440', '0xffffffff817de3a0', '0xffffffff81191f50', '0xffffffff8117fda0', '0xffffffff8117fe30', '0xffffffff8117ffb0', '0xffffffff811800c0', '0xffffffff8117d120', '0xffffffff81188340', '0xffffffff81193660', '0xffffffff81080230', '0xffffffff8115a5b0', '0xffffffff8115aaf0', '0xffffffff81153910', '0xffffffff811622a0', '0xffffffff812cafd0', '0xffffffff812cb730', '0xffffffff812cb020', '0xffffffff8119c530', '0xffffffff8119c420', '0xffffffff81067590', '0xffffffff810ace40', '0xffffffff810ad250', '0xffffffff810abaf0', '0xffffffff810ad5d0', '0xffffffff81069c00', '0xffffffff81180810', '0xffffffff8168b0d0', '0xffffffff8168b260', '0xffffffff8168b250', '0xffffffff8168b290', '0xffffffff8168b2c0', '0xffffffff8168b550', '0xffffffff8168b7a0', '0xffffffff8168b460', '0xffffffff8168b1a0', '0xffffffff8168b1b0', '0xffffffff8168b270', '0xffffffff8168b280', '0xffffffff8168b190', '0xffffffff8168b2f0', '0xffffffff8168b3b0', '0xffffffff817de2d0', '0xffffffff817de300', '0xffffffff817de330', '0xffffffff817de360', '0xffffffff8105a450', '0xffffffff8105a6a0', '0xffffffff81066c60', '0xffffffff8106a180', '0xffffffff812c95e0', '0xffffffff812c9a30', '0xffffffff812c9640', '0xffffffff812cb760', '0xffffffff812c62f0', '0xffffffff812c6720', '0xffffffff812c6cd0', '0xffffffff812c6330', '0xffffffff81190ab0', '0xffffffff811cceb0', '0xffffffff811afe90', '0xffffffff811afef0', '0xffffffff8117d040', '0xffffffff8117d080', '0xffffffff81192420', '0xffffffff81197c60', '0xffffffff8117d140', '0xffffffff8117d210', '0xffffffff811907c0', '0xffffffff81190400', '0xffffffff81190500', '0xffffffff8117dd40', '0xffffffff81190780', '0xffffffff81190550', '0xffffffff81190670', '0xffffffff81184380', '0xffffffff8117d4c0', '0xffffffff8117d3a0', '0xffffffff8117d640', '0xffffffff8117d7e0', '0xffffffff8117d710', '0xffffffff8106af40', '0xffffffff810a8cb0', '0xffffffff8106ac50', '0xffffffff8106af00', '0xffffffff8106b3c0', '0xffffffff81069d80', '0xffffffff810617f0', '0xffffffff81069c80', '0xffffffff8109b1f0', '0xffffffff81069cc0', '0xffffffff81069350', '0xffffffff810690c0', '0xffffffff81069ca0', '0xffffffff81069ce0', '0xffffffff81069dd0', '0xffffffff81069c50', '0xffffffff81069fe0', '0xffffffff8106a080', '0xffffffff81069160', '0xffffffff81068fc0', '0xffffffff81078490', '0xffffffff81078560', '0xffffffff81069430', '0xffffffff81069780', '0xffffffff81069800', '0xffffffff81069a30', '0xffffffff81069f70', '0xffffffff81069aa0', '0xffffffff81069b50', '0xffffffff8106a010', '0xffffffff8105fc40', '0xffffffff8105fd70', '0xffffffff810665a0', '0xffffffff81066c50', '0xffffffff81066cb0', '0xffffffff810675d0', '0xffffffff81066eb0', '0xffffffff811b0540', '0xffffffff811902e0', '0xffffffff81057420', '0xffffffff811b12b0', '0xffffffff811b1230', '0xffffffff811b1250', '0xffffffff8119c930', '0xffffffff81068d60', '0xffffffff81068b10', '0xffffffff8107fb10', '0xffffffff8107fd20', '0xffffffff8107faf0', '0xffffffff8107fcc0', '0xffffffff81080280', '0xffffffff810802b0', '0xffffffff810802e0', '0xffffffff811548c0', '0xffffffff81154910', '0xffffffff81154980', '0xffffffff81154b30', '0xffffffff8117dd60', '0xffffffff810081f0', '0xffffffff811a1740', '0xffffffff8105f870', '0xffffffff8106af60', '0xffffffff81003f30', '0xffffffff810a8ee0', '0xffffffff8106ae70', '0xffffffff8117d2b0', '0xffffffff811afd30', '0xffffffff810c5bb0', '0xffffffff810a8e10', '0xffffffff811a1620', '0xffffffff8119f8c0', '0xffffffff81166260', '0xffffffff81165ce0', '0xffffffff81076f10', '0xffffffff8106a4d0', '0xffffffff8106a750', '0xffffffff81007100', '0xffffffff81006fa0', '0xffffffff810c4640', '0xffffffff810c2010', '0xffffffff811e2d20', '0xffffffff81069c30', '0xffffffff81132ad0', '0xffffffff811a44f0', '0xffffffff811a4510', '0xffffffff811a4520', '0xffffffff811a45f0', '0xffffffff811a4610', '0xffffffff811a4620', '0xffffffff811a46d0', '0xffffffff811a46e0', '0xffffffff811a46f0', '0xffffffff811a4790', '0xffffffff811a47b0', '0xffffffff811a47c0', '0xffffffff81066c90', '0xffffffff810a8c20', '0xffffffff810be670', '0xffffffff810800d0', '0xffffffff810801a0', '0xffffffff811c7de0', '0xffffffff811c8640', '0xffffffff811c8c40', '0xffffffff811c8b30', '0xffffffff811c8b40', '0xffffffff811f9990', '0xffffffff811c1830', '0xffffffff81158cd0', '0xffffffff81192530', '0xffffffff81056a80', '0xffffffff81066370', '0xffffffff812c9a20', '0xffffffff811615f0', '0xffffffff810adf50', '0xffffffff810ae4e0', '0xffffffff810ae390', '0xffffffff810ae4a0', '0xffffffff810ae680', '0xffffffff810ae920', '0xffffffff810ae9c0', '0xffffffff810aea70', '0xffffffff810aeb10', '0xffffffff8105a510', '0xffffffff811c2790', '0xffffffff811c18e0', '0xffffffff81066c70', '0xffffffff811b06e0', '0xffffffff8116f900', '0xffffffff8116e490', '0xffffffff8116e6e0', '0xffffffff812ccd50', '0xffffffff812cd090', '0xffffffff812cd220', '0xffffffff812cd620', '0xffffffff812cdb40', '0xffffffff812cdf70', '0xffffffff810c7c90', '0xffffffff8105a550', '0xffffffff812d1930', '0xffffffff812d1b30', '0xffffffff812d2e50', '0xffffffff8132ade0', '0xffffffff8132b0b0', '0xffffffff811bef30', '0xffffffff811bef80', '0xffffffff811bf280', '0xffffffff8116e500', '0xffffffff8117dd20', '0xffffffff81190300', '0xffffffff811902d0', '0xffffffff8117d550', '0xffffffff811b0630', '0xffffffff81184250', '0xffffffff81190520', '0xffffffff811907b0', '0xffffffff81190770', '0xffffffff81190570', '0xffffffff81184270', '0xffffffff8117d420', '0xffffffff8117d110', '0xffffffff811937b0', '0xffffffff81194170', '0xffffffff81056f00', '0xffffffff810bd8c0', '0xffffffff810bd900', '0xffffffff811aee50', '0xffffffff811af650', '0xffffffff811aff70', '0xffffffff811aec50', '0xffffffff81178c70', '0xffffffff811b05b0', '0xffffffff811c2870', '0xffffffff811c36a0', '0xffffffff811c46a0', '0xffffffff811c52b0', '0xffffffff8117d0a0', '0xffffffff811c47c0', '0xffffffff811c4880', '0xffffffff8168b240', '0xffffffff811c3690', '0xffffffff811c5230', '0xffffffff811c1760', '0xffffffff8119c320', '0xffffffff81188280', '0xffffffff811beed0', '0xffffffff811801d0', '0xffffffff811802e0', '0xffffffff81066cd0', '0xffffffff8111c570', '0xffffffff8168bb40', '0xffffffff811c0250', '0xffffffff811c0470', '0xffffffff8106acb0', '0xffffffff811dba50', '0xffffffff811dbe90', '0xffffffff810aea60', '0xffffffff811afe20', '0xffffffff8168b700', '0xffffffff810754d0', '0xffffffff8106b360', '0xffffffff81161280', '0xffffffff811612a0', '0xffffffff810a7470', '0xffffffff810c4650', '0xffffffff8107fb30', '0xffffffff8107fdc0', '0xffffffff811907a0', '0xffffffff810e5710', '0xffffffff813fad90', '0xffffffff81140e20', '0xffffffff810c88c0', '0xffffffff8110bf80', '0xffffffff817de388', '0xffffffff811c68b0', '0xffffffff8111f350', '0xffffffff811548e0', '0xffffffff811809f0', '0xffffffff81067240', '0xffffffff817de3f0', '0xffffffff811cfad0', '0xffffffff811803f0', '0xffffffff811805c0', '0xffffffff816c5a40', '0xffffffff816c59c0', '0xffffffff816c5a00', '0xffffffff817de390', '0xffffffff81061ba0', '0xffffffff81066640', '0xffffffff810cae20', '0xffffffff81066cc0', '0xffffffff81066f80', '0xffffffff810cab60', '0xffffffff812ce210', '0xffffffff810c7ca0', '0xffffffff810ca5c0', '0xffffffff810be8d0', '0xffffffff810be910', '0xffffffff811aed20', '0xffffffff810caee0', '0xffffffff81180490', '0xffffffff81180660', '0xffffffff81066ce0', '0xffffffff816c5a60', '0xffffffff816c59e0', '0xffffffff811612c0', '0xffffffff811612e0', '0xffffffff816c5840', '0xffffffff816c58f0', '0xffffffff811ceac0', '0xffffffff811ced00', '0xffffffff817de398']
-[D] Location needs adjustment (bad): rt_sigreturn (stub_rt_sigreturn) -> arch/x86/entry/entry_64.S:419
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.5'), '0xffffffff8117fc60', '0xffffffff8117fd00', '0xffffffff8117dd00', '0xffffffff8117c3a0', '0xffffffff81184230', '0xffffffff81184260', '0xffffffff81184240', '0xffffffff81194070', '0xffffffff8117eaa0', '0xffffffff81008fd0', '0xffffffff81159ae0', '0xffffffff81157350', '0xffffffff81158120', '0xffffffff81066440', '0xffffffff8117fda0', '0xffffffff8117fe30', '0xffffffff8117d120', '0xffffffff81188340', '0xffffffff81193660', '0xffffffff81080230', '0xffffffff8115a5b0', '0xffffffff8115aaf0', '0xffffffff81153910', '0xffffffff811622a0', '0xffffffff812c00c0', '0xffffffff812c0820', '0xffffffff812c0110', '0xffffffff8119c530', '0xffffffff8119c420', '0xffffffff81067590', '0xffffffff810ace40', '0xffffffff810ad250', '0xffffffff810abaf0', '0xffffffff810ad5d0', '0xffffffff81069c00', '0xffffffff81180810', '0xffffffff816801c0', '0xffffffff81680350', '0xffffffff81680340', '0xffffffff81680380', '0xffffffff81680550', '0xffffffff81680290', '0xffffffff816802a0', '0xffffffff81680360', '0xffffffff81680370', '0xffffffff81680280', '0xffffffff817d33d0', '0xffffffff817d3400', '0xffffffff817d3430', '0xffffffff8105a450', '0xffffffff8105a6a0', '0xffffffff81066c60', '0xffffffff8106a180', '0xffffffff812be6d0', '0xffffffff812beb20', '0xffffffff812be730', '0xffffffff812c0850', '0xffffffff812bb3e0', '0xffffffff812bb810', '0xffffffff812bbdc0', '0xffffffff812bb420', '0xffffffff81190ab0', '0xffffffff811cceb0', '0xffffffff811afe90', '0xffffffff811afef0', '0xffffffff8117d040', '0xffffffff8117d080', '0xffffffff81192420', '0xffffffff81197c60', '0xffffffff8117d140', '0xffffffff8117d210', '0xffffffff811907c0', '0xffffffff81190400', '0xffffffff81190500', '0xffffffff8117dd40', '0xffffffff81190780', '0xffffffff81190550', '0xffffffff81190670', '0xffffffff81184380', '0xffffffff8117d4c0', '0xffffffff8117d3a0', '0xffffffff8117d640', '0xffffffff8117d7e0', '0xffffffff8117d710', '0xffffffff8106af40', '0xffffffff810a8cb0', '0xffffffff8106ac50', '0xffffffff8106af00', '0xffffffff8106b3c0', '0xffffffff81069d80', '0xffffffff81069c80', '0xffffffff8109b1f0', '0xffffffff81069cc0', '0xffffffff81069350', '0xffffffff810690c0', '0xffffffff81069ca0', '0xffffffff81069ce0', '0xffffffff81069dd0', '0xffffffff81069c50', '0xffffffff81069fe0', '0xffffffff8106a080', '0xffffffff81069160', '0xffffffff81068fc0', '0xffffffff81078490', '0xffffffff81078560', '0xffffffff81069430', '0xffffffff81069780', '0xffffffff81069800', '0xffffffff81069a30', '0xffffffff81069f70', '0xffffffff81069aa0', '0xffffffff81069b50', '0xffffffff8106a010', '0xffffffff8105fc40', '0xffffffff8105fd70', '0xffffffff810675d0', '0xffffffff811b0540', '0xffffffff811902e0', '0xffffffff81057420', '0xffffffff811b12b0', '0xffffffff811b1230', '0xffffffff811b1250', '0xffffffff8119c930', '0xffffffff81068d60', '0xffffffff81068b10', '0xffffffff8107fb10', '0xffffffff8107fd20', '0xffffffff8107faf0', '0xffffffff8107fcc0', '0xffffffff81080280', '0xffffffff810802b0', '0xffffffff810802e0', '0xffffffff811548c0', '0xffffffff81154910', '0xffffffff81154980', '0xffffffff81154b30', '0xffffffff8117dd60', '0xffffffff810081f0', '0xffffffff811a1740', '0xffffffff8106af60', '0xffffffff81003f30', '0xffffffff810a8ee0', '0xffffffff8106ae70', '0xffffffff8117d2b0', '0xffffffff811afd30', '0xffffffff810c5bb0', '0xffffffff810a8e10', '0xffffffff811a1620', '0xffffffff8119f8c0', '0xffffffff81166260', '0xffffffff81165ce0', '0xffffffff81076f10', '0xffffffff8106a4d0', '0xffffffff8106a750', '0xffffffff81007100', '0xffffffff81006fa0', '0xffffffff810c4640', '0xffffffff810c2010', '0xffffffff811e2d20', '0xffffffff81069c30', '0xffffffff81132ad0', '0xffffffff811a44f0', '0xffffffff811a4510', '0xffffffff811a4520', '0xffffffff811a45f0', '0xffffffff811a4610', '0xffffffff811a4620', '0xffffffff811a46d0', '0xffffffff811a46e0', '0xffffffff811a46f0', '0xffffffff811a4790', '0xffffffff811a47b0', '0xffffffff811a47c0', '0xffffffff81066c90', '0xffffffff810a8c20', '0xffffffff810be670', '0xffffffff810800d0', '0xffffffff810801a0', '0xffffffff811c8640', '0xffffffff811c8c40', '0xffffffff811c8b40', '0xffffffff811f9990', '0xffffffff811c1830', '0xffffffff81158cd0', '0xffffffff81192530', '0xffffffff81056a80', '0xffffffff81066370', '0xffffffff812beb10', '0xffffffff811615f0', '0xffffffff810ae4e0', '0xffffffff810ae390', '0xffffffff810ae4a0', '0xffffffff810ae680', '0xffffffff810ae920', '0xffffffff810ae9c0', '0xffffffff810aea70', '0xffffffff810aeb10', '0xffffffff8105a510', '0xffffffff811c2790', '0xffffffff811c18e0', '0xffffffff81066c70', '0xffffffff811b06e0', '0xffffffff8116f900', '0xffffffff8116e490', '0xffffffff8116e6e0', '0xffffffff812c1e40', '0xffffffff812c2180', '0xffffffff812c2310', '0xffffffff812c2710', '0xffffffff812c3060', '0xffffffff812c6a20', '0xffffffff812c6c20', '0xffffffff812c7f40', '0xffffffff8131fed0', '0xffffffff813201a0', '0xffffffff811bef30', '0xffffffff811bef80', '0xffffffff811bf280', '0xffffffff8116e500', '0xffffffff8117dd20', '0xffffffff81190300', '0xffffffff811902d0', '0xffffffff8117d550', '0xffffffff811b0630', '0xffffffff81184250', '0xffffffff81190520', '0xffffffff811907b0', '0xffffffff81190770', '0xffffffff81190570', '0xffffffff81184270', '0xffffffff8117d420', '0xffffffff8117d110', '0xffffffff811937b0', '0xffffffff81194170', '0xffffffff81056f00', '0xffffffff811aee50', '0xffffffff811af650', '0xffffffff811aff70', '0xffffffff811b05b0', '0xffffffff811c2870', '0xffffffff811c36a0', '0xffffffff811c46a0', '0xffffffff811c52b0', '0xffffffff8117d0a0', '0xffffffff811c47c0', '0xffffffff811c4880', '0xffffffff81680330', '0xffffffff811c3690', '0xffffffff811c5230', '0xffffffff811c1760', '0xffffffff8119c320', '0xffffffff81188280', '0xffffffff811beed0', '0xffffffff8111c570', '0xffffffff811c0250', '0xffffffff811c0470', '0xffffffff8106acb0', '0xffffffff811dba50', '0xffffffff811dbe90', '0xffffffff810aea60', '0xffffffff811afe20', '0xffffffff810754d0', '0xffffffff8106b360', '0xffffffff810a7470', '0xffffffff810c4650', '0xffffffff8107fb30', '0xffffffff8107fdc0', '0xffffffff811907a0', '0xffffffff810e5710', '0xffffffff813efe80', '0xffffffff81140e20', '0xffffffff810c88c0', '0xffffffff8110bf80', '0xffffffff811c68b0', '0xffffffff8111f350', '0xffffffff811548e0', '0xffffffff811809f0', '0xffffffff81067240', '0xffffffff817d34f0', '0xffffffff811cfad0', '0xffffffff811803f0', '0xffffffff811805c0', '0xffffffff816bab30', '0xffffffff816baab0', '0xffffffff816baaf0', '0xffffffff817d3490', '0xffffffff81061ba0', '0xffffffff81066640', '0xffffffff810cae20', '0xffffffff81066cc0', '0xffffffff81066f80', '0xffffffff810cab60', '0xffffffff812c3300', '0xffffffff810c7ca0', '0xffffffff810ca5c0', '0xffffffff810be8d0', '0xffffffff810be910', '0xffffffff811aed20', '0xffffffff810caee0', '0xffffffff81180490', '0xffffffff81180660', '0xffffffff81066ce0', '0xffffffff816bab50', '0xffffffff816baad0', '0xffffffff811612c0', '0xffffffff811612e0', '0xffffffff816ba930', '0xffffffff816ba9e0', '0xffffffff811ceac0', '0xffffffff811ced00', '0xffffffff817d3498']
 [D] Location needs adjustment (bad): clone (stub_clone) -> arch/x86/entry/entry_64.S:366
 [D] Location needs adjustment (bad): fork (stub_fork) -> arch/x86/entry/entry_64.S:367
 [D] Location needs adjustment (bad): vfork (stub_vfork) -> arch/x86/entry/entry_64.S:368
-[D] Location needs adjustment (bad): execve (stub_execve) -> arch/x86/entry/entry_64.S:371
 [D] Location needs adjustment (bad): semget (sys_semget) -> arch/x86/include/asm/current.h:12
 [D] Location needs adjustment (bad): truncate (sys_truncate) -> fs/open.c:120
 [D] Location needs adjustment (bad): umask (sys_umask) -> arch/x86/include/asm/current.h:12
@@ -898,70 +932,53 @@ Detected kernel version: 4.5.0 (from vmlinux)
 [D] Location needs adjustment (bad): geteuid (sys_geteuid) -> arch/x86/include/asm/current.h:12
 [D] Location needs adjustment (bad): getegid (sys_getegid) -> arch/x86/include/asm/current.h:12
 [D] Location needs adjustment (bad): getgroups (sys_getgroups) -> arch/x86/include/asm/current.h:12
-[D] Location needs adjustment (bad): rt_sigpending (sys_rt_sigpending) -> kernel/signal.c:2604
 [D] Location needs adjustment (bad): personality (sys_personality) -> arch/x86/include/asm/current.h:12
 [D] Location needs adjustment (bad): arch_prctl (sys_arch_prctl) -> arch/x86/kernel/process_64.c:589
 [D] Location needs adjustment (bad): pipe2 (sys_pipe2) -> fs/pipe.c:766
-[D] Location needs adjustment (bad): execveat (stub_execveat) -> arch/x86/entry/entry_64.S:390
 [D] Location needs adjustment (bad): x32_rt_sigreturn (stub_x32_rt_sigreturn) -> arch/x86/entry/entry_64.S:430
 [D] Location needs adjustment (bad): x32_execve (stub_x32_execve) -> arch/x86/entry/entry_64.S:397
 [D] Location needs adjustment (bad): rt_sigpending (compat_sys_rt_sigpending) -> kernel/signal.c:2604
 [D] Location needs adjustment (bad): x32_execveat (stub_x32_execveat) -> arch/x86/entry/entry_64.S:402
-[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.5'), '0xffffffff81003f4b', '0xffffffff817de2f2', '0xffffffff817de387', '0xffffffff817de396', '0xffffffff817de38e', '0xffffffff817de39e', '0xffffffff817de322', '0xffffffff81069cff', '0xffffffff81069cbf', '0xffffffff81069cdf', '0xffffffff81078530', '0xffffffff81069c9f', '0xffffffff8105743a', '0xffffffff81188338', '0xffffffff81066638', '0xffffffff810666da', '0xffffffff817de3ed', '0xffffffff817de414', '0xffffffff812c9633', '0xffffffff8117d057', '0xffffffff8106af5c', '0xffffffff817de352']
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.5'), '0xffffffff81003f4b', '0xffffffff817d33f2', '0xffffffff817d3496', '0xffffffff817d349e', '0xffffffff817d3422', '0xffffffff81069cff', '0xffffffff81069cbf', '0xffffffff81069cdf', '0xffffffff81078530', '0xffffffff81069c9f', '0xffffffff8105743a', '0xffffffff81188338', '0xffffffff810666da', '0xffffffff817d3514', '0xffffffff812be723', '0xffffffff8117d057', '0xffffffff8106af5c', '0xffffffff817d3452']
 [D] Location needs full-range adjustment (bad): arch_prctl (sys_arch_prctl+0x1b) -> arch/x86/kernel/process_64.c:589
 [D] Location needs full-range adjustment (bad): clone (stub_clone+0x22) -> arch/x86/entry/entry_64.S:366
-[D] Location needs full-range adjustment (bad): execve (stub_execve+0x27) -> arch/x86/entry/entry_64.S:382
 [D] Location needs full-range adjustment (bad): x32_execve (stub_x32_execve+0x6) -> arch/x86/entry/entry_64.S:398
-[D] Location needs full-range adjustment (bad): execveat (stub_execveat+0x6) -> arch/x86/entry/entry_64.S:391
 [D] Location needs full-range adjustment (bad): x32_execveat (stub_x32_execveat+0x6) -> arch/x86/entry/entry_64.S:403
 [D] Location needs full-range adjustment (bad): fork (stub_fork+0x22) -> arch/x86/entry/entry_64.S:367
-[D] Location needs full-range adjustment (bad): rt_sigreturn (stub_rt_sigreturn+0x4d) -> arch/x86/entry/entry_64.S:425
 [D] Location needs full-range adjustment (bad): x32_rt_sigreturn (stub_x32_rt_sigreturn+0x24) -> arch/x86/entry/entry_64.S:432
 [D] Location needs full-range adjustment (bad): vfork (stub_vfork+0x22) -> arch/x86/entry/entry_64.S:368
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.5'), '0xffffffff81003f31', '0xffffffff81003f32', '0xffffffff81003f33', '0xffffffff81003f34', '0xffffffff81003f35', '0xffffffff81003f36', '0xffffffff81003f37', '0xffffffff81003f38', '0xffffffff81003f39', '0xffffffff81003f3a', '0xffffffff81003f3b', '0xffffffff81003f3c', '0xffffffff81003f3d', '0xffffffff81003f3e', '0xffffffff81003f3f', '0xffffffff81003f40', '0xffffffff81003f41', '0xffffffff81003f42', '0xffffffff81003f43', '0xffffffff81003f44', '0xffffffff81003f45', '0xffffffff81003f46', '0xffffffff81003f47', '0xffffffff81003f48', '0xffffffff81003f49']
 [D] Location needs grepping (bad): arch_prctl (sys_arch_prctl) -> arch/x86/kernel/process_64.c:589
-[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.5'), '0xffffffff817de2d1', '0xffffffff817de2d2', '0xffffffff817de2d3', '0xffffffff817de2d4', '0xffffffff817de2d5', '0xffffffff817de2d6', '0xffffffff817de2d7', '0xffffffff817de2d8', '0xffffffff817de2d9', '0xffffffff817de2da', '0xffffffff817de2db', '0xffffffff817de2dc', '0xffffffff817de2dd', '0xffffffff817de2de', '0xffffffff817de2df', '0xffffffff817de2e0', '0xffffffff817de2e1', '0xffffffff817de2e2', '0xffffffff817de2e3', '0xffffffff817de2e4', '0xffffffff817de2e5', '0xffffffff817de2e6', '0xffffffff817de2e7', '0xffffffff817de2e8', '0xffffffff817de2e9', '0xffffffff817de2ea', '0xffffffff817de2eb', '0xffffffff817de2ec', '0xffffffff817de2ed', '0xffffffff817de2ee', '0xffffffff817de2ef', '0xffffffff817de2f0']
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.5'), '0xffffffff817d33d1', '0xffffffff817d33d2', '0xffffffff817d33d3', '0xffffffff817d33d4', '0xffffffff817d33d5', '0xffffffff817d33d6', '0xffffffff817d33d7', '0xffffffff817d33d8', '0xffffffff817d33d9', '0xffffffff817d33da', '0xffffffff817d33db', '0xffffffff817d33dc', '0xffffffff817d33dd', '0xffffffff817d33de', '0xffffffff817d33df', '0xffffffff817d33e0', '0xffffffff817d33e1', '0xffffffff817d33e2', '0xffffffff817d33e3', '0xffffffff817d33e4', '0xffffffff817d33e5', '0xffffffff817d33e6', '0xffffffff817d33e7', '0xffffffff817d33e8', '0xffffffff817d33e9', '0xffffffff817d33ea', '0xffffffff817d33eb', '0xffffffff817d33ec', '0xffffffff817d33ed', '0xffffffff817d33ee', '0xffffffff817d33ef', '0xffffffff817d33f0']
 [D] Location needs grepping (bad): clone (stub_clone) -> arch/x86/entry/entry_64.S:366
-[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.5'), '0xffffffff817de361', '0xffffffff817de362', '0xffffffff817de363', '0xffffffff817de364', '0xffffffff817de365', '0xffffffff817de366', '0xffffffff817de367', '0xffffffff817de368', '0xffffffff817de369', '0xffffffff817de36a', '0xffffffff817de36b', '0xffffffff817de36c', '0xffffffff817de36d', '0xffffffff817de36e', '0xffffffff817de36f', '0xffffffff817de370', '0xffffffff817de371', '0xffffffff817de372', '0xffffffff817de373', '0xffffffff817de374', '0xffffffff817de375', '0xffffffff817de376', '0xffffffff817de377', '0xffffffff817de378', '0xffffffff817de379', '0xffffffff817de37a', '0xffffffff817de37b', '0xffffffff817de37c', '0xffffffff817de37d', '0xffffffff817de37e', '0xffffffff817de37f', '0xffffffff817de380', '0xffffffff817de381', '0xffffffff817de382', '0xffffffff817de383', '0xffffffff817de384', '0xffffffff817de385']
-[D] Location needs grepping (bad): execve (stub_execve) -> arch/x86/entry/entry_64.S:382
-[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.5'), '0xffffffff817de391', '0xffffffff817de392', '0xffffffff817de393', '0xffffffff817de394']
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.5'), '0xffffffff817d3491', '0xffffffff817d3492', '0xffffffff817d3493', '0xffffffff817d3494']
 [D] Location needs grepping (bad): x32_execve (stub_x32_execve) -> arch/x86/entry/entry_64.S:397
-[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.5'), '0xffffffff817de389', '0xffffffff817de38a', '0xffffffff817de38b', '0xffffffff817de38c']
-[D] Location needs grepping (bad): execveat (stub_execveat) -> arch/x86/entry/entry_64.S:390
-[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.5'), '0xffffffff817de399', '0xffffffff817de39a', '0xffffffff817de39b', '0xffffffff817de39c']
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.5'), '0xffffffff817d3499', '0xffffffff817d349a', '0xffffffff817d349b', '0xffffffff817d349c']
 [D] Location needs grepping (bad): x32_execveat (stub_x32_execveat) -> arch/x86/entry/entry_64.S:402
-[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.5'), '0xffffffff817de301', '0xffffffff817de302', '0xffffffff817de303', '0xffffffff817de304', '0xffffffff817de305', '0xffffffff817de306', '0xffffffff817de307', '0xffffffff817de308', '0xffffffff817de309', '0xffffffff817de30a', '0xffffffff817de30b', '0xffffffff817de30c', '0xffffffff817de30d', '0xffffffff817de30e', '0xffffffff817de30f', '0xffffffff817de310', '0xffffffff817de311', '0xffffffff817de312', '0xffffffff817de313', '0xffffffff817de314', '0xffffffff817de315', '0xffffffff817de316', '0xffffffff817de317', '0xffffffff817de318', '0xffffffff817de319', '0xffffffff817de31a', '0xffffffff817de31b', '0xffffffff817de31c', '0xffffffff817de31d', '0xffffffff817de31e', '0xffffffff817de31f', '0xffffffff817de320']
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.5'), '0xffffffff817d3401', '0xffffffff817d3402', '0xffffffff817d3403', '0xffffffff817d3404', '0xffffffff817d3405', '0xffffffff817d3406', '0xffffffff817d3407', '0xffffffff817d3408', '0xffffffff817d3409', '0xffffffff817d340a', '0xffffffff817d340b', '0xffffffff817d340c', '0xffffffff817d340d', '0xffffffff817d340e', '0xffffffff817d340f', '0xffffffff817d3410', '0xffffffff817d3411', '0xffffffff817d3412', '0xffffffff817d3413', '0xffffffff817d3414', '0xffffffff817d3415', '0xffffffff817d3416', '0xffffffff817d3417', '0xffffffff817d3418', '0xffffffff817d3419', '0xffffffff817d341a', '0xffffffff817d341b', '0xffffffff817d341c', '0xffffffff817d341d', '0xffffffff817d341e', '0xffffffff817d341f', '0xffffffff817d3420']
 [D] Location needs grepping (bad): fork (stub_fork) -> arch/x86/entry/entry_64.S:367
-[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.5'), '0xffffffff817de3a1', '0xffffffff817de3a2', '0xffffffff817de3a3', '0xffffffff817de3a4', '0xffffffff817de3a5', '0xffffffff817de3a6', '0xffffffff817de3a7', '0xffffffff817de3a8', '0xffffffff817de3a9', '0xffffffff817de3aa', '0xffffffff817de3ab', '0xffffffff817de3ac', '0xffffffff817de3ad', '0xffffffff817de3ae', '0xffffffff817de3af', '0xffffffff817de3b0', '0xffffffff817de3b1', '0xffffffff817de3b2', '0xffffffff817de3b3', '0xffffffff817de3b4', '0xffffffff817de3b5', '0xffffffff817de3b6', '0xffffffff817de3b7', '0xffffffff817de3b8', '0xffffffff817de3b9', '0xffffffff817de3ba', '0xffffffff817de3bb', '0xffffffff817de3bc', '0xffffffff817de3bd', '0xffffffff817de3be', '0xffffffff817de3bf', '0xffffffff817de3c0', '0xffffffff817de3c1', '0xffffffff817de3c2', '0xffffffff817de3c3', '0xffffffff817de3c4', '0xffffffff817de3c5', '0xffffffff817de3c6', '0xffffffff817de3c7', '0xffffffff817de3c8', '0xffffffff817de3c9', '0xffffffff817de3ca', '0xffffffff817de3cb', '0xffffffff817de3cc', '0xffffffff817de3cd', '0xffffffff817de3ce', '0xffffffff817de3cf', '0xffffffff817de3d0', '0xffffffff817de3d1', '0xffffffff817de3d2', '0xffffffff817de3d3', '0xffffffff817de3d4', '0xffffffff817de3d5', '0xffffffff817de3d6', '0xffffffff817de3d7', '0xffffffff817de3d8', '0xffffffff817de3d9', '0xffffffff817de3da', '0xffffffff817de3db', '0xffffffff817de3dc', '0xffffffff817de3dd', '0xffffffff817de3de', '0xffffffff817de3df', '0xffffffff817de3e0', '0xffffffff817de3e1', '0xffffffff817de3e2', '0xffffffff817de3e3', '0xffffffff817de3e4', '0xffffffff817de3e5', '0xffffffff817de3e6', '0xffffffff817de3e7', '0xffffffff817de3e8', '0xffffffff817de3e9', '0xffffffff817de3ea', '0xffffffff817de3eb']
-[D] Location needs grepping (bad): rt_sigreturn (stub_rt_sigreturn) -> arch/x86/entry/entry_64.S:425
-[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.5'), '0xffffffff817de3f1', '0xffffffff817de3f2', '0xffffffff817de3f3', '0xffffffff817de3f4', '0xffffffff817de3f5', '0xffffffff817de3f6', '0xffffffff817de3f7', '0xffffffff817de3f8', '0xffffffff817de3f9', '0xffffffff817de3fa', '0xffffffff817de3fb', '0xffffffff817de3fc', '0xffffffff817de3fd', '0xffffffff817de3fe', '0xffffffff817de3ff', '0xffffffff817de400', '0xffffffff817de401', '0xffffffff817de402', '0xffffffff817de403', '0xffffffff817de404', '0xffffffff817de405', '0xffffffff817de406', '0xffffffff817de407', '0xffffffff817de408', '0xffffffff817de409', '0xffffffff817de40a', '0xffffffff817de40b', '0xffffffff817de40c', '0xffffffff817de40d', '0xffffffff817de40e', '0xffffffff817de40f', '0xffffffff817de410', '0xffffffff817de411', '0xffffffff817de412']
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.5'), '0xffffffff817d34f1', '0xffffffff817d34f2', '0xffffffff817d34f3', '0xffffffff817d34f4', '0xffffffff817d34f5', '0xffffffff817d34f6', '0xffffffff817d34f7', '0xffffffff817d34f8', '0xffffffff817d34f9', '0xffffffff817d34fa', '0xffffffff817d34fb', '0xffffffff817d34fc', '0xffffffff817d34fd', '0xffffffff817d34fe', '0xffffffff817d34ff', '0xffffffff817d3500', '0xffffffff817d3501', '0xffffffff817d3502', '0xffffffff817d3503', '0xffffffff817d3504', '0xffffffff817d3505', '0xffffffff817d3506', '0xffffffff817d3507', '0xffffffff817d3508', '0xffffffff817d3509', '0xffffffff817d350a', '0xffffffff817d350b', '0xffffffff817d350c', '0xffffffff817d350d', '0xffffffff817d350e', '0xffffffff817d350f', '0xffffffff817d3510', '0xffffffff817d3511', '0xffffffff817d3512']
 [D] Location needs grepping (bad): x32_rt_sigreturn (stub_x32_rt_sigreturn) -> arch/x86/entry/entry_64.S:431
-[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.5'), '0xffffffff817de331', '0xffffffff817de332', '0xffffffff817de333', '0xffffffff817de334', '0xffffffff817de335', '0xffffffff817de336', '0xffffffff817de337', '0xffffffff817de338', '0xffffffff817de339', '0xffffffff817de33a', '0xffffffff817de33b', '0xffffffff817de33c', '0xffffffff817de33d', '0xffffffff817de33e', '0xffffffff817de33f', '0xffffffff817de340', '0xffffffff817de341', '0xffffffff817de342', '0xffffffff817de343', '0xffffffff817de344', '0xffffffff817de345', '0xffffffff817de346', '0xffffffff817de347', '0xffffffff817de348', '0xffffffff817de349', '0xffffffff817de34a', '0xffffffff817de34b', '0xffffffff817de34c', '0xffffffff817de34d', '0xffffffff817de34e', '0xffffffff817de34f', '0xffffffff817de350']
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.5'), '0xffffffff817d3431', '0xffffffff817d3432', '0xffffffff817d3433', '0xffffffff817d3434', '0xffffffff817d3435', '0xffffffff817d3436', '0xffffffff817d3437', '0xffffffff817d3438', '0xffffffff817d3439', '0xffffffff817d343a', '0xffffffff817d343b', '0xffffffff817d343c', '0xffffffff817d343d', '0xffffffff817d343e', '0xffffffff817d343f', '0xffffffff817d3440', '0xffffffff817d3441', '0xffffffff817d3442', '0xffffffff817d3443', '0xffffffff817d3444', '0xffffffff817d3445', '0xffffffff817d3446', '0xffffffff817d3447', '0xffffffff817d3448', '0xffffffff817d3449', '0xffffffff817d344a', '0xffffffff817d344b', '0xffffffff817d344c', '0xffffffff817d344d', '0xffffffff817d344e', '0xffffffff817d344f', '0xffffffff817d3450']
 [D] Location needs grepping (bad): vfork (stub_vfork) -> arch/x86/entry/entry_64.S:368
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!tools/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [I] Location could not be found through grepping: arch_prctl (orig name arch_prctl)
 [I] Location could not be found through grepping: execve (orig name x32_execve)
 [I] Location could not be found through grepping: execveat (orig name x32_execveat)
-[I] Location could not be found through grepping: rt_sigreturn (orig name rt_sigreturn)
 [I] Location could not be found through grepping: rt_sigreturn (orig name x32_rt_sigreturn)
 [W] Location found through grepping: clone -> kernel/fork.c:1807
-[W] Location found through grepping: execve -> fs/exec.c:1732
-[W] Location found through grepping: execveat -> fs/exec.c:1739
 [W] Location found through grepping: fork -> kernel/fork.c:1786
 [W] Location found through grepping: vfork -> kernel/fork.c:1798
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
-[D] Signature NOT found in ftrace metadata: rt_sigreturn
 [D] Signature NOT found in ftrace metadata: arch_prctl
 [D] Signature NOT found in ftrace metadata: rt_sigreturn
-[W] Potentially bad location for rt_sigreturn (stub_rt_sigreturn): arch/x86/entry/entry_64.S:425 (implemented in asm?)
 [W] Potentially bad location for arch_prctl (sys_arch_prctl): arch/x86/kernel/process_64.c:589 (normal function w/o asmlinkage?)
 [W] Potentially bad location for rt_sigreturn (stub_x32_rt_sigreturn): arch/x86/entry/entry_64.S:431 (implemented in asm?)
 [W] Potentially bad location for execve (stub_x32_execve): arch/x86/entry/entry_64.S:397 (implemented in asm?)
 [W] Potentially bad location for execveat (stub_x32_execveat): arch/x86/entry/entry_64.S:402 (implemented in asm?)
-[E] Unable to extract signature for rt_sigreturn (stub_rt_sigreturn)
 [E] Unable to extract signature for arch_prctl (sys_arch_prctl)
 [E] Unable to extract signature for rt_sigreturn (stub_x32_rt_sigreturn)
-Found 346 implemented syscalls
-Found 5 definition locations through grepping
-Could not extract signature for 3 syscalls
+Found 311 implemented syscalls
+Found 3 definition locations through grepping
+Could not extract signature for 2 syscalls
 

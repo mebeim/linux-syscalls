@@ -259,25 +259,6 @@
 			"file": "kernel/signal.c",
 			"good_location": true,
 			"grepped_location": false,
-			"index": 13,
-			"kconfig": null,
-			"line": 3648,
-			"name": "rt_sigaction",
-			"number": 1073741837,
-			"origname": "rt_sigaction",
-			"signature": [
-				"int sig",
-				"const struct sigaction *act",
-				"struct sigaction *oact",
-				"size_t sigsetsize"
-			],
-			"symbol": "__x64_sys_rt_sigaction"
-		},
-		{
-			"esoteric": false,
-			"file": "kernel/signal.c",
-			"good_location": true,
-			"grepped_location": false,
 			"index": 14,
 			"kconfig": null,
 			"line": 2703,
@@ -291,38 +272,6 @@
 				"size_t sigsetsize"
 			],
 			"symbol": "__x64_sys_rt_sigprocmask"
-		},
-		{
-			"esoteric": false,
-			"file": "arch/x86/kernel/signal.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 15,
-			"kconfig": null,
-			"line": 637,
-			"name": "rt_sigreturn",
-			"number": 1073741839,
-			"origname": "rt_sigreturn",
-			"signature": [],
-			"symbol": "__x64_sys_rt_sigreturn"
-		},
-		{
-			"esoteric": false,
-			"file": "fs/ioctl.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 16,
-			"kconfig": null,
-			"line": 706,
-			"name": "ioctl",
-			"number": 1073741840,
-			"origname": "ioctl",
-			"signature": [
-				"unsigned int fd",
-				"unsigned int cmd",
-				"unsigned long arg"
-			],
-			"symbol": "__x64_sys_ioctl"
 		},
 		{
 			"esoteric": false,
@@ -361,42 +310,6 @@
 				"loff_t pos"
 			],
 			"symbol": "__x64_sys_pwrite64"
-		},
-		{
-			"esoteric": false,
-			"file": "fs/read_write.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 19,
-			"kconfig": null,
-			"line": 1103,
-			"name": "readv",
-			"number": 1073741843,
-			"origname": "readv",
-			"signature": [
-				"unsigned long fd",
-				"const struct iovec *vec",
-				"unsigned long vlen"
-			],
-			"symbol": "__x64_sys_readv"
-		},
-		{
-			"esoteric": false,
-			"file": "fs/read_write.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 20,
-			"kconfig": null,
-			"line": 1109,
-			"name": "writev",
-			"number": 1073741844,
-			"origname": "writev",
-			"signature": [
-				"unsigned long fd",
-				"const struct iovec *vec",
-				"unsigned long vlen"
-			],
-			"symbol": "__x64_sys_writev"
 		},
 		{
 			"esoteric": false,
@@ -821,63 +734,6 @@
 			"file": "net/socket.c",
 			"good_location": true,
 			"grepped_location": false,
-			"index": 45,
-			"kconfig": "NET",
-			"line": 1869,
-			"name": "recvfrom",
-			"number": 1073741869,
-			"origname": "recvfrom",
-			"signature": [
-				"int fd",
-				"void *ubuf",
-				"size_t size",
-				"unsigned int flags",
-				"struct sockaddr *addr",
-				"int *addr_len"
-			],
-			"symbol": "__x64_sys_recvfrom"
-		},
-		{
-			"esoteric": false,
-			"file": "net/socket.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 46,
-			"kconfig": "NET",
-			"line": 2171,
-			"name": "sendmsg",
-			"number": 1073741870,
-			"origname": "sendmsg",
-			"signature": [
-				"int fd",
-				"struct user_msghdr *msg",
-				"unsigned int flags"
-			],
-			"symbol": "__x64_sys_sendmsg"
-		},
-		{
-			"esoteric": false,
-			"file": "net/socket.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 47,
-			"kconfig": "NET",
-			"line": 2344,
-			"name": "recvmsg",
-			"number": 1073741871,
-			"origname": "recvmsg",
-			"signature": [
-				"int fd",
-				"struct user_msghdr *msg",
-				"unsigned int flags"
-			],
-			"symbol": "__x64_sys_recvmsg"
-		},
-		{
-			"esoteric": false,
-			"file": "net/socket.c",
-			"good_location": true,
-			"grepped_location": false,
 			"index": 48,
 			"kconfig": "NET",
 			"line": 1982,
@@ -982,46 +838,6 @@
 		},
 		{
 			"esoteric": false,
-			"file": "net/socket.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 54,
-			"kconfig": "NET",
-			"line": 1920,
-			"name": "setsockopt",
-			"number": 1073741878,
-			"origname": "setsockopt",
-			"signature": [
-				"int fd",
-				"int level",
-				"int optname",
-				"char *optval",
-				"int optlen"
-			],
-			"symbol": "__x64_sys_setsockopt"
-		},
-		{
-			"esoteric": false,
-			"file": "net/socket.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 55,
-			"kconfig": "NET",
-			"line": 1957,
-			"name": "getsockopt",
-			"number": 1073741879,
-			"origname": "getsockopt",
-			"signature": [
-				"int fd",
-				"int level",
-				"int optname",
-				"char *optval",
-				"int *optlen"
-			],
-			"symbol": "__x64_sys_getsockopt"
-		},
-		{
-			"esoteric": false,
 			"file": "kernel/fork.c",
 			"good_location": true,
 			"grepped_location": false,
@@ -1067,24 +883,6 @@
 			"origname": "vfork",
 			"signature": [],
 			"symbol": "__x64_sys_vfork"
-		},
-		{
-			"esoteric": false,
-			"file": "fs/exec.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 59,
-			"kconfig": null,
-			"line": 1958,
-			"name": "execve",
-			"number": 1073741883,
-			"origname": "execve",
-			"signature": [
-				"const char *filename",
-				"const char *const *argv",
-				"const char *const *envp"
-			],
-			"symbol": "__x64_sys_execve"
 		},
 		{
 			"esoteric": false,
@@ -1791,25 +1589,6 @@
 		},
 		{
 			"esoteric": false,
-			"file": "kernel/ptrace.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 101,
-			"kconfig": null,
-			"line": 1110,
-			"name": "ptrace",
-			"number": 1073741925,
-			"origname": "ptrace",
-			"signature": [
-				"long request",
-				"long pid",
-				"unsigned long addr",
-				"unsigned long data"
-			],
-			"symbol": "__x64_sys_ptrace"
-		},
-		{
-			"esoteric": false,
 			"file": "kernel/sys.c",
 			"good_location": true,
 			"grepped_location": false,
@@ -2216,60 +1995,6 @@
 			"file": "kernel/signal.c",
 			"good_location": true,
 			"grepped_location": false,
-			"index": 127,
-			"kconfig": null,
-			"line": 2776,
-			"name": "rt_sigpending",
-			"number": 1073741951,
-			"origname": "rt_sigpending",
-			"signature": [
-				"sigset_t *uset",
-				"size_t sigsetsize"
-			],
-			"symbol": "__x64_sys_rt_sigpending"
-		},
-		{
-			"esoteric": false,
-			"file": "kernel/signal.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 128,
-			"kconfig": null,
-			"line": 3099,
-			"name": "rt_sigtimedwait",
-			"number": 1073741952,
-			"origname": "rt_sigtimedwait",
-			"signature": [
-				"const sigset_t *uthese",
-				"siginfo_t *uinfo",
-				"const struct timespec *uts",
-				"size_t sigsetsize"
-			],
-			"symbol": "__x64_sys_rt_sigtimedwait"
-		},
-		{
-			"esoteric": false,
-			"file": "kernel/signal.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 129,
-			"kconfig": null,
-			"line": 3281,
-			"name": "rt_sigqueueinfo",
-			"number": 1073741953,
-			"origname": "rt_sigqueueinfo",
-			"signature": [
-				"pid_t pid",
-				"int sig",
-				"siginfo_t *uinfo"
-			],
-			"symbol": "__x64_sys_rt_sigqueueinfo"
-		},
-		{
-			"esoteric": false,
-			"file": "kernel/signal.c",
-			"good_location": true,
-			"grepped_location": false,
 			"index": 130,
 			"kconfig": null,
 			"line": 3873,
@@ -2281,23 +2006,6 @@
 				"size_t sigsetsize"
 			],
 			"symbol": "__x64_sys_rt_sigsuspend"
-		},
-		{
-			"esoteric": false,
-			"file": "kernel/signal.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 131,
-			"kconfig": null,
-			"line": 3461,
-			"name": "sigaltstack",
-			"number": 1073741955,
-			"origname": "sigaltstack",
-			"signature": [
-				"const stack_t *uss",
-				"stack_t *uoss"
-			],
-			"symbol": "__x64_sys_sigaltstack"
 		},
 		{
 			"esoteric": false,
@@ -2686,22 +2394,6 @@
 		},
 		{
 			"esoteric": false,
-			"file": "kernel/sysctl_binary.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 156,
-			"kconfig": "SYSCTL_SYSCALL",
-			"line": 1401,
-			"name": "sysctl",
-			"number": 1073741980,
-			"origname": "sysctl",
-			"signature": [
-				"struct __sysctl_args *args"
-			],
-			"symbol": "__x64_sys_sysctl"
-		},
-		{
-			"esoteric": false,
 			"file": "kernel/sys.c",
 			"good_location": true,
 			"grepped_location": false,
@@ -3014,7 +2706,7 @@
 			"good_location": true,
 			"grepped_location": false,
 			"index": 176,
-			"kconfig": "MODULES",
+			"kconfig": "MODULE_UNLOAD",
 			"line": 960,
 			"name": "delete_module",
 			"number": 1073742000,
@@ -3393,23 +3085,6 @@
 			"file": "fs/aio.c",
 			"good_location": true,
 			"grepped_location": false,
-			"index": 206,
-			"kconfig": "AIO",
-			"line": 1280,
-			"name": "io_setup",
-			"number": 1073742030,
-			"origname": "io_setup",
-			"signature": [
-				"unsigned nr_events",
-				"aio_context_t *ctxp"
-			],
-			"symbol": "__x64_sys_io_setup"
-		},
-		{
-			"esoteric": false,
-			"file": "fs/aio.c",
-			"good_location": true,
-			"grepped_location": false,
 			"index": 207,
 			"kconfig": "AIO",
 			"line": 1349,
@@ -3440,24 +3115,6 @@
 				"struct timespec *timeout"
 			],
 			"symbol": "__x64_sys_io_getevents"
-		},
-		{
-			"esoteric": false,
-			"file": "fs/aio.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 209,
-			"kconfig": "AIO",
-			"line": 1703,
-			"name": "io_submit",
-			"number": 1073742033,
-			"origname": "io_submit",
-			"signature": [
-				"aio_context_t ctx_id",
-				"long nr",
-				"struct iocb * *iocbpp"
-			],
-			"symbol": "__x64_sys_io_submit"
 		},
 		{
 			"esoteric": false,
@@ -3616,24 +3273,6 @@
 				"int advice"
 			],
 			"symbol": "__x64_sys_fadvise64"
-		},
-		{
-			"esoteric": false,
-			"file": "kernel/time/posix-timers.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 222,
-			"kconfig": "POSIX_TIMERS",
-			"line": 578,
-			"name": "timer_create",
-			"number": 1073742046,
-			"origname": "timer_create",
-			"signature": [
-				"const clockid_t which_clock",
-				"struct sigevent *timer_event_spec",
-				"timer_t *created_timer_id"
-			],
-			"symbol": "__x64_sys_timer_create"
 		},
 		{
 			"esoteric": false,
@@ -4001,23 +3640,6 @@
 			"file": "ipc/mqueue.c",
 			"good_location": true,
 			"grepped_location": false,
-			"index": 244,
-			"kconfig": "POSIX_MQUEUE",
-			"line": 1288,
-			"name": "mq_notify",
-			"number": 1073742068,
-			"origname": "mq_notify",
-			"signature": [
-				"mqd_t mqdes",
-				"const struct sigevent *u_notification"
-			],
-			"symbol": "__x64_sys_mq_notify"
-		},
-		{
-			"esoteric": false,
-			"file": "ipc/mqueue.c",
-			"good_location": true,
-			"grepped_location": false,
 			"index": 245,
 			"kconfig": "POSIX_MQUEUE",
 			"line": 1344,
@@ -4030,45 +3652,6 @@
 				"struct mq_attr *u_omqstat"
 			],
 			"symbol": "__x64_sys_mq_getsetattr"
-		},
-		{
-			"esoteric": false,
-			"file": "kernel/kexec.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 246,
-			"kconfig": "KEXEC",
-			"line": 218,
-			"name": "kexec_load",
-			"number": 1073742070,
-			"origname": "kexec_load",
-			"signature": [
-				"unsigned long entry",
-				"unsigned long nr_segments",
-				"struct kexec_segment *segments",
-				"unsigned long flags"
-			],
-			"symbol": "__x64_sys_kexec_load"
-		},
-		{
-			"esoteric": false,
-			"file": "kernel/exit.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 247,
-			"kconfig": null,
-			"line": 1596,
-			"name": "waitid",
-			"number": 1073742071,
-			"origname": "waitid",
-			"signature": [
-				"int which",
-				"pid_t upid",
-				"struct siginfo *infop",
-				"int options",
-				"struct rusage *ru"
-			],
-			"symbol": "__x64_sys_waitid"
 		},
 		{
 			"esoteric": false,
@@ -4534,41 +4117,6 @@
 		},
 		{
 			"esoteric": false,
-			"file": "kernel/futex.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 273,
-			"kconfig": "FUTEX",
-			"line": 3298,
-			"name": "set_robust_list",
-			"number": 1073742097,
-			"origname": "set_robust_list",
-			"signature": [
-				"struct robust_list_head *head",
-				"size_t len"
-			],
-			"symbol": "__x64_sys_set_robust_list"
-		},
-		{
-			"esoteric": false,
-			"file": "kernel/futex.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 274,
-			"kconfig": "FUTEX",
-			"line": 3320,
-			"name": "get_robust_list",
-			"number": 1073742098,
-			"origname": "get_robust_list",
-			"signature": [
-				"int pid",
-				"struct robust_list_head * *head_ptr",
-				"size_t *len_ptr"
-			],
-			"symbol": "__x64_sys_get_robust_list"
-		},
-		{
-			"esoteric": false,
 			"file": "fs/splice.c",
 			"good_location": true,
 			"grepped_location": false,
@@ -4625,46 +4173,6 @@
 				"unsigned int flags"
 			],
 			"symbol": "__x64_sys_sync_file_range"
-		},
-		{
-			"esoteric": false,
-			"file": "fs/splice.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 278,
-			"kconfig": null,
-			"line": 1343,
-			"name": "vmsplice",
-			"number": 1073742102,
-			"origname": "vmsplice",
-			"signature": [
-				"int fd",
-				"const struct iovec *uiov",
-				"unsigned long nr_segs",
-				"unsigned int flags"
-			],
-			"symbol": "__x64_sys_vmsplice"
-		},
-		{
-			"esoteric": false,
-			"file": "mm/migrate.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 279,
-			"kconfig": "MIGRATION",
-			"line": 1787,
-			"name": "move_pages",
-			"number": 1073742103,
-			"origname": "move_pages",
-			"signature": [
-				"pid_t pid",
-				"unsigned long nr_pages",
-				"const void * *pages",
-				"const int *nodes",
-				"int *status",
-				"int flags"
-			],
-			"symbol": "__x64_sys_move_pages"
 		},
 		{
 			"esoteric": false,
@@ -4936,65 +4444,6 @@
 		},
 		{
 			"esoteric": false,
-			"file": "fs/read_write.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 295,
-			"kconfig": null,
-			"line": 1115,
-			"name": "preadv",
-			"number": 1073742119,
-			"origname": "preadv",
-			"signature": [
-				"unsigned long fd",
-				"const struct iovec *vec",
-				"unsigned long vlen",
-				"unsigned long pos_l",
-				"unsigned long pos_h"
-			],
-			"symbol": "__x64_sys_preadv"
-		},
-		{
-			"esoteric": false,
-			"file": "fs/read_write.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 296,
-			"kconfig": null,
-			"line": 1135,
-			"name": "pwritev",
-			"number": 1073742120,
-			"origname": "pwritev",
-			"signature": [
-				"unsigned long fd",
-				"const struct iovec *vec",
-				"unsigned long vlen",
-				"unsigned long pos_l",
-				"unsigned long pos_h"
-			],
-			"symbol": "__x64_sys_pwritev"
-		},
-		{
-			"esoteric": false,
-			"file": "kernel/signal.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 297,
-			"kconfig": null,
-			"line": 3322,
-			"name": "rt_tgsigqueueinfo",
-			"number": 1073742121,
-			"origname": "rt_tgsigqueueinfo",
-			"signature": [
-				"pid_t tgid",
-				"pid_t pid",
-				"int sig",
-				"siginfo_t *uinfo"
-			],
-			"symbol": "__x64_sys_rt_tgsigqueueinfo"
-		},
-		{
-			"esoteric": false,
 			"file": "kernel/events/core.c",
 			"good_location": true,
 			"grepped_location": false,
@@ -5012,26 +4461,6 @@
 				"unsigned long flags"
 			],
 			"symbol": "__x64_sys_perf_event_open"
-		},
-		{
-			"esoteric": false,
-			"file": "net/socket.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 299,
-			"kconfig": "NET",
-			"line": 2490,
-			"name": "recvmmsg",
-			"number": 1073742123,
-			"origname": "recvmmsg",
-			"signature": [
-				"int fd",
-				"struct mmsghdr *mmsg",
-				"unsigned int vlen",
-				"unsigned int flags",
-				"struct timespec *timeout"
-			],
-			"symbol": "__x64_sys_recvmmsg"
 		},
 		{
 			"esoteric": false,
@@ -5162,25 +4591,6 @@
 		},
 		{
 			"esoteric": false,
-			"file": "net/socket.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 307,
-			"kconfig": "NET",
-			"line": 2247,
-			"name": "sendmmsg",
-			"number": 1073742131,
-			"origname": "sendmmsg",
-			"signature": [
-				"int fd",
-				"struct mmsghdr *mmsg",
-				"unsigned int vlen",
-				"unsigned int flags"
-			],
-			"symbol": "__x64_sys_sendmmsg"
-		},
-		{
-			"esoteric": false,
 			"file": "kernel/nsproxy.c",
 			"good_location": true,
 			"grepped_location": false,
@@ -5213,48 +4623,6 @@
 				"struct getcpu_cache *unused"
 			],
 			"symbol": "__x64_sys_getcpu"
-		},
-		{
-			"esoteric": false,
-			"file": "mm/process_vm_access.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 310,
-			"kconfig": "CROSS_MEMORY_ATTACH",
-			"line": 298,
-			"name": "process_vm_readv",
-			"number": 1073742134,
-			"origname": "process_vm_readv",
-			"signature": [
-				"pid_t pid",
-				"const struct iovec *lvec",
-				"unsigned long liovcnt",
-				"const struct iovec *rvec",
-				"unsigned long riovcnt",
-				"unsigned long flags"
-			],
-			"symbol": "__x64_sys_process_vm_readv"
-		},
-		{
-			"esoteric": false,
-			"file": "mm/process_vm_access.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 311,
-			"kconfig": "CROSS_MEMORY_ATTACH",
-			"line": 305,
-			"name": "process_vm_writev",
-			"number": 1073742135,
-			"origname": "process_vm_writev",
-			"signature": [
-				"pid_t pid",
-				"const struct iovec *lvec",
-				"unsigned long liovcnt",
-				"const struct iovec *rvec",
-				"unsigned long riovcnt",
-				"unsigned long flags"
-			],
-			"symbol": "__x64_sys_process_vm_writev"
 		},
 		{
 			"esoteric": false,
@@ -5444,26 +4812,6 @@
 		},
 		{
 			"esoteric": false,
-			"file": "fs/exec.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 322,
-			"kconfig": null,
-			"line": 1966,
-			"name": "execveat",
-			"number": 1073742146,
-			"origname": "execveat",
-			"signature": [
-				"int fd",
-				"const char *filename",
-				"const char *const *argv",
-				"const char *const *envp",
-				"int flags"
-			],
-			"symbol": "__x64_sys_execveat"
-		},
-		{
-			"esoteric": false,
 			"file": "fs/userfaultfd.c",
 			"good_location": true,
 			"grepped_location": false,
@@ -5533,48 +4881,6 @@
 				"unsigned int flags"
 			],
 			"symbol": "__x64_sys_copy_file_range"
-		},
-		{
-			"esoteric": false,
-			"file": "fs/read_write.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 327,
-			"kconfig": null,
-			"line": 1123,
-			"name": "preadv2",
-			"number": 1073742151,
-			"origname": "preadv2",
-			"signature": [
-				"unsigned long fd",
-				"const struct iovec *vec",
-				"unsigned long vlen",
-				"unsigned long pos_l",
-				"unsigned long pos_h",
-				"rwf_t flags"
-			],
-			"symbol": "__x64_sys_preadv2"
-		},
-		{
-			"esoteric": false,
-			"file": "fs/read_write.c",
-			"good_location": true,
-			"grepped_location": false,
-			"index": 328,
-			"kconfig": null,
-			"line": 1143,
-			"name": "pwritev2",
-			"number": 1073742152,
-			"origname": "pwritev2",
-			"signature": [
-				"unsigned long fd",
-				"const struct iovec *vec",
-				"unsigned long vlen",
-				"unsigned long pos_l",
-				"unsigned long pos_h",
-				"rwf_t flags"
-			],
-			"symbol": "__x64_sys_pwritev2"
 		},
 		{
 			"esoteric": false,
@@ -6363,5 +5669,5 @@
 			"symbol": "__x32_compat_sys_pwritev64v2"
 		}
 	],
-	"systrack_version": "0.3.1"
+	"systrack_version": "0.4-rc1"
 }
