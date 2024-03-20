@@ -4049,84 +4049,6 @@
 		},
 		{
 			"esoteric": false,
-			"file": "mm/mempolicy.c",
-			"good_location": true,
-			"grepped_location": true,
-			"index": 258,
-			"kconfig": "MIGRATION",
-			"line": 1676,
-			"name": "migrate_pages",
-			"number": 258,
-			"origname": "migrate_pages",
-			"signature": [
-				"pid_t pid",
-				"unsigned long maxnode",
-				"const unsigned long *old_nodes",
-				"const unsigned long *new_nodes"
-			],
-			"symbol": "sys_migrate_pages"
-		},
-		{
-			"esoteric": false,
-			"file": "mm/mempolicy.c",
-			"good_location": true,
-			"grepped_location": true,
-			"index": 259,
-			"kconfig": "NUMA",
-			"line": 1556,
-			"name": "mbind",
-			"number": 259,
-			"origname": "mbind",
-			"signature": [
-				"unsigned long start",
-				"unsigned long len",
-				"unsigned long mode",
-				"const unsigned long *nmask",
-				"unsigned long maxnode",
-				"unsigned int flags"
-			],
-			"symbol": "sys_mbind"
-		},
-		{
-			"esoteric": false,
-			"file": "mm/mempolicy.c",
-			"good_location": true,
-			"grepped_location": true,
-			"index": 260,
-			"kconfig": "NUMA",
-			"line": 1713,
-			"name": "get_mempolicy",
-			"number": 260,
-			"origname": "get_mempolicy",
-			"signature": [
-				"int *policy",
-				"unsigned long *nmask",
-				"unsigned long maxnode",
-				"unsigned long addr",
-				"unsigned long flags"
-			],
-			"symbol": "sys_get_mempolicy"
-		},
-		{
-			"esoteric": false,
-			"file": "mm/mempolicy.c",
-			"good_location": true,
-			"grepped_location": true,
-			"index": 261,
-			"kconfig": "NUMA",
-			"line": 1583,
-			"name": "set_mempolicy",
-			"number": 261,
-			"origname": "set_mempolicy",
-			"signature": [
-				"int mode",
-				"const unsigned long *nmask",
-				"unsigned long maxnode"
-			],
-			"symbol": "sys_set_mempolicy"
-		},
-		{
-			"esoteric": false,
 			"file": "ipc/mqueue.c",
 			"good_location": true,
 			"grepped_location": false,
@@ -4420,43 +4342,6 @@
 				"u32 mask"
 			],
 			"symbol": "sys_inotify_rm_watch"
-		},
-		{
-			"esoteric": false,
-			"file": "arch/powerpc/platforms/cell/spu_syscalls.c",
-			"good_location": true,
-			"grepped_location": true,
-			"index": 278,
-			"kconfig": "SPU_FS",
-			"line": 80,
-			"name": "spu_run",
-			"number": 278,
-			"origname": "spu_run",
-			"signature": [
-				"int fd",
-				"__u32 *unpc",
-				"__u32 *ustatus"
-			],
-			"symbol": "sys_spu_run"
-		},
-		{
-			"esoteric": false,
-			"file": "arch/powerpc/platforms/cell/spu_syscalls.c",
-			"good_location": true,
-			"grepped_location": true,
-			"index": 279,
-			"kconfig": "SPU_FS",
-			"line": 56,
-			"name": "spu_create",
-			"number": 279,
-			"origname": "spu_create",
-			"signature": [
-				"const char *name",
-				"unsigned int flags",
-				"umode_t mode",
-				"int neighbor_fd"
-			],
-			"symbol": "sys_spu_create"
 		},
 		{
 			"esoteric": false,
@@ -4850,27 +4735,6 @@
 		},
 		{
 			"esoteric": false,
-			"file": "mm/migrate.c",
-			"good_location": true,
-			"grepped_location": true,
-			"index": 301,
-			"kconfig": "MIGRATION",
-			"line": 2456,
-			"name": "move_pages",
-			"number": 301,
-			"origname": "move_pages",
-			"signature": [
-				"pid_t pid",
-				"unsigned long nr_pages",
-				"const void * *pages",
-				"const int *nodes",
-				"int *status",
-				"int flags"
-			],
-			"symbol": "sys_move_pages"
-		},
-		{
-			"esoteric": false,
 			"file": "kernel/sys.c",
 			"good_location": true,
 			"grepped_location": false,
@@ -5019,24 +4883,6 @@
 				"unsigned int nbytes2"
 			],
 			"symbol": "sys_ppc_fallocate"
-		},
-		{
-			"esoteric": false,
-			"file": "arch/powerpc/mm/book3s64/subpage_prot.c",
-			"good_location": true,
-			"grepped_location": true,
-			"index": 310,
-			"kconfig": "PPC_SUBPAGE_PROT",
-			"line": 184,
-			"name": "subpage_prot",
-			"number": 310,
-			"origname": "subpage_prot",
-			"signature": [
-				"unsigned long addr",
-				"unsigned long len",
-				"u32 *map"
-			],
-			"symbol": "sys_subpage_prot"
 		},
 		{
 			"esoteric": false,
@@ -6110,26 +5956,6 @@
 		},
 		{
 			"esoteric": false,
-			"file": "kernel/kexec_file.c",
-			"good_location": true,
-			"grepped_location": true,
-			"index": 382,
-			"kconfig": "KEXEC_FILE",
-			"line": 330,
-			"name": "kexec_file_load",
-			"number": 382,
-			"origname": "kexec_file_load",
-			"signature": [
-				"int kernel_fd",
-				"int initrd_fd",
-				"unsigned long cmdline_len",
-				"const char *cmdline_ptr",
-				"unsigned long flags"
-			],
-			"symbol": "sys_kexec_file_load"
-		},
-		{
-			"esoteric": false,
 			"file": "fs/stat.c",
 			"good_location": true,
 			"grepped_location": false,
@@ -6147,58 +5973,6 @@
 				"struct statx *buffer"
 			],
 			"symbol": "sys_statx"
-		},
-		{
-			"esoteric": false,
-			"file": "mm/mprotect.c",
-			"good_location": true,
-			"grepped_location": true,
-			"index": 384,
-			"kconfig": "PPC_MEM_KEYS",
-			"line": 841,
-			"name": "pkey_alloc",
-			"number": 384,
-			"origname": "pkey_alloc",
-			"signature": [
-				"unsigned long flags",
-				"unsigned long init_val"
-			],
-			"symbol": "sys_pkey_alloc"
-		},
-		{
-			"esoteric": false,
-			"file": "mm/mprotect.c",
-			"good_location": true,
-			"grepped_location": true,
-			"index": 385,
-			"kconfig": "PPC_MEM_KEYS",
-			"line": 871,
-			"name": "pkey_free",
-			"number": 385,
-			"origname": "pkey_free",
-			"signature": [
-				"int pkey"
-			],
-			"symbol": "sys_pkey_free"
-		},
-		{
-			"esoteric": false,
-			"file": "mm/mprotect.c",
-			"good_location": true,
-			"grepped_location": true,
-			"index": 386,
-			"kconfig": "PPC_MEM_KEYS",
-			"line": 835,
-			"name": "pkey_mprotect",
-			"number": 386,
-			"origname": "pkey_mprotect",
-			"signature": [
-				"unsigned long start",
-				"size_t len",
-				"unsigned long prot",
-				"int pkey"
-			],
-			"symbol": "sys_pkey_mprotect"
 		},
 		{
 			"esoteric": false,
@@ -7238,25 +7012,6 @@
 		},
 		{
 			"esoteric": false,
-			"file": "mm/mempolicy.c",
-			"good_location": true,
-			"grepped_location": true,
-			"index": 450,
-			"kconfig": "NUMA",
-			"line": 1489,
-			"name": "set_mempolicy_home_node",
-			"number": 450,
-			"origname": "set_mempolicy_home_node",
-			"signature": [
-				"unsigned long start",
-				"unsigned long len",
-				"unsigned long home_node",
-				"unsigned long flags"
-			],
-			"symbol": "sys_set_mempolicy_home_node"
-		},
-		{
-			"esoteric": false,
 			"file": "mm/filemap.c",
 			"good_location": true,
 			"grepped_location": false,
@@ -7447,5 +7202,5 @@
 			"symbol": "sys_lsm_list_modules"
 		}
 	],
-	"systrack_version": "0.4-rc1"
+	"systrack_version": "0.4-rc2"
 }
