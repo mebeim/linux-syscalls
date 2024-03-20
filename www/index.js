@@ -1,6 +1,7 @@
 'use strict'
 
 const tableEl            = document.getElementsByTagName('table')[0]
+const sumamryEl          = document.getElementById('summary')
 const themeToggleEl      = document.getElementById('theme-toggle')
 const compactSigToggleEl = document.getElementById('compact-sig-toggle')
 const tagSelectEl        = document.getElementById('tag-select')
@@ -412,7 +413,7 @@ function fillRow(row, tag, sc, maxArgs) {
 function fillTable(syscallTable, tag) {
 	const numReg = syscallTable.kernel.abi.calling_convention.syscall_nr
 	const argRegs = syscallTable.kernel.abi.calling_convention.parameters
-	const maxArgs = Math.max(...syscallTable.syscalls.map(sc => sc.signature?.length || 0))
+	const maxArgs = syscallTable.syscalls.reduce((acc, sc) => Math.max(acc, sc.signature?.length || 0), 0)
 	const [header1, header2] = tableEl.querySelectorAll('tr')
 
 	compactSigToggleEl.textContent = compactSignature ? 'expand' : 'collapse'
@@ -475,6 +476,19 @@ async function update(pushHistoryState) {
 
 	currentSyscallTable = await fetchSyscallTable(arch, bits, abi, tag)
 	fillTable(currentSyscallTable, tag)
+
+	// Some stats at the bottom of the table
+	const n_syscalls = currentSyscallTable.syscalls.length
+	const n_esoteric = currentSyscallTable.syscalls.reduce((acc, sc) => acc + sc.esoteric, 0)
+	const n_bad_loc  = currentSyscallTable.syscalls.reduce((acc, sc) => acc + !sc.good_location, 0)
+	const n_no_loc   = currentSyscallTable.syscalls.reduce((acc, sc) => acc + (sc.file === null), 0)
+	const n_no_sig   = currentSyscallTable.syscalls.reduce((acc, sc) => acc + (sc.signature === null), 0)
+
+	sumamryEl.textContent = `${n_syscalls} syscalls`
+	if (n_esoteric) sumamryEl.textContent += ` (${n_esoteric} esoteric)`
+	if (n_bad_loc)  sumamryEl.textContent += `, ${n_bad_loc} non-standard definitions`
+	if (n_no_loc)   sumamryEl.textContent += `, ${n_no_loc} missing location info`
+	if (n_no_sig)   sumamryEl.textContent += `, ${n_no_sig} missing signature info`
 
 	systrackVersEl.textContent = currentSyscallTable.systrack_version
 	jsonLinkEl.href = `db/${arch}/${bits}/${abi}/${tag}/table.json`
