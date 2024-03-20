@@ -362,25 +362,32 @@ function fillRow(row, tag, sc, maxArgs) {
 		const sig = document.createElement('td')
 		row.appendChild(sig)
 
-		for (let i = 0; i < sc.signature.length; i++) {
-			const arg = sc.signature[i]
-			const spaceIdx = arg.trimEnd().lastIndexOf(' ')
+		if (sc.signature.length > 0) {
+			for (let i = 0; i < sc.signature.length; i++) {
+				const arg = sc.signature[i]
+				const spaceIdx = arg.trimEnd().lastIndexOf(' ')
 
-			if (spaceIdx === -1) {
-				sig.append(document.createTextNode(arg))
-			} else {
-				const type = document.createElement('span')
-				const name = document.createElement('span')
-				type.classList.add('argtype')
-				name.classList.add('argname')
-				type.textContent = arg.slice(0, spaceIdx)
-				name.textContent = arg.slice(spaceIdx)
-				sig.appendChild(type)
-				sig.appendChild(name)
+				if (spaceIdx === -1) {
+					sig.append(document.createTextNode(arg))
+				} else {
+					const type = document.createElement('span')
+					const name = document.createElement('span')
+					type.classList.add('argtype')
+					name.classList.add('argname')
+					type.textContent = arg.slice(0, spaceIdx)
+					name.textContent = arg.slice(spaceIdx)
+					sig.appendChild(type)
+					sig.appendChild(name)
+				}
+
+				if (i < sc.signature.length - 1)
+					sig.append(document.createTextNode(', '))
 			}
-
-			if (i < sc.signature.length - 1)
-				sig.append(document.createTextNode(', '))
+		} else {
+			const type = document.createElement('span')
+			type.classList.add('argtype')
+			type.textContent = 'void'
+			sig.appendChild(type)
 		}
 	} else {
 		// Expanded signature: one column per argument
