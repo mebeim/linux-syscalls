@@ -493,7 +493,7 @@ async function update(pushHistoryState) {
 
 	sumamryEl.textContent = `${n_syscalls} syscalls`
 	if (n_esoteric) sumamryEl.textContent += ` (${n_esoteric} esoteric)`
-	if (n_bad_loc)  sumamryEl.textContent += `, ${n_bad_loc} non-standard definitions`
+	if (n_bad_loc)  sumamryEl.textContent += `, ${n_bad_loc} non-standard definition` + 's'.substring(0, n_bad_loc ^ 1)
 	if (n_no_loc)   sumamryEl.textContent += `, ${n_no_loc} missing location info`
 	if (n_no_sig)   sumamryEl.textContent += `, ${n_no_sig} missing signature info`
 
