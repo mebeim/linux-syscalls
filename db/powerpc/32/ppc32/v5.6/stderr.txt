@@ -917,6 +917,13 @@ Detected kernel version: 5.6.0 (from vmlinux)
 [I] Location could not be found through grepping: swapcontext (orig name ppc_swapcontext)
 [I] Location could not be found through grepping: vfork (orig name ppc_vfork)
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
+[D] Signature extracted from ftrace metadata: fork
+[D] Signature extracted from ftrace metadata: select
+[D] Signature extracted from ftrace metadata: clone
+[D] Signature extracted from ftrace metadata: vfork
+[D] Signature extracted from ftrace metadata: swapcontext
+[D] Signature extracted from ftrace metadata: fadvise64_64
+[D] Signature extracted from ftrace metadata: clone3
 [W] Potentially bad location for fork (ppc_fork): arch/powerpc/kernel/entry_32.S:585 (implemented in asm?)
 [W] Potentially bad location for select (ppc_select): arch/powerpc/kernel/syscalls.c:82 (normal function w/o asmlinkage?)
 [W] Potentially bad location for clone (ppc_clone): arch/powerpc/kernel/entry_32.S:601 (implemented in asm?)
