@@ -555,9 +555,10 @@ function setTheme(theme) {
 }
 
 function toggleTheme() {
-	setTheme(document.body.dataset.theme === 'dark' ? 'light' : 'dark')
+	const newTheme = document.body.dataset.theme === 'dark' ? 'light' : 'dark'
+	setTheme(newTheme)
 	// Only save to local storage if manually toggled by the user
-	localStorage.setItem('theme', theme)
+	localStorage.setItem('theme', newTheme)
 }
 
 function restoreSettings() {
