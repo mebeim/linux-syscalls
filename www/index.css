@@ -90,6 +90,11 @@ table th {
 	background-color: var(--table-head-bg);
 	border-top: var(--table-cell-border);
 	border-bottom: var(--table-cell-border);
+	/* Avoid ugly text selection while clicking to sort/collapse */
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
 }
 
 table th.pad {
@@ -133,27 +138,69 @@ table span.argtype {
 	display: none;
 }
 
-.fakelink {
-	text-decoration: underline;
-	cursor: pointer;
-}
-
 table td.unknown {
 	font-family: sans-serif;
 	font-style: italic;
 }
 
-table th.ascending::before, table th.descending::before, table td.bad::after, table td.esoteric::after {
-	font-family: 'Noto Color Emoji';
+#compact-sig-toggle {
+	text-decoration: underline;
+}
+
+#compact-sig-toggle::before { display: inline-block; content: '['; }
+#compact-sig-toggle::after  { display: inline-block; content: ']'; }
+
+/* Collapse columns through CSS trickery so that JS only has to add/remove words
+ * from the table's data-collapse attribute. */
+
+table th > .collapse-toggle::before {
+	content: '[-]';
+}
+
+/* Show [+] instead of [-] for collapsed columns */
+table[data-collapse~="name"]      th[data-column="name"]      > .collapse-toggle::before,
+table[data-collapse~="symbol"]    th[data-column="symbol"]    > .collapse-toggle::before,
+table[data-collapse~="location"]  th[data-column="location"]  > .collapse-toggle::before,
+table[data-collapse~="kconfig"]   th[data-column="kconfig"]   > .collapse-toggle::before,
+table[data-collapse~="signature"] th[data-column="signature"] > .collapse-toggle::before {
+	content: '[+]';
+}
+
+/* No column title for collapsed columns, just the toggle */
+table[data-collapse~="name"]      th[data-column="name"]      > .collapsible,
+table[data-collapse~="symbol"]    th[data-column="symbol"]    > .collapsible,
+table[data-collapse~="location"]  th[data-column="location"]  > .collapsible,
+table[data-collapse~="kconfig"]   th[data-column="kconfig"]   > .collapsible,
+table[data-collapse~="signature"] th[data-column="signature"] > .collapsible {
+	display: none;
+}
+
+/* Hide the content of collapsed columns */
+table[data-collapse~="name"]      td[data-column="name"],
+table[data-collapse~="symbol"]    td[data-column="symbol"],
+table[data-collapse~="location"]  td[data-column="location"],
+table[data-collapse~="kconfig"]   td[data-column="kconfig"],
+table[data-collapse~="signature"] td[data-column="signature"] {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	max-width: 0px;
+	opacity: 0.5;
 }
 
 /* Emojis! Use U+202f (narrow no-break space) to space header sort arrows and
    U+2002 (en space) to space emojis for bad locations and esoteric syscalls. */
 
+table th.ascending::before, table th.descending::before, table td.bad::after, table td.esoteric::after {
+	font-family: 'Noto Color Emoji';
+}
+
 table th.ascending::before  { content: '\2b07\fe0f\202f';  }
 table th.descending::before { content: '\2b06\fe0f\202f';  }
 table td.bad::after         { content: '\2002\26a0\fe0f';  }
 table td.esoteric::after    { content: '\2002\1f984\fe0f'; }
+
+/* Hover effects */
 
 @media (any-hover: hover) {
 	table th.sortable:hover {
@@ -167,5 +214,20 @@ table td.esoteric::after    { content: '\2002\1f984\fe0f'; }
 
 	table a:hover {
 		text-decoration: underline;
+	}
+
+	table .collapse-toggle:hover {
+		cursor: pointer;
+		text-shadow: 0px 0px 3px var(--main-fg);
+	}
+
+	#compact-sig-toggle:hover {
+		cursor: pointer;
+	}
+
+	#compact-sig-toggle:hover::before,
+	#compact-sig-toggle:hover::after {
+		text-decoration: none;
+		text-shadow: 0px 0px 3px var(--main-fg);
 	}
 }

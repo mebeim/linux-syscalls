@@ -259,8 +259,12 @@ function sortTable(e) {
 	if (updateInProgress)
 		return
 
-	const header = e.target
-	const idx    = Array.from(header.parentNode.children).indexOf(e.target)
+	// Ignore click on the collapse toggle inside the <th>
+	if (e.target.classList.contains('collapse-toggle'))
+		return
+
+	const header = e.currentTarget
+	const idx    = Array.from(header.parentNode.children).indexOf(e.currentTarget)
 	const rows   = Array.from(tableEl.querySelectorAll('tr')).slice(2)
 	const desc   = header.classList.contains('ascending')
 	const body   = rows[0].parentElement
@@ -291,22 +295,39 @@ function sortTable(e) {
 	header.classList.add(desc ? 'descending' : 'ascending')
 }
 
+function toggleCollapseColumn(e) {
+	if (updateInProgress)
+		return
+
+	const columnName = e.currentTarget.parentElement.dataset.column
+	const collapsed = (tableEl.dataset.collapse ?? '').trim().split(' ').filter(Boolean)
+
+	if (collapsed.includes(columnName)) {
+		collapsed.splice(collapsed.indexOf(columnName), 1)
+	} else {
+		collapsed.push(columnName)
+	}
+
+	tableEl.dataset.collapse = collapsed.join(' ')
+	localStorage.setItem('collapsedColumns', tableEl.dataset.collapse)
+}
+
 function fillRow(row, tag, sc, maxArgs) {
-	const ndec = document.createElement('td')
-	const nhex = document.createElement('td')
-	const name = document.createElement('td')
-	const sym  = document.createElement('td')
-	const loc  = document.createElement('td')
-	const kcfg = document.createElement('td')
-	let argsLeft = compactSignature ? 0 : sc.signature?.length ? maxArgs - sc.signature?.length : maxArgs;
+	const cells = [
+		document.createElement('td'), document.createElement('td'),
+		document.createElement('td'), document.createElement('td'),
+		document.createElement('td'), document.createElement('td')
+	]
+	const [ndec, nhex, name, sym, loc, kcfg] = cells
+	let argsLeft = compactSignature ? 0 : sc.signature?.length ? maxArgs - sc.signature?.length : maxArgs
 
 	row.addEventListener('click', highlightRow)
-	row.appendChild(ndec)
-	row.appendChild(nhex)
-	row.appendChild(name)
-	row.appendChild(sym)
-	row.appendChild(loc)
-	row.appendChild(kcfg)
+	cells.forEach(el => row.appendChild(el))
+
+	name.dataset.column = 'name'
+	sym.dataset.column  = 'symbol'
+	loc.dataset.column  = 'location'
+	kcfg.dataset.column = 'kconfig'
 
 	ndec.textContent = sc.number
 	nhex.textContent = `0x${sc.number.toString(16)}`
@@ -355,11 +376,13 @@ function fillRow(row, tag, sc, maxArgs) {
 		const sig = document.createElement('td')
 		sig.textContent = 'unknown signature'
 		sig.classList.add('unknown')
+		sig.dataset.column = 'signature'
 		row.appendChild(sig)
 		argsLeft--
 	} else if (compactSignature) {
 		// Compact signature: single column containing comma-separated args
 		const sig = document.createElement('td')
+		sig.dataset.column = 'signature'
 		row.appendChild(sig)
 
 		if (sc.signature.length > 0) {
@@ -408,13 +431,17 @@ function fillRow(row, tag, sc, maxArgs) {
 				td.appendChild(name)
 			}
 
+			td.dataset.column = 'signature'
 			row.appendChild(td)
 		}
 	}
 
 	// Append multiple <td> elements to be able to style column borders
-	for (let i = 0; i < argsLeft; i++)
-		row.appendChild(document.createElement('td'))
+	for (let i = 0; i < argsLeft; i++) {
+		const td = document.createElement('td')
+		td.dataset.column = 'signature'
+		row.appendChild(td)
+	}
 }
 
 function fillTable(syscallTable, tag) {
@@ -423,7 +450,7 @@ function fillTable(syscallTable, tag) {
 	const maxArgs = syscallTable.syscalls.reduce((acc, sc) => Math.max(acc, sc.signature?.length || 0), 0)
 	const [header1, header2] = tableEl.querySelectorAll('tr')
 
-	compactSigToggleEl.textContent = compactSignature ? 'expand' : 'collapse'
+	compactSigToggleEl.textContent = compactSignature ? 'compact' : 'extended'
 	header1.children[1].colSpan = maxArgs
 	header2.children[0].textContent = `Number${numReg ? '\u00a0(' + numReg + ')' : ''}`
 
@@ -434,7 +461,11 @@ function fillTable(syscallTable, tag) {
 	if (compactSignature) {
 		// Compact signature: single column containing comma-separated args
 		const th = document.createElement('th')
-		th.textContent = `Arguments (${argRegs.join(', ')})`
+		const title = document.createElement('span')
+		title.classList.add('collapsible')
+		title.textContent = `Arguments (${argRegs.join(', ')})`
+		th.dataset.column = 'signature'
+		th.appendChild(title)
 		header2.appendChild(th)
 	} else {
 		// Expanded signature: one column per argument
@@ -443,7 +474,11 @@ function fillTable(syscallTable, tag) {
 		// that should never happen (why publish such a table to begin with?).
 		for (let i = 0; i < maxArgs; i++) {
 			const th = document.createElement('th')
-			th.textContent = `Arg\u00a0${i + 1}\u00a0(${argRegs[i]})`
+			const title = document.createElement('span')
+			title.classList.add('collapsible')
+			title.textContent = `Arg\u00a0${i + 1}\u00a0(${argRegs[i]})`
+			th.dataset.column = 'signature'
+			th.appendChild(title)
 			header2.appendChild(th)
 		}
 	}
@@ -459,7 +494,6 @@ function fillTable(syscallTable, tag) {
 		tableEl.appendChild(row)
 	}
 
-	tableEl.querySelectorAll('th.sortable').forEach(el => el.addEventListener('click', sortTable))
 	document.getElementById('container').classList.remove('invisible')
 	document.getElementById('loading').classList.add('invisible')
 }
@@ -468,10 +502,10 @@ function toggleCompactSignature() {
 	if (updateInProgress)
 		return
 
-	// Could be optimized... but I could also not care less for now
 	const tag = getSelection().pop()
 	compactSignature = !compactSignature
 	localStorage.setItem('compactSignature', compactSignature)
+	// Could be optimized... but I could also not care less for now
 	fillTable(currentSyscallTable, tag)
 }
 
@@ -562,11 +596,16 @@ function toggleTheme() {
 }
 
 function restoreSettings() {
-	let theme = localStorage.getItem('theme')
+	/* This one is global */
 	compactSignature = localStorage.getItem('compactSignature') === 'true'
 
+	let theme = localStorage.getItem('theme')
 	if (!theme)
 		theme = window.matchMedia?.('(prefers-color-scheme: dark)')?.matches ? 'dark' : 'light';
+
+	const collapsedColumns = localStorage.getItem('collapsedColumns')
+	if (collapsedColumns)
+		tableEl.dataset.collapse = collapsedColumns
 
 	setTheme(theme)
 }
@@ -605,6 +644,8 @@ async function setup() {
 	tagSelectEl.addEventListener('change', tagSelectChangeHandler)
 	themeToggleEl.addEventListener('click', toggleTheme)
 	compactSigToggleEl.addEventListener('click', toggleCompactSignature)
+	tableEl.querySelectorAll('th.sortable').forEach(el => el.addEventListener('click', sortTable))
+	tableEl.querySelectorAll('th > .collapse-toggle').forEach(el => el.addEventListener('click', toggleCollapseColumn))
 	window.addEventListener('popstate', historyPopStateHandler)
 }
 
