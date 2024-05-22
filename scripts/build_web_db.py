@@ -122,6 +122,7 @@ def main() -> int:
 				# Add special "latest" tag as a copy of the highest tag
 				latest = max(abi_index, key=tag_to_tuple)
 				abi_index['latest'] = abi_index[latest].copy()
+				abi_index['latest']['real_tag'] = latest
 				copytree(abidir / latest, abidir / 'latest')
 
 	with (rootdir / 'index.json').open('w') as f:

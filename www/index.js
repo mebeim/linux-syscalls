@@ -197,6 +197,13 @@ function favoriteArch(archs) {
 	return archs[0]
 }
 
+function realTag(arch, bits, abi, tag) {
+	// Convert special "latest" tag to real tag, leave others alone
+	if (tag === 'latest')
+		return db[arch][bits][abi]['latest']['real_tag']
+	return tag
+}
+
 function fillArchOptions(archs) {
 	clearOptions(archSelectEl)
 	archs.forEach(([arch, bits, abi]) => {
@@ -312,7 +319,7 @@ function toggleCollapseColumn(e) {
 	localStorage.setItem('collapsedColumns', tableEl.dataset.collapse)
 }
 
-function fillRow(row, tag, sc, maxArgs) {
+function fillRow(row, realTag, sc, maxArgs) {
 	const cells = [
 		document.createElement('td'), document.createElement('td'),
 		document.createElement('td'), document.createElement('td'),
@@ -349,7 +356,7 @@ function fillRow(row, tag, sc, maxArgs) {
 			const link = document.createElement('a')
 			link.target = '_blank'
 			link.title = 'View in Bootlin Elixir cross referencer'
-			link.href = `https://elixir.bootlin.com/linux/${tag}/source/${sc.file}#L${sc.line}`
+			link.href = `https://elixir.bootlin.com/linux/${realTag}/source/${sc.file}#L${sc.line}`
 			link.textContent = `${sc.file}:${sc.line}`
 			loc.appendChild(link)
 		}
@@ -444,7 +451,7 @@ function fillRow(row, tag, sc, maxArgs) {
 	}
 }
 
-function fillTable(syscallTable, tag) {
+function fillTable(syscallTable, realTag) {
 	const numReg = syscallTable.kernel.abi.calling_convention.syscall_nr
 	const argRegs = syscallTable.kernel.abi.calling_convention.parameters
 	const maxArgs = syscallTable.syscalls.reduce((acc, sc) => Math.max(acc, sc.signature?.length || 0), 0)
@@ -490,7 +497,7 @@ function fillTable(syscallTable, tag) {
 
 	for (const sc of syscallTable.syscalls) {
 		const row = document.createElement('tr')
-		fillRow(row, tag, sc, maxArgs)
+		fillRow(row, realTag, sc, maxArgs)
 		tableEl.appendChild(row)
 	}
 
@@ -502,11 +509,12 @@ function toggleCompactSignature() {
 	if (updateInProgress)
 		return
 
-	const tag = getSelection().pop()
+	const selection = getSelection()
+	const [arch, bits, abi, tag] = selection
 	compactSignature = !compactSignature
 	localStorage.setItem('compactSignature', compactSignature)
 	// Could be optimized... but I could also not care less for now
-	fillTable(currentSyscallTable, tag)
+	fillTable(currentSyscallTable, realTag(arch, bits, abi, tag))
 }
 
 async function update(pushHistoryState) {
@@ -516,7 +524,7 @@ async function update(pushHistoryState) {
 	const newTitle = `Linux syscall table: ${tag}, ${getArchSelectionText()}`
 
 	currentSyscallTable = await fetchSyscallTable(arch, bits, abi, tag)
-	fillTable(currentSyscallTable, tag)
+	fillTable(currentSyscallTable, realTag(arch, bits, abi, tag))
 
 	// Some stats at the bottom of the table
 	const n_syscalls = currentSyscallTable.syscalls.length
