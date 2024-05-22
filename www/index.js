@@ -259,6 +259,10 @@ function highlightRow(e) {
 	if (updateInProgress)
 		return
 
+	// Don't highlight the row if the click was on a link
+	if (e.target.tagName === 'A')
+		return
+
 	e.currentTarget.classList.toggle('highlight')
 }
 
