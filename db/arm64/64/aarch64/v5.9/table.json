@@ -72,7 +72,7 @@
 			"signature": [
 				"aio_context_t ctx_id",
 				"long nr",
-				"struct iocb * *iocbpp"
+				"struct iocb **iocbpp"
 			],
 			"symbol": "__arm64_sys_io_submit"
 		},
@@ -1811,7 +1811,7 @@
 			"origname": "get_robust_list",
 			"signature": [
 				"int pid",
-				"struct robust_list_head * *head_ptr",
+				"struct robust_list_head **head_ptr",
 				"size_t *len_ptr"
 			],
 			"symbol": "__arm64_sys_get_robust_list"
@@ -4240,7 +4240,7 @@
 			"signature": [
 				"pid_t pid",
 				"unsigned long nr_pages",
-				"const void * *pages",
+				"const void **pages",
 				"const int *nodes",
 				"int *status",
 				"int flags"
@@ -4396,7 +4396,7 @@
 				"unsigned int flags",
 				"__u64 mask",
 				"int dfd",
-				"const char  *pathname"
+				"const char *pathname"
 			],
 			"symbol": "__arm64_sys_fanotify_mark"
 		},
@@ -5277,5 +5277,5 @@
 			"symbol": "__arm64_sys_faccessat2"
 		}
 	],
-	"systrack_version": "0.4"
+	"systrack_version": "0.5"
 }

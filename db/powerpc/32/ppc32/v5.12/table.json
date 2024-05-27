@@ -3550,7 +3550,7 @@
 			"signature": [
 				"aio_context_t ctx_id",
 				"long nr",
-				"struct iocb * *iocbpp"
+				"struct iocb **iocbpp"
 			],
 			"symbol": "sys_io_submit"
 		},
@@ -4659,7 +4659,7 @@
 			"origname": "get_robust_list",
 			"signature": [
 				"int pid",
-				"struct robust_list_head * *head_ptr",
+				"struct robust_list_head **head_ptr",
 				"size_t *len_ptr"
 			],
 			"symbol": "sys_get_robust_list"
@@ -5079,7 +5079,7 @@
 				"unsigned int flags",
 				"__u64 mask",
 				"int dfd",
-				"const char  *pathname"
+				"const char *pathname"
 			],
 			"symbol": "sys_fanotify_mark"
 		},
@@ -6882,5 +6882,5 @@
 			"symbol": "sys_mount_setattr"
 		}
 	],
-	"systrack_version": "0.4"
+	"systrack_version": "0.5"
 }

@@ -3394,7 +3394,7 @@
 			"signature": [
 				"aio_context_t ctx_id",
 				"long nr",
-				"struct iocb * *iocbpp"
+				"struct iocb **iocbpp"
 			],
 			"symbol": "sys_io_submit"
 		},
@@ -4521,7 +4521,7 @@
 			"signature": [
 				"pid_t pid",
 				"unsigned long nr_pages",
-				"const void * *pages",
+				"const void **pages",
 				"const int *nodes",
 				"int *status",
 				"int flags"
@@ -4558,7 +4558,7 @@
 			"origname": "get_robust_list",
 			"signature": [
 				"int pid",
-				"struct robust_list_head * *head_ptr",
+				"struct robust_list_head **head_ptr",
 				"size_t *len_ptr"
 			],
 			"symbol": "sys_get_robust_list"
@@ -5035,7 +5035,7 @@
 				"unsigned int flags",
 				"__u64 mask",
 				"int dfd",
-				"const char  *pathname"
+				"const char *pathname"
 			],
 			"symbol": "sys_fanotify_mark"
 		},
@@ -5662,5 +5662,5 @@
 			"symbol": "sys_io_uring_register"
 		}
 	],
-	"systrack_version": "0.4"
+	"systrack_version": "0.5"
 }
