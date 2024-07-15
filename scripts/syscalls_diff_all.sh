@@ -1,44 +1,29 @@
 #!/bin/bash
+#
+# Diff syscall tables between two versions on all arch/bits/abi combinations
+# present in the db/.
+#
+# Usage: ./scripts/syscalls_diff_all.sh v6.0 v6.10
+#
+
+if ! [ -d db ]; then
+	echo "No db/ directory found, invoke this from the root of the repo!" >&2
+	exit 1
+fi
 
 if [ $# -ne 2 ]; then
 	echo "Usage $0 TAG1 TAG2" >&2
 	exit 1
 fi
 
-# do_one arch/bits/abi TAG1 TAG2
-do_one() {
-	scripts/syscalls_diff.py db/"$1"/{"$2","$3"}/table.json
-}
-
-ARCHS=(
-	x86/64/x64
-	x86/64/x32
-	x86/64/ia32
-
-	x86/32/ia32
-
-	arm64/64/aarch64
-	arm64/64/aarch32
-
-	arm/32/eabi
-	arm/32/oabi
-
-	mips/32/o32
-
-	mips/64/n64
-	mips/64/n32
-	mips/64/o32
-
-	powerpc/64/ppc64
-	powerpc/64/ppc32
-	powerpc/64/spu
-
-	powerpc/32/ppc32
-)
-
-for a in "${ARCHS[@]}"; do
-	printf "\x1b[33m---[$a]"
-	printf '%*s' $((50 - ${#a})) '' | tr ' ' -
-	printf '\x1b[0m\n'
-	do_one "$a" "$1" "$2"
+for arch in $(ls db); do
+	for bits in $(ls db/"$arch"); do
+		for abi in $(ls db/"$arch"/"$bits"); do
+			combo="$arch"/"$bits"/"$abi"
+			printf "\x1b[33m---[$combo]"
+			printf '%*s' $((50 - ${#combo})) '' | tr ' ' -
+			printf '\x1b[0m\n'
+			scripts/syscalls_diff.py db/"$combo"/{"$1","$2"}/table.json
+		done
+	done
 done
