@@ -31,6 +31,8 @@ Then, you may execute in the root of this repository:
 The static website is now available in `www/` folder.
 You may quickly test the website using `python3 -m http.server -d www/`.
 
+As an alternative, you may use Nix to deterministically build this website using `nix build github:mebeim/linux-syscalls`.
+
 ---
 
 *Copyright &copy; 2023-2024 Marco Bonelli. Licensed under the GNU General Public License v3.0.*
