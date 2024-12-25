@@ -20,16 +20,21 @@ kernel syscall implementation tracker.
 - Downloadable kernel configurations to build kernels with the same syscalls
   listed in the tables.
 
-## How to build
+## Building
 
-To build this static website, you need Python 3 with the `fonttools` and `brotli` modules.
-Then, you may execute in the root of this repository:
-```bash
+To build this static website, you will need Python 3, and optionally the
+`fonttools` and `brotli` modules. Run the following in the root of this
+repository:
+
+```sh
+# Required: copies over db files and builds index
 ./scripts/build_web_db.py
+# Opional: build emoji font (needs fonttools + brotli)
 ./scripts/build_web_fonts.sh
 ```
-The static website is now available in `www/` folder.
-You may quickly test the website using `python3 -m http.server -d www/`.
+
+The static website is now available in `www/` folder. You may quickly test it
+locally using `python3 -m http.server -d www/`.
 
 ---
 
