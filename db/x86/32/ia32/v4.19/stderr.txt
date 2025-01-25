@@ -818,6 +818,11 @@ Detected kernel version: 4.19.0 (from vmlinux)
 [D] Location needs full-range adjustment (bad): getppid (sys_getppid+0x17) -> include/linux/sched.h:1292
 [D] Location needs full-range adjustment (bad): gettid (sys_gettid+0xe) -> include/linux/sched.h:1240
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-i386-v4.19'), '0xc11bbfb1', '0xc11bbfb2', '0xc11bbfb3', '0xc11bbfb4', '0xc11bbfb5', '0xc11bbfb6', '0xc11bbfb7', '0xc11bbfb8', '0xc11bbfb9', '0xc11bbfba', '0xc11bbfbb', '0xc11bbfbc', '0xc11bbfbd', '0xc11bbfbe', '0xc11bbfbf', '0xc11bbfc0', '0xc11bbfc1', '0xc11bbfc2', '0xc11bbfc3', '0xc11bbfc4', '0xc11bbfc5', '0xc11bbfc6', '0xc11bbfc7', '0xc11bbfc8', '0xc11bbfc9']
+[FATAL] /mnt/m2data/linux-worktrees/v4.19/include/linux/syscalls.h 1271
+[FATAL] /mnt/m2data/linux-worktrees/v4.19/include/linux/syscalls.h 1271
+[FATAL] /mnt/m2data/linux-worktrees/v4.19/include/linux/syscalls.h 1271
+[FATAL] /mnt/m2data/linux-worktrees/v4.19/include/linux/syscalls.h 1271
+[FATAL] /mnt/m2data/linux-worktrees/v4.19/fs/open.c 1119
 [D] Location found through full-range adjustment: creat (sys_creat+0x5) -> fs/open.c:1119
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-i386-v4.19'), '0xc106d881', '0xc106d882', '0xc106d883', '0xc106d884', '0xc106d885', '0xc106d886', '0xc106d887', '0xc106d888', '0xc106d889', '0xc106d88a', '0xc106d88b', '0xc106d88c', '0xc106d88d', '0xc106d88e', '0xc106d88f', '0xc106d890', '0xc106d891', '0xc106d892', '0xc106d893', '0xc106d894']
 [D] Location needs grepping (bad): getpgrp (sys_getpgrp) -> kernel/sys.c:1074
@@ -827,6 +832,10 @@ Detected kernel version: 4.19.0 (from vmlinux)
 [D] Location needs grepping (bad): getppid (sys_getppid) -> include/linux/sched.h:1292
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-i386-v4.19'), '0xc106c191', '0xc106c192', '0xc106c193', '0xc106c194', '0xc106c195', '0xc106c196', '0xc106c197', '0xc106c198', '0xc106c199', '0xc106c19a', '0xc106c19b', '0xc106c19c']
 [D] Location needs grepping (bad): gettid (sys_gettid) -> include/linux/sched.h:1240
+[FATAL] Syscall(index=65, number=65, name='getpgrp', symbol='sys_getpgrp', defined at /mnt/m2data/linux-worktrees/v4.19/arch/x86/include/asm/current.h:13, takes ? args)
+[FATAL] Syscall(index=20, number=20, name='getpid', symbol='sys_getpid', defined at /mnt/m2data/linux-worktrees/v4.19/include/linux/sched.h:1292, takes ? args)
+[FATAL] Syscall(index=64, number=64, name='getppid', symbol='sys_getppid', defined at /mnt/m2data/linux-worktrees/v4.19/arch/x86/include/asm/current.h:13, takes ? args)
+[FATAL] Syscall(index=224, number=224, name='gettid', symbol='sys_gettid', defined at /mnt/m2data/linux-worktrees/v4.19/include/linux/sched.h:1240, takes ? args)
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: getpgrp -> kernel/sys.c:1109
 [W] Location found through grepping: getpid -> kernel/sys.c:888

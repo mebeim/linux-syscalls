@@ -478,6 +478,25 @@ Detected kernel version: 4.17.0 (from vmlinux)
 [D] Location needs full-range adjustment (bad): sendmsg (__ia32_compat_sys_sendmsg+0x16) -> net/compat.c:752
 [D] Location needs full-range adjustment (bad): x86_truncate64 (__ia32_compat_sys_x86_truncate64+0x14) -> include/linux/syscalls.h:1266
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.17'), '0xffffffff811c84e1', '0xffffffff811c84e2', '0xffffffff811c84e3', '0xffffffff811c84e4', '0xffffffff811c84e5', '0xffffffff811c84e6', '0xffffffff811c84e7', '0xffffffff811c84e8', '0xffffffff811c84e9', '0xffffffff811c84ea', '0xffffffff811c84eb', '0xffffffff811c84ec', '0xffffffff811c84ed', '0xffffffff811c84ee', '0xffffffff811c84ef', '0xffffffff811c84f0', '0xffffffff811c84f1', '0xffffffff811c84f2', '0xffffffff811c84f3']
+[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
+[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
+[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
+[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
+[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
+[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
+[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
+[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
+[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
+[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
+[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
+[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
+[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
+[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
+[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
+[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
+[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
+[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
+[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
 [D] Location needs grepping (bad): creat (__ia32_sys_creat) -> include/linux/syscalls.h:1256
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.17'), '0xffffffff81056f81', '0xffffffff81056f82', '0xffffffff81056f83', '0xffffffff81056f84', '0xffffffff81056f85', '0xffffffff81056f86', '0xffffffff81056f87', '0xffffffff81056f88', '0xffffffff81056f89', '0xffffffff81056f8a', '0xffffffff81056f8b', '0xffffffff81056f8c', '0xffffffff81056f8d', '0xffffffff81056f8e', '0xffffffff81056f8f', '0xffffffff81056f90', '0xffffffff81056f91', '0xffffffff81056f92', '0xffffffff81056f93', '0xffffffff81056f94', '0xffffffff81056f95', '0xffffffff81056f96', '0xffffffff81056f97', '0xffffffff81056f98']
 [D] Location needs grepping (bad): x86_ftruncate64 (__ia32_compat_sys_x86_ftruncate64) -> include/linux/syscalls.h:1236
@@ -495,6 +514,11 @@ Detected kernel version: 4.17.0 (from vmlinux)
 [D] Location needs grepping (bad): sendmsg (__ia32_compat_sys_sendmsg) -> net/compat.c:752
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.17'), '0xffffffff81056f41', '0xffffffff81056f42', '0xffffffff81056f43', '0xffffffff81056f44', '0xffffffff81056f45', '0xffffffff81056f46', '0xffffffff81056f47', '0xffffffff81056f48', '0xffffffff81056f49', '0xffffffff81056f4a', '0xffffffff81056f4b', '0xffffffff81056f4c', '0xffffffff81056f4d', '0xffffffff81056f4e', '0xffffffff81056f4f', '0xffffffff81056f50', '0xffffffff81056f51', '0xffffffff81056f52']
 [D] Location needs grepping (bad): x86_truncate64 (__ia32_compat_sys_x86_truncate64) -> include/linux/syscalls.h:1266
+[FATAL] Syscall(index=8, number=8, name='creat', symbol='__ia32_sys_creat', defined at /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h:1256, takes ? args)
+[FATAL] Syscall(index=194, number=194, name='ftruncate64', symbol='__ia32_compat_sys_x86_ftruncate64', defined at /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h:1236, takes ? args)
+[FATAL] Syscall(index=372, number=372, name='recvmsg', symbol='__ia32_compat_sys_recvmsg', defined at /mnt/m2data/linux-worktrees/v4.17/net/compat.c:780, takes ? args, depends on CONFIG_NET)
+[FATAL] Syscall(index=370, number=370, name='sendmsg', symbol='__ia32_compat_sys_sendmsg', defined at /mnt/m2data/linux-worktrees/v4.17/net/compat.c:752, takes ? args, depends on CONFIG_NET)
+[FATAL] Syscall(index=193, number=193, name='truncate64', symbol='__ia32_compat_sys_x86_truncate64', defined at /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h:1266, takes ? args)
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: creat -> fs/open.c:1157
 [W] Location found through grepping: x86_ftruncate64 -> arch/x86/ia32/sys_ia32.c:62

@@ -912,6 +912,11 @@ Detected kernel version: 5.5.0 (from vmlinux)
 [D] Location needs full-range adjustment (bad): gettid (sys_gettid+0xe) -> include/linux/sched.h:1329
 [D] Location needs full-range adjustment (bad): msgrcv (sys_msgrcv+0x20) -> ipc/msg.c:1224
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-i386-v5.5'), '0xc11e4171', '0xc11e4172', '0xc11e4173', '0xc11e4174', '0xc11e4175', '0xc11e4176', '0xc11e4177', '0xc11e4178', '0xc11e4179', '0xc11e417a', '0xc11e417b', '0xc11e417c', '0xc11e417d', '0xc11e417e', '0xc11e417f', '0xc11e4180', '0xc11e4181', '0xc11e4182', '0xc11e4183', '0xc11e4184', '0xc11e4185', '0xc11e4186', '0xc11e4187', '0xc11e4188', '0xc11e4189']
+[FATAL] /mnt/m2data/linux-worktrees/v5.5/include/linux/syscalls.h 1378
+[FATAL] /mnt/m2data/linux-worktrees/v5.5/include/linux/syscalls.h 1378
+[FATAL] /mnt/m2data/linux-worktrees/v5.5/include/linux/syscalls.h 1378
+[FATAL] /mnt/m2data/linux-worktrees/v5.5/include/linux/syscalls.h 1378
+[FATAL] /mnt/m2data/linux-worktrees/v5.5/fs/open.c 1153
 [D] Location found through full-range adjustment: creat (sys_creat+0x5) -> fs/open.c:1153
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-i386-v5.5'), '0xc1071341', '0xc1071342', '0xc1071343', '0xc1071344', '0xc1071345', '0xc1071346', '0xc1071347', '0xc1071348', '0xc1071349', '0xc107134a', '0xc107134b', '0xc107134c', '0xc107134d', '0xc107134e', '0xc107134f']
 [D] Location needs grepping (bad): getpid (sys_getpid) -> include/linux/sched.h:1381
@@ -919,6 +924,8 @@ Detected kernel version: 5.5.0 (from vmlinux)
 [D] Location needs grepping (bad): gettid (sys_gettid) -> include/linux/sched.h:1329
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-i386-v5.5'), '0xc13401e1', '0xc13401e2', '0xc13401e3', '0xc13401e4', '0xc13401e5', '0xc13401e6', '0xc13401e7', '0xc13401e8', '0xc13401e9', '0xc13401ea', '0xc13401eb', '0xc13401ec', '0xc13401ed', '0xc13401ee', '0xc13401ef', '0xc13401f0', '0xc13401f1', '0xc13401f2', '0xc13401f3', '0xc13401f4', '0xc13401f5', '0xc13401f6', '0xc13401f7', '0xc13401f8', '0xc13401f9', '0xc13401fa', '0xc13401fb', '0xc13401fc', '0xc13401fd', '0xc13401fe']
 [D] Location found through full-range adjustment: msgrcv (sys_msgrcv+0x4) -> ipc/msg.c:1230
+[FATAL] Syscall(index=20, number=20, name='getpid', symbol='sys_getpid', defined at /mnt/m2data/linux-worktrees/v5.5/include/linux/sched.h:1381, takes ? args)
+[FATAL] Syscall(index=224, number=224, name='gettid', symbol='sys_gettid', defined at /mnt/m2data/linux-worktrees/v5.5/include/linux/sched.h:1329, takes ? args)
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: getpid -> kernel/sys.c:891
 [W] Location found through grepping: gettid -> kernel/sys.c:897

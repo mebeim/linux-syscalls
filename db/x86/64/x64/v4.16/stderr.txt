@@ -943,6 +943,8 @@ Detected kernel version: 4.16.0 (from vmlinux)
 [D] Location needs adjustment (bad): close (sys_close) -> arch/x86/include/asm/current.h:13
 [D] Location needs adjustment (bad): msync (sys_msync) -> arch/x86/include/asm/current.h:13
 [D] Location needs adjustment (bad): getpid (sys_getpid) -> include/linux/sched.h:1220
+[D] Location needs adjustment (bad): accept (sys_accept) -> net/socket.c:1522
+[D] Location needs adjustment (bad): creat (sys_creat) -> fs/open.c:1072
 [D] Location needs adjustment (bad): unlink (sys_unlink) -> fs/namei.c:207
 [D] Location needs adjustment (bad): umask (sys_umask) -> arch/x86/include/asm/current.h:13
 [D] Location needs adjustment (bad): getuid (sys_getuid) -> arch/x86/include/asm/current.h:13
@@ -958,8 +960,37 @@ Detected kernel version: 4.16.0 (from vmlinux)
 [D] Location needs adjustment (bad): gettid (sys_gettid) -> include/linux/sched.h:1168
 [D] Location needs adjustment (bad): set_tid_address (sys_set_tid_address) -> arch/x86/include/asm/current.h:13
 [D] Location needs adjustment (bad): restart_syscall (sys_restart_syscall) -> arch/x86/include/asm/current.h:13
-[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.16'), '0xffffffff811b91af', '0xffffffff8106ef9f', '0xffffffff8106ef5f', '0xffffffff8106ef7f', '0xffffffff8107dab1', '0xffffffff8106f36e', '0xffffffff8106eed7', '0xffffffff8106ef1e', '0xffffffff8106eef4', '0xffffffff8106ef3f', '0xffffffff811e11d0', '0xffffffff81196379', '0xffffffff8105acfb', '0xffffffff8106b798', '0xffffffff8105a1fe', '0xffffffff8106e479', '0xffffffff8107085c', '0xffffffff811cde45']
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.16'), '0xffffffff81706966', '0xffffffff811b91af', '0xffffffff811baf04', '0xffffffff8106ef9f', '0xffffffff8106ef5f', '0xffffffff8106ef7f', '0xffffffff8107dab1', '0xffffffff8106f36e', '0xffffffff8106eed7', '0xffffffff8106ef1e', '0xffffffff8106eef4', '0xffffffff8106ef3f', '0xffffffff811e11d0', '0xffffffff81196379', '0xffffffff8105acfb', '0xffffffff8106b798', '0xffffffff8105a1fe', '0xffffffff8106e479', '0xffffffff8107085c', '0xffffffff811cde45']
+[D] Location needs full-range adjustment (bad): accept (sys_accept+0x6) -> net/socket.c:1522
+[D] Location needs full-range adjustment (bad): creat (sys_creat+0x14) -> fs/open.c:1072
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.16'), '0xffffffff81706961', '0xffffffff81706962', '0xffffffff81706963', '0xffffffff81706964']
+[D] Location needs grepping (bad): accept (sys_accept) -> net/socket.c:1522
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.16'), '0xffffffff811baef1', '0xffffffff811baef2', '0xffffffff811baef3', '0xffffffff811baef4', '0xffffffff811baef5', '0xffffffff811baef6', '0xffffffff811baef7', '0xffffffff811baef8', '0xffffffff811baef9', '0xffffffff811baefa', '0xffffffff811baefb', '0xffffffff811baefc', '0xffffffff811baefd', '0xffffffff811baefe', '0xffffffff811baeff', '0xffffffff811baf00', '0xffffffff811baf01', '0xffffffff811baf02']
+[FATAL] /mnt/m2data/linux-worktrees/v4.16/fs/open.c 1072
+[FATAL] /mnt/m2data/linux-worktrees/v4.16/fs/open.c 1072
+[FATAL] /mnt/m2data/linux-worktrees/v4.16/fs/open.c 1072
+[FATAL] /mnt/m2data/linux-worktrees/v4.16/fs/open.c 1072
+[FATAL] /mnt/m2data/linux-worktrees/v4.16/fs/open.c 1072
+[FATAL] /mnt/m2data/linux-worktrees/v4.16/fs/open.c 1072
+[FATAL] /mnt/m2data/linux-worktrees/v4.16/fs/open.c 1072
+[FATAL] /mnt/m2data/linux-worktrees/v4.16/fs/open.c 1072
+[FATAL] /mnt/m2data/linux-worktrees/v4.16/fs/open.c 1072
+[FATAL] /mnt/m2data/linux-worktrees/v4.16/fs/open.c 1072
+[FATAL] /mnt/m2data/linux-worktrees/v4.16/fs/open.c 1072
+[FATAL] /mnt/m2data/linux-worktrees/v4.16/fs/open.c 1072
+[FATAL] /mnt/m2data/linux-worktrees/v4.16/fs/open.c 1072
+[FATAL] /mnt/m2data/linux-worktrees/v4.16/fs/open.c 1072
+[FATAL] /mnt/m2data/linux-worktrees/v4.16/fs/open.c 1072
+[FATAL] /mnt/m2data/linux-worktrees/v4.16/fs/open.c 1072
+[FATAL] /mnt/m2data/linux-worktrees/v4.16/fs/open.c 1072
+[FATAL] /mnt/m2data/linux-worktrees/v4.16/fs/open.c 1072
+[D] Location needs grepping (bad): creat (sys_creat) -> fs/open.c:1072
+[FATAL] Syscall(index=43, number=43, name='accept', symbol='sys_accept', defined at /mnt/m2data/linux-worktrees/v4.16/net/socket.c:1522, takes ? args, depends on CONFIG_NET)
+[FATAL] Syscall(index=85, number=85, name='creat', symbol='sys_creat', defined at /mnt/m2data/linux-worktrees/v4.16/fs/open.c:1072, takes ? args)
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
+[W] Location found through grepping: accept -> net/socket.c:1602
+[W] Location found through grepping: creat -> fs/open.c:1115
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
 Found 318 implemented syscalls
+Found 2 definition locations through grepping
 

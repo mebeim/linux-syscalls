@@ -868,14 +868,18 @@ Detected kernel version: 5.3.0 (from vmlinux)
 [D] Location needs grepping (bad): sys32_syscall (sys32_syscall) -> arch/mips/kernel/scall64-o32.S:213
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-mips64-v5.3'), '0xa80000000002ca11', '0xa80000000002ca12', '0xa80000000002ca13', '0xa80000000002ca14', '0xa80000000002ca15', '0xa80000000002ca16', '0xa80000000002ca17', '0xa80000000002ca18', '0xa80000000002ca19', '0xa80000000002ca1a', '0xa80000000002ca1b', '0xa80000000002ca1c', '0xa80000000002ca1d', '0xa80000000002ca1e', '0xa80000000002ca1f', '0xa80000000002ca20', '0xa80000000002ca21', '0xa80000000002ca22', '0xa80000000002ca23', '0xa80000000002ca24', '0xa80000000002ca25', '0xa80000000002ca26', '0xa80000000002ca27', '0xa80000000002ca28', '0xa80000000002ca29', '0xa80000000002ca2a', '0xa80000000002ca2b', '0xa80000000002ca2c', '0xa80000000002ca2d', '0xa80000000002ca2e', '0xa80000000002ca2f', '0xa80000000002ca30', '0xa80000000002ca31', '0xa80000000002ca32', '0xa80000000002ca33', '0xa80000000002ca34', '0xa80000000002ca35']
 [D] Location needs grepping (invalid): sysmips (__sys_sysmips) -> None:None
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/mips', '--glob', '*.c', '\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[FATAL] Syscall(index=120, number=4120, name='clone', symbol='__sys_clone', defined at ??:?, takes ? args)
+[FATAL] Syscall(index=2, number=4002, name='fork', symbol='__sys_fork', defined at ??:?, takes ? args, depends on CONFIG_MMU)
+[FATAL] Syscall(index=0, number=4000, name='syscall', symbol='sys32_syscall', defined at /mnt/m2data/linux-worktrees/v5.3/arch/mips/kernel/scall64-o32.S:195, takes ? args)
+[FATAL] Syscall(index=149, number=4149, name='sysmips', symbol='__sys_sysmips', defined at ??:?, takes ? args)
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/mips', '--glob', '*.c', '(\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(|\\basmlinkage\\s*(unsigned\\s+)?\\w+\\s*(sysm|mipsmt_sys)_\\w+\\s*\\()\\s*\\w+')
 [I] Location could not be found through grepping: syscall (orig name sys32_syscall)
 [W] Location found through grepping: clone -> kernel/fork.c:2491
 [W] Location found through grepping: fork -> kernel/fork.c:2462
 [W] Location found through grepping: sysmips -> arch/mips/kernel/syscall.c:204
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
 [D] Signature NOT found in ftrace metadata: syscall
-[W] Potentially bad location for syscall (sys32_syscall): arch/mips/kernel/scall64-o32.S:213 (implemented in asm?)
+[W] Potentially bad location for syscall (sys32_syscall): arch/mips/kernel/scall64-o32.S:195 (implemented in asm?)
 [E] Unable to extract signature for syscall (sys32_syscall)
 Found 376 implemented syscalls
 Found 3 definition locations through grepping

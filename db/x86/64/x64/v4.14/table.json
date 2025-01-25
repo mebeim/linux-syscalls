@@ -299,7 +299,7 @@
 			"grepped_location": false,
 			"index": 15,
 			"kconfig": null,
-			"line": 16,
+			"line": null,
 			"name": "rt_sigreturn",
 			"number": 15,
 			"origname": "rt_sigreturn",
@@ -781,18 +781,17 @@
 			"esoteric": false,
 			"file": "net/socket.c",
 			"good_location": true,
-			"grepped_location": false,
+			"grepped_location": true,
 			"index": 43,
 			"kconfig": "NET",
-			"line": 1524,
+			"line": 1605,
 			"name": "accept",
 			"number": 43,
 			"origname": "accept",
 			"signature": [
 				"int fd",
 				"struct sockaddr *upeer_sockaddr",
-				"int *upeer_addrlen",
-				"int flags"
+				"int *upeer_addrlen"
 			],
 			"symbol": "sys_accept"
 		},
@@ -1522,16 +1521,15 @@
 			"esoteric": false,
 			"file": "fs/open.c",
 			"good_location": true,
-			"grepped_location": false,
+			"grepped_location": true,
 			"index": 85,
 			"kconfig": null,
-			"line": 1072,
+			"line": 1115,
 			"name": "creat",
 			"number": 85,
 			"origname": "creat",
 			"signature": [
-				"const char *filename",
-				"int flags",
+				"const char *pathname",
 				"umode_t mode"
 			],
 			"symbol": "sys_creat"
@@ -4715,15 +4713,14 @@
 			"grepped_location": false,
 			"index": 282,
 			"kconfig": "SIGNALFD",
-			"line": 250,
+			"line": 304,
 			"name": "signalfd",
 			"number": 282,
 			"origname": "signalfd",
 			"signature": [
 				"int ufd",
 				"sigset_t *user_mask",
-				"size_t sizemask",
-				"int flags"
+				"size_t sizemask"
 			],
 			"symbol": "sys_signalfd"
 		},
@@ -5652,5 +5649,5 @@
 			"symbol": "sys_statx"
 		}
 	],
-	"systrack_version": "0.5"
+	"systrack_version": "0.6"
 }

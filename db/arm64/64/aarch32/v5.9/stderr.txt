@@ -467,6 +467,10 @@ Detected kernel version: 5.9.0 (from vmlinux)
 [D] Location needs grepping (bad): pkey_free (__arm64_sys_pkey_free) -> kernel/sys_ni.c:350
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.9'), '0xffff8000100abbb1', '0xffff8000100abbb2', '0xffff8000100abbb3', '0xffff8000100abbb4', '0xffff8000100abbb5', '0xffff8000100abbb6', '0xffff8000100abbb7', '0xffff8000100abbb8', '0xffff8000100abbb9', '0xffff8000100abbba', '0xffff8000100abbbb', '0xffff8000100abbbc', '0xffff8000100abbbd', '0xffff8000100abbbe', '0xffff8000100abbbf', '0xffff8000100abbc0', '0xffff8000100abbc1']
 [D] Location needs grepping (bad): pkey_mprotect (__arm64_sys_pkey_mprotect) -> kernel/sys_ni.c:348
+[FATAL] Syscall(index=271, number=271, name='pciconfig_iobase', symbol='__arm64_sys_pciconfig_iobase', defined at /mnt/m2data/linux-worktrees/v5.9/kernel/sys_ni.c:360, takes ? args)
+[FATAL] Syscall(index=395, number=395, name='pkey_alloc', symbol='__arm64_sys_pkey_alloc', defined at /mnt/m2data/linux-worktrees/v5.9/kernel/sys_ni.c:349, takes ? args)
+[FATAL] Syscall(index=396, number=396, name='pkey_free', symbol='__arm64_sys_pkey_free', defined at /mnt/m2data/linux-worktrees/v5.9/kernel/sys_ni.c:350, takes ? args)
+[FATAL] Syscall(index=394, number=394, name='pkey_mprotect', symbol='__arm64_sys_pkey_mprotect', defined at /mnt/m2data/linux-worktrees/v5.9/kernel/sys_ni.c:348, takes ? args)
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/arm64', '--glob', '*.c', '\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [I] Location could not be found through grepping: pciconfig_iobase (orig name pciconfig_iobase)
 [W] Location found through grepping: pkey_alloc -> mm/mprotect.c:649

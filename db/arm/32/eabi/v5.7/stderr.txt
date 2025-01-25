@@ -926,6 +926,14 @@ Detected kernel version: 5.7.0 (from vmlinux)
 [D] Location needs grepping (bad): sigreturn (sys_sigreturn_wrapper) -> arch/arm/kernel/entry-common.S:385
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm-eabi-v5.7'), '0xc03009ed', '0xc03009ee', '0xc03009ef', '0xc03009f0', '0xc03009f1', '0xc03009f2', '0xc03009f3', '0xc03009f4', '0xc03009f5']
 [D] Location needs grepping (bad): statfs64 (sys_statfs64_wrapper) -> arch/arm/kernel/entry-common.S:397
+[FATAL] Syscall(index=267, number=267, name='fstatfs64', symbol='sys_fstatfs64_wrapper', defined at /mnt/m2data/linux-worktrees/v5.7/arch/arm/kernel/entry-common.S:401, takes ? args)
+[FATAL] Syscall(index=20, number=20, name='getpid', symbol='sys_getpid', defined at /mnt/m2data/linux-worktrees/v5.7/arch/arm/include/asm/thread_info.h:88, takes ? args)
+[FATAL] Syscall(index=224, number=224, name='gettid', symbol='sys_gettid', defined at /mnt/m2data/linux-worktrees/v5.7/arch/arm/include/asm/thread_info.h:88, takes ? args)
+[FATAL] Syscall(index=192, number=192, name='mmap2', symbol='sys_mmap2', defined at /mnt/m2data/linux-worktrees/v5.7/arch/arm/kernel/entry-common.S:411, takes ? args)
+[FATAL] Syscall(index=302, number=302, name='msgrcv', symbol='sys_msgrcv', defined at /mnt/m2data/linux-worktrees/v5.7/ipc/msg.c:1254, takes ? args, depends on CONFIG_SYSVIPC)
+[FATAL] Syscall(index=173, number=173, name='rt_sigreturn', symbol='sys_rt_sigreturn_wrapper', defined at /mnt/m2data/linux-worktrees/v5.7/arch/arm/kernel/entry-common.S:389, takes ? args)
+[FATAL] Syscall(index=119, number=119, name='sigreturn', symbol='sys_sigreturn_wrapper', defined at /mnt/m2data/linux-worktrees/v5.7/arch/arm/kernel/entry-common.S:383, takes ? args)
+[FATAL] Syscall(index=266, number=266, name='statfs64', symbol='sys_statfs64_wrapper', defined at /mnt/m2data/linux-worktrees/v5.7/arch/arm/kernel/entry-common.S:395, takes ? args)
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/arm', '--glob', '*.c', '\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [I] Location could not be found through grepping: mmap2 (orig name mmap2)
 [I] Location could not be found through grepping: rt_sigreturn (orig name rt_sigreturn)
@@ -939,9 +947,9 @@ Detected kernel version: 5.7.0 (from vmlinux)
 [D] Signature NOT found in ftrace metadata: sigreturn
 [D] Signature NOT found in ftrace metadata: rt_sigreturn
 [D] Signature NOT found in ftrace metadata: mmap2
-[W] Potentially bad location for sigreturn (sys_sigreturn_wrapper): arch/arm/kernel/entry-common.S:385 (implemented in asm?)
-[W] Potentially bad location for rt_sigreturn (sys_rt_sigreturn_wrapper): arch/arm/kernel/entry-common.S:391 (implemented in asm?)
-[W] Potentially bad location for mmap2 (sys_mmap2): arch/arm/kernel/entry-common.S:412 (implemented in asm?)
+[W] Potentially bad location for sigreturn (sys_sigreturn_wrapper): arch/arm/kernel/entry-common.S:383 (implemented in asm?)
+[W] Potentially bad location for rt_sigreturn (sys_rt_sigreturn_wrapper): arch/arm/kernel/entry-common.S:389 (implemented in asm?)
+[W] Potentially bad location for mmap2 (sys_mmap2): arch/arm/kernel/entry-common.S:411 (implemented in asm?)
 [E] Unable to extract signature for sigreturn (sys_sigreturn_wrapper)
 [E] Unable to extract signature for rt_sigreturn (sys_rt_sigreturn_wrapper)
 [E] Unable to extract signature for mmap2 (sys_mmap2)

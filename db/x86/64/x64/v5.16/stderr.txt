@@ -20,6 +20,7 @@ Detected kernel version: 5.16.0 (from vmlinux)
 [D] Preferring __do_sys_getuid over __ia32_sys_getuid
 [D] Preferring __do_sys_inotify_init over __ia32_sys_inotify_init
 [D] Preferring __do_sys_munlockall over __ia32_sys_munlockall
+[D] Preferring __do_sys_ni_syscall over __ia32_sys_ni_syscall
 [D] Preferring __do_sys_pause over __ia32_sys_pause
 [D] Preferring __do_sys_restart_syscall over __ia32_sys_restart_syscall
 [D] Preferring __do_sys_rt_sigreturn over __ia32_sys_rt_sigreturn
@@ -40,7 +41,6 @@ Detected kernel version: 5.16.0 (from vmlinux)
 [D] Preferring __x64_sys_inotify_init over __do_sys_inotify_init
 [D] Preferring __x64_sys_munlockall over __do_sys_munlockall
 [D] Preferring __x64_sys_ni_syscall over __do_sys_ni_syscall
-[D] Preferring __x64_sys_ni_syscall over __ia32_sys_ni_syscall
 [D] Preferring __x64_sys_pause over __do_sys_pause
 [D] Preferring __x64_sys_restart_syscall over __do_sys_restart_syscall
 [D] Preferring __x64_sys_rt_sigreturn over __do_sys_rt_sigreturn
@@ -512,10 +512,17 @@ Detected kernel version: 5.16.0 (from vmlinux)
 [D] Location needs adjustment (bad): getegid (__x64_sys_getegid) -> arch/x86/include/asm/current.h:13
 [D] Location needs adjustment (bad): gettid (__x64_sys_gettid) -> include/linux/sched.h:1532
 [D] Location needs adjustment (bad): restart_syscall (__x64_sys_restart_syscall) -> arch/x86/include/asm/current.h:13
+[D] Location needs adjustment (bad): fadvise64 (__x64_sys_fadvise64) -> mm/fadvise.c:206
 [D] Location needs adjustment (bad): preadv2 (__x64_sys_preadv2) -> fs/read_write.c:979
 [D] Location needs adjustment (bad): pwritev2 (__x64_sys_pwritev2) -> fs/read_write.c:979
-[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v5.16'), '0xffffffff8107ddff', '0xffffffff8107ddbf', '0xffffffff8107dddf', '0xffffffff8107deb7', '0xffffffff8107de94', '0xffffffff8107dd9f', '0xffffffff81076459', '0xffffffff8124556c', '0xffffffff8124600c', '0xffffffff81075a25', '0xffffffff8107de1e']
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v5.16'), '0xffffffff811cce67', '0xffffffff8107ddff', '0xffffffff8107ddbf', '0xffffffff8107dddf', '0xffffffff8107deb7', '0xffffffff8107de94', '0xffffffff8107dd9f', '0xffffffff81076459', '0xffffffff8124556c', '0xffffffff8124600c', '0xffffffff81075a25', '0xffffffff8107de1e']
+[D] Location needs full-range adjustment (bad): fadvise64 (__x64_sys_fadvise64+0x17) -> mm/fadvise.c:206
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v5.16'), '0xffffffff811cce51', '0xffffffff811cce52', '0xffffffff811cce53', '0xffffffff811cce54', '0xffffffff811cce55', '0xffffffff811cce56', '0xffffffff811cce57', '0xffffffff811cce58', '0xffffffff811cce59', '0xffffffff811cce5a', '0xffffffff811cce5b', '0xffffffff811cce5c', '0xffffffff811cce5d', '0xffffffff811cce5e', '0xffffffff811cce5f', '0xffffffff811cce60', '0xffffffff811cce61', '0xffffffff811cce62', '0xffffffff811cce63', '0xffffffff811cce64', '0xffffffff811cce65']
+[D] Location needs grepping (bad): fadvise64 (__x64_sys_fadvise64) -> mm/fadvise.c:206
+[FATAL] Syscall(index=221, number=221, name='fadvise64', symbol='__x64_sys_fadvise64', defined at /mnt/m2data/linux-worktrees/v5.16/mm/fadvise.c:206, takes ? args, depends on CONFIG_ADVISE_SYSCALLS)
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
+[W] Location found through grepping: fadvise64 -> mm/fadvise.c:213
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
 Found 344 implemented syscalls
+Found 1 definition location through grepping
 

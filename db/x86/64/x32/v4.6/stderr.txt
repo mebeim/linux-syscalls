@@ -938,11 +938,12 @@ Detected kernel version: 4.6.0 (from vmlinux)
 [D] Location needs adjustment (bad): personality (sys_personality) -> arch/x86/include/asm/current.h:12
 [D] Location needs adjustment (bad): arch_prctl (sys_arch_prctl) -> arch/x86/kernel/process_64.c:603
 [D] Location needs adjustment (invalid): iopl (ptregs_sys_iopl) -> /mnt/m2data/linux/arch/x86/include/generated/asm/syscalls_64.h:172
+[D] Location needs adjustment (bad): signalfd (sys_signalfd) -> fs/signalfd.c:255
 [D] Location needs adjustment (bad): pipe2 (sys_pipe2) -> fs/pipe.c:766
 [D] Location needs adjustment (invalid): execve (ptregs_compat_sys_execve) -> /mnt/m2data/linux/arch/x86/include/generated/asm/syscalls_64.h:340
 [D] Location needs adjustment (bad): rt_sigpending (compat_sys_rt_sigpending) -> kernel/signal.c:2604
 [D] Location needs adjustment (invalid): execveat (ptregs_compat_sys_execveat) -> /mnt/m2data/linux/arch/x86/include/generated/asm/syscalls_64.h:415
-[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.6'), '0xffffffff81019ecb', '0xffffffff817e5568', '0xffffffff817e55cb', '0xffffffff817e55db', '0xffffffff817e5578', '0xffffffff8106b38f', '0xffffffff8106b34f', '0xffffffff8106b36f', '0xffffffff81079c10', '0xffffffff8106b32f', '0xffffffff817e55a8', '0xffffffff8105784a', '0xffffffff811900c8', '0xffffffff81067d4a', '0xffffffff812c6f93', '0xffffffff81184537', '0xffffffff8106c5ec', '0xffffffff817e5588']
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.6'), '0xffffffff81019ecb', '0xffffffff817e5568', '0xffffffff817e55cb', '0xffffffff817e55db', '0xffffffff817e5578', '0xffffffff8106b38f', '0xffffffff8106b34f', '0xffffffff8106b36f', '0xffffffff81079c10', '0xffffffff8106b32f', '0xffffffff817e55a8', '0xffffffff8105784a', '0xffffffff811900c8', '0xffffffff81067d4a', '0xffffffff812c6f93', '0xffffffff811cb5af', '0xffffffff81184537', '0xffffffff8106c5ec', '0xffffffff817e5588']
 [D] Location needs full-range adjustment (bad): arch_prctl (sys_arch_prctl+0x1b) -> arch/x86/kernel/process_64.c:603
 [D] Location needs full-range adjustment (invalid): clone (ptregs_sys_clone+0x8) -> /mnt/m2data/linux/arch/x86/include/generated/asm/syscalls_64.h:57
 [D] Location needs full-range adjustment (invalid): execve (ptregs_compat_sys_execve+0xb) -> /mnt/m2data/linux/arch/x86/include/generated/asm/syscalls_64.h:340
@@ -964,7 +965,14 @@ Detected kernel version: 4.6.0 (from vmlinux)
 [D] Location needs grepping (invalid): iopl (ptregs_sys_iopl) -> /mnt/m2data/linux/arch/x86/include/generated/asm/syscalls_64.h:172
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.6'), '0xffffffff817e5581', '0xffffffff817e5582', '0xffffffff817e5583', '0xffffffff817e5584', '0xffffffff817e5585', '0xffffffff817e5586']
 [D] Location needs grepping (invalid): vfork (ptregs_sys_vfork) -> /mnt/m2data/linux/arch/x86/include/generated/asm/syscalls_64.h:59
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[FATAL] Syscall(index=158, number=1073741982, name='arch_prctl', symbol='sys_arch_prctl', defined at /mnt/m2data/linux-worktrees/v4.6/arch/x86/kernel/process_64.c:603, takes ? args)
+[FATAL] Syscall(index=56, number=1073741880, name='clone', symbol='ptregs_sys_clone', defined at /mnt/m2data/linux-worktrees/v4.6/arch/x86/include/generated/asm/syscalls_64.h:?, takes ? args)
+[FATAL] Syscall(index=520, number=1073742344, name='execve', symbol='ptregs_compat_sys_execve', defined at /mnt/m2data/linux-worktrees/v4.6/arch/x86/include/generated/asm/syscalls_64.h:?, takes ? args)
+[FATAL] Syscall(index=545, number=1073742369, name='execveat', symbol='ptregs_compat_sys_execveat', defined at /mnt/m2data/linux-worktrees/v4.6/arch/x86/include/generated/asm/syscalls_64.h:?, takes ? args)
+[FATAL] Syscall(index=57, number=1073741881, name='fork', symbol='ptregs_sys_fork', defined at /mnt/m2data/linux-worktrees/v4.6/arch/x86/include/generated/asm/syscalls_64.h:?, takes ? args, depends on CONFIG_MMU)
+[FATAL] Syscall(index=172, number=1073741996, name='iopl', symbol='ptregs_sys_iopl', defined at /mnt/m2data/linux-worktrees/v4.6/arch/x86/include/generated/asm/syscalls_64.h:?, takes ? args)
+[FATAL] Syscall(index=58, number=1073741882, name='vfork', symbol='ptregs_sys_vfork', defined at /mnt/m2data/linux-worktrees/v4.6/arch/x86/include/generated/asm/syscalls_64.h:?, takes ? args)
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '(\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(|\\basmlinkage\\s*(unsigned\\s+)?\\w+\\s*sys32_x32_\\w+\\s*\\()\\s*\\w+')
 [I] Location could not be found through grepping: arch_prctl (orig name arch_prctl)
 [W] Location found through grepping: clone -> kernel/fork.c:1818
 [W] Location found through grepping: execve -> fs/exec.c:1828

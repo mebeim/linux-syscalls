@@ -881,7 +881,11 @@ Detected kernel version: 5.18.0 (from vmlinux)
 [D] Location found through full-range adjustment: munlockall (sys_munlockall+0x14) -> mm/mlock.c:725
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-mips64-v5.18'), '0xa800000000027eb9', '0xa800000000027eba', '0xa800000000027ebb', '0xa800000000027ebc', '0xa800000000027ebd', '0xa800000000027ebe', '0xa800000000027ebf', '0xa800000000027ec0', '0xa800000000027ec1', '0xa800000000027ec2', '0xa800000000027ec3', '0xa800000000027ec4', '0xa800000000027ec5', '0xa800000000027ec6', '0xa800000000027ec7', '0xa800000000027ec8', '0xa800000000027ec9', '0xa800000000027eca', '0xa800000000027ecb', '0xa800000000027ecc', '0xa800000000027ecd', '0xa800000000027ece', '0xa800000000027ecf', '0xa800000000027ed0', '0xa800000000027ed1', '0xa800000000027ed2', '0xa800000000027ed3', '0xa800000000027ed4', '0xa800000000027ed5', '0xa800000000027ed6', '0xa800000000027ed7', '0xa800000000027ed8', '0xa800000000027ed9', '0xa800000000027eda', '0xa800000000027edb', '0xa800000000027edc', '0xa800000000027edd']
 [D] Location needs grepping (invalid): sysmips (__sys_sysmips) -> None:None
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/mips', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
+[FATAL] Syscall(index=55, number=5055, name='clone', symbol='__sys_clone', defined at ??:?, takes ? args)
+[FATAL] Syscall(index=435, number=5435, name='clone3', symbol='__sys_clone3', defined at ??:?, takes ? args)
+[FATAL] Syscall(index=56, number=5056, name='fork', symbol='__sys_fork', defined at ??:?, takes ? args, depends on CONFIG_MMU)
+[FATAL] Syscall(index=199, number=5199, name='sysmips', symbol='__sys_sysmips', defined at ??:?, takes ? args)
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/mips', '--glob', '*.c', '(\\bSYSCALL_DEFINE\\d\\s*\\(|\\basmlinkage\\s*(unsigned\\s+)?\\w+\\s*(sysm|mipsmt_sys)_\\w+\\s*\\()\\s*\\w+')
 [W] Location found through grepping: clone -> kernel/fork.c:2724
 [W] Location found through grepping: clone3 -> kernel/fork.c:2898
 [W] Location found through grepping: fork -> kernel/fork.c:2695

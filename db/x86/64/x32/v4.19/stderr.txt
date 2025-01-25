@@ -649,17 +649,24 @@ Detected kernel version: 4.19.0 (from vmlinux)
 [D] Location needs adjustment (bad): getpgrp (__x64_sys_getpgrp) -> arch/x86/include/asm/current.h:13
 [D] Location needs adjustment (bad): gettid (__x64_sys_gettid) -> include/linux/sched.h:1240
 [D] Location needs adjustment (bad): restart_syscall (__x64_sys_restart_syscall) -> arch/x86/include/asm/current.h:13
+[D] Location needs adjustment (bad): fadvise64 (__x64_sys_fadvise64) -> mm/fadvise.c:207
 [D] Location needs adjustment (bad): sendmsg (__x32_compat_sys_sendmsg) -> net/compat.c:750
 [D] Location needs adjustment (bad): recvmsg (__x32_compat_sys_recvmsg) -> net/compat.c:778
 [D] Location needs adjustment (bad): sendmmsg (__x32_compat_sys_sendmmsg) -> net/compat.c:764
-[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.19'), '0xffffffff81071e1f', '0xffffffff81071ddf', '0xffffffff81071dff', '0xffffffff81073dce', '0xffffffff81071ed7', '0xffffffff81071efe', '0xffffffff81071eb4', '0xffffffff81071dbf', '0xffffffff817a7be7', '0xffffffff8106b125', '0xffffffff817a7baf', '0xffffffff817a7b67', '0xffffffff81071e3e']
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.19'), '0xffffffff811714b7', '0xffffffff81071e1f', '0xffffffff81071ddf', '0xffffffff81071dff', '0xffffffff81073dce', '0xffffffff81071ed7', '0xffffffff81071efe', '0xffffffff81071eb4', '0xffffffff81071dbf', '0xffffffff817a7be7', '0xffffffff8106b125', '0xffffffff817a7baf', '0xffffffff817a7b67', '0xffffffff81071e3e']
+[D] Location needs full-range adjustment (bad): fadvise64 (__x64_sys_fadvise64+0x17) -> mm/fadvise.c:207
 [D] Location needs full-range adjustment (bad): recvmsg (__x32_compat_sys_recvmsg+0x17) -> net/compat.c:778
 [D] Location needs full-range adjustment (bad): sendmsg (__x32_compat_sys_sendmsg+0x17) -> net/compat.c:750
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.19'), '0xffffffff811714a1', '0xffffffff811714a2', '0xffffffff811714a3', '0xffffffff811714a4', '0xffffffff811714a5', '0xffffffff811714a6', '0xffffffff811714a7', '0xffffffff811714a8', '0xffffffff811714a9', '0xffffffff811714aa', '0xffffffff811714ab', '0xffffffff811714ac', '0xffffffff811714ad', '0xffffffff811714ae', '0xffffffff811714af', '0xffffffff811714b0', '0xffffffff811714b1', '0xffffffff811714b2', '0xffffffff811714b3', '0xffffffff811714b4', '0xffffffff811714b5']
+[D] Location needs grepping (bad): fadvise64 (__x64_sys_fadvise64) -> mm/fadvise.c:207
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.19'), '0xffffffff817a7bd1', '0xffffffff817a7bd2', '0xffffffff817a7bd3', '0xffffffff817a7bd4', '0xffffffff817a7bd5', '0xffffffff817a7bd6', '0xffffffff817a7bd7', '0xffffffff817a7bd8', '0xffffffff817a7bd9', '0xffffffff817a7bda', '0xffffffff817a7bdb', '0xffffffff817a7bdc', '0xffffffff817a7bdd', '0xffffffff817a7bde', '0xffffffff817a7bdf', '0xffffffff817a7be0', '0xffffffff817a7be1', '0xffffffff817a7be2', '0xffffffff817a7be3', '0xffffffff817a7be4', '0xffffffff817a7be5']
 [D] Location found through full-range adjustment: recvmsg (__x32_compat_sys_recvmsg+0x9) -> net/compat.c:786
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.19'), '0xffffffff817a7b51', '0xffffffff817a7b52', '0xffffffff817a7b53', '0xffffffff817a7b54', '0xffffffff817a7b55', '0xffffffff817a7b56', '0xffffffff817a7b57', '0xffffffff817a7b58', '0xffffffff817a7b59', '0xffffffff817a7b5a', '0xffffffff817a7b5b', '0xffffffff817a7b5c', '0xffffffff817a7b5d', '0xffffffff817a7b5e', '0xffffffff817a7b5f', '0xffffffff817a7b60', '0xffffffff817a7b61', '0xffffffff817a7b62', '0xffffffff817a7b63', '0xffffffff817a7b64', '0xffffffff817a7b65']
 [D] Location found through full-range adjustment: sendmsg (__x32_compat_sys_sendmsg+0x9) -> net/compat.c:758
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[FATAL] Syscall(index=221, number=1073742045, name='fadvise64', symbol='__x64_sys_fadvise64', defined at /mnt/m2data/linux-worktrees/v4.19/mm/fadvise.c:207, takes ? args, depends on CONFIG_ADVISE_SYSCALLS)
+[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '(\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(|\\basmlinkage\\s*(unsigned\\s+)?\\w+\\s*sys32_x32_\\w+\\s*\\()\\s*\\w+')
+[W] Location found through grepping: fadvise64 -> mm/fadvise.c:214
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
 Found 319 implemented syscalls
+Found 1 definition location through grepping
 

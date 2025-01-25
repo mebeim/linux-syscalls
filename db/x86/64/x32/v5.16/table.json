@@ -3241,17 +3241,17 @@
 			"esoteric": false,
 			"file": "mm/fadvise.c",
 			"good_location": true,
-			"grepped_location": false,
+			"grepped_location": true,
 			"index": 221,
 			"kconfig": "ADVISE_SYSCALLS",
-			"line": 206,
+			"line": 213,
 			"name": "fadvise64",
 			"number": 1073742045,
 			"origname": "fadvise64",
 			"signature": [
 				"int fd",
 				"loff_t offset",
-				"loff_t len",
+				"size_t len",
 				"int advice"
 			],
 			"symbol": "__x64_sys_fadvise64"
@@ -5864,19 +5864,18 @@
 			"esoteric": false,
 			"file": "fs/read_write.c",
 			"good_location": true,
-			"grepped_location": false,
+			"grepped_location": true,
 			"index": 534,
 			"kconfig": null,
-			"line": 1098,
+			"line": 1090,
 			"name": "preadv64",
 			"number": 1073742358,
 			"origname": "preadv64",
 			"signature": [
-				"compat_ulong_t fd",
+				"unsigned long fd",
 				"const struct iovec *vec",
-				"compat_ulong_t vlen",
-				"u32 pos_low",
-				"u32 pos_high"
+				"unsigned long vlen",
+				"loff_t pos"
 			],
 			"symbol": "__x64_compat_sys_preadv64"
 		},
@@ -5884,19 +5883,18 @@
 			"esoteric": false,
 			"file": "fs/read_write.c",
 			"good_location": true,
-			"grepped_location": false,
+			"grepped_location": true,
 			"index": 535,
 			"kconfig": null,
-			"line": 1139,
+			"line": 1131,
 			"name": "pwritev64",
 			"number": 1073742359,
 			"origname": "pwritev64",
 			"signature": [
-				"compat_ulong_t fd",
+				"unsigned long fd",
 				"const struct iovec *vec",
-				"compat_ulong_t vlen",
-				"u32 pos_low",
-				"u32 pos_high"
+				"unsigned long vlen",
+				"loff_t pos"
 			],
 			"symbol": "__x64_compat_sys_pwritev64"
 		},
@@ -6136,5 +6134,5 @@
 			"symbol": "__x64_compat_sys_pwritev64v2"
 		}
 	],
-	"systrack_version": "0.5"
+	"systrack_version": "0.6"
 }

@@ -2853,39 +2853,35 @@
 		},
 		{
 			"esoteric": false,
-			"file": "arch/powerpc/kernel/sys_ppc32.c",
+			"file": "fs/open.c",
 			"good_location": true,
-			"grepped_location": false,
+			"grepped_location": true,
 			"index": 193,
 			"kconfig": null,
-			"line": 88,
+			"line": 219,
 			"name": "truncate64",
 			"number": 193,
 			"origname": "truncate64",
 			"signature": [
-				"const char * path",
-				"u32 reg4",
-				"unsigned long len1",
-				"unsigned long len2"
+				"const char *path",
+				"loff_t length"
 			],
 			"symbol": ".compat_sys_truncate64"
 		},
 		{
 			"esoteric": false,
-			"file": "arch/powerpc/kernel/sys_ppc32.c",
+			"file": "fs/open.c",
 			"good_location": true,
-			"grepped_location": false,
+			"grepped_location": true,
 			"index": 194,
 			"kconfig": null,
-			"line": 101,
+			"line": 224,
 			"name": "ftruncate64",
 			"number": 194,
 			"origname": "ftruncate64",
 			"signature": [
 				"unsigned int fd",
-				"u32 reg4",
-				"unsigned long len1",
-				"unsigned long len2"
+				"loff_t length"
 			],
 			"symbol": ".compat_sys_ftruncate64"
 		},
@@ -4843,43 +4839,39 @@
 		},
 		{
 			"esoteric": false,
-			"file": "arch/powerpc/kernel/sys_ppc32.c",
+			"file": "fs/sync.c",
 			"good_location": true,
-			"grepped_location": false,
+			"grepped_location": true,
 			"index": 308,
 			"kconfig": null,
-			"line": 114,
+			"line": 390,
 			"name": "sync_file_range2",
 			"number": 308,
 			"origname": "sync_file_range2",
 			"signature": [
 				"int fd",
 				"unsigned int flags",
-				"unsigned offset1",
-				"unsigned offset2",
-				"unsigned nbytes1",
-				"unsigned nbytes2"
+				"loff_t offset",
+				"loff_t nbytes"
 			],
 			"symbol": ".compat_sys_sync_file_range2"
 		},
 		{
 			"esoteric": false,
-			"file": "arch/powerpc/kernel/sys_ppc32.c",
+			"file": "fs/open.c",
 			"good_location": true,
-			"grepped_location": false,
+			"grepped_location": true,
 			"index": 309,
 			"kconfig": null,
-			"line": 94,
+			"line": 340,
 			"name": "fallocate",
 			"number": 309,
 			"origname": "fallocate",
 			"signature": [
 				"int fd",
 				"int mode",
-				"u32 offset1",
-				"u32 offset2",
-				"u32 len1",
-				"u32 len2"
+				"loff_t offset",
+				"loff_t len"
 			],
 			"symbol": ".compat_sys_fallocate"
 		},
@@ -7101,5 +7093,5 @@
 			"symbol": ".sys_landlock_restrict_self"
 		}
 	],
-	"systrack_version": "0.5"
+	"systrack_version": "0.6"
 }

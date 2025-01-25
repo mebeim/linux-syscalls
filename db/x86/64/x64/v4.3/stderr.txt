@@ -936,9 +936,10 @@ Detected kernel version: 4.3.0 (from vmlinux)
 [D] Location needs adjustment (bad): rt_sigpending (sys_rt_sigpending) -> kernel/signal.c:2653
 [D] Location needs adjustment (bad): personality (sys_personality) -> arch/x86/include/asm/current.h:12
 [D] Location needs adjustment (bad): arch_prctl (sys_arch_prctl) -> arch/x86/kernel/process_64.c:597
+[D] Location needs adjustment (bad): signalfd (sys_signalfd) -> fs/signalfd.c:255
 [D] Location needs adjustment (bad): pipe2 (sys_pipe2) -> fs/pipe.c:727
 [D] Location needs adjustment (bad): execveat (stub_execveat) -> arch/x86/entry/entry_64.S:390
-[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.3'), '0xffffffff81003e2b', '0xffffffff8179cb72', '0xffffffff8179cc07', '0xffffffff8179cc0e', '0xffffffff8179cba2', '0xffffffff810651bf', '0xffffffff8106517f', '0xffffffff8106519f', '0xffffffff81073490', '0xffffffff8106515f', '0xffffffff81052aca', '0xffffffff81178d38', '0xffffffff81061b08', '0xffffffff8179cc6d', '0xffffffff812a6b03', '0xffffffff8116e577', '0xffffffff810663ec', '0xffffffff8179cbd2']
+[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.3'), '0xffffffff81003e2b', '0xffffffff8179cb72', '0xffffffff8179cc07', '0xffffffff8179cc0e', '0xffffffff8179cba2', '0xffffffff810651bf', '0xffffffff8106517f', '0xffffffff8106519f', '0xffffffff81073490', '0xffffffff8106515f', '0xffffffff81052aca', '0xffffffff81178d38', '0xffffffff81061b08', '0xffffffff8179cc6d', '0xffffffff812a6b03', '0xffffffff811b355f', '0xffffffff8116e577', '0xffffffff810663ec', '0xffffffff8179cbd2']
 [D] Location needs full-range adjustment (bad): arch_prctl (sys_arch_prctl+0x1b) -> arch/x86/kernel/process_64.c:597
 [D] Location needs full-range adjustment (bad): clone (stub_clone+0x22) -> arch/x86/entry/entry_64.S:366
 [D] Location needs full-range adjustment (bad): execve (stub_execve+0x27) -> arch/x86/entry/entry_64.S:382
@@ -960,6 +961,13 @@ Detected kernel version: 4.3.0 (from vmlinux)
 [D] Location needs grepping (bad): rt_sigreturn (stub_rt_sigreturn) -> arch/x86/entry/entry_64.S:429
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.3'), '0xffffffff8179cbb1', '0xffffffff8179cbb2', '0xffffffff8179cbb3', '0xffffffff8179cbb4', '0xffffffff8179cbb5', '0xffffffff8179cbb6', '0xffffffff8179cbb7', '0xffffffff8179cbb8', '0xffffffff8179cbb9', '0xffffffff8179cbba', '0xffffffff8179cbbb', '0xffffffff8179cbbc', '0xffffffff8179cbbd', '0xffffffff8179cbbe', '0xffffffff8179cbbf', '0xffffffff8179cbc0', '0xffffffff8179cbc1', '0xffffffff8179cbc2', '0xffffffff8179cbc3', '0xffffffff8179cbc4', '0xffffffff8179cbc5', '0xffffffff8179cbc6', '0xffffffff8179cbc7', '0xffffffff8179cbc8', '0xffffffff8179cbc9', '0xffffffff8179cbca', '0xffffffff8179cbcb', '0xffffffff8179cbcc', '0xffffffff8179cbcd', '0xffffffff8179cbce', '0xffffffff8179cbcf', '0xffffffff8179cbd0']
 [D] Location needs grepping (bad): vfork (stub_vfork) -> arch/x86/entry/entry_64.S:368
+[FATAL] Syscall(index=158, number=158, name='arch_prctl', symbol='sys_arch_prctl', defined at /mnt/m2data/linux-worktrees/v4.3/arch/x86/kernel/process_64.c:597, takes ? args)
+[FATAL] Syscall(index=56, number=56, name='clone', symbol='stub_clone', defined at /mnt/m2data/linux-worktrees/v4.3/arch/x86/entry/entry_64.S:366, takes ? args)
+[FATAL] Syscall(index=59, number=59, name='execve', symbol='stub_execve', defined at /mnt/m2data/linux-worktrees/v4.3/arch/x86/entry/entry_64.S:371, takes ? args)
+[FATAL] Syscall(index=322, number=322, name='execveat', symbol='stub_execveat', defined at /mnt/m2data/linux-worktrees/v4.3/arch/x86/entry/entry_64.S:390, takes ? args)
+[FATAL] Syscall(index=57, number=57, name='fork', symbol='stub_fork', defined at /mnt/m2data/linux-worktrees/v4.3/arch/x86/entry/entry_64.S:367, takes ? args, depends on CONFIG_MMU)
+[FATAL] Syscall(index=15, number=15, name='rt_sigreturn', symbol='stub_rt_sigreturn', defined at /mnt/m2data/linux-worktrees/v4.3/arch/x86/entry/entry_64.S:423, takes ? args)
+[FATAL] Syscall(index=58, number=58, name='vfork', symbol='stub_vfork', defined at /mnt/m2data/linux-worktrees/v4.3/arch/x86/entry/entry_64.S:368, takes ? args)
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
 [I] Location could not be found through grepping: arch_prctl (orig name arch_prctl)
 [I] Location could not be found through grepping: rt_sigreturn (orig name rt_sigreturn)
@@ -971,7 +979,7 @@ Detected kernel version: 4.3.0 (from vmlinux)
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
 [D] Signature NOT found in ftrace metadata: rt_sigreturn
 [D] Signature NOT found in ftrace metadata: arch_prctl
-[W] Potentially bad location for rt_sigreturn (stub_rt_sigreturn): arch/x86/entry/entry_64.S:429 (implemented in asm?)
+[W] Potentially bad location for rt_sigreturn (stub_rt_sigreturn): arch/x86/entry/entry_64.S:423 (implemented in asm?)
 [W] Potentially bad location for arch_prctl (sys_arch_prctl): arch/x86/kernel/process_64.c:597 (normal function w/o asmlinkage?)
 [E] Unable to extract signature for rt_sigreturn (stub_rt_sigreturn)
 [E] Unable to extract signature for arch_prctl (sys_arch_prctl)

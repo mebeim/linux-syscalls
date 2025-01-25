@@ -131,13 +131,12 @@
 			"grepped_location": false,
 			"index": 6,
 			"kconfig": null,
-			"line": 1501,
+			"line": 1551,
 			"name": "close",
 			"number": 6,
 			"origname": "close",
 			"signature": [
-				"const char *pathname",
-				"umode_t mode"
+				"unsigned int fd"
 			],
 			"symbol": "sys_close"
 		},
@@ -148,15 +147,14 @@
 			"grepped_location": false,
 			"index": 7,
 			"kconfig": null,
-			"line": 1818,
+			"line": 1837,
 			"name": "waitpid",
 			"number": 7,
 			"origname": "waitpid",
 			"signature": [
-				"pid_t upid",
+				"pid_t pid",
 				"int *stat_addr",
-				"int options",
-				"struct rusage *ru"
+				"int options"
 			],
 			"symbol": "sys_waitpid"
 		},
@@ -167,15 +165,13 @@
 			"grepped_location": false,
 			"index": 8,
 			"kconfig": null,
-			"line": 1450,
+			"line": 1501,
 			"name": "creat",
 			"number": 8,
 			"origname": "creat",
 			"signature": [
-				"int dfd",
-				"const char *filename",
-				"struct open_how *how",
-				"size_t usize"
+				"const char *pathname",
+				"umode_t mode"
 			],
 			"symbol": "sys_creat"
 		},
@@ -186,16 +182,13 @@
 			"grepped_location": false,
 			"index": 9,
 			"kconfig": null,
-			"line": 4787,
+			"line": 4794,
 			"name": "link",
 			"number": 9,
 			"origname": "link",
 			"signature": [
-				"int olddfd",
 				"const char *oldname",
-				"int newdfd",
-				"const char *newname",
-				"int flags"
+				"const char *newname"
 			],
 			"symbol": "sys_link"
 		},
@@ -206,14 +199,12 @@
 			"grepped_location": false,
 			"index": 10,
 			"kconfig": null,
-			"line": 4522,
+			"line": 4532,
 			"name": "unlink",
 			"number": 10,
 			"origname": "unlink",
 			"signature": [
-				"int dfd",
-				"const char *pathname",
-				"int flag"
+				"const char *pathname"
 			],
 			"symbol": "sys_unlink"
 		},
@@ -242,13 +233,12 @@
 			"grepped_location": false,
 			"index": 12,
 			"kconfig": null,
-			"line": 551,
+			"line": 556,
 			"name": "chdir",
 			"number": 12,
 			"origname": "chdir",
 			"signature": [
-				"const char *filename",
-				"int mode"
+				"const char *filename"
 			],
 			"symbol": "sys_chdir"
 		},
@@ -275,15 +265,14 @@
 			"grepped_location": false,
 			"index": 14,
 			"kconfig": null,
-			"line": 4163,
+			"line": 4169,
 			"name": "mknod",
 			"number": 14,
 			"origname": "mknod",
 			"signature": [
-				"int dfd",
 				"const char *filename",
 				"umode_t mode",
-				"unsigned int dev"
+				"unsigned dev"
 			],
 			"symbol": "sys_mknod"
 		},
@@ -294,12 +283,11 @@
 			"grepped_location": false,
 			"index": 15,
 			"kconfig": null,
-			"line": 718,
+			"line": 724,
 			"name": "chmod",
 			"number": 15,
 			"origname": "chmod",
 			"signature": [
-				"int dfd",
 				"const char *filename",
 				"umode_t mode"
 			],
@@ -312,7 +300,7 @@
 			"grepped_location": false,
 			"index": 16,
 			"kconfig": null,
-			"line": 843,
+			"line": 848,
 			"name": "lchown",
 			"number": 16,
 			"origname": "lchown",
@@ -330,15 +318,13 @@
 			"grepped_location": false,
 			"index": 18,
 			"kconfig": null,
-			"line": 655,
+			"line": 390,
 			"name": "stat",
 			"number": 18,
 			"origname": "stat",
 			"signature": [
-				"int dfd",
 				"const char *filename",
-				"struct stat64 *statbuf",
-				"int flag"
+				"struct __old_kernel_stat *statbuf"
 			],
 			"symbol": "sys_stat"
 		},
@@ -367,13 +353,11 @@
 			"grepped_location": false,
 			"index": 20,
 			"kconfig": null,
-			"line": 952,
+			"line": 967,
 			"name": "getpid",
 			"number": 20,
 			"origname": "getpid",
-			"signature": [
-				"gid_t gid"
-			],
+			"signature": [],
 			"symbol": "sys_getpid"
 		},
 		{
@@ -403,13 +387,12 @@
 			"grepped_location": false,
 			"index": 22,
 			"kconfig": null,
-			"line": 2039,
+			"line": 2049,
 			"name": "oldumount",
 			"number": 22,
 			"origname": "oldumount",
 			"signature": [
-				"char *name",
-				"int flags"
+				"char *name"
 			],
 			"symbol": "sys_oldumount"
 		},
@@ -436,7 +419,7 @@
 			"grepped_location": false,
 			"index": 24,
 			"kconfig": null,
-			"line": 984,
+			"line": 995,
 			"name": "getuid",
 			"number": 24,
 			"origname": "getuid",
@@ -450,12 +433,12 @@
 			"grepped_location": false,
 			"index": 25,
 			"kconfig": null,
-			"line": 105,
+			"line": 119,
 			"name": "stime",
 			"number": 25,
 			"origname": "stime32",
 			"signature": [
-				"old_time32_t *tloc"
+				"old_time32_t *tptr"
 			],
 			"symbol": "sys_stime32"
 		},
@@ -501,12 +484,12 @@
 			"grepped_location": false,
 			"index": 28,
 			"kconfig": null,
-			"line": 403,
+			"line": 416,
 			"name": "fstat",
 			"number": 28,
 			"origname": "fstat",
 			"signature": [
-				"const char *filename",
+				"unsigned int fd",
 				"struct __old_kernel_stat *statbuf"
 			],
 			"symbol": "sys_fstat"
@@ -518,14 +501,11 @@
 			"grepped_location": false,
 			"index": 29,
 			"kconfig": null,
-			"line": 4668,
+			"line": 4685,
 			"name": "pause",
 			"number": 29,
 			"origname": "pause",
-			"signature": [
-				"int sig",
-				"__sighandler_t handler"
-			],
+			"signature": [],
 			"symbol": "sys_pause"
 		},
 		{
@@ -535,15 +515,13 @@
 			"grepped_location": false,
 			"index": 30,
 			"kconfig": null,
-			"line": 148,
+			"line": 236,
 			"name": "utime",
 			"number": 30,
 			"origname": "utime32",
 			"signature": [
-				"int dfd",
 				"const char *filename",
-				"struct __kernel_timespec *utimes",
-				"int flags"
+				"struct old_utimbuf32 *t"
 			],
 			"symbol": "sys_utime32"
 		},
@@ -554,15 +532,13 @@
 			"grepped_location": false,
 			"index": 33,
 			"kconfig": null,
-			"line": 545,
+			"line": 551,
 			"name": "access",
 			"number": 33,
 			"origname": "access",
 			"signature": [
-				"int dfd",
 				"const char *filename",
-				"int mode",
-				"int flags"
+				"int mode"
 			],
 			"symbol": "sys_access"
 		},
@@ -603,15 +579,13 @@
 			"grepped_location": false,
 			"index": 37,
 			"kconfig": null,
-			"line": 3720,
+			"line": 3832,
 			"name": "kill",
 			"number": 37,
 			"origname": "kill",
 			"signature": [
-				"const sigset_t *uthese",
-				"siginfo_t *uinfo",
-				"const struct old_timespec32 *uts",
-				"size_t sigsetsize"
+				"pid_t pid",
+				"int sig"
 			],
 			"symbol": "sys_kill"
 		},
@@ -622,14 +596,12 @@
 			"grepped_location": false,
 			"index": 38,
 			"kconfig": null,
-			"line": 5161,
+			"line": 5168,
 			"name": "rename",
 			"number": 38,
 			"origname": "rename",
 			"signature": [
-				"int olddfd",
 				"const char *oldname",
-				"int newdfd",
 				"const char *newname"
 			],
 			"symbol": "sys_rename"
@@ -641,12 +613,11 @@
 			"grepped_location": false,
 			"index": 39,
 			"kconfig": null,
-			"line": 4246,
+			"line": 4251,
 			"name": "mkdir",
 			"number": 39,
 			"origname": "mkdir",
 			"signature": [
-				"int dfd",
 				"const char *pathname",
 				"umode_t mode"
 			],
@@ -691,13 +662,12 @@
 			"grepped_location": false,
 			"index": 42,
 			"kconfig": null,
-			"line": 1038,
+			"line": 1043,
 			"name": "pipe",
 			"number": 42,
 			"origname": "pipe",
 			"signature": [
-				"int *fildes",
-				"int flags"
+				"int *fildes"
 			],
 			"symbol": "sys_pipe"
 		},
@@ -708,11 +678,13 @@
 			"grepped_location": false,
 			"index": 43,
 			"kconfig": null,
-			"line": 1013,
+			"line": 1032,
 			"name": "times",
 			"number": 43,
 			"origname": "times",
-			"signature": [],
+			"signature": [
+				"struct tms *tbuf"
+			],
 			"symbol": "sys_times"
 		},
 		{
@@ -754,7 +726,7 @@
 			"grepped_location": false,
 			"index": 47,
 			"kconfig": null,
-			"line": 1001,
+			"line": 1007,
 			"name": "getgid",
 			"number": 47,
 			"origname": "getgid",
@@ -768,12 +740,13 @@
 			"grepped_location": false,
 			"index": 48,
 			"kconfig": null,
-			"line": 4652,
+			"line": 4668,
 			"name": "signal",
 			"number": 48,
 			"origname": "signal",
 			"signature": [
-				"int newmask"
+				"int sig",
+				"__sighandler_t handler"
 			],
 			"symbol": "sys_signal"
 		},
@@ -784,7 +757,7 @@
 			"grepped_location": false,
 			"index": 49,
 			"kconfig": null,
-			"line": 995,
+			"line": 1001,
 			"name": "geteuid",
 			"number": 49,
 			"origname": "geteuid",
@@ -798,7 +771,7 @@
 			"grepped_location": false,
 			"index": 50,
 			"kconfig": null,
-			"line": 1007,
+			"line": 1013,
 			"name": "getegid",
 			"number": 50,
 			"origname": "getegid",
@@ -881,12 +854,13 @@
 			"grepped_location": false,
 			"index": 57,
 			"kconfig": null,
-			"line": 1032,
+			"line": 1082,
 			"name": "setpgid",
 			"number": 57,
 			"origname": "setpgid",
 			"signature": [
-				"struct tms *tbuf"
+				"pid_t pid",
+				"pid_t pgid"
 			],
 			"symbol": "sys_setpgid"
 		},
@@ -897,12 +871,12 @@
 			"grepped_location": false,
 			"index": 59,
 			"kconfig": null,
-			"line": 1336,
+			"line": 1356,
 			"name": "olduname",
 			"number": 59,
 			"origname": "olduname",
 			"signature": [
-				"struct old_utsname *name"
+				"struct oldold_utsname *name"
 			],
 			"symbol": "sys_olduname"
 		},
@@ -913,13 +887,12 @@
 			"grepped_location": false,
 			"index": 60,
 			"kconfig": null,
-			"line": 1880,
+			"line": 1906,
 			"name": "umask",
 			"number": 60,
 			"origname": "umask",
 			"signature": [
-				"int who",
-				"struct rusage *ru"
+				"int mask"
 			],
 			"symbol": "sys_umask"
 		},
@@ -930,12 +903,12 @@
 			"grepped_location": false,
 			"index": 61,
 			"kconfig": null,
-			"line": 582,
+			"line": 604,
 			"name": "chroot",
 			"number": 61,
 			"origname": "chroot",
 			"signature": [
-				"unsigned int fd"
+				"const char *filename"
 			],
 			"symbol": "sys_chroot"
 		},
@@ -946,14 +919,13 @@
 			"grepped_location": false,
 			"index": 62,
 			"kconfig": null,
-			"line": 222,
+			"line": 248,
 			"name": "ustat",
 			"number": 62,
 			"origname": "ustat",
 			"signature": [
-				"unsigned int fd",
-				"size_t sz",
-				"struct statfs64 *buf"
+				"unsigned dev",
+				"struct ustat *ubuf"
 			],
 			"symbol": "sys_ustat"
 		},
@@ -964,14 +936,13 @@
 			"grepped_location": false,
 			"index": 63,
 			"kconfig": null,
-			"line": 1382,
+			"line": 1387,
 			"name": "dup2",
 			"number": 63,
 			"origname": "dup2",
 			"signature": [
 				"unsigned int oldfd",
-				"unsigned int newfd",
-				"int flags"
+				"unsigned int newfd"
 			],
 			"symbol": "sys_dup2"
 		},
@@ -1024,15 +995,14 @@
 			"grepped_location": false,
 			"index": 67,
 			"kconfig": null,
-			"line": 4492,
+			"line": 4564,
 			"name": "sigaction",
 			"number": 67,
 			"origname": "sigaction",
 			"signature": [
 				"int sig",
-				"const struct sigaction *act",
-				"struct sigaction *oact",
-				"size_t sigsetsize"
+				"const struct old_sigaction *act",
+				"struct old_sigaction *oact"
 			],
 			"symbol": "sys_sigaction"
 		},
@@ -1043,15 +1013,11 @@
 			"grepped_location": false,
 			"index": 68,
 			"kconfig": "SGETMASK_SYSCALL",
-			"line": 4564,
+			"line": 4646,
 			"name": "sgetmask",
 			"number": 68,
 			"origname": "sgetmask",
-			"signature": [
-				"int sig",
-				"const struct old_sigaction *act",
-				"struct old_sigaction *oact"
-			],
+			"signature": [],
 			"symbol": "sys_sgetmask"
 		},
 		{
@@ -1061,11 +1027,13 @@
 			"grepped_location": false,
 			"index": 69,
 			"kconfig": "SGETMASK_SYSCALL",
-			"line": 4646,
+			"line": 4652,
 			"name": "ssetmask",
 			"number": 69,
 			"origname": "ssetmask",
-			"signature": [],
+			"signature": [
+				"int newmask"
+			],
 			"symbol": "sys_ssetmask"
 		},
 		{
@@ -1109,13 +1077,12 @@
 			"grepped_location": false,
 			"index": 72,
 			"kconfig": null,
-			"line": 4715,
+			"line": 4744,
 			"name": "sigsuspend",
 			"number": 72,
 			"origname": "sigsuspend",
 			"signature": [
-				"sigset_t *unewset",
-				"size_t sigsetsize"
+				"old_sigset_t mask"
 			],
 			"symbol": "sys_sigsuspend"
 		},
@@ -1142,12 +1109,13 @@
 			"grepped_location": false,
 			"index": 74,
 			"kconfig": null,
-			"line": 1356,
+			"line": 1383,
 			"name": "sethostname",
 			"number": 74,
 			"origname": "sethostname",
 			"signature": [
-				"struct oldold_utsname *name"
+				"char *name",
+				"int len"
 			],
 			"symbol": "sys_sethostname"
 		},
@@ -1158,15 +1126,13 @@
 			"grepped_location": false,
 			"index": 75,
 			"kconfig": null,
-			"line": 1693,
+			"line": 1740,
 			"name": "setrlimit",
 			"number": 75,
 			"origname": "setrlimit",
 			"signature": [
-				"pid_t pid",
 				"unsigned int resource",
-				"const struct rlimit64 *new_rlim",
-				"struct rlimit64 *old_rlim"
+				"struct rlimit *rlim"
 			],
 			"symbol": "sys_setrlimit"
 		},
@@ -1211,12 +1177,13 @@
 			"grepped_location": false,
 			"index": 78,
 			"kconfig": null,
-			"line": 119,
+			"line": 140,
 			"name": "gettimeofday",
 			"number": 78,
 			"origname": "gettimeofday",
 			"signature": [
-				"old_time32_t *tptr"
+				"struct __kernel_old_timeval *tv",
+				"struct timezone *tz"
 			],
 			"symbol": "sys_gettimeofday"
 		},
@@ -1278,17 +1245,12 @@
 			"grepped_location": false,
 			"index": 82,
 			"kconfig": null,
-			"line": 809,
+			"line": 830,
 			"name": "select",
 			"number": 82,
 			"origname": "old_select",
 			"signature": [
-				"int n",
-				"fd_set *inp",
-				"fd_set *outp",
-				"fd_set *exp",
-				"struct old_timespec32 *tsp",
-				"void *sig"
+				"struct sel_arg_struct *arg"
 			],
 			"symbol": "sys_old_select"
 		},
@@ -1299,13 +1261,12 @@
 			"grepped_location": false,
 			"index": 83,
 			"kconfig": null,
-			"line": 4607,
+			"line": 4613,
 			"name": "symlink",
 			"number": 83,
 			"origname": "symlink",
 			"signature": [
 				"const char *oldname",
-				"int newdfd",
 				"const char *newname"
 			],
 			"symbol": "sys_symlink"
@@ -1317,7 +1278,7 @@
 			"grepped_location": false,
 			"index": 84,
 			"kconfig": null,
-			"line": 390,
+			"line": 403,
 			"name": "lstat",
 			"number": 84,
 			"origname": "lstat",
@@ -1334,13 +1295,12 @@
 			"grepped_location": false,
 			"index": 85,
 			"kconfig": null,
-			"line": 565,
+			"line": 571,
 			"name": "readlink",
 			"number": 85,
 			"origname": "readlink",
 			"signature": [
-				"int dfd",
-				"const char *pathname",
+				"const char *path",
 				"char *buf",
 				"int bufsiz"
 			],
@@ -1423,7 +1383,7 @@
 			"grepped_location": false,
 			"index": 90,
 			"kconfig": null,
-			"line": 52,
+			"line": 69,
 			"name": "mmap",
 			"number": 90,
 			"origname": "mmap",
@@ -1433,7 +1393,7 @@
 				"unsigned long prot",
 				"unsigned long flags",
 				"unsigned long fd",
-				"unsigned long pgoff"
+				"off_t offset"
 			],
 			"symbol": "sys_mmap"
 		},
@@ -1530,14 +1490,13 @@
 			"grepped_location": false,
 			"index": 96,
 			"kconfig": null,
-			"line": 227,
+			"line": 297,
 			"name": "getpriority",
 			"number": 96,
 			"origname": "getpriority",
 			"signature": [
 				"int which",
-				"int who",
-				"int niceval"
+				"int who"
 			],
 			"symbol": "sys_getpriority"
 		},
@@ -1583,14 +1542,13 @@
 			"grepped_location": false,
 			"index": 100,
 			"kconfig": null,
-			"line": 201,
+			"line": 213,
 			"name": "fstatfs",
 			"number": 100,
 			"origname": "fstatfs",
 			"signature": [
-				"const char *pathname",
-				"size_t sz",
-				"struct statfs64 *buf"
+				"unsigned int fd",
+				"struct statfs *buf"
 			],
 			"symbol": "sys_fstatfs"
 		},
@@ -1601,16 +1559,13 @@
 			"grepped_location": false,
 			"index": 102,
 			"kconfig": "NET",
-			"line": 3058,
+			"line": 3089,
 			"name": "socketcall",
 			"number": 102,
 			"origname": "socketcall",
 			"signature": [
-				"int fd",
-				"struct mmsghdr *mmsg",
-				"unsigned int vlen",
-				"unsigned int flags",
-				"struct old_timespec32 *timeout"
+				"int call",
+				"unsigned long *args"
 			],
 			"symbol": "sys_socketcall"
 		},
@@ -1639,12 +1594,14 @@
 			"grepped_location": false,
 			"index": 104,
 			"kconfig": null,
-			"line": 306,
+			"line": 332,
 			"name": "setitimer",
 			"number": 104,
 			"origname": "setitimer",
 			"signature": [
-				"unsigned int seconds"
+				"int which",
+				"struct __kernel_old_itimerval *value",
+				"struct __kernel_old_itimerval *ovalue"
 			],
 			"symbol": "sys_setitimer"
 		},
@@ -1672,13 +1629,13 @@
 			"grepped_location": false,
 			"index": 106,
 			"kconfig": null,
-			"line": 416,
+			"line": 474,
 			"name": "newstat",
 			"number": 106,
 			"origname": "newstat",
 			"signature": [
-				"unsigned int fd",
-				"struct __old_kernel_stat *statbuf"
+				"const char *filename",
+				"struct stat *statbuf"
 			],
 			"symbol": "sys_newstat"
 		},
@@ -1689,7 +1646,7 @@
 			"grepped_location": false,
 			"index": 107,
 			"kconfig": null,
-			"line": 474,
+			"line": 485,
 			"name": "newlstat",
 			"number": 107,
 			"origname": "newlstat",
@@ -1706,12 +1663,12 @@
 			"grepped_location": false,
 			"index": 108,
 			"kconfig": null,
-			"line": 485,
+			"line": 512,
 			"name": "newfstat",
 			"number": 108,
 			"origname": "newfstat",
 			"signature": [
-				"const char *filename",
+				"unsigned int fd",
 				"struct stat *statbuf"
 			],
 			"symbol": "sys_newfstat"
@@ -1723,12 +1680,12 @@
 			"grepped_location": false,
 			"index": 109,
 			"kconfig": null,
-			"line": 1315,
+			"line": 1336,
 			"name": "uname",
 			"number": 109,
 			"origname": "uname",
 			"signature": [
-				"struct new_utsname *name"
+				"struct old_utsname *name"
 			],
 			"symbol": "sys_uname"
 		},
@@ -1739,15 +1696,11 @@
 			"grepped_location": false,
 			"index": 111,
 			"kconfig": null,
-			"line": 1589,
+			"line": 1599,
 			"name": "vhangup",
 			"number": 111,
 			"origname": "vhangup",
-			"signature": [
-				"unsigned int fd",
-				"unsigned int max_fd",
-				"unsigned int flags"
-			],
+			"signature": [],
 			"symbol": "sys_vhangup"
 		},
 		{
@@ -1792,14 +1745,12 @@
 			"grepped_location": false,
 			"index": 116,
 			"kconfig": null,
-			"line": 2792,
+			"line": 2872,
 			"name": "sysinfo",
 			"number": 116,
 			"origname": "sysinfo",
 			"signature": [
-				"unsigned *cpup",
-				"unsigned *nodep",
-				"struct getcpu_cache *unused"
+				"struct sysinfo *info"
 			],
 			"symbol": "sys_sysinfo"
 		},
@@ -1831,12 +1782,12 @@
 			"grepped_location": false,
 			"index": 118,
 			"kconfig": null,
-			"line": 149,
+			"line": 218,
 			"name": "fsync",
 			"number": 118,
 			"origname": "fsync",
 			"signature": [
-				"int fd"
+				"unsigned int fd"
 			],
 			"symbol": "sys_fsync"
 		},
@@ -1847,15 +1798,11 @@
 			"grepped_location": false,
 			"index": 119,
 			"kconfig": null,
-			"line": 1193,
+			"line": 1297,
 			"name": "sigreturn",
 			"number": 119,
 			"origname": "sigreturn",
-			"signature": [
-				"struct ucontext *ctx",
-				"int ndbg",
-				"struct sig_dbg_op *dbg"
-			],
+			"signature": [],
 			"symbol": "sys_sigreturn"
 		},
 		{
@@ -1865,11 +1812,17 @@
 			"grepped_location": false,
 			"index": 120,
 			"kconfig": null,
-			"line": 2879,
+			"line": 2892,
 			"name": "clone",
 			"number": 120,
 			"origname": "clone",
-			"signature": [],
+			"signature": [
+				"unsigned long clone_flags",
+				"unsigned long newsp",
+				"int *parent_tidptr",
+				"unsigned long tls",
+				"int *child_tidptr"
+			],
 			"symbol": "sys_clone"
 		},
 		{
@@ -1879,7 +1832,7 @@
 			"grepped_location": false,
 			"index": 121,
 			"kconfig": null,
-			"line": 1411,
+			"line": 1437,
 			"name": "setdomainname",
 			"number": 121,
 			"origname": "setdomainname",
@@ -1896,11 +1849,13 @@
 			"grepped_location": false,
 			"index": 122,
 			"kconfig": null,
-			"line": 1267,
+			"line": 1315,
 			"name": "newuname",
 			"number": 122,
 			"origname": "newuname",
-			"signature": [],
+			"signature": [
+				"struct new_utsname *name"
+			],
 			"symbol": "sys_newuname"
 		},
 		{
@@ -1944,12 +1899,14 @@
 			"grepped_location": false,
 			"index": 126,
 			"kconfig": null,
-			"line": 4405,
+			"line": 4444,
 			"name": "sigprocmask",
 			"number": 126,
 			"origname": "sigprocmask",
 			"signature": [
-				"old_sigset_t *uset"
+				"int how",
+				"old_sigset_t *nset",
+				"old_sigset_t *oset"
 			],
 			"symbol": "sys_sigprocmask"
 		},
@@ -2014,13 +1971,12 @@
 			"grepped_location": false,
 			"index": 132,
 			"kconfig": null,
-			"line": 1082,
+			"line": 1181,
 			"name": "getpgid",
 			"number": 132,
 			"origname": "getpgid",
 			"signature": [
-				"pid_t pid",
-				"pid_t pgid"
+				"pid_t pid"
 			],
 			"symbol": "sys_getpgid"
 		},
@@ -2031,12 +1987,12 @@
 			"grepped_location": false,
 			"index": 133,
 			"kconfig": null,
-			"line": 556,
+			"line": 582,
 			"name": "fchdir",
 			"number": 133,
 			"origname": "fchdir",
 			"signature": [
-				"const char *filename"
+				"unsigned int fd"
 			],
 			"symbol": "sys_fchdir"
 		},
@@ -2133,13 +2089,13 @@
 			"grepped_location": false,
 			"index": 141,
 			"kconfig": null,
-			"line": 218,
+			"line": 309,
 			"name": "getdents",
 			"number": 141,
 			"origname": "getdents",
 			"signature": [
 				"unsigned int fd",
-				"struct old_linux_dirent *dirent",
+				"struct linux_dirent *dirent",
 				"unsigned int count"
 			],
 			"symbol": "sys_getdents"
@@ -2206,15 +2162,14 @@
 			"grepped_location": false,
 			"index": 145,
 			"kconfig": null,
-			"line": 712,
+			"line": 1082,
 			"name": "readv",
 			"number": 145,
 			"origname": "readv",
 			"signature": [
-				"unsigned int fd",
-				"const char *buf",
-				"size_t count",
-				"loff_t pos"
+				"unsigned long fd",
+				"const struct iovec *vec",
+				"unsigned long vlen"
 			],
 			"symbol": "sys_readv"
 		},
@@ -2225,7 +2180,7 @@
 			"grepped_location": false,
 			"index": 146,
 			"kconfig": null,
-			"line": 1082,
+			"line": 1088,
 			"name": "writev",
 			"number": 146,
 			"origname": "writev",
@@ -2243,11 +2198,13 @@
 			"grepped_location": false,
 			"index": 147,
 			"kconfig": null,
-			"line": 1188,
+			"line": 1195,
 			"name": "getsid",
 			"number": 147,
 			"origname": "getsid",
-			"signature": [],
+			"signature": [
+				"pid_t pid"
+			],
 			"symbol": "sys_getsid"
 		},
 		{
@@ -2257,7 +2214,7 @@
 			"grepped_location": false,
 			"index": 148,
 			"kconfig": null,
-			"line": 218,
+			"line": 223,
 			"name": "fdatasync",
 			"number": 148,
 			"origname": "fdatasync",
@@ -2290,14 +2247,13 @@
 			"grepped_location": false,
 			"index": 151,
 			"kconfig": "MMU",
-			"line": 664,
+			"line": 677,
 			"name": "munlock",
 			"number": 151,
 			"origname": "munlock",
 			"signature": [
 				"unsigned long start",
-				"size_t len",
-				"int flags"
+				"size_t len"
 			],
 			"symbol": "sys_munlock"
 		},
@@ -2308,13 +2264,12 @@
 			"grepped_location": false,
 			"index": 152,
 			"kconfig": "MMU",
-			"line": 677,
+			"line": 742,
 			"name": "mlockall",
 			"number": 152,
 			"origname": "mlockall",
 			"signature": [
-				"unsigned long start",
-				"size_t len"
+				"int flags"
 			],
 			"symbol": "sys_mlockall"
 		},
@@ -2325,13 +2280,11 @@
 			"grepped_location": false,
 			"index": 153,
 			"kconfig": "MMU",
-			"line": 742,
+			"line": 771,
 			"name": "munlockall",
 			"number": 153,
 			"origname": "munlockall",
-			"signature": [
-				"int flags"
-			],
+			"signature": [],
 			"symbol": "sys_munlockall"
 		},
 		{
@@ -2341,13 +2294,12 @@
 			"grepped_location": false,
 			"index": 154,
 			"kconfig": null,
-			"line": 1031,
+			"line": 1046,
 			"name": "sched_setparam",
 			"number": 154,
 			"origname": "sched_setparam",
 			"signature": [
 				"pid_t pid",
-				"int policy",
 				"struct sched_param *param"
 			],
 			"symbol": "sys_sched_setparam"
@@ -2359,12 +2311,13 @@
 			"grepped_location": false,
 			"index": 155,
 			"kconfig": null,
-			"line": 1092,
+			"line": 1122,
 			"name": "sched_getparam",
 			"number": 155,
 			"origname": "sched_getparam",
 			"signature": [
-				"pid_t pid"
+				"pid_t pid",
+				"struct sched_param *param"
 			],
 			"symbol": "sys_sched_getparam"
 		},
@@ -2393,14 +2346,12 @@
 			"grepped_location": false,
 			"index": 157,
 			"kconfig": null,
-			"line": 1057,
+			"line": 1092,
 			"name": "sched_getscheduler",
 			"number": 157,
 			"origname": "sched_getscheduler",
 			"signature": [
-				"pid_t pid",
-				"struct sched_attr *uattr",
-				"unsigned int flags"
+				"pid_t pid"
 			],
 			"symbol": "sys_sched_getscheduler"
 		},
@@ -2411,15 +2362,11 @@
 			"grepped_location": false,
 			"index": 158,
 			"kconfig": null,
-			"line": 1431,
+			"line": 1484,
 			"name": "sched_yield",
 			"number": 158,
 			"origname": "sched_yield",
-			"signature": [
-				"pid_t pid",
-				"unsigned int len",
-				"unsigned long *user_mask_ptr"
-			],
+			"signature": [],
 			"symbol": "sys_sched_yield"
 		},
 		{
@@ -2429,11 +2376,13 @@
 			"grepped_location": false,
 			"index": 159,
 			"kconfig": null,
-			"line": 1484,
+			"line": 1592,
 			"name": "sched_get_priority_max",
 			"number": 159,
 			"origname": "sched_get_priority_max",
-			"signature": [],
+			"signature": [
+				"int policy"
+			],
 			"symbol": "sys_sched_get_priority_max"
 		},
 		{
@@ -2443,7 +2392,7 @@
 			"grepped_location": false,
 			"index": 160,
 			"kconfig": null,
-			"line": 1592,
+			"line": 1619,
 			"name": "sched_get_priority_min",
 			"number": 160,
 			"origname": "sched_get_priority_min",
@@ -2531,14 +2480,14 @@
 			"grepped_location": false,
 			"index": 165,
 			"kconfig": "MULTIUSER",
-			"line": 751,
+			"line": 756,
 			"name": "getresuid",
 			"number": 165,
 			"origname": "getresuid",
 			"signature": [
-				"uid_t ruid",
-				"uid_t euid",
-				"uid_t suid"
+				"uid_t *ruidp",
+				"uid_t *euidp",
+				"uid_t *suidp"
 			],
 			"symbol": "sys_getresuid"
 		},
@@ -2549,12 +2498,14 @@
 			"grepped_location": false,
 			"index": 167,
 			"kconfig": null,
-			"line": 830,
+			"line": 1069,
 			"name": "poll",
 			"number": 167,
 			"origname": "poll",
 			"signature": [
-				"struct sel_arg_struct *arg"
+				"struct pollfd *ufds",
+				"unsigned int nfds",
+				"int timeout_msecs"
 			],
 			"symbol": "sys_poll"
 		},
@@ -2583,14 +2534,14 @@
 			"grepped_location": false,
 			"index": 170,
 			"kconfig": "MULTIUSER",
-			"line": 840,
+			"line": 845,
 			"name": "getresgid",
 			"number": 170,
 			"origname": "getresgid",
 			"signature": [
-				"gid_t rgid",
-				"gid_t egid",
-				"gid_t sgid"
+				"gid_t *rgidp",
+				"gid_t *egidp",
+				"gid_t *sgidp"
 			],
 			"symbol": "sys_getresgid"
 		},
@@ -2621,15 +2572,11 @@
 			"grepped_location": false,
 			"index": 172,
 			"kconfig": null,
-			"line": 993,
+			"line": 1094,
 			"name": "rt_sigreturn",
 			"number": 172,
 			"origname": "rt_sigreturn",
-			"signature": [
-				"struct ucontext *old_ctx",
-				"struct ucontext *new_ctx",
-				"long ctx_size"
-			],
+			"signature": [],
 			"symbol": "sys_rt_sigreturn"
 		},
 		{
@@ -2639,14 +2586,15 @@
 			"grepped_location": false,
 			"index": 173,
 			"kconfig": null,
-			"line": 4444,
+			"line": 4492,
 			"name": "rt_sigaction",
 			"number": 173,
 			"origname": "rt_sigaction",
 			"signature": [
-				"int how",
-				"old_sigset_t *nset",
-				"old_sigset_t *oset"
+				"int sig",
+				"const struct sigaction *act",
+				"struct sigaction *oact",
+				"size_t sigsetsize"
 			],
 			"symbol": "sys_rt_sigaction"
 		},
@@ -2676,14 +2624,12 @@
 			"grepped_location": false,
 			"index": 175,
 			"kconfig": null,
-			"line": 3201,
+			"line": 3273,
 			"name": "rt_sigpending",
 			"number": 175,
 			"origname": "rt_sigpending",
 			"signature": [
-				"int how",
-				"sigset_t *nset",
-				"sigset_t *oset",
+				"sigset_t *uset",
 				"size_t sigsetsize"
 			],
 			"symbol": "sys_rt_sigpending"
@@ -2714,13 +2660,14 @@
 			"grepped_location": false,
 			"index": 177,
 			"kconfig": null,
-			"line": 4050,
+			"line": 4078,
 			"name": "rt_sigqueueinfo",
 			"number": 177,
 			"origname": "rt_sigqueueinfo",
 			"signature": [
 				"pid_t pid",
-				"int sig"
+				"int sig",
+				"siginfo_t *uinfo"
 			],
 			"symbol": "sys_rt_sigqueueinfo"
 		},
@@ -2731,11 +2678,14 @@
 			"grepped_location": false,
 			"index": 178,
 			"kconfig": null,
-			"line": 4685,
+			"line": 4715,
 			"name": "rt_sigsuspend",
 			"number": 178,
 			"origname": "rt_sigsuspend",
-			"signature": [],
+			"signature": [
+				"sigset_t *unewset",
+				"size_t sigsetsize"
+			],
 			"symbol": "sys_rt_sigsuspend"
 		},
 		{
@@ -2766,13 +2716,13 @@
 			"grepped_location": false,
 			"index": 180,
 			"kconfig": null,
-			"line": 70,
+			"line": 78,
 			"name": "pwrite64",
 			"number": 180,
 			"origname": "ppc_pwrite64",
 			"signature": [
 				"unsigned int fd",
-				"char *ubuf",
+				"const char *ubuf",
 				"compat_size_t count",
 				"u32 reg6",
 				"u32 pos1",
@@ -2787,16 +2737,14 @@
 			"grepped_location": false,
 			"index": 181,
 			"kconfig": null,
-			"line": 837,
+			"line": 843,
 			"name": "chown",
 			"number": 181,
 			"origname": "chown",
 			"signature": [
-				"int dfd",
 				"const char *filename",
 				"uid_t user",
-				"gid_t group",
-				"int flag"
+				"gid_t group"
 			],
 			"symbol": "sys_chown"
 		},
@@ -2841,13 +2789,13 @@
 			"grepped_location": false,
 			"index": 184,
 			"kconfig": "MULTIUSER",
-			"line": 141,
+			"line": 220,
 			"name": "capset",
 			"number": 184,
 			"origname": "capset",
 			"signature": [
 				"cap_user_header_t header",
-				"cap_user_data_t dataptr"
+				"const cap_user_data_t data"
 			],
 			"symbol": "sys_capset"
 		},
@@ -2875,17 +2823,15 @@
 			"grepped_location": false,
 			"index": 186,
 			"kconfig": null,
-			"line": 1122,
+			"line": 1329,
 			"name": "sendfile",
 			"number": 186,
 			"origname": "sendfile",
 			"signature": [
-				"unsigned long fd",
-				"const struct iovec *vec",
-				"unsigned long vlen",
-				"unsigned long pos_l",
-				"unsigned long pos_h",
-				"rwf_t flags"
+				"int out_fd",
+				"int in_fd",
+				"off_t *offset",
+				"size_t count"
 			],
 			"symbol": "sys_sendfile"
 		},
@@ -2896,7 +2842,7 @@
 			"grepped_location": false,
 			"index": 189,
 			"kconfig": null,
-			"line": 2863,
+			"line": 2879,
 			"name": "vfork",
 			"number": 189,
 			"origname": "vfork",
@@ -2910,13 +2856,13 @@
 			"grepped_location": false,
 			"index": 190,
 			"kconfig": null,
-			"line": 1437,
+			"line": 1527,
 			"name": "getrlimit",
 			"number": 190,
 			"origname": "getrlimit",
 			"signature": [
-				"char *name",
-				"int len"
+				"unsigned int resource",
+				"struct rlimit *rlim"
 			],
 			"symbol": "sys_getrlimit"
 		},
@@ -2927,17 +2873,16 @@
 			"grepped_location": false,
 			"index": 191,
 			"kconfig": null,
-			"line": 78,
+			"line": 86,
 			"name": "readahead",
 			"number": 191,
 			"origname": "ppc_readahead",
 			"signature": [
-				"unsigned int fd",
-				"const char *ubuf",
-				"compat_size_t count",
-				"u32 reg6",
-				"u32 pos1",
-				"u32 pos2"
+				"int fd",
+				"u32 r4",
+				"u32 offset1",
+				"u32 offset2",
+				"u32 count"
 			],
 			"symbol": "sys_ppc_readahead"
 		},
@@ -2969,16 +2914,15 @@
 			"grepped_location": false,
 			"index": 193,
 			"kconfig": null,
-			"line": 86,
+			"line": 93,
 			"name": "truncate64",
 			"number": 193,
 			"origname": "ppc_truncate64",
 			"signature": [
-				"int fd",
-				"u32 r4",
-				"u32 offset1",
-				"u32 offset2",
-				"u32 count"
+				"const char *path",
+				"u32 reg4",
+				"unsigned long len1",
+				"unsigned long len2"
 			],
 			"symbol": "sys_ppc_truncate64"
 		},
@@ -3008,14 +2952,13 @@
 			"grepped_location": false,
 			"index": 195,
 			"kconfig": null,
-			"line": 571,
+			"line": 620,
 			"name": "stat64",
 			"number": 195,
 			"origname": "stat64",
 			"signature": [
-				"const char *path",
-				"char *buf",
-				"int bufsiz"
+				"const char *filename",
+				"struct stat64 *statbuf"
 			],
 			"symbol": "sys_stat64"
 		},
@@ -3026,7 +2969,7 @@
 			"grepped_location": false,
 			"index": 196,
 			"kconfig": null,
-			"line": 620,
+			"line": 632,
 			"name": "lstat64",
 			"number": 196,
 			"origname": "lstat64",
@@ -3043,12 +2986,12 @@
 			"grepped_location": false,
 			"index": 197,
 			"kconfig": null,
-			"line": 632,
+			"line": 644,
 			"name": "fstat64",
 			"number": 197,
 			"origname": "fstat64",
 			"signature": [
-				"const char *filename",
+				"unsigned long fd",
 				"struct stat64 *statbuf"
 			],
 			"symbol": "sys_fstat64"
@@ -3080,7 +3023,7 @@
 			"grepped_location": false,
 			"index": 199,
 			"kconfig": "PCI_SYSCALL",
-			"line": 15,
+			"line": 86,
 			"name": "pciconfig_write",
 			"number": 199,
 			"origname": "pciconfig_write",
@@ -3118,13 +3061,13 @@
 			"grepped_location": false,
 			"index": 202,
 			"kconfig": null,
-			"line": 309,
+			"line": 392,
 			"name": "getdents64",
 			"number": 202,
 			"origname": "getdents64",
 			"signature": [
 				"unsigned int fd",
-				"struct linux_dirent *dirent",
+				"struct linux_dirent64 *dirent",
 				"unsigned int count"
 			],
 			"symbol": "sys_getdents64"
@@ -3153,7 +3096,7 @@
 			"grepped_location": false,
 			"index": 204,
 			"kconfig": null,
-			"line": 477,
+			"line": 501,
 			"name": "fcntl64",
 			"number": 204,
 			"origname": "fcntl64",
@@ -3221,12 +3164,11 @@
 			"grepped_location": false,
 			"index": 208,
 			"kconfig": null,
-			"line": 4034,
+			"line": 4050,
 			"name": "tkill",
 			"number": 208,
 			"origname": "tkill",
 			"signature": [
-				"pid_t tgid",
 				"pid_t pid",
 				"int sig"
 			],
@@ -3239,12 +3181,12 @@
 			"grepped_location": false,
 			"index": 209,
 			"kconfig": null,
-			"line": 686,
+			"line": 672,
 			"name": "setxattr",
 			"number": 209,
 			"origname": "setxattr",
 			"signature": [
-				"int fd",
+				"const char *pathname",
 				"const char *name",
 				"const void *value",
 				"size_t size",
@@ -3259,7 +3201,7 @@
 			"grepped_location": false,
 			"index": 210,
 			"kconfig": null,
-			"line": 672,
+			"line": 679,
 			"name": "lsetxattr",
 			"number": 210,
 			"origname": "lsetxattr",
@@ -3279,12 +3221,12 @@
 			"grepped_location": false,
 			"index": 211,
 			"kconfig": null,
-			"line": 679,
+			"line": 686,
 			"name": "fsetxattr",
 			"number": 211,
 			"origname": "fsetxattr",
 			"signature": [
-				"const char *pathname",
+				"int fd",
 				"const char *name",
 				"const void *value",
 				"size_t size",
@@ -3318,7 +3260,7 @@
 			"grepped_location": false,
 			"index": 213,
 			"kconfig": null,
-			"line": 797,
+			"line": 803,
 			"name": "lgetxattr",
 			"number": 213,
 			"origname": "lgetxattr",
@@ -3337,12 +3279,12 @@
 			"grepped_location": false,
 			"index": 214,
 			"kconfig": null,
-			"line": 803,
+			"line": 809,
 			"name": "fgetxattr",
 			"number": 214,
 			"origname": "fgetxattr",
 			"signature": [
-				"const char *pathname",
+				"int fd",
 				"const char *name",
 				"void *value",
 				"size_t size"
@@ -3356,14 +3298,13 @@
 			"grepped_location": false,
 			"index": 215,
 			"kconfig": null,
-			"line": 809,
+			"line": 874,
 			"name": "listxattr",
 			"number": 215,
 			"origname": "listxattr",
 			"signature": [
-				"int fd",
-				"const char *name",
-				"void *value",
+				"const char *pathname",
+				"char *list",
 				"size_t size"
 			],
 			"symbol": "sys_listxattr"
@@ -3375,7 +3316,7 @@
 			"grepped_location": false,
 			"index": 216,
 			"kconfig": null,
-			"line": 874,
+			"line": 880,
 			"name": "llistxattr",
 			"number": 216,
 			"origname": "llistxattr",
@@ -3393,12 +3334,12 @@
 			"grepped_location": false,
 			"index": 217,
 			"kconfig": null,
-			"line": 880,
+			"line": 886,
 			"name": "flistxattr",
 			"number": 217,
 			"origname": "flistxattr",
 			"signature": [
-				"const char *pathname",
+				"int fd",
 				"char *list",
 				"size_t size"
 			],
@@ -3411,14 +3352,13 @@
 			"grepped_location": false,
 			"index": 218,
 			"kconfig": null,
-			"line": 886,
+			"line": 939,
 			"name": "removexattr",
 			"number": 218,
 			"origname": "removexattr",
 			"signature": [
-				"int fd",
-				"char *list",
-				"size_t size"
+				"const char *pathname",
+				"const char *name"
 			],
 			"symbol": "sys_removexattr"
 		},
@@ -3429,7 +3369,7 @@
 			"grepped_location": false,
 			"index": 219,
 			"kconfig": null,
-			"line": 939,
+			"line": 945,
 			"name": "lremovexattr",
 			"number": 219,
 			"origname": "lremovexattr",
@@ -3446,12 +3386,12 @@
 			"grepped_location": false,
 			"index": 220,
 			"kconfig": null,
-			"line": 945,
+			"line": 951,
 			"name": "fremovexattr",
 			"number": 220,
 			"origname": "fremovexattr",
 			"signature": [
-				"const char *pathname",
+				"int fd",
 				"const char *name"
 			],
 			"symbol": "sys_fremovexattr"
@@ -3463,15 +3403,17 @@
 			"grepped_location": false,
 			"index": 221,
 			"kconfig": "FUTEX",
-			"line": 414,
+			"line": 492,
 			"name": "futex",
 			"number": 221,
 			"origname": "futex_time32",
 			"signature": [
-				"struct futex_waitv *waiters",
-				"unsigned int flags",
-				"int nr_wake",
-				"int nr_requeue"
+				"u32 *uaddr",
+				"int op",
+				"u32 val",
+				"const struct old_timespec32 *utime",
+				"u32 *uaddr2",
+				"u32 val3"
 			],
 			"symbol": "sys_futex_time32"
 		},
@@ -3518,14 +3460,14 @@
 			"grepped_location": false,
 			"index": 226,
 			"kconfig": null,
-			"line": 1329,
+			"line": 1348,
 			"name": "sendfile64",
 			"number": 226,
 			"origname": "sendfile64",
 			"signature": [
 				"int out_fd",
 				"int in_fd",
-				"off_t *offset",
+				"loff_t *offset",
 				"size_t count"
 			],
 			"symbol": "sys_sendfile64"
@@ -3570,17 +3512,16 @@
 			"grepped_location": false,
 			"index": 229,
 			"kconfig": "AIO",
-			"line": 2311,
+			"line": 2349,
 			"name": "io_getevents",
 			"number": 229,
 			"origname": "io_getevents_time32",
 			"signature": [
-				"aio_context_t ctx_id",
-				"long min_nr",
-				"long nr",
+				"__u32 ctx_id",
+				"__s32 min_nr",
+				"__s32 nr",
 				"struct io_event *events",
-				"struct old_timespec32 *timeout",
-				"const struct __aio_sigset *usig"
+				"struct old_timespec32 *timeout"
 			],
 			"symbol": "sys_io_getevents_time32"
 		},
@@ -3591,12 +3532,14 @@
 			"grepped_location": false,
 			"index": 230,
 			"kconfig": "AIO",
-			"line": 1451,
+			"line": 2081,
 			"name": "io_submit",
 			"number": 230,
 			"origname": "io_submit",
 			"signature": [
-				"aio_context_t ctx"
+				"aio_context_t ctx_id",
+				"long nr",
+				"struct iocb **iocbpp"
 			],
 			"symbol": "sys_io_submit"
 		},
@@ -3607,14 +3550,14 @@
 			"grepped_location": false,
 			"index": 231,
 			"kconfig": "AIO",
-			"line": 2081,
+			"line": 2175,
 			"name": "io_cancel",
 			"number": 231,
 			"origname": "io_cancel",
 			"signature": [
 				"aio_context_t ctx_id",
-				"long nr",
-				"struct iocb **iocbpp"
+				"struct iocb *iocb",
+				"struct io_event *result"
 			],
 			"symbol": "sys_io_cancel"
 		},
@@ -3678,12 +3621,12 @@
 			"grepped_location": false,
 			"index": 236,
 			"kconfig": "EPOLL",
-			"line": 2219,
+			"line": 2224,
 			"name": "epoll_create",
 			"number": 236,
 			"origname": "epoll_create",
 			"signature": [
-				"int flags"
+				"int size"
 			],
 			"symbol": "sys_epoll_create"
 		},
@@ -3713,15 +3656,15 @@
 			"grepped_location": false,
 			"index": 238,
 			"kconfig": "EPOLL",
-			"line": 2413,
+			"line": 2471,
 			"name": "epoll_wait",
 			"number": 238,
 			"origname": "epoll_wait",
 			"signature": [
 				"int epfd",
-				"int op",
-				"int fd",
-				"struct epoll_event *event"
+				"struct epoll_event *events",
+				"int maxevents",
+				"int timeout"
 			],
 			"symbol": "sys_epoll_wait"
 		},
@@ -3806,13 +3749,12 @@
 			"grepped_location": false,
 			"index": 243,
 			"kconfig": "POSIX_TIMERS",
-			"line": 734,
+			"line": 767,
 			"name": "timer_getoverrun",
 			"number": 243,
 			"origname": "timer_getoverrun",
 			"signature": [
-				"timer_t timer_id",
-				"struct old_itimerspec32 *setting"
+				"timer_t timer_id"
 			],
 			"symbol": "sys_timer_getoverrun"
 		},
@@ -3823,15 +3765,12 @@
 			"grepped_location": false,
 			"index": 244,
 			"kconfig": "POSIX_TIMERS",
-			"line": 963,
+			"line": 1006,
 			"name": "timer_delete",
 			"number": 244,
 			"origname": "timer_delete",
 			"signature": [
-				"timer_t timer_id",
-				"int flags",
-				"struct old_itimerspec32 *new",
-				"struct old_itimerspec32 *old"
+				"timer_t timer_id"
 			],
 			"symbol": "sys_timer_delete"
 		},
@@ -3842,13 +3781,13 @@
 			"grepped_location": false,
 			"index": 245,
 			"kconfig": null,
-			"line": 1252,
+			"line": 1272,
 			"name": "clock_settime",
 			"number": 245,
 			"origname": "clock_settime32",
 			"signature": [
-				"const clockid_t which_clock",
-				"struct __kernel_timespec *tp"
+				"clockid_t which_clock",
+				"struct old_timespec32 *tp"
 			],
 			"symbol": "sys_clock_settime32"
 		},
@@ -3859,7 +3798,7 @@
 			"grepped_location": false,
 			"index": 246,
 			"kconfig": null,
-			"line": 1272,
+			"line": 1287,
 			"name": "clock_gettime",
 			"number": 246,
 			"origname": "clock_gettime32",
@@ -3876,13 +3815,13 @@
 			"grepped_location": false,
 			"index": 247,
 			"kconfig": null,
-			"line": 1305,
+			"line": 1323,
 			"name": "clock_getres",
 			"number": 247,
 			"origname": "clock_getres_time32",
 			"signature": [
 				"clockid_t which_clock",
-				"struct old_timex32 *utp"
+				"struct old_timespec32 *tp"
 			],
 			"symbol": "sys_clock_getres_time32"
 		},
@@ -3930,15 +3869,14 @@
 			"grepped_location": false,
 			"index": 250,
 			"kconfig": null,
-			"line": 3907,
+			"line": 4034,
 			"name": "tgkill",
 			"number": 250,
 			"origname": "tgkill",
 			"signature": [
-				"int pidfd",
-				"int sig",
-				"siginfo_t *info",
-				"unsigned int flags"
+				"pid_t tgid",
+				"pid_t pid",
+				"int sig"
 			],
 			"symbol": "sys_tgkill"
 		},
@@ -3949,12 +3887,11 @@
 			"grepped_location": false,
 			"index": 251,
 			"kconfig": null,
-			"line": 288,
+			"line": 295,
 			"name": "utimes",
 			"number": 251,
 			"origname": "utimes_time32",
 			"signature": [
-				"unsigned int dfd",
 				"const char *filename",
 				"struct old_timeval32 *t"
 			],
@@ -3967,13 +3904,14 @@
 			"grepped_location": false,
 			"index": 252,
 			"kconfig": null,
-			"line": 192,
+			"line": 201,
 			"name": "statfs64",
 			"number": 252,
 			"origname": "statfs64",
 			"signature": [
 				"const char *pathname",
-				"struct statfs *buf"
+				"size_t sz",
+				"struct statfs64 *buf"
 			],
 			"symbol": "sys_statfs64"
 		},
@@ -3984,13 +3922,14 @@
 			"grepped_location": false,
 			"index": 253,
 			"kconfig": null,
-			"line": 213,
+			"line": 222,
 			"name": "fstatfs64",
 			"number": 253,
 			"origname": "fstatfs64",
 			"signature": [
 				"unsigned int fd",
-				"struct statfs *buf"
+				"size_t sz",
+				"struct statfs64 *buf"
 			],
 			"symbol": "sys_fstatfs64"
 		},
@@ -4001,17 +3940,17 @@
 			"grepped_location": false,
 			"index": 254,
 			"kconfig": "ADVISE_SYSCALLS",
-			"line": 69,
+			"line": 103,
 			"name": "fadvise64_64",
 			"number": 254,
 			"origname": "ppc_fadvise64_64",
 			"signature": [
-				"unsigned long addr",
-				"size_t len",
-				"unsigned long prot",
-				"unsigned long flags",
-				"unsigned long fd",
-				"off_t offset"
+				"int fd",
+				"int advice",
+				"u32 offset_high",
+				"u32 offset_low",
+				"u32 len_high",
+				"u32 len_low"
 			],
 			"symbol": "sys_ppc_fadvise64_64"
 		},
@@ -4038,11 +3977,15 @@
 			"grepped_location": false,
 			"index": 256,
 			"kconfig": null,
-			"line": 1094,
+			"line": 1193,
 			"name": "debug_setcontext",
 			"number": 256,
 			"origname": "debug_setcontext",
-			"signature": [],
+			"signature": [
+				"struct ucontext *ctx",
+				"int ndbg",
+				"struct sig_dbg_op *dbg"
+			],
 			"symbol": "sys_debug_setcontext"
 		},
 		{
@@ -4071,15 +4014,12 @@
 			"grepped_location": false,
 			"index": 263,
 			"kconfig": "POSIX_MQUEUE",
-			"line": 944,
+			"line": 954,
 			"name": "mq_unlink",
 			"number": 263,
 			"origname": "mq_unlink",
 			"signature": [
-				"const char *u_name",
-				"int oflag",
-				"umode_t mode",
-				"struct mq_attr *u_attr"
+				"const char *u_name"
 			],
 			"symbol": "sys_mq_unlink"
 		},
@@ -4090,14 +4030,16 @@
 			"grepped_location": false,
 			"index": 264,
 			"kconfig": "POSIX_MQUEUE",
-			"line": 1497,
+			"line": 1627,
 			"name": "mq_timedsend",
 			"number": 264,
 			"origname": "mq_timedsend_time32",
 			"signature": [
 				"mqd_t mqdes",
-				"const struct mq_attr *u_mqstat",
-				"struct mq_attr *u_omqstat"
+				"const char *u_msg_ptr",
+				"unsigned int msg_len",
+				"unsigned int msg_prio",
+				"const struct old_timespec32 *u_abs_timeout"
 			],
 			"symbol": "sys_mq_timedsend_time32"
 		},
@@ -4108,15 +4050,15 @@
 			"grepped_location": false,
 			"index": 265,
 			"kconfig": "POSIX_MQUEUE",
-			"line": 1627,
+			"line": 1642,
 			"name": "mq_timedreceive",
 			"number": 265,
 			"origname": "mq_timedreceive_time32",
 			"signature": [
 				"mqd_t mqdes",
-				"const char *u_msg_ptr",
+				"char *u_msg_ptr",
 				"unsigned int msg_len",
-				"unsigned int msg_prio",
+				"unsigned int *u_msg_prio",
 				"const struct old_timespec32 *u_abs_timeout"
 			],
 			"symbol": "sys_mq_timedreceive_time32"
@@ -4128,16 +4070,13 @@
 			"grepped_location": false,
 			"index": 266,
 			"kconfig": "POSIX_MQUEUE",
-			"line": 1298,
+			"line": 1441,
 			"name": "mq_notify",
 			"number": 266,
 			"origname": "mq_notify",
 			"signature": [
 				"mqd_t mqdes",
-				"char *u_msg_ptr",
-				"size_t msg_len",
-				"unsigned int *u_msg_prio",
-				"const struct __kernel_timespec *u_abs_timeout"
+				"const struct sigevent *u_notification"
 			],
 			"symbol": "sys_mq_notify"
 		},
@@ -4148,13 +4087,14 @@
 			"grepped_location": false,
 			"index": 267,
 			"kconfig": "POSIX_MQUEUE",
-			"line": 1441,
+			"line": 1497,
 			"name": "mq_getsetattr",
 			"number": 267,
 			"origname": "mq_getsetattr",
 			"signature": [
 				"mqd_t mqdes",
-				"const struct sigevent *u_notification"
+				"const struct mq_attr *u_mqstat",
+				"struct mq_attr *u_omqstat"
 			],
 			"symbol": "sys_mq_getsetattr"
 		},
@@ -4204,16 +4144,15 @@
 			"grepped_location": false,
 			"index": 270,
 			"kconfig": "KEYS",
-			"line": 74,
+			"line": 167,
 			"name": "request_key",
 			"number": 270,
 			"origname": "request_key",
 			"signature": [
 				"const char *_type",
 				"const char *_description",
-				"const void *_payload",
-				"size_t plen",
-				"key_serial_t ringid"
+				"const char *_callout_info",
+				"key_serial_t destringid"
 			],
 			"symbol": "sys_request_key"
 		},
@@ -4282,14 +4221,13 @@
 			"grepped_location": false,
 			"index": 274,
 			"kconfig": "BLOCK",
-			"line": 69,
+			"line": 184,
 			"name": "ioprio_get",
 			"number": 274,
 			"origname": "ioprio_get",
 			"signature": [
 				"int which",
-				"int who",
-				"int ioprio"
+				"int who"
 			],
 			"symbol": "sys_ioprio_get"
 		},
@@ -4300,13 +4238,11 @@
 			"grepped_location": false,
 			"index": 275,
 			"kconfig": "INOTIFY_USER",
-			"line": 719,
+			"line": 724,
 			"name": "inotify_init",
 			"number": 275,
 			"origname": "inotify_init",
-			"signature": [
-				"int flags"
-			],
+			"signature": [],
 			"symbol": "sys_inotify_init"
 		},
 		{
@@ -4316,11 +4252,15 @@
 			"grepped_location": false,
 			"index": 276,
 			"kconfig": "INOTIFY_USER",
-			"line": 724,
+			"line": 729,
 			"name": "inotify_add_watch",
 			"number": 276,
 			"origname": "inotify_add_watch",
-			"signature": [],
+			"signature": [
+				"int fd",
+				"const char *pathname",
+				"u32 mask"
+			],
 			"symbol": "sys_inotify_add_watch"
 		},
 		{
@@ -4330,14 +4270,13 @@
 			"grepped_location": false,
 			"index": 277,
 			"kconfig": "INOTIFY_USER",
-			"line": 729,
+			"line": 793,
 			"name": "inotify_rm_watch",
 			"number": 277,
 			"origname": "inotify_rm_watch",
 			"signature": [
 				"int fd",
-				"const char *pathname",
-				"u32 mask"
+				"__s32 wd"
 			],
 			"symbol": "sys_inotify_rm_watch"
 		},
@@ -4405,14 +4344,16 @@
 			"grepped_location": false,
 			"index": 283,
 			"kconfig": null,
-			"line": 1598,
+			"line": 1634,
 			"name": "splice",
 			"number": 283,
 			"origname": "splice",
 			"signature": [
-				"int fd",
-				"const struct iovec *uiov",
-				"unsigned long nr_segs",
+				"int fd_in",
+				"loff_t *off_in",
+				"int fd_out",
+				"loff_t *off_out",
+				"size_t len",
 				"unsigned int flags"
 			],
 			"symbol": "sys_splice"
@@ -4462,11 +4403,12 @@
 			"grepped_location": false,
 			"index": 286,
 			"kconfig": null,
-			"line": 1435,
+			"line": 1442,
 			"name": "openat",
 			"number": 286,
 			"origname": "openat",
 			"signature": [
+				"int dfd",
 				"const char *filename",
 				"int flags",
 				"umode_t mode"
@@ -4537,15 +4479,14 @@
 			"grepped_location": false,
 			"index": 290,
 			"kconfig": null,
-			"line": 252,
+			"line": 288,
 			"name": "futimesat",
 			"number": 290,
 			"origname": "futimesat_time32",
 			"signature": [
 				"unsigned int dfd",
 				"const char *filename",
-				"struct old_timespec32 *t",
-				"int flags"
+				"struct old_timeval32 *t"
 			],
 			"symbol": "sys_futimesat_time32"
 		},
@@ -4556,13 +4497,15 @@
 			"grepped_location": false,
 			"index": 291,
 			"kconfig": null,
-			"line": 644,
+			"line": 655,
 			"name": "fstatat64",
 			"number": 291,
 			"origname": "fstatat64",
 			"signature": [
-				"unsigned long fd",
-				"struct stat64 *statbuf"
+				"int dfd",
+				"const char *filename",
+				"struct stat64 *statbuf",
+				"int flag"
 			],
 			"symbol": "sys_fstatat64"
 		},
@@ -4591,7 +4534,7 @@
 			"grepped_location": false,
 			"index": 293,
 			"kconfig": null,
-			"line": 5154,
+			"line": 5161,
 			"name": "renameat",
 			"number": 293,
 			"origname": "renameat",
@@ -4599,8 +4542,7 @@
 				"int olddfd",
 				"const char *oldname",
 				"int newdfd",
-				"const char *newname",
-				"unsigned int flags"
+				"const char *newname"
 			],
 			"symbol": "sys_renameat"
 		},
@@ -4649,13 +4591,15 @@
 			"grepped_location": false,
 			"index": 296,
 			"kconfig": null,
-			"line": 512,
+			"line": 565,
 			"name": "readlinkat",
 			"number": 296,
 			"origname": "readlinkat",
 			"signature": [
-				"unsigned int fd",
-				"struct stat *statbuf"
+				"int dfd",
+				"const char *pathname",
+				"char *buf",
+				"int bufsiz"
 			],
 			"symbol": "sys_readlinkat"
 		},
@@ -4666,15 +4610,14 @@
 			"grepped_location": false,
 			"index": 297,
 			"kconfig": null,
-			"line": 712,
+			"line": 718,
 			"name": "fchmodat",
 			"number": 297,
 			"origname": "fchmodat",
 			"signature": [
 				"int dfd",
 				"const char *filename",
-				"umode_t mode",
-				"unsigned int flags"
+				"umode_t mode"
 			],
 			"symbol": "sys_fchmodat"
 		},
@@ -4685,15 +4628,14 @@
 			"grepped_location": false,
 			"index": 298,
 			"kconfig": null,
-			"line": 363,
+			"line": 540,
 			"name": "faccessat",
 			"number": 298,
 			"origname": "faccessat",
 			"signature": [
-				"int fd",
-				"int mode",
-				"loff_t offset",
-				"loff_t len"
+				"int dfd",
+				"const char *filename",
+				"int mode"
 			],
 			"symbol": "sys_faccessat"
 		},
@@ -4704,13 +4646,14 @@
 			"grepped_location": false,
 			"index": 299,
 			"kconfig": "FUTEX",
-			"line": 28,
+			"line": 48,
 			"name": "get_robust_list",
 			"number": 299,
 			"origname": "get_robust_list",
 			"signature": [
-				"struct robust_list_head *head",
-				"size_t len"
+				"int pid",
+				"struct robust_list_head **head_ptr",
+				"size_t *len_ptr"
 			],
 			"symbol": "sys_get_robust_list"
 		},
@@ -4738,16 +4681,14 @@
 			"grepped_location": false,
 			"index": 302,
 			"kconfig": null,
-			"line": 2457,
+			"line": 2792,
 			"name": "getcpu",
 			"number": 302,
 			"origname": "getcpu",
 			"signature": [
-				"int option",
-				"unsigned long arg2",
-				"unsigned long arg3",
-				"unsigned long arg4",
-				"unsigned long arg5"
+				"unsigned *cpup",
+				"unsigned *nodep",
+				"struct getcpu_cache *unused"
 			],
 			"symbol": "sys_getcpu"
 		},
@@ -4758,7 +4699,7 @@
 			"grepped_location": false,
 			"index": 303,
 			"kconfig": "EPOLL",
-			"line": 2471,
+			"line": 2505,
 			"name": "epoll_pwait",
 			"number": 303,
 			"origname": "epoll_pwait",
@@ -4766,7 +4707,9 @@
 				"int epfd",
 				"struct epoll_event *events",
 				"int maxevents",
-				"int timeout"
+				"int timeout",
+				"const sigset_t *sigmask",
+				"size_t sigsetsize"
 			],
 			"symbol": "sys_epoll_pwait"
 		},
@@ -4777,13 +4720,15 @@
 			"grepped_location": false,
 			"index": 304,
 			"kconfig": null,
-			"line": 236,
+			"line": 252,
 			"name": "utimensat",
 			"number": 304,
 			"origname": "utimensat_time32",
 			"signature": [
+				"unsigned int dfd",
 				"const char *filename",
-				"struct old_utimbuf32 *t"
+				"struct old_timespec32 *t",
+				"int flags"
 			],
 			"symbol": "sys_utimensat_time32"
 		},
@@ -4794,15 +4739,14 @@
 			"grepped_location": false,
 			"index": 305,
 			"kconfig": "SIGNALFD",
-			"line": 310,
+			"line": 322,
 			"name": "signalfd",
 			"number": 305,
 			"origname": "signalfd",
 			"signature": [
 				"int ufd",
 				"sigset_t *user_mask",
-				"size_t sizemask",
-				"int flags"
+				"size_t sizemask"
 			],
 			"symbol": "sys_signalfd"
 		},
@@ -4830,13 +4774,12 @@
 			"grepped_location": false,
 			"index": 307,
 			"kconfig": null,
-			"line": 427,
+			"line": 432,
 			"name": "eventfd",
 			"number": 307,
 			"origname": "eventfd",
 			"signature": [
-				"unsigned int count",
-				"int flags"
+				"unsigned int count"
 			],
 			"symbol": "sys_eventfd"
 		},
@@ -4847,17 +4790,17 @@
 			"grepped_location": false,
 			"index": 308,
 			"kconfig": null,
-			"line": 107,
+			"line": 115,
 			"name": "sync_file_range2",
 			"number": 308,
 			"origname": "ppc_sync_file_range2",
 			"signature": [
 				"int fd",
-				"u32 unused",
-				"u32 offset1",
-				"u32 offset2",
-				"size_t len",
-				"int advice"
+				"unsigned int flags",
+				"unsigned int offset1",
+				"unsigned int offset2",
+				"unsigned int nbytes1",
+				"unsigned int nbytes2"
 			],
 			"symbol": "sys_ppc_sync_file_range2"
 		},
@@ -4868,17 +4811,17 @@
 			"grepped_location": false,
 			"index": 309,
 			"kconfig": null,
-			"line": 115,
+			"line": 127,
 			"name": "fallocate",
 			"number": 309,
 			"origname": "ppc_fallocate",
 			"signature": [
 				"int fd",
-				"unsigned int flags",
-				"unsigned int offset1",
-				"unsigned int offset2",
-				"unsigned int nbytes1",
-				"unsigned int nbytes2"
+				"int mode",
+				"u32 offset1",
+				"u32 offset2",
+				"u32 len1",
+				"u32 len2"
 			],
 			"symbol": "sys_ppc_fallocate"
 		},
@@ -4889,13 +4832,15 @@
 			"grepped_location": false,
 			"index": 311,
 			"kconfig": null,
-			"line": 592,
+			"line": 602,
 			"name": "timerfd_settime",
 			"number": 311,
 			"origname": "timerfd_settime32",
 			"signature": [
 				"int ufd",
-				"struct __kernel_itimerspec *otmr"
+				"int flags",
+				"const struct old_itimerspec32 *utmr",
+				"struct old_itimerspec32 *otmr"
 			],
 			"symbol": "sys_timerfd_settime32"
 		},
@@ -4906,14 +4851,12 @@
 			"grepped_location": false,
 			"index": 312,
 			"kconfig": null,
-			"line": 602,
+			"line": 619,
 			"name": "timerfd_gettime",
 			"number": 312,
 			"origname": "timerfd_gettime32",
 			"signature": [
 				"int ufd",
-				"int flags",
-				"const struct old_itimerspec32 *utmr",
 				"struct old_itimerspec32 *otmr"
 			],
 			"symbol": "sys_timerfd_gettime32"
@@ -5048,14 +4991,16 @@
 			"grepped_location": false,
 			"index": 320,
 			"kconfig": null,
-			"line": 1088,
+			"line": 1094,
 			"name": "preadv",
 			"number": 320,
 			"origname": "preadv",
 			"signature": [
 				"unsigned long fd",
 				"const struct iovec *vec",
-				"unsigned long vlen"
+				"unsigned long vlen",
+				"unsigned long pos_l",
+				"unsigned long pos_h"
 			],
 			"symbol": "sys_preadv"
 		},
@@ -5066,7 +5011,7 @@
 			"grepped_location": false,
 			"index": 321,
 			"kconfig": null,
-			"line": 1102,
+			"line": 1114,
 			"name": "pwritev",
 			"number": 321,
 			"origname": "pwritev",
@@ -5075,8 +5020,7 @@
 				"const struct iovec *vec",
 				"unsigned long vlen",
 				"unsigned long pos_l",
-				"unsigned long pos_h",
-				"rwf_t flags"
+				"unsigned long pos_h"
 			],
 			"symbol": "sys_pwritev"
 		},
@@ -5087,11 +5031,12 @@
 			"grepped_location": false,
 			"index": 322,
 			"kconfig": null,
-			"line": 4078,
+			"line": 4118,
 			"name": "rt_tgsigqueueinfo",
 			"number": 322,
 			"origname": "rt_tgsigqueueinfo",
 			"signature": [
+				"pid_t tgid",
 				"pid_t pid",
 				"int sig",
 				"siginfo_t *uinfo"
@@ -5122,13 +5067,17 @@
 			"grepped_location": false,
 			"index": 324,
 			"kconfig": "FANOTIFY",
-			"line": 1400,
+			"line": 1924,
 			"name": "fanotify_mark",
 			"number": 324,
 			"origname": "fanotify_mark",
 			"signature": [
+				"int fanotify_fd",
 				"unsigned int flags",
-				"unsigned int event_f_flags"
+				"u32 mask_hi",
+				"u32 mask_lo",
+				"int dfd",
+				"const char *pathname"
 			],
 			"symbol": "sys_fanotify_mark"
 		},
@@ -5139,13 +5088,15 @@
 			"grepped_location": false,
 			"index": 325,
 			"kconfig": null,
-			"line": 1592,
+			"line": 1693,
 			"name": "prlimit64",
 			"number": 325,
 			"origname": "prlimit64",
 			"signature": [
+				"pid_t pid",
 				"unsigned int resource",
-				"struct rlimit *rlim"
+				"const struct rlimit64 *new_rlim",
+				"struct rlimit64 *old_rlim"
 			],
 			"symbol": "sys_prlimit64"
 		},
@@ -5227,15 +5178,14 @@
 			"grepped_location": false,
 			"index": 330,
 			"kconfig": "NET",
-			"line": 2020,
+			"line": 2026,
 			"name": "accept",
 			"number": 330,
 			"origname": "accept",
 			"signature": [
 				"int fd",
 				"struct sockaddr *upeer_sockaddr",
-				"int *upeer_addrlen",
-				"int flags"
+				"int *upeer_addrlen"
 			],
 			"symbol": "sys_accept"
 		},
@@ -5301,7 +5251,7 @@
 			"grepped_location": false,
 			"index": 334,
 			"kconfig": "NET",
-			"line": 2212,
+			"line": 2223,
 			"name": "send",
 			"number": 334,
 			"origname": "send",
@@ -5309,9 +5259,7 @@
 				"int fd",
 				"void *buff",
 				"size_t len",
-				"unsigned int flags",
-				"struct sockaddr *addr",
-				"int addr_len"
+				"unsigned int flags"
 			],
 			"symbol": "sys_send"
 		},
@@ -5343,7 +5291,7 @@
 			"grepped_location": false,
 			"index": 336,
 			"kconfig": "NET",
-			"line": 2269,
+			"line": 2280,
 			"name": "recv",
 			"number": 336,
 			"origname": "recv",
@@ -5351,9 +5299,7 @@
 				"int fd",
 				"void *ubuf",
 				"size_t size",
-				"unsigned int flags",
-				"struct sockaddr *addr",
-				"int *addr_len"
+				"unsigned int flags"
 			],
 			"symbol": "sys_recv"
 		},
@@ -5555,13 +5501,13 @@
 			"grepped_location": false,
 			"index": 347,
 			"kconfig": null,
-			"line": 1287,
+			"line": 1305,
 			"name": "clock_adjtime",
 			"number": 347,
 			"origname": "clock_adjtime32",
 			"signature": [
 				"clockid_t which_clock",
-				"struct old_timespec32 *tp"
+				"struct old_timex32 *utp"
 			],
 			"symbol": "sys_clock_adjtime32"
 		},
@@ -5645,7 +5591,7 @@
 			"grepped_location": false,
 			"index": 352,
 			"kconfig": "CROSS_MEMORY_ATTACH",
-			"line": 292,
+			"line": 299,
 			"name": "process_vm_writev",
 			"number": 352,
 			"origname": "process_vm_writev",
@@ -5666,14 +5612,14 @@
 			"grepped_location": false,
 			"index": 353,
 			"kconfig": "MODULES",
-			"line": 3066,
+			"line": 3220,
 			"name": "finit_module",
 			"number": 353,
 			"origname": "finit_module",
 			"signature": [
-				"void *umod",
-				"unsigned long len",
-				"const char *uargs"
+				"int fd",
+				"const char *uargs",
+				"int flags"
 			],
 			"symbol": "sys_finit_module"
 		},
@@ -5704,13 +5650,14 @@
 			"grepped_location": false,
 			"index": 355,
 			"kconfig": null,
-			"line": 1046,
+			"line": 1057,
 			"name": "sched_setattr",
 			"number": 355,
 			"origname": "sched_setattr",
 			"signature": [
 				"pid_t pid",
-				"struct sched_param *param"
+				"struct sched_attr *uattr",
+				"unsigned int flags"
 			],
 			"symbol": "sys_sched_setattr"
 		},
@@ -5721,13 +5668,15 @@
 			"grepped_location": false,
 			"index": 356,
 			"kconfig": null,
-			"line": 1122,
+			"line": 1196,
 			"name": "sched_getattr",
 			"number": 356,
 			"origname": "sched_getattr",
 			"signature": [
 				"pid_t pid",
-				"struct sched_param *param"
+				"struct sched_attr *uattr",
+				"unsigned int usize",
+				"unsigned int flags"
 			],
 			"symbol": "sys_sched_getattr"
 		},
@@ -5829,14 +5778,16 @@
 			"grepped_location": false,
 			"index": 362,
 			"kconfig": null,
-			"line": 2172,
+			"line": 2180,
 			"name": "execveat",
 			"number": 362,
 			"origname": "execveat",
 			"signature": [
+				"int fd",
 				"const char *filename",
 				"const char *const *argv",
-				"const char *const *envp"
+				"const char *const *envp",
+				"int flags"
 			],
 			"symbol": "sys_execveat"
 		},
@@ -5881,13 +5832,14 @@
 			"grepped_location": false,
 			"index": 378,
 			"kconfig": "MMU",
-			"line": 659,
+			"line": 664,
 			"name": "mlock2",
 			"number": 378,
 			"origname": "mlock2",
 			"signature": [
 				"unsigned long start",
-				"size_t len"
+				"size_t len",
+				"int flags"
 			],
 			"symbol": "sys_mlock2"
 		},
@@ -5919,7 +5871,7 @@
 			"grepped_location": false,
 			"index": 380,
 			"kconfig": null,
-			"line": 1094,
+			"line": 1102,
 			"name": "preadv2",
 			"number": 380,
 			"origname": "preadv2",
@@ -5928,7 +5880,8 @@
 				"const struct iovec *vec",
 				"unsigned long vlen",
 				"unsigned long pos_l",
-				"unsigned long pos_h"
+				"unsigned long pos_h",
+				"rwf_t flags"
 			],
 			"symbol": "sys_preadv2"
 		},
@@ -5939,7 +5892,7 @@
 			"grepped_location": false,
 			"index": 381,
 			"kconfig": null,
-			"line": 1114,
+			"line": 1122,
 			"name": "pwritev2",
 			"number": 381,
 			"origname": "pwritev2",
@@ -5948,7 +5901,8 @@
 				"const struct iovec *vec",
 				"unsigned long vlen",
 				"unsigned long pos_l",
-				"unsigned long pos_h"
+				"unsigned long pos_h",
+				"rwf_t flags"
 			],
 			"symbol": "sys_pwritev2"
 		},
@@ -6037,14 +5991,15 @@
 			"grepped_location": false,
 			"index": 394,
 			"kconfig": "SYSVIPC",
-			"line": 624,
+			"line": 1705,
 			"name": "semctl",
 			"number": 394,
 			"origname": "semctl",
 			"signature": [
-				"key_t key",
-				"int nsems",
-				"int semflg"
+				"int semid",
+				"int semnum",
+				"int cmd",
+				"unsigned long arg"
 			],
 			"symbol": "sys_semctl"
 		},
@@ -6073,14 +6028,14 @@
 			"grepped_location": false,
 			"index": 396,
 			"kconfig": "SYSVIPC",
-			"line": 842,
+			"line": 1291,
 			"name": "shmctl",
 			"number": 396,
 			"origname": "shmctl",
 			"signature": [
-				"key_t key",
-				"size_t size",
-				"int shmflg"
+				"int shmid",
+				"int cmd",
+				"struct shmid_ds *buf"
 			],
 			"symbol": "sys_shmctl"
 		},
@@ -6181,13 +6136,14 @@
 			"grepped_location": false,
 			"index": 402,
 			"kconfig": "SYSVIPC",
-			"line": 315,
+			"line": 640,
 			"name": "msgctl",
 			"number": 402,
 			"origname": "msgctl",
 			"signature": [
-				"key_t key",
-				"int msgflg"
+				"int msqid",
+				"int cmd",
+				"struct msqid_ds *buf"
 			],
 			"symbol": "sys_msgctl"
 		},
@@ -6198,13 +6154,13 @@
 			"grepped_location": false,
 			"index": 403,
 			"kconfig": null,
-			"line": 1113,
+			"line": 1132,
 			"name": "clock_gettime",
 			"number": 403,
 			"origname": "clock_gettime",
 			"signature": [
 				"const clockid_t which_clock",
-				"const struct __kernel_timespec *tp"
+				"struct __kernel_timespec *tp"
 			],
 			"symbol": "sys_clock_gettime"
 		},
@@ -6249,13 +6205,13 @@
 			"grepped_location": false,
 			"index": 406,
 			"kconfig": null,
-			"line": 1162,
+			"line": 1252,
 			"name": "clock_getres",
 			"number": 406,
 			"origname": "clock_getres",
 			"signature": [
 				"const clockid_t which_clock",
-				"struct __kernel_timex *utx"
+				"struct __kernel_timespec *tp"
 			],
 			"symbol": "sys_clock_getres"
 		},
@@ -6266,13 +6222,15 @@
 			"grepped_location": false,
 			"index": 407,
 			"kconfig": null,
-			"line": 1323,
+			"line": 1373,
 			"name": "clock_nanosleep",
 			"number": 407,
 			"origname": "clock_nanosleep",
 			"signature": [
-				"clockid_t which_clock",
-				"struct old_timespec32 *tp"
+				"const clockid_t which_clock",
+				"int flags",
+				"const struct __kernel_timespec *rqtp",
+				"struct __kernel_timespec *rmtp"
 			],
 			"symbol": "sys_clock_nanosleep"
 		},
@@ -6283,14 +6241,13 @@
 			"grepped_location": false,
 			"index": 408,
 			"kconfig": "POSIX_TIMERS",
-			"line": 530,
+			"line": 719,
 			"name": "timer_gettime",
 			"number": 408,
 			"origname": "timer_gettime",
 			"signature": [
-				"const clockid_t which_clock",
-				"struct sigevent *timer_event_spec",
-				"timer_t *created_timer_id"
+				"timer_t timer_id",
+				"struct __kernel_itimerspec *setting"
 			],
 			"symbol": "sys_timer_gettime"
 		},
@@ -6301,12 +6258,15 @@
 			"grepped_location": false,
 			"index": 409,
 			"kconfig": "POSIX_TIMERS",
-			"line": 767,
+			"line": 940,
 			"name": "timer_settime",
 			"number": 409,
 			"origname": "timer_settime",
 			"signature": [
-				"timer_t timer_id"
+				"timer_t timer_id",
+				"int flags",
+				"const struct __kernel_itimerspec *new_setting",
+				"struct __kernel_itimerspec *old_setting"
 			],
 			"symbol": "sys_timer_settime"
 		},
@@ -6317,14 +6277,12 @@
 			"grepped_location": false,
 			"index": 410,
 			"kconfig": null,
-			"line": 574,
+			"line": 592,
 			"name": "timerfd_gettime",
 			"number": 410,
 			"origname": "timerfd_gettime",
 			"signature": [
 				"int ufd",
-				"int flags",
-				"const struct __kernel_itimerspec *utmr",
 				"struct __kernel_itimerspec *otmr"
 			],
 			"symbol": "sys_timerfd_gettime"
@@ -6336,13 +6294,15 @@
 			"grepped_location": false,
 			"index": 411,
 			"kconfig": null,
-			"line": 410,
+			"line": 574,
 			"name": "timerfd_settime",
 			"number": 411,
 			"origname": "timerfd_settime",
 			"signature": [
-				"int clockid",
-				"int flags"
+				"int ufd",
+				"int flags",
+				"const struct __kernel_itimerspec *utmr",
+				"struct __kernel_itimerspec *otmr"
 			],
 			"symbol": "sys_timerfd_settime"
 		},
@@ -6372,7 +6332,7 @@
 			"grepped_location": false,
 			"index": 413,
 			"kconfig": null,
-			"line": 726,
+			"line": 795,
 			"name": "pselect6",
 			"number": 413,
 			"origname": "pselect6",
@@ -6381,7 +6341,8 @@
 				"fd_set *inp",
 				"fd_set *outp",
 				"fd_set *exp",
-				"struct __kernel_old_timeval *tvp"
+				"struct __kernel_timespec *tsp",
+				"void *sig"
 			],
 			"symbol": "sys_pselect6"
 		},
@@ -6392,14 +6353,16 @@
 			"grepped_location": false,
 			"index": 414,
 			"kconfig": null,
-			"line": 1069,
+			"line": 1102,
 			"name": "ppoll",
 			"number": 414,
 			"origname": "ppoll",
 			"signature": [
 				"struct pollfd *ufds",
 				"unsigned int nfds",
-				"int timeout_msecs"
+				"struct __kernel_timespec *tsp",
+				"const sigset_t *sigmask",
+				"size_t sigsetsize"
 			],
 			"symbol": "sys_ppoll"
 		},
@@ -6410,14 +6373,17 @@
 			"grepped_location": false,
 			"index": 416,
 			"kconfig": "AIO",
-			"line": 2175,
+			"line": 2276,
 			"name": "io_pgetevents",
 			"number": 416,
 			"origname": "io_pgetevents",
 			"signature": [
 				"aio_context_t ctx_id",
-				"struct iocb *iocb",
-				"struct io_event *result"
+				"long min_nr",
+				"long nr",
+				"struct io_event *events",
+				"struct __kernel_timespec *timeout",
+				"const struct __aio_sigset *usig"
 			],
 			"symbol": "sys_io_pgetevents"
 		},
@@ -6448,12 +6414,16 @@
 			"grepped_location": false,
 			"index": 418,
 			"kconfig": "POSIX_MQUEUE",
-			"line": 954,
+			"line": 1284,
 			"name": "mq_timedsend",
 			"number": 418,
 			"origname": "mq_timedsend",
 			"signature": [
-				"const char *u_name"
+				"mqd_t mqdes",
+				"const char *u_msg_ptr",
+				"size_t msg_len",
+				"unsigned int msg_prio",
+				"const struct __kernel_timespec *u_abs_timeout"
 			],
 			"symbol": "sys_mq_timedsend"
 		},
@@ -6464,15 +6434,15 @@
 			"grepped_location": false,
 			"index": 419,
 			"kconfig": "POSIX_MQUEUE",
-			"line": 1284,
+			"line": 1298,
 			"name": "mq_timedreceive",
 			"number": 419,
 			"origname": "mq_timedreceive",
 			"signature": [
 				"mqd_t mqdes",
-				"const char *u_msg_ptr",
+				"char *u_msg_ptr",
 				"size_t msg_len",
-				"unsigned int msg_prio",
+				"unsigned int *u_msg_prio",
 				"const struct __kernel_timespec *u_abs_timeout"
 			],
 			"symbol": "sys_mq_timedreceive"
@@ -6543,12 +6513,13 @@
 			"grepped_location": false,
 			"index": 423,
 			"kconfig": null,
-			"line": 1619,
+			"line": 1676,
 			"name": "sched_rr_get_interval",
 			"number": 423,
 			"origname": "sched_rr_get_interval",
 			"signature": [
-				"int policy"
+				"pid_t pid",
+				"struct __kernel_timespec *interval"
 			],
 			"symbol": "sys_sched_rr_get_interval"
 		},
@@ -6559,13 +6530,15 @@
 			"grepped_location": false,
 			"index": 424,
 			"kconfig": null,
-			"line": 3832,
+			"line": 3907,
 			"name": "pidfd_send_signal",
 			"number": 424,
 			"origname": "pidfd_send_signal",
 			"signature": [
-				"pid_t pid",
-				"int sig"
+				"int pidfd",
+				"int sig",
+				"siginfo_t *info",
+				"unsigned int flags"
 			],
 			"symbol": "sys_pidfd_send_signal"
 		},
@@ -6651,14 +6624,16 @@
 			"grepped_location": false,
 			"index": 429,
 			"kconfig": null,
-			"line": 4065,
+			"line": 4193,
 			"name": "move_mount",
 			"number": 429,
 			"origname": "move_mount",
 			"signature": [
-				"int fs_fd",
-				"unsigned int flags",
-				"unsigned int attr_flags"
+				"int from_dfd",
+				"const char *from_pathname",
+				"int to_dfd",
+				"const char *to_pathname",
+				"unsigned int flags"
 			],
 			"symbol": "sys_move_mount"
 		},
@@ -6686,14 +6661,16 @@
 			"grepped_location": false,
 			"index": 431,
 			"kconfig": null,
-			"line": 158,
+			"line": 345,
 			"name": "fsconfig",
 			"number": 431,
 			"origname": "fsconfig",
 			"signature": [
-				"int dfd",
-				"const char *path",
-				"unsigned int flags"
+				"int fd",
+				"unsigned int cmd",
+				"const char *_key",
+				"const void *_value",
+				"int aux"
 			],
 			"symbol": "sys_fsconfig"
 		},
@@ -6722,12 +6699,13 @@
 			"grepped_location": false,
 			"index": 433,
 			"kconfig": null,
-			"line": 115,
+			"line": 158,
 			"name": "fspick",
 			"number": 433,
 			"origname": "fspick",
 			"signature": [
-				"const char *_fs_name",
+				"int dfd",
+				"const char *path",
 				"unsigned int flags"
 			],
 			"symbol": "sys_fspick"
@@ -6756,16 +6734,13 @@
 			"grepped_location": false,
 			"index": 435,
 			"kconfig": null,
-			"line": 2892,
+			"line": 3064,
 			"name": "clone3",
 			"number": 435,
 			"origname": "clone3",
 			"signature": [
-				"unsigned long clone_flags",
-				"unsigned long newsp",
-				"int *parent_tidptr",
-				"unsigned long tls",
-				"int *child_tidptr"
+				"struct clone_args *uargs",
+				"size_t size"
 			],
 			"symbol": "sys_clone3"
 		},
@@ -6776,12 +6751,14 @@
 			"grepped_location": false,
 			"index": 436,
 			"kconfig": null,
-			"line": 1551,
+			"line": 1589,
 			"name": "close_range",
 			"number": 436,
 			"origname": "close_range",
 			"signature": [
-				"unsigned int fd"
+				"unsigned int fd",
+				"unsigned int max_fd",
+				"unsigned int flags"
 			],
 			"symbol": "sys_close_range"
 		},
@@ -6792,15 +6769,15 @@
 			"grepped_location": false,
 			"index": 437,
 			"kconfig": null,
-			"line": 1442,
+			"line": 1450,
 			"name": "openat2",
 			"number": 437,
 			"origname": "openat2",
 			"signature": [
 				"int dfd",
 				"const char *filename",
-				"int flags",
-				"umode_t mode"
+				"struct open_how *how",
+				"size_t usize"
 			],
 			"symbol": "sys_openat2"
 		},
@@ -6811,12 +6788,13 @@
 			"grepped_location": false,
 			"index": 438,
 			"kconfig": null,
-			"line": 629,
+			"line": 746,
 			"name": "pidfd_getfd",
 			"number": 438,
 			"origname": "pidfd_getfd",
 			"signature": [
-				"pid_t pid",
+				"int pidfd",
+				"int fd",
 				"unsigned int flags"
 			],
 			"symbol": "sys_pidfd_getfd"
@@ -6828,14 +6806,15 @@
 			"grepped_location": false,
 			"index": 439,
 			"kconfig": null,
-			"line": 540,
+			"line": 545,
 			"name": "faccessat2",
 			"number": 439,
 			"origname": "faccessat2",
 			"signature": [
 				"int dfd",
 				"const char *filename",
-				"int mode"
+				"int mode",
+				"int flags"
 			],
 			"symbol": "sys_faccessat2"
 		},
@@ -6846,14 +6825,16 @@
 			"grepped_location": false,
 			"index": 440,
 			"kconfig": "ADVISE_SYSCALLS",
-			"line": 1482,
+			"line": 1487,
 			"name": "process_madvise",
 			"number": 440,
 			"origname": "process_madvise",
 			"signature": [
-				"unsigned long start",
-				"size_t len_in",
-				"int behavior"
+				"int pidfd",
+				"const struct iovec *vec",
+				"size_t vlen",
+				"int behavior",
+				"unsigned int flags"
 			],
 			"symbol": "sys_process_madvise"
 		},
@@ -6864,7 +6845,7 @@
 			"grepped_location": false,
 			"index": 441,
 			"kconfig": "EPOLL",
-			"line": 2505,
+			"line": 2516,
 			"name": "epoll_pwait2",
 			"number": 441,
 			"origname": "epoll_pwait2",
@@ -6872,7 +6853,7 @@
 				"int epfd",
 				"struct epoll_event *events",
 				"int maxevents",
-				"int timeout",
+				"const struct __kernel_timespec *timeout",
 				"const sigset_t *sigmask",
 				"size_t sigsetsize"
 			],
@@ -6905,13 +6886,13 @@
 			"grepped_location": false,
 			"index": 443,
 			"kconfig": "QUOTACTL",
-			"line": 917,
+			"line": 973,
 			"name": "quotactl_fd",
 			"number": 443,
 			"origname": "quotactl_fd",
 			"signature": [
+				"unsigned int fd",
 				"unsigned int cmd",
-				"const char *special",
 				"qid_t id",
 				"void *addr"
 			],
@@ -6942,13 +6923,14 @@
 			"grepped_location": false,
 			"index": 445,
 			"kconfig": "SECURITY_LANDLOCK",
-			"line": 177,
+			"line": 407,
 			"name": "landlock_add_rule",
 			"number": 445,
 			"origname": "landlock_add_rule",
 			"signature": [
-				"const struct landlock_ruleset_attr *const attr",
-				"const size_t size",
+				"const int ruleset_fd",
+				"const enum landlock_rule_type rule_type",
+				"const void *const rule_attr",
 				"const __u32 flags"
 			],
 			"symbol": "sys_landlock_add_rule"
@@ -6960,14 +6942,12 @@
 			"grepped_location": false,
 			"index": 446,
 			"kconfig": "SECURITY_LANDLOCK",
-			"line": 407,
+			"line": 466,
 			"name": "landlock_restrict_self",
 			"number": 446,
 			"origname": "landlock_restrict_self",
 			"signature": [
 				"const int ruleset_fd",
-				"const enum landlock_rule_type rule_type",
-				"const void *const rule_attr",
 				"const __u32 flags"
 			],
 			"symbol": "sys_landlock_restrict_self"
@@ -6996,15 +6976,16 @@
 			"grepped_location": false,
 			"index": 449,
 			"kconfig": "FUTEX",
-			"line": 414,
+			"line": 290,
 			"name": "futex_waitv",
 			"number": 449,
 			"origname": "futex_waitv",
 			"signature": [
 				"struct futex_waitv *waiters",
+				"unsigned int nr_futexes",
 				"unsigned int flags",
-				"int nr_wake",
-				"int nr_requeue"
+				"struct __kernel_timespec *timeout",
+				"clockid_t clockid"
 			],
 			"symbol": "sys_futex_waitv"
 		},
@@ -7034,13 +7015,15 @@
 			"grepped_location": false,
 			"index": 452,
 			"kconfig": null,
-			"line": 673,
+			"line": 712,
 			"name": "fchmodat2",
 			"number": 452,
 			"origname": "fchmodat2",
 			"signature": [
-				"unsigned int fd",
-				"umode_t mode"
+				"int dfd",
+				"const char *filename",
+				"umode_t mode",
+				"unsigned int flags"
 			],
 			"symbol": "sys_fchmodat2"
 		},
@@ -7051,16 +7034,15 @@
 			"grepped_location": false,
 			"index": 454,
 			"kconfig": "FUTEX",
-			"line": 290,
+			"line": 338,
 			"name": "futex_wake",
 			"number": 454,
 			"origname": "futex_wake",
 			"signature": [
-				"struct futex_waitv *waiters",
-				"unsigned int nr_futexes",
-				"unsigned int flags",
-				"struct __kernel_timespec *timeout",
-				"clockid_t clockid"
+				"void *uaddr",
+				"unsigned long mask",
+				"int nr",
+				"unsigned int flags"
 			],
 			"symbol": "sys_futex_wake"
 		},
@@ -7071,15 +7053,17 @@
 			"grepped_location": false,
 			"index": 455,
 			"kconfig": "FUTEX",
-			"line": 338,
+			"line": 370,
 			"name": "futex_wait",
 			"number": 455,
 			"origname": "futex_wait",
 			"signature": [
 				"void *uaddr",
+				"unsigned long val",
 				"unsigned long mask",
-				"int nr",
-				"unsigned int flags"
+				"unsigned int flags",
+				"struct __kernel_timespec *timeout",
+				"clockid_t clockid"
 			],
 			"symbol": "sys_futex_wait"
 		},
@@ -7090,17 +7074,15 @@
 			"grepped_location": false,
 			"index": 456,
 			"kconfig": "FUTEX",
-			"line": 370,
+			"line": 414,
 			"name": "futex_requeue",
 			"number": 456,
 			"origname": "futex_requeue",
 			"signature": [
-				"void *uaddr",
-				"unsigned long val",
-				"unsigned long mask",
+				"struct futex_waitv *waiters",
 				"unsigned int flags",
-				"struct __kernel_timespec *timeout",
-				"clockid_t clockid"
+				"int nr_wake",
+				"int nr_requeue"
 			],
 			"symbol": "sys_futex_requeue"
 		},
@@ -7149,14 +7131,14 @@
 			"grepped_location": false,
 			"index": 459,
 			"kconfig": "SECURITY",
-			"line": 55,
+			"line": 77,
 			"name": "lsm_get_self_attr",
 			"number": 459,
 			"origname": "lsm_get_self_attr",
 			"signature": [
 				"unsigned int attr",
 				"struct lsm_ctx *ctx",
-				"u32 size",
+				"u32 *size",
 				"u32 flags"
 			],
 			"symbol": "sys_lsm_get_self_attr"
@@ -7187,18 +7169,17 @@
 			"grepped_location": false,
 			"index": 461,
 			"kconfig": "SECURITY",
-			"line": 77,
+			"line": 96,
 			"name": "lsm_list_modules",
 			"number": 461,
 			"origname": "lsm_list_modules",
 			"signature": [
-				"unsigned int attr",
-				"struct lsm_ctx *ctx",
+				"u64 *ids",
 				"u32 *size",
 				"u32 flags"
 			],
 			"symbol": "sys_lsm_list_modules"
 		}
 	],
-	"systrack_version": "0.5.1"
+	"systrack_version": "0.6"
 }

@@ -516,6 +516,9 @@ Detected kernel version: 5.18.0 (from vmlinux)
 [D] Location needs grepping (bad): gettid (__ia32_sys_gettid) -> include/linux/sched.h:1547
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-i386-v5.18'), '0xc1029f41', '0xc1029f42', '0xc1029f43', '0xc1029f44', '0xc1029f45', '0xc1029f46', '0xc1029f47', '0xc1029f48', '0xc1029f49', '0xc1029f4a']
 [D] Location needs grepping (bad): ia32_truncate64 (__ia32_sys_ia32_truncate64) -> include/linux/syscalls.h:1347
+[FATAL] Syscall(index=20, number=20, name='getpid', symbol='__ia32_sys_getpid', defined at /mnt/m2data/linux-worktrees/v5.18/include/linux/sched.h:1599, takes ? args)
+[FATAL] Syscall(index=224, number=224, name='gettid', symbol='__ia32_sys_gettid', defined at /mnt/m2data/linux-worktrees/v5.18/include/linux/sched.h:1547, takes ? args)
+[FATAL] Syscall(index=193, number=193, name='truncate64', symbol='__ia32_sys_ia32_truncate64', defined at /mnt/m2data/linux-worktrees/v5.18/include/linux/syscalls.h:1347, takes ? args)
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: getpid -> kernel/sys.c:933
 [W] Location found through grepping: gettid -> kernel/sys.c:939
