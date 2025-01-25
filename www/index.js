@@ -608,8 +608,9 @@ function toggleTheme() {
 }
 
 function restoreSettings() {
-	/* This one is global */
-	compactSignature = localStorage.getItem('compactSignature') === 'true'
+	/* This one is global and defaults to true */
+	compactSignature = localStorage.getItem('compactSignature')
+	compactSignature = compactSignature === null ? true : compactSignature === 'true'
 
 	let theme = localStorage.getItem('theme')
 	if (!theme)
