@@ -2,7 +2,7 @@
 [D] Running command: ['readelf', '-Ws', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v5.10')]
 [D] Running command: ['readelf', '-WS', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v5.10')]
 Detected kernel version: 5.10.0 (from vmlinux)
-[D] Arch: ArchX86(name='x86', abi='x32', compat=True, ...)
+[D] Arch: ArchX86(name='x86', bits32=False, abi='x32', compat=True, ...)
 [D] Syscall table: Symbol("x32_sys_call_table" at 0xffffffff82002080, type=OBJECT, size=0x1120)
 [I] Syscall table (x32_sys_call_table) is 4384 bytes, 548 entries
 [D] Found ni_syscall: Symbol("__do_sys_ni_syscall" at 0xffffffff810019f0, type=FUNC, size=0x8)
@@ -21,7 +21,6 @@ Detected kernel version: 5.10.0 (from vmlinux)
 [D] Preferring __do_sys_getuid over __ia32_sys_getuid
 [D] Preferring __do_sys_inotify_init over __ia32_sys_inotify_init
 [D] Preferring __do_sys_munlockall over __ia32_sys_munlockall
-[D] Preferring __do_sys_ni_syscall over __ia32_sys_ni_syscall
 [D] Preferring __do_sys_ni_syscall over __ia32_sys_ni_syscall
 [D] Preferring __do_sys_pause over __ia32_sys_pause
 [D] Preferring __do_sys_restart_syscall over __ia32_sys_restart_syscall

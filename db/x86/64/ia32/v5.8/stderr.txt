@@ -2,7 +2,7 @@
 [D] Running command: ['readelf', '-Ws', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v5.8')]
 [D] Running command: ['readelf', '-WS', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v5.8')]
 Detected kernel version: 5.8.0 (from vmlinux)
-[D] Arch: ArchX86(name='x86', abi='ia32', compat=True, ...)
+[D] Arch: ArchX86(name='x86', bits32=False, abi='ia32', compat=True, ...)
 [D] Syscall table: Symbol("ia32_sys_call_table" at 0xffffffff820012a0, type=OBJECT, size=0xdc0)
 [I] Syscall table (ia32_sys_call_table) is 3520 bytes, 440 entries
 [D] Found ni_syscall: Symbol("__do_sys_ni_syscall" at 0xffffffff81001e30, type=FUNC, size=0x8)
@@ -43,7 +43,7 @@ Detected kernel version: 5.8.0 (from vmlinux)
 [D] Preferring __ia32_sys_inotify_init over __x64_sys_inotify_init
 [D] Preferring __ia32_sys_munlockall over __do_sys_munlockall
 [D] Preferring __ia32_sys_munlockall over __x64_sys_munlockall
-[D] Preferring __ia32_sys_ni_syscall over __do_sys_ni_syscall
+[D] Preferring __ia32_sys_ni_syscall over __x64_sys_ni_syscall
 [D] Preferring __ia32_sys_ni_syscall over __x64_sys_ni_syscall
 [D] Preferring __ia32_sys_pause over __do_sys_pause
 [D] Preferring __ia32_sys_pause over __x64_sys_pause
@@ -61,6 +61,7 @@ Detected kernel version: 5.8.0 (from vmlinux)
 [D] Preferring __ia32_sys_vfork over __x64_sys_vfork
 [D] Preferring __ia32_sys_vhangup over __do_sys_vhangup
 [D] Preferring __ia32_sys_vhangup over __x64_sys_vhangup
+[D] Preferring __x64_sys_ni_syscall over __do_sys_ni_syscall
 [W] Interesting! Vaddr found 2 times: Symbol("__ia32_compat_sys_fcntl64" at 0xffffffff81229f60, type=FUNC, size=0x11)
 [D] ia32_sys_call_table[0]: Symbol("__ia32_sys_restart_syscall" at 0xffffffff81073760, type=FUNC, size=0x16)
 [D] ia32_sys_call_table[1]: Symbol("__ia32_sys_exit" at 0xffffffff8106a420, type=FUNC, size=0x12)
