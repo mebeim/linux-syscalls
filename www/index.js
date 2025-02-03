@@ -163,6 +163,8 @@ function humanArchName(name, bits) {
 		name = 'MIPS'
 	} else if (name === 'powerpc') {
 		name = 'PowerPC'
+	} else if (name === 'riscv') {
+		name = 'RISC-V'
 	}
 
 	return `${name} ${bits}-bit`
@@ -185,6 +187,9 @@ function humanAbiName(abi) {
 		return abi.toUpperCase()
 	// powerpc
 	if (abi === 'spu' || abi === 'ppc64' || abi === 'ppc32')
+		return abi.toUpperCase()
+	// riscv
+	if (abi === 'rv64' || abi === 'rv32')
 		return abi.toUpperCase()
 	return abi
 }
