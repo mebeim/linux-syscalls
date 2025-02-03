@@ -464,9 +464,6 @@ Detected kernel version: 5.10.0 (from vmlinux)
 [D] Location needs grepping (bad): pkey_free (__arm64_sys_pkey_free) -> kernel/sys_ni.c:351
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.10'), '0xffff8000100bbaa5', '0xffff8000100bbaa6', '0xffff8000100bbaa7', '0xffff8000100bbaa8', '0xffff8000100bbaa9', '0xffff8000100bbaaa', '0xffff8000100bbaab', '0xffff8000100bbaac', '0xffff8000100bbaad', '0xffff8000100bbaae', '0xffff8000100bbaaf', '0xffff8000100bbab0', '0xffff8000100bbab1', '0xffff8000100bbab2', '0xffff8000100bbab3', '0xffff8000100bbab4', '0xffff8000100bbab5']
 [D] Location needs grepping (bad): pkey_mprotect (__arm64_sys_pkey_mprotect) -> kernel/sys_ni.c:349
-[FATAL] Syscall(index=289, number=289, name='pkey_alloc', symbol='__arm64_sys_pkey_alloc', defined at /mnt/m2data/linux-worktrees/v5.10/kernel/sys_ni.c:350, takes ? args)
-[FATAL] Syscall(index=290, number=290, name='pkey_free', symbol='__arm64_sys_pkey_free', defined at /mnt/m2data/linux-worktrees/v5.10/kernel/sys_ni.c:351, takes ? args)
-[FATAL] Syscall(index=288, number=288, name='pkey_mprotect', symbol='__arm64_sys_pkey_mprotect', defined at /mnt/m2data/linux-worktrees/v5.10/kernel/sys_ni.c:349, takes ? args)
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/arm64', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: pkey_alloc -> mm/mprotect.c:655
 [W] Location found through grepping: pkey_free -> mm/mprotect.c:685

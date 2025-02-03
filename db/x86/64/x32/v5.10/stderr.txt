@@ -21,7 +21,6 @@ Detected kernel version: 5.10.0 (from vmlinux)
 [D] Preferring __do_sys_getuid over __ia32_sys_getuid
 [D] Preferring __do_sys_inotify_init over __ia32_sys_inotify_init
 [D] Preferring __do_sys_munlockall over __ia32_sys_munlockall
-[D] Preferring __do_sys_ni_syscall over __ia32_sys_ni_syscall
 [D] Preferring __do_sys_pause over __ia32_sys_pause
 [D] Preferring __do_sys_restart_syscall over __ia32_sys_restart_syscall
 [D] Preferring __do_sys_sched_yield over __ia32_sys_sched_yield
@@ -42,6 +41,7 @@ Detected kernel version: 5.10.0 (from vmlinux)
 [D] Preferring __x64_sys_inotify_init over __do_sys_inotify_init
 [D] Preferring __x64_sys_munlockall over __do_sys_munlockall
 [D] Preferring __x64_sys_ni_syscall over __do_sys_ni_syscall
+[D] Preferring __x64_sys_ni_syscall over __ia32_sys_ni_syscall
 [D] Preferring __x64_sys_pause over __do_sys_pause
 [D] Preferring __x64_sys_restart_syscall over __do_sys_restart_syscall
 [D] Preferring __x64_sys_sched_yield over __do_sys_sched_yield
@@ -630,9 +630,6 @@ Detected kernel version: 5.10.0 (from vmlinux)
 [D] Location found through full-range adjustment: recvmsg (__x32_compat_sys_recvmsg+0x9) -> net/compat.c:379
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v5.10'), '0xffffffff818a1011', '0xffffffff818a1012', '0xffffffff818a1013', '0xffffffff818a1014', '0xffffffff818a1015', '0xffffffff818a1016', '0xffffffff818a1017', '0xffffffff818a1018', '0xffffffff818a1019', '0xffffffff818a101a', '0xffffffff818a101b', '0xffffffff818a101c', '0xffffffff818a101d', '0xffffffff818a101e', '0xffffffff818a101f', '0xffffffff818a1020', '0xffffffff818a1021', '0xffffffff818a1022', '0xffffffff818a1023', '0xffffffff818a1024', '0xffffffff818a1025']
 [D] Location found through full-range adjustment: sendmsg (__x32_compat_sys_sendmsg+0x9) -> net/compat.c:351
-[FATAL] Syscall(index=221, number=1073742045, name='fadvise64', symbol='__x64_sys_fadvise64', defined at /mnt/m2data/linux-worktrees/v5.10/mm/fadvise.c:206, takes ? args, depends on CONFIG_ADVISE_SYSCALLS)
-[FATAL] Syscall(index=534, number=1073742358, name='preadv64', symbol='__x32_compat_sys_preadv64', defined at /mnt/m2data/linux-worktrees/v5.10/fs/read_write.c:1113, takes ? args)
-[FATAL] Syscall(index=535, number=1073742359, name='pwritev64', symbol='__x32_compat_sys_pwritev64', defined at /mnt/m2data/linux-worktrees/v5.10/fs/read_write.c:1154, takes ? args)
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '(\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(|\\basmlinkage\\s*(unsigned\\s+)?\\w+\\s*sys32_x32_\\w+\\s*\\()\\s*\\w+')
 [W] Location found through grepping: fadvise64 -> mm/fadvise.c:213
 [W] Location found through grepping: preadv64 -> fs/read_write.c:1105

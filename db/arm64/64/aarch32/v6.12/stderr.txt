@@ -486,8 +486,6 @@ Detected kernel version: 6.12.0 (from vmlinux)
 [D] Location needs grepping (bad): map_shadow_stack (__arm64_sys_map_shadow_stack) -> kernel/sys_ni.c:294
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v6.12'), '0xffff8000800d3af1', '0xffff8000800d3af2', '0xffff8000800d3af3', '0xffff8000800d3af4', '0xffff8000800d3af5']
 [D] Location needs grepping (bad): pciconfig_iobase (__arm64_sys_pciconfig_iobase) -> kernel/sys_ni.c:280
-[FATAL] Syscall(index=453, number=453, name='map_shadow_stack', symbol='__arm64_sys_map_shadow_stack', defined at /mnt/m2data/linux-worktrees/v6.12/kernel/sys_ni.c:294, takes ? args, depends on CONFIG_X86_USER_SHADOW_STACK)
-[FATAL] Syscall(index=271, number=271, name='pciconfig_iobase', symbol='__arm64_sys_pciconfig_iobase', defined at /mnt/m2data/linux-worktrees/v6.12/kernel/sys_ni.c:280, takes ? args)
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/arm64', '--glob', '*.c', '\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [I] Location could not be found through grepping: map_shadow_stack (orig name map_shadow_stack)
 [I] Location could not be found through grepping: pciconfig_iobase (orig name pciconfig_iobase)

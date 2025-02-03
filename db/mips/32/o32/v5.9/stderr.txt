@@ -934,14 +934,6 @@ Detected kernel version: 5.9.0 (from vmlinux)
 [D] Location needs grepping (bad): syscall (sys_syscall) -> arch/mips/kernel/scall32-o32.S:205
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-mips-v5.9'), '0x8010d219', '0x8010d21a', '0x8010d21b', '0x8010d21c', '0x8010d21d', '0x8010d21e', '0x8010d21f', '0x8010d220', '0x8010d221', '0x8010d222', '0x8010d223', '0x8010d224', '0x8010d225', '0x8010d226', '0x8010d227', '0x8010d228', '0x8010d229', '0x8010d22a', '0x8010d22b', '0x8010d22c', '0x8010d22d', '0x8010d22e', '0x8010d22f', '0x8010d230', '0x8010d231', '0x8010d232', '0x8010d233', '0x8010d234', '0x8010d235', '0x8010d236', '0x8010d237', '0x8010d238', '0x8010d239', '0x8010d23a', '0x8010d23b', '0x8010d23c', '0x8010d23d']
 [D] Location needs grepping (invalid): sysmips (__sys_sysmips) -> None:None
-[FATAL] Syscall(index=120, number=4120, name='clone', symbol='__sys_clone', defined at ??:?, takes ? args)
-[FATAL] Syscall(index=435, number=4435, name='clone3', symbol='__sys_clone3', defined at ??:?, takes ? args)
-[FATAL] Syscall(index=2, number=4002, name='fork', symbol='__sys_fork', defined at ??:?, takes ? args, depends on CONFIG_MMU)
-[FATAL] Syscall(index=20, number=4020, name='getpid', symbol='sys_getpid', defined at /mnt/m2data/linux-worktrees/v5.9/include/linux/sched.h:1415, takes ? args)
-[FATAL] Syscall(index=222, number=4222, name='gettid', symbol='sys_gettid', defined at /mnt/m2data/linux-worktrees/v5.9/include/linux/sched.h:1363, takes ? args)
-[FATAL] Syscall(index=401, number=4401, name='msgrcv', symbol='sys_msgrcv', defined at /mnt/m2data/linux-worktrees/v5.9/ipc/msg.c:1256, takes ? args, depends on CONFIG_SYSVIPC)
-[FATAL] Syscall(index=0, number=4000, name='syscall', symbol='sys_syscall', defined at /mnt/m2data/linux-worktrees/v5.9/arch/mips/kernel/scall32-o32.S:184, takes ? args)
-[FATAL] Syscall(index=149, number=4149, name='sysmips', symbol='__sys_sysmips', defined at ??:?, takes ? args)
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/mips', '--glob', '*.c', '(\\bSYSCALL(32)?_DEFINE\\d\\s*\\(|\\basmlinkage\\s*(unsigned\\s+)?\\w+\\s*(sysm|mipsmt_sys)_\\w+\\s*\\()\\s*\\w+')
 [I] Location could not be found through grepping: syscall (orig name syscall)
 [W] Location found through grepping: clone -> kernel/fork.c:2514

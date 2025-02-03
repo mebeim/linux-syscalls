@@ -482,11 +482,6 @@ Detected kernel version: 5.18.0 (from vmlinux)
 [D] Location needs grepping (bad): pkey_free (__arm64_sys_pkey_free) -> kernel/sys_ni.c:357
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v5.18'), '0xffff8000080bfab5', '0xffff8000080bfab6', '0xffff8000080bfab7', '0xffff8000080bfab8', '0xffff8000080bfab9', '0xffff8000080bfaba', '0xffff8000080bfabb', '0xffff8000080bfabc', '0xffff8000080bfabd', '0xffff8000080bfabe', '0xffff8000080bfabf', '0xffff8000080bfac0', '0xffff8000080bfac1', '0xffff8000080bfac2', '0xffff8000080bfac3', '0xffff8000080bfac4', '0xffff8000080bfac5']
 [D] Location needs grepping (bad): pkey_mprotect (__arm64_sys_pkey_mprotect) -> kernel/sys_ni.c:355
-[FATAL] Syscall(index=249, number=249, name='lookup_dcookie', symbol='__arm64_compat_sys_lookup_dcookie', defined at /mnt/m2data/linux-worktrees/v5.18/kernel/sys_ni.c:61, takes ? args)
-[FATAL] Syscall(index=271, number=271, name='pciconfig_iobase', symbol='__arm64_sys_pciconfig_iobase', defined at /mnt/m2data/linux-worktrees/v5.18/kernel/sys_ni.c:369, takes ? args)
-[FATAL] Syscall(index=395, number=395, name='pkey_alloc', symbol='__arm64_sys_pkey_alloc', defined at /mnt/m2data/linux-worktrees/v5.18/kernel/sys_ni.c:356, takes ? args)
-[FATAL] Syscall(index=396, number=396, name='pkey_free', symbol='__arm64_sys_pkey_free', defined at /mnt/m2data/linux-worktrees/v5.18/kernel/sys_ni.c:357, takes ? args)
-[FATAL] Syscall(index=394, number=394, name='pkey_mprotect', symbol='__arm64_sys_pkey_mprotect', defined at /mnt/m2data/linux-worktrees/v5.18/kernel/sys_ni.c:355, takes ? args)
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/arm64', '--glob', '*.c', '\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [I] Location could not be found through grepping: lookup_dcookie (orig name lookup_dcookie)
 [I] Location could not be found through grepping: pciconfig_iobase (orig name pciconfig_iobase)

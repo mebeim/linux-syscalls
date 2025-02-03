@@ -923,8 +923,6 @@ Detected kernel version: 5.17.0 (from vmlinux)
 [D] Location needs grepping (bad): ppc_fadvise64_64 (ppc_fadvise64_64) -> arch/powerpc/kernel/syscalls.c:99
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-powerpc-v5.17'), '0xc0009325', '0xc0009326', '0xc0009327', '0xc0009328', '0xc0009329', '0xc000932a', '0xc000932b', '0xc000932c', '0xc000932d', '0xc000932e', '0xc000932f', '0xc0009330', '0xc0009331', '0xc0009332', '0xc0009333', '0xc0009334', '0xc0009335', '0xc0009336', '0xc0009337', '0xc0009338', '0xc0009339', '0xc000933a', '0xc000933b', '0xc000933c', '0xc000933d', '0xc000933e', '0xc000933f', '0xc0009340', '0xc0009341', '0xc0009342', '0xc0009343', '0xc0009344', '0xc0009345', '0xc0009346', '0xc0009347', '0xc0009348', '0xc0009349']
 [D] Location needs grepping (bad): ppc_select (ppc_select) -> arch/powerpc/kernel/syscalls.c:75
-[FATAL] Syscall(index=254, number=254, name='fadvise64_64', symbol='ppc_fadvise64_64', defined at /mnt/m2data/linux-worktrees/v5.17/arch/powerpc/kernel/syscalls.c:99, takes ? args, depends on CONFIG_ADVISE_SYSCALLS)
-[FATAL] Syscall(index=82, number=82, name='select', symbol='ppc_select', defined at /mnt/m2data/linux-worktrees/v5.17/arch/powerpc/kernel/syscalls.c:75, takes ? args)
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/powerpc', '--glob', '*.c', '(\\bSYSCALL(32)?_DEFINE\\d\\s*\\(|\\bPPC32_SYSCALL_DEFINE\\d\\s*\\()\\s*\\w+')
 [I] Location could not be found through grepping: fadvise64_64 (orig name ppc_fadvise64_64)
 [I] Location could not be found through grepping: select (orig name ppc_select)

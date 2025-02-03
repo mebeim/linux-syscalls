@@ -488,7 +488,6 @@ Detected kernel version: 6.13.0 (from vmlinux)
 [D] Location found through full-range adjustment: landlock_restrict_self (__arm64_sys_landlock_restrict_self+0x4) -> security/landlock/syscalls.c:456
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm64-v6.13'), '0xffff8000800f4d29', '0xffff8000800f4d2a', '0xffff8000800f4d2b', '0xffff8000800f4d2c', '0xffff8000800f4d2d']
 [D] Location needs grepping (bad): map_shadow_stack (__arm64_sys_map_shadow_stack) -> kernel/sys_ni.c:294
-[FATAL] Syscall(index=453, number=453, name='map_shadow_stack', symbol='__arm64_sys_map_shadow_stack', defined at /mnt/m2data/linux-worktrees/v6.13/kernel/sys_ni.c:294, takes ? args, depends on CONFIG_X86_USER_SHADOW_STACK)
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/arm64', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: map_shadow_stack -> arch/arm64/mm/gcs.c:71
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y

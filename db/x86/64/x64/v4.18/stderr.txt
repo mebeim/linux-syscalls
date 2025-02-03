@@ -654,7 +654,6 @@ Detected kernel version: 4.18.0 (from vmlinux)
 [D] Location needs full-range adjustment (bad): fadvise64 (__x64_sys_fadvise64+0x17) -> mm/fadvise.c:189
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.18'), '0xffffffff811ae761', '0xffffffff811ae762', '0xffffffff811ae763', '0xffffffff811ae764', '0xffffffff811ae765', '0xffffffff811ae766', '0xffffffff811ae767', '0xffffffff811ae768', '0xffffffff811ae769', '0xffffffff811ae76a', '0xffffffff811ae76b', '0xffffffff811ae76c', '0xffffffff811ae76d', '0xffffffff811ae76e', '0xffffffff811ae76f', '0xffffffff811ae770', '0xffffffff811ae771', '0xffffffff811ae772', '0xffffffff811ae773', '0xffffffff811ae774', '0xffffffff811ae775']
 [D] Location needs grepping (bad): fadvise64 (__x64_sys_fadvise64) -> mm/fadvise.c:189
-[FATAL] Syscall(index=221, number=221, name='fadvise64', symbol='__x64_sys_fadvise64', defined at /mnt/m2data/linux-worktrees/v4.18/mm/fadvise.c:189, takes ? args, depends on CONFIG_ADVISE_SYSCALLS)
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: fadvise64 -> mm/fadvise.c:196
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y

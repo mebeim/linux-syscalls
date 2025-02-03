@@ -966,12 +966,6 @@ Detected kernel version: 4.12.0 (from vmlinux)
 [D] Location found through full-range adjustment: signalfd (sys_signalfd+0xa) -> fs/signalfd.c:309
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.12'), '0xffffffff81841bc1', '0xffffffff81841bc2', '0xffffffff81841bc3', '0xffffffff81841bc4', '0xffffffff81841bc5', '0xffffffff81841bc6']
 [D] Location needs grepping (invalid): vfork (ptregs_sys_vfork) -> /mnt/m2data/linux/arch/x86/include/generated/asm/syscalls_64.h:59
-[FATAL] Syscall(index=56, number=1073741880, name='clone', symbol='ptregs_sys_clone', defined at /mnt/m2data/linux-worktrees/v4.12/arch/x86/include/generated/asm/syscalls_64.h:?, takes ? args)
-[FATAL] Syscall(index=520, number=1073742344, name='execve', symbol='ptregs_compat_sys_execve', defined at /mnt/m2data/linux-worktrees/v4.12/arch/x86/include/generated/asm/syscalls_64.h:?, takes ? args)
-[FATAL] Syscall(index=545, number=1073742369, name='execveat', symbol='ptregs_compat_sys_execveat', defined at /mnt/m2data/linux-worktrees/v4.12/arch/x86/include/generated/asm/syscalls_64.h:?, takes ? args)
-[FATAL] Syscall(index=57, number=1073741881, name='fork', symbol='ptregs_sys_fork', defined at /mnt/m2data/linux-worktrees/v4.12/arch/x86/include/generated/asm/syscalls_64.h:?, takes ? args, depends on CONFIG_MMU)
-[FATAL] Syscall(index=172, number=1073741996, name='iopl', symbol='ptregs_sys_iopl', defined at /mnt/m2data/linux-worktrees/v4.12/arch/x86/include/generated/asm/syscalls_64.h:?, takes ? args)
-[FATAL] Syscall(index=58, number=1073741882, name='vfork', symbol='ptregs_sys_vfork', defined at /mnt/m2data/linux-worktrees/v4.12/arch/x86/include/generated/asm/syscalls_64.h:?, takes ? args)
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '(\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(|\\basmlinkage\\s*(unsigned\\s+)?\\w+\\s*sys32_x32_\\w+\\s*\\()\\s*\\w+')
 [W] Location found through grepping: clone -> kernel/fork.c:2116
 [W] Location found through grepping: execve -> fs/exec.c:1931

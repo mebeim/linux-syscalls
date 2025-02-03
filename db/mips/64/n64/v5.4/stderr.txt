@@ -827,10 +827,6 @@ Detected kernel version: 5.4.0 (from vmlinux)
 [D] Location found through full-range adjustment: msgrcv (sys_msgrcv+0x18) -> ipc/msg.c:1230
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-mips64-v5.4'), '0xa80000000002cf39', '0xa80000000002cf3a', '0xa80000000002cf3b', '0xa80000000002cf3c', '0xa80000000002cf3d', '0xa80000000002cf3e', '0xa80000000002cf3f', '0xa80000000002cf40', '0xa80000000002cf41', '0xa80000000002cf42', '0xa80000000002cf43', '0xa80000000002cf44', '0xa80000000002cf45', '0xa80000000002cf46', '0xa80000000002cf47', '0xa80000000002cf48', '0xa80000000002cf49', '0xa80000000002cf4a', '0xa80000000002cf4b', '0xa80000000002cf4c', '0xa80000000002cf4d', '0xa80000000002cf4e', '0xa80000000002cf4f', '0xa80000000002cf50', '0xa80000000002cf51', '0xa80000000002cf52', '0xa80000000002cf53', '0xa80000000002cf54', '0xa80000000002cf55', '0xa80000000002cf56', '0xa80000000002cf57', '0xa80000000002cf58', '0xa80000000002cf59', '0xa80000000002cf5a', '0xa80000000002cf5b', '0xa80000000002cf5c', '0xa80000000002cf5d']
 [D] Location needs grepping (invalid): sysmips (__sys_sysmips) -> None:None
-[FATAL] Syscall(index=55, number=5055, name='clone', symbol='__sys_clone', defined at ??:?, takes ? args)
-[FATAL] Syscall(index=435, number=5435, name='clone3', symbol='__sys_clone3', defined at ??:?, takes ? args)
-[FATAL] Syscall(index=56, number=5056, name='fork', symbol='__sys_fork', defined at ??:?, takes ? args, depends on CONFIG_MMU)
-[FATAL] Syscall(index=199, number=5199, name='sysmips', symbol='__sys_sysmips', defined at ??:?, takes ? args)
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/mips', '--glob', '*.c', '(\\bSYSCALL_DEFINE\\d\\s*\\(|\\basmlinkage\\s*(unsigned\\s+)?\\w+\\s*(sysm|mipsmt_sys)_\\w+\\s*\\()\\s*\\w+')
 [W] Location found through grepping: clone -> kernel/fork.c:2486
 [W] Location found through grepping: clone3 -> kernel/fork.c:2629

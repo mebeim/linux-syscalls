@@ -951,14 +951,6 @@ Detected kernel version: 6.4.0 (from vmlinux)
 [D] Location needs grepping (bad): sigreturn (sys_sigreturn_wrapper) -> arch/arm/kernel/entry-common.S:384
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-arm-eabi-v6.4'), '0xc0300a7d', '0xc0300a7e', '0xc0300a7f', '0xc0300a80', '0xc0300a81', '0xc0300a82', '0xc0300a83', '0xc0300a84', '0xc0300a85']
 [D] Location needs grepping (bad): statfs64 (sys_statfs64_wrapper) -> arch/arm/kernel/entry-common.S:396
-[FATAL] Syscall(index=267, number=267, name='fstatfs64', symbol='sys_fstatfs64_wrapper', defined at /mnt/m2data/linux-worktrees/v6.4/arch/arm/kernel/entry-common.S:400, takes ? args)
-[FATAL] Syscall(index=20, number=20, name='getpid', symbol='sys_getpid', defined at /mnt/m2data/linux-worktrees/v6.4/include/linux/sched.h:1634, takes ? args)
-[FATAL] Syscall(index=224, number=224, name='gettid', symbol='sys_gettid', defined at /mnt/m2data/linux-worktrees/v6.4/include/linux/sched.h:1582, takes ? args)
-[FATAL] Syscall(index=192, number=192, name='mmap2', symbol='sys_mmap2', defined at /mnt/m2data/linux-worktrees/v6.4/arch/arm/kernel/entry-common.S:410, takes ? args)
-[FATAL] Syscall(index=302, number=302, name='msgrcv', symbol='sys_msgrcv', defined at /mnt/m2data/linux-worktrees/v6.4/ipc/msg.c:1264, takes ? args, depends on CONFIG_SYSVIPC)
-[FATAL] Syscall(index=173, number=173, name='rt_sigreturn', symbol='sys_rt_sigreturn_wrapper', defined at /mnt/m2data/linux-worktrees/v6.4/arch/arm/kernel/entry-common.S:388, takes ? args)
-[FATAL] Syscall(index=119, number=119, name='sigreturn', symbol='sys_sigreturn_wrapper', defined at /mnt/m2data/linux-worktrees/v6.4/arch/arm/kernel/entry-common.S:382, takes ? args)
-[FATAL] Syscall(index=266, number=266, name='statfs64', symbol='sys_statfs64_wrapper', defined at /mnt/m2data/linux-worktrees/v6.4/arch/arm/kernel/entry-common.S:394, takes ? args)
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/arm', '--glob', '*.c', '\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
 [I] Location could not be found through grepping: mmap2 (orig name mmap2)
 [I] Location could not be found through grepping: rt_sigreturn (orig name rt_sigreturn)

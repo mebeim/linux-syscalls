@@ -21,6 +21,7 @@ Detected kernel version: 6.3.0 (from vmlinux)
 [D] Preferring __do_sys_inotify_init over __ia32_sys_inotify_init
 [D] Preferring __do_sys_munlockall over __ia32_sys_munlockall
 [D] Preferring __do_sys_ni_syscall over __ia32_sys_ni_syscall
+[D] Preferring __do_sys_ni_syscall over __ia32_sys_ni_syscall
 [D] Preferring __do_sys_pause over __ia32_sys_pause
 [D] Preferring __do_sys_restart_syscall over __ia32_sys_restart_syscall
 [D] Preferring __do_sys_rt_sigreturn over __ia32_sys_rt_sigreturn
@@ -509,7 +510,6 @@ Detected kernel version: 6.3.0 (from vmlinux)
 [D] Location needs full-range adjustment (bad): fadvise64 (__x64_sys_fadvise64+0x1b) -> mm/fadvise.c:208
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v6.3'), '0xffffffff8120f0e1', '0xffffffff8120f0e2', '0xffffffff8120f0e3', '0xffffffff8120f0e4', '0xffffffff8120f0e5', '0xffffffff8120f0e6', '0xffffffff8120f0e7', '0xffffffff8120f0e8', '0xffffffff8120f0e9', '0xffffffff8120f0ea', '0xffffffff8120f0eb', '0xffffffff8120f0ec', '0xffffffff8120f0ed', '0xffffffff8120f0ee', '0xffffffff8120f0ef', '0xffffffff8120f0f0', '0xffffffff8120f0f1', '0xffffffff8120f0f2', '0xffffffff8120f0f3', '0xffffffff8120f0f4', '0xffffffff8120f0f5', '0xffffffff8120f0f6', '0xffffffff8120f0f7', '0xffffffff8120f0f8', '0xffffffff8120f0f9']
 [D] Location needs grepping (bad): fadvise64 (__x64_sys_fadvise64) -> mm/fadvise.c:208
-[FATAL] Syscall(index=221, number=221, name='fadvise64', symbol='__x64_sys_fadvise64', defined at /mnt/m2data/linux-worktrees/v6.3/mm/fadvise.c:208, takes ? args, depends on CONFIG_ADVISE_SYSCALLS)
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: fadvise64 -> mm/fadvise.c:215
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y

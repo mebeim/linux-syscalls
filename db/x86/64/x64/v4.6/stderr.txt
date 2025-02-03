@@ -966,14 +966,6 @@ Detected kernel version: 4.6.0 (from vmlinux)
 [D] Location needs grepping (invalid): rt_sigreturn (ptregs_sys_rt_sigreturn) -> /mnt/m2data/linux/arch/x86/include/generated/asm/syscalls_64.h:16
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.6'), '0xffffffff817e5581', '0xffffffff817e5582', '0xffffffff817e5583', '0xffffffff817e5584', '0xffffffff817e5585', '0xffffffff817e5586']
 [D] Location needs grepping (invalid): vfork (ptregs_sys_vfork) -> /mnt/m2data/linux/arch/x86/include/generated/asm/syscalls_64.h:59
-[FATAL] Syscall(index=158, number=158, name='arch_prctl', symbol='sys_arch_prctl', defined at /mnt/m2data/linux-worktrees/v4.6/arch/x86/kernel/process_64.c:603, takes ? args)
-[FATAL] Syscall(index=56, number=56, name='clone', symbol='ptregs_sys_clone', defined at /mnt/m2data/linux-worktrees/v4.6/arch/x86/include/generated/asm/syscalls_64.h:?, takes ? args)
-[FATAL] Syscall(index=59, number=59, name='execve', symbol='ptregs_sys_execve', defined at /mnt/m2data/linux-worktrees/v4.6/arch/x86/include/generated/asm/syscalls_64.h:?, takes ? args)
-[FATAL] Syscall(index=322, number=322, name='execveat', symbol='ptregs_sys_execveat', defined at /mnt/m2data/linux-worktrees/v4.6/arch/x86/include/generated/asm/syscalls_64.h:?, takes ? args)
-[FATAL] Syscall(index=57, number=57, name='fork', symbol='ptregs_sys_fork', defined at /mnt/m2data/linux-worktrees/v4.6/arch/x86/include/generated/asm/syscalls_64.h:?, takes ? args, depends on CONFIG_MMU)
-[FATAL] Syscall(index=172, number=172, name='iopl', symbol='ptregs_sys_iopl', defined at /mnt/m2data/linux-worktrees/v4.6/arch/x86/include/generated/asm/syscalls_64.h:?, takes ? args)
-[FATAL] Syscall(index=15, number=15, name='rt_sigreturn', symbol='ptregs_sys_rt_sigreturn', defined at /mnt/m2data/linux-worktrees/v4.6/arch/x86/include/generated/asm/syscalls_64.h:?, takes ? args)
-[FATAL] Syscall(index=58, number=58, name='vfork', symbol='ptregs_sys_vfork', defined at /mnt/m2data/linux-worktrees/v4.6/arch/x86/include/generated/asm/syscalls_64.h:?, takes ? args)
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
 [I] Location could not be found through grepping: arch_prctl (orig name arch_prctl)
 [I] Location could not be found through grepping: rt_sigreturn (orig name rt_sigreturn)

@@ -519,7 +519,6 @@ Detected kernel version: 5.15.0 (from vmlinux)
 [D] Location needs full-range adjustment (bad): fadvise64 (__x64_sys_fadvise64+0x17) -> mm/fadvise.c:206
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v5.15'), '0xffffffff811bf461', '0xffffffff811bf462', '0xffffffff811bf463', '0xffffffff811bf464', '0xffffffff811bf465', '0xffffffff811bf466', '0xffffffff811bf467', '0xffffffff811bf468', '0xffffffff811bf469', '0xffffffff811bf46a', '0xffffffff811bf46b', '0xffffffff811bf46c', '0xffffffff811bf46d', '0xffffffff811bf46e', '0xffffffff811bf46f', '0xffffffff811bf470', '0xffffffff811bf471', '0xffffffff811bf472', '0xffffffff811bf473', '0xffffffff811bf474', '0xffffffff811bf475']
 [D] Location needs grepping (bad): fadvise64 (__x64_sys_fadvise64) -> mm/fadvise.c:206
-[FATAL] Syscall(index=221, number=221, name='fadvise64', symbol='__x64_sys_fadvise64', defined at /mnt/m2data/linux-worktrees/v5.15/mm/fadvise.c:206, takes ? args, depends on CONFIG_ADVISE_SYSCALLS)
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: fadvise64 -> mm/fadvise.c:213
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y

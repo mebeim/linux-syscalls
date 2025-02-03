@@ -915,11 +915,6 @@ Detected kernel version: 5.14.0 (from vmlinux)
 [D] Location needs grepping (bad): sys32_syscall (sys32_syscall) -> arch/mips/kernel/scall64-o32.S:213
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-mips64-v5.14'), '0xa800000000027f49', '0xa800000000027f4a', '0xa800000000027f4b', '0xa800000000027f4c', '0xa800000000027f4d', '0xa800000000027f4e', '0xa800000000027f4f', '0xa800000000027f50', '0xa800000000027f51', '0xa800000000027f52', '0xa800000000027f53', '0xa800000000027f54', '0xa800000000027f55', '0xa800000000027f56', '0xa800000000027f57', '0xa800000000027f58', '0xa800000000027f59', '0xa800000000027f5a', '0xa800000000027f5b', '0xa800000000027f5c', '0xa800000000027f5d', '0xa800000000027f5e', '0xa800000000027f5f', '0xa800000000027f60', '0xa800000000027f61', '0xa800000000027f62', '0xa800000000027f63', '0xa800000000027f64', '0xa800000000027f65', '0xa800000000027f66', '0xa800000000027f67', '0xa800000000027f68', '0xa800000000027f69', '0xa800000000027f6a', '0xa800000000027f6b', '0xa800000000027f6c', '0xa800000000027f6d']
 [D] Location needs grepping (invalid): sysmips (__sys_sysmips) -> None:None
-[FATAL] Syscall(index=120, number=4120, name='clone', symbol='__sys_clone', defined at ??:?, takes ? args)
-[FATAL] Syscall(index=435, number=4435, name='clone3', symbol='__sys_clone3', defined at ??:?, takes ? args)
-[FATAL] Syscall(index=2, number=4002, name='fork', symbol='__sys_fork', defined at ??:?, takes ? args, depends on CONFIG_MMU)
-[FATAL] Syscall(index=0, number=4000, name='syscall', symbol='sys32_syscall', defined at /mnt/m2data/linux-worktrees/v5.14/arch/mips/kernel/scall64-o32.S:195, takes ? args)
-[FATAL] Syscall(index=149, number=4149, name='sysmips', symbol='__sys_sysmips', defined at ??:?, takes ? args)
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/mips', '--glob', '*.c', '(\\b(COMPAT_)?SYSCALL(32)?_DEFINE\\d\\s*\\(|\\basmlinkage\\s*(unsigned\\s+)?\\w+\\s*(sysm|mipsmt_sys)_\\w+\\s*\\()\\s*\\w+')
 [I] Location could not be found through grepping: syscall (orig name sys32_syscall)
 [W] Location found through grepping: clone -> kernel/fork.c:2594

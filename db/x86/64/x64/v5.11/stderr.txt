@@ -20,8 +20,6 @@ Detected kernel version: 5.11.0 (from vmlinux)
 [D] Preferring __do_sys_getuid over __ia32_sys_getuid
 [D] Preferring __do_sys_inotify_init over __ia32_sys_inotify_init
 [D] Preferring __do_sys_munlockall over __ia32_sys_munlockall
-[D] Preferring __do_sys_ni_syscall over __ia32_sys_ni_syscall
-[D] Preferring __do_sys_ni_syscall over __ia32_sys_ni_syscall
 [D] Preferring __do_sys_pause over __ia32_sys_pause
 [D] Preferring __do_sys_restart_syscall over __ia32_sys_restart_syscall
 [D] Preferring __do_sys_rt_sigreturn over __ia32_sys_rt_sigreturn
@@ -42,6 +40,7 @@ Detected kernel version: 5.11.0 (from vmlinux)
 [D] Preferring __x64_sys_inotify_init over __do_sys_inotify_init
 [D] Preferring __x64_sys_munlockall over __do_sys_munlockall
 [D] Preferring __x64_sys_ni_syscall over __do_sys_ni_syscall
+[D] Preferring __x64_sys_ni_syscall over __ia32_sys_ni_syscall
 [D] Preferring __x64_sys_pause over __do_sys_pause
 [D] Preferring __x64_sys_restart_syscall over __do_sys_restart_syscall
 [D] Preferring __x64_sys_rt_sigreturn over __do_sys_rt_sigreturn
@@ -511,7 +510,6 @@ Detected kernel version: 5.11.0 (from vmlinux)
 [D] Location needs full-range adjustment (bad): fadvise64 (__x64_sys_fadvise64+0x17) -> mm/fadvise.c:206
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v5.11'), '0xffffffff811ae751', '0xffffffff811ae752', '0xffffffff811ae753', '0xffffffff811ae754', '0xffffffff811ae755', '0xffffffff811ae756', '0xffffffff811ae757', '0xffffffff811ae758', '0xffffffff811ae759', '0xffffffff811ae75a', '0xffffffff811ae75b', '0xffffffff811ae75c', '0xffffffff811ae75d', '0xffffffff811ae75e', '0xffffffff811ae75f', '0xffffffff811ae760', '0xffffffff811ae761', '0xffffffff811ae762', '0xffffffff811ae763', '0xffffffff811ae764', '0xffffffff811ae765']
 [D] Location needs grepping (bad): fadvise64 (__x64_sys_fadvise64) -> mm/fadvise.c:206
-[FATAL] Syscall(index=221, number=221, name='fadvise64', symbol='__x64_sys_fadvise64', defined at /mnt/m2data/linux-worktrees/v5.11/mm/fadvise.c:206, takes ? args, depends on CONFIG_ADVISE_SYSCALLS)
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: fadvise64 -> mm/fadvise.c:213
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y

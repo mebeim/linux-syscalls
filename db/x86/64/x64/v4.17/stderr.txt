@@ -655,31 +655,9 @@ Detected kernel version: 4.17.0 (from vmlinux)
 [D] Location needs full-range adjustment (bad): creat (__x64_sys_creat+0x16) -> include/linux/syscalls.h:1256
 [D] Location needs full-range adjustment (bad): msgrcv (__x64_sys_msgrcv+0x21) -> ipc/msg.c:1181
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.17'), '0xffffffff811c84c1', '0xffffffff811c84c2', '0xffffffff811c84c3', '0xffffffff811c84c4', '0xffffffff811c84c5', '0xffffffff811c84c6', '0xffffffff811c84c7', '0xffffffff811c84c8', '0xffffffff811c84c9', '0xffffffff811c84ca', '0xffffffff811c84cb', '0xffffffff811c84cc', '0xffffffff811c84cd', '0xffffffff811c84ce', '0xffffffff811c84cf', '0xffffffff811c84d0', '0xffffffff811c84d1', '0xffffffff811c84d2', '0xffffffff811c84d3', '0xffffffff811c84d4']
-[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
-[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
-[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
-[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
-[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
-[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
-[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
-[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
-[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
-[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
-[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
-[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
-[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
-[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
-[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
-[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
-[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
-[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
-[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
-[FATAL] /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h 1256
 [D] Location needs grepping (bad): creat (__x64_sys_creat) -> include/linux/syscalls.h:1256
 [D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-x86-64-v4.17'), '0xffffffff81315291', '0xffffffff81315292', '0xffffffff81315293', '0xffffffff81315294', '0xffffffff81315295', '0xffffffff81315296', '0xffffffff81315297', '0xffffffff81315298', '0xffffffff81315299', '0xffffffff8131529a', '0xffffffff8131529b', '0xffffffff8131529c', '0xffffffff8131529d', '0xffffffff8131529e', '0xffffffff8131529f', '0xffffffff813152a0', '0xffffffff813152a1', '0xffffffff813152a2', '0xffffffff813152a3', '0xffffffff813152a4', '0xffffffff813152a5', '0xffffffff813152a6', '0xffffffff813152a7', '0xffffffff813152a8', '0xffffffff813152a9', '0xffffffff813152aa', '0xffffffff813152ab', '0xffffffff813152ac', '0xffffffff813152ad', '0xffffffff813152ae', '0xffffffff813152af']
 [D] Location needs grepping (bad): msgrcv (__x64_sys_msgrcv) -> ipc/msg.c:1181
-[FATAL] Syscall(index=85, number=85, name='creat', symbol='__x64_sys_creat', defined at /mnt/m2data/linux-worktrees/v4.17/include/linux/syscalls.h:1256, takes ? args)
-[FATAL] Syscall(index=70, number=70, name='msgrcv', symbol='__x64_sys_msgrcv', defined at /mnt/m2data/linux-worktrees/v4.17/ipc/msg.c:1181, takes ? args, depends on CONFIG_SYSVIPC)
 [D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\bSYSCALL_DEFINE\\d\\s*\\(\\s*\\w+')
 [W] Location found through grepping: creat -> fs/open.c:1157
 [W] Location found through grepping: msgrcv -> ipc/msg.c:1187
