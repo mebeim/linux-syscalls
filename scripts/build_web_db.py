@@ -151,9 +151,9 @@ def main() -> int:
 					print(tag, end=' ')
 
 				total += len(abi_index)
-				print()
+				print(end='\n\n')
 
-	print('\nTotal:', total, 'tables')
+	print('Total:', total, 'tables')
 
 	if warnings:
 		eprint()
