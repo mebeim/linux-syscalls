@@ -1,0 +1,642 @@
+[D] Systrack v0.7
+[D] Command line: systrack -vvvv --format json --arch s390 --kdir /mnt/m2data/linux-worktrees/v6.4 --remap /mnt/m2data/linux /mnt/m2data/kernels/vmlinux-s390-v6.4
+[D] Running command: readelf -Ws /mnt/m2data/kernels/vmlinux-s390-v6.4
+[D] Running command: readelf -WS /mnt/m2data/kernels/vmlinux-s390-v6.4
+Detected kernel version: 6.4.0 (from vmlinux)
+[D] Arch: ArchS390(name='s390', bits32=False, abi='s390', compat=True, ...)
+[W] No syscall table available! Trying my best...
+[D] Found ni_syscall: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] Found ni_syscall: Symbol("__s390x_sys_ni_syscall" at 0x1054f8, type=FUNC, size=0xc)
+[D] Found ni_syscall: Symbol("sys_ni_syscall" at 0x185d70, type=FUNC, size=0xc)
+[D] Discarding __s390_compat_sys_fadvise64_64 as alias for sys_ni_syscall
+[D] Discarding __s390_compat_sys_getsockopt as alias for sys_ni_syscall
+[D] Discarding __s390_compat_sys_io_pgetevents_time32 as alias for sys_ni_syscall
+[D] Discarding __s390_compat_sys_lookup_dcookie as alias for sys_ni_syscall
+[D] Discarding __s390_compat_sys_process_vm_readv as alias for sys_ni_syscall
+[D] Discarding __s390_compat_sys_process_vm_writev as alias for sys_ni_syscall
+[D] Discarding __s390_compat_sys_setsockopt as alias for sys_ni_syscall
+[D] Discarding __s390_sys_io_pgetevents_time32 as alias for sys_ni_syscall
+[D] Discarding __s390_sys_lookup_dcookie as alias for sys_ni_syscall
+[D] Discarding __s390_sys_modify_ldt as alias for sys_ni_syscall
+[D] Discarding __s390_sys_pciconfig_iobase as alias for sys_ni_syscall
+[D] Discarding __s390_sys_pciconfig_read as alias for sys_ni_syscall
+[D] Discarding __s390_sys_pciconfig_write as alias for sys_ni_syscall
+[D] Discarding __s390_sys_pkey_alloc as alias for sys_ni_syscall
+[D] Discarding __s390_sys_pkey_free as alias for sys_ni_syscall
+[D] Discarding __s390_sys_pkey_mprotect as alias for sys_ni_syscall
+[D] Discarding __s390_sys_ppoll_time32 as alias for sys_ni_syscall
+[D] Discarding __s390_sys_pselect6_time32 as alias for sys_ni_syscall
+[D] Discarding __s390_sys_rtas as alias for sys_ni_syscall
+[D] Discarding __s390_sys_spu_create as alias for sys_ni_syscall
+[D] Discarding __s390_sys_spu_run as alias for sys_ni_syscall
+[D] Discarding __s390_sys_subpage_prot as alias for sys_ni_syscall
+[D] Discarding __s390_sys_vm86 as alias for sys_ni_syscall
+[D] Discarding __s390_sys_vm86old as alias for sys_ni_syscall
+[D] Discarding __s390x_sys_io_pgetevents_time32 as alias for sys_ni_syscall
+[D] Discarding __s390x_sys_lookup_dcookie as alias for sys_ni_syscall
+[D] Discarding __s390x_sys_modify_ldt as alias for sys_ni_syscall
+[D] Discarding __s390x_sys_pciconfig_iobase as alias for sys_ni_syscall
+[D] Discarding __s390x_sys_pciconfig_read as alias for sys_ni_syscall
+[D] Discarding __s390x_sys_pciconfig_write as alias for sys_ni_syscall
+[D] Discarding __s390x_sys_pkey_alloc as alias for sys_ni_syscall
+[D] Discarding __s390x_sys_pkey_free as alias for sys_ni_syscall
+[D] Discarding __s390x_sys_pkey_mprotect as alias for sys_ni_syscall
+[D] Discarding __s390x_sys_ppoll_time32 as alias for sys_ni_syscall
+[D] Discarding __s390x_sys_pselect6_time32 as alias for sys_ni_syscall
+[D] Discarding __s390x_sys_rtas as alias for sys_ni_syscall
+[D] Discarding __s390x_sys_spu_create as alias for sys_ni_syscall
+[D] Discarding __s390x_sys_spu_run as alias for sys_ni_syscall
+[D] Discarding __s390x_sys_subpage_prot as alias for sys_ni_syscall
+[D] Discarding __s390x_sys_vm86 as alias for sys_ni_syscall
+[D] Discarding __s390x_sys_vm86old as alias for sys_ni_syscall
+[D] #0: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #1: Symbol("__s390_sys_exit" at 0x15d3a8, type=FUNC, size=0x22)
+[D] #2: Symbol("__s390_sys_fork" at 0x155600, type=FUNC, size=0xc)
+[D] #3: Symbol("__s390_compat_sys_s390_read" at 0x11ca68, type=FUNC, size=0x32)
+[D] #4: Symbol("__s390_compat_sys_s390_write" at 0x11caa0, type=FUNC, size=0x32)
+[D] #5: Symbol("__s390_compat_sys_open" at 0x460f78, type=FUNC, size=0x26)
+[D] #6: Symbol("__s390_sys_close" at 0x461070, type=FUNC, size=0xc)
+[D] #7: Symbol("__s390_sys_restart_syscall" at 0x16a908, type=FUNC, size=0xc)
+[D] #8: Symbol("__s390_sys_creat" at 0x460fc8, type=FUNC, size=0x20)
+[D] #9: Symbol("__s390_sys_link" at 0x47baa8, type=FUNC, size=0x74)
+[D] #10: Symbol("__s390_sys_unlink" at 0x47b358, type=FUNC, size=0x4c)
+[D] #11: Symbol("__s390_compat_sys_execve" at 0x46f310, type=FUNC, size=0x68)
+[D] #12: Symbol("__s390_sys_chdir" at 0x45f6c0, type=FUNC, size=0xe6)
+[D] #13: Symbol("__s390_sys_time32" at 0x210120, type=FUNC, size=0x78)
+[D] #14: Symbol("__s390_sys_mknod" at 0x47a8d8, type=FUNC, size=0x60)
+[D] #15: Symbol("__s390_sys_chmod" at 0x45ffd0, type=FUNC, size=0x44)
+[D] #16: Symbol("__s390_sys_lchown16" at 0x230be0, type=FUNC, size=0x6a)
+[D] #17: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #18: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #19: Symbol("__s390_compat_sys_lseek" at 0x462b10, type=FUNC, size=0x1e)
+[D] #20: Symbol("__s390_sys_getpid" at 0x172d10, type=FUNC, size=0xc)
+[D] #21: Symbol("__s390_sys_mount" at 0x4982e8, type=FUNC, size=0x10c)
+[D] #22: Symbol("__s390_sys_oldumount" at 0x495988, type=FUNC, size=0x3a)
+[D] #23: Symbol("__s390_sys_setuid16" at 0x230e38, type=FUNC, size=0xc)
+[D] #24: Symbol("__s390_sys_getuid16" at 0x231868, type=FUNC, size=0x88)
+[D] #25: Symbol("__s390_sys_stime32" at 0x210210, type=FUNC, size=0xaa)
+[D] #26: Symbol("__s390_compat_sys_ptrace" at 0x167168, type=FUNC, size=0x174)
+[D] #27: Symbol("__s390_sys_alarm" at 0x2255b8, type=FUNC, size=0xc)
+[D] #28: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #29: Symbol("__s390_sys_pause" at 0x16fdc0, type=FUNC, size=0x60)
+[D] #30: Symbol("__s390_sys_utime32" at 0x4b0af0, type=FUNC, size=0xe0)
+[D] #31: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #32: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #33: Symbol("__s390_sys_access" at 0x45f680, type=FUNC, size=0x20)
+[D] #34: Symbol("__s390_sys_nice" at 0x199708, type=FUNC, size=0xc)
+[D] #35: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #36: Symbol("__s390_sys_sync" at 0x4afc28, type=FUNC, size=0x34)
+[D] #37: Symbol("__s390_sys_kill" at 0x16e2d0, type=FUNC, size=0xc)
+[D] #38: Symbol("__s390_sys_rename" at 0x47c2e8, type=FUNC, size=0x74)
+[D] #39: Symbol("__s390_sys_mkdir" at 0x47abb0, type=FUNC, size=0x56)
+[D] #40: Symbol("__s390_sys_rmdir" at 0x47ae50, type=FUNC, size=0x4c)
+[D] #41: Symbol("__s390_sys_dup" at 0x490060, type=FUNC, size=0xc)
+[D] #42: Symbol("__s390_sys_pipe" at 0x471888, type=FUNC, size=0x3a)
+[D] #43: Symbol("__s390_compat_sys_times" at 0x173020, type=FUNC, size=0x1c4)
+[D] #44: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #45: Symbol("__s390_sys_brk" at 0x3c9cb8, type=FUNC, size=0x3a8)
+[D] #46: Symbol("__s390_sys_setgid16" at 0x230db0, type=FUNC, size=0xc)
+[D] #47: Symbol("__s390_sys_getgid16" at 0x231a88, type=FUNC, size=0x88)
+[D] #48: Symbol("__s390_sys_signal" at 0x16fce0, type=FUNC, size=0x6a)
+[D] #49: Symbol("__s390_sys_geteuid16" at 0x231978, type=FUNC, size=0x88)
+[D] #50: Symbol("__s390_sys_getegid16" at 0x231b98, type=FUNC, size=0x88)
+[D] #51: Symbol("__s390_sys_acct" at 0x233d78, type=FUNC, size=0xc4)
+[D] #52: Symbol("__s390_sys_umount" at 0x495908, type=FUNC, size=0x3c)
+[D] #53: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #54: Symbol("__s390_compat_sys_ioctl" at 0x47f330, type=FUNC, size=0x15c)
+[D] #55: Symbol("__s390_compat_sys_fcntl" at 0x47d708, type=FUNC, size=0x66)
+[D] #56: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #57: Symbol("__s390_sys_setpgid" at 0x1733a8, type=FUNC, size=0xc)
+[D] #58: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #59: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #60: Symbol("__s390_sys_umask" at 0x175000, type=FUNC, size=0xc)
+[D] #61: Symbol("__s390_sys_chroot" at 0x45f978, type=FUNC, size=0x12a)
+[D] #62: Symbol("__s390_compat_sys_ustat" at 0x4b31d0, type=FUNC, size=0x18)
+[D] #63: Symbol("__s390_sys_dup2" at 0x48fed8, type=FUNC, size=0xc)
+[D] #64: Symbol("__s390_sys_getppid" at 0x172db8, type=FUNC, size=0xc)
+[D] #65: Symbol("__s390_sys_getpgrp" at 0x1734a8, type=FUNC, size=0xc)
+[D] #66: Symbol("__s390_sys_setsid" at 0x173690, type=FUNC, size=0x30)
+[D] #67: Symbol("__s390_compat_sys_sigaction" at 0x16fc28, type=FUNC, size=0x1e)
+[D] #68: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #69: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #70: Symbol("__s390_sys_setreuid16" at 0x230e00, type=FUNC, size=0xc)
+[D] #71: Symbol("__s390_sys_setregid16" at 0x230d78, type=FUNC, size=0xc)
+[D] #72: Symbol("__s390_sys_sigsuspend" at 0x16fff8, type=FUNC, size=0x40)
+[D] #73: Symbol("__s390_compat_sys_sigpending" at 0x16f748, type=FUNC, size=0x6c)
+[D] #74: Symbol("__s390_sys_sethostname" at 0x173720, type=FUNC, size=0x162)
+[D] #75: Symbol("__s390_compat_sys_setrlimit" at 0x173fa0, type=FUNC, size=0xb6)
+[D] #76: Symbol("__s390_compat_sys_old_getrlimit" at 0x174350, type=FUNC, size=0x146)
+[D] #77: Symbol("__s390_compat_sys_getrusage" at 0x174fb0, type=FUNC, size=0x18)
+[D] #78: Symbol("__s390_compat_sys_gettimeofday" at 0x210928, type=FUNC, size=0x11c)
+[D] #79: Symbol("__s390_compat_sys_settimeofday" at 0x210a48, type=FUNC, size=0x138)
+[D] #80: Symbol("__s390_sys_getgroups16" at 0x2315a8, type=FUNC, size=0x8c)
+[D] #81: Symbol("__s390_sys_setgroups16" at 0x2316c8, type=FUNC, size=0xcc)
+[D] #82: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #83: Symbol("__s390_sys_symlink" at 0x47b5f8, type=FUNC, size=0x6c)
+[D] #84: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #85: Symbol("__s390_sys_readlink" at 0x46b408, type=FUNC, size=0x4a)
+[D] #86: Symbol("__s390_sys_uselib" at 0x46dd28, type=FUNC, size=0x24c)
+[D] #87: Symbol("__s390_sys_swapon" at 0x3fd5a0, type=FUNC, size=0x18)
+[D] #88: Symbol("__s390_sys_reboot" at 0x18a6d0, type=FUNC, size=0x24)
+[D] #89: Symbol("__s390_compat_sys_old_readdir" at 0x4805f8, type=FUNC, size=0xb6)
+[D] #90: Symbol("__s390_compat_sys_s390_old_mmap" at 0x11c940, type=FUNC, size=0x9a)
+[D] #91: Symbol("__s390_sys_munmap" at 0x3c8550, type=FUNC, size=0x40)
+[D] #92: Symbol("__s390_compat_sys_truncate" at 0x45f2d8, type=FUNC, size=0x18)
+[D] #93: Symbol("__s390_compat_sys_ftruncate" at 0x45f4d0, type=FUNC, size=0x1c)
+[D] #94: Symbol("__s390_sys_fchmod" at 0x45ff30, type=FUNC, size=0xc)
+[D] #95: Symbol("__s390_sys_fchown16" at 0x230d28, type=FUNC, size=0xc)
+[D] #96: Symbol("__s390_sys_getpriority" at 0x1719c8, type=FUNC, size=0xc)
+[D] #97: Symbol("__s390_sys_setpriority" at 0x171718, type=FUNC, size=0xc)
+[D] #98: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #99: Symbol("__s390_compat_sys_statfs" at 0x4b3018, type=FUNC, size=0x18)
+[D] #100: Symbol("__s390_compat_sys_fstatfs" at 0x4b3030, type=FUNC, size=0x18)
+[D] #101: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #102: Symbol("__s390_compat_sys_socketcall" at 0xb33f68, type=FUNC, size=0x3d8)
+[D] #103: Symbol("__s390_sys_syslog" at 0x1d43c0, type=FUNC, size=0x46)
+[D] #104: Symbol("__s390_compat_sys_setitimer" at 0x2257c0, type=FUNC, size=0x198)
+[D] #105: Symbol("__s390_compat_sys_getitimer" at 0x2253c8, type=FUNC, size=0x66)
+[D] #106: Symbol("__s390_compat_sys_newstat" at 0x46b690, type=FUNC, size=0x18)
+[D] #107: Symbol("__s390_compat_sys_newlstat" at 0x46b6a8, type=FUNC, size=0x18)
+[D] #108: Symbol("__s390_compat_sys_newfstat" at 0x46b6e8, type=FUNC, size=0x18)
+[D] #109: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #110: Symbol("sys_ni_syscall" at 0x185d70, type=FUNC, size=0xc)
+[D] #111: Symbol("__s390_sys_vhangup" at 0x461128, type=FUNC, size=0xc)
+[D] #112: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #113: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #114: Symbol("__s390_compat_sys_wait4" at 0x15d8d0, type=FUNC, size=0x24)
+[D] #115: Symbol("__s390_sys_swapoff" at 0x3fd550, type=FUNC, size=0x12)
+[D] #116: Symbol("__s390_compat_sys_sysinfo" at 0x176990, type=FUNC, size=0x12)
+[D] #117: Symbol("__s390_compat_sys_s390_ipc" at 0x11c708, type=FUNC, size=0x78)
+[D] #118: Symbol("__s390_sys_fsync" at 0x4afe30, type=FUNC, size=0xc)
+[D] #119: Symbol("__s390_compat_sys_sigreturn" at 0x11d200, type=FUNC, size=0xba)
+[D] #120: Symbol("__s390_sys_clone" at 0x155640, type=FUNC, size=0x4e)
+[D] #121: Symbol("__s390_sys_setdomainname" at 0x173be0, type=FUNC, size=0x162)
+[D] #122: Symbol("__s390_sys_newuname" at 0x1736f0, type=FUNC, size=0x12)
+[D] #123: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #124: Symbol("__s390_sys_adjtimex_time32" at 0x210e68, type=FUNC, size=0x12)
+[D] #125: Symbol("__s390_sys_mprotect" at 0x3ce838, type=FUNC, size=0x42)
+[D] #126: Symbol("__s390_compat_sys_sigprocmask" at 0x238430, type=FUNC, size=0x14a)
+[D] #127: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #128: Symbol("__s390_sys_init_module" at 0x209978, type=FUNC, size=0x1e)
+[D] #129: Symbol("__s390_sys_delete_module" at 0x209b30, type=FUNC, size=0x27e)
+[D] #130: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #131: Symbol("__s390_sys_quotactl" at 0x50db00, type=FUNC, size=0x19a)
+[D] #132: Symbol("__s390_sys_getpgid" at 0x173450, type=FUNC, size=0xc)
+[D] #133: Symbol("__s390_sys_fchdir" at 0x45f968, type=FUNC, size=0xc)
+[D] #134: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #135: Symbol("__s390_sys_sysfs" at 0x4908b0, type=FUNC, size=0x98)
+[D] #136: Symbol("__s390_sys_s390_personality" at 0x1054d8, type=FUNC, size=0xc)
+[D] #137: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #138: Symbol("__s390_sys_setfsuid16" at 0x231560, type=FUNC, size=0xc)
+[D] #139: Symbol("__s390_sys_setfsgid16" at 0x231598, type=FUNC, size=0xc)
+[D] #140: Symbol("__s390_sys_llseek" at 0x462b30, type=FUNC, size=0x114)
+[D] #141: Symbol("__s390_compat_sys_getdents" at 0x4806b0, type=FUNC, size=0x11e)
+[D] #142: Symbol("__s390_compat_sys_select" at 0x483150, type=FUNC, size=0x4e)
+[D] #143: Symbol("__s390_sys_flock" at 0x4f2978, type=FUNC, size=0xc)
+[D] #144: Symbol("__s390_sys_msync" at 0x3d0838, type=FUNC, size=0x334)
+[D] #145: Symbol("__s390_sys_readv" at 0x463d20, type=FUNC, size=0x22)
+[D] #146: Symbol("__s390_sys_writev" at 0x463d70, type=FUNC, size=0x22)
+[D] #147: Symbol("__s390_sys_getsid" at 0x173548, type=FUNC, size=0xc)
+[D] #148: Symbol("__s390_sys_fdatasync" at 0x4afe80, type=FUNC, size=0xc)
+[D] #149: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #150: Symbol("__s390_sys_mlock" at 0x3c2960, type=FUNC, size=0x40)
+[D] #151: Symbol("__s390_sys_munlock" at 0x3c2ac0, type=FUNC, size=0x130)
+[D] #152: Symbol("__s390_sys_mlockall" at 0x3c2ef8, type=FUNC, size=0xc)
+[D] #153: Symbol("__s390_sys_munlockall" at 0x3c2f08, type=FUNC, size=0xfc)
+[D] #154: Symbol("__s390_sys_sched_setparam" at 0x199a60, type=FUNC, size=0x40)
+[D] #155: Symbol("__s390_sys_sched_getparam" at 0x199e98, type=FUNC, size=0xd4)
+[D] #156: Symbol("__s390_sys_sched_setscheduler" at 0x1999b0, type=FUNC, size=0x56)
+[D] #157: Symbol("__s390_sys_sched_getscheduler" at 0x199e88, type=FUNC, size=0xc)
+[D] #158: Symbol("__s390_sys_sched_yield" at 0x19a5e8, type=FUNC, size=0x34)
+[D] #159: Symbol("__s390_sys_sched_get_priority_max" at 0x19a728, type=FUNC, size=0xc)
+[D] #160: Symbol("__s390_sys_sched_get_priority_min" at 0x19a778, type=FUNC, size=0xc)
+[D] #161: Symbol("__s390_sys_sched_rr_get_interval_time32" at 0x19a878, type=FUNC, size=0x72)
+[D] #162: Symbol("__s390_sys_nanosleep_time32" at 0x217aa8, type=FUNC, size=0xf0)
+[D] #163: Symbol("__s390_sys_mremap" at 0x3d0798, type=FUNC, size=0x4e)
+[D] #164: Symbol("__s390_sys_setresuid16" at 0x230e98, type=FUNC, size=0xc)
+[D] #165: Symbol("__s390_sys_getresuid16" at 0x230ea8, type=FUNC, size=0x188)
+[D] #166: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #167: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #168: Symbol("__s390_sys_poll" at 0x482c98, type=FUNC, size=0x17a)
+[D] #169: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #170: Symbol("__s390_sys_setresgid16" at 0x231210, type=FUNC, size=0xc)
+[D] #171: Symbol("__s390_sys_getresgid16" at 0x231220, type=FUNC, size=0x188)
+[D] #172: Symbol("__s390_sys_prctl" at 0x175030, type=FUNC, size=0xc70)
+[D] #173: Symbol("__s390_compat_sys_rt_sigreturn" at 0x11d2c0, type=FUNC, size=0xca)
+[D] #174: Symbol("__s390_compat_sys_rt_sigaction" at 0x16fbc0, type=FUNC, size=0x24)
+[D] #175: Symbol("__s390_compat_sys_rt_sigprocmask" at 0x16ae28, type=FUNC, size=0xe0)
+[D] #176: Symbol("__s390_compat_sys_rt_sigpending" at 0x16b000, type=FUNC, size=0xac)
+[D] #177: Symbol("__s390_compat_sys_rt_sigtimedwait_time32" at 0x16e008, type=FUNC, size=0xea)
+[D] #178: Symbol("__s390_compat_sys_rt_sigqueueinfo" at 0x16e828, type=FUNC, size=0x6a)
+[D] #179: Symbol("__s390_compat_sys_rt_sigsuspend" at 0x16ff80, type=FUNC, size=0x78)
+[D] #180: Symbol("__s390_compat_sys_s390_pread64" at 0x11c7f0, type=FUNC, size=0x4e)
+[D] #181: Symbol("__s390_compat_sys_s390_pwrite64" at 0x11c840, type=FUNC, size=0x4e)
+[D] #182: Symbol("__s390_sys_chown16" at 0x230b00, type=FUNC, size=0x6a)
+[D] #183: Symbol("__s390_sys_getcwd" at 0x4b1a78, type=FUNC, size=0x172)
+[D] #184: Symbol("__s390_sys_capget" at 0x164460, type=FUNC, size=0x19e)
+[D] #185: Symbol("__s390_sys_capset" at 0x1647a0, type=FUNC, size=0x1d6)
+[D] #186: Symbol("__s390_compat_sys_sigaltstack" at 0x16f558, type=FUNC, size=0x3c)
+[D] #187: Symbol("__s390_compat_sys_sendfile" at 0x464698, type=FUNC, size=0xf8)
+[D] #188: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #189: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #190: Symbol("__s390_sys_vfork" at 0x155620, type=FUNC, size=0xc)
+[D] #191: Symbol("__s390_compat_sys_getrlimit" at 0x174058, type=FUNC, size=0xb8)
+[D] #192: Symbol("__s390_compat_sys_s390_mmap2" at 0x11c9e0, type=FUNC, size=0x86)
+[D] #193: Symbol("__s390_compat_sys_s390_truncate64" at 0x11c780, type=FUNC, size=0x34)
+[D] #194: Symbol("__s390_compat_sys_s390_ftruncate64" at 0x11c7b8, type=FUNC, size=0x38)
+[D] #195: Symbol("__s390_compat_sys_s390_stat64" at 0x11c8d0, type=FUNC, size=0x18)
+[D] #196: Symbol("__s390_compat_sys_s390_lstat64" at 0x11c8e8, type=FUNC, size=0x18)
+[D] #197: Symbol("__s390_compat_sys_s390_fstat64" at 0x11c900, type=FUNC, size=0x18)
+[D] #198: Symbol("__s390_sys_lchown" at 0x460518, type=FUNC, size=0x4a)
+[D] #199: Symbol("__s390_sys_getuid" at 0x172e10, type=FUNC, size=0xc)
+[D] #200: Symbol("__s390_sys_getgid" at 0x172ec0, type=FUNC, size=0xc)
+[D] #201: Symbol("__s390_sys_geteuid" at 0x172e68, type=FUNC, size=0xc)
+[D] #202: Symbol("__s390_sys_getegid" at 0x172f18, type=FUNC, size=0xc)
+[D] #203: Symbol("__s390_sys_setreuid" at 0x171f18, type=FUNC, size=0xc)
+[D] #204: Symbol("__s390_sys_setregid" at 0x171b98, type=FUNC, size=0xc)
+[D] #205: Symbol("__s390_sys_getgroups" at 0x18d0d8, type=FUNC, size=0x8c)
+[D] #206: Symbol("__s390_sys_setgroups" at 0x18d270, type=FUNC, size=0xe0)
+[D] #207: Symbol("__s390_sys_fchown" at 0x460720, type=FUNC, size=0xc)
+[D] #208: Symbol("__s390_sys_setresuid" at 0x1723a8, type=FUNC, size=0xc)
+[D] #209: Symbol("__s390_sys_getresuid" at 0x1723b8, type=FUNC, size=0x108)
+[D] #210: Symbol("__s390_sys_setresgid" at 0x172860, type=FUNC, size=0xc)
+[D] #211: Symbol("__s390_sys_getresgid" at 0x172870, type=FUNC, size=0xfa)
+[D] #212: Symbol("__s390_sys_chown" at 0x460478, type=FUNC, size=0x4a)
+[D] #213: Symbol("__s390_sys_setuid" at 0x1720a0, type=FUNC, size=0xc)
+[D] #214: Symbol("__s390_sys_setgid" at 0x171cd8, type=FUNC, size=0xc)
+[D] #215: Symbol("__s390_sys_setfsuid" at 0x172b90, type=FUNC, size=0xc)
+[D] #216: Symbol("__s390_sys_setfsgid" at 0x172cc0, type=FUNC, size=0xc)
+[D] #217: Symbol("__s390_sys_pivot_root" at 0x498cb0, type=FUNC, size=0x3ee)
+[D] #218: Symbol("__s390_sys_mincore" at 0x3c0458, type=FUNC, size=0x306)
+[D] #219: Symbol("__s390_sys_madvise" at 0x3f3760, type=FUNC, size=0x4e)
+[D] #220: Symbol("__s390_sys_getdents64" at 0x4803a8, type=FUNC, size=0x122)
+[D] #221: Symbol("__s390_compat_sys_fcntl64" at 0x47d6e8, type=FUNC, size=0x1e)
+[D] #222: Symbol("__s390_compat_sys_s390_readahead" at 0x11c890, type=FUNC, size=0x3a)
+[D] #223: Symbol("__s390_compat_sys_sendfile64" at 0x464790, type=FUNC, size=0xf4)
+[D] #224: Symbol("__s390_sys_setxattr" at 0x49d4b0, type=FUNC, size=0x5a)
+[D] #225: Symbol("__s390_sys_lsetxattr" at 0x49d568, type=FUNC, size=0x5a)
+[D] #226: Symbol("__s390_sys_fsetxattr" at 0x49d620, type=FUNC, size=0x108)
+[D] #227: Symbol("__s390_sys_getxattr" at 0x49db28, type=FUNC, size=0x4c)
+[D] #228: Symbol("__s390_sys_lgetxattr" at 0x49dbc8, type=FUNC, size=0x4c)
+[D] #229: Symbol("__s390_sys_fgetxattr" at 0x49dc68, type=FUNC, size=0xc6)
+[D] #230: Symbol("__s390_sys_listxattr" at 0x49ddf0, type=FUNC, size=0x22)
+[D] #231: Symbol("__s390_sys_llistxattr" at 0x49de40, type=FUNC, size=0x22)
+[D] #232: Symbol("__s390_sys_flistxattr" at 0x49de90, type=FUNC, size=0xb4)
+[D] #233: Symbol("__s390_sys_removexattr" at 0x49dff8, type=FUNC, size=0x40)
+[D] #234: Symbol("__s390_sys_lremovexattr" at 0x49e078, type=FUNC, size=0x40)
+[D] #235: Symbol("__s390_sys_fremovexattr" at 0x49e0f8, type=FUNC, size=0xe4)
+[D] #236: Symbol("__s390_sys_gettid" at 0x172d60, type=FUNC, size=0xc)
+[D] #237: Symbol("__s390_sys_tkill" at 0x16e738, type=FUNC, size=0xc)
+[D] #238: Symbol("__s390_sys_futex_time32" at 0x22c1c8, type=FUNC, size=0x19e)
+[D] #239: Symbol("__s390_compat_sys_sched_setaffinity" at 0x238878, type=FUNC, size=0xda)
+[D] #240: Symbol("__s390_compat_sys_sched_getaffinity" at 0x238a60, type=FUNC, size=0x148)
+[D] #241: Symbol("__s390_sys_tgkill" at 0x16e6d0, type=FUNC, size=0xc)
+[D] #242: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #243: Symbol("__s390_compat_sys_io_setup" at 0x4dc608, type=FUNC, size=0x15e)
+[D] #244: Symbol("__s390_sys_io_destroy" at 0x4dc768, type=FUNC, size=0x10e)
+[D] #245: Symbol("__s390_sys_io_getevents_time32" at 0x4dd7e8, type=FUNC, size=0x100)
+[D] #246: Symbol("__s390_compat_sys_io_submit" at 0x4dcd30, type=FUNC, size=0x1d0)
+[D] #247: Symbol("__s390_sys_io_cancel" at 0x4dcf00, type=FUNC, size=0x1d8)
+[D] #248: Symbol("__s390_sys_exit_group" at 0x15d4d0, type=FUNC, size=0x22)
+[D] #249: Symbol("__s390_sys_epoll_create" at 0x4cfa48, type=FUNC, size=0xc)
+[D] #250: Symbol("__s390_sys_epoll_ctl" at 0x4d05e0, type=FUNC, size=0x8a)
+[D] #251: Symbol("__s390_sys_epoll_wait" at 0x4d0700, type=FUNC, size=0xc2)
+[D] #252: Symbol("__s390_sys_set_tid_address" at 0x153208, type=FUNC, size=0x50)
+[D] #253: Symbol("__s390_compat_sys_s390_fadvise64" at 0x11cad8, type=FUNC, size=0x86)
+[D] #254: Symbol("__s390_compat_sys_timer_create" at 0x2208e8, type=FUNC, size=0x9e)
+[D] #255: Symbol("__s390_sys_timer_settime32" at 0x220d50, type=FUNC, size=0xc6)
+[D] #256: Symbol("__s390_sys_timer_gettime32" at 0x220a58, type=FUNC, size=0x66)
+[D] #257: Symbol("__s390_sys_timer_getoverrun" at 0x220bb8, type=FUNC, size=0xc)
+[D] #258: Symbol("__s390_sys_timer_delete" at 0x221018, type=FUNC, size=0xc)
+[D] #259: Symbol("__s390_sys_clock_settime32" at 0x2218e8, type=FUNC, size=0xd6)
+[D] #260: Symbol("__s390_sys_clock_gettime32" at 0x221a98, type=FUNC, size=0xe4)
+[D] #261: Symbol("__s390_sys_clock_getres_time32" at 0x221c98, type=FUNC, size=0xe4)
+[D] #262: Symbol("__s390_sys_clock_nanosleep_time32" at 0x222118, type=FUNC, size=0x16c)
+[D] #263: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #264: Symbol("__s390_compat_sys_s390_fadvise64_64" at 0x11cb60, type=FUNC, size=0x9e)
+[D] #265: Symbol("__s390_compat_sys_statfs64" at 0x4b30c0, type=FUNC, size=0x42)
+[D] #266: Symbol("__s390_compat_sys_fstatfs64" at 0x4b3188, type=FUNC, size=0x42)
+[D] #267: Symbol("__s390_sys_remap_file_pages" at 0x3cb840, type=FUNC, size=0x344)
+[D] #268: Symbol("__s390_sys_mbind" at 0x414060, type=FUNC, size=0x76)
+[D] #269: Symbol("__s390_sys_get_mempolicy" at 0x411698, type=FUNC, size=0x4e)
+[D] #270: Symbol("__s390_sys_set_mempolicy" at 0x4115c8, type=FUNC, size=0x1e)
+[D] #271: Symbol("__s390_compat_sys_mq_open" at 0x7c6440, type=FUNC, size=0xc4)
+[D] #272: Symbol("__s390_sys_mq_unlink" at 0x7c5dc0, type=FUNC, size=0x196)
+[D] #273: Symbol("__s390_sys_mq_timedsend_time32" at 0x7c65c0, type=FUNC, size=0x88)
+[D] #274: Symbol("__s390_sys_mq_timedreceive_time32" at 0x7c66d0, type=FUNC, size=0x88)
+[D] #275: Symbol("__s390_compat_sys_mq_notify" at 0x7c6508, type=FUNC, size=0x92)
+[D] #276: Symbol("__s390_compat_sys_mq_getsetattr" at 0x7c65a0, type=FUNC, size=0x1e)
+[D] #277: Symbol("__s390_compat_sys_kexec_load" at 0x2362e0, type=FUNC, size=0x1ce)
+[D] #278: Symbol("__s390_sys_add_key" at 0x7cc1c0, type=FUNC, size=0x206)
+[D] #279: Symbol("__s390_sys_request_key" at 0x7cc5c8, type=FUNC, size=0x1a6)
+[D] #280: Symbol("__s390_compat_sys_keyctl" at 0x7d1818, type=FUNC, size=0x30e)
+[D] #281: Symbol("__s390_compat_sys_waitid" at 0x15d8f8, type=FUNC, size=0x4e)
+[D] #282: Symbol("__s390_sys_ioprio_set" at 0x862a60, type=FUNC, size=0xc)
+[D] #283: Symbol("__s390_sys_ioprio_get" at 0x862df0, type=FUNC, size=0xc)
+[D] #284: Symbol("__s390_sys_inotify_init" at 0x4c8c48, type=FUNC, size=0xc)
+[D] #285: Symbol("__s390_sys_inotify_add_watch" at 0x4c8c58, type=FUNC, size=0x14e)
+[D] #286: Symbol("__s390_sys_inotify_rm_watch" at 0x4c9000, type=FUNC, size=0xc)
+[D] #287: Symbol("__s390_sys_migrate_pages" at 0x411608, type=FUNC, size=0x48)
+[D] #288: Symbol("__s390_compat_sys_openat" at 0x460fa0, type=FUNC, size=0x24)
+[D] #289: Symbol("__s390_sys_mkdirat" at 0x47aaf0, type=FUNC, size=0x5c)
+[D] #290: Symbol("__s390_sys_mknodat" at 0x47a808, type=FUNC, size=0x66)
+[D] #291: Symbol("__s390_sys_fchownat" at 0x4603d8, type=FUNC, size=0x4e)
+[D] #292: Symbol("__s390_sys_futimesat_time32" at 0x4b0e38, type=FUNC, size=0x1e)
+[D] #293: Symbol("__s390_compat_sys_s390_fstatat64" at 0x11c918, type=FUNC, size=0x24)
+[D] #294: Symbol("__s390_sys_unlinkat" at 0x47b220, type=FUNC, size=0x9a)
+[D] #295: Symbol("__s390_sys_renameat" at 0x47c1e8, type=FUNC, size=0x80)
+[D] #296: Symbol("__s390_sys_linkat" at 0x47b978, type=FUNC, size=0x96)
+[D] #297: Symbol("__s390_sys_symlinkat" at 0x47b508, type=FUNC, size=0x72)
+[D] #298: Symbol("__s390_sys_readlinkat" at 0x46b378, type=FUNC, size=0x48)
+[D] #299: Symbol("__s390_sys_fchmodat" at 0x45ff40, type=FUNC, size=0x42)
+[D] #300: Symbol("__s390_sys_faccessat" at 0x45f5e0, type=FUNC, size=0x22)
+[D] #301: Symbol("__s390_compat_sys_pselect6_time32" at 0x483310, type=FUNC, size=0xee)
+[D] #302: Symbol("__s390_compat_sys_ppoll_time32" at 0x483400, type=FUNC, size=0xd8)
+[D] #303: Symbol("__s390_sys_unshare" at 0x155c60, type=FUNC, size=0x36)
+[D] #304: Symbol("__s390_compat_sys_set_robust_list" at 0x22c0a0, type=FUNC, size=0x34)
+[D] #305: Symbol("__s390_compat_sys_get_robust_list" at 0x22c0d8, type=FUNC, size=0xf0)
+[D] #306: Symbol("__s390_sys_splice" at 0x4af150, type=FUNC, size=0x124)
+[D] #307: Symbol("__s390_compat_sys_s390_sync_file_range" at 0x11cc00, type=FUNC, size=0x6c)
+[D] #308: Symbol("__s390_sys_tee" at 0x4af610, type=FUNC, size=0x11c)
+[D] #309: Symbol("__s390_sys_vmsplice" at 0x4af100, type=FUNC, size=0x24)
+[D] #310: Symbol("__s390_sys_move_pages" at 0x42ee38, type=FUNC, size=0x64)
+[D] #311: Symbol("__s390_sys_getcpu" at 0x1767e8, type=FUNC, size=0xbc)
+[D] #312: Symbol("__s390_compat_sys_epoll_pwait" at 0x4d0de0, type=FUNC, size=0x142)
+[D] #313: Symbol("__s390_sys_utimes_time32" at 0x4b0e78, type=FUNC, size=0x22)
+[D] #314: Symbol("__s390_compat_sys_s390_fallocate" at 0x11cc70, type=FUNC, size=0x6c)
+[D] #315: Symbol("__s390_sys_utimensat_time32" at 0x4b0cb0, type=FUNC, size=0xc4)
+[D] #316: Symbol("__s390_compat_sys_signalfd" at 0x4d1ed0, type=FUNC, size=0x86)
+[D] #317: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #318: Symbol("__s390_sys_eventfd" at 0x4d42f8, type=FUNC, size=0xc)
+[D] #319: Symbol("__s390_sys_timerfd_create" at 0x4d31b8, type=FUNC, size=0xc)
+[D] #320: Symbol("__s390_sys_timerfd_settime32" at 0x4d33e8, type=FUNC, size=0xa6)
+[D] #321: Symbol("__s390_sys_timerfd_gettime32" at 0x4d3538, type=FUNC, size=0x66)
+[D] #322: Symbol("__s390_compat_sys_signalfd4" at 0x4d1e40, type=FUNC, size=0x90)
+[D] #323: Symbol("__s390_sys_eventfd2" at 0x4d42a8, type=FUNC, size=0xc)
+[D] #324: Symbol("__s390_sys_inotify_init1" at 0x4c8c00, type=FUNC, size=0xc)
+[D] #325: Symbol("__s390_sys_pipe2" at 0x471808, type=FUNC, size=0x3c)
+[D] #326: Symbol("__s390_sys_dup3" at 0x48fe08, type=FUNC, size=0xc)
+[D] #327: Symbol("__s390_sys_epoll_create1" at 0x4cf9f0, type=FUNC, size=0xc)
+[D] #328: Symbol("__s390_compat_sys_preadv" at 0x4640b0, type=FUNC, size=0x68)
+[D] #329: Symbol("__s390_compat_sys_pwritev" at 0x4641b0, type=FUNC, size=0x68)
+[D] #330: Symbol("__s390_compat_sys_rt_tgsigqueueinfo" at 0x16e988, type=FUNC, size=0x74)
+[D] #331: Symbol("__s390_sys_perf_event_open" at 0x357df0, type=FUNC, size=0x4e)
+[D] #332: Symbol("__s390_sys_fanotify_init" at 0x4cdae0, type=FUNC, size=0xc)
+[D] #333: Symbol("__s390_compat_sys_fanotify_mark" at 0x4cdb50, type=FUNC, size=0x6a)
+[D] #334: Symbol("__s390_sys_prlimit64" at 0x174498, type=FUNC, size=0x280)
+[D] #335: Symbol("__s390_sys_name_to_handle_at" at 0x4fe000, type=FUNC, size=0xc0)
+[D] #336: Symbol("__s390_compat_sys_open_by_handle_at" at 0x4fe1d0, type=FUNC, size=0x1e)
+[D] #337: Symbol("__s390_sys_clock_adjtime32" at 0x221c68, type=FUNC, size=0x18)
+[D] #338: Symbol("__s390_sys_syncfs" at 0x4afde0, type=FUNC, size=0xc)
+[D] #339: Symbol("__s390_sys_setns" at 0x186cb0, type=FUNC, size=0xc)
+[D] #340: Symbol("__s390_sys_process_vm_readv" at 0x3e0798, type=FUNC, size=0x76)
+[D] #341: Symbol("__s390_sys_process_vm_writev" at 0x3e0878, type=FUNC, size=0x76)
+[D] #342: Symbol("__s390_sys_s390_runtime_instr" at 0x115688, type=FUNC, size=0xc)
+[D] #343: Symbol("__s390_sys_kcmp" at 0x20d470, type=FUNC, size=0x4ac)
+[D] #344: Symbol("__s390_sys_finit_module" at 0x2099b8, type=FUNC, size=0x1e)
+[D] #345: Symbol("__s390_sys_sched_setattr" at 0x199ae0, type=FUNC, size=0x184)
+[D] #346: Symbol("__s390_sys_sched_getattr" at 0x19a048, type=FUNC, size=0x100)
+[D] #347: Symbol("__s390_sys_renameat2" at 0x47c0d8, type=FUNC, size=0x86)
+[D] #348: Symbol("__s390_sys_seccomp" at 0x26bfe0, type=FUNC, size=0x1e)
+[D] #349: Symbol("__s390_sys_getrandom" at 0xa07c58, type=FUNC, size=0xd6)
+[D] #350: Symbol("__s390_sys_memfd_create" at 0x45c928, type=FUNC, size=0x33e)
+[D] #351: Symbol("__s390_sys_bpf" at 0x2e0ef8, type=FUNC, size=0x5e)
+[D] #352: Symbol("__s390_sys_s390_pci_mmio_write" at 0x14e8c8, type=FUNC, size=0x534)
+[D] #353: Symbol("__s390_sys_s390_pci_mmio_read" at 0x14f310, type=FUNC, size=0x58e)
+[D] #354: Symbol("__s390_compat_sys_execveat" at 0x46f378, type=FUNC, size=0x78)
+[D] #355: Symbol("__s390_sys_userfaultfd" at 0x4d7c68, type=FUNC, size=0xc)
+[D] #356: Symbol("__s390_sys_membarrier" at 0x1cd2f0, type=FUNC, size=0xc)
+[D] #357: Symbol("__s390_compat_sys_recvmmsg_time32" at 0xb33f00, type=FUNC, size=0x62)
+[D] #358: Symbol("__s390_compat_sys_sendmmsg" at 0xb33d50, type=FUNC, size=0x52)
+[D] #359: Symbol("__s390_sys_socket" at 0xaa8008, type=FUNC, size=0xc)
+[D] #360: Symbol("__s390_sys_socketpair" at 0xaa82c8, type=FUNC, size=0x48)
+[D] #361: Symbol("__s390_sys_bind" at 0xaa8440, type=FUNC, size=0x42)
+[D] #362: Symbol("__s390_sys_connect" at 0xaa8ac0, type=FUNC, size=0x42)
+[D] #363: Symbol("__s390_sys_listen" at 0xaa85c0, type=FUNC, size=0xc)
+[D] #364: Symbol("__s390_sys_accept4" at 0xaa8830, type=FUNC, size=0x48)
+[D] #365: Symbol("__s390_sys_getsockopt" at 0xaa9828, type=FUNC, size=0x4e)
+[D] #366: Symbol("__s390_sys_setsockopt" at 0xaa9578, type=FUNC, size=0x4e)
+[D] #367: Symbol("__s390_sys_getsockname" at 0xaa8c20, type=FUNC, size=0x42)
+[D] #368: Symbol("__s390_sys_getpeername" at 0xaa8d80, type=FUNC, size=0x42)
+[D] #369: Symbol("__s390_sys_sendto" at 0xaa8f60, type=FUNC, size=0x64)
+[D] #370: Symbol("__s390_compat_sys_sendmsg" at 0xb33d28, type=FUNC, size=0x28)
+[D] #371: Symbol("__s390_compat_sys_recvfrom" at 0xb33e30, type=FUNC, size=0x6a)
+[D] #372: Symbol("__s390_compat_sys_recvmsg" at 0xb33da8, type=FUNC, size=0x28)
+[D] #373: Symbol("__s390_sys_shutdown" at 0xaa99f0, type=FUNC, size=0xc)
+[D] #374: Symbol("__s390_sys_mlock2" at 0x3c29e0, type=FUNC, size=0x72)
+[D] #375: Symbol("__s390_sys_copy_file_range" at 0x465030, type=FUNC, size=0x284)
+[D] #376: Symbol("__s390_compat_sys_preadv2" at 0x464118, type=FUNC, size=0x94)
+[D] #377: Symbol("__s390_compat_sys_pwritev2" at 0x464218, type=FUNC, size=0x94)
+[D] #378: Symbol("__s390_sys_s390_guarded_storage" at 0x116878, type=FUNC, size=0xd8)
+[D] #379: Symbol("__s390_sys_statx" at 0x46b530, type=FUNC, size=0xac)
+[D] #380: Symbol("__s390_sys_s390_sthyi" at 0x117260, type=FUNC, size=0x10a)
+[D] #381: Symbol("__s390_sys_kexec_file_load" at 0x2378f8, type=FUNC, size=0x2e8)
+[D] #382: Symbol("__s390_compat_sys_io_pgetevents" at 0x4dd9e8, type=FUNC, size=0x18a)
+[D] #383: Symbol("__s390_sys_rseq" at 0x361038, type=FUNC, size=0x150)
+[D] #384: Symbol("sys_ni_syscall" at 0x185d70, type=FUNC, size=0xc)
+[D] #385: Symbol("sys_ni_syscall" at 0x185d70, type=FUNC, size=0xc)
+[D] #386: Symbol("sys_ni_syscall" at 0x185d70, type=FUNC, size=0xc)
+[D] #387: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #388: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #389: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #390: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #391: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #392: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #393: Symbol("__s390_sys_semget" at 0x7bd590, type=FUNC, size=0xc)
+[D] #394: Symbol("__s390_compat_sys_semctl" at 0x7bd6f0, type=FUNC, size=0x4c)
+[D] #395: Symbol("__s390_sys_shmget" at 0x7c17a8, type=FUNC, size=0x7c)
+[D] #396: Symbol("__s390_compat_sys_shmctl" at 0x7c1988, type=FUNC, size=0x22)
+[D] #397: Symbol("__s390_compat_sys_shmat" at 0x7c2060, type=FUNC, size=0x56)
+[D] #398: Symbol("__s390_sys_shmdt" at 0x7c22e8, type=FUNC, size=0x12)
+[D] #399: Symbol("__s390_sys_msgget" at 0x7b9728, type=FUNC, size=0xc)
+[D] #400: Symbol("__s390_compat_sys_msgsnd" at 0x7b9a00, type=FUNC, size=0x24)
+[D] #401: Symbol("__s390_compat_sys_msgrcv" at 0x7b9b68, type=FUNC, size=0x5a)
+[D] #402: Symbol("__s390_compat_sys_msgctl" at 0x7b9820, type=FUNC, size=0x22)
+[D] #403: Symbol("__s390_sys_clock_gettime" at 0x221370, type=FUNC, size=0xe4)
+[D] #404: Symbol("__s390_sys_clock_settime" at 0x2211c0, type=FUNC, size=0xd6)
+[D] #405: Symbol("__s390_sys_clock_adjtime" at 0x2216d8, type=FUNC, size=0x18)
+[D] #406: Symbol("__s390_sys_clock_getres" at 0x221708, type=FUNC, size=0xea)
+[D] #407: Symbol("__s390_sys_clock_nanosleep" at 0x221e68, type=FUNC, size=0x156)
+[D] #408: Symbol("__s390_sys_timer_gettime" at 0x220988, type=FUNC, size=0x66)
+[D] #409: Symbol("__s390_sys_timer_settime" at 0x220bc8, type=FUNC, size=0xc6)
+[D] #410: Symbol("__s390_sys_timerfd_gettime" at 0x4d3318, type=FUNC, size=0x66)
+[D] #411: Symbol("__s390_sys_timerfd_settime" at 0x4d31c8, type=FUNC, size=0xa6)
+[D] #412: Symbol("__s390_sys_utimensat" at 0x4b0730, type=FUNC, size=0xc0)
+[D] #413: Symbol("__s390_compat_sys_pselect6_time64" at 0x483220, type=FUNC, size=0xee)
+[D] #414: Symbol("__s390_compat_sys_ppoll_time64" at 0x4834d8, type=FUNC, size=0xd8)
+[D] #415: Symbol("__s390_sys_ni_syscall" at 0x1054e8, type=FUNC, size=0xc)
+[D] #416: Symbol("__s390_sys_io_pgetevents" at 0x4dd4b8, type=FUNC, size=0x192)
+[D] #417: Symbol("__s390_compat_sys_recvmmsg_time64" at 0xb33ea0, type=FUNC, size=0x5a)
+[D] #418: Symbol("__s390_sys_mq_timedsend" at 0x7c60f0, type=FUNC, size=0x88)
+[D] #419: Symbol("__s390_sys_mq_timedreceive" at 0x7c6200, type=FUNC, size=0x88)
+[D] #420: Symbol("__s390_sys_semtimedop" at 0x7bebc8, type=FUNC, size=0x24)
+[D] #421: Symbol("__s390_compat_sys_rt_sigtimedwait_time64" at 0x16df18, type=FUNC, size=0xea)
+[D] #422: Symbol("__s390_sys_futex" at 0x22b908, type=FUNC, size=0x19e)
+[D] #423: Symbol("__s390_sys_sched_rr_get_interval" at 0x19a788, type=FUNC, size=0x72)
+[D] #424: Symbol("__s390_sys_pidfd_send_signal" at 0x16e2e0, type=FUNC, size=0x1c4)
+[D] #425: Symbol("__s390_sys_io_uring_setup" at 0x8a4980, type=FUNC, size=0x18)
+[D] #426: Symbol("__s390_sys_io_uring_enter" at 0x8a4168, type=FUNC, size=0x3f6)
+[D] #427: Symbol("__s390_sys_io_uring_register" at 0x8a49b0, type=FUNC, size=0x1f8)
+[D] #428: Symbol("__s390_sys_open_tree" at 0x496eb0, type=FUNC, size=0x174)
+[D] #429: Symbol("__s390_sys_move_mount" at 0x498888, type=FUNC, size=0x180)
+[D] #430: Symbol("__s390_sys_fsopen" at 0x4b5f18, type=FUNC, size=0x126)
+[D] #431: Symbol("__s390_sys_fsconfig" at 0x4b6488, type=FUNC, size=0x40e)
+[D] #432: Symbol("__s390_sys_fsmount" at 0x498878, type=FUNC, size=0xc)
+[D] #433: Symbol("__s390_sys_fspick" at 0x4b6168, type=FUNC, size=0x190)
+[D] #434: Symbol("__s390_sys_pidfd_open" at 0x1817e0, type=FUNC, size=0xc)
+[D] #435: Symbol("__s390_sys_clone3" at 0x1556e0, type=FUNC, size=0x18)
+[D] #436: Symbol("__s390_sys_close_range" at 0x4610c8, type=FUNC, size=0xc)
+[D] #437: Symbol("__s390_sys_openat2" at 0x460d40, type=FUNC, size=0x11c)
+[D] #438: Symbol("__s390_sys_pidfd_getfd" at 0x1819c0, type=FUNC, size=0xc)
+[D] #439: Symbol("__s390_sys_faccessat2" at 0x45f630, type=FUNC, size=0x24)
+[D] #440: Symbol("__s390_sys_process_madvise" at 0x3f3800, type=FUNC, size=0x4e)
+[D] #441: Symbol("__s390_compat_sys_epoll_pwait2" at 0x4d0f28, type=FUNC, size=0x15e)
+[D] #442: Symbol("__s390_sys_mount_setattr" at 0x499490, type=FUNC, size=0x1bc)
+[D] #443: Symbol("__s390_sys_quotactl_fd" at 0x50de40, type=FUNC, size=0x204)
+[D] #444: Symbol("__s390_sys_landlock_create_ruleset" at 0x805ae0, type=FUNC, size=0x17a)
+[D] #445: Symbol("__s390_sys_landlock_add_rule" at 0x805dd8, type=FUNC, size=0x170)
+[D] #446: Symbol("__s390_sys_landlock_restrict_self" at 0x806210, type=FUNC, size=0xc)
+[D] #447: Symbol("__s390_sys_memfd_secret" at 0x457d50, type=FUNC, size=0xc)
+[D] #448: Symbol("__s390_sys_process_mrelease" at 0x372320, type=FUNC, size=0xc)
+[D] #449: Symbol("__s390_sys_futex_waitv" at 0x22bc48, type=FUNC, size=0x228)
+[D] #450: Symbol("__s390_sys_set_mempolicy_home_node" at 0x4138a8, type=FUNC, size=0x284)
+[I] Common syscall symbol prefixes: __s390_compat_sys_, __s390_compat_, __s390_sys_, __s390_, __
+[I] 42 entries point to __s390_sys_ni_syscall
+[I] 4 entries point to sys_ni_syscall
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390-v6.4 0x15d3a8 0x155600 0x11ca68 0x11caa0 0x460f78 0x461070 0x16a908 0x460fc8 0x47baa8 0x47b358 0x46f310 0x45f6c0 0x210120 0x47a8d8 0x45ffd0 0x230be0 0x462b10 0x172d10 0x4982e8 0x495988 0x230e38 0x231868 0x210210 0x167168 0x2255b8 0x16fdc0 0x4b0af0 0x45f680 0x199708 0x4afc28 0x16e2d0 0x47c2e8 0x47abb0 0x47ae50 0x490060 0x471888 0x173020 0x3c9cb8 0x230db0 0x231a88 0x16fce0 0x231978 0x231b98 0x233d78 0x495908 0x47f330 0x47d708 0x1733a8 0x175000 0x45f978 0x4b31d0 0x48fed8 0x172db8 0x1734a8 0x173690 0x16fc28 0x230e00 0x230d78 0x16fff8 0x16f748 0x173720 0x173fa0 0x174350 0x174fb0 0x210928 0x210a48 0x2315a8 0x2316c8 0x47b5f8 0x46b408 0x46dd28 0x3fd5a0 0x18a6d0 0x4805f8 0x11c940 0x3c8550 0x45f2d8 0x45f4d0 0x45ff30 0x230d28 0x1719c8 0x171718 0x4b3018 0x4b3030 0xb33f68 0x1d43c0 0x2257c0 0x2253c8 0x46b690 0x46b6a8 0x46b6e8 0x461128 0x15d8d0 0x3fd550 0x176990 0x11c708 0x4afe30 0x11d200 0x155640 0x173be0 0x1736f0 0x210e68 0x3ce838 0x238430 0x209978 0x209b30 0x50db00 0x173450 0x45f968 0x4908b0 0x1054d8 0x231560 0x231598 0x462b30 0x4806b0 0x483150 0x4f2978 0x3d0838 0x463d20 0x463d70 0x173548 0x4afe80 0x3c2960 0x3c2ac0 0x3c2ef8 0x3c2f08 0x199a60 0x199e98 0x1999b0 0x199e88 0x19a5e8 0x19a728 0x19a778 0x19a878 0x217aa8 0x3d0798 0x230e98 0x230ea8 0x482c98 0x231210 0x231220 0x175030 0x11d2c0 0x16fbc0 0x16ae28 0x16b000 0x16e008 0x16e828 0x16ff80 0x11c7f0 0x11c840 0x230b00 0x4b1a78 0x164460 0x1647a0 0x16f558 0x464698 0x155620 0x174058 0x11c9e0 0x11c780 0x11c7b8 0x11c8d0 0x11c8e8 0x11c900 0x460518 0x172e10 0x172ec0 0x172e68 0x172f18 0x171f18 0x171b98 0x18d0d8 0x18d270 0x460720 0x1723a8 0x1723b8 0x172860 0x172870 0x460478 0x1720a0 0x171cd8 0x172b90 0x172cc0 0x498cb0 0x3c0458 0x3f3760 0x4803a8 0x47d6e8 0x11c890 0x464790 0x49d4b0 0x49d568 0x49d620 0x49db28 0x49dbc8 0x49dc68 0x49ddf0 0x49de40 0x49de90 0x49dff8 0x49e078 0x49e0f8 0x172d60 0x16e738 0x22c1c8 0x238878 0x238a60 0x16e6d0 0x4dc608 0x4dc768 0x4dd7e8 0x4dcd30 0x4dcf00 0x15d4d0 0x4cfa48 0x4d05e0 0x4d0700 0x153208 0x11cad8 0x2208e8 0x220d50 0x220a58 0x220bb8 0x221018 0x2218e8 0x221a98 0x221c98 0x222118 0x11cb60 0x4b30c0 0x4b3188 0x3cb840 0x414060 0x411698 0x4115c8 0x7c6440 0x7c5dc0 0x7c65c0 0x7c66d0 0x7c6508 0x7c65a0 0x2362e0 0x7cc1c0 0x7cc5c8 0x7d1818 0x15d8f8 0x862a60 0x862df0 0x4c8c48 0x4c8c58 0x4c9000 0x411608 0x460fa0 0x47aaf0 0x47a808 0x4603d8 0x4b0e38 0x11c918 0x47b220 0x47c1e8 0x47b978 0x47b508 0x46b378 0x45ff40 0x45f5e0 0x483310 0x483400 0x155c60 0x22c0a0 0x22c0d8 0x4af150 0x11cc00 0x4af610 0x4af100 0x42ee38 0x1767e8 0x4d0de0 0x4b0e78 0x11cc70 0x4b0cb0 0x4d1ed0 0x4d42f8 0x4d31b8 0x4d33e8 0x4d3538 0x4d1e40 0x4d42a8 0x4c8c00 0x471808 0x48fe08 0x4cf9f0 0x4640b0 0x4641b0 0x16e988 0x357df0 0x4cdae0 0x4cdb50 0x174498 0x4fe000 0x4fe1d0 0x221c68 0x4afde0 0x186cb0 0x3e0798 0x3e0878 0x115688 0x20d470 0x2099b8 0x199ae0 0x19a048 0x47c0d8 0x26bfe0 0xa07c58 0x45c928 0x2e0ef8 0x14e8c8 0x14f310 0x46f378 0x4d7c68 0x1cd2f0 0xb33f00 0xb33d50 0xaa8008 0xaa82c8 0xaa8440 0xaa8ac0 0xaa85c0 0xaa8830 0xaa9828 0xaa9578 0xaa8c20 0xaa8d80 0xaa8f60 0xb33d28 0xb33e30 0xb33da8 0xaa99f0 0x3c29e0 0x465030 0x464118 0x464218 0x116878 0x46b530 0x117260 0x2378f8 0x4dd9e8 0x361038 0x7bd590 0x7bd6f0 0x7c17a8 0x7c1988 0x7c2060 0x7c22e8 0x7b9728 0x7b9a00 0x7b9b68 0x7b9820 0x221370 0x2211c0 0x2216d8 0x221708 0x221e68 0x220988 0x220bc8 0x4d3318 0x4d31c8 0x4b0730 0x483220 0x4834d8 0x4dd4b8 0xb33ea0 0x7c60f0 0x7c6200 0x7bebc8 0x16df18 0x22b908 0x19a788 0x16e2e0 0x8a4980 0x8a4168 0x8a49b0 0x496eb0 0x498888 0x4b5f18 0x4b6488 0x498878 0x4b6168 0x1817e0 0x1556e0 0x4610c8 0x460d40 0x1819c0 0x45f630 0x3f3800 0x4d0f28 0x499490 0x50de40 0x805ae0 0x805dd8 0x806210 0x457d50 0x372320 0x22bc48 0x4138a8
+[D] Location needs adjustment (bad): fork (__s390_sys_fork) -> kernel/fork.c:2983
+[D] Location needs adjustment (bad): getuid16 (__s390_sys_getuid16) -> kernel/uid16.c:177
+[D] Location needs adjustment (bad): alarm (__s390_sys_alarm) -> kernel/time/itimer.c:277
+[D] Location needs adjustment (bad): pause (__s390_sys_pause) -> kernel/signal.c:4606
+[D] Location needs adjustment (bad): sync (__s390_sys_sync) -> fs/sync.c:97
+[D] Location needs adjustment (bad): kill (__s390_sys_kill) -> kernel/signal.c:1588
+[D] Location needs adjustment (bad): dup (__s390_sys_dup) -> include/linux/atomic/atomic-arch-fallback.h:2309
+[D] Location needs adjustment (bad): getgid16 (__s390_sys_getgid16) -> kernel/uid16.c:208
+[D] Location needs adjustment (bad): geteuid16 (__s390_sys_geteuid16) -> kernel/uid16.c:203
+[D] Location needs adjustment (bad): getegid16 (__s390_sys_getegid16) -> kernel/uid16.c:213
+[D] Location needs adjustment (bad): dup2 (__s390_sys_dup2) -> include/linux/rcupdate.h:97
+[D] Location needs adjustment (bad): setsid (__s390_sys_setsid) -> arch/s390/include/asm/spinlock.h:119
+[D] Location needs adjustment (bad): getpgid (__s390_sys_getpgid) -> kernel/sys.c:1138
+[D] Location needs adjustment (bad): munlockall (__s390_sys_munlockall) -> mm/mlock.c:696
+[D] Location needs adjustment (bad): sched_yield (__s390_sys_sched_yield) -> include/linux/thread_info.h:230
+[D] Location needs adjustment (bad): vfork (__s390_sys_vfork) -> kernel/fork.c:2997
+[D] Location needs adjustment (bad): s390_truncate64 (__s390_compat_sys_s390_truncate64) -> include/linux/syscalls.h:1349
+[D] Location needs adjustment (bad): s390_ftruncate64 (__s390_compat_sys_s390_ftruncate64) -> include/linux/syscalls.h:1342
+[D] Location needs adjustment (bad): timer_delete (__s390_sys_timer_delete) -> arch/s390/include/asm/spinlock.h:64
+[D] Location needs adjustment (bad): ioprio_get (__s390_sys_ioprio_get) -> arch/s390/include/asm/spinlock.h:64
+[D] Location needs adjustment (bad): inotify_rm_watch (__s390_sys_inotify_rm_watch) -> arch/s390/include/asm/spinlock.h:64
+[D] Location needs adjustment (bad): setns (__s390_sys_setns) -> include/linux/refcount.h:191
+[D] Location needs adjustment (bad): sendmsg (__s390_compat_sys_sendmsg) -> net/compat.c:342
+[D] Location needs adjustment (bad): recvmsg (__s390_compat_sys_recvmsg) -> net/compat.c:370
+[D] Location needs adjustment (bad): pidfd_getfd (__s390_sys_pidfd_getfd) -> kernel/pid.c:682
+[D] Location needs adjustment (bad): memfd_secret (__s390_sys_memfd_secret) -> mm/secretmem.c:191
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390-v6.4 0x2255c3 0x49006b 0x48fee3 0x15560b 0x11c7ef 0x231c1f 0x2319ff 0x231b0f 0x17345b 0x2318ef 0x4c900b 0x862dfb 0x16e2db 0x457d5b 0x3c3003 0x16fe1f 0x1819cb 0xb33dcf 0x19a61b 0xb33d4f 0x186cbb 0x1736bf 0x4afc5b 0x221023 0x11c7b3 0x15562b
+[D] Location needs full-range adjustment (bad): alarm (__s390_sys_alarm+0xb) -> kernel/time/itimer.c:277
+[D] Location needs full-range adjustment (bad): dup (__s390_sys_dup+0xb) -> include/linux/atomic/atomic-arch-fallback.h:2309
+[D] Location needs full-range adjustment (bad): dup2 (__s390_sys_dup2+0xb) -> include/linux/rcupdate.h:97
+[D] Location needs full-range adjustment (bad): fork (__s390_sys_fork+0xb) -> kernel/fork.c:2983
+[D] Location needs full-range adjustment (bad): s390_ftruncate64 (__s390_compat_sys_s390_ftruncate64+0x37) -> include/linux/syscalls.h:1342
+[D] Location needs full-range adjustment (bad): getegid16 (__s390_sys_getegid16+0x87) -> kernel/uid16.c:213
+[D] Location needs full-range adjustment (bad): geteuid16 (__s390_sys_geteuid16+0x87) -> kernel/uid16.c:203
+[D] Location needs full-range adjustment (bad): getgid16 (__s390_sys_getgid16+0x87) -> kernel/uid16.c:208
+[D] Location needs full-range adjustment (bad): getpgid (__s390_sys_getpgid+0xb) -> kernel/sys.c:1138
+[D] Location needs full-range adjustment (bad): getuid16 (__s390_sys_getuid16+0x87) -> kernel/uid16.c:177
+[D] Location needs full-range adjustment (bad): inotify_rm_watch (__s390_sys_inotify_rm_watch+0xb) -> arch/s390/include/asm/spinlock.h:64
+[D] Location needs full-range adjustment (bad): ioprio_get (__s390_sys_ioprio_get+0xb) -> arch/s390/include/asm/spinlock.h:64
+[D] Location needs full-range adjustment (bad): kill (__s390_sys_kill+0xb) -> kernel/signal.c:1588
+[D] Location needs full-range adjustment (bad): memfd_secret (__s390_sys_memfd_secret+0xb) -> mm/secretmem.c:191
+[D] Location needs full-range adjustment (bad): munlockall (__s390_sys_munlockall+0xfb) -> mm/mlock.c:696
+[D] Location needs full-range adjustment (bad): pause (__s390_sys_pause+0x5f) -> kernel/signal.c:4606
+[D] Location needs full-range adjustment (bad): pidfd_getfd (__s390_sys_pidfd_getfd+0xb) -> kernel/pid.c:682
+[D] Location needs full-range adjustment (bad): recvmsg (__s390_compat_sys_recvmsg+0x27) -> net/compat.c:370
+[D] Location needs full-range adjustment (bad): sched_yield (__s390_sys_sched_yield+0x33) -> include/linux/thread_info.h:230
+[D] Location needs full-range adjustment (bad): sendmsg (__s390_compat_sys_sendmsg+0x27) -> net/compat.c:342
+[D] Location needs full-range adjustment (bad): setns (__s390_sys_setns+0xb) -> include/linux/refcount.h:191
+[D] Location needs full-range adjustment (bad): setsid (__s390_sys_setsid+0x2f) -> arch/s390/include/asm/spinlock.h:119
+[D] Location needs full-range adjustment (bad): sync (__s390_sys_sync+0x33) -> fs/sync.c:97
+[D] Location needs full-range adjustment (bad): timer_delete (__s390_sys_timer_delete+0xb) -> arch/s390/include/asm/spinlock.h:64
+[D] Location needs full-range adjustment (bad): s390_truncate64 (__s390_compat_sys_s390_truncate64+0x33) -> include/linux/syscalls.h:1349
+[D] Location needs full-range adjustment (bad): vfork (__s390_sys_vfork+0xb) -> kernel/fork.c:2997
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390-v6.4 0x2255b9 0x2255ba 0x2255bb 0x2255bc 0x2255bd 0x2255be 0x2255bf 0x2255c0 0x2255c1
+[D] Location needs grepping (bad): alarm (__s390_sys_alarm) -> kernel/time/itimer.c:277
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390-v6.4 0x490061 0x490062 0x490063 0x490064 0x490065 0x490066 0x490067 0x490068 0x490069
+[D] Location needs grepping (bad): dup (__s390_sys_dup) -> include/linux/atomic/atomic-arch-fallback.h:2309
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390-v6.4 0x48fed9 0x48feda 0x48fedb 0x48fedc 0x48fedd 0x48fede 0x48fedf 0x48fee0 0x48fee1
+[D] Location needs grepping (bad): dup2 (__s390_sys_dup2) -> include/linux/rcupdate.h:97
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390-v6.4 0x155601 0x155602 0x155603 0x155604 0x155605 0x155606 0x155607 0x155608 0x155609
+[D] Location needs grepping (bad): fork (__s390_sys_fork) -> kernel/fork.c:2983
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390-v6.4 0x11c7b9 0x11c7ba 0x11c7bb 0x11c7bc 0x11c7bd 0x11c7be 0x11c7bf 0x11c7c0 0x11c7c1 0x11c7c2 0x11c7c3 0x11c7c4 0x11c7c5 0x11c7c6 0x11c7c7 0x11c7c8 0x11c7c9 0x11c7ca 0x11c7cb 0x11c7cc 0x11c7cd 0x11c7ce 0x11c7cf 0x11c7d0 0x11c7d1 0x11c7d2 0x11c7d3 0x11c7d4 0x11c7d5 0x11c7d6 0x11c7d7 0x11c7d8 0x11c7d9 0x11c7da 0x11c7db 0x11c7dc 0x11c7dd 0x11c7de 0x11c7df 0x11c7e0 0x11c7e1 0x11c7e2 0x11c7e3 0x11c7e4 0x11c7e5 0x11c7e6 0x11c7e7 0x11c7e8 0x11c7e9 0x11c7ea 0x11c7eb 0x11c7ec 0x11c7ed
+[D] Location needs grepping (bad): s390_ftruncate64 (__s390_compat_sys_s390_ftruncate64) -> include/linux/syscalls.h:1342
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390-v6.4 0x231b99 0x231b9a 0x231b9b 0x231b9c 0x231b9d 0x231b9e 0x231b9f 0x231ba0 0x231ba1 0x231ba2 0x231ba3 0x231ba4 0x231ba5 0x231ba6 0x231ba7 0x231ba8 0x231ba9 0x231baa 0x231bab 0x231bac 0x231bad 0x231bae 0x231baf 0x231bb0 0x231bb1 0x231bb2 0x231bb3 0x231bb4 0x231bb5 0x231bb6 0x231bb7 0x231bb8 0x231bb9 0x231bba 0x231bbb 0x231bbc 0x231bbd 0x231bbe 0x231bbf 0x231bc0 0x231bc1 0x231bc2 0x231bc3 0x231bc4 0x231bc5 0x231bc6 0x231bc7 0x231bc8 0x231bc9 0x231bca 0x231bcb 0x231bcc 0x231bcd 0x231bce 0x231bcf 0x231bd0 0x231bd1 0x231bd2 0x231bd3 0x231bd4 0x231bd5 0x231bd6 0x231bd7 0x231bd8 0x231bd9 0x231bda 0x231bdb 0x231bdc 0x231bdd 0x231bde 0x231bdf 0x231be0 0x231be1 0x231be2 0x231be3 0x231be4 0x231be5 0x231be6 0x231be7 0x231be8 0x231be9 0x231bea 0x231beb 0x231bec 0x231bed 0x231bee 0x231bef 0x231bf0 0x231bf1 0x231bf2 0x231bf3 0x231bf4 0x231bf5 0x231bf6 0x231bf7 0x231bf8 0x231bf9 0x231bfa 0x231bfb 0x231bfc 0x231bfd 0x231bfe 0x231bff 0x231c00 0x231c01 0x231c02 0x231c03 0x231c04 0x231c05 0x231c06 0x231c07 0x231c08 0x231c09 0x231c0a 0x231c0b 0x231c0c 0x231c0d 0x231c0e 0x231c0f 0x231c10 0x231c11 0x231c12 0x231c13 0x231c14 0x231c15 0x231c16 0x231c17 0x231c18 0x231c19 0x231c1a 0x231c1b 0x231c1c 0x231c1d
+[D] Location needs grepping (bad): getegid16 (__s390_sys_getegid16) -> kernel/uid16.c:213
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390-v6.4 0x231979 0x23197a 0x23197b 0x23197c 0x23197d 0x23197e 0x23197f 0x231980 0x231981 0x231982 0x231983 0x231984 0x231985 0x231986 0x231987 0x231988 0x231989 0x23198a 0x23198b 0x23198c 0x23198d 0x23198e 0x23198f 0x231990 0x231991 0x231992 0x231993 0x231994 0x231995 0x231996 0x231997 0x231998 0x231999 0x23199a 0x23199b 0x23199c 0x23199d 0x23199e 0x23199f 0x2319a0 0x2319a1 0x2319a2 0x2319a3 0x2319a4 0x2319a5 0x2319a6 0x2319a7 0x2319a8 0x2319a9 0x2319aa 0x2319ab 0x2319ac 0x2319ad 0x2319ae 0x2319af 0x2319b0 0x2319b1 0x2319b2 0x2319b3 0x2319b4 0x2319b5 0x2319b6 0x2319b7 0x2319b8 0x2319b9 0x2319ba 0x2319bb 0x2319bc 0x2319bd 0x2319be 0x2319bf 0x2319c0 0x2319c1 0x2319c2 0x2319c3 0x2319c4 0x2319c5 0x2319c6 0x2319c7 0x2319c8 0x2319c9 0x2319ca 0x2319cb 0x2319cc 0x2319cd 0x2319ce 0x2319cf 0x2319d0 0x2319d1 0x2319d2 0x2319d3 0x2319d4 0x2319d5 0x2319d6 0x2319d7 0x2319d8 0x2319d9 0x2319da 0x2319db 0x2319dc 0x2319dd 0x2319de 0x2319df 0x2319e0 0x2319e1 0x2319e2 0x2319e3 0x2319e4 0x2319e5 0x2319e6 0x2319e7 0x2319e8 0x2319e9 0x2319ea 0x2319eb 0x2319ec 0x2319ed 0x2319ee 0x2319ef 0x2319f0 0x2319f1 0x2319f2 0x2319f3 0x2319f4 0x2319f5 0x2319f6 0x2319f7 0x2319f8 0x2319f9 0x2319fa 0x2319fb 0x2319fc 0x2319fd
+[D] Location needs grepping (bad): geteuid16 (__s390_sys_geteuid16) -> kernel/uid16.c:203
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390-v6.4 0x231a89 0x231a8a 0x231a8b 0x231a8c 0x231a8d 0x231a8e 0x231a8f 0x231a90 0x231a91 0x231a92 0x231a93 0x231a94 0x231a95 0x231a96 0x231a97 0x231a98 0x231a99 0x231a9a 0x231a9b 0x231a9c 0x231a9d 0x231a9e 0x231a9f 0x231aa0 0x231aa1 0x231aa2 0x231aa3 0x231aa4 0x231aa5 0x231aa6 0x231aa7 0x231aa8 0x231aa9 0x231aaa 0x231aab 0x231aac 0x231aad 0x231aae 0x231aaf 0x231ab0 0x231ab1 0x231ab2 0x231ab3 0x231ab4 0x231ab5 0x231ab6 0x231ab7 0x231ab8 0x231ab9 0x231aba 0x231abb 0x231abc 0x231abd 0x231abe 0x231abf 0x231ac0 0x231ac1 0x231ac2 0x231ac3 0x231ac4 0x231ac5 0x231ac6 0x231ac7 0x231ac8 0x231ac9 0x231aca 0x231acb 0x231acc 0x231acd 0x231ace 0x231acf 0x231ad0 0x231ad1 0x231ad2 0x231ad3 0x231ad4 0x231ad5 0x231ad6 0x231ad7 0x231ad8 0x231ad9 0x231ada 0x231adb 0x231adc 0x231add 0x231ade 0x231adf 0x231ae0 0x231ae1 0x231ae2 0x231ae3 0x231ae4 0x231ae5 0x231ae6 0x231ae7 0x231ae8 0x231ae9 0x231aea 0x231aeb 0x231aec 0x231aed 0x231aee 0x231aef 0x231af0 0x231af1 0x231af2 0x231af3 0x231af4 0x231af5 0x231af6 0x231af7 0x231af8 0x231af9 0x231afa 0x231afb 0x231afc 0x231afd 0x231afe 0x231aff 0x231b00 0x231b01 0x231b02 0x231b03 0x231b04 0x231b05 0x231b06 0x231b07 0x231b08 0x231b09 0x231b0a 0x231b0b 0x231b0c 0x231b0d
+[D] Location needs grepping (bad): getgid16 (__s390_sys_getgid16) -> kernel/uid16.c:208
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390-v6.4 0x173451 0x173452 0x173453 0x173454 0x173455 0x173456 0x173457 0x173458 0x173459
+[D] Location needs grepping (bad): getpgid (__s390_sys_getpgid) -> kernel/sys.c:1138
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390-v6.4 0x231869 0x23186a 0x23186b 0x23186c 0x23186d 0x23186e 0x23186f 0x231870 0x231871 0x231872 0x231873 0x231874 0x231875 0x231876 0x231877 0x231878 0x231879 0x23187a 0x23187b 0x23187c 0x23187d 0x23187e 0x23187f 0x231880 0x231881 0x231882 0x231883 0x231884 0x231885 0x231886 0x231887 0x231888 0x231889 0x23188a 0x23188b 0x23188c 0x23188d 0x23188e 0x23188f 0x231890 0x231891 0x231892 0x231893 0x231894 0x231895 0x231896 0x231897 0x231898 0x231899 0x23189a 0x23189b 0x23189c 0x23189d 0x23189e 0x23189f 0x2318a0 0x2318a1 0x2318a2 0x2318a3 0x2318a4 0x2318a5 0x2318a6 0x2318a7 0x2318a8 0x2318a9 0x2318aa 0x2318ab 0x2318ac 0x2318ad 0x2318ae 0x2318af 0x2318b0 0x2318b1 0x2318b2 0x2318b3 0x2318b4 0x2318b5 0x2318b6 0x2318b7 0x2318b8 0x2318b9 0x2318ba 0x2318bb 0x2318bc 0x2318bd 0x2318be 0x2318bf 0x2318c0 0x2318c1 0x2318c2 0x2318c3 0x2318c4 0x2318c5 0x2318c6 0x2318c7 0x2318c8 0x2318c9 0x2318ca 0x2318cb 0x2318cc 0x2318cd 0x2318ce 0x2318cf 0x2318d0 0x2318d1 0x2318d2 0x2318d3 0x2318d4 0x2318d5 0x2318d6 0x2318d7 0x2318d8 0x2318d9 0x2318da 0x2318db 0x2318dc 0x2318dd 0x2318de 0x2318df 0x2318e0 0x2318e1 0x2318e2 0x2318e3 0x2318e4 0x2318e5 0x2318e6 0x2318e7 0x2318e8 0x2318e9 0x2318ea 0x2318eb 0x2318ec 0x2318ed
+[D] Location needs grepping (bad): getuid16 (__s390_sys_getuid16) -> kernel/uid16.c:177
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390-v6.4 0x4c9001 0x4c9002 0x4c9003 0x4c9004 0x4c9005 0x4c9006 0x4c9007 0x4c9008 0x4c9009
+[D] Location needs grepping (bad): inotify_rm_watch (__s390_sys_inotify_rm_watch) -> arch/s390/include/asm/spinlock.h:64
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390-v6.4 0x862df1 0x862df2 0x862df3 0x862df4 0x862df5 0x862df6 0x862df7 0x862df8 0x862df9
+[D] Location needs grepping (bad): ioprio_get (__s390_sys_ioprio_get) -> arch/s390/include/asm/spinlock.h:64
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390-v6.4 0x16e2d1 0x16e2d2 0x16e2d3 0x16e2d4 0x16e2d5 0x16e2d6 0x16e2d7 0x16e2d8 0x16e2d9
+[D] Location needs grepping (bad): kill (__s390_sys_kill) -> kernel/signal.c:1588
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390-v6.4 0x457d51 0x457d52 0x457d53 0x457d54 0x457d55 0x457d56 0x457d57 0x457d58 0x457d59
+[D] Location needs grepping (bad): memfd_secret (__s390_sys_memfd_secret) -> mm/secretmem.c:191
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390-v6.4 0x3c2f09 0x3c2f0a 0x3c2f0b 0x3c2f0c 0x3c2f0d 0x3c2f0e 0x3c2f0f 0x3c2f10 0x3c2f11 0x3c2f12 0x3c2f13 0x3c2f14 0x3c2f15 0x3c2f16 0x3c2f17 0x3c2f18 0x3c2f19 0x3c2f1a 0x3c2f1b 0x3c2f1c 0x3c2f1d 0x3c2f1e 0x3c2f1f 0x3c2f20 0x3c2f21 0x3c2f22 0x3c2f23 0x3c2f24 0x3c2f25 0x3c2f26 0x3c2f27 0x3c2f28 0x3c2f29 0x3c2f2a 0x3c2f2b 0x3c2f2c 0x3c2f2d 0x3c2f2e 0x3c2f2f 0x3c2f30 0x3c2f31 0x3c2f32 0x3c2f33 0x3c2f34 0x3c2f35 0x3c2f36 0x3c2f37 0x3c2f38 0x3c2f39 0x3c2f3a 0x3c2f3b 0x3c2f3c 0x3c2f3d 0x3c2f3e 0x3c2f3f 0x3c2f40 0x3c2f41 0x3c2f42 0x3c2f43 0x3c2f44 0x3c2f45 0x3c2f46 0x3c2f47 0x3c2f48 0x3c2f49 0x3c2f4a 0x3c2f4b 0x3c2f4c 0x3c2f4d 0x3c2f4e 0x3c2f4f 0x3c2f50 0x3c2f51 0x3c2f52 0x3c2f53 0x3c2f54 0x3c2f55 0x3c2f56 0x3c2f57 0x3c2f58 0x3c2f59 0x3c2f5a 0x3c2f5b 0x3c2f5c 0x3c2f5d 0x3c2f5e 0x3c2f5f 0x3c2f60 0x3c2f61 0x3c2f62 0x3c2f63 0x3c2f64 0x3c2f65 0x3c2f66 0x3c2f67 0x3c2f68 0x3c2f69 0x3c2f6a 0x3c2f6b 0x3c2f6c 0x3c2f6d 0x3c2f6e 0x3c2f6f 0x3c2f70 0x3c2f71 0x3c2f72 0x3c2f73 0x3c2f74 0x3c2f75 0x3c2f76 0x3c2f77 0x3c2f78 0x3c2f79 0x3c2f7a 0x3c2f7b 0x3c2f7c 0x3c2f7d 0x3c2f7e 0x3c2f7f 0x3c2f80 0x3c2f81 0x3c2f82 0x3c2f83 0x3c2f84 0x3c2f85 0x3c2f86 0x3c2f87 0x3c2f88 0x3c2f89 0x3c2f8a 0x3c2f8b 0x3c2f8c 0x3c2f8d 0x3c2f8e 0x3c2f8f 0x3c2f90 0x3c2f91 0x3c2f92 0x3c2f93 0x3c2f94 0x3c2f95 0x3c2f96 0x3c2f97 0x3c2f98 0x3c2f99 0x3c2f9a 0x3c2f9b 0x3c2f9c 0x3c2f9d 0x3c2f9e 0x3c2f9f 0x3c2fa0 0x3c2fa1 0x3c2fa2 0x3c2fa3 0x3c2fa4 0x3c2fa5 0x3c2fa6 0x3c2fa7 0x3c2fa8 0x3c2fa9 0x3c2faa 0x3c2fab 0x3c2fac 0x3c2fad 0x3c2fae 0x3c2faf 0x3c2fb0 0x3c2fb1 0x3c2fb2 0x3c2fb3 0x3c2fb4 0x3c2fb5 0x3c2fb6 0x3c2fb7 0x3c2fb8 0x3c2fb9 0x3c2fba 0x3c2fbb 0x3c2fbc 0x3c2fbd 0x3c2fbe 0x3c2fbf 0x3c2fc0 0x3c2fc1 0x3c2fc2 0x3c2fc3 0x3c2fc4 0x3c2fc5 0x3c2fc6 0x3c2fc7 0x3c2fc8 0x3c2fc9 0x3c2fca 0x3c2fcb 0x3c2fcc 0x3c2fcd 0x3c2fce 0x3c2fcf 0x3c2fd0 0x3c2fd1 0x3c2fd2 0x3c2fd3 0x3c2fd4 0x3c2fd5 0x3c2fd6 0x3c2fd7 0x3c2fd8 0x3c2fd9 0x3c2fda 0x3c2fdb 0x3c2fdc 0x3c2fdd 0x3c2fde 0x3c2fdf 0x3c2fe0 0x3c2fe1 0x3c2fe2 0x3c2fe3 0x3c2fe4 0x3c2fe5 0x3c2fe6 0x3c2fe7 0x3c2fe8 0x3c2fe9 0x3c2fea 0x3c2feb 0x3c2fec 0x3c2fed 0x3c2fee 0x3c2fef 0x3c2ff0 0x3c2ff1 0x3c2ff2 0x3c2ff3 0x3c2ff4 0x3c2ff5 0x3c2ff6 0x3c2ff7 0x3c2ff8 0x3c2ff9 0x3c2ffa 0x3c2ffb 0x3c2ffc 0x3c2ffd 0x3c2ffe 0x3c2fff 0x3c3000 0x3c3001
+[D] Location needs grepping (bad): munlockall (__s390_sys_munlockall) -> mm/mlock.c:696
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390-v6.4 0x16fdc1 0x16fdc2 0x16fdc3 0x16fdc4 0x16fdc5 0x16fdc6 0x16fdc7 0x16fdc8 0x16fdc9 0x16fdca 0x16fdcb 0x16fdcc 0x16fdcd 0x16fdce 0x16fdcf 0x16fdd0 0x16fdd1 0x16fdd2 0x16fdd3 0x16fdd4 0x16fdd5 0x16fdd6 0x16fdd7 0x16fdd8 0x16fdd9 0x16fdda 0x16fddb 0x16fddc 0x16fddd 0x16fdde 0x16fddf 0x16fde0 0x16fde1 0x16fde2 0x16fde3 0x16fde4 0x16fde5 0x16fde6 0x16fde7 0x16fde8 0x16fde9 0x16fdea 0x16fdeb 0x16fdec 0x16fded 0x16fdee 0x16fdef 0x16fdf0 0x16fdf1 0x16fdf2 0x16fdf3 0x16fdf4 0x16fdf5 0x16fdf6 0x16fdf7 0x16fdf8 0x16fdf9 0x16fdfa 0x16fdfb 0x16fdfc 0x16fdfd 0x16fdfe 0x16fdff 0x16fe00 0x16fe01 0x16fe02 0x16fe03 0x16fe04 0x16fe05 0x16fe06 0x16fe07 0x16fe08 0x16fe09 0x16fe0a 0x16fe0b 0x16fe0c 0x16fe0d 0x16fe0e 0x16fe0f 0x16fe10 0x16fe11 0x16fe12 0x16fe13 0x16fe14 0x16fe15 0x16fe16 0x16fe17 0x16fe18 0x16fe19 0x16fe1a 0x16fe1b 0x16fe1c 0x16fe1d
+[D] Location needs grepping (bad): pause (__s390_sys_pause) -> kernel/signal.c:4606
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390-v6.4 0x1819c1 0x1819c2 0x1819c3 0x1819c4 0x1819c5 0x1819c6 0x1819c7 0x1819c8 0x1819c9
+[D] Location needs grepping (bad): pidfd_getfd (__s390_sys_pidfd_getfd) -> kernel/pid.c:682
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390-v6.4 0xb33da9 0xb33daa 0xb33dab 0xb33dac 0xb33dad 0xb33dae 0xb33daf 0xb33db0 0xb33db1 0xb33db2 0xb33db3 0xb33db4 0xb33db5 0xb33db6 0xb33db7 0xb33db8 0xb33db9 0xb33dba 0xb33dbb 0xb33dbc 0xb33dbd 0xb33dbe 0xb33dbf 0xb33dc0 0xb33dc1 0xb33dc2 0xb33dc3 0xb33dc4 0xb33dc5 0xb33dc6 0xb33dc7 0xb33dc8 0xb33dc9 0xb33dca 0xb33dcb 0xb33dcc 0xb33dcd
+[D] Location needs grepping (bad): recvmsg (__s390_compat_sys_recvmsg) -> net/compat.c:370
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390-v6.4 0x19a5e9 0x19a5ea 0x19a5eb 0x19a5ec 0x19a5ed 0x19a5ee 0x19a5ef 0x19a5f0 0x19a5f1 0x19a5f2 0x19a5f3 0x19a5f4 0x19a5f5 0x19a5f6 0x19a5f7 0x19a5f8 0x19a5f9 0x19a5fa 0x19a5fb 0x19a5fc 0x19a5fd 0x19a5fe 0x19a5ff 0x19a600 0x19a601 0x19a602 0x19a603 0x19a604 0x19a605 0x19a606 0x19a607 0x19a608 0x19a609 0x19a60a 0x19a60b 0x19a60c 0x19a60d 0x19a60e 0x19a60f 0x19a610 0x19a611 0x19a612 0x19a613 0x19a614 0x19a615 0x19a616 0x19a617 0x19a618 0x19a619
+[D] Location needs grepping (bad): sched_yield (__s390_sys_sched_yield) -> include/linux/thread_info.h:230
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390-v6.4 0xb33d29 0xb33d2a 0xb33d2b 0xb33d2c 0xb33d2d 0xb33d2e 0xb33d2f 0xb33d30 0xb33d31 0xb33d32 0xb33d33 0xb33d34 0xb33d35 0xb33d36 0xb33d37 0xb33d38 0xb33d39 0xb33d3a 0xb33d3b 0xb33d3c 0xb33d3d 0xb33d3e 0xb33d3f 0xb33d40 0xb33d41 0xb33d42 0xb33d43 0xb33d44 0xb33d45 0xb33d46 0xb33d47 0xb33d48 0xb33d49 0xb33d4a 0xb33d4b 0xb33d4c 0xb33d4d
+[D] Location needs grepping (bad): sendmsg (__s390_compat_sys_sendmsg) -> net/compat.c:342
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390-v6.4 0x186cb1 0x186cb2 0x186cb3 0x186cb4 0x186cb5 0x186cb6 0x186cb7 0x186cb8 0x186cb9
+[D] Location needs grepping (bad): setns (__s390_sys_setns) -> include/linux/refcount.h:191
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390-v6.4 0x173691 0x173692 0x173693 0x173694 0x173695 0x173696 0x173697 0x173698 0x173699 0x17369a 0x17369b 0x17369c 0x17369d 0x17369e 0x17369f 0x1736a0 0x1736a1 0x1736a2 0x1736a3 0x1736a4 0x1736a5 0x1736a6 0x1736a7 0x1736a8 0x1736a9 0x1736aa 0x1736ab 0x1736ac 0x1736ad 0x1736ae 0x1736af 0x1736b0 0x1736b1 0x1736b2 0x1736b3 0x1736b4 0x1736b5 0x1736b6 0x1736b7 0x1736b8 0x1736b9 0x1736ba 0x1736bb 0x1736bc 0x1736bd
+[D] Location needs grepping (bad): setsid (__s390_sys_setsid) -> arch/s390/include/asm/spinlock.h:119
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390-v6.4 0x4afc29 0x4afc2a 0x4afc2b 0x4afc2c 0x4afc2d 0x4afc2e 0x4afc2f 0x4afc30 0x4afc31 0x4afc32 0x4afc33 0x4afc34 0x4afc35 0x4afc36 0x4afc37 0x4afc38 0x4afc39 0x4afc3a 0x4afc3b 0x4afc3c 0x4afc3d 0x4afc3e 0x4afc3f 0x4afc40 0x4afc41 0x4afc42 0x4afc43 0x4afc44 0x4afc45 0x4afc46 0x4afc47 0x4afc48 0x4afc49 0x4afc4a 0x4afc4b 0x4afc4c 0x4afc4d 0x4afc4e 0x4afc4f 0x4afc50 0x4afc51 0x4afc52 0x4afc53 0x4afc54 0x4afc55 0x4afc56 0x4afc57 0x4afc58 0x4afc59
+[D] Location needs grepping (bad): sync (__s390_sys_sync) -> fs/sync.c:97
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390-v6.4 0x221019 0x22101a 0x22101b 0x22101c 0x22101d 0x22101e 0x22101f 0x221020 0x221021
+[D] Location needs grepping (bad): timer_delete (__s390_sys_timer_delete) -> arch/s390/include/asm/spinlock.h:64
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390-v6.4 0x11c781 0x11c782 0x11c783 0x11c784 0x11c785 0x11c786 0x11c787 0x11c788 0x11c789 0x11c78a 0x11c78b 0x11c78c 0x11c78d 0x11c78e 0x11c78f 0x11c790 0x11c791 0x11c792 0x11c793 0x11c794 0x11c795 0x11c796 0x11c797 0x11c798 0x11c799 0x11c79a 0x11c79b 0x11c79c 0x11c79d 0x11c79e 0x11c79f 0x11c7a0 0x11c7a1 0x11c7a2 0x11c7a3 0x11c7a4 0x11c7a5 0x11c7a6 0x11c7a7 0x11c7a8 0x11c7a9 0x11c7aa 0x11c7ab 0x11c7ac 0x11c7ad 0x11c7ae 0x11c7af 0x11c7b0 0x11c7b1
+[D] Location needs grepping (bad): s390_truncate64 (__s390_compat_sys_s390_truncate64) -> include/linux/syscalls.h:1349
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390-v6.4 0x155621 0x155622 0x155623 0x155624 0x155625 0x155626 0x155627 0x155628 0x155629
+[D] Location needs grepping (bad): vfork (__s390_sys_vfork) -> kernel/fork.c:2997
+[D] Running command: rg --line-number --glob '!Documentation/*' --glob '!drivers/*' --glob '!lib/*' --glob '!samples/*' --glob '!sound/*' --glob '!tools/*' --glob '!usr/*' --glob '!arch/*' --glob arch/s390 --glob '*.c' '(\b(COMPAT_)?SYSCALL(32)?_DEFINE\d\s*\(|\bCOMPAT_SYSCALL_WRAP\d\s*\()\s*\w+'
+[W] Location found through grepping: alarm -> kernel/time/itimer.c:306
+[W] Location found through grepping: dup -> fs/file.c:1270
+[W] Location found through grepping: dup2 -> fs/file.c:1255
+[W] Location found through grepping: fork -> kernel/fork.c:2997
+[W] Location found through grepping: s390_ftruncate64 -> arch/s390/kernel/compat_linux.c:75
+[W] Location found through grepping: getegid16 -> kernel/uid16.c:218
+[W] Location found through grepping: geteuid16 -> kernel/uid16.c:208
+[W] Location found through grepping: getgid16 -> kernel/uid16.c:213
+[W] Location found through grepping: getpgid -> kernel/sys.c:1166
+[W] Location found through grepping: getuid16 -> kernel/uid16.c:203
+[W] Location found through grepping: inotify_rm_watch -> fs/notify/inotify/inotify_user.c:794
+[W] Location found through grepping: ioprio_get -> block/ioprio.c:209
+[W] Location found through grepping: kill -> kernel/signal.c:3791
+[W] Location found through grepping: memfd_secret -> mm/secretmem.c:231
+[W] Location found through grepping: munlockall -> mm/mlock.c:725
+[W] Location found through grepping: pause -> kernel/signal.c:4623
+[W] Location found through grepping: pidfd_getfd -> kernel/pid.c:719
+[W] Location found through grepping: recvmsg -> net/compat.c:378
+[W] Location found through grepping: sched_yield -> kernel/sched/core.c:8506
+[W] Location found through grepping: sendmsg -> net/compat.c:350
+[W] Location found through grepping: setns -> kernel/nsproxy.c:546
+[W] Location found through grepping: setsid -> kernel/sys.c:1252
+[W] Location found through grepping: sync -> fs/sync.c:111
+[W] Location found through grepping: timer_delete -> kernel/time/posix-timers.c:1008
+[W] Location found through grepping: s390_truncate64 -> arch/s390/kernel/compat_linux.c:70
+[W] Location found through grepping: vfork -> kernel/fork.c:3013
+[I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
+Found 405 implemented syscalls
+Found 26 definition locations through grepping
+
