@@ -165,6 +165,8 @@ function humanArchName(name, bits) {
 		name = 'PowerPC'
 	} else if (name === 'riscv') {
 		name = 'RISC-V'
+	} else if (name === 's390') {
+		name = 'S390'
 	}
 
 	return `${name} ${bits}-bit`
@@ -179,19 +181,9 @@ function humanAbiName(abi) {
 	// arm64
 	if (abi.startsWith('aarch'))
 		return 'AArch' + abi.slice(5)
-	// arm
-	if (abi === 'oabi' || abi === 'eabi')
-		return abi.toUpperCase()
-	// mips
-	if (abi === 'o32' || abi === 'o64' || abi === 'n64' || abi == 'n32')
-		return abi.toUpperCase()
-	// powerpc
-	if (abi === 'spu' || abi === 'ppc64' || abi === 'ppc32')
-		return abi.toUpperCase()
-	// riscv
-	if (abi === 'rv64' || abi === 'rv32')
-		return abi.toUpperCase()
-	return abi
+
+	// Anything else can just go uppercase
+	return abi.toUpperCase()
 }
 
 function favoriteArch(archs) {
