@@ -11,10 +11,10 @@ kernel syscall implementation tracker.
 
 **Features**:
 
-- Tables for multiple architectures, ABIs, and kernel versions, easily
-  selectable and switchable.
+- Sortable tables for multiple architectures, ABIs, and kernel versions.
 - URL parameters to share/link a specific table.
-- Direct links to syscall definitions within the kernel source code.
+- Direct links to syscall definitions within the kernel source code via
+  [Bootlin Elixir Cross Referencer][bootlin-elixir].
 - Parameter types, names and corresponding ABI calling convention registers.
 - Listed Kconfig options for optional syscalls.
 - Downloadable kernel configurations to build kernels with the same syscalls
@@ -23,21 +23,27 @@ kernel syscall implementation tracker.
 ## Building
 
 To build this static website, you will need Python 3, and optionally the
-`fonttools` and `brotli` modules. Run the following in the root of this
+`fonttools` and `brotli` modules. Run the following commands the root of this
 repository:
 
 ```sh
-# Required: copies over db files and builds index
+# Required: copy over db files and build db index
 ./scripts/build_web_db.py
 # Opional: build emoji font (needs fonttools + brotli)
 ./scripts/build_web_fonts.sh
 ```
 
-The static website is now available in `www/` folder. You may quickly test it
-locally using `python3 -m http.server -d www/`.
+The static website is now available in the `www/` folder. You may quickly test
+it locally using one of these commands:
+
+```sh
+$ python3 -m http.server -d www -b 127.0.0.1 8080
+$ ruby -run -ehttpd -- -p 8080 www
+```
 
 ---
 
 *Copyright &copy; 2023-2025 Marco Bonelli. Licensed under the GNU General Public License v3.0.*
 
 [systrack]: https://github.com/mebeim/systrack
+[bootlin-elixir]: https://elixir.bootlin.com/linux
