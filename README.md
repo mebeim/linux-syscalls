@@ -38,6 +38,6 @@ locally using `python3 -m http.server -d www/`.
 
 ---
 
-*Copyright &copy; 2023-2024 Marco Bonelli. Licensed under the GNU General Public License v3.0.*
+*Copyright &copy; 2023-2025 Marco Bonelli. Licensed under the GNU General Public License v3.0.*
 
 [systrack]: https://github.com/mebeim/systrack
