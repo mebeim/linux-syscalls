@@ -22,9 +22,12 @@
 #       "<arch>": {
 #           "<bits>": {
 #               "<abi>": {
-#                   "<kernel-version-tag>": {
-#                       "config": true/false,
-#                       "stderr": true/false
+#                   "bits": <bits>,
+#                   "tables": {
+#                       "<kernel-version-tag>": {
+#                           "config": true/false,
+#                           "stderr": true/false
+#                       }
 #                   }
 #               }
 #           }
@@ -83,20 +86,25 @@ def main() -> int:
 
 			for abidir in bitsdir.iterdir():
 				abi = abidir.name
-				bits_index[abi] = abi_index = {}
+				abi_tables = {}
+				bits_index[abi] = abi_index = {
+					# Abi bits discovered opening a table later
+					'bits': None,
+					'tables': abi_tables
+				}
 
 				for tagdir in abidir.iterdir():
 					tag = tagdir.name
-					abi_index[tag] = {'config': True, 'stderr': True}
+					abi_tables[tag] = {'config': True, 'stderr': True}
 					files = os.listdir(tagdir)
 
 					if 'config.txt' not in files:
 						warnings.append(f'no config for {arch}/{bits}/{abi}/{tag}')
-						abi_index[tag]['config'] = False
+						abi_tables[tag]['config'] = False
 
 					if 'stderr.txt' not in files:
 						warnings.append(f'no stderr log for {arch}/{bits}/{abi}/{tag}')
-						abi_index[tag]['stderr'] = False
+						abi_tables[tag]['stderr'] = False
 
 					if 'table.json' not in files:
 						eprint(f'No table for {arch}/{bits}/{abi}/{tag}')
@@ -116,14 +124,31 @@ def main() -> int:
 					for what, w, h in zip(('arch', 'bits', 'abi'), want, have):
 						if w != h:
 							eprint(f'Mismatched {what} for {tablefile}')
-							eprint(f'Expected {w}, but have {h} inside the file.')
+							eprint(f'Expected {w}, but have {h} in the file.')
+							abort()
+
+					if abi_index['bits'] is None:
+						abi_index['bits'] = kern['abi']['bits']
+					else:
+						# Sanity check, ensure all tables under the same abi has
+						# report the same abi bits
+						want = abi_index['bits']
+						have = data['kernel']['abi']['bits']
+						if have != want:
+							eprint(f'Unexpected kernel abi bits for {tablefile}')
+							eprint(f'Expected {want}, but have {have} in the file.')
 							abort()
 
 				# Add special "latest" tag as a copy of the highest tag
-				latest = max(abi_index, key=tag_to_tuple)
-				abi_index['latest'] = abi_index[latest].copy()
-				abi_index['latest']['real_tag'] = latest
+				latest = max(abi_tables, key=tag_to_tuple)
+				abi_tables['latest'] = abi_tables[latest].copy()
+				abi_tables['latest']['realTag'] = latest
 				copytree(abidir / latest, abidir / 'latest')
+
+				# Ensure abi bits were discovered
+				if abi_index['bits'] is None:
+					eprint(f'Unable to set abi bits for {abi}')
+					abort()
 
 	with (rootdir / 'index.json').open('w') as f:
 		dump(index, f, sort_keys=True, separators=(',', ':'))
@@ -137,7 +162,7 @@ def main() -> int:
 				print(f'{arch}/{bits}/{abi}:', end='')
 
 				prev = 'vX'
-				for tag in sorted_tags(abi_index):
+				for tag in sorted_tags(abi_index['tables']):
 					# Skip special "latest" tag
 					if tag == 'latest':
 						total -= 1

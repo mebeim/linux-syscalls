@@ -80,7 +80,7 @@ function setSelection(arch, bits, abi, tag) {
 		return true
 
 	// Ensure this tag exists for the chosen arch/bits/abi combo
-	if (!abidb[tag]) {
+	if (!abidb.tables[tag]) {
 		console.log(`setSelection(): bad tag for ${arch}/${bits}/${abi}:`, tag)
 		return false
 	}
@@ -154,7 +154,7 @@ function clearOptions(selectEl) {
 	selectEl.innerHTML = ''
 }
 
-function humanArchName(name, bits) {
+function humanArchName(name) {
 	if (name.startsWith('arm')) {
 		// We have arm64 and arm, but arm64 is only 64-bit and arm is only
 		// 32-bit, therefore we can just avoid the redundant "64" in "arm64".
@@ -169,7 +169,7 @@ function humanArchName(name, bits) {
 		name = 'S390'
 	}
 
-	return `${name} ${bits}-bit`
+	return name
 }
 
 function humanAbiName(abi) {
@@ -187,7 +187,7 @@ function humanAbiName(abi) {
 }
 
 function favoriteArch(archs) {
-	for (const [arch, bits, abi] of archs) {
+	for (const [arch, bits, abi, _] of archs) {
 		if (arch === 'x86' && bits === '64' && abi === 'x64')
 			return [arch, bits, abi]
 	}
@@ -197,15 +197,15 @@ function favoriteArch(archs) {
 function realTag(arch, bits, abi, tag) {
 	// Convert special "latest" tag to real tag, leave others alone
 	if (tag === 'latest')
-		return db[arch][bits][abi]['latest']['real_tag']
+		return db[arch][bits][abi].tables.latest.realTag
 	return tag
 }
 
 function fillArchOptions(archs) {
 	clearOptions(archSelectEl)
-	archs.forEach(([arch, bits, abi]) => {
+	archs.forEach(([arch, bits, abi, abiBits]) => {
 		const opt = document.createElement('option')
-		opt.label = opt.textContent = `${humanArchName(arch, bits)}, ${humanAbiName(abi)} ABI`
+		opt.label = opt.textContent = `${humanArchName(arch)} ${bits}-bit, ${humanAbiName(abi)} ABI (${abiBits}-bit)`
 		opt.dataset.arch = arch
 		opt.dataset.bits = bits
 		opt.dataset.abi = abi
@@ -240,9 +240,9 @@ function fillTagOptions(tags) {
 }
 
 function fillTagOptionsForArch(arch, bits, abi) {
-	const abidb = db[arch]?.[bits]?.[abi]
+	const abidb = db[arch]?.[bits]?.[abi]?.tables
 	if (!abidb) {
-		console.error('fillTagOptionsForArch(): bad arch/bits/abi combo:', arch, bits, abi)
+		console.error('fillTagOptionsForArch(): could not find tables: bad arch/bits/abi combo?', arch, bits, abi)
 		return false
 	}
 
@@ -521,7 +521,7 @@ function toggleCompactSignature() {
 async function update(pushHistoryState) {
 	const selection = getSelection()
 	const [arch, bits, abi, tag] = selection
-	const {config, stderr} = db[arch][bits][abi][tag]
+	const {config, stderr} = db[arch][bits][abi].tables[tag]
 	const newTitle = `Linux syscall table: ${tag}, ${getArchSelectionText()}`
 
 	currentSyscallTable = await fetchSyscallTable(arch, bits, abi, tag)
@@ -627,10 +627,31 @@ async function setup() {
 	// Join arch, bits and ABI together under the same select for simplicity
 	for (const [arch, archdb] of Object.entries(db)) {
 		for (const [bits, bitsdb] of Object.entries(archdb)) {
-			for (const abi of Object.keys(bitsdb))
-				archs.push([arch, bits, abi])
+			for (const [abi, abidb] of Object.entries(bitsdb))
+				archs.push([arch, bits, abi, abidb.bits])
 		}
 	}
+
+	archs.sort(([archA, bitsA, abiA, abiBitsA], [archB, bitsB, abiB, abiBitsB]) => {
+		// Order by arch name ascending (use human name since that's what will be displayed)
+		const archHumanA = humanArchName(archA)
+		const archHumanB = humanArchName(archB)
+		if (archHumanA < archHumanB) return -1
+		if (archHumanA > archHumanB) return 1
+		// Order by bits descending (64-bit first)
+		if (bitsA < bitsB) return 1
+		if (bitsA > bitsB) return -1
+		// Order by abi bits descending (64-bit first)
+		if (abiBitsA < abiBitsB) return 1
+		if (abiBitsA > abiBitsB) return -1
+		// Special case if one abi contains "64" and the other "32" (put 64 first)
+		if (abiA.includes('32') && abiB.includes('64')) return 1
+		if (abiA.includes('64') && abiB.includes('32')) return -1
+		// Order by abi ascending
+		if (abiA < abiB) return -1
+		if (abiA > abiB) return 1
+		return 0
+	})
 
 	const favorite = favoriteArch(archs)
 	fillArchOptions(archs)
