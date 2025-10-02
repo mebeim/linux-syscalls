@@ -503,10 +503,6 @@ CONFIG_ARCH_HAS_GCOV_PROFILE_ALL=y
 # end of GCOV-based kernel profiling
 
 CONFIG_HAVE_GCC_PLUGINS=y
-CONFIG_GCC_PLUGINS=y
-# CONFIG_GCC_PLUGIN_CYC_COMPLEXITY is not set
-# CONFIG_GCC_PLUGIN_LATENT_ENTROPY is not set
-# CONFIG_GCC_PLUGIN_RANDSTRUCT is not set
 # end of General architecture-dependent options
 
 CONFIG_RT_MUTEXES=y
@@ -1176,7 +1172,6 @@ CONFIG_VIRTIO_BLK=m
 # CONFIG_ECHO is not set
 # CONFIG_MISC_ALCOR_PCI is not set
 # CONFIG_MISC_RTSX_PCI is not set
-# CONFIG_MISC_RTSX_USB is not set
 # CONFIG_HABANA_AI is not set
 # end of Misc devices
 
@@ -1699,7 +1694,6 @@ CONFIG_MDIO_DEVRES=y
 # CONFIG_MDIO_HISI_FEMAC is not set
 # CONFIG_MDIO_IPQ4019 is not set
 # CONFIG_MDIO_MSCC_MIIM is not set
-# CONFIG_MDIO_MVUSB is not set
 # CONFIG_MDIO_XPCS is not set
 CONFIG_PHYLIB=y
 CONFIG_SWPHY=y
@@ -1758,15 +1752,10 @@ CONFIG_PPP_ASYNC=m
 CONFIG_PPP_SYNC_TTY=m
 # CONFIG_SLIP is not set
 CONFIG_SLHC=m
-CONFIG_USB_NET_DRIVERS=y
-# CONFIG_USB_CATC is not set
-# CONFIG_USB_KAWETH is not set
-# CONFIG_USB_PEGASUS is not set
-# CONFIG_USB_RTL8150 is not set
-# CONFIG_USB_RTL8152 is not set
-# CONFIG_USB_LAN78XX is not set
-# CONFIG_USB_USBNET is not set
-# CONFIG_USB_IPHETH is not set
+
+#
+# Host-side USB support is needed for USB Network Adapter support
+#
 # CONFIG_WLAN is not set
 
 #
@@ -1865,7 +1854,6 @@ CONFIG_INPUT_PCSPKR=m
 # CONFIG_INPUT_UINPUT is not set
 # CONFIG_INPUT_PCF8574 is not set
 # CONFIG_INPUT_ADXL34X is not set
-# CONFIG_INPUT_IMS_PCU is not set
 # CONFIG_INPUT_IQS269A is not set
 # CONFIG_INPUT_CMA3000 is not set
 # CONFIG_INPUT_IDEAPAD_SLIDEBAR is not set
@@ -2045,10 +2033,7 @@ CONFIG_I2C_POWERMAC=y
 #
 # External I2C/SMBus adapter drivers
 #
-# CONFIG_I2C_DIOLAN_U2C is not set
-# CONFIG_I2C_ROBOTFUZZ_OSIF is not set
 # CONFIG_I2C_TAOS_EVM is not set
-# CONFIG_I2C_TINY_USB is not set
 
 #
 # Other I2C/SMBus bus drivers
@@ -2239,7 +2224,6 @@ CONFIG_BCMA_POSSIBLE=y
 # CONFIG_MFD_DA9062 is not set
 # CONFIG_MFD_DA9063 is not set
 # CONFIG_MFD_DA9150 is not set
-# CONFIG_MFD_DLN2 is not set
 # CONFIG_MFD_GATEWORKS_GSC is not set
 # CONFIG_MFD_MC13XXX_I2C is not set
 # CONFIG_MFD_MP2629 is not set
@@ -2266,7 +2250,6 @@ CONFIG_BCMA_POSSIBLE=y
 # CONFIG_MFD_MT6360 is not set
 # CONFIG_MFD_MT6397 is not set
 # CONFIG_MFD_MENF21BMC is not set
-# CONFIG_MFD_VIPERBOARD is not set
 # CONFIG_MFD_RETU is not set
 # CONFIG_MFD_PCF50633 is not set
 # CONFIG_MFD_RDC321X is not set
@@ -2395,8 +2378,6 @@ CONFIG_FB_RADEON_BACKLIGHT=y
 # CONFIG_FB_ARK is not set
 # CONFIG_FB_PM3 is not set
 # CONFIG_FB_CARMINE is not set
-# CONFIG_FB_SMSCUFX is not set
-# CONFIG_FB_UDL is not set
 CONFIG_FB_IBM_GXT4500=y
 # CONFIG_FB_VIRTUAL is not set
 # CONFIG_FB_METRONOME is not set
@@ -2554,18 +2535,6 @@ CONFIG_SND_AOA_TAS=m
 CONFIG_SND_AOA_TOONIE=m
 CONFIG_SND_AOA_SOUNDBUS=m
 CONFIG_SND_AOA_SOUNDBUS_I2S=m
-CONFIG_SND_USB=y
-# CONFIG_SND_USB_AUDIO is not set
-# CONFIG_SND_USB_UA101 is not set
-# CONFIG_SND_USB_USX2Y is not set
-# CONFIG_SND_USB_CAIAQ is not set
-# CONFIG_SND_USB_6FIRE is not set
-# CONFIG_SND_USB_HIFACE is not set
-# CONFIG_SND_BCD2000 is not set
-# CONFIG_SND_USB_POD is not set
-# CONFIG_SND_USB_PODHD is not set
-# CONFIG_SND_USB_TONEPORT is not set
-# CONFIG_SND_USB_VARIAX is not set
 CONFIG_SND_PCMCIA=y
 # CONFIG_SND_VXPOCKET is not set
 # CONFIG_SND_PDAUDIOCF is not set
@@ -2584,38 +2553,26 @@ CONFIG_HID_GENERIC=y
 # Special HID drivers
 #
 CONFIG_HID_A4TECH=y
-# CONFIG_HID_ACCUTOUCH is not set
 # CONFIG_HID_ACRUX is not set
 CONFIG_HID_APPLE=y
-# CONFIG_HID_APPLEIR is not set
-# CONFIG_HID_ASUS is not set
 # CONFIG_HID_AUREAL is not set
 CONFIG_HID_BELKIN=y
-# CONFIG_HID_BETOP_FF is not set
-# CONFIG_HID_BIGBEN_FF is not set
 CONFIG_HID_CHERRY=y
 CONFIG_HID_CHICONY=y
-# CONFIG_HID_CORSAIR is not set
 # CONFIG_HID_COUGAR is not set
 # CONFIG_HID_MACALLY is not set
 # CONFIG_HID_PRODIKEYS is not set
 # CONFIG_HID_CMEDIA is not set
-# CONFIG_HID_CREATIVE_SB0540 is not set
 CONFIG_HID_CYPRESS=y
 # CONFIG_HID_DRAGONRISE is not set
 # CONFIG_HID_EMS_FF is not set
-# CONFIG_HID_ELAN is not set
 # CONFIG_HID_ELECOM is not set
-# CONFIG_HID_ELO is not set
 CONFIG_HID_EZKEY=y
 # CONFIG_HID_GEMBIRD is not set
 # CONFIG_HID_GFRM is not set
 # CONFIG_HID_GLORIOUS is not set
-# CONFIG_HID_HOLTEK is not set
-# CONFIG_HID_GT683R is not set
 # CONFIG_HID_KEYTOUCH is not set
 # CONFIG_HID_KYE is not set
-# CONFIG_HID_UCLOGIC is not set
 # CONFIG_HID_WALTOP is not set
 # CONFIG_HID_VIEWSONIC is not set
 CONFIG_HID_GYRATION=y
@@ -2641,20 +2598,15 @@ CONFIG_HID_MICROSOFT=y
 CONFIG_HID_MONTEREY=y
 # CONFIG_HID_MULTITOUCH is not set
 # CONFIG_HID_NTI is not set
-# CONFIG_HID_NTRIG is not set
 # CONFIG_HID_ORTEK is not set
 CONFIG_HID_PANTHERLORD=y
 # CONFIG_PANTHERLORD_FF is not set
-# CONFIG_HID_PENMOUNT is not set
 CONFIG_HID_PETALYNX=y
 # CONFIG_HID_PICOLCD is not set
 # CONFIG_HID_PLANTRONICS is not set
 # CONFIG_HID_PRIMAX is not set
-# CONFIG_HID_RETRODE is not set
-# CONFIG_HID_ROCCAT is not set
 # CONFIG_HID_SAITEK is not set
 CONFIG_HID_SAMSUNG=y
-# CONFIG_HID_SONY is not set
 # CONFIG_HID_SPEEDLINK is not set
 # CONFIG_HID_STEAM is not set
 # CONFIG_HID_STEELSERIES is not set
@@ -2667,8 +2619,6 @@ CONFIG_HID_SUNPLUS=y
 # CONFIG_HID_THINGM is not set
 # CONFIG_HID_THRUSTMASTER is not set
 # CONFIG_HID_UDRAW_PS3 is not set
-# CONFIG_HID_U2FZERO is not set
-# CONFIG_HID_WACOM is not set
 # CONFIG_HID_WIIMOTE is not set
 # CONFIG_HID_XINMO is not set
 # CONFIG_HID_ZEROPLUS is not set
@@ -2676,14 +2626,6 @@ CONFIG_HID_SUNPLUS=y
 # CONFIG_HID_SENSOR_HUB is not set
 # CONFIG_HID_ALPS is not set
 # end of Special HID drivers
-
-#
-# USB HID support
-#
-CONFIG_USB_HID=y
-# CONFIG_HID_PID is not set
-CONFIG_USB_HIDDEV=y
-# end of USB HID support
 
 #
 # I2C HID support
@@ -2694,135 +2636,19 @@ CONFIG_USB_HIDDEV=y
 
 CONFIG_USB_OHCI_LITTLE_ENDIAN=y
 CONFIG_USB_SUPPORT=y
-CONFIG_USB_COMMON=y
 # CONFIG_USB_ULPI_BUS is not set
 CONFIG_USB_ARCH_HAS_HCD=y
-CONFIG_USB=y
+# CONFIG_USB is not set
 CONFIG_USB_PCI=y
-# CONFIG_USB_ANNOUNCE_NEW_DEVICES is not set
-
-#
-# Miscellaneous USB options
-#
-CONFIG_USB_DEFAULT_PERSIST=y
-# CONFIG_USB_DYNAMIC_MINORS is not set
-# CONFIG_USB_OTG is not set
-# CONFIG_USB_OTG_PRODUCTLIST is not set
-# CONFIG_USB_OTG_DISABLE_EXTERNAL_HUB is not set
-CONFIG_USB_AUTOSUSPEND_DELAY=2
-CONFIG_USB_MON=m
-
-#
-# USB Host Controller Drivers
-#
-# CONFIG_USB_C67X00_HCD is not set
-# CONFIG_USB_XHCI_HCD is not set
-CONFIG_USB_EHCI_HCD=y
-# CONFIG_USB_EHCI_ROOT_HUB_TT is not set
-CONFIG_USB_EHCI_TT_NEWSCHED=y
-CONFIG_USB_EHCI_PCI=y
-# CONFIG_XPS_USB_HCD_XILINX is not set
-# CONFIG_USB_EHCI_FSL is not set
-# CONFIG_USB_EHCI_HCD_PPC_OF is not set
-# CONFIG_USB_EHCI_HCD_PLATFORM is not set
-# CONFIG_USB_OXU210HP_HCD is not set
-# CONFIG_USB_ISP116X_HCD is not set
-# CONFIG_USB_FOTG210_HCD is not set
-CONFIG_USB_OHCI_HCD=y
-# CONFIG_USB_OHCI_HCD_PPC_OF_BE is not set
-# CONFIG_USB_OHCI_HCD_PPC_OF_LE is not set
-CONFIG_USB_OHCI_HCD_PCI=y
-# CONFIG_USB_OHCI_HCD_PLATFORM is not set
-# CONFIG_USB_UHCI_HCD is not set
-# CONFIG_USB_SL811_HCD is not set
-# CONFIG_USB_R8A66597_HCD is not set
-# CONFIG_USB_HCD_TEST_MODE is not set
-
-#
-# USB Device Class drivers
-#
-# CONFIG_USB_ACM is not set
-# CONFIG_USB_PRINTER is not set
-# CONFIG_USB_WDM is not set
-# CONFIG_USB_TMC is not set
-
-#
-# NOTE: USB_STORAGE depends on SCSI but BLK_DEV_SD may
-#
-
-#
-# also be needed; see USB_STORAGE Help for more info
-#
-CONFIG_USB_STORAGE=m
-# CONFIG_USB_STORAGE_DEBUG is not set
-# CONFIG_USB_STORAGE_REALTEK is not set
-# CONFIG_USB_STORAGE_DATAFAB is not set
-# CONFIG_USB_STORAGE_FREECOM is not set
-# CONFIG_USB_STORAGE_ISD200 is not set
-# CONFIG_USB_STORAGE_USBAT is not set
-# CONFIG_USB_STORAGE_SDDR09 is not set
-# CONFIG_USB_STORAGE_SDDR55 is not set
-# CONFIG_USB_STORAGE_JUMPSHOT is not set
-# CONFIG_USB_STORAGE_ALAUDA is not set
-# CONFIG_USB_STORAGE_ONETOUCH is not set
-# CONFIG_USB_STORAGE_KARMA is not set
-# CONFIG_USB_STORAGE_CYPRESS_ATACB is not set
-# CONFIG_USB_STORAGE_ENE_UB6250 is not set
-# CONFIG_USB_UAS is not set
-
-#
-# USB Imaging devices
-#
-# CONFIG_USB_MDC800 is not set
-# CONFIG_USB_MICROTEK is not set
-# CONFIG_USBIP_CORE is not set
-# CONFIG_USB_CDNS3 is not set
-# CONFIG_USB_MUSB_HDRC is not set
-# CONFIG_USB_DWC3 is not set
-# CONFIG_USB_DWC2 is not set
-# CONFIG_USB_CHIPIDEA is not set
-# CONFIG_USB_ISP1760 is not set
 
 #
 # USB port drivers
 #
-# CONFIG_USB_SERIAL is not set
-
-#
-# USB Miscellaneous drivers
-#
-# CONFIG_USB_EMI62 is not set
-# CONFIG_USB_EMI26 is not set
-# CONFIG_USB_ADUTUX is not set
-# CONFIG_USB_SEVSEG is not set
-# CONFIG_USB_LEGOTOWER is not set
-# CONFIG_USB_LCD is not set
-# CONFIG_USB_CYPRESS_CY7C63 is not set
-# CONFIG_USB_CYTHERM is not set
-# CONFIG_USB_IDMOUSE is not set
-# CONFIG_USB_FTDI_ELAN is not set
-CONFIG_USB_APPLEDISPLAY=m
-# CONFIG_APPLE_MFI_FASTCHARGE is not set
-# CONFIG_USB_SISUSBVGA is not set
-# CONFIG_USB_LD is not set
-# CONFIG_USB_TRANCEVIBRATOR is not set
-# CONFIG_USB_IOWARRIOR is not set
-# CONFIG_USB_TEST is not set
-# CONFIG_USB_EHSET_TEST_FIXTURE is not set
-# CONFIG_USB_ISIGHTFW is not set
-# CONFIG_USB_YUREX is not set
-# CONFIG_USB_EZUSB_FX2 is not set
-# CONFIG_USB_HUB_USB251XB is not set
-# CONFIG_USB_HSIC_USB3503 is not set
-# CONFIG_USB_HSIC_USB4604 is not set
-# CONFIG_USB_LINK_LAYER_TEST is not set
-# CONFIG_USB_CHAOSKEY is not set
 
 #
 # USB Physical Layer drivers
 #
 # CONFIG_NOP_USB_XCEIV is not set
-# CONFIG_USB_ISP1301 is not set
 # end of USB Physical Layer drivers
 
 # CONFIG_USB_GADGET is not set
@@ -3485,9 +3311,6 @@ CONFIG_LSM="lockdown,yama,loadpin,safesetid,integrity,bpf"
 # Memory initialization
 #
 CONFIG_INIT_STACK_NONE=y
-# CONFIG_GCC_PLUGIN_STRUCTLEAK_USER is not set
-# CONFIG_GCC_PLUGIN_STRUCTLEAK_BYREF is not set
-# CONFIG_GCC_PLUGIN_STRUCTLEAK_BYREF_ALL is not set
 # CONFIG_INIT_ON_ALLOC_DEFAULT_ON is not set
 # CONFIG_INIT_ON_FREE_DEFAULT_ON is not set
 # end of Memory initialization

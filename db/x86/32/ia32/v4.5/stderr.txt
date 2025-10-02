@@ -1,9 +1,10 @@
-[D] Command line arguments: ['-vvvv', '--format', 'json', '--arch', 'i386', '--kdir', '/mnt/m2data/linux-worktrees/v4.5', '--remap', '/mnt/m2data/linux', '/mnt/m2data/kernels/vmlinux-i386-v4.5']
-[D] Running command: ['readelf', '-Ws', PosixPath('/mnt/m2data/kernels/vmlinux-i386-v4.5')]
-[D] Running command: ['readelf', '-WS', PosixPath('/mnt/m2data/kernels/vmlinux-i386-v4.5')]
+[D] Systrack v0.8
+[D] Command line: systrack -vvvv --format json --arch i386 --kdir /mnt/m2data/linux-worktrees/v4.5 --remap /mnt/m2data/linux /mnt/m2data/kernels/vmlinux-i386-v4.5
+[D] Running command: readelf -Ws /mnt/m2data/kernels/vmlinux-i386-v4.5
+[D] Running command: readelf -WS /mnt/m2data/kernels/vmlinux-i386-v4.5
 Detected kernel version: 4.5.0 (from vmlinux)
 [D] Arch: ArchX86(name='x86', bits32=True, abi='ia32', compat=False, ...)
-[D] Syscall table: Symbol("sys_call_table" at 0xc177d0e0, type=OBJECT, size=0x5e8)
+[D] Syscall table: Symbol("sys_call_table" at 0xc173e0e0, type=OBJECT, size=0x5e8)
 [I] Syscall table (sys_call_table) is 1512 bytes, 378 entries
 [D] Found ni_syscall: Symbol("sys_ni_syscall" at 0xc10713c0, type=FUNC, size=0x6)
 [D] Discarding compat_sys_epoll_pwait as alias for sys_ni_syscall
@@ -492,7 +493,7 @@ Detected kernel version: 4.5.0 (from vmlinux)
 [D] sys_call_table[99]: Symbol("sys_statfs" at 0xc11a1d70, type=FUNC, size=0x2f)
 [D] sys_call_table[100]: Symbol("sys_fstatfs" at 0xc11a1df0, type=FUNC, size=0x2f)
 [D] sys_call_table[101]: Symbol("sys_ioperm" at 0xc1005210, type=FUNC, size=0x127)
-[D] sys_call_table[102]: Symbol("sys_socketcall" at 0xc1639300, type=FUNC, size=0x10)
+[D] sys_call_table[102]: Symbol("sys_socketcall" at 0xc15fa1d0, type=FUNC, size=0x10)
 [D] sys_call_table[103]: Symbol("sys_syslog" at 0xc109a010, type=FUNC, size=0x39)
 [D] sys_call_table[104]: Symbol("sys_setitimer" at 0xc10abd80, type=FUNC, size=0xb7)
 [D] sys_call_table[105]: Symbol("sys_getitimer" at 0xc10aba40, type=FUNC, size=0x4a)
@@ -727,7 +728,7 @@ Detected kernel version: 4.5.0 (from vmlinux)
 [D] sys_call_table[334]: Symbol("sys_pwritev" at 0xc11742b0, type=FUNC, size=0x129)
 [D] sys_call_table[335]: Symbol("sys_rt_tgsigqueueinfo" at 0xc1064610, type=FUNC, size=0x1c)
 [D] sys_call_table[336]: Symbol("sys_perf_event_open" at 0xc1114e60, type=FUNC, size=0x23)
-[D] sys_call_table[337]: Symbol("sys_recvmmsg" at 0xc1639250, type=FUNC, size=0xa1)
+[D] sys_call_table[337]: Symbol("sys_recvmmsg" at 0xc15fa120, type=FUNC, size=0xa1)
 [D] sys_call_table[338]: Symbol("sys_fanotify_init" at 0xc11b01a0, type=FUNC, size=0x20b)
 [D] sys_call_table[339]: Symbol("sys_fanotify_mark" at 0xc11b03b0, type=FUNC, size=0x586)
 [D] sys_call_table[340]: Symbol("sys_prlimit64" at 0xc1067ad0, type=FUNC, size=0x206)
@@ -735,7 +736,7 @@ Detected kernel version: 4.5.0 (from vmlinux)
 [D] sys_call_table[342]: Symbol("sys_open_by_handle_at" at 0xc11c3bf0, type=FUNC, size=0x13)
 [D] sys_call_table[343]: Symbol("sys_clock_adjtime" at 0xc10ad0e0, type=FUNC, size=0x10)
 [D] sys_call_table[344]: Symbol("sys_syncfs" at 0xc11a0a50, type=FUNC, size=0x77)
-[D] sys_call_table[345]: Symbol("sys_sendmmsg" at 0xc16386c0, type=FUNC, size=0x1c)
+[D] sys_call_table[345]: Symbol("sys_sendmmsg" at 0xc15f9590, type=FUNC, size=0x1c)
 [D] sys_call_table[346]: Symbol("sys_setns" at 0xc1071770, type=FUNC, size=0xc5)
 [D] sys_call_table[347]: Symbol("sys_process_vm_readv" at 0xc1156b30, type=FUNC, size=0x32)
 [D] sys_call_table[348]: Symbol("sys_process_vm_writev" at 0xc1156b70, type=FUNC, size=0x32)
@@ -749,28 +750,28 @@ Detected kernel version: 4.5.0 (from vmlinux)
 [D] sys_call_table[356]: Symbol("sys_memfd_create" at 0xc1137e20, type=FUNC, size=0x130)
 [D] sys_call_table[357]: Symbol("sys_bpf" at 0xc11042b0, type=FUNC, size=0x62a)
 [D] sys_call_table[358]: Symbol("sys_execveat" at 0xc117a1d0, type=FUNC, size=0x4a)
-[D] sys_call_table[359]: Symbol("sys_socket" at 0xc1637fd0, type=FUNC, size=0xbf)
-[D] sys_call_table[360]: Symbol("sys_socketpair" at 0xc1638090, type=FUNC, size=0x1c)
-[D] sys_call_table[361]: Symbol("sys_bind" at 0xc16380b0, type=FUNC, size=0x13)
-[D] sys_call_table[362]: Symbol("sys_connect" at 0xc16381a0, type=FUNC, size=0x13)
-[D] sys_call_table[363]: Symbol("sys_listen" at 0xc16380d0, type=FUNC, size=0x78)
-[D] sys_call_table[364]: Symbol("sys_accept4" at 0xc1638150, type=FUNC, size=0x1c)
-[D] sys_call_table[365]: Symbol("sys_getsockopt" at 0xc16383c0, type=FUNC, size=0xb0)
-[D] sys_call_table[366]: Symbol("sys_setsockopt" at 0xc1638300, type=FUNC, size=0xb7)
-[D] sys_call_table[367]: Symbol("sys_getsockname" at 0xc16381c0, type=FUNC, size=0x13)
-[D] sys_call_table[368]: Symbol("sys_getpeername" at 0xc16381e0, type=FUNC, size=0x13)
-[D] sys_call_table[369]: Symbol("sys_sendto" at 0xc1638200, type=FUNC, size=0x2a)
-[D] sys_call_table[370]: Symbol("sys_sendmsg" at 0xc1638550, type=FUNC, size=0x13)
-[D] sys_call_table[371]: Symbol("sys_recvfrom" at 0xc1638280, type=FUNC, size=0x2a)
-[D] sys_call_table[372]: Symbol("sys_recvmsg" at 0xc1638760, type=FUNC, size=0x13)
-[D] sys_call_table[373]: Symbol("sys_shutdown" at 0xc1638470, type=FUNC, size=0x5f)
+[D] sys_call_table[359]: Symbol("sys_socket" at 0xc15f8ea0, type=FUNC, size=0xbf)
+[D] sys_call_table[360]: Symbol("sys_socketpair" at 0xc15f8f60, type=FUNC, size=0x1c)
+[D] sys_call_table[361]: Symbol("sys_bind" at 0xc15f8f80, type=FUNC, size=0x13)
+[D] sys_call_table[362]: Symbol("sys_connect" at 0xc15f9070, type=FUNC, size=0x13)
+[D] sys_call_table[363]: Symbol("sys_listen" at 0xc15f8fa0, type=FUNC, size=0x78)
+[D] sys_call_table[364]: Symbol("sys_accept4" at 0xc15f9020, type=FUNC, size=0x1c)
+[D] sys_call_table[365]: Symbol("sys_getsockopt" at 0xc15f9290, type=FUNC, size=0xb0)
+[D] sys_call_table[366]: Symbol("sys_setsockopt" at 0xc15f91d0, type=FUNC, size=0xb7)
+[D] sys_call_table[367]: Symbol("sys_getsockname" at 0xc15f9090, type=FUNC, size=0x13)
+[D] sys_call_table[368]: Symbol("sys_getpeername" at 0xc15f90b0, type=FUNC, size=0x13)
+[D] sys_call_table[369]: Symbol("sys_sendto" at 0xc15f90d0, type=FUNC, size=0x2a)
+[D] sys_call_table[370]: Symbol("sys_sendmsg" at 0xc15f9420, type=FUNC, size=0x13)
+[D] sys_call_table[371]: Symbol("sys_recvfrom" at 0xc15f9150, type=FUNC, size=0x2a)
+[D] sys_call_table[372]: Symbol("sys_recvmsg" at 0xc15f9630, type=FUNC, size=0x13)
+[D] sys_call_table[373]: Symbol("sys_shutdown" at 0xc15f9340, type=FUNC, size=0x5f)
 [D] sys_call_table[374]: Symbol("sys_userfaultfd" at 0xc11b5f00, type=FUNC, size=0x10c)
 [D] sys_call_table[375]: Symbol("sys_membarrier" at 0xc11179e0, type=FUNC, size=0x54)
 [D] sys_call_table[376]: Symbol("sys_mlock2" at 0xc114b100, type=FUNC, size=0x2f)
 [D] sys_call_table[377]: Symbol("sys_copy_file_range" at 0xc1174540, type=FUNC, size=0x1d9)
 [I] Common syscall symbol prefixes: sys_
 [I] 22 entries point to sys_ni_syscall
-[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-i386-v4.5'), '0xc1063ba0', '0xc1058d10', '0xc1055960', '0xc1173b10', '0xc1173bb0', '0xc1171ad0', '0xc1170130', '0xc1059010', '0xc1171b10', '0xc11833f0', '0xc11831c0', '0xc117a190', '0xc1170fc0', '0xc10a7210', '0xc1182f30', '0xc11712c0', '0xc10beaf0', '0xc1177a50', '0xc1172ac0', '0xc1066d10', '0xc11932e0', '0xc1191a70', '0xc10bec20', '0xc10bf000', '0xc10a7240', '0xc105f6d0', '0xc10a9f50', '0xc1177ad0', '0xc1064c10', '0xc11a1220', '0xc1170f90', '0xc107c010', '0xc11a0980', '0xc1064580', '0xc11834b0', '0xc1183060', '0xc1183160', '0xc118e940', '0xc117b7c0', '0xc1066e70', '0xc114e5c0', '0xc10bebb0', '0xc10bf080', '0xc1064bd0', '0xc10bf040', '0xc10bf0c0', '0xc10c4bc0', '0xc11918d0', '0xc1184f40', '0xc1183b80', '0xc1066eb0', '0xc1067330', '0xc1067db0', '0xc11710f0', '0xc11a1eb0', '0xc118e840', '0xc1066d50', '0xc10670b0', '0xc1067140', '0xc1064a60', '0xc1064b80', '0xc1064b90', '0xc10bebe0', '0xc10beb70', '0xc1064ca0', '0xc10648a0', '0xc1067500', '0xc1067ce0', '0xc10677b0', '0xc1067d60', '0xc10a72b0', '0xc10a7400', '0xc10bee90', '0xc10bef30', '0xc1186840', '0xc11832d0', '0xc1177a90', '0xc1177ca0', '0xc1179d40', '0xc115b600', '0xc10730e0', '0xc11853b0', '0xc114ce70', '0xc114d930', '0xc1170e50', '0xc1170e80', '0xc11711c0', '0xc10beb30', '0xc1065e60', '0xc1065c20', '0xc11a1d70', '0xc11a1df0', '0xc1005210', '0xc1639300', '0xc109a010', '0xc10abd80', '0xc10aba40', '0xc1177b00', '0xc1177b40', '0xc1177b80', '0xc10672b0', '0xc1005340', '0xc1171b40', '0xc10414c0', '0xc1058f50', '0xc115b0e0', '0xc1068240', '0xc12a14d0', '0xc11a0ad0', '0xc1002f90', '0xc10559c0', '0xc1067690', '0xc1067230', '0xc1006450', '0xc10a74b0', '0xc114fcd0', '0xc1064900', '0xc10c3490', '0xc10c1430', '0xc11ca610', '0xc1067050', '0xc1171060', '0xc11a6d00', '0xc118ed30', '0xc1055e70', '0xc10bee30', '0xc10bee60', '0xc1172b90', '0xc1185440', '0xc1186540', '0xc11bbd20', '0xc1150bb0', '0xc1173e90', '0xc1174000', '0xc10670e0', '0xc11a0ae0', '0xc105ddf0', '0xc114b0e0', '0xc114b130', '0xc114b190', '0xc114b2e0', '0xc107c160', '0xc107c320', '0xc107c130', '0xc107c2c0', '0xc107c7f0', '0xc107c830', '0xc107c880', '0xc107c8d0', '0xc10ab630', '0xc1150700', '0xc10bec50', '0xc10beca0', '0xc10414d0', '0xc1186f00', '0xc10bed40', '0xc10bed90', '0xc1067dd0', '0xc1003030', '0xc10649d0', '0xc1063ea0', '0xc1063f40', '0xc1064560', '0xc10645f0', '0xc1064c50', '0xc1173c50', '0xc1173d00', '0xc10beab0', '0xc118a660', '0xc105e370', '0xc105e470', '0xc10647e0', '0xc11743e0', '0xc1055990', '0xc1067a70', '0xc114ce40', '0xc1170ea0', '0xc1170ec0', '0xc1177da0', '0xc1177de0', '0xc1177e20', '0xc11714c0', '0xc1066d80', '0xc1066dc0', '0xc1066da0', '0xc1066de0', '0xc1066210', '0xc1066080', '0xc1074780', '0xc1074830', '0xc1171570', '0xc10664e0', '0xc1066890', '0xc1066900', '0xc1066b50', '0xc1171410', '0xc1066410', '0xc1066180', '0xc1066bc0', '0xc1066c70', '0xc1193400', '0xc114a350', '0xc1157c40', '0xc1185520', '0xc1183c40', '0xc1066d30', '0xc112a6c0', '0xc11960c0', '0xc11960f0', '0xc1196120', '0xc11961f0', '0xc1196220', '0xc1196250', '0xc11962f0', '0xc1196310', '0xc1196330', '0xc11963c0', '0xc11963e0', '0xc1196400', '0xc10645c0', '0xc1174490', '0xc10bdfb0', '0xc107c6a0', '0xc107c770', '0xc100e9e0', '0xc100eb20', '0xc11b6cb0', '0xc11b7360', '0xc11b7bc0', '0xc11b7aa0', '0xc11b7ac0', '0xc1156ee0', '0xc1058dc0', '0xc11e0870', '0xc11b1a40', '0xc11b1af0', '0xc11b24c0', '0xc114f000', '0xc1055550', '0xc10ac740', '0xc10acc20', '0xc10acb10', '0xc10acbe0', '0xc10acd80', '0xc10acfb0', '0xc10ad040', '0xc10ad0f0', '0xc10ad180', '0xc11a1da0', '0xc11a1e20', '0xc1064590', '0xc11a13a0', '0xc1156eb0', '0xc1163de0', '0xc1163120', '0xc1162ef0', '0xc12a2780', '0xc12a2b10', '0xc12a2c70', '0xc12a2ff0', '0xc12a3450', '0xc12a38e0', '0xc10c67c0', '0xc1058e10', '0xc12a6c10', '0xc12a6e00', '0xc12a7fb0', '0xc12fd6f0', '0xc12fd9b0', '0xc11af590', '0xc11af5f0', '0xc11af8b0', '0xc1162f50', '0xc1171af0', '0xc1182f60', '0xc1182f10', '0xc1171350', '0xc11a1310', '0xc1177e50', '0xc1183180', '0xc1183470', '0xc11833c0', '0xc11831e0', '0xc1177bb0', '0xc1171240', '0xc1170f70', '0xc1186600', '0xc1186fe0', '0xc10559f0', '0xc10bd340', '0xc10bd390', '0xc119fe30', '0xc11a0b00', '0xc11a03b0', '0xc119fd40', '0xc116cd70', '0xc10681e0', '0xc11b2590', '0xc11a12a0', '0xc11b3150', '0xc11b3880', '0xc11b4870', '0xc1170ee0', '0xc11b3990', '0xc11b3d80', '0xc11b3130', '0xc11b47f0', '0xc11b19a0', '0xc118e770', '0xc117b700', '0xc11af520', '0xc1174180', '0xc11742b0', '0xc1064610', '0xc1114e60', '0xc1639250', '0xc11b01a0', '0xc11b03b0', '0xc1067ad0', '0xc11c37d0', '0xc11c3bf0', '0xc10ad0e0', '0xc11a0a50', '0xc16386c0', '0xc1071770', '0xc1156b30', '0xc1156b70', '0xc10a5880', '0xc10c35a0', '0xc107c180', '0xc107c3c0', '0xc1183440', '0xc10def20', '0xc13c5050', '0xc1137e20', '0xc11042b0', '0xc117a1d0', '0xc1637fd0', '0xc1638090', '0xc16380b0', '0xc16381a0', '0xc16380d0', '0xc1638150', '0xc16383c0', '0xc1638300', '0xc16381c0', '0xc16381e0', '0xc1638200', '0xc1638550', '0xc1638280', '0xc1638760', '0xc1638470', '0xc11b5f00', '0xc11179e0', '0xc114b100', '0xc1174540']
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-i386-v4.5 0xc1063ba0 0xc1058d10 0xc1055960 0xc1173b10 0xc1173bb0 0xc1171ad0 0xc1170130 0xc1059010 0xc1171b10 0xc11833f0 0xc11831c0 0xc117a190 0xc1170fc0 0xc10a7210 0xc1182f30 0xc11712c0 0xc10beaf0 0xc1177a50 0xc1172ac0 0xc1066d10 0xc11932e0 0xc1191a70 0xc10bec20 0xc10bf000 0xc10a7240 0xc105f6d0 0xc10a9f50 0xc1177ad0 0xc1064c10 0xc11a1220 0xc1170f90 0xc107c010 0xc11a0980 0xc1064580 0xc11834b0 0xc1183060 0xc1183160 0xc118e940 0xc117b7c0 0xc1066e70 0xc114e5c0 0xc10bebb0 0xc10bf080 0xc1064bd0 0xc10bf040 0xc10bf0c0 0xc10c4bc0 0xc11918d0 0xc1184f40 0xc1183b80 0xc1066eb0 0xc1067330 0xc1067db0 0xc11710f0 0xc11a1eb0 0xc118e840 0xc1066d50 0xc10670b0 0xc1067140 0xc1064a60 0xc1064b80 0xc1064b90 0xc10bebe0 0xc10beb70 0xc1064ca0 0xc10648a0 0xc1067500 0xc1067ce0 0xc10677b0 0xc1067d60 0xc10a72b0 0xc10a7400 0xc10bee90 0xc10bef30 0xc1186840 0xc11832d0 0xc1177a90 0xc1177ca0 0xc1179d40 0xc115b600 0xc10730e0 0xc11853b0 0xc114ce70 0xc114d930 0xc1170e50 0xc1170e80 0xc11711c0 0xc10beb30 0xc1065e60 0xc1065c20 0xc11a1d70 0xc11a1df0 0xc1005210 0xc15fa1d0 0xc109a010 0xc10abd80 0xc10aba40 0xc1177b00 0xc1177b40 0xc1177b80 0xc10672b0 0xc1005340 0xc1171b40 0xc10414c0 0xc1058f50 0xc115b0e0 0xc1068240 0xc12a14d0 0xc11a0ad0 0xc1002f90 0xc10559c0 0xc1067690 0xc1067230 0xc1006450 0xc10a74b0 0xc114fcd0 0xc1064900 0xc10c3490 0xc10c1430 0xc11ca610 0xc1067050 0xc1171060 0xc11a6d00 0xc118ed30 0xc1055e70 0xc10bee30 0xc10bee60 0xc1172b90 0xc1185440 0xc1186540 0xc11bbd20 0xc1150bb0 0xc1173e90 0xc1174000 0xc10670e0 0xc11a0ae0 0xc105ddf0 0xc114b0e0 0xc114b130 0xc114b190 0xc114b2e0 0xc107c160 0xc107c320 0xc107c130 0xc107c2c0 0xc107c7f0 0xc107c830 0xc107c880 0xc107c8d0 0xc10ab630 0xc1150700 0xc10bec50 0xc10beca0 0xc10414d0 0xc1186f00 0xc10bed40 0xc10bed90 0xc1067dd0 0xc1003030 0xc10649d0 0xc1063ea0 0xc1063f40 0xc1064560 0xc10645f0 0xc1064c50 0xc1173c50 0xc1173d00 0xc10beab0 0xc118a660 0xc105e370 0xc105e470 0xc10647e0 0xc11743e0 0xc1055990 0xc1067a70 0xc114ce40 0xc1170ea0 0xc1170ec0 0xc1177da0 0xc1177de0 0xc1177e20 0xc11714c0 0xc1066d80 0xc1066dc0 0xc1066da0 0xc1066de0 0xc1066210 0xc1066080 0xc1074780 0xc1074830 0xc1171570 0xc10664e0 0xc1066890 0xc1066900 0xc1066b50 0xc1171410 0xc1066410 0xc1066180 0xc1066bc0 0xc1066c70 0xc1193400 0xc114a350 0xc1157c40 0xc1185520 0xc1183c40 0xc1066d30 0xc112a6c0 0xc11960c0 0xc11960f0 0xc1196120 0xc11961f0 0xc1196220 0xc1196250 0xc11962f0 0xc1196310 0xc1196330 0xc11963c0 0xc11963e0 0xc1196400 0xc10645c0 0xc1174490 0xc10bdfb0 0xc107c6a0 0xc107c770 0xc100e9e0 0xc100eb20 0xc11b6cb0 0xc11b7360 0xc11b7bc0 0xc11b7aa0 0xc11b7ac0 0xc1156ee0 0xc1058dc0 0xc11e0870 0xc11b1a40 0xc11b1af0 0xc11b24c0 0xc114f000 0xc1055550 0xc10ac740 0xc10acc20 0xc10acb10 0xc10acbe0 0xc10acd80 0xc10acfb0 0xc10ad040 0xc10ad0f0 0xc10ad180 0xc11a1da0 0xc11a1e20 0xc1064590 0xc11a13a0 0xc1156eb0 0xc1163de0 0xc1163120 0xc1162ef0 0xc12a2780 0xc12a2b10 0xc12a2c70 0xc12a2ff0 0xc12a3450 0xc12a38e0 0xc10c67c0 0xc1058e10 0xc12a6c10 0xc12a6e00 0xc12a7fb0 0xc12fd6f0 0xc12fd9b0 0xc11af590 0xc11af5f0 0xc11af8b0 0xc1162f50 0xc1171af0 0xc1182f60 0xc1182f10 0xc1171350 0xc11a1310 0xc1177e50 0xc1183180 0xc1183470 0xc11833c0 0xc11831e0 0xc1177bb0 0xc1171240 0xc1170f70 0xc1186600 0xc1186fe0 0xc10559f0 0xc10bd340 0xc10bd390 0xc119fe30 0xc11a0b00 0xc11a03b0 0xc119fd40 0xc116cd70 0xc10681e0 0xc11b2590 0xc11a12a0 0xc11b3150 0xc11b3880 0xc11b4870 0xc1170ee0 0xc11b3990 0xc11b3d80 0xc11b3130 0xc11b47f0 0xc11b19a0 0xc118e770 0xc117b700 0xc11af520 0xc1174180 0xc11742b0 0xc1064610 0xc1114e60 0xc15fa120 0xc11b01a0 0xc11b03b0 0xc1067ad0 0xc11c37d0 0xc11c3bf0 0xc10ad0e0 0xc11a0a50 0xc15f9590 0xc1071770 0xc1156b30 0xc1156b70 0xc10a5880 0xc10c35a0 0xc107c180 0xc107c3c0 0xc1183440 0xc10def20 0xc13c5050 0xc1137e20 0xc11042b0 0xc117a1d0 0xc15f8ea0 0xc15f8f60 0xc15f8f80 0xc15f9070 0xc15f8fa0 0xc15f9020 0xc15f9290 0xc15f91d0 0xc15f9090 0xc15f90b0 0xc15f90d0 0xc15f9420 0xc15f9150 0xc15f9630 0xc15f9340 0xc11b5f00 0xc11179e0 0xc114b100 0xc1174540
 [D] Location needs adjustment (bad): getuid16 (sys_getuid16) -> arch/x86/include/asm/current.h:12
 [D] Location needs adjustment (bad): getgid16 (sys_getgid16) -> arch/x86/include/asm/current.h:12
 [D] Location needs adjustment (bad): geteuid16 (sys_geteuid16) -> arch/x86/include/asm/current.h:12
@@ -780,8 +781,8 @@ Detected kernel version: 4.5.0 (from vmlinux)
 [D] Location needs adjustment (bad): getgid (sys_getgid) -> arch/x86/include/asm/current.h:12
 [D] Location needs adjustment (bad): geteuid (sys_geteuid) -> arch/x86/include/asm/current.h:12
 [D] Location needs adjustment (bad): getegid (sys_getegid) -> arch/x86/include/asm/current.h:12
-[D] Running command: ['addr2line', '-e', PosixPath('/mnt/m2data/kernels/vmlinux-i386-v4.5'), '0xc1066df9', '0xc10bf0fc', '0xc1066db9', '0xc10bf07c', '0xc1066dd9', '0xc10bf0bc', '0xc1066d99', '0xc10bf03c', '0xc1064b8c']
-[D] Running command: ('rg', '--line-number', '--glob', '!Documentation/*', '--glob', '!drivers/*', '--glob', '!lib/*', '--glob', '!samples/*', '--glob', '!sound/*', '--glob', '!tools/*', '--glob', '!usr/*', '--glob', '!arch/*', '--glob', 'arch/x86', '--glob', '*.c', '\\bSYSCALL(32)?_DEFINE\\d\\s*\\(\\s*\\w+')
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-i386-v4.5 0xc1066df9 0xc10bf0fc 0xc1066db9 0xc10bf07c 0xc1066dd9 0xc10bf0bc 0xc1066d99 0xc10bf03c 0xc1064b8c
+[D] Running command: rg --line-number --glob '!Documentation/*' --glob '!drivers/*' --glob '!lib/*' --glob '!samples/*' --glob '!sound/*' --glob '!tools/*' --glob '!usr/*' --glob '!arch/*' --glob arch/x86 --glob '*.c' '\bSYSCALL(32)?_DEFINE\d\s*\(\s*\w+'
 [I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
 Found 356 implemented syscalls
 
