@@ -23,7 +23,7 @@ kernel syscall implementation tracker.
 ## Building
 
 To build this static website, you will need Python 3, and optionally the
-`fonttools` and `brotli` modules. Run the following commands the root of this
+`fonttools` and `brotli` modules. Run the following commands in the root of this
 repository:
 
 ```sh
@@ -34,7 +34,7 @@ repository:
 ```
 
 The static website is now available in the `www/` folder. You may quickly test
-it locally using one of these commands:
+it locally using either one of these commands:
 
 ```sh
 $ python3 -m http.server -d www -b 127.0.0.1 8080
