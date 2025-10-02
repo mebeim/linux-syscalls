@@ -162,7 +162,8 @@ def main() -> int:
 				print(f'{arch}/{bits}/{abi}:', end='')
 
 				prev = 'vX'
-				for tag in sorted_tags(abi_index['tables']):
+				tags = sorted_tags(abi_index['tables'])
+				for tag in tags:
 					# Skip special "latest" tag
 					if tag == 'latest':
 						total -= 1
@@ -175,7 +176,7 @@ def main() -> int:
 
 					print(tag, end=' ')
 
-				total += len(abi_index)
+				total += len(tags)
 				print(end='\n\n')
 
 	print('Total:', total, 'tables')
