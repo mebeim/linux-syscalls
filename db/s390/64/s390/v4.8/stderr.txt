@@ -1,0 +1,629 @@
+[D] Systrack v0.8
+[D] Command line: systrack -vvvv --format json --arch s390 --kdir /mnt/m2data/linux-worktrees/v4.8 --remap /mnt/m2data/linux /mnt/m2data/kernels/vmlinux-s390x-v4.8
+[D] Running command: readelf -Ws /mnt/m2data/kernels/vmlinux-s390x-v4.8
+[D] Running command: readelf -WS /mnt/m2data/kernels/vmlinux-s390x-v4.8
+Detected kernel version: 4.8.0 (from vmlinux)
+[D] Arch: ArchS390(name='s390', bits32=False, abi='s390', compat=True, ...)
+[W] No syscall table available! Trying my best...
+[D] Found ni_syscall: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] Discarding ppc_rtas as alias for sys_ni_syscall
+[D] Discarding sys32_quotactl as alias for sys_ni_syscall
+[D] Discarding sys_chown16 as alias for sys_ni_syscall
+[D] Discarding sys_fchown16 as alias for sys_ni_syscall
+[D] Discarding sys_getegid16 as alias for sys_ni_syscall
+[D] Discarding sys_geteuid16 as alias for sys_ni_syscall
+[D] Discarding sys_getgid16 as alias for sys_ni_syscall
+[D] Discarding sys_getgroups16 as alias for sys_ni_syscall
+[D] Discarding sys_getresgid16 as alias for sys_ni_syscall
+[D] Discarding sys_getresuid16 as alias for sys_ni_syscall
+[D] Discarding sys_getuid16 as alias for sys_ni_syscall
+[D] Discarding sys_kexec_file_load as alias for sys_ni_syscall
+[D] Discarding sys_lchown16 as alias for sys_ni_syscall
+[D] Discarding sys_modify_ldt as alias for sys_ni_syscall
+[D] Discarding sys_pciconfig_iobase as alias for sys_ni_syscall
+[D] Discarding sys_pciconfig_read as alias for sys_ni_syscall
+[D] Discarding sys_pciconfig_write as alias for sys_ni_syscall
+[D] Discarding sys_setfsgid16 as alias for sys_ni_syscall
+[D] Discarding sys_setfsuid16 as alias for sys_ni_syscall
+[D] Discarding sys_setgid16 as alias for sys_ni_syscall
+[D] Discarding sys_setgroups16 as alias for sys_ni_syscall
+[D] Discarding sys_setregid16 as alias for sys_ni_syscall
+[D] Discarding sys_setresgid16 as alias for sys_ni_syscall
+[D] Discarding sys_setresuid16 as alias for sys_ni_syscall
+[D] Discarding sys_setreuid16 as alias for sys_ni_syscall
+[D] Discarding sys_setuid16 as alias for sys_ni_syscall
+[D] Discarding sys_spu_create as alias for sys_ni_syscall
+[D] Discarding sys_spu_run as alias for sys_ni_syscall
+[D] Discarding sys_subpage_prot as alias for sys_ni_syscall
+[D] Discarding sys_vm86 as alias for sys_ni_syscall
+[D] Discarding sys_vm86old as alias for sys_ni_syscall
+[D] Preferring compat_sys_adjtimex over compat_SyS_adjtimex
+[D] Preferring compat_sys_clock_adjtime over compat_SyS_clock_adjtime
+[D] Preferring compat_sys_clock_getres over compat_SyS_clock_getres
+[D] Preferring compat_sys_clock_gettime over compat_SyS_clock_gettime
+[D] Preferring compat_sys_clock_nanosleep over compat_SyS_clock_nanosleep
+[D] Preferring compat_sys_clock_settime over compat_SyS_clock_settime
+[D] Preferring compat_sys_epoll_pwait over compat_SyS_epoll_pwait
+[D] Preferring compat_sys_execve over compat_SyS_execve
+[D] Preferring compat_sys_execveat over compat_SyS_execveat
+[D] Preferring compat_sys_fanotify_mark over compat_SyS_fanotify_mark
+[D] Preferring compat_sys_fcntl over compat_SyS_fcntl
+[D] Preferring compat_sys_fcntl64 over compat_SyS_fcntl64
+[D] Preferring compat_sys_fstatfs over compat_SyS_fstatfs
+[D] Preferring compat_sys_fstatfs64 over compat_SyS_fstatfs64
+[D] Preferring compat_sys_ftruncate over compat_SyS_ftruncate
+[D] Preferring compat_sys_futex over compat_SyS_futex
+[D] Preferring compat_sys_futimesat over compat_SyS_futimesat
+[D] Preferring compat_sys_get_mempolicy over compat_SyS_get_mempolicy
+[D] Preferring compat_sys_get_robust_list over compat_SyS_get_robust_list
+[D] Preferring compat_sys_getdents over compat_SyS_getdents
+[D] Preferring compat_sys_getitimer over compat_SyS_getitimer
+[D] Preferring compat_sys_getrlimit over compat_SyS_getrlimit
+[D] Preferring compat_sys_getrusage over compat_SyS_getrusage
+[D] Preferring compat_sys_getsockopt over compat_SyS_getsockopt
+[D] Preferring compat_sys_gettimeofday over compat_SyS_gettimeofday
+[D] Preferring compat_sys_io_getevents over compat_SyS_io_getevents
+[D] Preferring compat_sys_io_setup over compat_SyS_io_setup
+[D] Preferring compat_sys_io_submit over compat_SyS_io_submit
+[D] Preferring compat_sys_ioctl over compat_SyS_ioctl
+[D] Preferring compat_sys_kexec_load over compat_SyS_kexec_load
+[D] Preferring compat_sys_keyctl over compat_SyS_keyctl
+[D] Preferring compat_sys_lookup_dcookie over compat_SyS_lookup_dcookie
+[D] Preferring compat_sys_lseek over compat_SyS_lseek
+[D] Preferring compat_sys_mbind over compat_SyS_mbind
+[D] Preferring compat_sys_migrate_pages over compat_SyS_migrate_pages
+[D] Preferring compat_sys_mount over compat_SyS_mount
+[D] Preferring compat_sys_move_pages over compat_SyS_move_pages
+[D] Preferring compat_sys_mq_getsetattr over compat_SyS_mq_getsetattr
+[D] Preferring compat_sys_mq_notify over compat_SyS_mq_notify
+[D] Preferring compat_sys_mq_open over compat_SyS_mq_open
+[D] Preferring compat_sys_mq_timedreceive over compat_SyS_mq_timedreceive
+[D] Preferring compat_sys_mq_timedsend over compat_SyS_mq_timedsend
+[D] Preferring compat_sys_nanosleep over compat_SyS_nanosleep
+[D] Preferring compat_sys_newfstat over compat_SyS_newfstat
+[D] Preferring compat_sys_newlstat over compat_SyS_newlstat
+[D] Preferring compat_sys_newstat over compat_SyS_newstat
+[D] Preferring compat_sys_old_getrlimit over compat_SyS_old_getrlimit
+[D] Preferring compat_sys_old_readdir over compat_SyS_old_readdir
+[D] Preferring compat_sys_open over compat_SyS_open
+[D] Preferring compat_sys_open_by_handle_at over compat_SyS_open_by_handle_at
+[D] Preferring compat_sys_openat over compat_SyS_openat
+[D] Preferring compat_sys_ppoll over compat_SyS_ppoll
+[D] Preferring compat_sys_preadv over compat_SyS_preadv
+[D] Preferring compat_sys_preadv2 over compat_SyS_preadv2
+[D] Preferring compat_sys_process_vm_readv over compat_SyS_process_vm_readv
+[D] Preferring compat_sys_process_vm_writev over compat_SyS_process_vm_writev
+[D] Preferring compat_sys_pselect6 over compat_SyS_pselect6
+[D] Preferring compat_sys_ptrace over compat_SyS_ptrace
+[D] Preferring compat_sys_pwritev over compat_SyS_pwritev
+[D] Preferring compat_sys_pwritev2 over compat_SyS_pwritev2
+[D] Preferring compat_sys_readv over compat_SyS_readv
+[D] Preferring compat_sys_recvfrom over compat_SyS_recvfrom
+[D] Preferring compat_sys_recvmmsg over compat_SyS_recvmmsg
+[D] Preferring compat_sys_recvmsg over compat_SyS_recvmsg
+[D] Preferring compat_sys_rt_sigaction over compat_SyS_rt_sigaction
+[D] Preferring compat_sys_rt_sigpending over compat_SyS_rt_sigpending
+[D] Preferring compat_sys_rt_sigprocmask over compat_SyS_rt_sigprocmask
+[D] Preferring compat_sys_rt_sigqueueinfo over compat_SyS_rt_sigqueueinfo
+[D] Preferring compat_sys_rt_sigsuspend over compat_SyS_rt_sigsuspend
+[D] Preferring compat_sys_rt_sigtimedwait over compat_SyS_rt_sigtimedwait
+[D] Preferring compat_sys_rt_tgsigqueueinfo over compat_SyS_rt_tgsigqueueinfo
+[D] Preferring compat_sys_s390_chown16 over compat_SyS_s390_chown16
+[D] Preferring compat_sys_s390_fadvise64 over compat_SyS_s390_fadvise64
+[D] Preferring compat_sys_s390_fadvise64_64 over compat_SyS_s390_fadvise64_64
+[D] Preferring compat_sys_s390_fallocate over compat_SyS_s390_fallocate
+[D] Preferring compat_sys_s390_fchown16 over compat_SyS_s390_fchown16
+[D] Preferring compat_sys_s390_fstat64 over compat_SyS_s390_fstat64
+[D] Preferring compat_sys_s390_fstatat64 over compat_SyS_s390_fstatat64
+[D] Preferring compat_sys_s390_ftruncate64 over compat_SyS_s390_ftruncate64
+[D] Preferring compat_sys_s390_getgroups16 over compat_SyS_s390_getgroups16
+[D] Preferring compat_sys_s390_getresgid16 over compat_SyS_s390_getresgid16
+[D] Preferring compat_sys_s390_getresuid16 over compat_SyS_s390_getresuid16
+[D] Preferring compat_sys_s390_ipc over compat_SyS_s390_ipc
+[D] Preferring compat_sys_s390_lchown16 over compat_SyS_s390_lchown16
+[D] Preferring compat_sys_s390_lstat64 over compat_SyS_s390_lstat64
+[D] Preferring compat_sys_s390_mmap2 over compat_SyS_s390_mmap2
+[D] Preferring compat_sys_s390_old_mmap over compat_SyS_s390_old_mmap
+[D] Preferring compat_sys_s390_pread64 over compat_SyS_s390_pread64
+[D] Preferring compat_sys_s390_pwrite64 over compat_SyS_s390_pwrite64
+[D] Preferring compat_sys_s390_read over compat_SyS_s390_read
+[D] Preferring compat_sys_s390_readahead over compat_SyS_s390_readahead
+[D] Preferring compat_sys_s390_setfsgid16 over compat_SyS_s390_setfsgid16
+[D] Preferring compat_sys_s390_setfsuid16 over compat_SyS_s390_setfsuid16
+[D] Preferring compat_sys_s390_setgid16 over compat_SyS_s390_setgid16
+[D] Preferring compat_sys_s390_setgroups16 over compat_SyS_s390_setgroups16
+[D] Preferring compat_sys_s390_setregid16 over compat_SyS_s390_setregid16
+[D] Preferring compat_sys_s390_setresgid16 over compat_SyS_s390_setresgid16
+[D] Preferring compat_sys_s390_setresuid16 over compat_SyS_s390_setresuid16
+[D] Preferring compat_sys_s390_setreuid16 over compat_SyS_s390_setreuid16
+[D] Preferring compat_sys_s390_setuid16 over compat_SyS_s390_setuid16
+[D] Preferring compat_sys_s390_stat64 over compat_SyS_s390_stat64
+[D] Preferring compat_sys_s390_sync_file_range over compat_SyS_s390_sync_file_range
+[D] Preferring compat_sys_s390_truncate64 over compat_SyS_s390_truncate64
+[D] Preferring compat_sys_s390_write over compat_SyS_s390_write
+[D] Preferring compat_sys_sched_getaffinity over compat_SyS_sched_getaffinity
+[D] Preferring compat_sys_sched_rr_get_interval over compat_SyS_sched_rr_get_interval
+[D] Preferring compat_sys_sched_setaffinity over compat_SyS_sched_setaffinity
+[D] Preferring compat_sys_select over compat_SyS_select
+[D] Preferring compat_sys_sendfile over compat_SyS_sendfile
+[D] Preferring compat_sys_sendfile64 over compat_SyS_sendfile64
+[D] Preferring compat_sys_sendmmsg over compat_SyS_sendmmsg
+[D] Preferring compat_sys_sendmsg over compat_SyS_sendmsg
+[D] Preferring compat_sys_set_mempolicy over compat_SyS_set_mempolicy
+[D] Preferring compat_sys_set_robust_list over compat_SyS_set_robust_list
+[D] Preferring compat_sys_setitimer over compat_SyS_setitimer
+[D] Preferring compat_sys_setrlimit over compat_SyS_setrlimit
+[D] Preferring compat_sys_setsockopt over compat_SyS_setsockopt
+[D] Preferring compat_sys_settimeofday over compat_SyS_settimeofday
+[D] Preferring compat_sys_sigaction over compat_SyS_sigaction
+[D] Preferring compat_sys_sigaltstack over compat_SyS_sigaltstack
+[D] Preferring compat_sys_signalfd over compat_SyS_signalfd
+[D] Preferring compat_sys_signalfd4 over compat_SyS_signalfd4
+[D] Preferring compat_sys_sigpending over compat_SyS_sigpending
+[D] Preferring compat_sys_sigprocmask over compat_SyS_sigprocmask
+[D] Preferring compat_sys_socketcall over compat_SyS_socketcall
+[D] Preferring compat_sys_statfs over compat_SyS_statfs
+[D] Preferring compat_sys_statfs64 over compat_SyS_statfs64
+[D] Preferring compat_sys_stime over compat_SyS_stime
+[D] Preferring compat_sys_sysctl over compat_SyS_sysctl
+[D] Preferring compat_sys_sysinfo over compat_SyS_sysinfo
+[D] Preferring compat_sys_time over compat_SyS_time
+[D] Preferring compat_sys_timer_create over compat_SyS_timer_create
+[D] Preferring compat_sys_timer_gettime over compat_SyS_timer_gettime
+[D] Preferring compat_sys_timer_settime over compat_SyS_timer_settime
+[D] Preferring compat_sys_timerfd_gettime over compat_SyS_timerfd_gettime
+[D] Preferring compat_sys_timerfd_settime over compat_SyS_timerfd_settime
+[D] Preferring compat_sys_times over compat_SyS_times
+[D] Preferring compat_sys_truncate over compat_SyS_truncate
+[D] Preferring compat_sys_ustat over compat_SyS_ustat
+[D] Preferring compat_sys_utime over compat_SyS_utime
+[D] Preferring compat_sys_utimensat over compat_SyS_utimensat
+[D] Preferring compat_sys_utimes over compat_SyS_utimes
+[D] Preferring compat_sys_vmsplice over compat_SyS_vmsplice
+[D] Preferring compat_sys_wait4 over compat_SyS_wait4
+[D] Preferring compat_sys_waitid over compat_SyS_waitid
+[D] Preferring compat_sys_writev over compat_SyS_writev
+[D] Preferring sys_accept4 over SyS_accept4
+[D] Preferring sys_alarm over SyS_alarm
+[D] Preferring sys_bind over SyS_bind
+[D] Preferring sys_close over SyS_close
+[D] Preferring sys_connect over SyS_connect
+[D] Preferring sys_dup over SyS_dup
+[D] Preferring sys_dup2 over SyS_dup2
+[D] Preferring sys_dup3 over SyS_dup3
+[D] Preferring sys_epoll_create over SyS_epoll_create
+[D] Preferring sys_epoll_create1 over SyS_epoll_create1
+[D] Preferring sys_eventfd over SyS_eventfd
+[D] Preferring sys_eventfd2 over SyS_eventfd2
+[D] Preferring sys_exit over SyS_exit
+[D] Preferring sys_exit_group over SyS_exit_group
+[D] Preferring sys_fanotify_init over SyS_fanotify_init
+[D] Preferring sys_fchdir over SyS_fchdir
+[D] Preferring sys_fchmod over SyS_fchmod
+[D] Preferring sys_fchown over SyS_fchown
+[D] Preferring sys_fdatasync over SyS_fdatasync
+[D] Preferring sys_flock over SyS_flock
+[D] Preferring sys_fsync over SyS_fsync
+[D] Preferring sys_getpgid over SyS_getpgid
+[D] Preferring sys_getpriority over SyS_getpriority
+[D] Preferring sys_getsid over SyS_getsid
+[D] Preferring sys_inotify_init1 over SyS_inotify_init1
+[D] Preferring sys_inotify_rm_watch over SyS_inotify_rm_watch
+[D] Preferring sys_ioprio_get over SyS_ioprio_get
+[D] Preferring sys_ioprio_set over SyS_ioprio_set
+[D] Preferring sys_kill over SyS_kill
+[D] Preferring sys_listen over SyS_listen
+[D] Preferring sys_membarrier over SyS_membarrier
+[D] Preferring sys_mlockall over SyS_mlockall
+[D] Preferring sys_nice over SyS_nice
+[D] Preferring sys_s390_personality over SyS_s390_personality
+[D] Preferring sys_s390_runtime_instr over SyS_s390_runtime_instr
+[D] Preferring sys_sched_get_priority_max over SyS_sched_get_priority_max
+[D] Preferring sys_sched_get_priority_min over SyS_sched_get_priority_min
+[D] Preferring sys_sched_getscheduler over SyS_sched_getscheduler
+[D] Preferring sys_setfsgid over SyS_setfsgid
+[D] Preferring sys_setfsuid over SyS_setfsuid
+[D] Preferring sys_setgid over SyS_setgid
+[D] Preferring sys_setns over SyS_setns
+[D] Preferring sys_setpgid over SyS_setpgid
+[D] Preferring sys_setpriority over SyS_setpriority
+[D] Preferring sys_setregid over SyS_setregid
+[D] Preferring sys_setresgid over SyS_setresgid
+[D] Preferring sys_setresuid over SyS_setresuid
+[D] Preferring sys_setreuid over SyS_setreuid
+[D] Preferring sys_setuid over SyS_setuid
+[D] Preferring sys_shutdown over SyS_shutdown
+[D] Preferring sys_socket over SyS_socket
+[D] Preferring sys_syncfs over SyS_syncfs
+[D] Preferring sys_tgkill over SyS_tgkill
+[D] Preferring sys_timer_delete over SyS_timer_delete
+[D] Preferring sys_timer_getoverrun over SyS_timer_getoverrun
+[D] Preferring sys_timerfd_create over SyS_timerfd_create
+[D] Preferring sys_tkill over SyS_tkill
+[D] Preferring sys_umask over SyS_umask
+[D] Preferring sys_userfaultfd over SyS_userfaultfd
+[D] #0: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #1: Symbol("sys_exit" at 0x1769a0, type=FUNC, size=0x30)
+[D] #2: Symbol("sys_fork" at 0x16f348, type=FUNC, size=0x52)
+[D] #3: Symbol("compat_sys_s390_read" at 0x118088, type=FUNC, size=0x24)
+[D] #4: Symbol("compat_sys_s390_write" at 0x1180b0, type=FUNC, size=0x24)
+[D] #5: Symbol("compat_sys_open" at 0x3ec0c0, type=FUNC, size=0x1c)
+[D] #6: Symbol("sys_close" at 0x378748, type=FUNC, size=0x7c)
+[D] #7: Symbol("sys_restart_syscall" at 0x186ad8, type=FUNC, size=0x18)
+[D] #8: Symbol("compat_sys_creat" at 0x1193f8, type=FUNC, size=0xa)
+[D] #9: Symbol("compat_sys_link" at 0x119408, type=FUNC, size=0xe)
+[D] #10: Symbol("compat_sys_unlink" at 0x119418, type=FUNC, size=0xa)
+[D] #11: Symbol("compat_sys_execve" at 0x385868, type=FUNC, size=0x6e)
+[D] #12: Symbol("compat_sys_chdir" at 0x119428, type=FUNC, size=0xa)
+[D] #13: Symbol("compat_sys_time" at 0x2377c8, type=FUNC, size=0x84)
+[D] #14: Symbol("compat_sys_mknod" at 0x119438, type=FUNC, size=0xa)
+[D] #15: Symbol("compat_sys_chmod" at 0x119448, type=FUNC, size=0xa)
+[D] #16: Symbol("compat_sys_s390_lchown16" at 0x117128, type=FUNC, size=0x38)
+[D] #17: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #18: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #19: Symbol("compat_sys_lseek" at 0x37b548, type=FUNC, size=0x18)
+[D] #20: Symbol("sys_getpid" at 0x18b810, type=FUNC, size=0x4a)
+[D] #21: Symbol("compat_sys_mount" at 0x3ebc70, type=FUNC, size=0x268)
+[D] #22: Symbol("compat_sys_oldumount" at 0x119458, type=FUNC, size=0xa)
+[D] #23: Symbol("compat_sys_s390_setuid16" at 0x117218, type=FUNC, size=0x10)
+[D] #24: Symbol("compat_sys_s390_getuid16" at 0x117908, type=FUNC, size=0xc4)
+[D] #25: Symbol("compat_sys_stime" at 0x237850, type=FUNC, size=0xb2)
+[D] #26: Symbol("compat_sys_ptrace" at 0x180848, type=FUNC, size=0x178)
+[D] #27: Symbol("sys_alarm" at 0x210720, type=FUNC, size=0x3c)
+[D] #28: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #29: Symbol("sys_pause" at 0x188cc0, type=FUNC, size=0x8e)
+[D] #30: Symbol("compat_sys_utime" at 0x3eab90, type=FUNC, size=0xdc)
+[D] #31: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #32: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #33: Symbol("compat_sys_access" at 0x119468, type=FUNC, size=0xa)
+[D] #34: Symbol("sys_nice" at 0x1ac228, type=FUNC, size=0xda)
+[D] #35: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #36: Symbol("sys_sync" at 0x3c0b60, type=FUNC, size=0xc8)
+[D] #37: Symbol("sys_kill" at 0x1878c8, type=FUNC, size=0x2da)
+[D] #38: Symbol("compat_sys_rename" at 0x119478, type=FUNC, size=0xe)
+[D] #39: Symbol("compat_sys_mkdir" at 0x119488, type=FUNC, size=0xa)
+[D] #40: Symbol("compat_sys_rmdir" at 0x119498, type=FUNC, size=0xa)
+[D] #41: Symbol("sys_dup" at 0x3a3f18, type=FUNC, size=0xc8)
+[D] #42: Symbol("compat_sys_pipe" at 0x1194a8, type=FUNC, size=0xa)
+[D] #43: Symbol("compat_sys_times" at 0x235eb8, type=FUNC, size=0x1d2)
+[D] #44: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #45: Symbol("compat_sys_brk" at 0x1194b8, type=FUNC, size=0xa)
+[D] #46: Symbol("compat_sys_s390_setgid16" at 0x1171d0, type=FUNC, size=0x10)
+[D] #47: Symbol("compat_sys_s390_getgid16" at 0x117a98, type=FUNC, size=0xc4)
+[D] #48: Symbol("compat_sys_signal" at 0x1194c8, type=FUNC, size=0xa)
+[D] #49: Symbol("compat_sys_s390_geteuid16" at 0x1179d0, type=FUNC, size=0xc4)
+[D] #50: Symbol("compat_sys_s390_getegid16" at 0x117b60, type=FUNC, size=0xc4)
+[D] #51: Symbol("compat_sys_acct" at 0x1194d8, type=FUNC, size=0xa)
+[D] #52: Symbol("compat_sys_umount" at 0x1194e8, type=FUNC, size=0xa)
+[D] #53: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #54: Symbol("compat_sys_ioctl" at 0x3ee4d0, type=FUNC, size=0x28c)
+[D] #55: Symbol("compat_sys_fcntl" at 0x3eb7a0, type=FUNC, size=0x58)
+[D] #56: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #57: Symbol("sys_setpgid" at 0x18bd60, type=FUNC, size=0x29a)
+[D] #58: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #59: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #60: Symbol("sys_umask" at 0x18d360, type=FUNC, size=0x30)
+[D] #61: Symbol("compat_sys_chroot" at 0x1194f8, type=FUNC, size=0xa)
+[D] #62: Symbol("compat_sys_ustat" at 0x3eb258, type=FUNC, size=0xa6)
+[D] #63: Symbol("sys_dup2" at 0x3a3d40, type=FUNC, size=0x1d6)
+[D] #64: Symbol("sys_getppid" at 0x18b8a8, type=FUNC, size=0x18c)
+[D] #65: Symbol("sys_getpgrp" at 0x18c190, type=FUNC, size=0x10)
+[D] #66: Symbol("sys_setsid" at 0x18c330, type=FUNC, size=0x106)
+[D] #67: Symbol("compat_sys_sigaction" at 0x188a70, type=FUNC, size=0x16e)
+[D] #68: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #69: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #70: Symbol("compat_sys_s390_setreuid16" at 0x1171e0, type=FUNC, size=0x34)
+[D] #71: Symbol("compat_sys_s390_setregid16" at 0x117198, type=FUNC, size=0x34)
+[D] #72: Symbol("compat_sys_sigsuspend" at 0x119508, type=FUNC, size=0xa)
+[D] #73: Symbol("compat_sys_sigpending" at 0x236090, type=FUNC, size=0xec)
+[D] #74: Symbol("compat_sys_sethostname" at 0x119518, type=FUNC, size=0xa)
+[D] #75: Symbol("compat_sys_setrlimit" at 0x2362c0, type=FUNC, size=0xd0)
+[D] #76: Symbol("compat_sys_old_getrlimit" at 0x236390, type=FUNC, size=0x132)
+[D] #77: Symbol("compat_sys_getrusage" at 0x18d2e8, type=FUNC, size=0x78)
+[D] #78: Symbol("compat_sys_gettimeofday" at 0x235830, type=FUNC, size=0x9e)
+[D] #79: Symbol("compat_sys_settimeofday" at 0x2358d0, type=FUNC, size=0x14e)
+[D] #80: Symbol("compat_sys_s390_getgroups16" at 0x117608, type=FUNC, size=0x17e)
+[D] #81: Symbol("compat_sys_s390_setgroups16" at 0x117788, type=FUNC, size=0x17e)
+[D] #82: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #83: Symbol("compat_sys_symlink" at 0x119528, type=FUNC, size=0xe)
+[D] #84: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #85: Symbol("compat_sys_readlink" at 0x119538, type=FUNC, size=0xe)
+[D] #86: Symbol("compat_sys_uselib" at 0x119548, type=FUNC, size=0xa)
+[D] #87: Symbol("compat_sys_swapon" at 0x119558, type=FUNC, size=0xa)
+[D] #88: Symbol("compat_sys_reboot" at 0x119568, type=FUNC, size=0xa)
+[D] #89: Symbol("compat_sys_old_readdir" at 0x3ebed8, type=FUNC, size=0xbe)
+[D] #90: Symbol("compat_sys_s390_old_mmap" at 0x117f40, type=FUNC, size=0xac)
+[D] #91: Symbol("compat_sys_munmap" at 0x119578, type=FUNC, size=0xe)
+[D] #92: Symbol("compat_sys_truncate" at 0x378f48, type=FUNC, size=0x14)
+[D] #93: Symbol("compat_sys_ftruncate" at 0x378f70, type=FUNC, size=0x14)
+[D] #94: Symbol("sys_fchmod" at 0x379580, type=FUNC, size=0xca)
+[D] #95: Symbol("compat_sys_s390_fchown16" at 0x117160, type=FUNC, size=0x38)
+[D] #96: Symbol("sys_getpriority" at 0x18a598, type=FUNC, size=0x4ae)
+[D] #97: Symbol("sys_setpriority" at 0x18a0b0, type=FUNC, size=0x4e4)
+[D] #98: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #99: Symbol("compat_sys_statfs" at 0x3eb068, type=FUNC, size=0x72)
+[D] #100: Symbol("compat_sys_fstatfs" at 0x3eb0e0, type=FUNC, size=0x72)
+[D] #101: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #102: Symbol("compat_sys_socketcall" at 0x876020, type=FUNC, size=0x382)
+[D] #103: Symbol("compat_sys_syslog" at 0x119588, type=FUNC, size=0xa)
+[D] #104: Symbol("compat_sys_setitimer" at 0x235d40, type=FUNC, size=0x172)
+[D] #105: Symbol("compat_sys_getitimer" at 0x235c90, type=FUNC, size=0xaa)
+[D] #106: Symbol("compat_sys_newstat" at 0x3eaee0, type=FUNC, size=0x58)
+[D] #107: Symbol("compat_sys_newlstat" at 0x3eaf38, type=FUNC, size=0x58)
+[D] #108: Symbol("compat_sys_newfstat" at 0x3eaff0, type=FUNC, size=0x72)
+[D] #109: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #110: Symbol("compat_sys_lookup_dcookie" at 0x4213f8, type=FUNC, size=0x26)
+[D] #111: Symbol("sys_vhangup" at 0x37a118, type=FUNC, size=0x54)
+[D] #112: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #113: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #114: Symbol("compat_sys_wait4" at 0x236768, type=FUNC, size=0x176)
+[D] #115: Symbol("compat_sys_swapoff" at 0x119598, type=FUNC, size=0xa)
+[D] #116: Symbol("compat_sys_sysinfo" at 0x18d978, type=FUNC, size=0x260)
+[D] #117: Symbol("compat_sys_s390_ipc" at 0x117c28, type=FUNC, size=0x64)
+[D] #118: Symbol("sys_fsync" at 0x3c0d80, type=FUNC, size=0x40)
+[D] #119: Symbol("compat_sys_sigreturn" at 0x118d00, type=FUNC, size=0xe6)
+[D] #120: Symbol("compat_sys_clone" at 0x119cd8, type=FUNC, size=0x46)
+[D] #121: Symbol("compat_sys_setdomainname" at 0x1195a8, type=FUNC, size=0xa)
+[D] #122: Symbol("compat_sys_newuname" at 0x1195b8, type=FUNC, size=0xa)
+[D] #123: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #124: Symbol("compat_sys_adjtimex" at 0x237908, type=FUNC, size=0x6c)
+[D] #125: Symbol("compat_sys_mprotect" at 0x1195c8, type=FUNC, size=0x12)
+[D] #126: Symbol("compat_sys_sigprocmask" at 0x236180, type=FUNC, size=0x13e)
+[D] #127: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #128: Symbol("compat_sys_init_module" at 0x1195e0, type=FUNC, size=0x12)
+[D] #129: Symbol("compat_sys_delete_module" at 0x1195f8, type=FUNC, size=0xa)
+[D] #130: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #131: Symbol("compat_sys_quotactl" at 0x119608, type=FUNC, size=0xe)
+[D] #132: Symbol("sys_getpgid" at 0x18c000, type=FUNC, size=0x18a)
+[D] #133: Symbol("sys_fchdir" at 0x379390, type=FUNC, size=0xce)
+[D] #134: Symbol("compat_sys_bdflush" at 0x119618, type=FUNC, size=0xa)
+[D] #135: Symbol("compat_sys_sysfs" at 0x119628, type=FUNC, size=0xe)
+[D] #136: Symbol("sys_s390_personality" at 0x104430, type=FUNC, size=0x76)
+[D] #137: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #138: Symbol("compat_sys_s390_setfsuid16" at 0x1175e8, type=FUNC, size=0x10)
+[D] #139: Symbol("compat_sys_s390_setfsgid16" at 0x1175f8, type=FUNC, size=0x10)
+[D] #140: Symbol("compat_sys_llseek" at 0x119638, type=FUNC, size=0x3e)
+[D] #141: Symbol("compat_sys_getdents" at 0x3ebf98, type=FUNC, size=0x122)
+[D] #142: Symbol("compat_sys_select" at 0x3ec538, type=FUNC, size=0x184)
+[D] #143: Symbol("sys_flock" at 0x3e95d0, type=FUNC, size=0x1cc)
+[D] #144: Symbol("compat_sys_msync" at 0x119678, type=FUNC, size=0xe)
+[D] #145: Symbol("compat_sys_readv" at 0x37d550, type=FUNC, size=0x1c)
+[D] #146: Symbol("compat_sys_writev" at 0x37d648, type=FUNC, size=0x18)
+[D] #147: Symbol("sys_getsid" at 0x18c1a0, type=FUNC, size=0x18a)
+[D] #148: Symbol("sys_fdatasync" at 0x3c0dc0, type=FUNC, size=0x40)
+[D] #149: Symbol("compat_sys_sysctl" at 0x17d7a0, type=FUNC, size=0x146)
+[D] #150: Symbol("compat_sys_mlock" at 0x119688, type=FUNC, size=0xe)
+[D] #151: Symbol("compat_sys_munlock" at 0x119698, type=FUNC, size=0xe)
+[D] #152: Symbol("sys_mlockall" at 0x31cc00, type=FUNC, size=0x1cc)
+[D] #153: Symbol("sys_munlockall" at 0x31cdd0, type=FUNC, size=0x82)
+[D] #154: Symbol("compat_sys_sched_setparam" at 0x1196a8, type=FUNC, size=0xa)
+[D] #155: Symbol("compat_sys_sched_getparam" at 0x1196b8, type=FUNC, size=0xa)
+[D] #156: Symbol("compat_sys_sched_setscheduler" at 0x1196c8, type=FUNC, size=0xa)
+[D] #157: Symbol("sys_sched_getscheduler" at 0x1ac8b8, type=FUNC, size=0x196)
+[D] #158: Symbol("sys_sched_yield" at 0x1ad918, type=FUNC, size=0xbe)
+[D] #159: Symbol("sys_sched_get_priority_max" at 0x1ad9d8, type=FUNC, size=0x40)
+[D] #160: Symbol("sys_sched_get_priority_min" at 0x1ada18, type=FUNC, size=0x3c)
+[D] #161: Symbol("compat_sys_sched_rr_get_interval" at 0x237d10, type=FUNC, size=0xdc)
+[D] #162: Symbol("compat_sys_nanosleep" at 0x235b08, type=FUNC, size=0x188)
+[D] #163: Symbol("compat_sys_mremap" at 0x1196d8, type=FUNC, size=0x46)
+[D] #164: Symbol("compat_sys_s390_setresuid16" at 0x117228, type=FUNC, size=0x46)
+[D] #165: Symbol("compat_sys_s390_getresuid16" at 0x117270, type=FUNC, size=0x194)
+[D] #166: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #167: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #168: Symbol("compat_sys_poll" at 0x119720, type=FUNC, size=0xa)
+[D] #169: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #170: Symbol("compat_sys_s390_setresgid16" at 0x117408, type=FUNC, size=0x46)
+[D] #171: Symbol("compat_sys_s390_getresgid16" at 0x117450, type=FUNC, size=0x194)
+[D] #172: Symbol("compat_sys_prctl" at 0x119730, type=FUNC, size=0x42)
+[D] #173: Symbol("compat_sys_rt_sigreturn" at 0x118de8, type=FUNC, size=0xf6)
+[D] #174: Symbol("compat_sys_rt_sigaction" at 0x1886c0, type=FUNC, size=0x22c)
+[D] #175: Symbol("compat_sys_rt_sigprocmask" at 0x186ef0, type=FUNC, size=0x146)
+[D] #176: Symbol("compat_sys_rt_sigpending" at 0x1870b8, type=FUNC, size=0x8e)
+[D] #177: Symbol("compat_sys_rt_sigtimedwait" at 0x2376b0, type=FUNC, size=0x114)
+[D] #178: Symbol("compat_sys_rt_sigqueueinfo" at 0x187cd8, type=FUNC, size=0x66)
+[D] #179: Symbol("compat_sys_rt_sigsuspend" at 0x188dd0, type=FUNC, size=0x8e)
+[D] #180: Symbol("compat_sys_s390_pread64" at 0x117cd0, type=FUNC, size=0x40)
+[D] #181: Symbol("compat_sys_s390_pwrite64" at 0x117d10, type=FUNC, size=0x40)
+[D] #182: Symbol("compat_sys_s390_chown16" at 0x1170f0, type=FUNC, size=0x38)
+[D] #183: Symbol("compat_sys_getcwd" at 0x119778, type=FUNC, size=0xe)
+[D] #184: Symbol("compat_sys_capget" at 0x119788, type=FUNC, size=0xe)
+[D] #185: Symbol("compat_sys_capset" at 0x119798, type=FUNC, size=0xe)
+[D] #186: Symbol("compat_sys_sigaltstack" at 0x188198, type=FUNC, size=0x1be)
+[D] #187: Symbol("compat_sys_sendfile" at 0x37d8d8, type=FUNC, size=0x102)
+[D] #188: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #189: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #190: Symbol("sys_vfork" at 0x16f3a0, type=FUNC, size=0x52)
+[D] #191: Symbol("compat_sys_getrlimit" at 0x2364c8, type=FUNC, size=0xc4)
+[D] #192: Symbol("compat_sys_s390_mmap2" at 0x117ff0, type=FUNC, size=0x98)
+[D] #193: Symbol("compat_sys_s390_truncate64" at 0x117c90, type=FUNC, size=0x1e)
+[D] #194: Symbol("compat_sys_s390_ftruncate64" at 0x117cb0, type=FUNC, size=0x1e)
+[D] #195: Symbol("compat_sys_s390_stat64" at 0x117d78, type=FUNC, size=0x72)
+[D] #196: Symbol("compat_sys_s390_lstat64" at 0x117df0, type=FUNC, size=0x72)
+[D] #197: Symbol("compat_sys_s390_fstat64" at 0x117e68, type=FUNC, size=0x72)
+[D] #198: Symbol("compat_sys_lchown" at 0x1197a8, type=FUNC, size=0xa)
+[D] #199: Symbol("sys_getuid" at 0x18ba38, type=FUNC, size=0x6a)
+[D] #200: Symbol("sys_getgid" at 0x18bb18, type=FUNC, size=0x6a)
+[D] #201: Symbol("sys_geteuid" at 0x18baa8, type=FUNC, size=0x6a)
+[D] #202: Symbol("sys_getegid" at 0x18bb88, type=FUNC, size=0x6a)
+[D] #203: Symbol("sys_setreuid" at 0x18acd0, type=FUNC, size=0x20e)
+[D] #204: Symbol("sys_setregid" at 0x18aa48, type=FUNC, size=0x190)
+[D] #205: Symbol("compat_sys_getgroups" at 0x1197b8, type=FUNC, size=0xa)
+[D] #206: Symbol("compat_sys_setgroups" at 0x1197c8, type=FUNC, size=0xa)
+[D] #207: Symbol("sys_fchown" at 0x3798c8, type=FUNC, size=0xf4)
+[D] #208: Symbol("sys_setresuid" at 0x18b020, type=FUNC, size=0x210)
+[D] #209: Symbol("compat_sys_getresuid" at 0x1197d8, type=FUNC, size=0x12)
+[D] #210: Symbol("sys_setresgid" at 0x18b348, type=FUNC, size=0x1b8)
+[D] #211: Symbol("compat_sys_getresgid" at 0x1197f0, type=FUNC, size=0x12)
+[D] #212: Symbol("compat_sys_chown" at 0x119808, type=FUNC, size=0xa)
+[D] #213: Symbol("sys_setuid" at 0x18aee0, type=FUNC, size=0x13a)
+[D] #214: Symbol("sys_setgid" at 0x18abd8, type=FUNC, size=0xf6)
+[D] #215: Symbol("sys_setfsuid" at 0x18b608, type=FUNC, size=0x110)
+[D] #216: Symbol("sys_setfsgid" at 0x18b718, type=FUNC, size=0xf8)
+[D] #217: Symbol("compat_sys_pivot_root" at 0x119818, type=FUNC, size=0xe)
+[D] #218: Symbol("compat_sys_mincore" at 0x119828, type=FUNC, size=0x12)
+[D] #219: Symbol("compat_sys_madvise" at 0x119840, type=FUNC, size=0xe)
+[D] #220: Symbol("compat_sys_getdents64" at 0x119920, type=FUNC, size=0xa)
+[D] #221: Symbol("compat_sys_fcntl64" at 0x3eb300, type=FUNC, size=0x4a0)
+[D] #222: Symbol("compat_sys_s390_readahead" at 0x117d50, type=FUNC, size=0x22)
+[D] #223: Symbol("compat_sys_sendfile64" at 0x37d9e0, type=FUNC, size=0x100)
+[D] #224: Symbol("compat_sys_setxattr" at 0x119850, type=FUNC, size=0x42)
+[D] #225: Symbol("compat_sys_lsetxattr" at 0x119898, type=FUNC, size=0x42)
+[D] #226: Symbol("compat_sys_fsetxattr" at 0x1198e0, type=FUNC, size=0x3e)
+[D] #227: Symbol("compat_sys_getxattr" at 0x119930, type=FUNC, size=0x16)
+[D] #228: Symbol("compat_sys_lgetxattr" at 0x119948, type=FUNC, size=0x16)
+[D] #229: Symbol("compat_sys_fgetxattr" at 0x119960, type=FUNC, size=0x12)
+[D] #230: Symbol("compat_sys_listxattr" at 0x119978, type=FUNC, size=0x12)
+[D] #231: Symbol("compat_sys_llistxattr" at 0x119990, type=FUNC, size=0x12)
+[D] #232: Symbol("compat_sys_flistxattr" at 0x1199a8, type=FUNC, size=0xe)
+[D] #233: Symbol("compat_sys_removexattr" at 0x1199b8, type=FUNC, size=0xe)
+[D] #234: Symbol("compat_sys_lremovexattr" at 0x1199c8, type=FUNC, size=0xe)
+[D] #235: Symbol("compat_sys_fremovexattr" at 0x1199d8, type=FUNC, size=0xa)
+[D] #236: Symbol("sys_gettid" at 0x18b860, type=FUNC, size=0x46)
+[D] #237: Symbol("sys_tkill" at 0x187c00, type=FUNC, size=0x50)
+[D] #238: Symbol("compat_sys_futex" at 0x228ab8, type=FUNC, size=0x186)
+[D] #239: Symbol("compat_sys_sched_setaffinity" at 0x2374a0, type=FUNC, size=0x82)
+[D] #240: Symbol("compat_sys_sched_getaffinity" at 0x2375e0, type=FUNC, size=0xb6)
+[D] #241: Symbol("sys_tgkill" at 0x187ba8, type=FUNC, size=0x56)
+[D] #242: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #243: Symbol("compat_sys_io_setup" at 0x3eb7f8, type=FUNC, size=0x142)
+[D] #244: Symbol("compat_sys_io_destroy" at 0x119a18, type=FUNC, size=0xa)
+[D] #245: Symbol("compat_sys_io_getevents" at 0x3eb940, type=FUNC, size=0xc8)
+[D] #246: Symbol("compat_sys_io_submit" at 0x3ebb48, type=FUNC, size=0x122)
+[D] #247: Symbol("compat_sys_io_cancel" at 0x119a28, type=FUNC, size=0x12)
+[D] #248: Symbol("sys_exit_group" at 0x176aa0, type=FUNC, size=0x30)
+[D] #249: Symbol("sys_epoll_create" at 0x3da538, type=FUNC, size=0x1c)
+[D] #250: Symbol("compat_sys_epoll_ctl" at 0x1199f8, type=FUNC, size=0xa)
+[D] #251: Symbol("compat_sys_epoll_wait" at 0x119a08, type=FUNC, size=0xa)
+[D] #252: Symbol("compat_sys_set_tid_address" at 0x1199e8, type=FUNC, size=0xa)
+[D] #253: Symbol("compat_sys_s390_fadvise64" at 0x1180d8, type=FUNC, size=0x4a)
+[D] #254: Symbol("compat_sys_timer_create" at 0x2372f0, type=FUNC, size=0xd6)
+[D] #255: Symbol("compat_sys_timer_settime" at 0x236b18, type=FUNC, size=0x122)
+[D] #256: Symbol("compat_sys_timer_gettime" at 0x236c40, type=FUNC, size=0xf2)
+[D] #257: Symbol("sys_timer_getoverrun" at 0x215970, type=FUNC, size=0x68)
+[D] #258: Symbol("sys_timer_delete" at 0x215be0, type=FUNC, size=0x166)
+[D] #259: Symbol("compat_sys_clock_settime" at 0x236d38, type=FUNC, size=0xdc)
+[D] #260: Symbol("compat_sys_clock_gettime" at 0x236e18, type=FUNC, size=0xf2)
+[D] #261: Symbol("compat_sys_clock_getres" at 0x237008, type=FUNC, size=0xe6)
+[D] #262: Symbol("compat_sys_clock_nanosleep" at 0x2370f0, type=FUNC, size=0x14c)
+[D] #263: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #264: Symbol("compat_sys_s390_fadvise64_64" at 0x118128, type=FUNC, size=0xb4)
+[D] #265: Symbol("compat_sys_statfs64" at 0x3eb158, type=FUNC, size=0x80)
+[D] #266: Symbol("compat_sys_fstatfs64" at 0x3eb1d8, type=FUNC, size=0x80)
+[D] #267: Symbol("compat_sys_remap_file_pages" at 0x119ab0, type=FUNC, size=0x46)
+[D] #268: Symbol("compat_sys_mbind" at 0x344ec0, type=FUNC, size=0xea)
+[D] #269: Symbol("compat_sys_get_mempolicy" at 0x3439f0, type=FUNC, size=0x134)
+[D] #270: Symbol("compat_sys_set_mempolicy" at 0x343b28, type=FUNC, size=0xce)
+[D] #271: Symbol("compat_sys_mq_open" at 0x669928, type=FUNC, size=0x126)
+[D] #272: Symbol("compat_sys_mq_unlink" at 0x119a40, type=FUNC, size=0xa)
+[D] #273: Symbol("compat_sys_mq_timedsend" at 0x669a50, type=FUNC, size=0x7a)
+[D] #274: Symbol("compat_sys_mq_timedreceive" at 0x669ad0, type=FUNC, size=0x7a)
+[D] #275: Symbol("compat_sys_mq_notify" at 0x669b50, type=FUNC, size=0xca)
+[D] #276: Symbol("compat_sys_mq_getsetattr" at 0x669c20, type=FUNC, size=0x208)
+[D] #277: Symbol("compat_sys_kexec_load" at 0x234dd0, type=FUNC, size=0x134)
+[D] #278: Symbol("compat_sys_add_key" at 0x119a50, type=FUNC, size=0x42)
+[D] #279: Symbol("compat_sys_request_key" at 0x119a98, type=FUNC, size=0x12)
+[D] #280: Symbol("compat_sys_keyctl" at 0x6732a8, type=FUNC, size=0x182)
+[D] #281: Symbol("compat_sys_waitid" at 0x2368e0, type=FUNC, size=0x13a)
+[D] #282: Symbol("sys_ioprio_set" at 0x6b3af0, type=FUNC, size=0x504)
+[D] #283: Symbol("sys_ioprio_get" at 0x6b4078, type=FUNC, size=0x590)
+[D] #284: Symbol("sys_inotify_init" at 0x3d7108, type=FUNC, size=0x10)
+[D] #285: Symbol("compat_sys_inotify_add_watch" at 0x119af8, type=FUNC, size=0xa)
+[D] #286: Symbol("sys_inotify_rm_watch" at 0x3d74b8, type=FUNC, size=0xf8)
+[D] #287: Symbol("compat_sys_migrate_pages" at 0x237ae0, type=FUNC, size=0x230)
+[D] #288: Symbol("compat_sys_openat" at 0x3ec0e0, type=FUNC, size=0x1c)
+[D] #289: Symbol("compat_sys_mkdirat" at 0x119b08, type=FUNC, size=0xa)
+[D] #290: Symbol("compat_sys_mknodat" at 0x119b18, type=FUNC, size=0xa)
+[D] #291: Symbol("compat_sys_fchownat" at 0x119b28, type=FUNC, size=0x36)
+[D] #292: Symbol("compat_sys_futimesat" at 0x3ead30, type=FUNC, size=0x18e)
+[D] #293: Symbol("compat_sys_s390_fstatat64" at 0x117ee0, type=FUNC, size=0x60)
+[D] #294: Symbol("compat_sys_unlinkat" at 0x119b60, type=FUNC, size=0xa)
+[D] #295: Symbol("compat_sys_renameat" at 0x119b70, type=FUNC, size=0xe)
+[D] #296: Symbol("compat_sys_linkat" at 0x119b80, type=FUNC, size=0x3a)
+[D] #297: Symbol("compat_sys_symlinkat" at 0x119bc0, type=FUNC, size=0xe)
+[D] #298: Symbol("compat_sys_readlinkat" at 0x119bd0, type=FUNC, size=0xe)
+[D] #299: Symbol("compat_sys_fchmodat" at 0x119be0, type=FUNC, size=0xa)
+[D] #300: Symbol("compat_sys_faccessat" at 0x119bf0, type=FUNC, size=0xa)
+[D] #301: Symbol("compat_sys_pselect6" at 0x3ec750, type=FUNC, size=0x26c)
+[D] #302: Symbol("compat_sys_ppoll" at 0x3ec9c0, type=FUNC, size=0x1da)
+[D] #303: Symbol("compat_sys_unshare" at 0x119c00, type=FUNC, size=0xa)
+[D] #304: Symbol("compat_sys_set_robust_list" at 0x228830, type=FUNC, size=0x2a)
+[D] #305: Symbol("compat_sys_get_robust_list" at 0x228860, type=FUNC, size=0x254)
+[D] #306: Symbol("compat_sys_splice" at 0x119c10, type=FUNC, size=0x4a)
+[D] #307: Symbol("compat_sys_s390_sync_file_range" at 0x1181e0, type=FUNC, size=0x2e)
+[D] #308: Symbol("compat_sys_tee" at 0x119c60, type=FUNC, size=0xa)
+[D] #309: Symbol("compat_sys_vmsplice" at 0x3bfd10, type=FUNC, size=0x172)
+[D] #310: Symbol("compat_sys_move_pages" at 0x237978, type=FUNC, size=0x164)
+[D] #311: Symbol("compat_sys_getcpu" at 0x119c70, type=FUNC, size=0x12)
+[D] #312: Symbol("compat_sys_epoll_pwait" at 0x3db690, type=FUNC, size=0x15a)
+[D] #313: Symbol("compat_sys_utimes" at 0x3eaec0, type=FUNC, size=0x1a)
+[D] #314: Symbol("compat_sys_s390_fallocate" at 0x118210, type=FUNC, size=0x3a)
+[D] #315: Symbol("compat_sys_utimensat" at 0x3eac70, type=FUNC, size=0xba)
+[D] #316: Symbol("compat_sys_signalfd" at 0x3dc490, type=FUNC, size=0x1c)
+[D] #317: Symbol("sys_ni_syscall" at 0x19c620, type=FUNC, size=0xc)
+[D] #318: Symbol("sys_eventfd" at 0x3de550, type=FUNC, size=0x14)
+[D] #319: Symbol("sys_timerfd_create" at 0x3dd5f0, type=FUNC, size=0x1c2)
+[D] #320: Symbol("compat_sys_timerfd_settime" at 0x3dd908, type=FUNC, size=0x9e)
+[D] #321: Symbol("compat_sys_timerfd_gettime" at 0x3dd9a8, type=FUNC, size=0x66)
+[D] #322: Symbol("compat_sys_signalfd4" at 0x3dc3a8, type=FUNC, size=0xe4)
+[D] #323: Symbol("sys_eventfd2" at 0x3de478, type=FUNC, size=0xd8)
+[D] #324: Symbol("sys_inotify_init1" at 0x3d6f80, type=FUNC, size=0x186)
+[D] #325: Symbol("compat_sys_pipe2" at 0x119c88, type=FUNC, size=0xa)
+[D] #326: Symbol("sys_dup3" at 0x3a3bb8, type=FUNC, size=0x188)
+[D] #327: Symbol("sys_epoll_create1" at 0x3da380, type=FUNC, size=0x1b8)
+[D] #328: Symbol("compat_sys_preadv" at 0x37d570, type=FUNC, size=0x56)
+[D] #329: Symbol("compat_sys_pwritev" at 0x37d660, type=FUNC, size=0x32)
+[D] #330: Symbol("compat_sys_rt_tgsigqueueinfo" at 0x187dd0, type=FUNC, size=0x76)
+[D] #331: Symbol("compat_sys_perf_event_open" at 0x119c98, type=FUNC, size=0x3a)
+[D] #332: Symbol("sys_fanotify_init" at 0x3d8118, type=FUNC, size=0x23a)
+[D] #333: Symbol("compat_sys_fanotify_mark" at 0x3d8968, type=FUNC, size=0x5c)
+[D] #334: Symbol("compat_sys_prlimit64" at 0x119d20, type=FUNC, size=0xe)
+[D] #335: Symbol("compat_sys_name_to_handle_at" at 0x119d30, type=FUNC, size=0x3e)
+[D] #336: Symbol("compat_sys_open_by_handle_at" at 0x3ecba0, type=FUNC, size=0x18)
+[D] #337: Symbol("compat_sys_clock_adjtime" at 0x236f10, type=FUNC, size=0xf4)
+[D] #338: Symbol("sys_syncfs" at 0x3c0ce0, type=FUNC, size=0x9e)
+[D] #339: Symbol("sys_setns" at 0x19cd38, type=FUNC, size=0x128)
+[D] #340: Symbol("compat_sys_process_vm_readv" at 0x32cfd8, type=FUNC, size=0x5e)
+[D] #341: Symbol("compat_sys_process_vm_writev" at 0x32d038, type=FUNC, size=0x5e)
+[D] #342: Symbol("sys_s390_runtime_instr" at 0x111f40, type=FUNC, size=0x116)
+[D] #343: Symbol("compat_sys_kcmp" at 0x119d70, type=FUNC, size=0x3a)
+[D] #344: Symbol("compat_sys_finit_module" at 0x119db0, type=FUNC, size=0xa)
+[D] #345: Symbol("compat_sys_sched_setattr" at 0x119dc0, type=FUNC, size=0xa)
+[D] #346: Symbol("compat_sys_sched_getattr" at 0x119dd0, type=FUNC, size=0xa)
+[D] #347: Symbol("compat_sys_renameat2" at 0x119de0, type=FUNC, size=0x3a)
+[D] #348: Symbol("compat_sys_seccomp" at 0x119e20, type=FUNC, size=0xa)
+[D] #349: Symbol("compat_sys_getrandom" at 0x119e30, type=FUNC, size=0xe)
+[D] #350: Symbol("compat_sys_memfd_create" at 0x119e40, type=FUNC, size=0xa)
+[D] #351: Symbol("compat_sys_bpf" at 0x119e50, type=FUNC, size=0xa)
+[D] #352: Symbol("compat_sys_s390_pci_mmio_write" at 0x119e60, type=FUNC, size=0x12)
+[D] #353: Symbol("compat_sys_s390_pci_mmio_read" at 0x119e78, type=FUNC, size=0x12)
+[D] #354: Symbol("compat_sys_execveat" at 0x3858d8, type=FUNC, size=0x8e)
+[D] #355: Symbol("sys_userfaultfd" at 0x3e01a0, type=FUNC, size=0x18a)
+[D] #356: Symbol("sys_membarrier" at 0x2c8840, type=FUNC, size=0x88)
+[D] #357: Symbol("compat_sys_recvmmsg" at 0x875f40, type=FUNC, size=0xda)
+[D] #358: Symbol("compat_sys_sendmmsg" at 0x875e50, type=FUNC, size=0x4c)
+[D] #359: Symbol("sys_socket" at 0x824270, type=FUNC, size=0x10a)
+[D] #360: Symbol("compat_sys_socketpair" at 0x119e90, type=FUNC, size=0xa)
+[D] #361: Symbol("sys_bind" at 0x824638, type=FUNC, size=0xde)
+[D] #362: Symbol("sys_connect" at 0x8249e8, type=FUNC, size=0xea)
+[D] #363: Symbol("sys_listen" at 0x824718, type=FUNC, size=0xb2)
+[D] #364: Symbol("sys_accept4" at 0x8247d0, type=FUNC, size=0x1fa)
+[D] #365: Symbol("compat_sys_getsockopt" at 0x875bf8, type=FUNC, size=0x232)
+[D] #366: Symbol("compat_sys_setsockopt" at 0x8759d8, type=FUNC, size=0x21c)
+[D] #367: Symbol("compat_sys_getsockname" at 0x119ed0, type=FUNC, size=0xe)
+[D] #368: Symbol("compat_sys_getpeername" at 0x119ee0, type=FUNC, size=0xe)
+[D] #369: Symbol("compat_sys_sendto" at 0x119ef0, type=FUNC, size=0x4a)
+[D] #370: Symbol("compat_sys_sendmsg" at 0x875e30, type=FUNC, size=0x1c)
+[D] #371: Symbol("compat_sys_recvfrom" at 0x875ee0, type=FUNC, size=0x5c)
+[D] #372: Symbol("compat_sys_recvmsg" at 0x875ea0, type=FUNC, size=0x1c)
+[D] #373: Symbol("sys_shutdown" at 0x825128, type=FUNC, size=0x9c)
+[D] #374: Symbol("compat_sys_mlock2" at 0x119f40, type=FUNC, size=0xe)
+[D] #375: Symbol("compat_sys_copy_file_range" at 0x119f50, type=FUNC, size=0x4a)
+[D] #376: Symbol("compat_sys_preadv2" at 0x37d5c8, type=FUNC, size=0x7c)
+[D] #377: Symbol("compat_sys_pwritev2" at 0x37d698, type=FUNC, size=0x46)
+[I] Common syscall symbol prefixes: compat_sys_s390_, compat_sys_, compat_, sys_
+[I] 33 entries point to sys_ni_syscall
+[D] Running command: addr2line -e /mnt/m2data/kernels/vmlinux-s390x-v4.8 0x1769a0 0x16f348 0x118088 0x1180b0 0x3ec0c0 0x378748 0x186ad8 0x1193f8 0x119408 0x119418 0x385868 0x119428 0x2377c8 0x119438 0x119448 0x117128 0x37b548 0x18b810 0x3ebc70 0x119458 0x117218 0x117908 0x237850 0x180848 0x210720 0x188cc0 0x3eab90 0x119468 0x1ac228 0x3c0b60 0x1878c8 0x119478 0x119488 0x119498 0x3a3f18 0x1194a8 0x235eb8 0x1194b8 0x1171d0 0x117a98 0x1194c8 0x1179d0 0x117b60 0x1194d8 0x1194e8 0x3ee4d0 0x3eb7a0 0x18bd60 0x18d360 0x1194f8 0x3eb258 0x3a3d40 0x18b8a8 0x18c190 0x18c330 0x188a70 0x1171e0 0x117198 0x119508 0x236090 0x119518 0x2362c0 0x236390 0x18d2e8 0x235830 0x2358d0 0x117608 0x117788 0x119528 0x119538 0x119548 0x119558 0x119568 0x3ebed8 0x117f40 0x119578 0x378f48 0x378f70 0x379580 0x117160 0x18a598 0x18a0b0 0x3eb068 0x3eb0e0 0x876020 0x119588 0x235d40 0x235c90 0x3eaee0 0x3eaf38 0x3eaff0 0x4213f8 0x37a118 0x236768 0x119598 0x18d978 0x117c28 0x3c0d80 0x118d00 0x119cd8 0x1195a8 0x1195b8 0x237908 0x1195c8 0x236180 0x1195e0 0x1195f8 0x119608 0x18c000 0x379390 0x119618 0x119628 0x104430 0x1175e8 0x1175f8 0x119638 0x3ebf98 0x3ec538 0x3e95d0 0x119678 0x37d550 0x37d648 0x18c1a0 0x3c0dc0 0x17d7a0 0x119688 0x119698 0x31cc00 0x31cdd0 0x1196a8 0x1196b8 0x1196c8 0x1ac8b8 0x1ad918 0x1ad9d8 0x1ada18 0x237d10 0x235b08 0x1196d8 0x117228 0x117270 0x119720 0x117408 0x117450 0x119730 0x118de8 0x1886c0 0x186ef0 0x1870b8 0x2376b0 0x187cd8 0x188dd0 0x117cd0 0x117d10 0x1170f0 0x119778 0x119788 0x119798 0x188198 0x37d8d8 0x16f3a0 0x2364c8 0x117ff0 0x117c90 0x117cb0 0x117d78 0x117df0 0x117e68 0x1197a8 0x18ba38 0x18bb18 0x18baa8 0x18bb88 0x18acd0 0x18aa48 0x1197b8 0x1197c8 0x3798c8 0x18b020 0x1197d8 0x18b348 0x1197f0 0x119808 0x18aee0 0x18abd8 0x18b608 0x18b718 0x119818 0x119828 0x119840 0x119920 0x3eb300 0x117d50 0x37d9e0 0x119850 0x119898 0x1198e0 0x119930 0x119948 0x119960 0x119978 0x119990 0x1199a8 0x1199b8 0x1199c8 0x1199d8 0x18b860 0x187c00 0x228ab8 0x2374a0 0x2375e0 0x187ba8 0x3eb7f8 0x119a18 0x3eb940 0x3ebb48 0x119a28 0x176aa0 0x3da538 0x1199f8 0x119a08 0x1199e8 0x1180d8 0x2372f0 0x236b18 0x236c40 0x215970 0x215be0 0x236d38 0x236e18 0x237008 0x2370f0 0x118128 0x3eb158 0x3eb1d8 0x119ab0 0x344ec0 0x3439f0 0x343b28 0x669928 0x119a40 0x669a50 0x669ad0 0x669b50 0x669c20 0x234dd0 0x119a50 0x119a98 0x6732a8 0x2368e0 0x6b3af0 0x6b4078 0x3d7108 0x119af8 0x3d74b8 0x237ae0 0x3ec0e0 0x119b08 0x119b18 0x119b28 0x3ead30 0x117ee0 0x119b60 0x119b70 0x119b80 0x119bc0 0x119bd0 0x119be0 0x119bf0 0x3ec750 0x3ec9c0 0x119c00 0x228830 0x228860 0x119c10 0x1181e0 0x119c60 0x3bfd10 0x237978 0x119c70 0x3db690 0x3eaec0 0x118210 0x3eac70 0x3dc490 0x3de550 0x3dd5f0 0x3dd908 0x3dd9a8 0x3dc3a8 0x3de478 0x3d6f80 0x119c88 0x3a3bb8 0x3da380 0x37d570 0x37d660 0x187dd0 0x119c98 0x3d8118 0x3d8968 0x119d20 0x119d30 0x3ecba0 0x236f10 0x3c0ce0 0x19cd38 0x32cfd8 0x32d038 0x111f40 0x119d70 0x119db0 0x119dc0 0x119dd0 0x119de0 0x119e20 0x119e30 0x119e40 0x119e50 0x119e60 0x119e78 0x3858d8 0x3e01a0 0x2c8840 0x875f40 0x875e50 0x824270 0x119e90 0x824638 0x8249e8 0x824718 0x8247d0 0x875bf8 0x8759d8 0x119ed0 0x119ee0 0x119ef0 0x875e30 0x875ee0 0x875ea0 0x825128 0x119f40 0x119f50 0x37d5c8 0x37d698
+[D] Running command: rg --line-number --glob '!Documentation/*' --glob '!drivers/*' --glob '!lib/*' --glob '!samples/*' --glob '!sound/*' --glob '!tools/*' --glob '!usr/*' --glob '!arch/*' --glob arch/s390 --glob '*.c' '(\b(COMPAT_)?SYSCALL(32)?_DEFINE\d\s*\(|\bCOMPAT_SYSCALL_WRAP\d\s*\()\s*\w+'
+[I] Kernel has ftrace syscall metadata from FTRACE_SYSCALLS=y
+Found 345 implemented syscalls
+

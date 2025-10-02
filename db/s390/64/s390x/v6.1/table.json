@@ -1,0 +1,6278 @@
+{
+	"kernel": {
+		"abi": {
+			"bits": 64,
+			"calling_convention": {
+				"parameters": [
+					"r2",
+					"r3",
+					"r4",
+					"r5",
+					"r6",
+					"r7"
+				],
+				"syscall_nr": "r1"
+			},
+			"compat": false,
+			"name": "s390x"
+		},
+		"architecture": {
+			"bits": 64,
+			"name": "s390"
+		},
+		"syscall_table_symbol": "sys_call_table",
+		"version": "v6.1",
+		"version_source": "vmlinux"
+	},
+	"syscalls": [
+		{
+			"esoteric": false,
+			"file": "kernel/exit.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 1,
+			"kconfig": null,
+			"line": 915,
+			"name": "exit",
+			"number": 1,
+			"origname": "exit",
+			"signature": [
+				"int error_code"
+			],
+			"symbol": "__s390x_sys_exit"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/fork.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 2,
+			"kconfig": "MMU",
+			"line": 2751,
+			"name": "fork",
+			"number": 2,
+			"origname": "fork",
+			"signature": [],
+			"symbol": "__s390x_sys_fork"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/read_write.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 3,
+			"kconfig": null,
+			"line": 621,
+			"name": "read",
+			"number": 3,
+			"origname": "read",
+			"signature": [
+				"unsigned int fd",
+				"char *buf",
+				"size_t count"
+			],
+			"symbol": "__s390x_sys_read"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/read_write.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 4,
+			"kconfig": null,
+			"line": 646,
+			"name": "write",
+			"number": 4,
+			"origname": "write",
+			"signature": [
+				"unsigned int fd",
+				"const char *buf",
+				"size_t count"
+			],
+			"symbol": "__s390x_sys_write"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 5,
+			"kconfig": null,
+			"line": 1330,
+			"name": "open",
+			"number": 5,
+			"origname": "open",
+			"signature": [
+				"const char *filename",
+				"int flags",
+				"umode_t mode"
+			],
+			"symbol": "__s390x_sys_open"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 6,
+			"kconfig": null,
+			"line": 1437,
+			"name": "close",
+			"number": 6,
+			"origname": "close",
+			"signature": [
+				"unsigned int fd"
+			],
+			"symbol": "__s390x_sys_close"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 7,
+			"kconfig": null,
+			"line": 2998,
+			"name": "restart_syscall",
+			"number": 7,
+			"origname": "restart_syscall",
+			"signature": [],
+			"symbol": "__s390x_sys_restart_syscall"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 8,
+			"kconfig": null,
+			"line": 1396,
+			"name": "creat",
+			"number": 8,
+			"origname": "creat",
+			"signature": [
+				"const char *pathname",
+				"umode_t mode"
+			],
+			"symbol": "__s390x_sys_creat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namei.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 9,
+			"kconfig": null,
+			"line": 4632,
+			"name": "link",
+			"number": 9,
+			"origname": "link",
+			"signature": [
+				"const char *oldname",
+				"const char *newname"
+			],
+			"symbol": "__s390x_sys_link"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namei.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 10,
+			"kconfig": null,
+			"line": 4366,
+			"name": "unlink",
+			"number": 10,
+			"origname": "unlink",
+			"signature": [
+				"const char *pathname"
+			],
+			"symbol": "__s390x_sys_unlink"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/exec.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 11,
+			"kconfig": null,
+			"line": 2087,
+			"name": "execve",
+			"number": 11,
+			"origname": "execve",
+			"signature": [
+				"const char *filename",
+				"const char *const *argv",
+				"const char *const *envp"
+			],
+			"symbol": "__s390x_sys_execve"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 12,
+			"kconfig": null,
+			"line": 508,
+			"name": "chdir",
+			"number": 12,
+			"origname": "chdir",
+			"signature": [
+				"const char *filename"
+			],
+			"symbol": "__s390x_sys_chdir"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namei.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 14,
+			"kconfig": null,
+			"line": 3996,
+			"name": "mknod",
+			"number": 14,
+			"origname": "mknod",
+			"signature": [
+				"const char *filename",
+				"umode_t mode",
+				"unsigned dev"
+			],
+			"symbol": "__s390x_sys_mknod"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 15,
+			"kconfig": null,
+			"line": 661,
+			"name": "chmod",
+			"number": 15,
+			"origname": "chmod",
+			"signature": [
+				"const char *filename",
+				"umode_t mode"
+			],
+			"symbol": "__s390x_sys_chmod"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/read_write.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 19,
+			"kconfig": null,
+			"line": 311,
+			"name": "lseek",
+			"number": 19,
+			"origname": "lseek",
+			"signature": [
+				"unsigned int fd",
+				"off_t offset",
+				"unsigned int whence"
+			],
+			"symbol": "__s390x_sys_lseek"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 20,
+			"kconfig": null,
+			"line": 940,
+			"name": "getpid",
+			"number": 20,
+			"origname": "getpid",
+			"signature": [],
+			"symbol": "__s390x_sys_getpid"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namespace.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 21,
+			"kconfig": null,
+			"line": 3568,
+			"name": "mount",
+			"number": 21,
+			"origname": "mount",
+			"signature": [
+				"char *dev_name",
+				"char *dir_name",
+				"char *type",
+				"unsigned long flags",
+				"void *data"
+			],
+			"symbol": "__s390x_sys_mount"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namespace.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 22,
+			"kconfig": null,
+			"line": 1838,
+			"name": "oldumount",
+			"number": 22,
+			"origname": "oldumount",
+			"signature": [
+				"char *name"
+			],
+			"symbol": "__s390x_sys_oldumount"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/ptrace.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 26,
+			"kconfig": null,
+			"line": 1269,
+			"name": "ptrace",
+			"number": 26,
+			"origname": "ptrace",
+			"signature": [
+				"long request",
+				"long pid",
+				"unsigned long addr",
+				"unsigned long data"
+			],
+			"symbol": "__s390x_sys_ptrace"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/itimer.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 27,
+			"kconfig": null,
+			"line": 306,
+			"name": "alarm",
+			"number": 27,
+			"origname": "alarm",
+			"signature": [
+				"unsigned int seconds"
+			],
+			"symbol": "__s390x_sys_alarm"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 29,
+			"kconfig": null,
+			"line": 4603,
+			"name": "pause",
+			"number": 29,
+			"origname": "pause",
+			"signature": [],
+			"symbol": "__s390x_sys_pause"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/utimes.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 30,
+			"kconfig": null,
+			"line": 214,
+			"name": "utime",
+			"number": 30,
+			"origname": "utime",
+			"signature": [
+				"char *filename",
+				"struct utimbuf *times"
+			],
+			"symbol": "__s390x_sys_utime"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 33,
+			"kconfig": null,
+			"line": 503,
+			"name": "access",
+			"number": 33,
+			"origname": "access",
+			"signature": [
+				"const char *filename",
+				"int mode"
+			],
+			"symbol": "__s390x_sys_access"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sched/core.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 34,
+			"kconfig": null,
+			"line": 7102,
+			"name": "nice",
+			"number": 34,
+			"origname": "nice",
+			"signature": [
+				"int increment"
+			],
+			"symbol": "__s390x_sys_nice"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/sync.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 36,
+			"kconfig": null,
+			"line": 111,
+			"name": "sync",
+			"number": 36,
+			"origname": "sync",
+			"signature": [],
+			"symbol": "__s390x_sys_sync"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 37,
+			"kconfig": null,
+			"line": 3771,
+			"name": "kill",
+			"number": 37,
+			"origname": "kill",
+			"signature": [
+				"pid_t pid",
+				"int sig"
+			],
+			"symbol": "__s390x_sys_kill"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namei.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 38,
+			"kconfig": null,
+			"line": 4974,
+			"name": "rename",
+			"number": 38,
+			"origname": "rename",
+			"signature": [
+				"const char *oldname",
+				"const char *newname"
+			],
+			"symbol": "__s390x_sys_rename"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namei.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 39,
+			"kconfig": null,
+			"line": 4079,
+			"name": "mkdir",
+			"number": 39,
+			"origname": "mkdir",
+			"signature": [
+				"const char *pathname",
+				"umode_t mode"
+			],
+			"symbol": "__s390x_sys_mkdir"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namei.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 40,
+			"kconfig": null,
+			"line": 4199,
+			"name": "rmdir",
+			"number": 40,
+			"origname": "rmdir",
+			"signature": [
+				"const char *pathname"
+			],
+			"symbol": "__s390x_sys_rmdir"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/file.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 41,
+			"kconfig": null,
+			"line": 1269,
+			"name": "dup",
+			"number": 41,
+			"origname": "dup",
+			"signature": [
+				"unsigned int fildes"
+			],
+			"symbol": "__s390x_sys_dup"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/pipe.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 42,
+			"kconfig": null,
+			"line": 1031,
+			"name": "pipe",
+			"number": 42,
+			"origname": "pipe",
+			"signature": [
+				"int *fildes"
+			],
+			"symbol": "__s390x_sys_pipe"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 43,
+			"kconfig": null,
+			"line": 1005,
+			"name": "times",
+			"number": 43,
+			"origname": "times",
+			"signature": [
+				"struct tms *tbuf"
+			],
+			"symbol": "__s390x_sys_times"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mmap.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 45,
+			"kconfig": null,
+			"line": 170,
+			"name": "brk",
+			"number": 45,
+			"origname": "brk",
+			"signature": [
+				"unsigned long brk"
+			],
+			"symbol": "__s390x_sys_brk"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 48,
+			"kconfig": null,
+			"line": 4586,
+			"name": "signal",
+			"number": 48,
+			"origname": "signal",
+			"signature": [
+				"int sig",
+				"__sighandler_t handler"
+			],
+			"symbol": "__s390x_sys_signal"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/acct.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 51,
+			"kconfig": "BSD_PROCESS_ACCT",
+			"line": 292,
+			"name": "acct",
+			"number": 51,
+			"origname": "acct",
+			"signature": [
+				"const char *name"
+			],
+			"symbol": "__s390x_sys_acct"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namespace.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 52,
+			"kconfig": null,
+			"line": 1828,
+			"name": "umount",
+			"number": 52,
+			"origname": "umount",
+			"signature": [
+				"char *name",
+				"int flags"
+			],
+			"symbol": "__s390x_sys_umount"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/ioctl.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 54,
+			"kconfig": null,
+			"line": 856,
+			"name": "ioctl",
+			"number": 54,
+			"origname": "ioctl",
+			"signature": [
+				"unsigned int fd",
+				"unsigned int cmd",
+				"unsigned long arg"
+			],
+			"symbol": "__s390x_sys_ioctl"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/fcntl.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 55,
+			"kconfig": null,
+			"line": 439,
+			"name": "fcntl",
+			"number": 55,
+			"origname": "fcntl",
+			"signature": [
+				"unsigned int fd",
+				"unsigned int cmd",
+				"unsigned long arg"
+			],
+			"symbol": "__s390x_sys_fcntl"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 57,
+			"kconfig": null,
+			"line": 1055,
+			"name": "setpgid",
+			"number": 57,
+			"origname": "setpgid",
+			"signature": [
+				"pid_t pid",
+				"pid_t pgid"
+			],
+			"symbol": "__s390x_sys_setpgid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 60,
+			"kconfig": null,
+			"line": 1864,
+			"name": "umask",
+			"number": 60,
+			"origname": "umask",
+			"signature": [
+				"int mask"
+			],
+			"symbol": "__s390x_sys_umask"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 61,
+			"kconfig": null,
+			"line": 556,
+			"name": "chroot",
+			"number": 61,
+			"origname": "chroot",
+			"signature": [
+				"const char *filename"
+			],
+			"symbol": "__s390x_sys_chroot"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/statfs.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 62,
+			"kconfig": null,
+			"line": 248,
+			"name": "ustat",
+			"number": 62,
+			"origname": "ustat",
+			"signature": [
+				"unsigned dev",
+				"struct ustat *ubuf"
+			],
+			"symbol": "__s390x_sys_ustat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/file.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 63,
+			"kconfig": null,
+			"line": 1254,
+			"name": "dup2",
+			"number": 63,
+			"origname": "dup2",
+			"signature": [
+				"unsigned int oldfd",
+				"unsigned int newfd"
+			],
+			"symbol": "__s390x_sys_dup2"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 64,
+			"kconfig": null,
+			"line": 957,
+			"name": "getppid",
+			"number": 64,
+			"origname": "getppid",
+			"signature": [],
+			"symbol": "__s390x_sys_getppid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 65,
+			"kconfig": null,
+			"line": 1161,
+			"name": "getpgrp",
+			"number": 65,
+			"origname": "getpgrp",
+			"signature": [],
+			"symbol": "__s390x_sys_getpgrp"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 66,
+			"kconfig": null,
+			"line": 1240,
+			"name": "setsid",
+			"number": 66,
+			"origname": "setsid",
+			"signature": [],
+			"symbol": "__s390x_sys_setsid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 67,
+			"kconfig": null,
+			"line": 4482,
+			"name": "sigaction",
+			"number": 67,
+			"origname": "sigaction",
+			"signature": [
+				"int sig",
+				"const struct old_sigaction *act",
+				"struct old_sigaction *oact"
+			],
+			"symbol": "__s390x_sys_sigaction"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 72,
+			"kconfig": null,
+			"line": 4670,
+			"name": "sigsuspend",
+			"number": 72,
+			"origname": "sigsuspend",
+			"signature": [
+				"int unused1",
+				"int unused2",
+				"old_sigset_t mask"
+			],
+			"symbol": "__s390x_sys_sigsuspend"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 73,
+			"kconfig": null,
+			"line": 4323,
+			"name": "sigpending",
+			"number": 73,
+			"origname": "sigpending",
+			"signature": [
+				"old_sigset_t *uset"
+			],
+			"symbol": "__s390x_sys_sigpending"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 74,
+			"kconfig": null,
+			"line": 1356,
+			"name": "sethostname",
+			"number": 74,
+			"origname": "sethostname",
+			"signature": [
+				"char *name",
+				"int len"
+			],
+			"symbol": "__s390x_sys_sethostname"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 75,
+			"kconfig": null,
+			"line": 1711,
+			"name": "setrlimit",
+			"number": 75,
+			"origname": "setrlimit",
+			"signature": [
+				"unsigned int resource",
+				"struct rlimit *rlim"
+			],
+			"symbol": "__s390x_sys_setrlimit"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 77,
+			"kconfig": null,
+			"line": 1838,
+			"name": "getrusage",
+			"number": 77,
+			"origname": "getrusage",
+			"signature": [
+				"int who",
+				"struct rusage *ru"
+			],
+			"symbol": "__s390x_sys_getrusage"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/time.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 78,
+			"kconfig": null,
+			"line": 140,
+			"name": "gettimeofday",
+			"number": 78,
+			"origname": "gettimeofday",
+			"signature": [
+				"struct __kernel_old_timeval *tv",
+				"struct timezone *tz"
+			],
+			"symbol": "__s390x_sys_gettimeofday"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/time.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 79,
+			"kconfig": null,
+			"line": 199,
+			"name": "settimeofday",
+			"number": 79,
+			"origname": "settimeofday",
+			"signature": [
+				"struct __kernel_old_timeval *tv",
+				"struct timezone *tz"
+			],
+			"symbol": "__s390x_sys_settimeofday"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namei.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 83,
+			"kconfig": null,
+			"line": 4450,
+			"name": "symlink",
+			"number": 83,
+			"origname": "symlink",
+			"signature": [
+				"const char *oldname",
+				"const char *newname"
+			],
+			"symbol": "__s390x_sys_symlink"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/stat.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 85,
+			"kconfig": null,
+			"line": 498,
+			"name": "readlink",
+			"number": 85,
+			"origname": "readlink",
+			"signature": [
+				"const char *path",
+				"char *buf",
+				"int bufsiz"
+			],
+			"symbol": "__s390x_sys_readlink"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/exec.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 86,
+			"kconfig": "USELIB",
+			"line": 121,
+			"name": "uselib",
+			"number": 86,
+			"origname": "uselib",
+			"signature": [
+				"const char *library"
+			],
+			"symbol": "__s390x_sys_uselib"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/swapfile.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 87,
+			"kconfig": "SWAP",
+			"line": 2976,
+			"name": "swapon",
+			"number": 87,
+			"origname": "swapon",
+			"signature": [
+				"const char *specialfile",
+				"int swap_flags"
+			],
+			"symbol": "__s390x_sys_swapon"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/reboot.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 88,
+			"kconfig": null,
+			"line": 700,
+			"name": "reboot",
+			"number": 88,
+			"origname": "reboot",
+			"signature": [
+				"int magic1",
+				"int magic2",
+				"unsigned int cmd",
+				"void *arg"
+			],
+			"symbol": "__s390x_sys_reboot"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mmap.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 90,
+			"kconfig": null,
+			"line": 1481,
+			"name": "mmap",
+			"number": 90,
+			"origname": "old_mmap",
+			"signature": [
+				"struct mmap_arg_struct *arg"
+			],
+			"symbol": "__s390x_sys_old_mmap"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mmap.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 91,
+			"kconfig": null,
+			"line": 2797,
+			"name": "munmap",
+			"number": 91,
+			"origname": "munmap",
+			"signature": [
+				"unsigned long addr",
+				"size_t len"
+			],
+			"symbol": "__s390x_sys_munmap"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 92,
+			"kconfig": null,
+			"line": 144,
+			"name": "truncate",
+			"number": 92,
+			"origname": "truncate",
+			"signature": [
+				"const char *path",
+				"long length"
+			],
+			"symbol": "__s390x_sys_truncate"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 93,
+			"kconfig": null,
+			"line": 202,
+			"name": "ftruncate",
+			"number": 93,
+			"origname": "ftruncate",
+			"signature": [
+				"unsigned int fd",
+				"unsigned long length"
+			],
+			"symbol": "__s390x_sys_ftruncate"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 94,
+			"kconfig": null,
+			"line": 625,
+			"name": "fchmod",
+			"number": 94,
+			"origname": "fchmod",
+			"signature": [
+				"unsigned int fd",
+				"umode_t mode"
+			],
+			"symbol": "__s390x_sys_fchmod"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 96,
+			"kconfig": null,
+			"line": 281,
+			"name": "getpriority",
+			"number": 96,
+			"origname": "getpriority",
+			"signature": [
+				"int which",
+				"int who"
+			],
+			"symbol": "__s390x_sys_getpriority"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 97,
+			"kconfig": null,
+			"line": 211,
+			"name": "setpriority",
+			"number": 97,
+			"origname": "setpriority",
+			"signature": [
+				"int which",
+				"int who",
+				"int niceval"
+			],
+			"symbol": "__s390x_sys_setpriority"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/statfs.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 99,
+			"kconfig": null,
+			"line": 192,
+			"name": "statfs",
+			"number": 99,
+			"origname": "statfs",
+			"signature": [
+				"const char *pathname",
+				"struct statfs *buf"
+			],
+			"symbol": "__s390x_sys_statfs"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/statfs.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 100,
+			"kconfig": null,
+			"line": 213,
+			"name": "fstatfs",
+			"number": 100,
+			"origname": "fstatfs",
+			"signature": [
+				"unsigned int fd",
+				"struct statfs *buf"
+			],
+			"symbol": "__s390x_sys_fstatfs"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 102,
+			"kconfig": "NET",
+			"line": 2974,
+			"name": "socketcall",
+			"number": 102,
+			"origname": "socketcall",
+			"signature": [
+				"int call",
+				"unsigned long *args"
+			],
+			"symbol": "__s390x_sys_socketcall"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/printk/printk.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 103,
+			"kconfig": null,
+			"line": 1769,
+			"name": "syslog",
+			"number": 103,
+			"origname": "syslog",
+			"signature": [
+				"int type",
+				"char *buf",
+				"int len"
+			],
+			"symbol": "__s390x_sys_syslog"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/itimer.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 104,
+			"kconfig": null,
+			"line": 332,
+			"name": "setitimer",
+			"number": 104,
+			"origname": "setitimer",
+			"signature": [
+				"int which",
+				"struct __kernel_old_itimerval *value",
+				"struct __kernel_old_itimerval *ovalue"
+			],
+			"symbol": "__s390x_sys_setitimer"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/itimer.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 105,
+			"kconfig": null,
+			"line": 113,
+			"name": "getitimer",
+			"number": 105,
+			"origname": "getitimer",
+			"signature": [
+				"int which",
+				"struct __kernel_old_itimerval *value"
+			],
+			"symbol": "__s390x_sys_getitimer"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/stat.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 106,
+			"kconfig": null,
+			"line": 406,
+			"name": "newstat",
+			"number": 106,
+			"origname": "newstat",
+			"signature": [
+				"const char *filename",
+				"struct stat *statbuf"
+			],
+			"symbol": "__s390x_sys_newstat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/stat.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 107,
+			"kconfig": null,
+			"line": 417,
+			"name": "newlstat",
+			"number": 107,
+			"origname": "newlstat",
+			"signature": [
+				"const char *filename",
+				"struct stat *statbuf"
+			],
+			"symbol": "__s390x_sys_newlstat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/stat.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 108,
+			"kconfig": null,
+			"line": 444,
+			"name": "newfstat",
+			"number": 108,
+			"origname": "newfstat",
+			"signature": [
+				"unsigned int fd",
+				"struct stat *statbuf"
+			],
+			"symbol": "__s390x_sys_newfstat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 111,
+			"kconfig": null,
+			"line": 1472,
+			"name": "vhangup",
+			"number": 111,
+			"origname": "vhangup",
+			"signature": [],
+			"symbol": "__s390x_sys_vhangup"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/exit.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 114,
+			"kconfig": null,
+			"line": 1730,
+			"name": "wait4",
+			"number": 114,
+			"origname": "wait4",
+			"signature": [
+				"pid_t upid",
+				"int *stat_addr",
+				"int options",
+				"struct rusage *ru"
+			],
+			"symbol": "__s390x_sys_wait4"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/swapfile.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 115,
+			"kconfig": "SWAP",
+			"line": 2381,
+			"name": "swapoff",
+			"number": 115,
+			"origname": "swapoff",
+			"signature": [
+				"const char *specialfile"
+			],
+			"symbol": "__s390x_sys_swapoff"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 116,
+			"kconfig": null,
+			"line": 2716,
+			"name": "sysinfo",
+			"number": 116,
+			"origname": "sysinfo",
+			"signature": [
+				"struct sysinfo *info"
+			],
+			"symbol": "__s390x_sys_sysinfo"
+		},
+		{
+			"esoteric": false,
+			"file": "arch/s390/kernel/syscall.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 117,
+			"kconfig": "SYSVIPC",
+			"line": 72,
+			"name": "ipc",
+			"number": 117,
+			"origname": "s390_ipc",
+			"signature": [
+				"uint call",
+				"int first",
+				"unsigned long second",
+				"unsigned long third",
+				"void *ptr"
+			],
+			"symbol": "__s390x_sys_s390_ipc"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/sync.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 118,
+			"kconfig": null,
+			"line": 218,
+			"name": "fsync",
+			"number": 118,
+			"origname": "fsync",
+			"signature": [
+				"unsigned int fd"
+			],
+			"symbol": "__s390x_sys_fsync"
+		},
+		{
+			"esoteric": false,
+			"file": "arch/s390/kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 119,
+			"kconfig": null,
+			"line": 218,
+			"name": "sigreturn",
+			"number": 119,
+			"origname": "sigreturn",
+			"signature": [],
+			"symbol": "__s390x_sys_sigreturn"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/fork.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 120,
+			"kconfig": null,
+			"line": 2785,
+			"name": "clone",
+			"number": 120,
+			"origname": "clone",
+			"signature": [
+				"unsigned long newsp",
+				"unsigned long clone_flags",
+				"int *parent_tidptr",
+				"int *child_tidptr",
+				"unsigned long tls"
+			],
+			"symbol": "__s390x_sys_clone"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 121,
+			"kconfig": null,
+			"line": 1410,
+			"name": "setdomainname",
+			"number": 121,
+			"origname": "setdomainname",
+			"signature": [
+				"char *name",
+				"int len"
+			],
+			"symbol": "__s390x_sys_setdomainname"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 122,
+			"kconfig": null,
+			"line": 1288,
+			"name": "newuname",
+			"number": 122,
+			"origname": "newuname",
+			"signature": [
+				"struct new_utsname *name"
+			],
+			"symbol": "__s390x_sys_newuname"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/time.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 124,
+			"kconfig": null,
+			"line": 269,
+			"name": "adjtimex",
+			"number": 124,
+			"origname": "adjtimex",
+			"signature": [
+				"struct __kernel_timex *txc_p"
+			],
+			"symbol": "__s390x_sys_adjtimex"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mprotect.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 125,
+			"kconfig": "MMU",
+			"line": 816,
+			"name": "mprotect",
+			"number": 125,
+			"origname": "mprotect",
+			"signature": [
+				"unsigned long start",
+				"size_t len",
+				"unsigned long prot"
+			],
+			"symbol": "__s390x_sys_mprotect"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 126,
+			"kconfig": null,
+			"line": 4362,
+			"name": "sigprocmask",
+			"number": 126,
+			"origname": "sigprocmask",
+			"signature": [
+				"int how",
+				"old_sigset_t *nset",
+				"old_sigset_t *oset"
+			],
+			"symbol": "__s390x_sys_sigprocmask"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/module/main.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 128,
+			"kconfig": "MODULES",
+			"line": 2896,
+			"name": "init_module",
+			"number": 128,
+			"origname": "init_module",
+			"signature": [
+				"void *umod",
+				"unsigned long len",
+				"const char *uargs"
+			],
+			"symbol": "__s390x_sys_init_module"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/module/main.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 129,
+			"kconfig": "MODULE_UNLOAD",
+			"line": 696,
+			"name": "delete_module",
+			"number": 129,
+			"origname": "delete_module",
+			"signature": [
+				"const char *name_user",
+				"unsigned int flags"
+			],
+			"symbol": "__s390x_sys_delete_module"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/quota/quota.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 131,
+			"kconfig": "QUOTACTL",
+			"line": 916,
+			"name": "quotactl",
+			"number": 131,
+			"origname": "quotactl",
+			"signature": [
+				"unsigned int cmd",
+				"const char *special",
+				"qid_t id",
+				"void *addr"
+			],
+			"symbol": "__s390x_sys_quotactl"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 132,
+			"kconfig": null,
+			"line": 1154,
+			"name": "getpgid",
+			"number": 132,
+			"origname": "getpgid",
+			"signature": [
+				"pid_t pid"
+			],
+			"symbol": "__s390x_sys_getpgid"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 133,
+			"kconfig": null,
+			"line": 534,
+			"name": "fchdir",
+			"number": 133,
+			"origname": "fchdir",
+			"signature": [
+				"unsigned int fd"
+			],
+			"symbol": "__s390x_sys_fchdir"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/filesystems.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 135,
+			"kconfig": "SYSFS_SYSCALL",
+			"line": 191,
+			"name": "sysfs",
+			"number": 135,
+			"origname": "sysfs",
+			"signature": [
+				"int option",
+				"unsigned long arg1",
+				"unsigned long arg2"
+			],
+			"symbol": "__s390x_sys_sysfs"
+		},
+		{
+			"esoteric": false,
+			"file": "arch/s390/kernel/syscall.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 136,
+			"kconfig": null,
+			"line": 89,
+			"name": "personality",
+			"number": 136,
+			"origname": "s390_personality",
+			"signature": [
+				"unsigned int personality"
+			],
+			"symbol": "__s390x_sys_s390_personality"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/readdir.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 141,
+			"kconfig": null,
+			"line": 271,
+			"name": "getdents",
+			"number": 141,
+			"origname": "getdents",
+			"signature": [
+				"unsigned int fd",
+				"struct linux_dirent *dirent",
+				"unsigned int count"
+			],
+			"symbol": "__s390x_sys_getdents"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/select.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 142,
+			"kconfig": null,
+			"line": 726,
+			"name": "select",
+			"number": 142,
+			"origname": "select",
+			"signature": [
+				"int n",
+				"fd_set *inp",
+				"fd_set *outp",
+				"fd_set *exp",
+				"struct __kernel_old_timeval *tvp"
+			],
+			"symbol": "__s390x_sys_select"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/locks.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 143,
+			"kconfig": null,
+			"line": 2084,
+			"name": "flock",
+			"number": 143,
+			"origname": "flock",
+			"signature": [
+				"unsigned int fd",
+				"unsigned int cmd"
+			],
+			"symbol": "__s390x_sys_flock"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/msync.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 144,
+			"kconfig": "MMU",
+			"line": 32,
+			"name": "msync",
+			"number": 144,
+			"origname": "msync",
+			"signature": [
+				"unsigned long start",
+				"size_t len",
+				"int flags"
+			],
+			"symbol": "__s390x_sys_msync"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/read_write.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 145,
+			"kconfig": null,
+			"line": 1041,
+			"name": "readv",
+			"number": 145,
+			"origname": "readv",
+			"signature": [
+				"unsigned long fd",
+				"const struct iovec *vec",
+				"unsigned long vlen"
+			],
+			"symbol": "__s390x_sys_readv"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/read_write.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 146,
+			"kconfig": null,
+			"line": 1047,
+			"name": "writev",
+			"number": 146,
+			"origname": "writev",
+			"signature": [
+				"unsigned long fd",
+				"const struct iovec *vec",
+				"unsigned long vlen"
+			],
+			"symbol": "__s390x_sys_writev"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 147,
+			"kconfig": null,
+			"line": 1168,
+			"name": "getsid",
+			"number": 147,
+			"origname": "getsid",
+			"signature": [
+				"pid_t pid"
+			],
+			"symbol": "__s390x_sys_getsid"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/sync.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 148,
+			"kconfig": null,
+			"line": 223,
+			"name": "fdatasync",
+			"number": 148,
+			"origname": "fdatasync",
+			"signature": [
+				"unsigned int fd"
+			],
+			"symbol": "__s390x_sys_fdatasync"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mlock.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 150,
+			"kconfig": "MMU",
+			"line": 614,
+			"name": "mlock",
+			"number": 150,
+			"origname": "mlock",
+			"signature": [
+				"unsigned long start",
+				"size_t len"
+			],
+			"symbol": "__s390x_sys_mlock"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mlock.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 151,
+			"kconfig": "MMU",
+			"line": 632,
+			"name": "munlock",
+			"number": 151,
+			"origname": "munlock",
+			"signature": [
+				"unsigned long start",
+				"size_t len"
+			],
+			"symbol": "__s390x_sys_munlock"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mlock.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 152,
+			"kconfig": "MMU",
+			"line": 697,
+			"name": "mlockall",
+			"number": 152,
+			"origname": "mlockall",
+			"signature": [
+				"int flags"
+			],
+			"symbol": "__s390x_sys_mlockall"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mlock.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 153,
+			"kconfig": "MMU",
+			"line": 726,
+			"name": "munlockall",
+			"number": 153,
+			"origname": "munlockall",
+			"signature": [],
+			"symbol": "__s390x_sys_munlockall"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sched/core.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 154,
+			"kconfig": null,
+			"line": 7872,
+			"name": "sched_setparam",
+			"number": 154,
+			"origname": "sched_setparam",
+			"signature": [
+				"pid_t pid",
+				"struct sched_param *param"
+			],
+			"symbol": "__s390x_sys_sched_setparam"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sched/core.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 155,
+			"kconfig": null,
+			"line": 7955,
+			"name": "sched_getparam",
+			"number": 155,
+			"origname": "sched_getparam",
+			"signature": [
+				"pid_t pid",
+				"struct sched_param *param"
+			],
+			"symbol": "__s390x_sys_sched_getparam"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sched/core.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 156,
+			"kconfig": null,
+			"line": 7857,
+			"name": "sched_setscheduler",
+			"number": 156,
+			"origname": "sched_setscheduler",
+			"signature": [
+				"pid_t pid",
+				"int policy",
+				"struct sched_param *param"
+			],
+			"symbol": "__s390x_sys_sched_setscheduler"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sched/core.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 157,
+			"kconfig": null,
+			"line": 7926,
+			"name": "sched_getscheduler",
+			"number": 157,
+			"origname": "sched_getscheduler",
+			"signature": [
+				"pid_t pid"
+			],
+			"symbol": "__s390x_sys_sched_getscheduler"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sched/core.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 158,
+			"kconfig": null,
+			"line": 8316,
+			"name": "sched_yield",
+			"number": 158,
+			"origname": "sched_yield",
+			"signature": [],
+			"symbol": "__s390x_sys_sched_yield"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sched/core.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 159,
+			"kconfig": null,
+			"line": 8754,
+			"name": "sched_get_priority_max",
+			"number": 159,
+			"origname": "sched_get_priority_max",
+			"signature": [
+				"int policy"
+			],
+			"symbol": "__s390x_sys_sched_get_priority_max"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sched/core.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 160,
+			"kconfig": null,
+			"line": 8781,
+			"name": "sched_get_priority_min",
+			"number": 160,
+			"origname": "sched_get_priority_min",
+			"signature": [
+				"int policy"
+			],
+			"symbol": "__s390x_sys_sched_get_priority_min"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sched/core.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 161,
+			"kconfig": null,
+			"line": 8846,
+			"name": "sched_rr_get_interval",
+			"number": 161,
+			"origname": "sched_rr_get_interval",
+			"signature": [
+				"pid_t pid",
+				"struct __kernel_timespec *interval"
+			],
+			"symbol": "__s390x_sys_sched_rr_get_interval"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/hrtimer.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 162,
+			"kconfig": null,
+			"line": 2118,
+			"name": "nanosleep",
+			"number": 162,
+			"origname": "nanosleep",
+			"signature": [
+				"struct __kernel_timespec *rqtp",
+				"struct __kernel_timespec *rmtp"
+			],
+			"symbol": "__s390x_sys_nanosleep"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mremap.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 163,
+			"kconfig": null,
+			"line": 889,
+			"name": "mremap",
+			"number": 163,
+			"origname": "mremap",
+			"signature": [
+				"unsigned long addr",
+				"unsigned long old_len",
+				"unsigned long new_len",
+				"unsigned long flags",
+				"unsigned long new_addr"
+			],
+			"symbol": "__s390x_sys_mremap"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/select.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 168,
+			"kconfig": null,
+			"line": 1068,
+			"name": "poll",
+			"number": 168,
+			"origname": "poll",
+			"signature": [
+				"struct pollfd *ufds",
+				"unsigned int nfds",
+				"int timeout_msecs"
+			],
+			"symbol": "__s390x_sys_poll"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 172,
+			"kconfig": null,
+			"line": 2351,
+			"name": "prctl",
+			"number": 172,
+			"origname": "prctl",
+			"signature": [
+				"int option",
+				"unsigned long arg2",
+				"unsigned long arg3",
+				"unsigned long arg4",
+				"unsigned long arg5"
+			],
+			"symbol": "__s390x_sys_prctl"
+		},
+		{
+			"esoteric": false,
+			"file": "arch/s390/kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 173,
+			"kconfig": null,
+			"line": 240,
+			"name": "rt_sigreturn",
+			"number": 173,
+			"origname": "rt_sigreturn",
+			"signature": [],
+			"symbol": "__s390x_sys_rt_sigreturn"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 174,
+			"kconfig": null,
+			"line": 4410,
+			"name": "rt_sigaction",
+			"number": 174,
+			"origname": "rt_sigaction",
+			"signature": [
+				"int sig",
+				"const struct sigaction *act",
+				"struct sigaction *oact",
+				"size_t sigsetsize"
+			],
+			"symbol": "__s390x_sys_rt_sigaction"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 175,
+			"kconfig": null,
+			"line": 3141,
+			"name": "rt_sigprocmask",
+			"number": 175,
+			"origname": "rt_sigprocmask",
+			"signature": [
+				"int how",
+				"sigset_t *nset",
+				"sigset_t *oset",
+				"size_t sigsetsize"
+			],
+			"symbol": "__s390x_sys_rt_sigprocmask"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 176,
+			"kconfig": null,
+			"line": 3213,
+			"name": "rt_sigpending",
+			"number": 176,
+			"origname": "rt_sigpending",
+			"signature": [
+				"sigset_t *uset",
+				"size_t sigsetsize"
+			],
+			"symbol": "__s390x_sys_rt_sigpending"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 177,
+			"kconfig": null,
+			"line": 3627,
+			"name": "rt_sigtimedwait",
+			"number": 177,
+			"origname": "rt_sigtimedwait",
+			"signature": [
+				"const sigset_t *uthese",
+				"siginfo_t *uinfo",
+				"const struct __kernel_timespec *uts",
+				"size_t sigsetsize"
+			],
+			"symbol": "__s390x_sys_rt_sigtimedwait"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 178,
+			"kconfig": null,
+			"line": 3996,
+			"name": "rt_sigqueueinfo",
+			"number": 178,
+			"origname": "rt_sigqueueinfo",
+			"signature": [
+				"pid_t pid",
+				"int sig",
+				"siginfo_t *uinfo"
+			],
+			"symbol": "__s390x_sys_rt_sigqueueinfo"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 179,
+			"kconfig": null,
+			"line": 4633,
+			"name": "rt_sigsuspend",
+			"number": 179,
+			"origname": "rt_sigsuspend",
+			"signature": [
+				"sigset_t *unewset",
+				"size_t sigsetsize"
+			],
+			"symbol": "__s390x_sys_rt_sigsuspend"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/read_write.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 180,
+			"kconfig": null,
+			"line": 672,
+			"name": "pread64",
+			"number": 180,
+			"origname": "pread64",
+			"signature": [
+				"unsigned int fd",
+				"char *buf",
+				"size_t count",
+				"loff_t pos"
+			],
+			"symbol": "__s390x_sys_pread64"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/read_write.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 181,
+			"kconfig": null,
+			"line": 706,
+			"name": "pwrite64",
+			"number": 181,
+			"origname": "pwrite64",
+			"signature": [
+				"unsigned int fd",
+				"const char *buf",
+				"size_t count",
+				"loff_t pos"
+			],
+			"symbol": "__s390x_sys_pwrite64"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/d_path.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 183,
+			"kconfig": null,
+			"line": 411,
+			"name": "getcwd",
+			"number": 183,
+			"origname": "getcwd",
+			"signature": [
+				"char *buf",
+				"unsigned long size"
+			],
+			"symbol": "__s390x_sys_getcwd"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/capability.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 184,
+			"kconfig": "MULTIUSER",
+			"line": 148,
+			"name": "capget",
+			"number": 184,
+			"origname": "capget",
+			"signature": [
+				"cap_user_header_t header",
+				"cap_user_data_t dataptr"
+			],
+			"symbol": "__s390x_sys_capget"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/capability.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 185,
+			"kconfig": "MULTIUSER",
+			"line": 222,
+			"name": "capset",
+			"number": 185,
+			"origname": "capset",
+			"signature": [
+				"cap_user_header_t header",
+				"const cap_user_data_t data"
+			],
+			"symbol": "__s390x_sys_capset"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 186,
+			"kconfig": null,
+			"line": 4227,
+			"name": "sigaltstack",
+			"number": 186,
+			"origname": "sigaltstack",
+			"signature": [
+				"const stack_t *uss",
+				"stack_t *uoss"
+			],
+			"symbol": "__s390x_sys_sigaltstack"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/read_write.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 187,
+			"kconfig": null,
+			"line": 1309,
+			"name": "sendfile64",
+			"number": 187,
+			"origname": "sendfile64",
+			"signature": [
+				"int out_fd",
+				"int in_fd",
+				"loff_t *offset",
+				"size_t count"
+			],
+			"symbol": "__s390x_sys_sendfile64"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/fork.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 190,
+			"kconfig": null,
+			"line": 2767,
+			"name": "vfork",
+			"number": 190,
+			"origname": "vfork",
+			"signature": [],
+			"symbol": "__s390x_sys_vfork"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 191,
+			"kconfig": null,
+			"line": 1498,
+			"name": "getrlimit",
+			"number": 191,
+			"origname": "getrlimit",
+			"signature": [
+				"unsigned int resource",
+				"struct rlimit *rlim"
+			],
+			"symbol": "__s390x_sys_getrlimit"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 198,
+			"kconfig": null,
+			"line": 790,
+			"name": "lchown",
+			"number": 198,
+			"origname": "lchown",
+			"signature": [
+				"const char *filename",
+				"uid_t user",
+				"gid_t group"
+			],
+			"symbol": "__s390x_sys_lchown"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 199,
+			"kconfig": null,
+			"line": 968,
+			"name": "getuid",
+			"number": 199,
+			"origname": "getuid",
+			"signature": [],
+			"symbol": "__s390x_sys_getuid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 200,
+			"kconfig": null,
+			"line": 980,
+			"name": "getgid",
+			"number": 200,
+			"origname": "getgid",
+			"signature": [],
+			"symbol": "__s390x_sys_getgid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 201,
+			"kconfig": null,
+			"line": 974,
+			"name": "geteuid",
+			"number": 201,
+			"origname": "geteuid",
+			"signature": [],
+			"symbol": "__s390x_sys_geteuid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 202,
+			"kconfig": null,
+			"line": 986,
+			"name": "getegid",
+			"number": 202,
+			"origname": "getegid",
+			"signature": [],
+			"symbol": "__s390x_sys_getegid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 203,
+			"kconfig": "MULTIUSER",
+			"line": 587,
+			"name": "setreuid",
+			"number": 203,
+			"origname": "setreuid",
+			"signature": [
+				"uid_t ruid",
+				"uid_t euid"
+			],
+			"symbol": "__s390x_sys_setreuid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 204,
+			"kconfig": "MULTIUSER",
+			"line": 421,
+			"name": "setregid",
+			"number": 204,
+			"origname": "setregid",
+			"signature": [
+				"gid_t rgid",
+				"gid_t egid"
+			],
+			"symbol": "__s390x_sys_setregid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/groups.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 205,
+			"kconfig": "MULTIUSER",
+			"line": 161,
+			"name": "getgroups",
+			"number": 205,
+			"origname": "getgroups",
+			"signature": [
+				"int gidsetsize",
+				"gid_t *grouplist"
+			],
+			"symbol": "__s390x_sys_getgroups"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/groups.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 206,
+			"kconfig": "MULTIUSER",
+			"line": 198,
+			"name": "setgroups",
+			"number": 206,
+			"origname": "setgroups",
+			"signature": [
+				"int gidsetsize",
+				"gid_t *grouplist"
+			],
+			"symbol": "__s390x_sys_setgroups"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 207,
+			"kconfig": null,
+			"line": 821,
+			"name": "fchown",
+			"number": 207,
+			"origname": "fchown",
+			"signature": [
+				"unsigned int fd",
+				"uid_t user",
+				"gid_t group"
+			],
+			"symbol": "__s390x_sys_fchown"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 208,
+			"kconfig": "MULTIUSER",
+			"line": 730,
+			"name": "setresuid",
+			"number": 208,
+			"origname": "setresuid",
+			"signature": [
+				"uid_t ruid",
+				"uid_t euid",
+				"uid_t suid"
+			],
+			"symbol": "__s390x_sys_setresuid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 209,
+			"kconfig": "MULTIUSER",
+			"line": 735,
+			"name": "getresuid",
+			"number": 209,
+			"origname": "getresuid",
+			"signature": [
+				"uid_t *ruidp",
+				"uid_t *euidp",
+				"uid_t *suidp"
+			],
+			"symbol": "__s390x_sys_getresuid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 210,
+			"kconfig": "MULTIUSER",
+			"line": 813,
+			"name": "setresgid",
+			"number": 210,
+			"origname": "setresgid",
+			"signature": [
+				"gid_t rgid",
+				"gid_t egid",
+				"gid_t sgid"
+			],
+			"symbol": "__s390x_sys_setresgid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 211,
+			"kconfig": "MULTIUSER",
+			"line": 818,
+			"name": "getresgid",
+			"number": 211,
+			"origname": "getresgid",
+			"signature": [
+				"gid_t *rgidp",
+				"gid_t *egidp",
+				"gid_t *sgidp"
+			],
+			"symbol": "__s390x_sys_getresgid"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 212,
+			"kconfig": null,
+			"line": 785,
+			"name": "chown",
+			"number": 212,
+			"origname": "chown",
+			"signature": [
+				"const char *filename",
+				"uid_t user",
+				"gid_t group"
+			],
+			"symbol": "__s390x_sys_chown"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 213,
+			"kconfig": "MULTIUSER",
+			"line": 650,
+			"name": "setuid",
+			"number": 213,
+			"origname": "setuid",
+			"signature": [
+				"uid_t uid"
+			],
+			"symbol": "__s390x_sys_setuid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 214,
+			"kconfig": "MULTIUSER",
+			"line": 467,
+			"name": "setgid",
+			"number": 214,
+			"origname": "setgid",
+			"signature": [
+				"gid_t gid"
+			],
+			"symbol": "__s390x_sys_setgid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 215,
+			"kconfig": "MULTIUSER",
+			"line": 881,
+			"name": "setfsuid",
+			"number": 215,
+			"origname": "setfsuid",
+			"signature": [
+				"uid_t uid"
+			],
+			"symbol": "__s390x_sys_setfsuid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 216,
+			"kconfig": "MULTIUSER",
+			"line": 925,
+			"name": "setfsgid",
+			"number": 216,
+			"origname": "setfsgid",
+			"signature": [
+				"gid_t gid"
+			],
+			"symbol": "__s390x_sys_setfsgid"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namespace.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 217,
+			"kconfig": null,
+			"line": 3868,
+			"name": "pivot_root",
+			"number": 217,
+			"origname": "pivot_root",
+			"signature": [
+				"const char *new_root",
+				"const char *put_old"
+			],
+			"symbol": "__s390x_sys_pivot_root"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mincore.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 218,
+			"kconfig": "MMU",
+			"line": 232,
+			"name": "mincore",
+			"number": 218,
+			"origname": "mincore",
+			"signature": [
+				"unsigned long start",
+				"size_t len",
+				"unsigned char *vec"
+			],
+			"symbol": "__s390x_sys_mincore"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/madvise.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 219,
+			"kconfig": "ADVISE_SYSCALLS",
+			"line": 1440,
+			"name": "madvise",
+			"number": 219,
+			"origname": "madvise",
+			"signature": [
+				"unsigned long start",
+				"size_t len_in",
+				"int behavior"
+			],
+			"symbol": "__s390x_sys_madvise"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/readdir.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 220,
+			"kconfig": null,
+			"line": 354,
+			"name": "getdents64",
+			"number": 220,
+			"origname": "getdents64",
+			"signature": [
+				"unsigned int fd",
+				"struct linux_dirent64 *dirent",
+				"unsigned int count"
+			],
+			"symbol": "__s390x_sys_getdents64"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/readahead.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 222,
+			"kconfig": null,
+			"line": 761,
+			"name": "readahead",
+			"number": 222,
+			"origname": "readahead",
+			"signature": [
+				"int fd",
+				"loff_t offset",
+				"size_t count"
+			],
+			"symbol": "__s390x_sys_readahead"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/xattr.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 224,
+			"kconfig": null,
+			"line": 648,
+			"name": "setxattr",
+			"number": 224,
+			"origname": "setxattr",
+			"signature": [
+				"const char *pathname",
+				"const char *name",
+				"const void *value",
+				"size_t size",
+				"int flags"
+			],
+			"symbol": "__s390x_sys_setxattr"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/xattr.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 225,
+			"kconfig": null,
+			"line": 655,
+			"name": "lsetxattr",
+			"number": 225,
+			"origname": "lsetxattr",
+			"signature": [
+				"const char *pathname",
+				"const char *name",
+				"const void *value",
+				"size_t size",
+				"int flags"
+			],
+			"symbol": "__s390x_sys_lsetxattr"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/xattr.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 226,
+			"kconfig": null,
+			"line": 662,
+			"name": "fsetxattr",
+			"number": 226,
+			"origname": "fsetxattr",
+			"signature": [
+				"int fd",
+				"const char *name",
+				"const void *value",
+				"size_t size",
+				"int flags"
+			],
+			"symbol": "__s390x_sys_fsetxattr"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/xattr.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 227,
+			"kconfig": null,
+			"line": 760,
+			"name": "getxattr",
+			"number": 227,
+			"origname": "getxattr",
+			"signature": [
+				"const char *pathname",
+				"const char *name",
+				"void *value",
+				"size_t size"
+			],
+			"symbol": "__s390x_sys_getxattr"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/xattr.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 228,
+			"kconfig": null,
+			"line": 766,
+			"name": "lgetxattr",
+			"number": 228,
+			"origname": "lgetxattr",
+			"signature": [
+				"const char *pathname",
+				"const char *name",
+				"void *value",
+				"size_t size"
+			],
+			"symbol": "__s390x_sys_lgetxattr"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/xattr.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 229,
+			"kconfig": null,
+			"line": 772,
+			"name": "fgetxattr",
+			"number": 229,
+			"origname": "fgetxattr",
+			"signature": [
+				"int fd",
+				"const char *name",
+				"void *value",
+				"size_t size"
+			],
+			"symbol": "__s390x_sys_fgetxattr"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/xattr.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 230,
+			"kconfig": null,
+			"line": 837,
+			"name": "listxattr",
+			"number": 230,
+			"origname": "listxattr",
+			"signature": [
+				"const char *pathname",
+				"char *list",
+				"size_t size"
+			],
+			"symbol": "__s390x_sys_listxattr"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/xattr.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 231,
+			"kconfig": null,
+			"line": 843,
+			"name": "llistxattr",
+			"number": 231,
+			"origname": "llistxattr",
+			"signature": [
+				"const char *pathname",
+				"char *list",
+				"size_t size"
+			],
+			"symbol": "__s390x_sys_llistxattr"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/xattr.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 232,
+			"kconfig": null,
+			"line": 849,
+			"name": "flistxattr",
+			"number": 232,
+			"origname": "flistxattr",
+			"signature": [
+				"int fd",
+				"char *list",
+				"size_t size"
+			],
+			"symbol": "__s390x_sys_flistxattr"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/xattr.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 233,
+			"kconfig": null,
+			"line": 903,
+			"name": "removexattr",
+			"number": 233,
+			"origname": "removexattr",
+			"signature": [
+				"const char *pathname",
+				"const char *name"
+			],
+			"symbol": "__s390x_sys_removexattr"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/xattr.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 234,
+			"kconfig": null,
+			"line": 909,
+			"name": "lremovexattr",
+			"number": 234,
+			"origname": "lremovexattr",
+			"signature": [
+				"const char *pathname",
+				"const char *name"
+			],
+			"symbol": "__s390x_sys_lremovexattr"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/xattr.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 235,
+			"kconfig": null,
+			"line": 915,
+			"name": "fremovexattr",
+			"number": 235,
+			"origname": "fremovexattr",
+			"signature": [
+				"int fd",
+				"const char *name"
+			],
+			"symbol": "__s390x_sys_fremovexattr"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 236,
+			"kconfig": null,
+			"line": 946,
+			"name": "gettid",
+			"number": 236,
+			"origname": "gettid",
+			"signature": [],
+			"symbol": "__s390x_sys_gettid"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 237,
+			"kconfig": null,
+			"line": 3968,
+			"name": "tkill",
+			"number": 237,
+			"origname": "tkill",
+			"signature": [
+				"pid_t pid",
+				"int sig"
+			],
+			"symbol": "__s390x_sys_tkill"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/futex/syscalls.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 238,
+			"kconfig": "FUTEX",
+			"line": 164,
+			"name": "futex",
+			"number": 238,
+			"origname": "futex",
+			"signature": [
+				"u32 *uaddr",
+				"int op",
+				"u32 val",
+				"const struct __kernel_timespec *utime",
+				"u32 *uaddr2",
+				"u32 val3"
+			],
+			"symbol": "__s390x_sys_futex"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sched/core.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 239,
+			"kconfig": null,
+			"line": 8211,
+			"name": "sched_setaffinity",
+			"number": 239,
+			"origname": "sched_setaffinity",
+			"signature": [
+				"pid_t pid",
+				"unsigned int len",
+				"unsigned long *user_mask_ptr"
+			],
+			"symbol": "__s390x_sys_sched_setaffinity"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sched/core.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 240,
+			"kconfig": null,
+			"line": 8263,
+			"name": "sched_getaffinity",
+			"number": 240,
+			"origname": "sched_getaffinity",
+			"signature": [
+				"pid_t pid",
+				"unsigned int len",
+				"unsigned long *user_mask_ptr"
+			],
+			"symbol": "__s390x_sys_sched_getaffinity"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 241,
+			"kconfig": null,
+			"line": 3952,
+			"name": "tgkill",
+			"number": 241,
+			"origname": "tgkill",
+			"signature": [
+				"pid_t tgid",
+				"pid_t pid",
+				"int sig"
+			],
+			"symbol": "__s390x_sys_tgkill"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/aio.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 243,
+			"kconfig": "AIO",
+			"line": 1335,
+			"name": "io_setup",
+			"number": 243,
+			"origname": "io_setup",
+			"signature": [
+				"unsigned nr_events",
+				"aio_context_t *ctxp"
+			],
+			"symbol": "__s390x_sys_io_setup"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/aio.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 244,
+			"kconfig": "AIO",
+			"line": 1404,
+			"name": "io_destroy",
+			"number": 244,
+			"origname": "io_destroy",
+			"signature": [
+				"aio_context_t ctx"
+			],
+			"symbol": "__s390x_sys_io_destroy"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/aio.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 245,
+			"kconfig": "AIO",
+			"line": 2218,
+			"name": "io_getevents",
+			"number": 245,
+			"origname": "io_getevents",
+			"signature": [
+				"aio_context_t ctx_id",
+				"long min_nr",
+				"long nr",
+				"struct io_event *events",
+				"struct __kernel_timespec *timeout"
+			],
+			"symbol": "__s390x_sys_io_getevents"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/aio.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 246,
+			"kconfig": "AIO",
+			"line": 2048,
+			"name": "io_submit",
+			"number": 246,
+			"origname": "io_submit",
+			"signature": [
+				"aio_context_t ctx_id",
+				"long nr",
+				"struct iocb **iocbpp"
+			],
+			"symbol": "__s390x_sys_io_submit"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/aio.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 247,
+			"kconfig": "AIO",
+			"line": 2142,
+			"name": "io_cancel",
+			"number": 247,
+			"origname": "io_cancel",
+			"signature": [
+				"aio_context_t ctx_id",
+				"struct iocb *iocb",
+				"struct io_event *result"
+			],
+			"symbol": "__s390x_sys_io_cancel"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/exit.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 248,
+			"kconfig": null,
+			"line": 959,
+			"name": "exit_group",
+			"number": 248,
+			"origname": "exit_group",
+			"signature": [
+				"int error_code"
+			],
+			"symbol": "__s390x_sys_exit_group"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/eventpoll.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 249,
+			"kconfig": "EPOLL",
+			"line": 2035,
+			"name": "epoll_create",
+			"number": 249,
+			"origname": "epoll_create",
+			"signature": [
+				"int size"
+			],
+			"symbol": "__s390x_sys_epoll_create"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/eventpoll.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 250,
+			"kconfig": "EPOLL",
+			"line": 2205,
+			"name": "epoll_ctl",
+			"number": 250,
+			"origname": "epoll_ctl",
+			"signature": [
+				"int epfd",
+				"int op",
+				"int fd",
+				"struct epoll_event *event"
+			],
+			"symbol": "__s390x_sys_epoll_ctl"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/eventpoll.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 251,
+			"kconfig": "EPOLL",
+			"line": 2263,
+			"name": "epoll_wait",
+			"number": 251,
+			"origname": "epoll_wait",
+			"signature": [
+				"int epfd",
+				"struct epoll_event *events",
+				"int maxevents",
+				"int timeout"
+			],
+			"symbol": "__s390x_sys_epoll_wait"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/fork.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 252,
+			"kconfig": null,
+			"line": 1766,
+			"name": "set_tid_address",
+			"number": 252,
+			"origname": "set_tid_address",
+			"signature": [
+				"int *tidptr"
+			],
+			"symbol": "__s390x_sys_set_tid_address"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/fadvise.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 253,
+			"kconfig": "ADVISE_SYSCALLS",
+			"line": 205,
+			"name": "fadvise64_64",
+			"number": 253,
+			"origname": "fadvise64_64",
+			"signature": [
+				"int fd",
+				"loff_t offset",
+				"loff_t len",
+				"int advice"
+			],
+			"symbol": "__s390x_sys_fadvise64_64"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/posix-timers.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 254,
+			"kconfig": "POSIX_TIMERS",
+			"line": 577,
+			"name": "timer_create",
+			"number": 254,
+			"origname": "timer_create",
+			"signature": [
+				"const clockid_t which_clock",
+				"struct sigevent *timer_event_spec",
+				"timer_t *created_timer_id"
+			],
+			"symbol": "__s390x_sys_timer_create"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/posix-timers.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 255,
+			"kconfig": "POSIX_TIMERS",
+			"line": 938,
+			"name": "timer_settime",
+			"number": 255,
+			"origname": "timer_settime",
+			"signature": [
+				"timer_t timer_id",
+				"int flags",
+				"const struct __kernel_itimerspec *new_setting",
+				"struct __kernel_itimerspec *old_setting"
+			],
+			"symbol": "__s390x_sys_timer_settime"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/posix-timers.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 256,
+			"kconfig": "POSIX_TIMERS",
+			"line": 738,
+			"name": "timer_gettime",
+			"number": 256,
+			"origname": "timer_gettime",
+			"signature": [
+				"timer_t timer_id",
+				"struct __kernel_itimerspec *setting"
+			],
+			"symbol": "__s390x_sys_timer_gettime"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/posix-timers.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 257,
+			"kconfig": "POSIX_TIMERS",
+			"line": 777,
+			"name": "timer_getoverrun",
+			"number": 257,
+			"origname": "timer_getoverrun",
+			"signature": [
+				"timer_t timer_id"
+			],
+			"symbol": "__s390x_sys_timer_getoverrun"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/posix-timers.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 258,
+			"kconfig": "POSIX_TIMERS",
+			"line": 1004,
+			"name": "timer_delete",
+			"number": 258,
+			"origname": "timer_delete",
+			"signature": [
+				"timer_t timer_id"
+			],
+			"symbol": "__s390x_sys_timer_delete"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/posix-timers.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 259,
+			"kconfig": null,
+			"line": 1076,
+			"name": "clock_settime",
+			"number": 259,
+			"origname": "clock_settime",
+			"signature": [
+				"const clockid_t which_clock",
+				"const struct __kernel_timespec *tp"
+			],
+			"symbol": "__s390x_sys_clock_settime"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/posix-timers.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 260,
+			"kconfig": null,
+			"line": 1091,
+			"name": "clock_gettime",
+			"number": 260,
+			"origname": "clock_gettime",
+			"signature": [
+				"const clockid_t which_clock",
+				"struct __kernel_timespec *tp"
+			],
+			"symbol": "__s390x_sys_clock_gettime"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/posix-timers.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 261,
+			"kconfig": null,
+			"line": 1138,
+			"name": "clock_getres",
+			"number": 261,
+			"origname": "clock_getres",
+			"signature": [
+				"const clockid_t which_clock",
+				"struct __kernel_timespec *tp"
+			],
+			"symbol": "__s390x_sys_clock_getres"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/posix-timers.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 262,
+			"kconfig": null,
+			"line": 1254,
+			"name": "clock_nanosleep",
+			"number": 262,
+			"origname": "clock_nanosleep",
+			"signature": [
+				"const clockid_t which_clock",
+				"int flags",
+				"const struct __kernel_timespec *rqtp",
+				"struct __kernel_timespec *rmtp"
+			],
+			"symbol": "__s390x_sys_clock_nanosleep"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/statfs.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 265,
+			"kconfig": null,
+			"line": 201,
+			"name": "statfs64",
+			"number": 265,
+			"origname": "statfs64",
+			"signature": [
+				"const char *pathname",
+				"size_t sz",
+				"struct statfs64 *buf"
+			],
+			"symbol": "__s390x_sys_statfs64"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/statfs.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 266,
+			"kconfig": null,
+			"line": 222,
+			"name": "fstatfs64",
+			"number": 266,
+			"origname": "fstatfs64",
+			"signature": [
+				"unsigned int fd",
+				"size_t sz",
+				"struct statfs64 *buf"
+			],
+			"symbol": "__s390x_sys_fstatfs64"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mmap.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 267,
+			"kconfig": "MMU",
+			"line": 2807,
+			"name": "remap_file_pages",
+			"number": 267,
+			"origname": "remap_file_pages",
+			"signature": [
+				"unsigned long start",
+				"unsigned long size",
+				"unsigned long prot",
+				"unsigned long pgoff",
+				"unsigned long flags"
+			],
+			"symbol": "__s390x_sys_remap_file_pages"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mempolicy.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 268,
+			"kconfig": "NUMA",
+			"line": 1557,
+			"name": "mbind",
+			"number": 268,
+			"origname": "mbind",
+			"signature": [
+				"unsigned long start",
+				"unsigned long len",
+				"unsigned long mode",
+				"const unsigned long *nmask",
+				"unsigned long maxnode",
+				"unsigned int flags"
+			],
+			"symbol": "__s390x_sys_mbind"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mempolicy.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 269,
+			"kconfig": "NUMA",
+			"line": 1716,
+			"name": "get_mempolicy",
+			"number": 269,
+			"origname": "get_mempolicy",
+			"signature": [
+				"int *policy",
+				"unsigned long *nmask",
+				"unsigned long maxnode",
+				"unsigned long addr",
+				"unsigned long flags"
+			],
+			"symbol": "__s390x_sys_get_mempolicy"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mempolicy.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 270,
+			"kconfig": "NUMA",
+			"line": 1584,
+			"name": "set_mempolicy",
+			"number": 270,
+			"origname": "set_mempolicy",
+			"signature": [
+				"int mode",
+				"const unsigned long *nmask",
+				"unsigned long maxnode"
+			],
+			"symbol": "__s390x_sys_set_mempolicy"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/mqueue.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 271,
+			"kconfig": "POSIX_MQUEUE",
+			"line": 942,
+			"name": "mq_open",
+			"number": 271,
+			"origname": "mq_open",
+			"signature": [
+				"const char *u_name",
+				"int oflag",
+				"umode_t mode",
+				"struct mq_attr *u_attr"
+			],
+			"symbol": "__s390x_sys_mq_open"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/mqueue.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 272,
+			"kconfig": "POSIX_MQUEUE",
+			"line": 952,
+			"name": "mq_unlink",
+			"number": 272,
+			"origname": "mq_unlink",
+			"signature": [
+				"const char *u_name"
+			],
+			"symbol": "__s390x_sys_mq_unlink"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/mqueue.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 273,
+			"kconfig": "POSIX_MQUEUE",
+			"line": 1284,
+			"name": "mq_timedsend",
+			"number": 273,
+			"origname": "mq_timedsend",
+			"signature": [
+				"mqd_t mqdes",
+				"const char *u_msg_ptr",
+				"size_t msg_len",
+				"unsigned int msg_prio",
+				"const struct __kernel_timespec *u_abs_timeout"
+			],
+			"symbol": "__s390x_sys_mq_timedsend"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/mqueue.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 274,
+			"kconfig": "POSIX_MQUEUE",
+			"line": 1298,
+			"name": "mq_timedreceive",
+			"number": 274,
+			"origname": "mq_timedreceive",
+			"signature": [
+				"mqd_t mqdes",
+				"char *u_msg_ptr",
+				"size_t msg_len",
+				"unsigned int *u_msg_prio",
+				"const struct __kernel_timespec *u_abs_timeout"
+			],
+			"symbol": "__s390x_sys_mq_timedreceive"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/mqueue.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 275,
+			"kconfig": "POSIX_MQUEUE",
+			"line": 1440,
+			"name": "mq_notify",
+			"number": 275,
+			"origname": "mq_notify",
+			"signature": [
+				"mqd_t mqdes",
+				"const struct sigevent *u_notification"
+			],
+			"symbol": "__s390x_sys_mq_notify"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/mqueue.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 276,
+			"kconfig": "POSIX_MQUEUE",
+			"line": 1496,
+			"name": "mq_getsetattr",
+			"number": 276,
+			"origname": "mq_getsetattr",
+			"signature": [
+				"mqd_t mqdes",
+				"const struct mq_attr *u_mqstat",
+				"struct mq_attr *u_omqstat"
+			],
+			"symbol": "__s390x_sys_mq_getsetattr"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/kexec.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 277,
+			"kconfig": "KEXEC",
+			"line": 228,
+			"name": "kexec_load",
+			"number": 277,
+			"origname": "kexec_load",
+			"signature": [
+				"unsigned long entry",
+				"unsigned long nr_segments",
+				"struct kexec_segment *segments",
+				"unsigned long flags"
+			],
+			"symbol": "__s390x_sys_kexec_load"
+		},
+		{
+			"esoteric": false,
+			"file": "security/keys/keyctl.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 278,
+			"kconfig": "KEYS",
+			"line": 74,
+			"name": "add_key",
+			"number": 278,
+			"origname": "add_key",
+			"signature": [
+				"const char *_type",
+				"const char *_description",
+				"const void *_payload",
+				"size_t plen",
+				"key_serial_t ringid"
+			],
+			"symbol": "__s390x_sys_add_key"
+		},
+		{
+			"esoteric": false,
+			"file": "security/keys/keyctl.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 279,
+			"kconfig": "KEYS",
+			"line": 167,
+			"name": "request_key",
+			"number": 279,
+			"origname": "request_key",
+			"signature": [
+				"const char *_type",
+				"const char *_description",
+				"const char *_callout_info",
+				"key_serial_t destringid"
+			],
+			"symbol": "__s390x_sys_request_key"
+		},
+		{
+			"esoteric": false,
+			"file": "security/keys/keyctl.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 280,
+			"kconfig": "KEYS",
+			"line": 1869,
+			"name": "keyctl",
+			"number": 280,
+			"origname": "keyctl",
+			"signature": [
+				"int option",
+				"unsigned long arg2",
+				"unsigned long arg3",
+				"unsigned long arg4",
+				"unsigned long arg5"
+			],
+			"symbol": "__s390x_sys_keyctl"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/exit.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 281,
+			"kconfig": null,
+			"line": 1638,
+			"name": "waitid",
+			"number": 281,
+			"origname": "waitid",
+			"signature": [
+				"int which",
+				"pid_t upid",
+				"struct siginfo *infop",
+				"int options",
+				"struct rusage *ru"
+			],
+			"symbol": "__s390x_sys_waitid"
+		},
+		{
+			"esoteric": false,
+			"file": "block/ioprio.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 282,
+			"kconfig": "BLOCK",
+			"line": 68,
+			"name": "ioprio_set",
+			"number": 282,
+			"origname": "ioprio_set",
+			"signature": [
+				"int which",
+				"int who",
+				"int ioprio"
+			],
+			"symbol": "__s390x_sys_ioprio_set"
+		},
+		{
+			"esoteric": false,
+			"file": "block/ioprio.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 283,
+			"kconfig": "BLOCK",
+			"line": 209,
+			"name": "ioprio_get",
+			"number": 283,
+			"origname": "ioprio_get",
+			"signature": [
+				"int which",
+				"int who"
+			],
+			"symbol": "__s390x_sys_ioprio_get"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/notify/inotify/inotify_user.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 284,
+			"kconfig": "INOTIFY_USER",
+			"line": 725,
+			"name": "inotify_init",
+			"number": 284,
+			"origname": "inotify_init",
+			"signature": [],
+			"symbol": "__s390x_sys_inotify_init"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/notify/inotify/inotify_user.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 285,
+			"kconfig": "INOTIFY_USER",
+			"line": 730,
+			"name": "inotify_add_watch",
+			"number": 285,
+			"origname": "inotify_add_watch",
+			"signature": [
+				"int fd",
+				"const char *pathname",
+				"u32 mask"
+			],
+			"symbol": "__s390x_sys_inotify_add_watch"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/notify/inotify/inotify_user.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 286,
+			"kconfig": "INOTIFY_USER",
+			"line": 794,
+			"name": "inotify_rm_watch",
+			"number": 286,
+			"origname": "inotify_rm_watch",
+			"signature": [
+				"int fd",
+				"__s32 wd"
+			],
+			"symbol": "__s390x_sys_inotify_rm_watch"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mempolicy.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 287,
+			"kconfig": "MIGRATION",
+			"line": 1678,
+			"name": "migrate_pages",
+			"number": 287,
+			"origname": "migrate_pages",
+			"signature": [
+				"pid_t pid",
+				"unsigned long maxnode",
+				"const unsigned long *old_nodes",
+				"const unsigned long *new_nodes"
+			],
+			"symbol": "__s390x_sys_migrate_pages"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 288,
+			"kconfig": null,
+			"line": 1337,
+			"name": "openat",
+			"number": 288,
+			"origname": "openat",
+			"signature": [
+				"int dfd",
+				"const char *filename",
+				"int flags",
+				"umode_t mode"
+			],
+			"symbol": "__s390x_sys_openat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namei.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 289,
+			"kconfig": null,
+			"line": 4074,
+			"name": "mkdirat",
+			"number": 289,
+			"origname": "mkdirat",
+			"signature": [
+				"int dfd",
+				"const char *pathname",
+				"umode_t mode"
+			],
+			"symbol": "__s390x_sys_mkdirat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namei.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 290,
+			"kconfig": null,
+			"line": 3990,
+			"name": "mknodat",
+			"number": 290,
+			"origname": "mknodat",
+			"signature": [
+				"int dfd",
+				"const char *filename",
+				"umode_t mode",
+				"unsigned int dev"
+			],
+			"symbol": "__s390x_sys_mknodat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 291,
+			"kconfig": null,
+			"line": 779,
+			"name": "fchownat",
+			"number": 291,
+			"origname": "fchownat",
+			"signature": [
+				"int dfd",
+				"const char *filename",
+				"uid_t user",
+				"gid_t group",
+				"int flag"
+			],
+			"symbol": "__s390x_sys_fchownat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/utimes.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 292,
+			"kconfig": null,
+			"line": 202,
+			"name": "futimesat",
+			"number": 292,
+			"origname": "futimesat",
+			"signature": [
+				"int dfd",
+				"const char *filename",
+				"struct __kernel_old_timeval *utimes"
+			],
+			"symbol": "__s390x_sys_futimesat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/stat.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 293,
+			"kconfig": null,
+			"line": 431,
+			"name": "newfstatat",
+			"number": 293,
+			"origname": "newfstatat",
+			"signature": [
+				"int dfd",
+				"const char *filename",
+				"struct stat *statbuf",
+				"int flag"
+			],
+			"symbol": "__s390x_sys_newfstatat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namei.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 294,
+			"kconfig": null,
+			"line": 4356,
+			"name": "unlinkat",
+			"number": 294,
+			"origname": "unlinkat",
+			"signature": [
+				"int dfd",
+				"const char *pathname",
+				"int flag"
+			],
+			"symbol": "__s390x_sys_unlinkat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namei.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 295,
+			"kconfig": null,
+			"line": 4967,
+			"name": "renameat",
+			"number": 295,
+			"origname": "renameat",
+			"signature": [
+				"int olddfd",
+				"const char *oldname",
+				"int newdfd",
+				"const char *newname"
+			],
+			"symbol": "__s390x_sys_renameat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namei.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 296,
+			"kconfig": null,
+			"line": 4625,
+			"name": "linkat",
+			"number": 296,
+			"origname": "linkat",
+			"signature": [
+				"int olddfd",
+				"const char *oldname",
+				"int newdfd",
+				"const char *newname",
+				"int flags"
+			],
+			"symbol": "__s390x_sys_linkat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namei.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 297,
+			"kconfig": null,
+			"line": 4444,
+			"name": "symlinkat",
+			"number": 297,
+			"origname": "symlinkat",
+			"signature": [
+				"const char *oldname",
+				"int newdfd",
+				"const char *newname"
+			],
+			"symbol": "__s390x_sys_symlinkat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/stat.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 298,
+			"kconfig": null,
+			"line": 492,
+			"name": "readlinkat",
+			"number": 298,
+			"origname": "readlinkat",
+			"signature": [
+				"int dfd",
+				"const char *pathname",
+				"char *buf",
+				"int bufsiz"
+			],
+			"symbol": "__s390x_sys_readlinkat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 299,
+			"kconfig": null,
+			"line": 655,
+			"name": "fchmodat",
+			"number": 299,
+			"origname": "fchmodat",
+			"signature": [
+				"int dfd",
+				"const char *filename",
+				"umode_t mode"
+			],
+			"symbol": "__s390x_sys_fchmodat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 300,
+			"kconfig": null,
+			"line": 492,
+			"name": "faccessat",
+			"number": 300,
+			"origname": "faccessat",
+			"signature": [
+				"int dfd",
+				"const char *filename",
+				"int mode"
+			],
+			"symbol": "__s390x_sys_faccessat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/select.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 301,
+			"kconfig": null,
+			"line": 795,
+			"name": "pselect6",
+			"number": 301,
+			"origname": "pselect6",
+			"signature": [
+				"int n",
+				"fd_set *inp",
+				"fd_set *outp",
+				"fd_set *exp",
+				"struct __kernel_timespec *tsp",
+				"void *sig"
+			],
+			"symbol": "__s390x_sys_pselect6"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/select.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 302,
+			"kconfig": null,
+			"line": 1101,
+			"name": "ppoll",
+			"number": 302,
+			"origname": "ppoll",
+			"signature": [
+				"struct pollfd *ufds",
+				"unsigned int nfds",
+				"struct __kernel_timespec *tsp",
+				"const sigset_t *sigmask",
+				"size_t sigsetsize"
+			],
+			"symbol": "__s390x_sys_ppoll"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/fork.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 303,
+			"kconfig": null,
+			"line": 3257,
+			"name": "unshare",
+			"number": 303,
+			"origname": "unshare",
+			"signature": [
+				"unsigned long unshare_flags"
+			],
+			"symbol": "__s390x_sys_unshare"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/futex/syscalls.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 304,
+			"kconfig": "FUTEX",
+			"line": 29,
+			"name": "set_robust_list",
+			"number": 304,
+			"origname": "set_robust_list",
+			"signature": [
+				"struct robust_list_head *head",
+				"size_t len"
+			],
+			"symbol": "__s390x_sys_set_robust_list"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/futex/syscalls.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 305,
+			"kconfig": "FUTEX",
+			"line": 49,
+			"name": "get_robust_list",
+			"number": 305,
+			"origname": "get_robust_list",
+			"signature": [
+				"int pid",
+				"struct robust_list_head **head_ptr",
+				"size_t *len_ptr"
+			],
+			"symbol": "__s390x_sys_get_robust_list"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/splice.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 306,
+			"kconfig": null,
+			"line": 1328,
+			"name": "splice",
+			"number": 306,
+			"origname": "splice",
+			"signature": [
+				"int fd_in",
+				"loff_t *off_in",
+				"int fd_out",
+				"loff_t *off_out",
+				"size_t len",
+				"unsigned int flags"
+			],
+			"symbol": "__s390x_sys_splice"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/sync.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 307,
+			"kconfig": null,
+			"line": 370,
+			"name": "sync_file_range",
+			"number": 307,
+			"origname": "sync_file_range",
+			"signature": [
+				"int fd",
+				"loff_t offset",
+				"loff_t nbytes",
+				"unsigned int flags"
+			],
+			"symbol": "__s390x_sys_sync_file_range"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/splice.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 308,
+			"kconfig": null,
+			"line": 1694,
+			"name": "tee",
+			"number": 308,
+			"origname": "tee",
+			"signature": [
+				"int fdin",
+				"int fdout",
+				"size_t len",
+				"unsigned int flags"
+			],
+			"symbol": "__s390x_sys_tee"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/splice.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 309,
+			"kconfig": null,
+			"line": 1292,
+			"name": "vmsplice",
+			"number": 309,
+			"origname": "vmsplice",
+			"signature": [
+				"int fd",
+				"const struct iovec *uiov",
+				"unsigned long nr_segs",
+				"unsigned int flags"
+			],
+			"symbol": "__s390x_sys_vmsplice"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/migrate.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 310,
+			"kconfig": "MIGRATION",
+			"line": 2063,
+			"name": "move_pages",
+			"number": 310,
+			"origname": "move_pages",
+			"signature": [
+				"pid_t pid",
+				"unsigned long nr_pages",
+				"const void **pages",
+				"const int *nodes",
+				"int *status",
+				"int flags"
+			],
+			"symbol": "__s390x_sys_move_pages"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 311,
+			"kconfig": null,
+			"line": 2636,
+			"name": "getcpu",
+			"number": 311,
+			"origname": "getcpu",
+			"signature": [
+				"unsigned *cpup",
+				"unsigned *nodep",
+				"struct getcpu_cache *unused"
+			],
+			"symbol": "__s390x_sys_getcpu"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/eventpoll.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 312,
+			"kconfig": "EPOLL",
+			"line": 2297,
+			"name": "epoll_pwait",
+			"number": 312,
+			"origname": "epoll_pwait",
+			"signature": [
+				"int epfd",
+				"struct epoll_event *events",
+				"int maxevents",
+				"int timeout",
+				"const sigset_t *sigmask",
+				"size_t sigsetsize"
+			],
+			"symbol": "__s390x_sys_epoll_pwait"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/utimes.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 313,
+			"kconfig": null,
+			"line": 208,
+			"name": "utimes",
+			"number": 313,
+			"origname": "utimes",
+			"signature": [
+				"char *filename",
+				"struct __kernel_old_timeval *utimes"
+			],
+			"symbol": "__s390x_sys_utimes"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 314,
+			"kconfig": null,
+			"line": 352,
+			"name": "fallocate",
+			"number": 314,
+			"origname": "fallocate",
+			"signature": [
+				"int fd",
+				"int mode",
+				"loff_t offset",
+				"loff_t len"
+			],
+			"symbol": "__s390x_sys_fallocate"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/utimes.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 315,
+			"kconfig": null,
+			"line": 147,
+			"name": "utimensat",
+			"number": 315,
+			"origname": "utimensat",
+			"signature": [
+				"int dfd",
+				"const char *filename",
+				"struct __kernel_timespec *utimes",
+				"int flags"
+			],
+			"symbol": "__s390x_sys_utimensat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/signalfd.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 316,
+			"kconfig": "SIGNALFD",
+			"line": 314,
+			"name": "signalfd",
+			"number": 316,
+			"origname": "signalfd",
+			"signature": [
+				"int ufd",
+				"sigset_t *user_mask",
+				"size_t sizemask"
+			],
+			"symbol": "__s390x_sys_signalfd"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/eventfd.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 318,
+			"kconfig": null,
+			"line": 458,
+			"name": "eventfd",
+			"number": 318,
+			"origname": "eventfd",
+			"signature": [
+				"unsigned int count"
+			],
+			"symbol": "__s390x_sys_eventfd"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/timerfd.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 319,
+			"kconfig": null,
+			"line": 406,
+			"name": "timerfd_create",
+			"number": 319,
+			"origname": "timerfd_create",
+			"signature": [
+				"int clockid",
+				"int flags"
+			],
+			"symbol": "__s390x_sys_timerfd_create"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/timerfd.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 320,
+			"kconfig": null,
+			"line": 558,
+			"name": "timerfd_settime",
+			"number": 320,
+			"origname": "timerfd_settime",
+			"signature": [
+				"int ufd",
+				"int flags",
+				"const struct __kernel_itimerspec *utmr",
+				"struct __kernel_itimerspec *otmr"
+			],
+			"symbol": "__s390x_sys_timerfd_settime"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/timerfd.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 321,
+			"kconfig": null,
+			"line": 576,
+			"name": "timerfd_gettime",
+			"number": 321,
+			"origname": "timerfd_gettime",
+			"signature": [
+				"int ufd",
+				"struct __kernel_itimerspec *otmr"
+			],
+			"symbol": "__s390x_sys_timerfd_gettime"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/signalfd.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 322,
+			"kconfig": "SIGNALFD",
+			"line": 302,
+			"name": "signalfd4",
+			"number": 322,
+			"origname": "signalfd4",
+			"signature": [
+				"int ufd",
+				"sigset_t *user_mask",
+				"size_t sizemask",
+				"int flags"
+			],
+			"symbol": "__s390x_sys_signalfd4"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/eventfd.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 323,
+			"kconfig": null,
+			"line": 453,
+			"name": "eventfd2",
+			"number": 323,
+			"origname": "eventfd2",
+			"signature": [
+				"unsigned int count",
+				"int flags"
+			],
+			"symbol": "__s390x_sys_eventfd2"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/notify/inotify/inotify_user.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 324,
+			"kconfig": "INOTIFY_USER",
+			"line": 720,
+			"name": "inotify_init1",
+			"number": 324,
+			"origname": "inotify_init1",
+			"signature": [
+				"int flags"
+			],
+			"symbol": "__s390x_sys_inotify_init1"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/pipe.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 325,
+			"kconfig": null,
+			"line": 1026,
+			"name": "pipe2",
+			"number": 325,
+			"origname": "pipe2",
+			"signature": [
+				"int *fildes",
+				"int flags"
+			],
+			"symbol": "__s390x_sys_pipe2"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/file.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 326,
+			"kconfig": null,
+			"line": 1249,
+			"name": "dup3",
+			"number": 326,
+			"origname": "dup3",
+			"signature": [
+				"unsigned int oldfd",
+				"unsigned int newfd",
+				"int flags"
+			],
+			"symbol": "__s390x_sys_dup3"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/eventpoll.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 327,
+			"kconfig": "EPOLL",
+			"line": 2030,
+			"name": "epoll_create1",
+			"number": 327,
+			"origname": "epoll_create1",
+			"signature": [
+				"int flags"
+			],
+			"symbol": "__s390x_sys_epoll_create1"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/read_write.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 328,
+			"kconfig": null,
+			"line": 1053,
+			"name": "preadv",
+			"number": 328,
+			"origname": "preadv",
+			"signature": [
+				"unsigned long fd",
+				"const struct iovec *vec",
+				"unsigned long vlen",
+				"unsigned long pos_l",
+				"unsigned long pos_h"
+			],
+			"symbol": "__s390x_sys_preadv"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/read_write.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 329,
+			"kconfig": null,
+			"line": 1073,
+			"name": "pwritev",
+			"number": 329,
+			"origname": "pwritev",
+			"signature": [
+				"unsigned long fd",
+				"const struct iovec *vec",
+				"unsigned long vlen",
+				"unsigned long pos_l",
+				"unsigned long pos_h"
+			],
+			"symbol": "__s390x_sys_pwritev"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 330,
+			"kconfig": null,
+			"line": 4036,
+			"name": "rt_tgsigqueueinfo",
+			"number": 330,
+			"origname": "rt_tgsigqueueinfo",
+			"signature": [
+				"pid_t tgid",
+				"pid_t pid",
+				"int sig",
+				"siginfo_t *uinfo"
+			],
+			"symbol": "__s390x_sys_rt_tgsigqueueinfo"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/events/core.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 331,
+			"kconfig": "PERF_EVENTS",
+			"line": 12210,
+			"name": "perf_event_open",
+			"number": 331,
+			"origname": "perf_event_open",
+			"signature": [
+				"struct perf_event_attr *attr_uptr",
+				"pid_t pid",
+				"int cpu",
+				"int group_fd",
+				"unsigned long flags"
+			],
+			"symbol": "__s390x_sys_perf_event_open"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/notify/fanotify/fanotify_user.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 332,
+			"kconfig": "FANOTIFY",
+			"line": 1344,
+			"name": "fanotify_init",
+			"number": 332,
+			"origname": "fanotify_init",
+			"signature": [
+				"unsigned int flags",
+				"unsigned int event_f_flags"
+			],
+			"symbol": "__s390x_sys_fanotify_init"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/notify/fanotify/fanotify_user.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 333,
+			"kconfig": "FANOTIFY",
+			"line": 1822,
+			"name": "fanotify_mark",
+			"number": 333,
+			"origname": "fanotify_mark",
+			"signature": [
+				"int fanotify_fd",
+				"unsigned int flags",
+				"__u64 mask",
+				"int dfd",
+				"const char *pathname"
+			],
+			"symbol": "__s390x_sys_fanotify_mark"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sys.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 334,
+			"kconfig": null,
+			"line": 1664,
+			"name": "prlimit64",
+			"number": 334,
+			"origname": "prlimit64",
+			"signature": [
+				"pid_t pid",
+				"unsigned int resource",
+				"const struct rlimit64 *new_rlim",
+				"struct rlimit64 *old_rlim"
+			],
+			"symbol": "__s390x_sys_prlimit64"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/fhandle.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 335,
+			"kconfig": "FHANDLE",
+			"line": 93,
+			"name": "name_to_handle_at",
+			"number": 335,
+			"origname": "name_to_handle_at",
+			"signature": [
+				"int dfd",
+				"const char *name",
+				"struct file_handle *handle",
+				"int *mnt_id",
+				"int flag"
+			],
+			"symbol": "__s390x_sys_name_to_handle_at"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/fhandle.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 336,
+			"kconfig": "FHANDLE",
+			"line": 256,
+			"name": "open_by_handle_at",
+			"number": 336,
+			"origname": "open_by_handle_at",
+			"signature": [
+				"int mountdirfd",
+				"struct file_handle *handle",
+				"int flags"
+			],
+			"symbol": "__s390x_sys_open_by_handle_at"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/time/posix-timers.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 337,
+			"kconfig": null,
+			"line": 1121,
+			"name": "clock_adjtime",
+			"number": 337,
+			"origname": "clock_adjtime",
+			"signature": [
+				"const clockid_t which_clock",
+				"struct __kernel_timex *utx"
+			],
+			"symbol": "__s390x_sys_clock_adjtime"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/sync.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 338,
+			"kconfig": null,
+			"line": 149,
+			"name": "syncfs",
+			"number": 338,
+			"origname": "syncfs",
+			"signature": [
+				"int fd"
+			],
+			"symbol": "__s390x_sys_syncfs"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/nsproxy.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 339,
+			"kconfig": null,
+			"line": 527,
+			"name": "setns",
+			"number": 339,
+			"origname": "setns",
+			"signature": [
+				"int fd",
+				"int flags"
+			],
+			"symbol": "__s390x_sys_setns"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/process_vm_access.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 340,
+			"kconfig": "CROSS_MEMORY_ATTACH",
+			"line": 291,
+			"name": "process_vm_readv",
+			"number": 340,
+			"origname": "process_vm_readv",
+			"signature": [
+				"pid_t pid",
+				"const struct iovec *lvec",
+				"unsigned long liovcnt",
+				"const struct iovec *rvec",
+				"unsigned long riovcnt",
+				"unsigned long flags"
+			],
+			"symbol": "__s390x_sys_process_vm_readv"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/process_vm_access.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 341,
+			"kconfig": "CROSS_MEMORY_ATTACH",
+			"line": 298,
+			"name": "process_vm_writev",
+			"number": 341,
+			"origname": "process_vm_writev",
+			"signature": [
+				"pid_t pid",
+				"const struct iovec *lvec",
+				"unsigned long liovcnt",
+				"const struct iovec *rvec",
+				"unsigned long riovcnt",
+				"unsigned long flags"
+			],
+			"symbol": "__s390x_sys_process_vm_writev"
+		},
+		{
+			"esoteric": false,
+			"file": "arch/s390/kernel/runtime_instr.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 342,
+			"kconfig": null,
+			"line": 70,
+			"name": "s390_runtime_instr",
+			"number": 342,
+			"origname": "s390_runtime_instr",
+			"signature": [
+				"int command",
+				"int signum"
+			],
+			"symbol": "__s390x_sys_s390_runtime_instr"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/kcmp.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 343,
+			"kconfig": "KCMP",
+			"line": 135,
+			"name": "kcmp",
+			"number": 343,
+			"origname": "kcmp",
+			"signature": [
+				"pid_t pid1",
+				"pid_t pid2",
+				"int type",
+				"unsigned long idx1",
+				"unsigned long idx2"
+			],
+			"symbol": "__s390x_sys_kcmp"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/module/main.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 344,
+			"kconfig": "MODULES",
+			"line": 2916,
+			"name": "finit_module",
+			"number": 344,
+			"origname": "finit_module",
+			"signature": [
+				"int fd",
+				"const char *uargs",
+				"int flags"
+			],
+			"symbol": "__s390x_sys_finit_module"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sched/core.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 345,
+			"kconfig": null,
+			"line": 7883,
+			"name": "sched_setattr",
+			"number": 345,
+			"origname": "sched_setattr",
+			"signature": [
+				"pid_t pid",
+				"struct sched_attr *uattr",
+				"unsigned int flags"
+			],
+			"symbol": "__s390x_sys_sched_setattr"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sched/core.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 346,
+			"kconfig": null,
+			"line": 8036,
+			"name": "sched_getattr",
+			"number": 346,
+			"origname": "sched_getattr",
+			"signature": [
+				"pid_t pid",
+				"struct sched_attr *uattr",
+				"unsigned int usize",
+				"unsigned int flags"
+			],
+			"symbol": "__s390x_sys_sched_getattr"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namei.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 347,
+			"kconfig": null,
+			"line": 4960,
+			"name": "renameat2",
+			"number": 347,
+			"origname": "renameat2",
+			"signature": [
+				"int olddfd",
+				"const char *oldname",
+				"int newdfd",
+				"const char *newname",
+				"unsigned int flags"
+			],
+			"symbol": "__s390x_sys_renameat2"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/seccomp.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 348,
+			"kconfig": "SECCOMP",
+			"line": 2007,
+			"name": "seccomp",
+			"number": 348,
+			"origname": "seccomp",
+			"signature": [
+				"unsigned int op",
+				"unsigned int flags",
+				"void *uargs"
+			],
+			"symbol": "__s390x_sys_seccomp"
+		},
+		{
+			"esoteric": false,
+			"file": "drivers/char/random.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 349,
+			"kconfig": null,
+			"line": 1270,
+			"name": "getrandom",
+			"number": 349,
+			"origname": "getrandom",
+			"signature": [
+				"char *ubuf",
+				"size_t len",
+				"unsigned int flags"
+			],
+			"symbol": "__s390x_sys_getrandom"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/memfd.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 350,
+			"kconfig": "MEMFD_CREATE",
+			"line": 266,
+			"name": "memfd_create",
+			"number": 350,
+			"origname": "memfd_create",
+			"signature": [
+				"const char *uname",
+				"unsigned int flags"
+			],
+			"symbol": "__s390x_sys_memfd_create"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/bpf/syscall.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 351,
+			"kconfig": "BPF_SYSCALL",
+			"line": 5067,
+			"name": "bpf",
+			"number": 351,
+			"origname": "bpf",
+			"signature": [
+				"int cmd",
+				"union bpf_attr *uattr",
+				"unsigned int size"
+			],
+			"symbol": "__s390x_sys_bpf"
+		},
+		{
+			"esoteric": false,
+			"file": "arch/s390/pci/pci_mmio.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 352,
+			"kconfig": null,
+			"line": 118,
+			"name": "s390_pci_mmio_write",
+			"number": 352,
+			"origname": "s390_pci_mmio_write",
+			"signature": [
+				"unsigned long mmio_addr",
+				"const void *user_buffer",
+				"size_t length"
+			],
+			"symbol": "__s390x_sys_s390_pci_mmio_write"
+		},
+		{
+			"esoteric": false,
+			"file": "arch/s390/pci/pci_mmio.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 353,
+			"kconfig": null,
+			"line": 260,
+			"name": "s390_pci_mmio_read",
+			"number": 353,
+			"origname": "s390_pci_mmio_read",
+			"signature": [
+				"unsigned long mmio_addr",
+				"void *user_buffer",
+				"size_t length"
+			],
+			"symbol": "__s390x_sys_s390_pci_mmio_read"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/exec.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 354,
+			"kconfig": null,
+			"line": 2095,
+			"name": "execveat",
+			"number": 354,
+			"origname": "execveat",
+			"signature": [
+				"int fd",
+				"const char *filename",
+				"const char *const *argv",
+				"const char *const *envp",
+				"int flags"
+			],
+			"symbol": "__s390x_sys_execveat"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/userfaultfd.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 355,
+			"kconfig": "USERFAULTFD",
+			"line": 2134,
+			"name": "userfaultfd",
+			"number": 355,
+			"origname": "userfaultfd",
+			"signature": [
+				"int flags"
+			],
+			"symbol": "__s390x_sys_userfaultfd"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/sched/membarrier.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 356,
+			"kconfig": "MEMBARRIER",
+			"line": 579,
+			"name": "membarrier",
+			"number": 356,
+			"origname": "membarrier",
+			"signature": [
+				"int cmd",
+				"unsigned int flags",
+				"int cpu_id"
+			],
+			"symbol": "__s390x_sys_membarrier"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 357,
+			"kconfig": "NET",
+			"line": 2932,
+			"name": "recvmmsg",
+			"number": 357,
+			"origname": "recvmmsg",
+			"signature": [
+				"int fd",
+				"struct mmsghdr *mmsg",
+				"unsigned int vlen",
+				"unsigned int flags",
+				"struct __kernel_timespec *timeout"
+			],
+			"symbol": "__s390x_sys_recvmmsg"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 358,
+			"kconfig": "NET",
+			"line": 2648,
+			"name": "sendmmsg",
+			"number": 358,
+			"origname": "sendmmsg",
+			"signature": [
+				"int fd",
+				"struct mmsghdr *mmsg",
+				"unsigned int vlen",
+				"unsigned int flags"
+			],
+			"symbol": "__s390x_sys_sendmmsg"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 359,
+			"kconfig": "NET",
+			"line": 1647,
+			"name": "socket",
+			"number": 359,
+			"origname": "socket",
+			"signature": [
+				"int family",
+				"int type",
+				"int protocol"
+			],
+			"symbol": "__s390x_sys_socket"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 360,
+			"kconfig": "NET",
+			"line": 1748,
+			"name": "socketpair",
+			"number": 360,
+			"origname": "socketpair",
+			"signature": [
+				"int family",
+				"int type",
+				"int protocol",
+				"int *usockvec"
+			],
+			"symbol": "__s390x_sys_socketpair"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 361,
+			"kconfig": "NET",
+			"line": 1785,
+			"name": "bind",
+			"number": 361,
+			"origname": "bind",
+			"signature": [
+				"int fd",
+				"struct sockaddr *umyaddr",
+				"int addrlen"
+			],
+			"symbol": "__s390x_sys_bind"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 362,
+			"kconfig": "NET",
+			"line": 2000,
+			"name": "connect",
+			"number": 362,
+			"origname": "connect",
+			"signature": [
+				"int fd",
+				"struct sockaddr *uservaddr",
+				"int addrlen"
+			],
+			"symbol": "__s390x_sys_connect"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 363,
+			"kconfig": "NET",
+			"line": 1817,
+			"name": "listen",
+			"number": 363,
+			"origname": "listen",
+			"signature": [
+				"int fd",
+				"int backlog"
+			],
+			"symbol": "__s390x_sys_listen"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 364,
+			"kconfig": "NET",
+			"line": 1935,
+			"name": "accept4",
+			"number": 364,
+			"origname": "accept4",
+			"signature": [
+				"int fd",
+				"struct sockaddr *upeer_sockaddr",
+				"int *upeer_addrlen",
+				"int flags"
+			],
+			"symbol": "__s390x_sys_accept4"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 365,
+			"kconfig": "NET",
+			"line": 2308,
+			"name": "getsockopt",
+			"number": 365,
+			"origname": "getsockopt",
+			"signature": [
+				"int fd",
+				"int level",
+				"int optname",
+				"char *optval",
+				"int *optlen"
+			],
+			"symbol": "__s390x_sys_getsockopt"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 366,
+			"kconfig": "NET",
+			"line": 2260,
+			"name": "setsockopt",
+			"number": 366,
+			"origname": "setsockopt",
+			"signature": [
+				"int fd",
+				"int level",
+				"int optname",
+				"char *optval",
+				"int optlen"
+			],
+			"symbol": "__s390x_sys_setsockopt"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 367,
+			"kconfig": "NET",
+			"line": 2038,
+			"name": "getsockname",
+			"number": 367,
+			"origname": "getsockname",
+			"signature": [
+				"int fd",
+				"struct sockaddr *usockaddr",
+				"int *usockaddr_len"
+			],
+			"symbol": "__s390x_sys_getsockname"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 368,
+			"kconfig": "NET",
+			"line": 2074,
+			"name": "getpeername",
+			"number": 368,
+			"origname": "getpeername",
+			"signature": [
+				"int fd",
+				"struct sockaddr *usockaddr",
+				"int *usockaddr_len"
+			],
+			"symbol": "__s390x_sys_getpeername"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 369,
+			"kconfig": "NET",
+			"line": 2125,
+			"name": "sendto",
+			"number": 369,
+			"origname": "sendto",
+			"signature": [
+				"int fd",
+				"void *buff",
+				"size_t len",
+				"unsigned int flags",
+				"struct sockaddr *addr",
+				"int addr_len"
+			],
+			"symbol": "__s390x_sys_sendto"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 370,
+			"kconfig": "NET",
+			"line": 2572,
+			"name": "sendmsg",
+			"number": 370,
+			"origname": "sendmsg",
+			"signature": [
+				"int fd",
+				"struct user_msghdr *msg",
+				"unsigned int flags"
+			],
+			"symbol": "__s390x_sys_sendmsg"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 371,
+			"kconfig": "NET",
+			"line": 2183,
+			"name": "recvfrom",
+			"number": 371,
+			"origname": "recvfrom",
+			"signature": [
+				"int fd",
+				"void *ubuf",
+				"size_t size",
+				"unsigned int flags",
+				"struct sockaddr *addr",
+				"int *addr_len"
+			],
+			"symbol": "__s390x_sys_recvfrom"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 372,
+			"kconfig": "NET",
+			"line": 2780,
+			"name": "recvmsg",
+			"number": 372,
+			"origname": "recvmsg",
+			"signature": [
+				"int fd",
+				"struct user_msghdr *msg",
+				"unsigned int flags"
+			],
+			"symbol": "__s390x_sys_recvmsg"
+		},
+		{
+			"esoteric": false,
+			"file": "net/socket.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 373,
+			"kconfig": "NET",
+			"line": 2342,
+			"name": "shutdown",
+			"number": 373,
+			"origname": "shutdown",
+			"signature": [
+				"int fd",
+				"int how"
+			],
+			"symbol": "__s390x_sys_shutdown"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mlock.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 374,
+			"kconfig": "MMU",
+			"line": 619,
+			"name": "mlock2",
+			"number": 374,
+			"origname": "mlock2",
+			"signature": [
+				"unsigned long start",
+				"size_t len",
+				"int flags"
+			],
+			"symbol": "__s390x_sys_mlock2"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/read_write.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 375,
+			"kconfig": null,
+			"line": 1559,
+			"name": "copy_file_range",
+			"number": 375,
+			"origname": "copy_file_range",
+			"signature": [
+				"int fd_in",
+				"loff_t *off_in",
+				"int fd_out",
+				"loff_t *off_out",
+				"size_t len",
+				"unsigned int flags"
+			],
+			"symbol": "__s390x_sys_copy_file_range"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/read_write.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 376,
+			"kconfig": null,
+			"line": 1061,
+			"name": "preadv2",
+			"number": 376,
+			"origname": "preadv2",
+			"signature": [
+				"unsigned long fd",
+				"const struct iovec *vec",
+				"unsigned long vlen",
+				"unsigned long pos_l",
+				"unsigned long pos_h",
+				"rwf_t flags"
+			],
+			"symbol": "__s390x_sys_preadv2"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/read_write.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 377,
+			"kconfig": null,
+			"line": 1081,
+			"name": "pwritev2",
+			"number": 377,
+			"origname": "pwritev2",
+			"signature": [
+				"unsigned long fd",
+				"const struct iovec *vec",
+				"unsigned long vlen",
+				"unsigned long pos_l",
+				"unsigned long pos_h",
+				"rwf_t flags"
+			],
+			"symbol": "__s390x_sys_pwritev2"
+		},
+		{
+			"esoteric": false,
+			"file": "arch/s390/kernel/guarded_storage.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 378,
+			"kconfig": null,
+			"line": 109,
+			"name": "s390_guarded_storage",
+			"number": 378,
+			"origname": "s390_guarded_storage",
+			"signature": [
+				"int command",
+				"struct gs_cb *gs_cb"
+			],
+			"symbol": "__s390x_sys_s390_guarded_storage"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/stat.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 379,
+			"kconfig": null,
+			"line": 661,
+			"name": "statx",
+			"number": 379,
+			"origname": "statx",
+			"signature": [
+				"int dfd",
+				"const char *filename",
+				"unsigned flags",
+				"unsigned int mask",
+				"struct statx *buffer"
+			],
+			"symbol": "__s390x_sys_statx"
+		},
+		{
+			"esoteric": false,
+			"file": "arch/s390/kernel/sthyi.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 380,
+			"kconfig": null,
+			"line": 489,
+			"name": "s390_sthyi",
+			"number": 380,
+			"origname": "s390_sthyi",
+			"signature": [
+				"unsigned long function_code",
+				"void *buffer",
+				"u64 *return_code",
+				"unsigned long flags"
+			],
+			"symbol": "__s390x_sys_s390_sthyi"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/kexec_file.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 381,
+			"kconfig": "KEXEC_FILE",
+			"line": 325,
+			"name": "kexec_file_load",
+			"number": 381,
+			"origname": "kexec_file_load",
+			"signature": [
+				"int kernel_fd",
+				"int initrd_fd",
+				"unsigned long cmdline_len",
+				"const char *cmdline_ptr",
+				"unsigned long flags"
+			],
+			"symbol": "__s390x_sys_kexec_file_load"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/aio.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 382,
+			"kconfig": "AIO",
+			"line": 2243,
+			"name": "io_pgetevents",
+			"number": 382,
+			"origname": "io_pgetevents",
+			"signature": [
+				"aio_context_t ctx_id",
+				"long min_nr",
+				"long nr",
+				"struct io_event *events",
+				"struct __kernel_timespec *timeout",
+				"const struct __aio_sigset *usig"
+			],
+			"symbol": "__s390x_sys_io_pgetevents"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/rseq.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 383,
+			"kconfig": "RSEQ",
+			"line": 336,
+			"name": "rseq",
+			"number": 383,
+			"origname": "rseq",
+			"signature": [
+				"struct rseq *rseq",
+				"u32 rseq_len",
+				"int flags",
+				"u32 sig"
+			],
+			"symbol": "__s390x_sys_rseq"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/sem.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 392,
+			"kconfig": "SYSVIPC",
+			"line": 2270,
+			"name": "semtimedop",
+			"number": 392,
+			"origname": "semtimedop",
+			"signature": [
+				"int semid",
+				"struct sembuf *tsops",
+				"unsigned int nsops",
+				"const struct __kernel_timespec *timeout"
+			],
+			"symbol": "__s390x_sys_semtimedop"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/sem.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 393,
+			"kconfig": "SYSVIPC",
+			"line": 624,
+			"name": "semget",
+			"number": 393,
+			"origname": "semget",
+			"signature": [
+				"key_t key",
+				"int nsems",
+				"int semflg"
+			],
+			"symbol": "__s390x_sys_semget"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/sem.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 394,
+			"kconfig": "SYSVIPC",
+			"line": 1705,
+			"name": "semctl",
+			"number": 394,
+			"origname": "semctl",
+			"signature": [
+				"int semid",
+				"int semnum",
+				"int cmd",
+				"unsigned long arg"
+			],
+			"symbol": "__s390x_sys_semctl"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/shm.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 395,
+			"kconfig": "SYSVIPC",
+			"line": 850,
+			"name": "shmget",
+			"number": 395,
+			"origname": "shmget",
+			"signature": [
+				"key_t key",
+				"size_t size",
+				"int shmflg"
+			],
+			"symbol": "__s390x_sys_shmget"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/shm.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 396,
+			"kconfig": "SYSVIPC",
+			"line": 1299,
+			"name": "shmctl",
+			"number": 396,
+			"origname": "shmctl",
+			"signature": [
+				"int shmid",
+				"int cmd",
+				"struct shmid_ds *buf"
+			],
+			"symbol": "__s390x_sys_shmctl"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/shm.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 397,
+			"kconfig": "SYSVIPC",
+			"line": 1696,
+			"name": "shmat",
+			"number": 397,
+			"origname": "shmat",
+			"signature": [
+				"int shmid",
+				"char *shmaddr",
+				"int shmflg"
+			],
+			"symbol": "__s390x_sys_shmat"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/shm.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 398,
+			"kconfig": "SYSVIPC",
+			"line": 1837,
+			"name": "shmdt",
+			"number": 398,
+			"origname": "shmdt",
+			"signature": [
+				"char *shmaddr"
+			],
+			"symbol": "__s390x_sys_shmdt"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/msg.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 399,
+			"kconfig": "SYSVIPC",
+			"line": 315,
+			"name": "msgget",
+			"number": 399,
+			"origname": "msgget",
+			"signature": [
+				"key_t key",
+				"int msgflg"
+			],
+			"symbol": "__s390x_sys_msgget"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/msg.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 400,
+			"kconfig": "SYSVIPC",
+			"line": 971,
+			"name": "msgsnd",
+			"number": 400,
+			"origname": "msgsnd",
+			"signature": [
+				"int msqid",
+				"struct msgbuf *msgp",
+				"size_t msgsz",
+				"int msgflg"
+			],
+			"symbol": "__s390x_sys_msgsnd"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/msg.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 401,
+			"kconfig": "SYSVIPC",
+			"line": 1270,
+			"name": "msgrcv",
+			"number": 401,
+			"origname": "msgrcv",
+			"signature": [
+				"int msqid",
+				"struct msgbuf *msgp",
+				"size_t msgsz",
+				"long msgtyp",
+				"int msgflg"
+			],
+			"symbol": "__s390x_sys_msgrcv"
+		},
+		{
+			"esoteric": false,
+			"file": "ipc/msg.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 402,
+			"kconfig": "SYSVIPC",
+			"line": 640,
+			"name": "msgctl",
+			"number": 402,
+			"origname": "msgctl",
+			"signature": [
+				"int msqid",
+				"int cmd",
+				"struct msqid_ds *buf"
+			],
+			"symbol": "__s390x_sys_msgctl"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/signal.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 424,
+			"kconfig": null,
+			"line": 3846,
+			"name": "pidfd_send_signal",
+			"number": 424,
+			"origname": "pidfd_send_signal",
+			"signature": [
+				"int pidfd",
+				"int sig",
+				"siginfo_t *info",
+				"unsigned int flags"
+			],
+			"symbol": "__s390x_sys_pidfd_send_signal"
+		},
+		{
+			"esoteric": false,
+			"file": "io_uring/io_uring.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 425,
+			"kconfig": "IO_URING",
+			"line": 3604,
+			"name": "io_uring_setup",
+			"number": 425,
+			"origname": "io_uring_setup",
+			"signature": [
+				"u32 entries",
+				"struct io_uring_params *params"
+			],
+			"symbol": "__s390x_sys_io_uring_setup"
+		},
+		{
+			"esoteric": false,
+			"file": "io_uring/io_uring.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 426,
+			"kconfig": "IO_URING",
+			"line": 3154,
+			"name": "io_uring_enter",
+			"number": 426,
+			"origname": "io_uring_enter",
+			"signature": [
+				"unsigned int fd",
+				"u32 to_submit",
+				"u32 min_complete",
+				"u32 flags",
+				"const void *argp",
+				"size_t argsz"
+			],
+			"symbol": "__s390x_sys_io_uring_enter"
+		},
+		{
+			"esoteric": false,
+			"file": "io_uring/io_uring.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 427,
+			"kconfig": "IO_URING",
+			"line": 4050,
+			"name": "io_uring_register",
+			"number": 427,
+			"origname": "io_uring_register",
+			"signature": [
+				"unsigned int fd",
+				"unsigned int opcode",
+				"void *arg",
+				"unsigned int nr_args"
+			],
+			"symbol": "__s390x_sys_io_uring_register"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namespace.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 428,
+			"kconfig": null,
+			"line": 2504,
+			"name": "open_tree",
+			"number": 428,
+			"origname": "open_tree",
+			"signature": [
+				"int dfd",
+				"const char *filename",
+				"unsigned flags"
+			],
+			"symbol": "__s390x_sys_open_tree"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namespace.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 429,
+			"kconfig": null,
+			"line": 3765,
+			"name": "move_mount",
+			"number": 429,
+			"origname": "move_mount",
+			"signature": [
+				"int from_dfd",
+				"const char *from_pathname",
+				"int to_dfd",
+				"const char *to_pathname",
+				"unsigned int flags"
+			],
+			"symbol": "__s390x_sys_move_mount"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/fsopen.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 430,
+			"kconfig": null,
+			"line": 115,
+			"name": "fsopen",
+			"number": 430,
+			"origname": "fsopen",
+			"signature": [
+				"const char *_fs_name",
+				"unsigned int flags"
+			],
+			"symbol": "__s390x_sys_fsopen"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/fsopen.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 431,
+			"kconfig": null,
+			"line": 314,
+			"name": "fsconfig",
+			"number": 431,
+			"origname": "fsconfig",
+			"signature": [
+				"int fd",
+				"unsigned int cmd",
+				"const char *_key",
+				"const void *_value",
+				"int aux"
+			],
+			"symbol": "__s390x_sys_fsconfig"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namespace.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 432,
+			"kconfig": null,
+			"line": 3636,
+			"name": "fsmount",
+			"number": 432,
+			"origname": "fsmount",
+			"signature": [
+				"int fs_fd",
+				"unsigned int flags",
+				"unsigned int attr_flags"
+			],
+			"symbol": "__s390x_sys_fsmount"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/fsopen.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 433,
+			"kconfig": null,
+			"line": 158,
+			"name": "fspick",
+			"number": 433,
+			"origname": "fspick",
+			"signature": [
+				"int dfd",
+				"const char *path",
+				"unsigned int flags"
+			],
+			"symbol": "__s390x_sys_fspick"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/pid.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 434,
+			"kconfig": null,
+			"line": 629,
+			"name": "pidfd_open",
+			"number": 434,
+			"origname": "pidfd_open",
+			"signature": [
+				"pid_t pid",
+				"unsigned int flags"
+			],
+			"symbol": "__s390x_sys_pidfd_open"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/fork.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 435,
+			"kconfig": null,
+			"line": 2954,
+			"name": "clone3",
+			"number": 435,
+			"origname": "clone3",
+			"signature": [
+				"struct clone_args *uargs",
+				"size_t size"
+			],
+			"symbol": "__s390x_sys_clone3"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 436,
+			"kconfig": null,
+			"line": 1462,
+			"name": "close_range",
+			"number": 436,
+			"origname": "close_range",
+			"signature": [
+				"unsigned int fd",
+				"unsigned int max_fd",
+				"unsigned int flags"
+			],
+			"symbol": "__s390x_sys_close_range"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 437,
+			"kconfig": null,
+			"line": 1345,
+			"name": "openat2",
+			"number": 437,
+			"origname": "openat2",
+			"signature": [
+				"int dfd",
+				"const char *filename",
+				"struct open_how *how",
+				"size_t usize"
+			],
+			"symbol": "__s390x_sys_openat2"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/pid.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 438,
+			"kconfig": null,
+			"line": 724,
+			"name": "pidfd_getfd",
+			"number": 438,
+			"origname": "pidfd_getfd",
+			"signature": [
+				"int pidfd",
+				"int fd",
+				"unsigned int flags"
+			],
+			"symbol": "__s390x_sys_pidfd_getfd"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/open.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 439,
+			"kconfig": null,
+			"line": 497,
+			"name": "faccessat2",
+			"number": 439,
+			"origname": "faccessat2",
+			"signature": [
+				"int dfd",
+				"const char *filename",
+				"int mode",
+				"int flags"
+			],
+			"symbol": "__s390x_sys_faccessat2"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/madvise.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 440,
+			"kconfig": "ADVISE_SYSCALLS",
+			"line": 1445,
+			"name": "process_madvise",
+			"number": 440,
+			"origname": "process_madvise",
+			"signature": [
+				"int pidfd",
+				"const struct iovec *vec",
+				"size_t vlen",
+				"int behavior",
+				"unsigned int flags"
+			],
+			"symbol": "__s390x_sys_process_madvise"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/eventpoll.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 441,
+			"kconfig": "EPOLL",
+			"line": 2308,
+			"name": "epoll_pwait2",
+			"number": 441,
+			"origname": "epoll_pwait2",
+			"signature": [
+				"int epfd",
+				"struct epoll_event *events",
+				"int maxevents",
+				"const struct __kernel_timespec *timeout",
+				"const sigset_t *sigmask",
+				"size_t sigsetsize"
+			],
+			"symbol": "__s390x_sys_epoll_pwait2"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/namespace.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 442,
+			"kconfig": null,
+			"line": 4328,
+			"name": "mount_setattr",
+			"number": 442,
+			"origname": "mount_setattr",
+			"signature": [
+				"int dfd",
+				"const char *path",
+				"unsigned int flags",
+				"struct mount_attr *uattr",
+				"size_t usize"
+			],
+			"symbol": "__s390x_sys_mount_setattr"
+		},
+		{
+			"esoteric": false,
+			"file": "fs/quota/quota.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 443,
+			"kconfig": "QUOTACTL",
+			"line": 972,
+			"name": "quotactl_fd",
+			"number": 443,
+			"origname": "quotactl_fd",
+			"signature": [
+				"unsigned int fd",
+				"unsigned int cmd",
+				"qid_t id",
+				"void *addr"
+			],
+			"symbol": "__s390x_sys_quotactl_fd"
+		},
+		{
+			"esoteric": false,
+			"file": "security/landlock/syscalls.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 444,
+			"kconfig": "SECURITY_LANDLOCK",
+			"line": 157,
+			"name": "landlock_create_ruleset",
+			"number": 444,
+			"origname": "landlock_create_ruleset",
+			"signature": [
+				"const struct landlock_ruleset_attr *const attr",
+				"const size_t size",
+				"const __u32 flags"
+			],
+			"symbol": "__s390x_sys_landlock_create_ruleset"
+		},
+		{
+			"esoteric": false,
+			"file": "security/landlock/syscalls.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 445,
+			"kconfig": "SECURITY_LANDLOCK",
+			"line": 305,
+			"name": "landlock_add_rule",
+			"number": 445,
+			"origname": "landlock_add_rule",
+			"signature": [
+				"const int ruleset_fd",
+				"const enum landlock_rule_type rule_type",
+				"const void *const rule_attr",
+				"const __u32 flags"
+			],
+			"symbol": "__s390x_sys_landlock_add_rule"
+		},
+		{
+			"esoteric": false,
+			"file": "security/landlock/syscalls.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 446,
+			"kconfig": "SECURITY_LANDLOCK",
+			"line": 397,
+			"name": "landlock_restrict_self",
+			"number": 446,
+			"origname": "landlock_restrict_self",
+			"signature": [
+				"const int ruleset_fd",
+				"const __u32 flags"
+			],
+			"symbol": "__s390x_sys_landlock_restrict_self"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/oom_kill.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 448,
+			"kconfig": "MMU",
+			"line": 1200,
+			"name": "process_mrelease",
+			"number": 448,
+			"origname": "process_mrelease",
+			"signature": [
+				"int pidfd",
+				"unsigned int flags"
+			],
+			"symbol": "__s390x_sys_process_mrelease"
+		},
+		{
+			"esoteric": false,
+			"file": "kernel/futex/syscalls.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 449,
+			"kconfig": "FUTEX",
+			"line": 246,
+			"name": "futex_waitv",
+			"number": 449,
+			"origname": "futex_waitv",
+			"signature": [
+				"struct futex_waitv *waiters",
+				"unsigned int nr_futexes",
+				"unsigned int flags",
+				"struct __kernel_timespec *timeout",
+				"clockid_t clockid"
+			],
+			"symbol": "__s390x_sys_futex_waitv"
+		},
+		{
+			"esoteric": false,
+			"file": "mm/mempolicy.c",
+			"good_location": true,
+			"grepped_location": false,
+			"index": 450,
+			"kconfig": "NUMA",
+			"line": 1487,
+			"name": "set_mempolicy_home_node",
+			"number": 450,
+			"origname": "set_mempolicy_home_node",
+			"signature": [
+				"unsigned long start",
+				"unsigned long len",
+				"unsigned long home_node",
+				"unsigned long flags"
+			],
+			"symbol": "__s390x_sys_set_mempolicy_home_node"
+		}
+	],
+	"systrack_version": "0.8"
+}
